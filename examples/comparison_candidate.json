@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "description": "Intentionally imperfect handwritten predictions for testing the scorer; no model was run.",
+  "cases": [
+    {
+      "id": "t1",
+      "as_of": "2026-09-05T00:00:00Z",
+      "decision": "true",
+      "probabilities": {
+        "true": 1,
+        "false": 0,
+        "disputed": 0,
+        "unverifiable": 0
+      },
+      "source": {
+        "status": "resolved",
+        "roots": [
+          "r1"
+        ],
+        "edges": [
+          {
+            "from": "t1",
+            "to": "r1",
+            "relation": "cites"
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "stance": "supports",
+          "origin": "group-x"
+        },
+        {
+          "id": "e2",
+          "stance": "supports",
+          "origin": "group-x"
+        },
+        {
+          "id": "e3",
+          "stance": "supports",
+          "origin": "group-y"
+        }
+      ],
+      "usage": {
+        "retrieval_calls": 0,
+        "model_tokens": 0,
+        "wall_seconds": 0
+      }
+    },
+    {
+      "id": "t2",
+      "as_of": "2026-09-05T00:00:00Z",
+      "decision": "unverifiable",
+      "probabilities": {
+        "true": 0.25,
+        "false": 0.25,
+        "disputed": 0.25,
+        "unverifiable": 0.25
+      },
+      "source": {
+        "status": "unresolved",
+        "roots": [],
+        "edges": []
+      },
+      "evidence": [],
+      "usage": {
+        "retrieval_calls": 0,
+        "model_tokens": 0,
+        "wall_seconds": 0
+      }
+    },
+    {
+      "id": "f1",
+      "as_of": "2026-09-05T00:00:00Z",
+      "decision": "false",
+      "probabilities": {
+        "true": 0,
+        "false": 1,
+        "disputed": 0,
+        "unverifiable": 0
+      },
+      "source": {
+        "status": "resolved",
+        "roots": [
+          "r3"
+        ],
+        "edges": [
+          {
+            "from": "f1",
+            "to": "r3",
+            "relation": "quotes"
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "id": "e4",
+          "stance": "contradicts",
+          "origin": "group-z"
+        }
+      ],
+      "usage": {
+        "retrieval_calls": 0,
+        "model_tokens": 0,
+        "wall_seconds": 0
+      }
+    },
+    {
+      "id": "f2",
+      "as_of": "2026-09-05T00:00:00Z",
+      "decision": "true",
+      "probabilities": {
+        "true": 1,
+        "false": 0,
+        "disputed": 0,
+        "unverifiable": 0
+      },
+      "source": {
+        "status": "resolved",
+        "roots": [
+          "invented-root"
+        ],
+        "edges": [
+          {
+            "from": "f2",
+            "to": "invented-root",
+            "relation": "cites"
+          }
+        ]
+      },
+      "evidence": [],
+      "usage": {
+        "retrieval_calls": 0,
+        "model_tokens": 0,
+        "wall_seconds": 0
+      }
+    }
+  ],
+  "run": {
+    "name": "identical-handwritten-candidate",
+    "model_id": "no-model-handwritten-fixture",
+    "corpus_id": "synthetic-four-case-v1",
+    "per_target_budget": {
+      "retrieval_calls": 3,
+      "model_tokens": 1000,
+      "wall_seconds": 60
+    }
+  }
+}

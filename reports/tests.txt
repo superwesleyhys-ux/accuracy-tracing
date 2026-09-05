@@ -1,0 +1,30 @@
+test_demo_emits_machine_readable_report (test_harness.CommandLineTests.test_demo_emits_machine_readable_report) ... ok
+test_failed_benchmark_returns_nonzero_and_keeps_results (test_harness.CommandLineTests.test_failed_benchmark_returns_nonzero_and_keeps_results) ... ok
+test_invalid_json_and_invalid_schema_fail_cleanly (test_harness.CommandLineTests.test_invalid_json_and_invalid_schema_fail_cleanly) ... ok
+test_output_cannot_overwrite_input (test_harness.CommandLineTests.test_output_cannot_overwrite_input) ... ok
+test_all_synthetic_policy_expectations (test_harness.HarnessContractTests.test_all_synthetic_policy_expectations) ... ok
+test_benchmark_labels_do_not_reach_provider (test_harness.HarnessContractTests.test_benchmark_labels_do_not_reach_provider) ... ok
+test_changed_evidence_reusing_an_id_cannot_leave_claim_supported (test_harness.HarnessContractTests.test_changed_evidence_reusing_an_id_cannot_leave_claim_supported) ... ok
+test_changing_expected_label_changes_score_not_verification (test_harness.HarnessContractTests.test_changing_expected_label_changes_score_not_verification) ... ok
+test_default_checks_another_round_before_supported (test_harness.HarnessContractTests.test_default_checks_another_round_before_supported) ... ok
+test_document_budget_bounds_an_unending_iterable (test_harness.HarnessContractTests.test_document_budget_bounds_an_unending_iterable) ... ok
+test_future_evidence_and_fabricated_quote_are_rejected_with_reasons (test_harness.HarnessContractTests.test_future_evidence_and_fabricated_quote_are_rejected_with_reasons) ... ok
+test_input_dictionaries_are_not_mutated (test_harness.HarnessContractTests.test_input_dictionaries_are_not_mutated) ... ok
+test_late_neutral_lineage_can_remove_apparent_independence (test_harness.HarnessContractTests.test_late_neutral_lineage_can_remove_apparent_independence) ... ok
+test_later_refutation_changes_first_pass (test_harness.HarnessContractTests.test_later_refutation_changes_first_pass) ... ok
+test_malformed_claim_raises_value_error (test_harness.HarnessContractTests.test_malformed_claim_raises_value_error) ... ok
+test_malformed_configuration_raises_value_error (test_harness.HarnessContractTests.test_malformed_configuration_raises_value_error) ... ok
+test_next_round_targets_validation_failures_without_repeating_source_instructions (test_harness.HarnessContractTests.test_next_round_targets_validation_failures_without_repeating_source_instructions) ... ok
+test_provider_failure_abstains_and_redacts_exception_message (test_harness.HarnessContractTests.test_provider_failure_abstains_and_redacts_exception_message) ... ok
+test_provider_iterable_is_not_consumed_past_requested_limit (test_harness.HarnessContractTests.test_provider_iterable_is_not_consumed_past_requested_limit) ... ok
+test_report_is_detached_from_provider_records (test_harness.HarnessContractTests.test_report_is_detached_from_provider_records) ... ok
+test_round_budget_stops_provider_with_continuing_new_evidence (test_harness.HarnessContractTests.test_round_budget_stops_provider_with_continuing_new_evidence) ... ok
+test_same_source_disagreement_remains_visible (test_harness.HarnessContractTests.test_same_source_disagreement_remains_visible) ... ok
+test_too_little_budget_for_second_round_stays_unresolved (test_harness.HarnessContractTests.test_too_little_budget_for_second_round_stays_unresolved) ... ok
+test_trace_keeps_original_claim_even_if_adapter_changes_its_copy (test_harness.HarnessContractTests.test_trace_keeps_original_claim_even_if_adapter_changes_its_copy) ... ok
+test_transitive_copies_are_one_source (test_harness.HarnessContractTests.test_transitive_copies_are_one_source) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.219s
+
+OK

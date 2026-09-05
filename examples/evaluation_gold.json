@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "dataset_kind": "synthetic",
+  "description": "Four deliberately simple arithmetic fixtures, not a real-news benchmark.",
+  "cases": [
+    {
+      "id": "t1", "event_id": "event-a", "as_of": "2026-09-05T00:00:00Z", "truth": "true", "high_risk": false,
+      "source": {"traceable": true, "acceptable_root_sets": [["r1"]], "valid_edges": [{"from": "t1", "to": "r1", "relation": "cites"}]},
+      "evidence": [{"id": "e1", "stance": "supports", "origin": "wire"}, {"id": "e2", "stance": "supports", "origin": "wire"}, {"id": "e3", "stance": "neutral", "origin": "interview"}]
+    },
+    {
+      "id": "t2", "event_id": "event-b", "as_of": "2026-09-05T00:00:00Z", "truth": "true", "high_risk": false,
+      "source": {"traceable": true, "acceptable_root_sets": [["r2"]], "valid_edges": [{"from": "t2", "to": "r2", "relation": "cites"}]}, "evidence": []
+    },
+    {
+      "id": "f1", "event_id": "event-c", "as_of": "2026-09-05T00:00:00Z", "truth": "false", "high_risk": true,
+      "source": {"traceable": true, "acceptable_root_sets": [["r3"]], "valid_edges": [{"from": "f1", "to": "r3", "relation": "quotes"}]},
+      "evidence": [{"id": "e4", "stance": "contradicts", "origin": "record"}]
+    },
+    {
+      "id": "f2", "event_id": "event-d", "as_of": "2026-09-05T00:00:00Z", "truth": "false", "high_risk": true,
+      "source": {"traceable": false, "acceptable_root_sets": [], "valid_edges": []}, "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "kind": "synthetic_policy_cases",
+    "all_publishers_and_events_are_fictional": true,
+    "annotations": "Hand-authored demonstration labels, not independent semantic predictions.",
+    "not_a_real_news_accuracy_benchmark": true
+  },
+  "claim": {
+    "id": "northbridge-route",
+    "text": "Northbridge council approved a new electric bus route on September 4, 2026.",
+    "as_of": "2026-09-05T12:00:00Z"
+  },
+  "rounds": [
+    [
+      {
+        "id": "a",
+        "claim_id": "northbridge-route",
+        "url": "https://publisher-a.example/news/route",
+        "publisher_group": "publisher-a",
+        "origin_id": "report-a",
+        "published_at": "2026-09-04T18:00:00Z",
+        "retrieved_at": "2026-09-05T10:00:00Z",
+        "content": "Northbridge council approved the electric bus route on September 4, 2026, according to the meeting minutes.",
+        "quote": "Northbridge council approved the electric bus route on September 4, 2026, according to the meeting minutes.",
+        "stance": "supports"
+      },
+      {
+        "id": "b",
+        "claim_id": "northbridge-route",
+        "url": "https://publisher-b.example/news/route",
+        "publisher_group": "publisher-b",
+        "origin_id": "report-b",
+        "published_at": "2026-09-04T18:00:00Z",
+        "retrieved_at": "2026-09-05T10:00:00Z",
+        "content": "Our reporter attended the September 4 council meeting: members approved the new electric bus route in Northbridge.",
+        "quote": "Our reporter attended the September 4 council meeting: members approved the new electric bus route in Northbridge.",
+        "stance": "supports"
+      }
+    ],
+    [
+      {
+        "id": "c",
+        "claim_id": "northbridge-route",
+        "url": "https://publisher-c.example/news/route",
+        "publisher_group": "publisher-c",
+        "origin_id": "report-c",
+        "published_at": "2026-09-04T18:00:00Z",
+        "retrieved_at": "2026-09-05T10:00:00Z",
+        "content": "The council clerk corrected the record: members postponed the electric bus route vote; no approval was given.",
+        "quote": "The council clerk corrected the record: members postponed the electric bus route vote; no approval was given.",
+        "stance": "contradicts"
+      }
+    ]
+  ]
+}

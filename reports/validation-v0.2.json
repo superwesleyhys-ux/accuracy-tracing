@@ -1,0 +1,63 @@
+{
+  "release": "0.2.0",
+  "generated_at": "2026-09-05T04:59:29.596082+00:00",
+  "tests_run": 76,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "test_groups": {
+    "test_comparison": 6,
+    "test_evaluation": 19,
+    "test_harness": 25,
+    "test_provenance": 26
+  },
+  "metric_contracts_checked": [
+    "VP",
+    "FR",
+    "TR",
+    "SR",
+    "EN",
+    "CA",
+    "HFAR"
+  ],
+  "trace_demo_usage": {
+    "rounds": 3,
+    "documents": 4,
+    "unique_versions": 4,
+    "decomposition_calls": 6,
+    "verification_calls": 3
+  },
+  "trace_demo_provenance": "original_material_located",
+  "trace_demo_fact_status": "contradicted",
+  "trace_demo_stop": "complete",
+  "packaging": {
+    "status": "passed",
+    "wheel": "newsverify_harness-0.2.0-py3-none-any.whl",
+    "sha256": "a8dfb68ba77d9e3c4d998629b41e10a90539d1c3667c0b96d987e7a1ef7b1a65",
+    "clean_environment": true,
+    "checks": [
+      {
+        "command": "-m newsverify trace-demo",
+        "exit_code": 0,
+        "json_output": true
+      },
+      {
+        "command": "-m newsverify score",
+        "exit_code": 0,
+        "json_output": true
+      },
+      {
+        "command": "-m newsverify demo",
+        "exit_code": 0,
+        "json_output": true
+      }
+    ]
+  },
+  "all_data_synthetic": true,
+  "live_news_requests": 0,
+  "model_api_calls": 0,
+  "realworld_accuracy_measured": false,
+  "external_project_move": "not_performed_no_interface",
+  "external_repository_publish": false
+}
