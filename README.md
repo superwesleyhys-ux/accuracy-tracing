@@ -4,7 +4,7 @@ Version 0.2.0: a bounded, auditable news provenance loop with **decomposition on
 
 **Status: executable offline reference implementation.** Semantic judgments in the demo are hand-authored annotations. The default decomposer preserves original text and leaves source questions unresolved. No live news adapter, general-purpose model API, independently reviewed real-news benchmark or measured real-world accuracy improvement is included.
 
-Repository discussions include an **Accuracy decline** category for reproducible reports of metric regressions or weaker trace outcomes. Reports should identify the affected metric or behavior, include the run configuration, and avoid treating synthetic fixtures as real-world performance evidence.
+Repository Discussions are enabled, and the repository includes a prepared **Accuracy decline** reporting form for reproducible metric regressions or weaker trace outcomes. Reports should identify the affected metric or behavior, include the run configuration, and avoid treating synthetic fixtures as real-world performance evidence.
 
 ## Run
 

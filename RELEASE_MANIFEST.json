@@ -3,6 +3,11 @@
   "version": "0.2.0",
   "files": [
     {
+      "path": ".github/DISCUSSION_TEMPLATE/accuracy-decline.yml",
+      "bytes": 1863,
+      "sha256": "ac1d96d21e2197ea9576d1b5f9aca8531ccfecd34b605fe36de1668c44a157b2"
+    },
+    {
       "path": ".github/workflows/ci.yml",
       "bytes": 766,
       "sha256": "7edad7bec5fd18a6462a8b797ad059091df99d1cdc72d284f1d08b6bb282fd1c"
@@ -24,8 +29,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5877,
-      "sha256": "61fafd49011ba031d71e153fb2f6eb242fd874c4c22cc6a5de5469d3ef67d570"
+      "bytes": 5913,
+      "sha256": "6a1cfa49673fb2202d51c21b17adeb66ac509bab79e591884a1fd1165abfb234"
     },
     {
       "path": "dist/newsverify_harness-0.2.0-py3-none-any.whl",
