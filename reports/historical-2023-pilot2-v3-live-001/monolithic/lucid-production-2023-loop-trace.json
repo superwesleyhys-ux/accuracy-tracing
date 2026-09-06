@@ -1,0 +1,1137 @@
+{
+  "schema_version": "0.3",
+  "scope": "plugin-supplied semantic analyses; no built-in truth oracle",
+  "target": {
+    "id": "lucid-production-2023",
+    "text": "Lucid will manufacture more than 10,000 vehicles during 2023.",
+    "as_of": "2024-12-31T23:59:59Z",
+    "source_version_id": "lucid-production-claim-2023",
+    "assessment_mode": "evidence",
+    "evidence_scope": [
+      "lucid-production-outcome-2024"
+    ]
+  },
+  "config": {
+    "max_rounds": 5,
+    "max_documents": 18,
+    "max_decomposition_calls": 18
+  },
+  "provenance_status": "original_material_located",
+  "fact_status": "contradicted",
+  "stop_reason": "complete",
+  "usage": {
+    "rounds": 2,
+    "documents": 2,
+    "unique_versions": 2,
+    "decomposition_calls": 2,
+    "verification_calls": 2
+  },
+  "decision_status": "contradicted",
+  "assessments": {
+    "evidence": {
+      "raw_verdict": "contradicted",
+      "decision": "contradicted",
+      "blocking_gap_ids": []
+    },
+    "world": {
+      "raw_verdict": "contradicted",
+      "decision": "contradicted",
+      "blocking_gap_ids": []
+    }
+  },
+  "assessment_valid": true,
+  "materials": [
+    {
+      "version_id": "lucid-production-claim-2023",
+      "url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828023027783/q2fy23ex991.htm",
+      "content": "Lucid Q2 2023 results | SEC exhibit filed August 7, 2023\nLucid is on track to manufacture more than 10,000 vehicles in 2023.",
+      "retrieved_at": "2026-09-06T04:05:15Z",
+      "published_at": "2023-08-07T23:59:59Z",
+      "available_at": "2023-08-07T23:59:59Z",
+      "availability_basis": "Immutable SEC EDGAR accession 0001628280-23-027783, filed August 7, 2023; raw filing identity is recorded in sources.json.",
+      "issuer": "Lucid Group, Inc. (filed with the U.S. SEC)"
+    },
+    {
+      "version_id": "lucid-production-outcome-2024",
+      "url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828024005904/q423ex991k.htm",
+      "content": "Lucid Q4 2023 results | SEC exhibit filed February 21, 2024\nOn a full-year basis, the Company produced 8,428 vehicles.",
+      "retrieved_at": "2026-09-06T04:05:15Z",
+      "published_at": "2024-02-21T23:59:59Z",
+      "available_at": "2024-02-21T23:59:59Z",
+      "availability_basis": "Immutable SEC EDGAR accession 0001628280-24-005904, filed February 21, 2024; raw filing identity is recorded in sources.json.",
+      "issuer": "Lucid Group, Inc. (filed with the U.S. SEC)"
+    }
+  ],
+  "eligible_version_ids": [
+    "lucid-production-claim-2023",
+    "lucid-production-outcome-2024"
+  ],
+  "observations": [
+    {
+      "version_id": "lucid-production-claim-2023",
+      "retrieved_at": "2026-09-06T04:05:15Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": [],
+      "task_ids": []
+    },
+    {
+      "version_id": "lucid-production-outcome-2024",
+      "retrieved_at": "2026-09-06T04:05:15Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": [],
+      "task_ids": [
+        "evidence:lucid-production-outcome-2024"
+      ]
+    }
+  ],
+  "retrieval_feedback": [
+    {
+      "round": 2,
+      "gap_id": "evidence:lucid-production-outcome-2024",
+      "action": "search",
+      "locator": "lucid-production-outcome-2024 Lucid 2023 annual vehicle production results",
+      "status": "returned",
+      "reason": "matching snapshots returned",
+      "version_ids": [
+        "lucid-production-outcome-2024"
+      ]
+    }
+  ],
+  "analyses": {
+    "lucid-production-claim-2023": {
+      "fragments": [
+        {
+          "id": "lucid-2023-production-outlook",
+          "text": "Lucid projected manufacturing more than 10,000 vehicles in 2023.",
+          "span": {
+            "version_id": "lucid-production-claim-2023",
+            "start": 57,
+            "end": 124,
+            "quote": "Lucid is on track to manufacture more than 10,000 vehicles in 2023."
+          },
+          "parent_id": "lucid-production-2023",
+          "qualifiers": [
+            "An outlook, not a report of completed production.",
+            "The threshold is strictly greater than 10,000 vehicles.",
+            "The production period is 2023."
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "lucid-production-claim-2023",
+              "start": 63,
+              "end": 77,
+              "quote": "is on track to"
+            },
+            {
+              "version_id": "lucid-production-claim-2023",
+              "start": 90,
+              "end": 115,
+              "quote": "more than 10,000 vehicles"
+            },
+            {
+              "version_id": "lucid-production-claim-2023",
+              "start": 116,
+              "end": 123,
+              "quote": "in 2023"
+            }
+          ]
+        }
+      ],
+      "relations": [],
+      "gaps": [
+        {
+          "id": "evidence:lucid-production-outcome-2024",
+          "question": "What does the designated evidence-scope document lucid-production-outcome-2024 say about 2023 production?",
+          "stage": "verification",
+          "dimension": "evidence",
+          "blocking": true,
+          "target_id": "lucid-production-2023",
+          "basis": [
+            {
+              "version_id": "lucid-production-claim-2023",
+              "start": 57,
+              "end": 124,
+              "quote": "Lucid is on track to manufacture more than 10,000 vehicles in 2023."
+            }
+          ],
+          "decision_impact": "The supplied statement is an outlook outside the designated evidence scope. The absent outcome snapshot is needed to assess what that scope says about the unchanged target.",
+          "action": "search",
+          "locator": "lucid-production-outcome-2024 Lucid 2023 annual vehicle production results",
+          "probe_id": null
+        }
+      ],
+      "resolutions": [
+        {
+          "gap_id": "origin:lucid-production-2023",
+          "basis": [
+            {
+              "version_id": "lucid-production-claim-2023",
+              "start": 0,
+              "end": 56,
+              "quote": "Lucid Q2 2023 results | SEC exhibit filed August 7, 2023"
+            },
+            {
+              "version_id": "lucid-production-claim-2023",
+              "start": 57,
+              "end": 124,
+              "quote": "Lucid is on track to manufacture more than 10,000 vehicles in 2023."
+            }
+          ],
+          "rationale": "The supplied snapshot identifies the producing results exhibit and contains the outlook underlying the target. No upstream citation is visible."
+        }
+      ],
+      "origins": [
+        {
+          "target_id": "lucid-production-2023",
+          "version_id": "lucid-production-claim-2023",
+          "basis": [
+            {
+              "version_id": "lucid-production-claim-2023",
+              "start": 0,
+              "end": 56,
+              "quote": "Lucid Q2 2023 results | SEC exhibit filed August 7, 2023"
+            }
+          ],
+          "material_kind": "original_record",
+          "rationale": "The header identifies a Lucid results exhibit as the publishing record for the outlook; this does not establish actual production."
+        }
+      ],
+      "notes": "Evidence assessment remains undetermined because lucid-production-outcome-2024 is not supplied. World verification is unknown and is not required to resolve the evidence-only question.",
+      "revisit_versions": []
+    },
+    "lucid-production-outcome-2024": {
+      "fragments": [
+        {
+          "id": "lucid-2023-reported-production",
+          "text": "Lucid reported producing 8,428 vehicles for full-year 2023, below the target's threshold of more than 10,000.",
+          "span": {
+            "version_id": "lucid-production-outcome-2024",
+            "start": 60,
+            "end": 118,
+            "quote": "On a full-year basis, the Company produced 8,428 vehicles."
+          },
+          "parent_id": "lucid-production-2023",
+          "qualifiers": [
+            "The results heading identifies 2023; the production statement expressly covers the full year, not only Q4.",
+            "Produced describes a reported outcome rather than an outlook.",
+            "8,428 is below 10,000 and therefore contradicts the unchanged target. No explicit verbal negation appears."
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "lucid-production-outcome-2024",
+              "start": 0,
+              "end": 21,
+              "quote": "Lucid Q4 2023 results"
+            },
+            {
+              "version_id": "lucid-production-outcome-2024",
+              "start": 60,
+              "end": 81,
+              "quote": "On a full-year basis,"
+            },
+            {
+              "version_id": "lucid-production-outcome-2024",
+              "start": 94,
+              "end": 117,
+              "quote": "produced 8,428 vehicles"
+            }
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "id": "outcome-contradicts-production-target",
+          "from_version": "lucid-production-outcome-2024",
+          "to_version": "lucid-production-claim-2023",
+          "kind": "contradicts",
+          "status": "direct",
+          "basis": [
+            {
+              "version_id": "lucid-production-outcome-2024",
+              "start": 0,
+              "end": 21,
+              "quote": "Lucid Q4 2023 results"
+            },
+            {
+              "version_id": "lucid-production-outcome-2024",
+              "start": 60,
+              "end": 118,
+              "quote": "On a full-year basis, the Company produced 8,428 vehicles."
+            }
+          ],
+          "rationale": "The designated evidence reports full-year 2023 production below the unchanged target's strict threshold. This contradicts the projected outcome, without establishing that the earlier 'on track' characterization was false when published.",
+          "upstream_locator": null
+        }
+      ],
+      "gaps": [],
+      "resolutions": [
+        {
+          "gap_id": "evidence:lucid-production-outcome-2024",
+          "basis": [
+            {
+              "version_id": "lucid-production-outcome-2024",
+              "start": 0,
+              "end": 21,
+              "quote": "Lucid Q4 2023 results"
+            },
+            {
+              "version_id": "lucid-production-outcome-2024",
+              "start": 60,
+              "end": 118,
+              "quote": "On a full-year basis, the Company produced 8,428 vehicles."
+            }
+          ],
+          "rationale": "The previously absent evidence-scope snapshot is supplied and reports 8,428 vehicles for full-year 2023, resolving the evidence question against the target."
+        }
+      ],
+      "origins": [
+        {
+          "target_id": "lucid-production-2023",
+          "version_id": "lucid-production-outcome-2024",
+          "basis": [
+            {
+              "version_id": "lucid-production-outcome-2024",
+              "start": 0,
+              "end": 59,
+              "quote": "Lucid Q4 2023 results | SEC exhibit filed February 21, 2024"
+            }
+          ],
+          "material_kind": "original_record",
+          "rationale": "The heading identifies this as Lucid's results filed as a SEC exhibit. That publishing role does not independently establish the reported number's truth."
+        }
+      ],
+      "notes": "Evidence assessment: contradicted. World verification: unknown. No upstream citation is visible in the supplied outcome snapshot.",
+      "revisit_versions": []
+    }
+  },
+  "analysis_history": [
+    {
+      "revision": 1,
+      "round": 1,
+      "version_id": "lucid-production-claim-2023",
+      "duplicate": false,
+      "revisit": false,
+      "retrieval_receipt": {
+        "version_id": "lucid-production-claim-2023",
+        "task_ids": [],
+        "revisit": false,
+        "tasks": [],
+        "attribution": "envelope",
+        "duplicate": false,
+        "eligible": true
+      },
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "lucid-2023-production-outlook",
+            "text": "Lucid projected manufacturing more than 10,000 vehicles in 2023.",
+            "span": {
+              "version_id": "lucid-production-claim-2023",
+              "start": 57,
+              "end": 124,
+              "quote": "Lucid is on track to manufacture more than 10,000 vehicles in 2023."
+            },
+            "parent_id": "lucid-production-2023",
+            "qualifiers": [
+              "An outlook, not a report of completed production.",
+              "The threshold is strictly greater than 10,000 vehicles.",
+              "The production period is 2023."
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "lucid-production-claim-2023",
+                "start": 63,
+                "end": 77,
+                "quote": "is on track to"
+              },
+              {
+                "version_id": "lucid-production-claim-2023",
+                "start": 90,
+                "end": 115,
+                "quote": "more than 10,000 vehicles"
+              },
+              {
+                "version_id": "lucid-production-claim-2023",
+                "start": 116,
+                "end": 123,
+                "quote": "in 2023"
+              }
+            ]
+          }
+        ],
+        "relations": [],
+        "gaps": [
+          {
+            "id": "evidence:lucid-production-outcome-2024",
+            "question": "What does the designated evidence-scope document lucid-production-outcome-2024 say about 2023 production?",
+            "stage": "verification",
+            "dimension": "evidence",
+            "blocking": true,
+            "target_id": "lucid-production-2023",
+            "basis": [
+              {
+                "version_id": "lucid-production-claim-2023",
+                "start": 57,
+                "end": 124,
+                "quote": "Lucid is on track to manufacture more than 10,000 vehicles in 2023."
+              }
+            ],
+            "decision_impact": "The supplied statement is an outlook outside the designated evidence scope. The absent outcome snapshot is needed to assess what that scope says about the unchanged target.",
+            "action": "search",
+            "locator": "lucid-production-outcome-2024 Lucid 2023 annual vehicle production results",
+            "probe_id": null
+          }
+        ],
+        "resolutions": [
+          {
+            "gap_id": "origin:lucid-production-2023",
+            "basis": [
+              {
+                "version_id": "lucid-production-claim-2023",
+                "start": 0,
+                "end": 56,
+                "quote": "Lucid Q2 2023 results | SEC exhibit filed August 7, 2023"
+              },
+              {
+                "version_id": "lucid-production-claim-2023",
+                "start": 57,
+                "end": 124,
+                "quote": "Lucid is on track to manufacture more than 10,000 vehicles in 2023."
+              }
+            ],
+            "rationale": "The supplied snapshot identifies the producing results exhibit and contains the outlook underlying the target. No upstream citation is visible."
+          }
+        ],
+        "origins": [
+          {
+            "target_id": "lucid-production-2023",
+            "version_id": "lucid-production-claim-2023",
+            "basis": [
+              {
+                "version_id": "lucid-production-claim-2023",
+                "start": 0,
+                "end": 56,
+                "quote": "Lucid Q2 2023 results | SEC exhibit filed August 7, 2023"
+              }
+            ],
+            "material_kind": "original_record",
+            "rationale": "The header identifies a Lucid results exhibit as the publishing record for the outlook; this does not establish actual production."
+          }
+        ],
+        "notes": "Evidence assessment remains undetermined because lucid-production-outcome-2024 is not supplied. World verification is unknown and is not required to resolve the evidence-only question.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    },
+    {
+      "revision": 2,
+      "round": 2,
+      "version_id": "lucid-production-outcome-2024",
+      "duplicate": false,
+      "revisit": false,
+      "retrieval_receipt": {
+        "version_id": "lucid-production-outcome-2024",
+        "task_ids": [
+          "evidence:lucid-production-outcome-2024"
+        ],
+        "revisit": false,
+        "tasks": [
+          {
+            "id": "evidence:lucid-production-outcome-2024",
+            "question": "What does the designated evidence-scope document lucid-production-outcome-2024 say about 2023 production?",
+            "stage": "verification",
+            "dimension": "evidence",
+            "blocking": true,
+            "target_id": "lucid-production-2023",
+            "basis": [
+              {
+                "version_id": "lucid-production-claim-2023",
+                "start": 57,
+                "end": 124,
+                "quote": "Lucid is on track to manufacture more than 10,000 vehicles in 2023."
+              }
+            ],
+            "decision_impact": "The supplied statement is an outlook outside the designated evidence scope. The absent outcome snapshot is needed to assess what that scope says about the unchanged target.",
+            "action": "search",
+            "locator": "lucid-production-outcome-2024 Lucid 2023 annual vehicle production results",
+            "probe_id": null
+          }
+        ],
+        "attribution": "envelope",
+        "duplicate": false,
+        "eligible": true
+      },
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "lucid-2023-reported-production",
+            "text": "Lucid reported producing 8,428 vehicles for full-year 2023, below the target's threshold of more than 10,000.",
+            "span": {
+              "version_id": "lucid-production-outcome-2024",
+              "start": 60,
+              "end": 118,
+              "quote": "On a full-year basis, the Company produced 8,428 vehicles."
+            },
+            "parent_id": "lucid-production-2023",
+            "qualifiers": [
+              "The results heading identifies 2023; the production statement expressly covers the full year, not only Q4.",
+              "Produced describes a reported outcome rather than an outlook.",
+              "8,428 is below 10,000 and therefore contradicts the unchanged target. No explicit verbal negation appears."
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "lucid-production-outcome-2024",
+                "start": 0,
+                "end": 21,
+                "quote": "Lucid Q4 2023 results"
+              },
+              {
+                "version_id": "lucid-production-outcome-2024",
+                "start": 60,
+                "end": 81,
+                "quote": "On a full-year basis,"
+              },
+              {
+                "version_id": "lucid-production-outcome-2024",
+                "start": 94,
+                "end": 117,
+                "quote": "produced 8,428 vehicles"
+              }
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "outcome-contradicts-production-target",
+            "from_version": "lucid-production-outcome-2024",
+            "to_version": "lucid-production-claim-2023",
+            "kind": "contradicts",
+            "status": "direct",
+            "basis": [
+              {
+                "version_id": "lucid-production-outcome-2024",
+                "start": 0,
+                "end": 21,
+                "quote": "Lucid Q4 2023 results"
+              },
+              {
+                "version_id": "lucid-production-outcome-2024",
+                "start": 60,
+                "end": 118,
+                "quote": "On a full-year basis, the Company produced 8,428 vehicles."
+              }
+            ],
+            "rationale": "The designated evidence reports full-year 2023 production below the unchanged target's strict threshold. This contradicts the projected outcome, without establishing that the earlier 'on track' characterization was false when published.",
+            "upstream_locator": null
+          }
+        ],
+        "gaps": [],
+        "resolutions": [
+          {
+            "gap_id": "evidence:lucid-production-outcome-2024",
+            "basis": [
+              {
+                "version_id": "lucid-production-outcome-2024",
+                "start": 0,
+                "end": 21,
+                "quote": "Lucid Q4 2023 results"
+              },
+              {
+                "version_id": "lucid-production-outcome-2024",
+                "start": 60,
+                "end": 118,
+                "quote": "On a full-year basis, the Company produced 8,428 vehicles."
+              }
+            ],
+            "rationale": "The previously absent evidence-scope snapshot is supplied and reports 8,428 vehicles for full-year 2023, resolving the evidence question against the target."
+          }
+        ],
+        "origins": [
+          {
+            "target_id": "lucid-production-2023",
+            "version_id": "lucid-production-outcome-2024",
+            "basis": [
+              {
+                "version_id": "lucid-production-outcome-2024",
+                "start": 0,
+                "end": 59,
+                "quote": "Lucid Q4 2023 results | SEC exhibit filed February 21, 2024"
+              }
+            ],
+            "material_kind": "original_record",
+            "rationale": "The heading identifies this as Lucid's results filed as a SEC exhibit. That publishing role does not independently establish the reported number's truth."
+          }
+        ],
+        "notes": "Evidence assessment: contradicted. World verification: unknown. No upstream citation is visible in the supplied outcome snapshot.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    }
+  ],
+  "fragments": [
+    {
+      "id": "lucid-2023-production-outlook",
+      "text": "Lucid projected manufacturing more than 10,000 vehicles in 2023.",
+      "span": {
+        "version_id": "lucid-production-claim-2023",
+        "start": 57,
+        "end": 124,
+        "quote": "Lucid is on track to manufacture more than 10,000 vehicles in 2023."
+      },
+      "parent_id": "lucid-production-2023",
+      "qualifiers": [
+        "An outlook, not a report of completed production.",
+        "The threshold is strictly greater than 10,000 vehicles.",
+        "The production period is 2023."
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "lucid-production-claim-2023",
+          "start": 63,
+          "end": 77,
+          "quote": "is on track to"
+        },
+        {
+          "version_id": "lucid-production-claim-2023",
+          "start": 90,
+          "end": 115,
+          "quote": "more than 10,000 vehicles"
+        },
+        {
+          "version_id": "lucid-production-claim-2023",
+          "start": 116,
+          "end": 123,
+          "quote": "in 2023"
+        }
+      ]
+    },
+    {
+      "id": "lucid-2023-reported-production",
+      "text": "Lucid reported producing 8,428 vehicles for full-year 2023, below the target's threshold of more than 10,000.",
+      "span": {
+        "version_id": "lucid-production-outcome-2024",
+        "start": 60,
+        "end": 118,
+        "quote": "On a full-year basis, the Company produced 8,428 vehicles."
+      },
+      "parent_id": "lucid-production-2023",
+      "qualifiers": [
+        "The results heading identifies 2023; the production statement expressly covers the full year, not only Q4.",
+        "Produced describes a reported outcome rather than an outlook.",
+        "8,428 is below 10,000 and therefore contradicts the unchanged target. No explicit verbal negation appears."
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "start": 0,
+          "end": 21,
+          "quote": "Lucid Q4 2023 results"
+        },
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "start": 60,
+          "end": 81,
+          "quote": "On a full-year basis,"
+        },
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "start": 94,
+          "end": 117,
+          "quote": "produced 8,428 vehicles"
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "outcome-contradicts-production-target",
+      "from_version": "lucid-production-outcome-2024",
+      "to_version": "lucid-production-claim-2023",
+      "kind": "contradicts",
+      "status": "direct",
+      "basis": [
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "start": 0,
+          "end": 21,
+          "quote": "Lucid Q4 2023 results"
+        },
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "start": 60,
+          "end": 118,
+          "quote": "On a full-year basis, the Company produced 8,428 vehicles."
+        }
+      ],
+      "rationale": "The designated evidence reports full-year 2023 production below the unchanged target's strict threshold. This contradicts the projected outcome, without establishing that the earlier 'on track' characterization was false when published.",
+      "upstream_locator": null
+    }
+  ],
+  "origins": [
+    {
+      "target_id": "lucid-production-2023",
+      "version_id": "lucid-production-claim-2023",
+      "basis": [
+        {
+          "version_id": "lucid-production-claim-2023",
+          "start": 0,
+          "end": 56,
+          "quote": "Lucid Q2 2023 results | SEC exhibit filed August 7, 2023"
+        }
+      ],
+      "material_kind": "original_record",
+      "rationale": "The header identifies a Lucid results exhibit as the publishing record for the outlook; this does not establish actual production."
+    },
+    {
+      "target_id": "lucid-production-2023",
+      "version_id": "lucid-production-outcome-2024",
+      "basis": [
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "start": 0,
+          "end": 59,
+          "quote": "Lucid Q4 2023 results | SEC exhibit filed February 21, 2024"
+        }
+      ],
+      "material_kind": "original_record",
+      "rationale": "The heading identifies this as Lucid's results filed as a SEC exhibit. That publishing role does not independently establish the reported number's truth."
+    }
+  ],
+  "gaps": [],
+  "resolutions": [
+    {
+      "gap_id": "evidence:lucid-production-outcome-2024",
+      "basis": [
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "start": 0,
+          "end": 21,
+          "quote": "Lucid Q4 2023 results"
+        },
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "start": 60,
+          "end": 118,
+          "quote": "On a full-year basis, the Company produced 8,428 vehicles."
+        }
+      ],
+      "rationale": "The previously absent evidence-scope snapshot is supplied and reports 8,428 vehicles for full-year 2023, resolving the evidence question against the target."
+    },
+    {
+      "gap_id": "origin:lucid-production-2023",
+      "basis": [
+        {
+          "version_id": "lucid-production-claim-2023",
+          "start": 0,
+          "end": 56,
+          "quote": "Lucid Q2 2023 results | SEC exhibit filed August 7, 2023"
+        },
+        {
+          "version_id": "lucid-production-claim-2023",
+          "start": 57,
+          "end": 124,
+          "quote": "Lucid is on track to manufacture more than 10,000 vehicles in 2023."
+        }
+      ],
+      "rationale": "The supplied snapshot identifies the producing results exhibit and contains the outlook underlying the target. No upstream citation is visible."
+    }
+  ],
+  "verification_history": [
+    {
+      "round": 1,
+      "verdict": "unresolved",
+      "basis": [],
+      "rationale": "The designated evidence-scope snapshot, lucid-production-outcome-2024, is unavailable. The visible 2023 outlook is outside that scope and cannot establish what the scoped record says. Supply the missing snapshot through the existing queued verification request.",
+      "gaps": [],
+      "resolutions": [],
+      "evidence_verdict": "unresolved",
+      "world_verdict": "unresolved",
+      "world_basis": [],
+      "world_rationale": "The supplied snapshot reports a production outlook, not the actual 2023 production total. No supplied outcome evidence independently establishes whether Lucid manufactured more than 10,000 vehicles in 2023 as of the cutoff."
+    },
+    {
+      "round": 2,
+      "verdict": "contradicted",
+      "basis": [
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "start": 0,
+          "end": 21,
+          "quote": "Lucid Q4 2023 results"
+        },
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "start": 60,
+          "end": 118,
+          "quote": "On a full-year basis, the Company produced 8,428 vehicles."
+        }
+      ],
+      "rationale": "The designated evidence reports full-year 2023 production of 8,428 vehicles, below the target's threshold of more than 10,000. The earlier outlook is outside the evidence scope.",
+      "gaps": [],
+      "resolutions": [],
+      "evidence_verdict": "contradicted",
+      "world_verdict": "contradicted",
+      "world_basis": [
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "start": 0,
+          "end": 59,
+          "quote": "Lucid Q4 2023 results | SEC exhibit filed February 21, 2024"
+        },
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "start": 60,
+          "end": 118,
+          "quote": "On a full-year basis, the Company produced 8,428 vehicles."
+        }
+      ],
+      "world_rationale": "The supplied provenance identifies the outcome as an original Lucid SEC filing with an immutable accession, available before the as-of date. Its retrospective production total contradicts the claim; this relies on the original outcome record, not repeated copies or the earlier forecast."
+    }
+  ],
+  "operations": [
+    {
+      "sequence": 1,
+      "round": 1,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "origin:lucid-production-2023",
+          "question": "Find the producing record and evidenced lineage for: Lucid will manufacture more than 10,000 vehicles during 2023.",
+          "stage": "provenance",
+          "dimension": "auto",
+          "blocking": true,
+          "target_id": null,
+          "basis": [],
+          "decision_impact": "",
+          "action": "search",
+          "locator": null,
+          "probe_id": null
+        }
+      ],
+      "limit": 18
+    },
+    {
+      "sequence": 2,
+      "round": 1,
+      "action": "retrieval_attribution_validated",
+      "version_id": "lucid-production-claim-2023",
+      "task_ids": [],
+      "attribution": "envelope"
+    },
+    {
+      "sequence": 3,
+      "round": 1,
+      "action": "snapshot_saved",
+      "version_id": "lucid-production-claim-2023",
+      "sha256": "f563325e7af346d9f72983b6088facfe6ea525de52bfc7962cb9e5db25cb3fec",
+      "eligible": true
+    },
+    {
+      "sequence": 4,
+      "round": 1,
+      "action": "decompose_started",
+      "version_id": "lucid-production-claim-2023",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 5,
+      "round": 1,
+      "action": "decompose_completed",
+      "version_id": "lucid-production-claim-2023",
+      "revision": 1
+    },
+    {
+      "sequence": 6,
+      "round": 1,
+      "action": "alignment_checked",
+      "version_id": "lucid-production-claim-2023",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 7,
+      "round": 1,
+      "action": "graph_updated",
+      "version_id": "lucid-production-claim-2023",
+      "open_gaps": 1
+    },
+    {
+      "sequence": 8,
+      "round": 1,
+      "action": "verification_started"
+    },
+    {
+      "sequence": 9,
+      "round": 1,
+      "action": "verification_completed",
+      "verdict": "unresolved",
+      "decision": "unresolved",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": [
+            "evidence:lucid-production-outcome-2024"
+          ]
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "followup_tasks": 0,
+      "provenance_status": "original_material_located"
+    },
+    {
+      "sequence": 10,
+      "round": 1,
+      "action": "assessment_changed",
+      "previous": null,
+      "current": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": [
+            "evidence:lucid-production-outcome-2024"
+          ]
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "basis": [],
+      "world_basis": []
+    },
+    {
+      "sequence": 11,
+      "round": 1,
+      "action": "followup_tasks_queued",
+      "gap_ids": [
+        "evidence:lucid-production-outcome-2024"
+      ]
+    },
+    {
+      "sequence": 12,
+      "round": 1,
+      "action": "progress_checked",
+      "new_eligible_versions": 1,
+      "new_structure": true
+    },
+    {
+      "sequence": 13,
+      "round": 2,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "evidence:lucid-production-outcome-2024",
+          "question": "What does the designated evidence-scope document lucid-production-outcome-2024 say about 2023 production?",
+          "stage": "verification",
+          "dimension": "evidence",
+          "blocking": true,
+          "target_id": "lucid-production-2023",
+          "basis": [
+            {
+              "version_id": "lucid-production-claim-2023",
+              "start": 57,
+              "end": 124,
+              "quote": "Lucid is on track to manufacture more than 10,000 vehicles in 2023."
+            }
+          ],
+          "decision_impact": "The supplied statement is an outlook outside the designated evidence scope. The absent outcome snapshot is needed to assess what that scope says about the unchanged target.",
+          "action": "search",
+          "locator": "lucid-production-outcome-2024 Lucid 2023 annual vehicle production results",
+          "probe_id": null
+        }
+      ],
+      "limit": 17
+    },
+    {
+      "sequence": 14,
+      "round": 2,
+      "action": "retrieval_attribution_validated",
+      "version_id": "lucid-production-outcome-2024",
+      "task_ids": [
+        "evidence:lucid-production-outcome-2024"
+      ],
+      "attribution": "envelope"
+    },
+    {
+      "sequence": 15,
+      "round": 2,
+      "action": "snapshot_saved",
+      "version_id": "lucid-production-outcome-2024",
+      "sha256": "e36bc0f99dff4028b9fd50584d9b9a7bb9fd3c3303c2369e092ae44fde8b0ff6",
+      "eligible": true
+    },
+    {
+      "sequence": 16,
+      "round": 2,
+      "action": "decompose_started",
+      "version_id": "lucid-production-outcome-2024",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 17,
+      "round": 2,
+      "action": "decompose_completed",
+      "version_id": "lucid-production-outcome-2024",
+      "revision": 2
+    },
+    {
+      "sequence": 18,
+      "round": 2,
+      "action": "alignment_checked",
+      "version_id": "lucid-production-outcome-2024",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 19,
+      "round": 2,
+      "action": "graph_updated",
+      "version_id": "lucid-production-outcome-2024",
+      "open_gaps": 0
+    },
+    {
+      "sequence": 20,
+      "round": 2,
+      "action": "retrieval_feedback",
+      "feedback": {
+        "round": 2,
+        "gap_id": "evidence:lucid-production-outcome-2024",
+        "action": "search",
+        "locator": "lucid-production-outcome-2024 Lucid 2023 annual vehicle production results",
+        "status": "returned",
+        "reason": "matching snapshots returned",
+        "version_ids": [
+          "lucid-production-outcome-2024"
+        ]
+      }
+    },
+    {
+      "sequence": 21,
+      "round": 2,
+      "action": "verification_started"
+    },
+    {
+      "sequence": 22,
+      "round": 2,
+      "action": "verification_completed",
+      "verdict": "contradicted",
+      "decision": "contradicted",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        }
+      },
+      "followup_tasks": 0,
+      "provenance_status": "original_material_located"
+    },
+    {
+      "sequence": 23,
+      "round": 2,
+      "action": "assessment_changed",
+      "previous": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": [
+            "evidence:lucid-production-outcome-2024"
+          ]
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "current": {
+        "evidence": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        }
+      },
+      "basis": [
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "start": 0,
+          "end": 21,
+          "quote": "Lucid Q4 2023 results"
+        },
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "start": 60,
+          "end": 118,
+          "quote": "On a full-year basis, the Company produced 8,428 vehicles."
+        }
+      ],
+      "world_basis": [
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "start": 0,
+          "end": 59,
+          "quote": "Lucid Q4 2023 results | SEC exhibit filed February 21, 2024"
+        },
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "start": 60,
+          "end": 118,
+          "quote": "On a full-year basis, the Company produced 8,428 vehicles."
+        }
+      ]
+    },
+    {
+      "sequence": 24,
+      "round": 2,
+      "action": "stopped",
+      "reason": "complete"
+    }
+  ],
+  "errors": [],
+  "model_call_lineage": {
+    "schema_version": 1,
+    "call_artifact_sha256": "f2b0ba485ea09a8d235c761adef12be8ceae6750aacc89ce13f1881ca27ac469",
+    "responses": [
+      {
+        "sequence": 1,
+        "response_id": "chatcmpl-EL2eO8PnAe6lcsQgpO7HVmYSuPsCt",
+        "output_sha256": "7883d3e08f20b25ed9e8276b2795d00f75e15a290465ab35ea62c5a8cc243f02"
+      },
+      {
+        "sequence": 2,
+        "response_id": "chatcmpl-EL2eo8KmHiToQxb046Da1S0o81Oe2",
+        "output_sha256": "62df45480a27c9c3729e8b0668b6ad5865e06441a83f31cc3ca76ab6314837ec"
+      },
+      {
+        "sequence": 3,
+        "response_id": "chatcmpl-EL2etFsZcaF2STO0L9tUQeUkjqRLA",
+        "output_sha256": "6861ec3d3ec96eebe7b977ef7d54cf9cc6959d6c5e62004c374f2b0f672a7798"
+      },
+      {
+        "sequence": 4,
+        "response_id": "chatcmpl-EL2fHvNoby8RpOsjxONryWG034xMx",
+        "output_sha256": "b3ea933d8675ce54fe59d462118698e360ad19cb663db6037bde7630cae7016d"
+      }
+    ]
+  }
+}

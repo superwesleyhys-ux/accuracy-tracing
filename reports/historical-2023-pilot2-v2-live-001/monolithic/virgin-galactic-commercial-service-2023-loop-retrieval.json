@@ -1,0 +1,69 @@
+[
+  {
+    "round": 1,
+    "tasks": [
+      {
+        "id": "origin:virgin-galactic-commercial-service-2023",
+        "question": "Find the producing record and evidenced lineage for: Virgin Galactic will commence commercial service during the second quarter of 2023.",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null,
+        "probe_id": null
+      }
+    ],
+    "planned_ids": [
+      "virgin-commercial-claim-2023"
+    ],
+    "returned_ids": [
+      "virgin-commercial-claim-2023"
+    ],
+    "attribution": {},
+    "feedback": []
+  },
+  {
+    "round": 2,
+    "tasks": [
+      {
+        "id": "missing-scoped-outcome",
+        "question": "What does the designated evidence-scope document virgin-commercial-outcome-2024 say about the target?",
+        "stage": "verification",
+        "dimension": "evidence",
+        "blocking": false,
+        "target_id": "virgin-galactic-commercial-service-2023",
+        "basis": [],
+        "decision_impact": "The designated document is not supplied, so its support for or contradiction of the unchanged target cannot be assessed.",
+        "action": "search",
+        "locator": "virgin-commercial-outcome-2024 Virgin Galactic commercial service",
+        "probe_id": null
+      }
+    ],
+    "planned_ids": [
+      "virgin-commercial-outcome-2024"
+    ],
+    "returned_ids": [
+      "virgin-commercial-outcome-2024"
+    ],
+    "attribution": {
+      "virgin-commercial-outcome-2024": [
+        "missing-scoped-outcome"
+      ]
+    },
+    "feedback": [
+      {
+        "gap_id": "missing-scoped-outcome",
+        "action": "search",
+        "locator": "virgin-commercial-outcome-2024 Virgin Galactic commercial service",
+        "status": "returned",
+        "reason": "matching snapshots returned",
+        "version_ids": [
+          "virgin-commercial-outcome-2024"
+        ]
+      }
+    ]
+  }
+]

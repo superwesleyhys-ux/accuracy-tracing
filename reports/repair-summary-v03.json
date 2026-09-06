@@ -1,0 +1,55 @@
+{
+  "model_ids": [
+    "gpt-6-astra"
+  ],
+  "unique_real_api_responses": 33,
+  "actual_usage": {
+    "input_tokens": 57956,
+    "output_tokens": 27432
+  },
+  "attempts": [
+    {
+      "run": "live-v03-attempt-01",
+      "rows": 6,
+      "completed": 6,
+      "new_api_responses": 23,
+      "cached_response_replays": 0,
+      "new_input_tokens": 37921,
+      "new_output_tokens": 18908,
+      "scores": {
+        "n": 5,
+        "first_correct": 4,
+        "last_correct": 5
+      }
+    },
+    {
+      "run": "live-v03-attempt-02",
+      "rows": 6,
+      "completed": 6,
+      "new_api_responses": 10,
+      "cached_response_replays": 17,
+      "new_input_tokens": 20035,
+      "new_output_tokens": 8524,
+      "scores": {
+        "n": 5,
+        "first_correct": 4,
+        "last_correct": 5
+      }
+    }
+  ],
+  "input_and_gold_unchanged": true,
+  "tests": {
+    "tests_run": 103,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "uses_mock_semantic_outputs": true
+  },
+  "package_install": {
+    "version": "0.3.0",
+    "isolated_target_import": true,
+    "demo_fact_status": "contradicted"
+  },
+  "interpretation": "Five author-written contract examples. Improvement in the chain case is explained by additional evidence access; the full-evidence one-round control also succeeds."
+}

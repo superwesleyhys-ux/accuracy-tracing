@@ -1,0 +1,341 @@
+{
+  "schema_version": "0.3",
+  "scope": "plugin-supplied semantic analyses; no built-in truth oracle",
+  "target": {
+    "id": "boeing-starliner-cft-2023",
+    "text": "Boeing will complete the Starliner crewed flight test by December 31, 2023.",
+    "as_of": "2024-12-31T23:59:59Z",
+    "source_version_id": "boeing-starliner-claim-2023",
+    "assessment_mode": "evidence",
+    "evidence_scope": [
+      "boeing-starliner-outcome-2024"
+    ]
+  },
+  "config": {
+    "max_rounds": 5,
+    "max_documents": 18,
+    "max_decomposition_calls": 18
+  },
+  "provenance_status": "unresolved",
+  "fact_status": "unresolved",
+  "stop_reason": "verifier_error",
+  "usage": {
+    "rounds": 1,
+    "documents": 1,
+    "unique_versions": 1,
+    "decomposition_calls": 1,
+    "verification_calls": 1
+  },
+  "decision_status": "unresolved",
+  "assessments": null,
+  "assessment_valid": false,
+  "materials": [
+    {
+      "version_id": "boeing-starliner-claim-2023",
+      "url": "https://www.sec.gov/Archives/edgar/data/12927/000001292723000007/ba-20221231.htm",
+      "content": "Boeing 2022 Form 10-K | SEC filing dated January 27, 2023\nA crewed flight test is now expected to be completed in 2023.",
+      "retrieved_at": "2026-09-06T04:05:15Z",
+      "published_at": "2023-01-27T23:59:59Z",
+      "available_at": "2023-01-27T23:59:59Z",
+      "availability_basis": "Immutable SEC EDGAR accession 0000012927-23-000007, filed January 27, 2023; raw filing identity is recorded in sources.json.",
+      "issuer": "The Boeing Company (filed with the U.S. SEC)"
+    }
+  ],
+  "eligible_version_ids": [
+    "boeing-starliner-claim-2023"
+  ],
+  "observations": [
+    {
+      "version_id": "boeing-starliner-claim-2023",
+      "retrieved_at": "2026-09-06T04:05:15Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": [],
+      "task_ids": []
+    }
+  ],
+  "retrieval_feedback": [],
+  "analyses": {
+    "boeing-starliner-claim-2023": {
+      "fragments": [
+        {
+          "id": "boeing-starliner-claim-2023:atom:550c4addf14db50a1c0e",
+          "text": "Boeing's 2022 Form 10-K states that a crewed flight test is now expected to be completed in 2023.",
+          "span": {
+            "version_id": "boeing-starliner-claim-2023",
+            "start": 58,
+            "end": 119,
+            "quote": "A crewed flight test is now expected to be completed in 2023."
+          },
+          "parent_id": "boeing-starliner-cft-2023",
+          "qualifiers": [
+            "now expected",
+            "in 2023"
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "boeing-starliner-claim-2023",
+              "start": 82,
+              "end": 94,
+              "quote": "now expected"
+            },
+            {
+              "version_id": "boeing-starliner-claim-2023",
+              "start": 111,
+              "end": 118,
+              "quote": "in 2023"
+            }
+          ]
+        }
+      ],
+      "relations": [],
+      "gaps": [],
+      "resolutions": [],
+      "origins": [],
+      "notes": "The supplied content does not explicitly identify the flight test as Starliner or name the actor completing it; completion is presented as an expectation.\nThe material identifies a Boeing 2022 Form 10-K filed with the SEC on January 27, 2023. It contains no explicit source-side citations or statement establishing originality, and no evidence warranting revisiting another version.",
+      "revisit_versions": []
+    }
+  },
+  "analysis_history": [
+    {
+      "revision": 1,
+      "round": 1,
+      "version_id": "boeing-starliner-claim-2023",
+      "duplicate": false,
+      "revisit": false,
+      "retrieval_receipt": {
+        "version_id": "boeing-starliner-claim-2023",
+        "task_ids": [],
+        "revisit": false,
+        "tasks": [],
+        "attribution": "envelope",
+        "duplicate": false,
+        "eligible": true
+      },
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "boeing-starliner-claim-2023:atom:550c4addf14db50a1c0e",
+            "text": "Boeing's 2022 Form 10-K states that a crewed flight test is now expected to be completed in 2023.",
+            "span": {
+              "version_id": "boeing-starliner-claim-2023",
+              "start": 58,
+              "end": 119,
+              "quote": "A crewed flight test is now expected to be completed in 2023."
+            },
+            "parent_id": "boeing-starliner-cft-2023",
+            "qualifiers": [
+              "now expected",
+              "in 2023"
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "boeing-starliner-claim-2023",
+                "start": 82,
+                "end": 94,
+                "quote": "now expected"
+              },
+              {
+                "version_id": "boeing-starliner-claim-2023",
+                "start": 111,
+                "end": 118,
+                "quote": "in 2023"
+              }
+            ]
+          }
+        ],
+        "relations": [],
+        "gaps": [],
+        "resolutions": [],
+        "origins": [],
+        "notes": "The supplied content does not explicitly identify the flight test as Starliner or name the actor completing it; completion is presented as an expectation.\nThe material identifies a Boeing 2022 Form 10-K filed with the SEC on January 27, 2023. It contains no explicit source-side citations or statement establishing originality, and no evidence warranting revisiting another version.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    }
+  ],
+  "fragments": [
+    {
+      "id": "boeing-starliner-claim-2023:atom:550c4addf14db50a1c0e",
+      "text": "Boeing's 2022 Form 10-K states that a crewed flight test is now expected to be completed in 2023.",
+      "span": {
+        "version_id": "boeing-starliner-claim-2023",
+        "start": 58,
+        "end": 119,
+        "quote": "A crewed flight test is now expected to be completed in 2023."
+      },
+      "parent_id": "boeing-starliner-cft-2023",
+      "qualifiers": [
+        "now expected",
+        "in 2023"
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "boeing-starliner-claim-2023",
+          "start": 82,
+          "end": 94,
+          "quote": "now expected"
+        },
+        {
+          "version_id": "boeing-starliner-claim-2023",
+          "start": 111,
+          "end": 118,
+          "quote": "in 2023"
+        }
+      ]
+    }
+  ],
+  "relations": [],
+  "origins": [],
+  "gaps": [
+    {
+      "id": "origin:boeing-starliner-cft-2023",
+      "question": "Find the producing record and evidenced lineage for: Boeing will complete the Starliner crewed flight test by December 31, 2023.",
+      "stage": "provenance",
+      "dimension": "auto",
+      "blocking": true,
+      "target_id": null,
+      "basis": [],
+      "decision_impact": "",
+      "action": "search",
+      "locator": null,
+      "probe_id": null
+    }
+  ],
+  "resolutions": [],
+  "verification_history": [],
+  "operations": [
+    {
+      "sequence": 1,
+      "round": 1,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "origin:boeing-starliner-cft-2023",
+          "question": "Find the producing record and evidenced lineage for: Boeing will complete the Starliner crewed flight test by December 31, 2023.",
+          "stage": "provenance",
+          "dimension": "auto",
+          "blocking": true,
+          "target_id": null,
+          "basis": [],
+          "decision_impact": "",
+          "action": "search",
+          "locator": null,
+          "probe_id": null
+        }
+      ],
+      "limit": 18
+    },
+    {
+      "sequence": 2,
+      "round": 1,
+      "action": "retrieval_attribution_validated",
+      "version_id": "boeing-starliner-claim-2023",
+      "task_ids": [],
+      "attribution": "envelope"
+    },
+    {
+      "sequence": 3,
+      "round": 1,
+      "action": "snapshot_saved",
+      "version_id": "boeing-starliner-claim-2023",
+      "sha256": "4afad4c4031c844e65b15fe2ca9cdd2f434c0b86b1d55689674fbb43fb5ec9fb",
+      "eligible": true
+    },
+    {
+      "sequence": 4,
+      "round": 1,
+      "action": "decompose_started",
+      "version_id": "boeing-starliner-claim-2023",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 5,
+      "round": 1,
+      "action": "decompose_completed",
+      "version_id": "boeing-starliner-claim-2023",
+      "revision": 1
+    },
+    {
+      "sequence": 6,
+      "round": 1,
+      "action": "alignment_checked",
+      "version_id": "boeing-starliner-claim-2023",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 7,
+      "round": 1,
+      "action": "graph_updated",
+      "version_id": "boeing-starliner-claim-2023",
+      "open_gaps": 1
+    },
+    {
+      "sequence": 8,
+      "round": 1,
+      "action": "verification_started"
+    },
+    {
+      "sequence": 9,
+      "round": 1,
+      "action": "error",
+      "stage": "verifier",
+      "message": "staged semantic evidence: unresolved probe must choose tasks or an explicit stop"
+    },
+    {
+      "sequence": 10,
+      "round": 1,
+      "action": "stopped",
+      "reason": "verifier_error"
+    }
+  ],
+  "errors": [
+    {
+      "stage": "verifier",
+      "type": "StagedSemanticError",
+      "message": "staged semantic evidence: unresolved probe must choose tasks or an explicit stop"
+    }
+  ],
+  "model_call_lineage": {
+    "schema_version": 1,
+    "call_artifact_sha256": "e4c0ac6aaed277015726e67dc1e286050ac2634af31644b37fbec672e1bd370b",
+    "responses": [
+      {
+        "sequence": 1,
+        "response_id": "chatcmpl-EL0nBvX0LSMgcZAqMPYCCF7Zly6xo",
+        "output_sha256": "cfc1f88a36b27075b13436edfd1ce0ba28616e8509b0ac5b4f552860f326b211"
+      },
+      {
+        "sequence": 2,
+        "response_id": "chatcmpl-EL0nF0msw77Wljr2Hls4zDQBnLvpW",
+        "output_sha256": "9772d4f5c4dab18051845941140adbe587635f94f16eb8f92bdc1816daf1ebd6"
+      },
+      {
+        "sequence": 3,
+        "response_id": "chatcmpl-EL0nK2wwi4KmtedqoIAsbdL8PalqB",
+        "output_sha256": "629f0cd7ee606355a01c385d7e66408999568f934169eb46cd265ea890c8bbf6"
+      },
+      {
+        "sequence": 4,
+        "response_id": "chatcmpl-EL0nPzy6tANnXk6D1uV5vzGFzlWMW",
+        "output_sha256": "0460d49443a3d058c7a0c1a462ce42979b63500fc086c9ea2c0b2e5bb83a49ad"
+      },
+      {
+        "sequence": 5,
+        "response_id": "chatcmpl-EL0nVVEy5Dz3KtJXZgHYgadbRyIAM",
+        "output_sha256": "8ef9bbb21c861b2cceaaaf44f57088f9a778d69ffb6c9cc5a1b3272ff1c7fca4"
+      }
+    ]
+  },
+  "execution_failure": {
+    "schema_version": 1,
+    "error_type": "StagedSemanticError",
+    "trace_stage": "verifier",
+    "trace_error_type": "StagedSemanticError",
+    "call_artifact_sha256": "e4c0ac6aaed277015726e67dc1e286050ac2634af31644b37fbec672e1bd370b",
+    "failed_call_sequence": null,
+    "failed_call_error_type": null
+  }
+}

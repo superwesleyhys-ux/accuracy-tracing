@@ -1,0 +1,86 @@
+{
+  "model": "gpt-6-astra",
+  "reasoning_effort": null,
+  "execution_profile": "equal-v1",
+  "max_rounds": 5,
+  "trace_config": {
+    "max_rounds": 5,
+    "max_documents": 18,
+    "max_decomposition_calls": 18
+  },
+  "budget": {
+    "calls": 128,
+    "output_tokens": 480000,
+    "per_call_output_tokens": 8000,
+    "seconds": 1800
+  },
+  "model_retrieved_at_exposed": false,
+  "source_manifest_sha256": "92159de53b2e39080c48ce8b562b57608b8cb2158a46cc1b36c6d1938d1e324e",
+  "git_commit": "36a87f6c316878b60e5d771515890f977389e7ac",
+  "semantic_mode": "staged",
+  "max_inner_repairs": 1,
+  "input_sha256": "05509ee5dfceba9067d07ffc59bb60b3230fceaf9013f4a7dbca5ee9dfc400ab",
+  "source_sha256": {
+    "newsverify/__init__.py": "0ac9f5e7253a49739180448259a9dfe2dc85ab7537f23074481d449136b77c96",
+    "newsverify/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "newsverify/cli.py": "8c810053cae5b605d46d4004fd92e8920ca6fcc9a813d205f68ed96bb73a515b",
+    "newsverify/comparison.py": "b35ddbb2e82a5a763aac31982f28c984ca50a242ecb07a1245128e09199279c5",
+    "newsverify/core.py": "8f148c272de3be772581dc78644411fa2b56d1eb809045ef6423620ac7a41d88",
+    "newsverify/decisions.py": "fe93d618b0f122591b39def16e952a4076c4fc66d69d81198c28489e245b4b3e",
+    "newsverify/evaluation.py": "2c971584562232d979fa9523c610b94a53c6d76a74940dbc58a581773c336e4f",
+    "newsverify/provenance.py": "7992f982f14162871b9d2066c6a9c8c499b85260e18453e4b5859ca7589d54cc",
+    "newsverify/providers.py": "7cb362d1f89270e82b1b34590eecac607a43896a6bbe763c3b88b0254970b568",
+    "newsverify/retrieval.py": "9e8b1a32656f8aeab7eed6250c3efce35f4e1c45b711c492365b3e87beed2567",
+    "newsverify/trace_demo.py": "960c78e0fc2aa2bb428dd13db59c3c8314c7e7ffe533d2fe64d80267474b1251",
+    "experiments/historical_compare.py": "9b14cf9dc732eaa92d86d145b1a429ebefcb557e4271a2a7525ed011f7acde8b",
+    "experiments/loop_compare.py": "5316d395ad4338f118c5f5d55d4ddd9a6c83ac8a16ca6b791a9565c17ce0cc72",
+    "experiments/model_io.py": "2b082b6f0d19e75bd3619004e0b4f8637090feaf82d1c2c68fa7952346e95417",
+    "experiments/prompt_specs.py": "5095ee3536c3f0ac552a83028e2f114f7a84cbb54334532093b107a8b059aabf",
+    "experiments/secure_run.py": "3f869162b7ee60082f750d972f5b2afe0a61dac92344ee162f84534c05811cb5",
+    "experiments/semantic_adapter.py": "07d9ace4d83c96d0c06fbf682fe1732a583655a94e5389b3401da7400ef9c407",
+    "experiments/staged_semantic.py": "d99de3a4ef3b8a7c3384905c2cc656d492f8f515a8540af6856ba89bb7f7e467",
+    "experiments/target_plan.py": "bde07636f62a1961aafb2ee6797f05398b1345447cda362263e2ecd1cdd43603"
+  },
+  "comparison": "exact first-round checkpoint versus continued loop; same decision function",
+  "control": "one-round all-materials control for flagged cases separates access from repeated reasoning",
+  "original_agent_reexecuted": false,
+  "gold_access_during_inference": false,
+  "actual_spend_equal": false,
+  "input_tokens_capped": false,
+  "prompt_manifest": {
+    "version": "staged-validation-v4",
+    "target_plan_version": "deterministic-target-plan-v3",
+    "stages": {
+      "atoms": {
+        "prompt_sha256": "d4689c70d37d4afa8ef6139b2e766a51f85f0fd5b74b38797e778c0cb9c2af59",
+        "schema_sha256": "a0a676a8ceac4961596f8ea057f579ef5eeb93980c3c39b3cbb88f81d692bc9b"
+      },
+      "lineage": {
+        "prompt_sha256": "229dbdbbcea5df9ee86d45b91f0c98cb636645e5bfc5279ac40972bd0092ff8d",
+        "schema_sha256": "892c80a8fdb57a98d8ca917cd9926142883645fcc84036a063ebc24740535bc4"
+      },
+      "decomposition_critic": {
+        "prompt_sha256": "47125cea7fce0618a01b4d75107f0413c0caf80600bd25726797ba3c8fe62a49",
+        "schema_sha256": "9d5d4e1d01a1cdc27368fd7880e55862fb0a263e3fa4babb767595c184d00134"
+      },
+      "evidence": {
+        "prompt_sha256": "f93cd54c091ee52adcd2ce646ccf2f40dfed7551de8ab8fbfffd0753cc449e9d",
+        "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f"
+      },
+      "world": {
+        "prompt_sha256": "679a24e5a244c45b7d332fb5f3354b869bff7044ffa447364d487c5f7612986f",
+        "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f"
+      },
+      "evidence_critic": {
+        "prompt_sha256": "51808a204c719b0cfc2def68e5f1c937e637a9e6f8c8655de2b568170cce7d50",
+        "schema_sha256": "f31d5df8f2a48083ea4af0f45daf80582f409aa724b969c836b46d8d69575025"
+      },
+      "world_critic": {
+        "prompt_sha256": "2bf842fb7c8fb4133841267feed89cb6a10f2494bd776af7476cc988f3c775fc",
+        "schema_sha256": "f31d5df8f2a48083ea4af0f45daf80582f409aa724b969c836b46d8d69575025"
+      }
+    }
+  },
+  "reuse_from": null,
+  "cache_rule": "same case/variant and run-level execution-profile/trace-config; exact requested-model/reasoning/system/user/schema/response-mode/output-cap match; one-shot replay; historical time/tokens charged"
+}

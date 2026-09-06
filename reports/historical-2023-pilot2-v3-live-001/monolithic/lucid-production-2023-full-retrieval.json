@@ -1,0 +1,30 @@
+[
+  {
+    "round": 1,
+    "tasks": [
+      {
+        "id": "origin:lucid-production-2023",
+        "question": "Find the producing record and evidenced lineage for: Lucid will manufacture more than 10,000 vehicles during 2023.",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null,
+        "probe_id": null
+      }
+    ],
+    "planned_ids": [
+      "lucid-production-claim-2023",
+      "lucid-production-outcome-2024"
+    ],
+    "returned_ids": [
+      "lucid-production-claim-2023",
+      "lucid-production-outcome-2024"
+    ],
+    "attribution": {},
+    "feedback": []
+  }
+]

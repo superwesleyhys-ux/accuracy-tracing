@@ -1,0 +1,47 @@
+# Changelog
+
+All notable changes to Accuracy Tracing are documented here. The project uses
+semantic versioning for its public releases.
+
+## 0.3.0 — 2026-09-06
+
+### Highlights
+
+- Added the staged validation loop: seven single-responsibility semantic stages
+  with deterministic Python validation and judgement assembly.
+- Added bounded retrieval feedback with exact task attribution, immutable
+  material versions, reanalysis of affected history, and explicit stop reasons.
+- Added fail-closed target grounding for actors, actions, objects, quantities,
+  time scopes, negation, comparisons, and cross-event conflicts.
+- Added the frozen Historical 2023 comparison harness with cutoff enforcement,
+  gold isolation, raw call traces, resource accounting, and offline scoring.
+- Expanded evaluation, repair, release, provenance, and staged semantic
+  regression coverage to 250 passing tests.
+
+### Observed pilot result
+
+On the frozen two-case post-hoc pilot, the original monolithic adapter scored
+1/2 and the staged adapter scored 2/2. The staged arm used 5.5× as many calls
+and 3.17× as many total tokens. A separate full-evidence diagnostic failed in
+the staged arm, so the run-level status is `has_errors` even though all scored
+main cases completed. See the
+[full report](reports/historical-2023-pilot2-v3-live-001/SUMMARY.md).
+
+This small pilot is an engineering signal, not a general accuracy estimate or
+an equal-compute causal result.
+
+### Compatibility
+
+- Python 3.11 or newer.
+- The core package remains standard-library-only.
+- Model-backed experiments use the optional `model` dependency group and run
+  from a source checkout.
+- Legacy `demo`, `verify`, and `benchmark` commands remain available.
+
+## 0.2.0 — 2026-09-05
+
+- Introduced the bounded provenance trace engine and fixed-target evaluation
+  toolkit.
+- Added immutable evidence versions, lineage-aware source grouping,
+  reanalysis, explicit budgets, and deterministic offline fixtures.
+- Added the MIT license, packaging metadata, contribution guide, and CI.

@@ -1,0 +1,377 @@
+{
+  "prompt_manifest": {
+    "version": "staged-validation-v5",
+    "target_plan_version": "deterministic-target-plan-v4",
+    "stages": {
+      "atoms": {
+        "prompt_sha256": "d4689c70d37d4afa8ef6139b2e766a51f85f0fd5b74b38797e778c0cb9c2af59",
+        "schema_sha256": "a0a676a8ceac4961596f8ea057f579ef5eeb93980c3c39b3cbb88f81d692bc9b"
+      },
+      "lineage": {
+        "prompt_sha256": "229dbdbbcea5df9ee86d45b91f0c98cb636645e5bfc5279ac40972bd0092ff8d",
+        "schema_sha256": "892c80a8fdb57a98d8ca917cd9926142883645fcc84036a063ebc24740535bc4"
+      },
+      "decomposition_critic": {
+        "prompt_sha256": "47125cea7fce0618a01b4d75107f0413c0caf80600bd25726797ba3c8fe62a49",
+        "schema_sha256": "9d5d4e1d01a1cdc27368fd7880e55862fb0a263e3fa4babb767595c184d00134"
+      },
+      "evidence": {
+        "prompt_sha256": "13a19f7652855526a099a94ed87f248b01daaec78b974b586169672e8f0097a4",
+        "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f"
+      },
+      "world": {
+        "prompt_sha256": "679a24e5a244c45b7d332fb5f3354b869bff7044ffa447364d487c5f7612986f",
+        "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f"
+      },
+      "evidence_critic": {
+        "prompt_sha256": "51808a204c719b0cfc2def68e5f1c937e637a9e6f8c8655de2b568170cce7d50",
+        "schema_sha256": "f31d5df8f2a48083ea4af0f45daf80582f409aa724b969c836b46d8d69575025"
+      },
+      "world_critic": {
+        "prompt_sha256": "2bf842fb7c8fb4133841267feed89cb6a10f2494bd776af7476cc988f3c775fc",
+        "schema_sha256": "f31d5df8f2a48083ea4af0f45daf80582f409aa724b969c836b46d8d69575025"
+      }
+    }
+  },
+  "target_plans": {
+    "virgin-galactic-commercial-service-2023": {
+      "version": "deterministic-target-plan-v4",
+      "target_id": "virgin-galactic-commercial-service-2023",
+      "target_text_sha256": "dc9314b7039e31b31db9d3154bbbafdefaefcda69cb570518afe154057975178",
+      "operator": "all",
+      "probes": [
+        {
+          "number": 1,
+          "id": "virgin-galactic-commercial-service-2023:probe:41053c98430d4e63cd18",
+          "text": "Virgin Galactic will commence commercial service during the second quarter of 2023.",
+          "start": 0,
+          "end": 83,
+          "required_dimensions": [
+            "actor_subject",
+            "predicate_object",
+            "scope_location",
+            "time"
+          ]
+        }
+      ],
+      "plan_sha256": "6c0356581e0eed4a22c0e6e18c282112b645a5b291d30db36806abca99fa1bb8"
+    }
+  },
+  "decomposition": [
+    {
+      "sequence": 1,
+      "material": "virgin-commercial-claim-2023",
+      "round": 1,
+      "stage": "atoms",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "d4689c70d37d4afa8ef6139b2e766a51f85f0fd5b74b38797e778c0cb9c2af59",
+      "payload_sha256": "dd2aaea196165f8971c76a766c22d3bd2611a247de83e2fb7d33723707d66ee3",
+      "schema_sha256": "a0a676a8ceac4961596f8ea057f579ef5eeb93980c3c39b3cbb88f81d692bc9b",
+      "status": "accepted",
+      "transaction_id": "decompose:virgin-galactic-commercial-service-2023:virgin-commercial-claim-2023:1",
+      "model_call_sequence": 1,
+      "request_digest": "46d7edb030ae7abb42aea1c3f0a32b8cdc430a29887bef35cf732d1db4b5048f",
+      "response_id": "chatcmpl-EL1OO6oOrzsXgNtBrXfzOdj4dSPY1",
+      "usage": {
+        "input_tokens": 872,
+        "output_tokens": 94
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "c8021860a03e37f226461029a1ad752209bea23295051b0d6c3eba4234a229d4"
+    },
+    {
+      "sequence": 2,
+      "material": "virgin-commercial-claim-2023",
+      "round": 1,
+      "stage": "lineage",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "229dbdbbcea5df9ee86d45b91f0c98cb636645e5bfc5279ac40972bd0092ff8d",
+      "payload_sha256": "24ac2b0cad01ed7c951f05b9538f7f14f436b7fad00ce4e0a62ab1f4845a37bb",
+      "schema_sha256": "892c80a8fdb57a98d8ca917cd9926142883645fcc84036a063ebc24740535bc4",
+      "status": "accepted",
+      "transaction_id": "decompose:virgin-galactic-commercial-service-2023:virgin-commercial-claim-2023:1",
+      "model_call_sequence": 2,
+      "request_digest": "7e2972d29442d5e9bd84cb22c2c4aad8c1b3a1949e9c67b8c3892fd7ff430981",
+      "response_id": "chatcmpl-EL1OSPYIAA4CclgXWoDbMjPFwSFWM",
+      "usage": {
+        "input_tokens": 1095,
+        "output_tokens": 120
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "803c05a7653eb37b74c2d4857b8395e8de5243037c4b3264ad261f4d84583a8b"
+    },
+    {
+      "sequence": 3,
+      "material": "virgin-commercial-claim-2023",
+      "round": 1,
+      "stage": "decomposition_critic",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "47125cea7fce0618a01b4d75107f0413c0caf80600bd25726797ba3c8fe62a49",
+      "payload_sha256": "ff98bc1db9cc8f6b355f51e5101e1031b65ee1ae5e64010f45d572ca1bcb8b50",
+      "schema_sha256": "9d5d4e1d01a1cdc27368fd7880e55862fb0a263e3fa4babb767595c184d00134",
+      "status": "accepted",
+      "transaction_id": "decompose:virgin-galactic-commercial-service-2023:virgin-commercial-claim-2023:1",
+      "model_call_sequence": 3,
+      "request_digest": "34e9673451353a559d7f124b730e4fb71a1caa19694569be881e1cd003cc8737",
+      "response_id": "chatcmpl-EL1OWaYfVZma747uT3nOhho6Xbw4c",
+      "usage": {
+        "input_tokens": 1066,
+        "output_tokens": 65
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "6a2cfe81bfbaf11777ea6071088b27f1b6259796a7db1cd46b63981c232135b7"
+    },
+    {
+      "sequence": 4,
+      "material": "virgin-commercial-claim-2023",
+      "round": 1,
+      "stage": "decomposition_assembly",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "input_sha256": "49194c2384c30a3a7710a7aff22027d56bb3154dcc2a6aaebef96c1be217d2be",
+      "status": "accepted",
+      "transaction_id": "decompose:virgin-galactic-commercial-service-2023:virgin-commercial-claim-2023:1",
+      "output_sha256": "a4d6937e3bc4d40186f1102d6f2156e44c0c48d105e3c3f4ab7969716c100c4a"
+    },
+    {
+      "sequence": 5,
+      "material": "virgin-commercial-outcome-2024",
+      "round": 2,
+      "stage": "atoms",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "d4689c70d37d4afa8ef6139b2e766a51f85f0fd5b74b38797e778c0cb9c2af59",
+      "payload_sha256": "cf877d2a062add2cdd15a4e7c8bc8cb0e44cd55a347919f4c6a3b4952ecc9f43",
+      "schema_sha256": "a0a676a8ceac4961596f8ea057f579ef5eeb93980c3c39b3cbb88f81d692bc9b",
+      "status": "accepted",
+      "transaction_id": "decompose:virgin-galactic-commercial-service-2023:virgin-commercial-outcome-2024:2",
+      "model_call_sequence": 8,
+      "request_digest": "dee3f7444f3b8ec4c7265d53f12e10fe4533dff8feab680649b4e31ac0efeba4",
+      "response_id": "chatcmpl-EL1Oqj7kjLKR8CEE5yzjwGGapoR4K",
+      "usage": {
+        "input_tokens": 1109,
+        "output_tokens": 70
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "020d969d6f6b75e16f3de4c9eff1ec5b5631eeeeec3c27cb74165808fd883dd6"
+    },
+    {
+      "sequence": 6,
+      "material": "virgin-commercial-outcome-2024",
+      "round": 2,
+      "stage": "lineage",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "229dbdbbcea5df9ee86d45b91f0c98cb636645e5bfc5279ac40972bd0092ff8d",
+      "payload_sha256": "75a92346a3db6345fd31a5ab2ff41d9179deae7505fbfd0565d935e5c5366f58",
+      "schema_sha256": "892c80a8fdb57a98d8ca917cd9926142883645fcc84036a063ebc24740535bc4",
+      "status": "accepted",
+      "transaction_id": "decompose:virgin-galactic-commercial-service-2023:virgin-commercial-outcome-2024:2",
+      "model_call_sequence": 9,
+      "request_digest": "3184ba8d2be5ec5dc30cf674450029dcd34d0c050f859959389dcc1eebadacfc",
+      "response_id": "chatcmpl-EL1Ot7C1CiX0fAtzmstzMBi3s9Qxu",
+      "usage": {
+        "input_tokens": 1376,
+        "output_tokens": 161
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "ff3961fbf23f351a332abc9f62fe20045a7ee2fbcfa32cb0442dddea876c54e4"
+    },
+    {
+      "sequence": 7,
+      "material": "virgin-commercial-outcome-2024",
+      "round": 2,
+      "stage": "decomposition_critic",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "47125cea7fce0618a01b4d75107f0413c0caf80600bd25726797ba3c8fe62a49",
+      "payload_sha256": "c8da6821db54b3f63c676e543b1b4d7dac7f3fd799143a069c9102cb97bda43e",
+      "schema_sha256": "9d5d4e1d01a1cdc27368fd7880e55862fb0a263e3fa4babb767595c184d00134",
+      "status": "accepted",
+      "transaction_id": "decompose:virgin-galactic-commercial-service-2023:virgin-commercial-outcome-2024:2",
+      "model_call_sequence": 10,
+      "request_digest": "58a6a73a898e408f4b1c8b797ca44a22333c04981065e2be0f9ea85f4740c534",
+      "response_id": "chatcmpl-EL1OyFaaj5m1CaQabMUOec5GOPTnd",
+      "usage": {
+        "input_tokens": 1913,
+        "output_tokens": 59
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "6a2cfe81bfbaf11777ea6071088b27f1b6259796a7db1cd46b63981c232135b7"
+    },
+    {
+      "sequence": 8,
+      "material": "virgin-commercial-outcome-2024",
+      "round": 2,
+      "stage": "decomposition_assembly",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "input_sha256": "285fb6662e5def01db62eaf6c8b117587b324271621b28cac4bbd0baac349c6d",
+      "status": "accepted",
+      "transaction_id": "decompose:virgin-galactic-commercial-service-2023:virgin-commercial-outcome-2024:2",
+      "output_sha256": "728c29f44cd52f53c5151f4dc5ad1f387609b62261368589126d4713645cae13"
+    }
+  ],
+  "verification": [
+    {
+      "sequence": 1,
+      "material": null,
+      "round": 1,
+      "stage": "evidence",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "13a19f7652855526a099a94ed87f248b01daaec78b974b586169672e8f0097a4",
+      "payload_sha256": "cd5b2ee484baa351792521569bd0e9260104aef769191930bc4867866adc8e5a",
+      "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f",
+      "status": "accepted",
+      "transaction_id": "verify:virgin-galactic-commercial-service-2023:all:1",
+      "model_call_sequence": 4,
+      "request_digest": "463674c117312680225589ba9ec926c54edf84ea38993a4754560905e5672f94",
+      "response_id": "chatcmpl-EL1OaRHiuABOCeUKT6n28Gue81piV",
+      "usage": {
+        "input_tokens": 1131,
+        "output_tokens": 185
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "73c9e372c8d59de37fe36dd6ee03a1f7958a2c403996f102d0cdc7246e790c42"
+    },
+    {
+      "sequence": 2,
+      "material": null,
+      "round": 1,
+      "stage": "evidence_critic",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "51808a204c719b0cfc2def68e5f1c937e637a9e6f8c8655de2b568170cce7d50",
+      "payload_sha256": "0196386676bbbaa7b2f3f37e4a4d0df7bcac84b3bccc9b3e373ebc30f1f3698a",
+      "schema_sha256": "f31d5df8f2a48083ea4af0f45daf80582f409aa724b969c836b46d8d69575025",
+      "status": "accepted",
+      "transaction_id": "verify:virgin-galactic-commercial-service-2023:all:1",
+      "model_call_sequence": 5,
+      "request_digest": "099b52e1963cc5eb073d7e697db779d90eb3bbc2387baf32fea2110e1f17446f",
+      "response_id": "chatcmpl-EL1OfbfXHRAChBwx5VFLKZmEuZqr6",
+      "usage": {
+        "input_tokens": 762,
+        "output_tokens": 41
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "4416c91dc608e25f6475ab7236fc707f72899b1a5c64747aed881b95d0be0395"
+    },
+    {
+      "sequence": 3,
+      "material": null,
+      "round": 1,
+      "stage": "world",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "679a24e5a244c45b7d332fb5f3354b869bff7044ffa447364d487c5f7612986f",
+      "payload_sha256": "c4a0947f5897d2ed213ac8b7eb2e1bb9361f5cc5ca7df234e68c068d69fc494a",
+      "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f",
+      "status": "accepted",
+      "transaction_id": "verify:virgin-galactic-commercial-service-2023:all:1",
+      "model_call_sequence": 6,
+      "request_digest": "a965555565668e041db6c7ed036bb98af3468bf2635bebd325a3537420283708",
+      "response_id": "chatcmpl-EL1OiixHDCdWRxeOAvz5pqZ5hdPqU",
+      "usage": {
+        "input_tokens": 1361,
+        "output_tokens": 190
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "ad274bb7729f0a633e6a185b04ae68677aa4353570d98b4c0aa0065f0088a469"
+    },
+    {
+      "sequence": 4,
+      "material": null,
+      "round": 1,
+      "stage": "world_critic",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "2bf842fb7c8fb4133841267feed89cb6a10f2494bd776af7476cc988f3c775fc",
+      "payload_sha256": "e5e8519b3f08f8c00e63335b32a02e050c12d404cfd47479266f599291e9d706",
+      "schema_sha256": "f31d5df8f2a48083ea4af0f45daf80582f409aa724b969c836b46d8d69575025",
+      "status": "accepted",
+      "transaction_id": "verify:virgin-galactic-commercial-service-2023:all:1",
+      "model_call_sequence": 7,
+      "request_digest": "3615a5e9432251755ab908e008d9f8be780fbfa48f375aa8760e90acebaae6ce",
+      "response_id": "chatcmpl-EL1Onl85I4ozHfrMtH0z2pWWGWrHH",
+      "usage": {
+        "input_tokens": 1051,
+        "output_tokens": 86
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "4416c91dc608e25f6475ab7236fc707f72899b1a5c64747aed881b95d0be0395"
+    },
+    {
+      "sequence": 5,
+      "material": null,
+      "round": 1,
+      "stage": "judgement_assembly",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "input_sha256": "275ac432c217093dfd816f004d745c4a555045d666a7dba5fa89db521388a611",
+      "status": "accepted",
+      "transaction_id": "verify:virgin-galactic-commercial-service-2023:all:1",
+      "output_sha256": "9f23ab791f598c362f9e6f44077fe799648794f964f5883ffed84cb40d2b631e"
+    },
+    {
+      "sequence": 6,
+      "material": null,
+      "round": 2,
+      "stage": "evidence",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "13a19f7652855526a099a94ed87f248b01daaec78b974b586169672e8f0097a4",
+      "payload_sha256": "6ef99c9c7223264c12d6f1a154b1fb8d307ced1dcb5e095a14a366d59bc7463b",
+      "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f",
+      "status": "repair_requested",
+      "transaction_id": "verify:virgin-galactic-commercial-service-2023:all:2",
+      "model_call_sequence": 11,
+      "request_digest": "198f296f9428fa2d55f35b7cf40432a13bd48825f9633fd467c6fddff64e453e",
+      "response_id": "chatcmpl-EL1P20Aq8vccAl7Fy9ivsMSURBztA",
+      "usage": {
+        "input_tokens": 1675,
+        "output_tokens": 259
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "c6d68e6b9b785e118b8952bd2283e0cb65dc409e4707d4da76fb686061df90da"
+    },
+    {
+      "sequence": 7,
+      "material": null,
+      "round": 2,
+      "stage": "evidence",
+      "repair": 1,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "13a19f7652855526a099a94ed87f248b01daaec78b974b586169672e8f0097a4",
+      "payload_sha256": "75e7656de83f6cced734da07485375039ef7c840579c84e7755381c62ee52f87",
+      "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f",
+      "status": "repair_exhausted",
+      "transaction_id": "verify:virgin-galactic-commercial-service-2023:all:2",
+      "repair_of": 6,
+      "model_call_sequence": 12,
+      "request_digest": "c0024f2a25c124f371b33faa00798eb55440c30fc464a1047c1271ae8748e9c4",
+      "response_id": "chatcmpl-EL1P7r7sMcmAMFGCEU2qIiUirGOGI",
+      "usage": {
+        "input_tokens": 1957,
+        "output_tokens": 431
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "11dfcb982c1f2d0b27e941198fbeb59eb1e93d89e272a276622b3028686c23eb"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "conflict-evidence",
+  "variant": "loop",
+  "status": "completed",
+  "prediction": {
+    "id": "conflict-evidence",
+    "assessment_mode": "evidence",
+    "as_of": "2026-09-04T20:00:00Z",
+    "decision": "disputed",
+    "assessments": {
+      "evidence": {
+        "raw_verdict": "conflicting",
+        "decision": "conflicting",
+        "blocking_gap_ids": []
+      },
+      "world": {
+        "raw_verdict": "unresolved",
+        "decision": "unresolved",
+        "blocking_gap_ids": []
+      }
+    },
+    "provenance_status": "partial",
+    "assessment_valid": true,
+    "stop_reason": "provider_exhausted"
+  },
+  "checkpoints": [
+    {
+      "round": 1,
+      "id": "conflict-evidence",
+      "decision": "disputed",
+      "assessment_mode": "evidence",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "conflicting",
+          "decision": "conflicting",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "provenance_status": "partial"
+    }
+  ],
+  "usage": {
+    "model_calls": 3,
+    "input_tokens": 4283,
+    "output_tokens": 1344,
+    "seconds": 32.02177514199866
+  }
+}

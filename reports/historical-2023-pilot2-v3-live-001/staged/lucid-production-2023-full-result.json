@@ -1,0 +1,28 @@
+{
+  "id": "lucid-production-2023",
+  "variant": "full_evidence_once",
+  "status": "error",
+  "prediction": {
+    "id": "lucid-production-2023",
+    "assessment_mode": "evidence",
+    "as_of": "2024-12-31T23:59:59Z",
+    "decision": "unverifiable",
+    "assessments": null,
+    "provenance_status": "unresolved",
+    "assessment_valid": false,
+    "stop_reason": "verifier_error"
+  },
+  "checkpoints": [],
+  "error_type": "StagedSemanticError",
+  "usage": {
+    "model_calls": 10,
+    "input_tokens": 12864,
+    "output_tokens": 1959,
+    "seconds": 53.826478208065964
+  },
+  "actual_new_api_usage": {
+    "model_calls": 10,
+    "input_tokens": 12864,
+    "output_tokens": 1959
+  }
+}

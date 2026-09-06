@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "status": "scored",
+  "benchmark_id": "historical-2023-resolved-by-2024-pilot2-v1",
+  "case_count": 2,
+  "metrics_by_arm": {
+    "monolithic": {
+      "accuracy": {
+        "value": 1.0,
+        "numerator": 2,
+        "denominator": 2
+      },
+      "true_recall": {
+        "value": 1.0,
+        "numerator": 1,
+        "denominator": 1
+      },
+      "false_recall": {
+        "value": 1.0,
+        "numerator": 1,
+        "denominator": 1
+      },
+      "abstention_rate": {
+        "value": 0.0,
+        "numerator": 0,
+        "denominator": 2
+      },
+      "completion_rate": {
+        "value": 1.0,
+        "numerator": 2,
+        "denominator": 2
+      }
+    },
+    "staged": {
+      "accuracy": {
+        "value": 0.0,
+        "numerator": 0,
+        "denominator": 2
+      },
+      "true_recall": {
+        "value": 0.0,
+        "numerator": 0,
+        "denominator": 1
+      },
+      "false_recall": {
+        "value": 0.0,
+        "numerator": 0,
+        "denominator": 1
+      },
+      "abstention_rate": {
+        "value": 1.0,
+        "numerator": 2,
+        "denominator": 2
+      },
+      "completion_rate": {
+        "value": 0.0,
+        "numerator": 0,
+        "denominator": 2
+      }
+    }
+  },
+  "paired_metrics": {
+    "accuracy": {
+      "monolithic": 1.0,
+      "staged": 0.0,
+      "staged_minus_monolithic": -1.0
+    },
+    "true_recall": {
+      "monolithic": 1.0,
+      "staged": 0.0,
+      "staged_minus_monolithic": -1.0
+    },
+    "false_recall": {
+      "monolithic": 1.0,
+      "staged": 0.0,
+      "staged_minus_monolithic": -1.0
+    },
+    "abstention_rate": {
+      "monolithic": 0.0,
+      "staged": 1.0,
+      "staged_minus_monolithic": 1.0
+    },
+    "completion_rate": {
+      "monolithic": 1.0,
+      "staged": 0.0,
+      "staged_minus_monolithic": -1.0
+    }
+  },
+  "cases": [
+    {
+      "id": "virgin-galactic-commercial-service-2023",
+      "event_id": "virgin-galactic-commercial-service-start",
+      "gold": "true",
+      "gold_rationale": "The filed 10-K identifies Galactic 01 in June 2023 as the start of commercial service; June falls in the second quarter.",
+      "gold_basis": [
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "quote": "In June 2023, 'Galactic 01,' marked the start of commercial service."
+        }
+      ],
+      "monolithic": {
+        "decision": "true",
+        "status": "completed",
+        "correct": true,
+        "error_type": null,
+        "usage": {
+          "model_calls": 4,
+          "input_tokens": 7728,
+          "output_tokens": 3500,
+          "seconds": 64.03126933297608
+        },
+        "actual_new_api_usage": {
+          "model_calls": 4,
+          "input_tokens": 7728,
+          "output_tokens": 3500
+        }
+      },
+      "staged": {
+        "decision": "unverifiable",
+        "status": "error",
+        "correct": false,
+        "error_type": "StagedSemanticError",
+        "usage": {
+          "model_calls": 17,
+          "input_tokens": 22627,
+          "output_tokens": 2520,
+          "seconds": 75.28279362502508
+        },
+        "actual_new_api_usage": {
+          "model_calls": 17,
+          "input_tokens": 22627,
+          "output_tokens": 2520
+        }
+      },
+      "paired_accuracy_change": -1
+    },
+    {
+      "id": "boeing-starliner-cft-2023",
+      "event_id": "boeing-starliner-crewed-flight-test",
+      "gold": "false",
+      "gold_rationale": "The crewed flight test did not launch until June 5, 2024, so it could not have been completed by December 31, 2023.",
+      "gold_basis": [
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "quote": "The CFT launched on June 5, 2024, and docked with the ISS."
+        }
+      ],
+      "monolithic": {
+        "decision": "false",
+        "status": "completed",
+        "correct": true,
+        "error_type": null,
+        "usage": {
+          "model_calls": 4,
+          "input_tokens": 7728,
+          "output_tokens": 3534,
+          "seconds": 59.50271095801145
+        },
+        "actual_new_api_usage": {
+          "model_calls": 4,
+          "input_tokens": 7728,
+          "output_tokens": 3534
+        }
+      },
+      "staged": {
+        "decision": "unverifiable",
+        "status": "error",
+        "correct": false,
+        "error_type": "StagedSemanticError",
+        "usage": {
+          "model_calls": 12,
+          "input_tokens": 15865,
+          "output_tokens": 2382,
+          "seconds": 64.54235779191367
+        },
+        "actual_new_api_usage": {
+          "model_calls": 12,
+          "input_tokens": 15865,
+          "output_tokens": 2382
+        }
+      },
+      "paired_accuracy_change": -1
+    }
+  ],
+  "full_evidence_control_diagnostics": [],
+  "resource_usage_by_arm": {
+    "monolithic": {
+      "main_cases": {
+        "logical": {
+          "model_calls": 8,
+          "input_tokens": 15456,
+          "output_tokens": 7034,
+          "wall_seconds_sum": 123.53398029098753
+        },
+        "actual_new_api": {
+          "model_calls": 8,
+          "input_tokens": 15456,
+          "output_tokens": 7034
+        }
+      },
+      "full_evidence_controls": {
+        "logical": {
+          "model_calls": 0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "wall_seconds_sum": 0
+        },
+        "actual_new_api": {
+          "model_calls": 0,
+          "input_tokens": 0,
+          "output_tokens": 0
+        }
+      },
+      "all_variants": {
+        "logical": {
+          "model_calls": 8,
+          "input_tokens": 15456,
+          "output_tokens": 7034,
+          "wall_seconds_sum": 123.53398029098753
+        },
+        "actual_new_api": {
+          "model_calls": 8,
+          "input_tokens": 15456,
+          "output_tokens": 7034
+        }
+      }
+    },
+    "staged": {
+      "main_cases": {
+        "logical": {
+          "model_calls": 29,
+          "input_tokens": 38492,
+          "output_tokens": 4902,
+          "wall_seconds_sum": 139.82515141693875
+        },
+        "actual_new_api": {
+          "model_calls": 29,
+          "input_tokens": 38492,
+          "output_tokens": 4902
+        }
+      },
+      "full_evidence_controls": {
+        "logical": {
+          "model_calls": 0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "wall_seconds_sum": 0
+        },
+        "actual_new_api": {
+          "model_calls": 0,
+          "input_tokens": 0,
+          "output_tokens": 0
+        }
+      },
+      "all_variants": {
+        "logical": {
+          "model_calls": 29,
+          "input_tokens": 38492,
+          "output_tokens": 4902,
+          "wall_seconds_sum": 139.82515141693875
+        },
+        "actual_new_api": {
+          "model_calls": 29,
+          "input_tokens": 38492,
+          "output_tokens": 4902
+        }
+      }
+    }
+  },
+  "actual_models": {
+    "monolithic": [
+      "gpt-6-astra"
+    ],
+    "staged": [
+      "gpt-6-astra"
+    ]
+  },
+  "limits": [
+    "Frozen evidence excludes post-cutoff sources; current model weights cannot cryptographically forget later training knowledge.",
+    "Small benchmark results are descriptive, not a population claim.",
+    "Input tokens are measured but are not a budget cap.",
+    "Version-proof metadata is a recorded dataset declaration with internal hash consistency; this local audit does not independently authenticate remote source artifacts.",
+    "Call/output/trace hashes establish internal consistency only; they cannot authenticate that a logged output was actually returned by the model API."
+  ]
+}

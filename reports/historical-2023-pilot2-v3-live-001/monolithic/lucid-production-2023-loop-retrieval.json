@@ -1,0 +1,76 @@
+[
+  {
+    "round": 1,
+    "tasks": [
+      {
+        "id": "origin:lucid-production-2023",
+        "question": "Find the producing record and evidenced lineage for: Lucid will manufacture more than 10,000 vehicles during 2023.",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null,
+        "probe_id": null
+      }
+    ],
+    "planned_ids": [
+      "lucid-production-claim-2023"
+    ],
+    "returned_ids": [
+      "lucid-production-claim-2023"
+    ],
+    "attribution": {},
+    "feedback": []
+  },
+  {
+    "round": 2,
+    "tasks": [
+      {
+        "id": "evidence:lucid-production-outcome-2024",
+        "question": "What does the designated evidence-scope document lucid-production-outcome-2024 say about 2023 production?",
+        "stage": "verification",
+        "dimension": "evidence",
+        "blocking": true,
+        "target_id": "lucid-production-2023",
+        "basis": [
+          {
+            "version_id": "lucid-production-claim-2023",
+            "start": 57,
+            "end": 124,
+            "quote": "Lucid is on track to manufacture more than 10,000 vehicles in 2023."
+          }
+        ],
+        "decision_impact": "The supplied statement is an outlook outside the designated evidence scope. The absent outcome snapshot is needed to assess what that scope says about the unchanged target.",
+        "action": "search",
+        "locator": "lucid-production-outcome-2024 Lucid 2023 annual vehicle production results",
+        "probe_id": null
+      }
+    ],
+    "planned_ids": [
+      "lucid-production-outcome-2024"
+    ],
+    "returned_ids": [
+      "lucid-production-outcome-2024"
+    ],
+    "attribution": {
+      "lucid-production-outcome-2024": [
+        "evidence:lucid-production-outcome-2024"
+      ]
+    },
+    "feedback": [
+      {
+        "gap_id": "evidence:lucid-production-outcome-2024",
+        "action": "search",
+        "locator": "lucid-production-outcome-2024 Lucid 2023 annual vehicle production results",
+        "status": "returned",
+        "reason": "matching snapshots returned",
+        "version_ids": [
+          "lucid-production-outcome-2024"
+        ]
+      }
+    ]
+  }
+]

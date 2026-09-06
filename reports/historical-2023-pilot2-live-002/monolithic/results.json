@@ -1,0 +1,156 @@
+[
+  {
+    "id": "boeing-starliner-cft-2023",
+    "variant": "loop",
+    "status": "completed",
+    "prediction": {
+      "id": "boeing-starliner-cft-2023",
+      "assessment_mode": "evidence",
+      "as_of": "2024-12-31T23:59:59Z",
+      "decision": "false",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        }
+      },
+      "provenance_status": "original_material_located",
+      "assessment_valid": true,
+      "stop_reason": "complete"
+    },
+    "checkpoints": [
+      {
+        "round": 1,
+        "id": "boeing-starliner-cft-2023",
+        "decision": "unverifiable",
+        "assessment_mode": "evidence",
+        "assessments": {
+          "evidence": {
+            "raw_verdict": "unresolved",
+            "decision": "unresolved",
+            "blocking_gap_ids": []
+          },
+          "world": {
+            "raw_verdict": "unresolved",
+            "decision": "unresolved",
+            "blocking_gap_ids": []
+          }
+        },
+        "provenance_status": "original_material_located"
+      },
+      {
+        "round": 2,
+        "id": "boeing-starliner-cft-2023",
+        "decision": "false",
+        "assessment_mode": "evidence",
+        "assessments": {
+          "evidence": {
+            "raw_verdict": "contradicted",
+            "decision": "contradicted",
+            "blocking_gap_ids": []
+          },
+          "world": {
+            "raw_verdict": "contradicted",
+            "decision": "contradicted",
+            "blocking_gap_ids": []
+          }
+        },
+        "provenance_status": "original_material_located"
+      }
+    ],
+    "usage": {
+      "model_calls": 4,
+      "input_tokens": 7775,
+      "output_tokens": 3360,
+      "seconds": 54.368984541040845
+    },
+    "actual_new_api_usage": {
+      "model_calls": 4,
+      "input_tokens": 7775,
+      "output_tokens": 3360
+    }
+  },
+  {
+    "id": "virgin-galactic-commercial-service-2023",
+    "variant": "loop",
+    "status": "completed",
+    "prediction": {
+      "id": "virgin-galactic-commercial-service-2023",
+      "assessment_mode": "evidence",
+      "as_of": "2024-12-31T23:59:59Z",
+      "decision": "true",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        }
+      },
+      "provenance_status": "original_material_located",
+      "assessment_valid": true,
+      "stop_reason": "complete"
+    },
+    "checkpoints": [
+      {
+        "round": 1,
+        "id": "virgin-galactic-commercial-service-2023",
+        "decision": "unverifiable",
+        "assessment_mode": "evidence",
+        "assessments": {
+          "evidence": {
+            "raw_verdict": "unresolved",
+            "decision": "unresolved",
+            "blocking_gap_ids": []
+          },
+          "world": {
+            "raw_verdict": "unresolved",
+            "decision": "unresolved",
+            "blocking_gap_ids": []
+          }
+        },
+        "provenance_status": "original_material_located"
+      },
+      {
+        "round": 2,
+        "id": "virgin-galactic-commercial-service-2023",
+        "decision": "true",
+        "assessment_mode": "evidence",
+        "assessments": {
+          "evidence": {
+            "raw_verdict": "supported",
+            "decision": "supported",
+            "blocking_gap_ids": []
+          },
+          "world": {
+            "raw_verdict": "supported",
+            "decision": "supported",
+            "blocking_gap_ids": []
+          }
+        },
+        "provenance_status": "original_material_located"
+      }
+    ],
+    "usage": {
+      "model_calls": 4,
+      "input_tokens": 7609,
+      "output_tokens": 3196,
+      "seconds": 54.73551179096103
+    },
+    "actual_new_api_usage": {
+      "model_calls": 4,
+      "input_tokens": 7609,
+      "output_tokens": 3196
+    }
+  }
+]

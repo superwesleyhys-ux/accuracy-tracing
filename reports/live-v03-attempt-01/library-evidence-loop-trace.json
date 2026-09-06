@@ -1,0 +1,878 @@
+{
+  "schema_version": "0.3",
+  "scope": "plugin-supplied semantic analyses; no built-in truth oracle",
+  "target": {
+    "id": "library-evidence",
+    "text": "The library now closes at 9 pm.",
+    "as_of": "2026-09-04T20:00:00Z",
+    "source_version_id": "library-article",
+    "assessment_mode": "evidence",
+    "evidence_scope": [
+      "library-notice"
+    ]
+  },
+  "config": {
+    "max_rounds": 5,
+    "max_documents": 18,
+    "max_decomposition_calls": 18
+  },
+  "provenance_status": "partial",
+  "fact_status": "unresolved",
+  "stop_reason": "provider_exhausted",
+  "usage": {
+    "rounds": 2,
+    "documents": 2,
+    "unique_versions": 2,
+    "decomposition_calls": 2,
+    "verification_calls": 1
+  },
+  "decision_status": "supported",
+  "assessments": {
+    "evidence": {
+      "raw_verdict": "supported",
+      "decision": "supported",
+      "blocking_gap_ids": []
+    },
+    "world": {
+      "raw_verdict": "unresolved",
+      "decision": "unresolved",
+      "blocking_gap_ids": []
+    }
+  },
+  "assessment_valid": true,
+  "materials": [
+    {
+      "version_id": "library-article",
+      "url": "https://example.org/library-article",
+      "content": "The library now closes at 9 pm, quoting https://example.org/library-notice.",
+      "retrieved_at": "2026-09-04T20:00:00Z",
+      "published_at": "2026-09-04T10:00:00Z",
+      "available_at": "2026-09-04T10:00:00Z",
+      "availability_basis": "Synthetic exact-version capture; no external authentication.",
+      "issuer": "Fictional publisher"
+    },
+    {
+      "version_id": "library-notice",
+      "url": "https://example.org/library-notice",
+      "content": "Library schedule bulletin: The library extends its closing time to 9 pm starting today.",
+      "retrieved_at": "2026-09-04T20:00:00Z",
+      "published_at": "2026-09-04T10:00:00Z",
+      "available_at": "2026-09-04T10:00:00Z",
+      "availability_basis": "Synthetic exact-version capture; no external authentication.",
+      "issuer": "Fictional publisher"
+    }
+  ],
+  "eligible_version_ids": [
+    "library-article",
+    "library-notice"
+  ],
+  "observations": [
+    {
+      "version_id": "library-article",
+      "retrieved_at": "2026-09-04T20:00:00Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "version_id": "library-notice",
+      "retrieved_at": "2026-09-04T20:00:00Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": []
+    }
+  ],
+  "analyses": {
+    "library-article": {
+      "fragments": [
+        {
+          "id": "library-closing",
+          "text": "The library now closes at 9 pm",
+          "span": {
+            "version_id": "library-article",
+            "start": 0,
+            "end": 30,
+            "quote": "The library now closes at 9 pm"
+          },
+          "parent_id": "library-evidence",
+          "qualifiers": [
+            "Affirmative claim about the library's current closing time; no effective date, days of operation, or timezone is specified."
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "library-article",
+              "start": 12,
+              "end": 15,
+              "quote": "now"
+            },
+            {
+              "version_id": "library-article",
+              "start": 26,
+              "end": 30,
+              "quote": "9 pm"
+            }
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "id": "article-quotes-notice",
+          "from_version": "library-article",
+          "to_version": null,
+          "kind": "quotes",
+          "status": "declared",
+          "basis": [
+            {
+              "version_id": "library-article",
+              "start": 32,
+              "end": 74,
+              "quote": "quoting https://example.org/library-notice"
+            }
+          ],
+          "rationale": "The article declares a quotation from the notice; the notice's text and its support for the target are not visible.",
+          "upstream_locator": "https://example.org/library-notice"
+        }
+      ],
+      "gaps": [
+        {
+          "id": "fetch-library-notice",
+          "question": "What does the cited notice say about the library's closing time?",
+          "stage": "provenance",
+          "dimension": "provenance",
+          "blocking": true,
+          "target_id": "library-evidence",
+          "basis": [
+            {
+              "version_id": "library-article",
+              "start": 32,
+              "end": 74,
+              "quote": "quoting https://example.org/library-notice"
+            }
+          ],
+          "decision_impact": "The notice is the sole evidence-scope document. Its absence prevents assessment of what that document says, without requiring world authentication.",
+          "action": "fetch",
+          "locator": "https://example.org/library-notice"
+        }
+      ],
+      "resolutions": [],
+      "origins": [],
+      "notes": "Evidence assessment remains unknown: only the out-of-scope article is supplied. World verification is separately unknown. The existing origin gap remains unresolved.",
+      "revisit_versions": []
+    },
+    "library-notice": {
+      "fragments": [
+        {
+          "id": "notice-closing-time",
+          "text": "The library extends its closing time to 9 pm starting today.",
+          "span": {
+            "version_id": "library-notice",
+            "start": 27,
+            "end": 87,
+            "quote": "The library extends its closing time to 9 pm starting today."
+          },
+          "parent_id": "library-evidence",
+          "qualifiers": [
+            "Affirmative schedule change, scoped to the library.",
+            "The stated closing time is 9 pm.",
+            "Effective starting today; the supplied publication date places today on 2026-09-04, the target's as-of date."
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "library-notice",
+              "start": 31,
+              "end": 38,
+              "quote": "library"
+            },
+            {
+              "version_id": "library-notice",
+              "start": 39,
+              "end": 46,
+              "quote": "extends"
+            },
+            {
+              "version_id": "library-notice",
+              "start": 67,
+              "end": 71,
+              "quote": "9 pm"
+            },
+            {
+              "version_id": "library-notice",
+              "start": 72,
+              "end": 86,
+              "quote": "starting today"
+            }
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "id": "notice-supports-article",
+          "from_version": "library-notice",
+          "to_version": "library-article",
+          "kind": "supports",
+          "status": "direct",
+          "basis": [
+            {
+              "version_id": "library-notice",
+              "start": 27,
+              "end": 87,
+              "quote": "The library extends its closing time to 9 pm starting today."
+            }
+          ],
+          "rationale": "The evidence-scope notice states a 9 pm closing time effective on the supplied publication date, supporting the unchanged target at its as-of time.",
+          "upstream_locator": null
+        }
+      ],
+      "gaps": [],
+      "resolutions": [
+        {
+          "gap_id": "fetch-library-notice",
+          "basis": [
+            {
+              "version_id": "library-notice",
+              "start": 27,
+              "end": 87,
+              "quote": "The library extends its closing time to 9 pm starting today."
+            }
+          ],
+          "rationale": "The cited notice is now supplied and answers the evidence-only question without external authentication."
+        },
+        {
+          "gap_id": "origin:library-evidence",
+          "basis": [
+            {
+              "version_id": "library-article",
+              "start": 32,
+              "end": 74,
+              "quote": "quoting https://example.org/library-notice"
+            },
+            {
+              "version_id": "library-notice",
+              "start": 0,
+              "end": 26,
+              "quote": "Library schedule bulletin:"
+            }
+          ],
+          "rationale": "The article explicitly identifies the notice as its quoted source, and the supplied notice identifies its role as a schedule bulletin. This establishes the visible lineage, not independent confirmation of actual hours."
+        }
+      ],
+      "origins": [
+        {
+          "target_id": "library-evidence",
+          "version_id": "library-notice",
+          "basis": [
+            {
+              "version_id": "library-notice",
+              "start": 0,
+              "end": 26,
+              "quote": "Library schedule bulletin:"
+            }
+          ],
+          "material_kind": "original_record",
+          "rationale": "The document presents itself as the schedule bulletin underlying the article's quotation. This identifies its visible publishing role, not its real-world authenticity."
+        }
+      ],
+      "notes": "Evidence assessment: supported. World verification: unknown. The article and its cited bulletin are not independent confirmations.",
+      "revisit_versions": []
+    }
+  },
+  "analysis_history": [
+    {
+      "revision": 1,
+      "round": 1,
+      "version_id": "library-article",
+      "duplicate": false,
+      "revisit": false,
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "library-closing",
+            "text": "The library now closes at 9 pm",
+            "span": {
+              "version_id": "library-article",
+              "start": 0,
+              "end": 30,
+              "quote": "The library now closes at 9 pm"
+            },
+            "parent_id": "library-evidence",
+            "qualifiers": [
+              "Affirmative claim about the library's current closing time; no effective date, days of operation, or timezone is specified."
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "library-article",
+                "start": 12,
+                "end": 15,
+                "quote": "now"
+              },
+              {
+                "version_id": "library-article",
+                "start": 26,
+                "end": 30,
+                "quote": "9 pm"
+              }
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "article-quotes-notice",
+            "from_version": "library-article",
+            "to_version": null,
+            "kind": "quotes",
+            "status": "declared",
+            "basis": [
+              {
+                "version_id": "library-article",
+                "start": 32,
+                "end": 74,
+                "quote": "quoting https://example.org/library-notice"
+              }
+            ],
+            "rationale": "The article declares a quotation from the notice; the notice's text and its support for the target are not visible.",
+            "upstream_locator": "https://example.org/library-notice"
+          }
+        ],
+        "gaps": [
+          {
+            "id": "fetch-library-notice",
+            "question": "What does the cited notice say about the library's closing time?",
+            "stage": "provenance",
+            "dimension": "provenance",
+            "blocking": true,
+            "target_id": "library-evidence",
+            "basis": [
+              {
+                "version_id": "library-article",
+                "start": 32,
+                "end": 74,
+                "quote": "quoting https://example.org/library-notice"
+              }
+            ],
+            "decision_impact": "The notice is the sole evidence-scope document. Its absence prevents assessment of what that document says, without requiring world authentication.",
+            "action": "fetch",
+            "locator": "https://example.org/library-notice"
+          }
+        ],
+        "resolutions": [],
+        "origins": [],
+        "notes": "Evidence assessment remains unknown: only the out-of-scope article is supplied. World verification is separately unknown. The existing origin gap remains unresolved.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    },
+    {
+      "revision": 2,
+      "round": 1,
+      "version_id": "library-notice",
+      "duplicate": false,
+      "revisit": false,
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "notice-closing-time",
+            "text": "The library extends its closing time to 9 pm starting today.",
+            "span": {
+              "version_id": "library-notice",
+              "start": 27,
+              "end": 87,
+              "quote": "The library extends its closing time to 9 pm starting today."
+            },
+            "parent_id": "library-evidence",
+            "qualifiers": [
+              "Affirmative schedule change, scoped to the library.",
+              "The stated closing time is 9 pm.",
+              "Effective starting today; the supplied publication date places today on 2026-09-04, the target's as-of date."
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "library-notice",
+                "start": 31,
+                "end": 38,
+                "quote": "library"
+              },
+              {
+                "version_id": "library-notice",
+                "start": 39,
+                "end": 46,
+                "quote": "extends"
+              },
+              {
+                "version_id": "library-notice",
+                "start": 67,
+                "end": 71,
+                "quote": "9 pm"
+              },
+              {
+                "version_id": "library-notice",
+                "start": 72,
+                "end": 86,
+                "quote": "starting today"
+              }
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "notice-supports-article",
+            "from_version": "library-notice",
+            "to_version": "library-article",
+            "kind": "supports",
+            "status": "direct",
+            "basis": [
+              {
+                "version_id": "library-notice",
+                "start": 27,
+                "end": 87,
+                "quote": "The library extends its closing time to 9 pm starting today."
+              }
+            ],
+            "rationale": "The evidence-scope notice states a 9 pm closing time effective on the supplied publication date, supporting the unchanged target at its as-of time.",
+            "upstream_locator": null
+          }
+        ],
+        "gaps": [],
+        "resolutions": [
+          {
+            "gap_id": "fetch-library-notice",
+            "basis": [
+              {
+                "version_id": "library-notice",
+                "start": 27,
+                "end": 87,
+                "quote": "The library extends its closing time to 9 pm starting today."
+              }
+            ],
+            "rationale": "The cited notice is now supplied and answers the evidence-only question without external authentication."
+          },
+          {
+            "gap_id": "origin:library-evidence",
+            "basis": [
+              {
+                "version_id": "library-article",
+                "start": 32,
+                "end": 74,
+                "quote": "quoting https://example.org/library-notice"
+              },
+              {
+                "version_id": "library-notice",
+                "start": 0,
+                "end": 26,
+                "quote": "Library schedule bulletin:"
+              }
+            ],
+            "rationale": "The article explicitly identifies the notice as its quoted source, and the supplied notice identifies its role as a schedule bulletin. This establishes the visible lineage, not independent confirmation of actual hours."
+          }
+        ],
+        "origins": [
+          {
+            "target_id": "library-evidence",
+            "version_id": "library-notice",
+            "basis": [
+              {
+                "version_id": "library-notice",
+                "start": 0,
+                "end": 26,
+                "quote": "Library schedule bulletin:"
+              }
+            ],
+            "material_kind": "original_record",
+            "rationale": "The document presents itself as the schedule bulletin underlying the article's quotation. This identifies its visible publishing role, not its real-world authenticity."
+          }
+        ],
+        "notes": "Evidence assessment: supported. World verification: unknown. The article and its cited bulletin are not independent confirmations.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    }
+  ],
+  "fragments": [
+    {
+      "id": "library-closing",
+      "text": "The library now closes at 9 pm",
+      "span": {
+        "version_id": "library-article",
+        "start": 0,
+        "end": 30,
+        "quote": "The library now closes at 9 pm"
+      },
+      "parent_id": "library-evidence",
+      "qualifiers": [
+        "Affirmative claim about the library's current closing time; no effective date, days of operation, or timezone is specified."
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "library-article",
+          "start": 12,
+          "end": 15,
+          "quote": "now"
+        },
+        {
+          "version_id": "library-article",
+          "start": 26,
+          "end": 30,
+          "quote": "9 pm"
+        }
+      ]
+    },
+    {
+      "id": "notice-closing-time",
+      "text": "The library extends its closing time to 9 pm starting today.",
+      "span": {
+        "version_id": "library-notice",
+        "start": 27,
+        "end": 87,
+        "quote": "The library extends its closing time to 9 pm starting today."
+      },
+      "parent_id": "library-evidence",
+      "qualifiers": [
+        "Affirmative schedule change, scoped to the library.",
+        "The stated closing time is 9 pm.",
+        "Effective starting today; the supplied publication date places today on 2026-09-04, the target's as-of date."
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "library-notice",
+          "start": 31,
+          "end": 38,
+          "quote": "library"
+        },
+        {
+          "version_id": "library-notice",
+          "start": 39,
+          "end": 46,
+          "quote": "extends"
+        },
+        {
+          "version_id": "library-notice",
+          "start": 67,
+          "end": 71,
+          "quote": "9 pm"
+        },
+        {
+          "version_id": "library-notice",
+          "start": 72,
+          "end": 86,
+          "quote": "starting today"
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "article-quotes-notice",
+      "from_version": "library-article",
+      "to_version": null,
+      "kind": "quotes",
+      "status": "declared",
+      "basis": [
+        {
+          "version_id": "library-article",
+          "start": 32,
+          "end": 74,
+          "quote": "quoting https://example.org/library-notice"
+        }
+      ],
+      "rationale": "The article declares a quotation from the notice; the notice's text and its support for the target are not visible.",
+      "upstream_locator": "https://example.org/library-notice"
+    },
+    {
+      "id": "notice-supports-article",
+      "from_version": "library-notice",
+      "to_version": "library-article",
+      "kind": "supports",
+      "status": "direct",
+      "basis": [
+        {
+          "version_id": "library-notice",
+          "start": 27,
+          "end": 87,
+          "quote": "The library extends its closing time to 9 pm starting today."
+        }
+      ],
+      "rationale": "The evidence-scope notice states a 9 pm closing time effective on the supplied publication date, supporting the unchanged target at its as-of time.",
+      "upstream_locator": null
+    }
+  ],
+  "origins": [
+    {
+      "target_id": "library-evidence",
+      "version_id": "library-notice",
+      "basis": [
+        {
+          "version_id": "library-notice",
+          "start": 0,
+          "end": 26,
+          "quote": "Library schedule bulletin:"
+        }
+      ],
+      "material_kind": "original_record",
+      "rationale": "The document presents itself as the schedule bulletin underlying the article's quotation. This identifies its visible publishing role, not its real-world authenticity."
+    }
+  ],
+  "gaps": [
+    {
+      "id": "lineage:library-evidence",
+      "question": "Provide the target source version and an evidenced citation/derivation path to an original material",
+      "stage": "provenance",
+      "dimension": "auto",
+      "blocking": true,
+      "target_id": null,
+      "basis": [],
+      "decision_impact": "",
+      "action": "search",
+      "locator": null
+    }
+  ],
+  "resolutions": [
+    {
+      "gap_id": "fetch-library-notice",
+      "basis": [
+        {
+          "version_id": "library-notice",
+          "start": 27,
+          "end": 87,
+          "quote": "The library extends its closing time to 9 pm starting today."
+        }
+      ],
+      "rationale": "The cited notice is now supplied and answers the evidence-only question without external authentication."
+    },
+    {
+      "gap_id": "origin:library-evidence",
+      "basis": [
+        {
+          "version_id": "library-article",
+          "start": 32,
+          "end": 74,
+          "quote": "quoting https://example.org/library-notice"
+        },
+        {
+          "version_id": "library-notice",
+          "start": 0,
+          "end": 26,
+          "quote": "Library schedule bulletin:"
+        }
+      ],
+      "rationale": "The article explicitly identifies the notice as its quoted source, and the supplied notice identifies its role as a schedule bulletin. This establishes the visible lineage, not independent confirmation of actual hours."
+    }
+  ],
+  "verification_history": [
+    {
+      "round": 1,
+      "verdict": "supported",
+      "basis": [
+        {
+          "version_id": "library-notice",
+          "start": 27,
+          "end": 87,
+          "quote": "The library extends its closing time to 9 pm starting today."
+        }
+      ],
+      "rationale": "The scoped notice explicitly states that closing time becomes 9 pm starting today, supporting the unchanged target as of the supplied publication date.",
+      "gaps": [],
+      "resolutions": [],
+      "evidence_verdict": "supported",
+      "world_verdict": "unresolved",
+      "world_basis": [],
+      "world_rationale": "The supplied snapshots are unauthenticated fictional-publisher assertions. They establish what the notice says, not the library's actual closing time. The article's repetition of the notice is not independent confirmation."
+    }
+  ],
+  "operations": [
+    {
+      "sequence": 1,
+      "round": 1,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "origin:library-evidence",
+          "question": "Find the producing record and evidenced lineage for: The library now closes at 9 pm.",
+          "stage": "provenance",
+          "dimension": "auto",
+          "blocking": true,
+          "target_id": null,
+          "basis": [],
+          "decision_impact": "",
+          "action": "search",
+          "locator": null
+        }
+      ],
+      "limit": 18
+    },
+    {
+      "sequence": 2,
+      "round": 1,
+      "action": "snapshot_saved",
+      "version_id": "library-article",
+      "sha256": "50f6923e93266d15b4925865e4e084f1f694ab72dfeb34663b733336bd62479f",
+      "eligible": true
+    },
+    {
+      "sequence": 3,
+      "round": 1,
+      "action": "decompose_started",
+      "version_id": "library-article",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 4,
+      "round": 1,
+      "action": "decompose_completed",
+      "version_id": "library-article",
+      "revision": 1
+    },
+    {
+      "sequence": 5,
+      "round": 1,
+      "action": "alignment_checked",
+      "version_id": "library-article",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 6,
+      "round": 1,
+      "action": "graph_updated",
+      "version_id": "library-article",
+      "open_gaps": 2
+    },
+    {
+      "sequence": 7,
+      "round": 1,
+      "action": "snapshot_saved",
+      "version_id": "library-notice",
+      "sha256": "e006028009d6114b9b9f4c9dc7aeadc9219c023f177ccfcccfef41ac20c22136",
+      "eligible": true
+    },
+    {
+      "sequence": 8,
+      "round": 1,
+      "action": "decompose_started",
+      "version_id": "library-notice",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 9,
+      "round": 1,
+      "action": "decompose_completed",
+      "version_id": "library-notice",
+      "revision": 2
+    },
+    {
+      "sequence": 10,
+      "round": 1,
+      "action": "alignment_checked",
+      "version_id": "library-notice",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 11,
+      "round": 1,
+      "action": "graph_updated",
+      "version_id": "library-notice",
+      "open_gaps": 1
+    },
+    {
+      "sequence": 12,
+      "round": 1,
+      "action": "verification_started"
+    },
+    {
+      "sequence": 13,
+      "round": 1,
+      "action": "verification_completed",
+      "verdict": "unresolved",
+      "decision": "supported",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "followup_tasks": 0,
+      "provenance_status": "partial"
+    },
+    {
+      "sequence": 14,
+      "round": 1,
+      "action": "assessment_changed",
+      "previous": null,
+      "current": {
+        "evidence": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "basis": [
+        {
+          "version_id": "library-notice",
+          "start": 27,
+          "end": 87,
+          "quote": "The library extends its closing time to 9 pm starting today."
+        }
+      ],
+      "world_basis": []
+    },
+    {
+      "sequence": 15,
+      "round": 1,
+      "action": "progress_checked",
+      "new_eligible_versions": 2,
+      "new_structure": true
+    },
+    {
+      "sequence": 16,
+      "round": 2,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "lineage:library-evidence",
+          "question": "Provide the target source version and an evidenced citation/derivation path to an original material",
+          "stage": "provenance",
+          "dimension": "auto",
+          "blocking": true,
+          "target_id": null,
+          "basis": [],
+          "decision_impact": "",
+          "action": "search",
+          "locator": null
+        }
+      ],
+      "limit": 16
+    },
+    {
+      "sequence": 17,
+      "round": 2,
+      "action": "retrieval_feedback",
+      "feedback": {
+        "gap_id": "lineage:library-evidence",
+        "action": "search",
+        "locator": null,
+        "status": "unavailable",
+        "reason": "no unseen match in fixed snapshot index; live web unavailable",
+        "version_ids": []
+      }
+    },
+    {
+      "sequence": 18,
+      "round": 2,
+      "action": "stopped",
+      "reason": "provider_exhausted"
+    }
+  ],
+  "errors": []
+}

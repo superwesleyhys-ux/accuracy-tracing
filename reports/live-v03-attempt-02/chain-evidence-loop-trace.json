@@ -1,0 +1,1531 @@
+{
+  "schema_version": "0.3",
+  "scope": "plugin-supplied semantic analyses; no built-in truth oracle",
+  "target": {
+    "id": "chain-evidence",
+    "text": "The laboratory opens at 8 am.",
+    "as_of": "2026-09-04T20:00:00Z",
+    "source_version_id": "bulletin-a",
+    "assessment_mode": "evidence",
+    "evidence_scope": [
+      "bulletin-c"
+    ]
+  },
+  "config": {
+    "max_rounds": 5,
+    "max_documents": 18,
+    "max_decomposition_calls": 18
+  },
+  "provenance_status": "original_material_located",
+  "fact_status": "unresolved",
+  "stop_reason": "complete",
+  "usage": {
+    "rounds": 2,
+    "documents": 3,
+    "unique_versions": 3,
+    "decomposition_calls": 4,
+    "verification_calls": 2
+  },
+  "decision_status": "supported",
+  "assessments": {
+    "evidence": {
+      "raw_verdict": "supported",
+      "decision": "supported",
+      "blocking_gap_ids": []
+    },
+    "world": {
+      "raw_verdict": "unresolved",
+      "decision": "unresolved",
+      "blocking_gap_ids": []
+    }
+  },
+  "assessment_valid": true,
+  "materials": [
+    {
+      "version_id": "bulletin-a",
+      "url": "https://example.org/bulletin-a",
+      "content": "For the laboratory hours announcement, follow the archived release at https://example.org/bulletin-b.",
+      "retrieved_at": "2026-09-04T20:00:00Z",
+      "published_at": "2026-09-04T10:00:00Z",
+      "available_at": "2026-09-04T10:00:00Z",
+      "availability_basis": "Synthetic exact-version capture; no external authentication.",
+      "issuer": "Fictional publisher"
+    },
+    {
+      "version_id": "bulletin-c",
+      "url": "https://example.org/bulletin-c",
+      "content": "Laboratory schedule bulletin: The laboratory opens at 8 am starting today.",
+      "retrieved_at": "2026-09-04T20:00:00Z",
+      "published_at": "2026-09-04T10:00:00Z",
+      "available_at": "2026-09-04T10:00:00Z",
+      "availability_basis": "Synthetic exact-version capture; no external authentication.",
+      "issuer": "Fictional publisher"
+    },
+    {
+      "version_id": "bulletin-b",
+      "url": "https://example.org/bulletin-b",
+      "content": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c.",
+      "retrieved_at": "2026-09-04T20:00:00Z",
+      "published_at": "2026-09-04T10:00:00Z",
+      "available_at": "2026-09-04T10:00:00Z",
+      "availability_basis": "Synthetic exact-version capture; no external authentication.",
+      "issuer": "Fictional publisher"
+    }
+  ],
+  "eligible_version_ids": [
+    "bulletin-a",
+    "bulletin-c",
+    "bulletin-b"
+  ],
+  "observations": [
+    {
+      "version_id": "bulletin-a",
+      "retrieved_at": "2026-09-04T20:00:00Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "version_id": "bulletin-c",
+      "retrieved_at": "2026-09-04T20:00:00Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "version_id": "bulletin-b",
+      "retrieved_at": "2026-09-04T20:00:00Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": []
+    }
+  ],
+  "analyses": {
+    "bulletin-c": {
+      "fragments": [
+        {
+          "id": "bulletin-c-opening",
+          "text": "The laboratory opens at 8 am starting today.",
+          "span": {
+            "version_id": "bulletin-c",
+            "start": 30,
+            "end": 74,
+            "quote": "The laboratory opens at 8 am starting today."
+          },
+          "parent_id": "chain-evidence",
+          "qualifiers": [
+            "Affirmative opening-time statement about the laboratory.",
+            "Opening time is 8 am; the stated schedule begins today, corresponding to the snapshot's publication date, 2026-09-04."
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "bulletin-c",
+              "start": 51,
+              "end": 58,
+              "quote": "at 8 am"
+            },
+            {
+              "version_id": "bulletin-c",
+              "start": 59,
+              "end": 73,
+              "quote": "starting today"
+            }
+          ]
+        }
+      ],
+      "relations": [],
+      "gaps": [],
+      "resolutions": [
+        {
+          "gap_id": "fetch-scoped-bulletin-c",
+          "basis": [
+            {
+              "version_id": "bulletin-c",
+              "start": 30,
+              "end": 74,
+              "quote": "The laboratory opens at 8 am starting today."
+            }
+          ],
+          "rationale": "The supplied evidence-scope snapshot explicitly states the unchanged target, qualified as beginning today. This resolves the evidence question without requiring world authentication or the unavailable bulletin-b."
+        }
+      ],
+      "origins": [],
+      "notes": "Evidence: supported by bulletin-c at the target's as-of date. World: unknown. No visible citation in bulletin-c establishes a lineage to bulletin-a or bulletin-b; the existing provenance gaps remain unresolved and do not block this evidence-only conclusion.",
+      "revisit_versions": []
+    },
+    "bulletin-b": {
+      "fragments": [
+        {
+          "id": "digest-citation",
+          "text": "The digest cites the issued laboratory schedule at bulletin-c.",
+          "span": {
+            "version_id": "bulletin-b",
+            "start": 0,
+            "end": 83,
+            "quote": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c."
+          },
+          "parent_id": "chain-evidence",
+          "qualifiers": [
+            "A citation, not a statement of opening hours."
+          ],
+          "qualifier_spans": []
+        },
+        {
+          "id": "scoped-opening-hours",
+          "text": "The laboratory opens at 8 am starting today.",
+          "span": {
+            "version_id": "bulletin-c",
+            "start": 30,
+            "end": 74,
+            "quote": "The laboratory opens at 8 am starting today."
+          },
+          "parent_id": "chain-evidence",
+          "qualifiers": [
+            "Affirmative opening time of 8 am, effective starting today; no timezone or recurring-day scope is specified."
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "bulletin-c",
+              "start": 59,
+              "end": 73,
+              "quote": "starting today"
+            }
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "id": "bulletin-b-cites-c",
+          "from_version": "bulletin-b",
+          "to_version": "bulletin-c",
+          "kind": "cites",
+          "status": "direct",
+          "basis": [
+            {
+              "version_id": "bulletin-b",
+              "start": 0,
+              "end": 83,
+              "quote": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c."
+            }
+          ],
+          "rationale": "The digest explicitly cites bulletin-c, whose snapshot is present. This establishes visible lineage, not independent confirmation.",
+          "upstream_locator": "https://example.org/bulletin-c"
+        }
+      ],
+      "gaps": [],
+      "resolutions": [
+        {
+          "gap_id": "fetch-bulletin-b",
+          "basis": [
+            {
+              "version_id": "bulletin-b",
+              "start": 0,
+              "end": 83,
+              "quote": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c."
+            }
+          ],
+          "rationale": "The supplied digest identifies bulletin-c as its upstream schedule; it supplies no opening hours itself."
+        },
+        {
+          "gap_id": "fetch-scoped-bulletin-c",
+          "basis": [
+            {
+              "version_id": "bulletin-c",
+              "start": 30,
+              "end": 74,
+              "quote": "The laboratory opens at 8 am starting today."
+            }
+          ],
+          "rationale": "The evidence-scope snapshot is available and explicitly supports the unchanged target, with a starting-today qualification."
+        },
+        {
+          "gap_id": "origin:chain-evidence",
+          "basis": [
+            {
+              "version_id": "bulletin-b",
+              "start": 0,
+              "end": 83,
+              "quote": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c."
+            },
+            {
+              "version_id": "bulletin-c",
+              "start": 0,
+              "end": 74,
+              "quote": "Laboratory schedule bulletin: The laboratory opens at 8 am starting today."
+            }
+          ],
+          "rationale": "The visible lineage reaches the schedule bulletin, which presents the opening-hours announcement in its own publishing role."
+        }
+      ],
+      "origins": [
+        {
+          "target_id": "chain-evidence",
+          "version_id": "bulletin-c",
+          "basis": [
+            {
+              "version_id": "bulletin-c",
+              "start": 0,
+              "end": 74,
+              "quote": "Laboratory schedule bulletin: The laboratory opens at 8 am starting today."
+            }
+          ],
+          "material_kind": "original_record",
+          "rationale": "The record identifies itself as the laboratory schedule bulletin and issues the schedule statement. This identifies its visible publishing role, not real-world authenticity."
+        }
+      ],
+      "notes": "Evidence: supported by bulletin-c, effective starting today. World: unknown; no independent verification is supplied or required for this evidence-only assessment.",
+      "revisit_versions": []
+    },
+    "bulletin-a": {
+      "fragments": [
+        {
+          "id": "chain-evidence-navigation",
+          "text": "The bulletin points to an archived laboratory-hours release without stating an opening time.",
+          "span": {
+            "version_id": "bulletin-a",
+            "start": 0,
+            "end": 101,
+            "quote": "For the laboratory hours announcement, follow the archived release at https://example.org/bulletin-b."
+          },
+          "parent_id": "chain-evidence",
+          "qualifiers": [
+            "This is a reference to another document, not an assertion or denial of the target."
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "bulletin-a",
+              "start": 39,
+              "end": 69,
+              "quote": "follow the archived release at"
+            }
+          ]
+        },
+        {
+          "id": "chain-evidence-scoped-hours",
+          "text": "The laboratory opens at 8 am starting today.",
+          "span": {
+            "version_id": "bulletin-c",
+            "start": 30,
+            "end": 74,
+            "quote": "The laboratory opens at 8 am starting today."
+          },
+          "parent_id": "chain-evidence",
+          "qualifiers": [
+            "The scoped bulletin affirms the target opening time.",
+            "The schedule takes effect 'today'; the supplied publication date is 2026-09-04. No timezone is stated."
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "bulletin-c",
+              "start": 54,
+              "end": 58,
+              "quote": "8 am"
+            },
+            {
+              "version_id": "bulletin-c",
+              "start": 59,
+              "end": 73,
+              "quote": "starting today"
+            }
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "id": "bulletin-a-cites-b",
+          "from_version": "bulletin-a",
+          "to_version": "bulletin-b",
+          "kind": "cites",
+          "status": "direct",
+          "basis": [
+            {
+              "version_id": "bulletin-a",
+              "start": 39,
+              "end": 100,
+              "quote": "follow the archived release at https://example.org/bulletin-b"
+            }
+          ],
+          "rationale": "The referenced bulletin-b is now supplied. This establishes the citation edge, not support for the opening time.",
+          "upstream_locator": "https://example.org/bulletin-b"
+        }
+      ],
+      "gaps": [],
+      "resolutions": [
+        {
+          "gap_id": "fetch-bulletin-b",
+          "basis": [
+            {
+              "version_id": "bulletin-b",
+              "start": 0,
+              "end": 83,
+              "quote": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c."
+            }
+          ],
+          "rationale": "The requested release is present and identifies bulletin-c as its upstream schedule."
+        },
+        {
+          "gap_id": "fetch-scoped-bulletin-c",
+          "basis": [
+            {
+              "version_id": "bulletin-c",
+              "start": 30,
+              "end": 74,
+              "quote": "The laboratory opens at 8 am starting today."
+            }
+          ],
+          "rationale": "The sole evidence-scope document is supplied and expressly supports the unchanged target, effective today."
+        },
+        {
+          "gap_id": "lineage:chain-evidence",
+          "basis": [
+            {
+              "version_id": "bulletin-a",
+              "start": 39,
+              "end": 100,
+              "quote": "follow the archived release at https://example.org/bulletin-b"
+            },
+            {
+              "version_id": "bulletin-b",
+              "start": 0,
+              "end": 83,
+              "quote": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c."
+            },
+            {
+              "version_id": "bulletin-c",
+              "start": 0,
+              "end": 74,
+              "quote": "Laboratory schedule bulletin: The laboratory opens at 8 am starting today."
+            }
+          ],
+          "rationale": "All three versions are present. The visible citation path runs from a through b to c, whose text identifies its schedule-publishing role. This resolves lineage, not real-world authenticity."
+        }
+      ],
+      "origins": [],
+      "notes": "Evidence assessment: supported by bulletin-c, with the stated 'starting today' qualification. The citation chain is provenance, not independent confirmation. World verification remains unknown and does not block this evidence-only conclusion.",
+      "revisit_versions": []
+    }
+  },
+  "analysis_history": [
+    {
+      "revision": 1,
+      "round": 1,
+      "version_id": "bulletin-a",
+      "duplicate": false,
+      "revisit": false,
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "chain-evidence-navigation",
+            "text": "The bulletin directs readers to an archived release for the laboratory hours announcement; it states no opening time.",
+            "span": {
+              "version_id": "bulletin-a",
+              "start": 0,
+              "end": 101,
+              "quote": "For the laboratory hours announcement, follow the archived release at https://example.org/bulletin-b."
+            },
+            "parent_id": "chain-evidence",
+            "qualifiers": [
+              "This is a navigation statement, not an assertion that the laboratory opens at 8 am."
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "bulletin-a",
+                "start": 39,
+                "end": 70,
+                "quote": "follow the archived release at "
+              }
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "bulletin-a-cites-b",
+            "from_version": "bulletin-a",
+            "to_version": null,
+            "kind": "cites",
+            "status": "declared",
+            "basis": [
+              {
+                "version_id": "bulletin-a",
+                "start": 39,
+                "end": 100,
+                "quote": "follow the archived release at https://example.org/bulletin-b"
+              }
+            ],
+            "rationale": "The cited release is unavailable in the supplied context. This citation does not establish support for the target.",
+            "upstream_locator": "https://example.org/bulletin-b"
+          }
+        ],
+        "gaps": [
+          {
+            "id": "fetch-bulletin-b",
+            "question": "What does the cited archived release say, and what upstream lineage does it identify?",
+            "stage": "provenance",
+            "dimension": "provenance",
+            "blocking": false,
+            "target_id": "chain-evidence",
+            "basis": [
+              {
+                "version_id": "bulletin-a",
+                "start": 39,
+                "end": 100,
+                "quote": "follow the archived release at https://example.org/bulletin-b"
+              }
+            ],
+            "decision_impact": "Fetching the release can extend the visible lineage; the citation alone cannot establish what evidence-scope bulletin-c says.",
+            "action": "fetch",
+            "locator": "https://example.org/bulletin-b"
+          }
+        ],
+        "resolutions": [],
+        "origins": [],
+        "notes": "Evidence assessment remains undetermined: bulletin-c, the sole evidence-scope document, is not supplied. Bulletin-a neither asserts nor denies the target opening time. World verification is unknown; authentication is not required for the evidence-only assessment. The existing origin gap remains unresolved.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    },
+    {
+      "revision": 2,
+      "round": 2,
+      "version_id": "bulletin-c",
+      "duplicate": false,
+      "revisit": false,
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "bulletin-c-opening",
+            "text": "The laboratory opens at 8 am starting today.",
+            "span": {
+              "version_id": "bulletin-c",
+              "start": 30,
+              "end": 74,
+              "quote": "The laboratory opens at 8 am starting today."
+            },
+            "parent_id": "chain-evidence",
+            "qualifiers": [
+              "Affirmative opening-time statement about the laboratory.",
+              "Opening time is 8 am; the stated schedule begins today, corresponding to the snapshot's publication date, 2026-09-04."
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "bulletin-c",
+                "start": 51,
+                "end": 58,
+                "quote": "at 8 am"
+              },
+              {
+                "version_id": "bulletin-c",
+                "start": 59,
+                "end": 73,
+                "quote": "starting today"
+              }
+            ]
+          }
+        ],
+        "relations": [],
+        "gaps": [],
+        "resolutions": [
+          {
+            "gap_id": "fetch-scoped-bulletin-c",
+            "basis": [
+              {
+                "version_id": "bulletin-c",
+                "start": 30,
+                "end": 74,
+                "quote": "The laboratory opens at 8 am starting today."
+              }
+            ],
+            "rationale": "The supplied evidence-scope snapshot explicitly states the unchanged target, qualified as beginning today. This resolves the evidence question without requiring world authentication or the unavailable bulletin-b."
+          }
+        ],
+        "origins": [],
+        "notes": "Evidence: supported by bulletin-c at the target's as-of date. World: unknown. No visible citation in bulletin-c establishes a lineage to bulletin-a or bulletin-b; the existing provenance gaps remain unresolved and do not block this evidence-only conclusion.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    },
+    {
+      "revision": 3,
+      "round": 2,
+      "version_id": "bulletin-b",
+      "duplicate": false,
+      "revisit": false,
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "digest-citation",
+            "text": "The digest cites the issued laboratory schedule at bulletin-c.",
+            "span": {
+              "version_id": "bulletin-b",
+              "start": 0,
+              "end": 83,
+              "quote": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c."
+            },
+            "parent_id": "chain-evidence",
+            "qualifiers": [
+              "A citation, not a statement of opening hours."
+            ],
+            "qualifier_spans": []
+          },
+          {
+            "id": "scoped-opening-hours",
+            "text": "The laboratory opens at 8 am starting today.",
+            "span": {
+              "version_id": "bulletin-c",
+              "start": 30,
+              "end": 74,
+              "quote": "The laboratory opens at 8 am starting today."
+            },
+            "parent_id": "chain-evidence",
+            "qualifiers": [
+              "Affirmative opening time of 8 am, effective starting today; no timezone or recurring-day scope is specified."
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "bulletin-c",
+                "start": 59,
+                "end": 73,
+                "quote": "starting today"
+              }
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "bulletin-b-cites-c",
+            "from_version": "bulletin-b",
+            "to_version": "bulletin-c",
+            "kind": "cites",
+            "status": "direct",
+            "basis": [
+              {
+                "version_id": "bulletin-b",
+                "start": 0,
+                "end": 83,
+                "quote": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c."
+              }
+            ],
+            "rationale": "The digest explicitly cites bulletin-c, whose snapshot is present. This establishes visible lineage, not independent confirmation.",
+            "upstream_locator": "https://example.org/bulletin-c"
+          }
+        ],
+        "gaps": [],
+        "resolutions": [
+          {
+            "gap_id": "fetch-bulletin-b",
+            "basis": [
+              {
+                "version_id": "bulletin-b",
+                "start": 0,
+                "end": 83,
+                "quote": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c."
+              }
+            ],
+            "rationale": "The supplied digest identifies bulletin-c as its upstream schedule; it supplies no opening hours itself."
+          },
+          {
+            "gap_id": "fetch-scoped-bulletin-c",
+            "basis": [
+              {
+                "version_id": "bulletin-c",
+                "start": 30,
+                "end": 74,
+                "quote": "The laboratory opens at 8 am starting today."
+              }
+            ],
+            "rationale": "The evidence-scope snapshot is available and explicitly supports the unchanged target, with a starting-today qualification."
+          },
+          {
+            "gap_id": "origin:chain-evidence",
+            "basis": [
+              {
+                "version_id": "bulletin-b",
+                "start": 0,
+                "end": 83,
+                "quote": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c."
+              },
+              {
+                "version_id": "bulletin-c",
+                "start": 0,
+                "end": 74,
+                "quote": "Laboratory schedule bulletin: The laboratory opens at 8 am starting today."
+              }
+            ],
+            "rationale": "The visible lineage reaches the schedule bulletin, which presents the opening-hours announcement in its own publishing role."
+          }
+        ],
+        "origins": [
+          {
+            "target_id": "chain-evidence",
+            "version_id": "bulletin-c",
+            "basis": [
+              {
+                "version_id": "bulletin-c",
+                "start": 0,
+                "end": 74,
+                "quote": "Laboratory schedule bulletin: The laboratory opens at 8 am starting today."
+              }
+            ],
+            "material_kind": "original_record",
+            "rationale": "The record identifies itself as the laboratory schedule bulletin and issues the schedule statement. This identifies its visible publishing role, not real-world authenticity."
+          }
+        ],
+        "notes": "Evidence: supported by bulletin-c, effective starting today. World: unknown; no independent verification is supplied or required for this evidence-only assessment.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    },
+    {
+      "revision": 4,
+      "round": 2,
+      "version_id": "bulletin-a",
+      "duplicate": true,
+      "revisit": true,
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "chain-evidence-navigation",
+            "text": "The bulletin points to an archived laboratory-hours release without stating an opening time.",
+            "span": {
+              "version_id": "bulletin-a",
+              "start": 0,
+              "end": 101,
+              "quote": "For the laboratory hours announcement, follow the archived release at https://example.org/bulletin-b."
+            },
+            "parent_id": "chain-evidence",
+            "qualifiers": [
+              "This is a reference to another document, not an assertion or denial of the target."
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "bulletin-a",
+                "start": 39,
+                "end": 69,
+                "quote": "follow the archived release at"
+              }
+            ]
+          },
+          {
+            "id": "chain-evidence-scoped-hours",
+            "text": "The laboratory opens at 8 am starting today.",
+            "span": {
+              "version_id": "bulletin-c",
+              "start": 30,
+              "end": 74,
+              "quote": "The laboratory opens at 8 am starting today."
+            },
+            "parent_id": "chain-evidence",
+            "qualifiers": [
+              "The scoped bulletin affirms the target opening time.",
+              "The schedule takes effect 'today'; the supplied publication date is 2026-09-04. No timezone is stated."
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "bulletin-c",
+                "start": 54,
+                "end": 58,
+                "quote": "8 am"
+              },
+              {
+                "version_id": "bulletin-c",
+                "start": 59,
+                "end": 73,
+                "quote": "starting today"
+              }
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "bulletin-a-cites-b",
+            "from_version": "bulletin-a",
+            "to_version": "bulletin-b",
+            "kind": "cites",
+            "status": "direct",
+            "basis": [
+              {
+                "version_id": "bulletin-a",
+                "start": 39,
+                "end": 100,
+                "quote": "follow the archived release at https://example.org/bulletin-b"
+              }
+            ],
+            "rationale": "The referenced bulletin-b is now supplied. This establishes the citation edge, not support for the opening time.",
+            "upstream_locator": "https://example.org/bulletin-b"
+          }
+        ],
+        "gaps": [],
+        "resolutions": [
+          {
+            "gap_id": "fetch-bulletin-b",
+            "basis": [
+              {
+                "version_id": "bulletin-b",
+                "start": 0,
+                "end": 83,
+                "quote": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c."
+              }
+            ],
+            "rationale": "The requested release is present and identifies bulletin-c as its upstream schedule."
+          },
+          {
+            "gap_id": "fetch-scoped-bulletin-c",
+            "basis": [
+              {
+                "version_id": "bulletin-c",
+                "start": 30,
+                "end": 74,
+                "quote": "The laboratory opens at 8 am starting today."
+              }
+            ],
+            "rationale": "The sole evidence-scope document is supplied and expressly supports the unchanged target, effective today."
+          },
+          {
+            "gap_id": "lineage:chain-evidence",
+            "basis": [
+              {
+                "version_id": "bulletin-a",
+                "start": 39,
+                "end": 100,
+                "quote": "follow the archived release at https://example.org/bulletin-b"
+              },
+              {
+                "version_id": "bulletin-b",
+                "start": 0,
+                "end": 83,
+                "quote": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c."
+              },
+              {
+                "version_id": "bulletin-c",
+                "start": 0,
+                "end": 74,
+                "quote": "Laboratory schedule bulletin: The laboratory opens at 8 am starting today."
+              }
+            ],
+            "rationale": "All three versions are present. The visible citation path runs from a through b to c, whose text identifies its schedule-publishing role. This resolves lineage, not real-world authenticity."
+          }
+        ],
+        "origins": [],
+        "notes": "Evidence assessment: supported by bulletin-c, with the stated 'starting today' qualification. The citation chain is provenance, not independent confirmation. World verification remains unknown and does not block this evidence-only conclusion.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    }
+  ],
+  "fragments": [
+    {
+      "id": "bulletin-c-opening",
+      "text": "The laboratory opens at 8 am starting today.",
+      "span": {
+        "version_id": "bulletin-c",
+        "start": 30,
+        "end": 74,
+        "quote": "The laboratory opens at 8 am starting today."
+      },
+      "parent_id": "chain-evidence",
+      "qualifiers": [
+        "Affirmative opening-time statement about the laboratory.",
+        "Opening time is 8 am; the stated schedule begins today, corresponding to the snapshot's publication date, 2026-09-04."
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "bulletin-c",
+          "start": 51,
+          "end": 58,
+          "quote": "at 8 am"
+        },
+        {
+          "version_id": "bulletin-c",
+          "start": 59,
+          "end": 73,
+          "quote": "starting today"
+        }
+      ]
+    },
+    {
+      "id": "digest-citation",
+      "text": "The digest cites the issued laboratory schedule at bulletin-c.",
+      "span": {
+        "version_id": "bulletin-b",
+        "start": 0,
+        "end": 83,
+        "quote": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c."
+      },
+      "parent_id": "chain-evidence",
+      "qualifiers": [
+        "A citation, not a statement of opening hours."
+      ],
+      "qualifier_spans": []
+    },
+    {
+      "id": "scoped-opening-hours",
+      "text": "The laboratory opens at 8 am starting today.",
+      "span": {
+        "version_id": "bulletin-c",
+        "start": 30,
+        "end": 74,
+        "quote": "The laboratory opens at 8 am starting today."
+      },
+      "parent_id": "chain-evidence",
+      "qualifiers": [
+        "Affirmative opening time of 8 am, effective starting today; no timezone or recurring-day scope is specified."
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "bulletin-c",
+          "start": 59,
+          "end": 73,
+          "quote": "starting today"
+        }
+      ]
+    },
+    {
+      "id": "chain-evidence-navigation",
+      "text": "The bulletin points to an archived laboratory-hours release without stating an opening time.",
+      "span": {
+        "version_id": "bulletin-a",
+        "start": 0,
+        "end": 101,
+        "quote": "For the laboratory hours announcement, follow the archived release at https://example.org/bulletin-b."
+      },
+      "parent_id": "chain-evidence",
+      "qualifiers": [
+        "This is a reference to another document, not an assertion or denial of the target."
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "bulletin-a",
+          "start": 39,
+          "end": 69,
+          "quote": "follow the archived release at"
+        }
+      ]
+    },
+    {
+      "id": "chain-evidence-scoped-hours",
+      "text": "The laboratory opens at 8 am starting today.",
+      "span": {
+        "version_id": "bulletin-c",
+        "start": 30,
+        "end": 74,
+        "quote": "The laboratory opens at 8 am starting today."
+      },
+      "parent_id": "chain-evidence",
+      "qualifiers": [
+        "The scoped bulletin affirms the target opening time.",
+        "The schedule takes effect 'today'; the supplied publication date is 2026-09-04. No timezone is stated."
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "bulletin-c",
+          "start": 54,
+          "end": 58,
+          "quote": "8 am"
+        },
+        {
+          "version_id": "bulletin-c",
+          "start": 59,
+          "end": 73,
+          "quote": "starting today"
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "bulletin-b-cites-c",
+      "from_version": "bulletin-b",
+      "to_version": "bulletin-c",
+      "kind": "cites",
+      "status": "direct",
+      "basis": [
+        {
+          "version_id": "bulletin-b",
+          "start": 0,
+          "end": 83,
+          "quote": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c."
+        }
+      ],
+      "rationale": "The digest explicitly cites bulletin-c, whose snapshot is present. This establishes visible lineage, not independent confirmation.",
+      "upstream_locator": "https://example.org/bulletin-c"
+    },
+    {
+      "id": "bulletin-a-cites-b",
+      "from_version": "bulletin-a",
+      "to_version": "bulletin-b",
+      "kind": "cites",
+      "status": "direct",
+      "basis": [
+        {
+          "version_id": "bulletin-a",
+          "start": 39,
+          "end": 100,
+          "quote": "follow the archived release at https://example.org/bulletin-b"
+        }
+      ],
+      "rationale": "The referenced bulletin-b is now supplied. This establishes the citation edge, not support for the opening time.",
+      "upstream_locator": "https://example.org/bulletin-b"
+    }
+  ],
+  "origins": [
+    {
+      "target_id": "chain-evidence",
+      "version_id": "bulletin-c",
+      "basis": [
+        {
+          "version_id": "bulletin-c",
+          "start": 0,
+          "end": 74,
+          "quote": "Laboratory schedule bulletin: The laboratory opens at 8 am starting today."
+        }
+      ],
+      "material_kind": "original_record",
+      "rationale": "The record identifies itself as the laboratory schedule bulletin and issues the schedule statement. This identifies its visible publishing role, not real-world authenticity."
+    }
+  ],
+  "gaps": [],
+  "resolutions": [
+    {
+      "gap_id": "fetch-scoped-bulletin-c",
+      "basis": [
+        {
+          "version_id": "bulletin-c",
+          "start": 0,
+          "end": 74,
+          "quote": "Laboratory schedule bulletin: The laboratory opens at 8 am starting today."
+        }
+      ],
+      "rationale": "The scoped record is now visible and directly supports the target, resolving the referenced availability blocker."
+    },
+    {
+      "gap_id": "fetch-bulletin-b",
+      "basis": [
+        {
+          "version_id": "bulletin-b",
+          "start": 0,
+          "end": 83,
+          "quote": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c."
+        }
+      ],
+      "rationale": "The requested release is present and identifies bulletin-c as its upstream schedule."
+    },
+    {
+      "gap_id": "origin:chain-evidence",
+      "basis": [
+        {
+          "version_id": "bulletin-b",
+          "start": 0,
+          "end": 83,
+          "quote": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c."
+        },
+        {
+          "version_id": "bulletin-c",
+          "start": 0,
+          "end": 74,
+          "quote": "Laboratory schedule bulletin: The laboratory opens at 8 am starting today."
+        }
+      ],
+      "rationale": "The visible lineage reaches the schedule bulletin, which presents the opening-hours announcement in its own publishing role."
+    },
+    {
+      "gap_id": "lineage:chain-evidence",
+      "basis": [
+        {
+          "version_id": "bulletin-a",
+          "start": 39,
+          "end": 100,
+          "quote": "follow the archived release at https://example.org/bulletin-b"
+        },
+        {
+          "version_id": "bulletin-b",
+          "start": 0,
+          "end": 83,
+          "quote": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c."
+        },
+        {
+          "version_id": "bulletin-c",
+          "start": 0,
+          "end": 74,
+          "quote": "Laboratory schedule bulletin: The laboratory opens at 8 am starting today."
+        }
+      ],
+      "rationale": "All three versions are present. The visible citation path runs from a through b to c, whose text identifies its schedule-publishing role. This resolves lineage, not real-world authenticity."
+    }
+  ],
+  "verification_history": [
+    {
+      "round": 1,
+      "verdict": "unresolved",
+      "basis": [],
+      "rationale": "The evidence scope contains only bulletin-c, which is not supplied. Bulletin-a merely points to bulletin-b and cannot establish what bulletin-c says about the unchanged target.",
+      "gaps": [
+        {
+          "id": "fetch-scoped-bulletin-c",
+          "question": "Does bulletin-c state that the laboratory opens at 8 am?",
+          "stage": "verification",
+          "dimension": "evidence",
+          "blocking": true,
+          "target_id": "chain-evidence",
+          "basis": [
+            {
+              "version_id": "bulletin-a",
+              "start": 39,
+              "end": 100,
+              "quote": "follow the archived release at https://example.org/bulletin-b"
+            }
+          ],
+          "decision_impact": "Supplying the scoped bulletin-c snapshot could support, contradict, or leave unresolved the opening-time claim; the visible citation does not supply that record.",
+          "action": "fetch",
+          "locator": "version_id:bulletin-c"
+        }
+      ],
+      "resolutions": [],
+      "evidence_verdict": "unresolved",
+      "world_verdict": "unresolved",
+      "world_basis": [],
+      "world_rationale": "No supplied material independently establishes the laboratory's actual opening time as of 2026-09-04T20:00:00Z. The sole snapshot is an unauthenticated fictional publisher's referral, not evidence of actual operating hours."
+    },
+    {
+      "round": 2,
+      "verdict": "supported",
+      "basis": [
+        {
+          "version_id": "bulletin-c",
+          "start": 0,
+          "end": 74,
+          "quote": "Laboratory schedule bulletin: The laboratory opens at 8 am starting today."
+        }
+      ],
+      "rationale": "The available scoped record, bulletin-c, explicitly states the unchanged target. Evidence support does not require authenticating the announcement.",
+      "gaps": [],
+      "resolutions": [
+        {
+          "gap_id": "fetch-scoped-bulletin-c",
+          "basis": [
+            {
+              "version_id": "bulletin-c",
+              "start": 0,
+              "end": 74,
+              "quote": "Laboratory schedule bulletin: The laboratory opens at 8 am starting today."
+            }
+          ],
+          "rationale": "The scoped record is now visible and directly supports the target, resolving the referenced availability blocker."
+        }
+      ],
+      "evidence_verdict": "supported",
+      "world_verdict": "unresolved",
+      "world_basis": [],
+      "world_rationale": "The supplied snapshots are unauthenticated fictional publisher records. Neither the schedule assertion nor the citation chain independently establishes actual laboratory hours as of the target time."
+    }
+  ],
+  "operations": [
+    {
+      "sequence": 1,
+      "round": 1,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "origin:chain-evidence",
+          "question": "Find the producing record and evidenced lineage for: The laboratory opens at 8 am.",
+          "stage": "provenance",
+          "dimension": "auto",
+          "blocking": true,
+          "target_id": null,
+          "basis": [],
+          "decision_impact": "",
+          "action": "search",
+          "locator": null
+        }
+      ],
+      "limit": 18
+    },
+    {
+      "sequence": 2,
+      "round": 1,
+      "action": "snapshot_saved",
+      "version_id": "bulletin-a",
+      "sha256": "4143692a361b8de4e15333bf5826a0da3762b8cc13dd07067cf6b787a984d9cc",
+      "eligible": true
+    },
+    {
+      "sequence": 3,
+      "round": 1,
+      "action": "decompose_started",
+      "version_id": "bulletin-a",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 4,
+      "round": 1,
+      "action": "decompose_completed",
+      "version_id": "bulletin-a",
+      "revision": 1
+    },
+    {
+      "sequence": 5,
+      "round": 1,
+      "action": "alignment_checked",
+      "version_id": "bulletin-a",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 6,
+      "round": 1,
+      "action": "graph_updated",
+      "version_id": "bulletin-a",
+      "open_gaps": 2
+    },
+    {
+      "sequence": 7,
+      "round": 1,
+      "action": "verification_started"
+    },
+    {
+      "sequence": 8,
+      "round": 1,
+      "action": "verification_completed",
+      "verdict": "unresolved",
+      "decision": "unresolved",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": [
+            "fetch-scoped-bulletin-c"
+          ]
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "followup_tasks": 1,
+      "provenance_status": "partial"
+    },
+    {
+      "sequence": 9,
+      "round": 1,
+      "action": "assessment_changed",
+      "previous": null,
+      "current": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": [
+            "fetch-scoped-bulletin-c"
+          ]
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "basis": [],
+      "world_basis": []
+    },
+    {
+      "sequence": 10,
+      "round": 1,
+      "action": "progress_checked",
+      "new_eligible_versions": 1,
+      "new_structure": true
+    },
+    {
+      "sequence": 11,
+      "round": 2,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "origin:chain-evidence",
+          "question": "Find the producing record and evidenced lineage for: The laboratory opens at 8 am.",
+          "stage": "provenance",
+          "dimension": "auto",
+          "blocking": true,
+          "target_id": null,
+          "basis": [],
+          "decision_impact": "",
+          "action": "search",
+          "locator": null
+        },
+        {
+          "id": "fetch-bulletin-b",
+          "question": "What does the cited archived release say, and what upstream lineage does it identify?",
+          "stage": "provenance",
+          "dimension": "provenance",
+          "blocking": false,
+          "target_id": "chain-evidence",
+          "basis": [
+            {
+              "version_id": "bulletin-a",
+              "start": 39,
+              "end": 100,
+              "quote": "follow the archived release at https://example.org/bulletin-b"
+            }
+          ],
+          "decision_impact": "Fetching the release can extend the visible lineage; the citation alone cannot establish what evidence-scope bulletin-c says.",
+          "action": "fetch",
+          "locator": "https://example.org/bulletin-b"
+        },
+        {
+          "id": "fetch-scoped-bulletin-c",
+          "question": "Does bulletin-c state that the laboratory opens at 8 am?",
+          "stage": "verification",
+          "dimension": "evidence",
+          "blocking": true,
+          "target_id": "chain-evidence",
+          "basis": [
+            {
+              "version_id": "bulletin-a",
+              "start": 39,
+              "end": 100,
+              "quote": "follow the archived release at https://example.org/bulletin-b"
+            }
+          ],
+          "decision_impact": "Supplying the scoped bulletin-c snapshot could support, contradict, or leave unresolved the opening-time claim; the visible citation does not supply that record.",
+          "action": "fetch",
+          "locator": "version_id:bulletin-c"
+        }
+      ],
+      "limit": 17
+    },
+    {
+      "sequence": 12,
+      "round": 2,
+      "action": "snapshot_saved",
+      "version_id": "bulletin-c",
+      "sha256": "cf6cd092af0a1c1225ca40ccadc4b115e8e02beb69aa8997ba2f30b619598574",
+      "eligible": true
+    },
+    {
+      "sequence": 13,
+      "round": 2,
+      "action": "decompose_started",
+      "version_id": "bulletin-c",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 14,
+      "round": 2,
+      "action": "decompose_completed",
+      "version_id": "bulletin-c",
+      "revision": 2
+    },
+    {
+      "sequence": 15,
+      "round": 2,
+      "action": "alignment_checked",
+      "version_id": "bulletin-c",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 16,
+      "round": 2,
+      "action": "graph_updated",
+      "version_id": "bulletin-c",
+      "open_gaps": 2
+    },
+    {
+      "sequence": 17,
+      "round": 2,
+      "action": "snapshot_saved",
+      "version_id": "bulletin-b",
+      "sha256": "4de45c8a777516d49d53c27ff1abc5235be30a98ef062683353e00901f983b01",
+      "eligible": true
+    },
+    {
+      "sequence": 18,
+      "round": 2,
+      "action": "decompose_started",
+      "version_id": "bulletin-b",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 19,
+      "round": 2,
+      "action": "decompose_completed",
+      "version_id": "bulletin-b",
+      "revision": 3
+    },
+    {
+      "sequence": 20,
+      "round": 2,
+      "action": "alignment_checked",
+      "version_id": "bulletin-b",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 21,
+      "round": 2,
+      "action": "graph_updated",
+      "version_id": "bulletin-b",
+      "open_gaps": 1
+    },
+    {
+      "sequence": 22,
+      "round": 2,
+      "action": "upstream_arrival_reanalysis",
+      "version_id": "bulletin-a",
+      "upstream_version": "bulletin-b",
+      "relation_id": "bulletin-a-cites-b"
+    },
+    {
+      "sequence": 23,
+      "round": 2,
+      "action": "revisit_requested",
+      "version_id": "bulletin-a"
+    },
+    {
+      "sequence": 24,
+      "round": 2,
+      "action": "decompose_started",
+      "version_id": "bulletin-a",
+      "duplicate": true,
+      "revisit": true
+    },
+    {
+      "sequence": 25,
+      "round": 2,
+      "action": "decompose_completed",
+      "version_id": "bulletin-a",
+      "revision": 4
+    },
+    {
+      "sequence": 26,
+      "round": 2,
+      "action": "alignment_checked",
+      "version_id": "bulletin-a",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 27,
+      "round": 2,
+      "action": "graph_updated",
+      "version_id": "bulletin-a",
+      "open_gaps": 0
+    },
+    {
+      "sequence": 28,
+      "round": 2,
+      "action": "retrieval_feedback",
+      "feedback": {
+        "gap_id": "origin:chain-evidence",
+        "action": "search",
+        "locator": null,
+        "status": "returned",
+        "reason": "matching snapshots returned",
+        "version_ids": [
+          "bulletin-c",
+          "bulletin-b"
+        ]
+      }
+    },
+    {
+      "sequence": 29,
+      "round": 2,
+      "action": "retrieval_feedback",
+      "feedback": {
+        "gap_id": "fetch-bulletin-b",
+        "action": "fetch",
+        "locator": "https://example.org/bulletin-b",
+        "status": "unavailable",
+        "reason": "no unseen match in fixed snapshot index; live web unavailable",
+        "version_ids": []
+      }
+    },
+    {
+      "sequence": 30,
+      "round": 2,
+      "action": "retrieval_feedback",
+      "feedback": {
+        "gap_id": "fetch-scoped-bulletin-c",
+        "action": "fetch",
+        "locator": "version_id:bulletin-c",
+        "status": "unavailable",
+        "reason": "no unseen match in fixed snapshot index; live web unavailable",
+        "version_ids": []
+      }
+    },
+    {
+      "sequence": 31,
+      "round": 2,
+      "action": "verification_started"
+    },
+    {
+      "sequence": 32,
+      "round": 2,
+      "action": "verification_completed",
+      "verdict": "unresolved",
+      "decision": "supported",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "followup_tasks": 0,
+      "provenance_status": "original_material_located"
+    },
+    {
+      "sequence": 33,
+      "round": 2,
+      "action": "assessment_changed",
+      "previous": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": [
+            "fetch-scoped-bulletin-c"
+          ]
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "current": {
+        "evidence": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "basis": [
+        {
+          "version_id": "bulletin-c",
+          "start": 0,
+          "end": 74,
+          "quote": "Laboratory schedule bulletin: The laboratory opens at 8 am starting today."
+        }
+      ],
+      "world_basis": []
+    },
+    {
+      "sequence": 34,
+      "round": 2,
+      "action": "stopped",
+      "reason": "complete"
+    }
+  ],
+  "errors": []
+}

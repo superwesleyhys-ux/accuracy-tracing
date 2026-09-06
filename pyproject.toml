@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "newsverify-harness"
+version = "0.3.0"
+description = "A bounded, auditable verification loop for news evidence adapters"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "NewsVerify Harness contributors"}]
+dependencies = []
+
+[project.optional-dependencies]
+model = ["openai==3.8.0", "socksio==1.0.0"]
+
+[project.scripts]
+newsverify = "newsverify.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["newsverify*"]
+
+[tool.setuptools.package-data]
+newsverify = ["data/*.json"]

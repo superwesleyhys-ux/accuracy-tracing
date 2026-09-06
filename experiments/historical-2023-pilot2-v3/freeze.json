@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "historical-2023-resolved-by-2024-pilot2-v3",
+  "pre_run_checksum": true,
+  "files": {
+    "inputs.json": "c86b8e56f4c4b76025ed7caf482074762be319b3dcad5cc9bcee4028c96c5816",
+    "sources.json": "11287c92379d8bc3a65273ede2be200bc5df5e54bdea213719fe472e14f90d13",
+    "gold.json": "392946fefee993267e39a28eecd978399dcf3a5e13a23984bd8a11644aa7752b"
+  },
+  "rule": "Inference may read only inputs.json, sources.json, and this checksum manifest. Gold is opened only by audit or score after both arms finish. This disclosed post-hoc v3 pilot preserves the Virgin proposition, expands its outcome excerpt within the same SEC sentence before any v3 model call to make issuer binding explicit, and replaces Boeing with the previously frozen Lucid case because Boeing required an unstated prerequisite inference; v1 and v2 remain preserved. Never pool versions as if v3 were preregistered, and require a clean Git commit containing all inference inputs before model calls."
+}

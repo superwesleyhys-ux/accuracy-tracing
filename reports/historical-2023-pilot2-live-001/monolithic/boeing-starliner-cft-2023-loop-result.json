@@ -1,0 +1,28 @@
+{
+  "id": "boeing-starliner-cft-2023",
+  "variant": "loop",
+  "status": "error",
+  "prediction": {
+    "id": "boeing-starliner-cft-2023",
+    "assessment_mode": "evidence",
+    "as_of": "2024-12-31T23:59:59Z",
+    "decision": "unverifiable",
+    "assessments": null,
+    "provenance_status": "unresolved",
+    "assessment_valid": false,
+    "stop_reason": "verifier_error"
+  },
+  "checkpoints": [],
+  "error_type": "ValueError",
+  "usage": {
+    "model_calls": 2,
+    "input_tokens": 3190,
+    "output_tokens": 1772,
+    "seconds": 31.00141379190609
+  },
+  "actual_new_api_usage": {
+    "model_calls": 2,
+    "input_tokens": 3190,
+    "output_tokens": 1772
+  }
+}

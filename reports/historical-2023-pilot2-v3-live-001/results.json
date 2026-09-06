@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "historical-2023-resolved-by-2024-pilot2-v3",
+  "execution_profile": "equal-v1",
+  "arms": [
+    {
+      "name": "monolithic",
+      "status": "completed",
+      "return_code": 0,
+      "actual_model_calls": 9,
+      "logical_model_calls": 9,
+      "cases": [
+        {
+          "id": "virgin-galactic-commercial-service-2023",
+          "status": "completed",
+          "decision": "unverifiable",
+          "error_type": null,
+          "usage": {
+            "model_calls": 2,
+            "input_tokens": 3054,
+            "output_tokens": 1329,
+            "seconds": 30.626264917082153
+          },
+          "actual_new_api_usage": {
+            "model_calls": 2,
+            "input_tokens": 3054,
+            "output_tokens": 1329
+          }
+        },
+        {
+          "id": "lucid-production-2023",
+          "status": "completed",
+          "decision": "false",
+          "error_type": null,
+          "usage": {
+            "model_calls": 4,
+            "input_tokens": 7848,
+            "output_tokens": 3462,
+            "seconds": 67.42794904101174
+          },
+          "actual_new_api_usage": {
+            "model_calls": 4,
+            "input_tokens": 7848,
+            "output_tokens": 3462
+          }
+        }
+      ],
+      "full_evidence_controls": [
+        {
+          "id": "lucid-production-2023",
+          "status": "completed",
+          "decision": "false",
+          "error_type": null,
+          "usage": {
+            "model_calls": 3,
+            "input_tokens": 5737,
+            "output_tokens": 3161,
+            "seconds": 53.75134016701486
+          },
+          "actual_new_api_usage": {
+            "model_calls": 3,
+            "input_tokens": 5737,
+            "output_tokens": 3161
+          }
+        }
+      ]
+    },
+    {
+      "name": "staged",
+      "status": "has_errors",
+      "return_code": 1,
+      "actual_model_calls": 43,
+      "logical_model_calls": 43,
+      "cases": [
+        {
+          "id": "virgin-galactic-commercial-service-2023",
+          "status": "completed",
+          "decision": "true",
+          "error_type": null,
+          "usage": {
+            "model_calls": 16,
+            "input_tokens": 21129,
+            "output_tokens": 2266,
+            "seconds": 68.27042870793957
+          },
+          "actual_new_api_usage": {
+            "model_calls": 16,
+            "input_tokens": 21129,
+            "output_tokens": 2266
+          }
+        },
+        {
+          "id": "lucid-production-2023",
+          "status": "completed",
+          "decision": "false",
+          "error_type": null,
+          "usage": {
+            "model_calls": 17,
+            "input_tokens": 23462,
+            "output_tokens": 2947,
+            "seconds": 78.5635002499912
+          },
+          "actual_new_api_usage": {
+            "model_calls": 17,
+            "input_tokens": 23462,
+            "output_tokens": 2947
+          }
+        }
+      ],
+      "full_evidence_controls": [
+        {
+          "id": "lucid-production-2023",
+          "status": "error",
+          "decision": "unverifiable",
+          "error_type": "StagedSemanticError",
+          "usage": {
+            "model_calls": 10,
+            "input_tokens": 12864,
+            "output_tokens": 1959,
+            "seconds": 53.826478208065964
+          },
+          "actual_new_api_usage": {
+            "model_calls": 10,
+            "input_tokens": 12864,
+            "output_tokens": 1959
+          }
+        }
+      ]
+    }
+  ]
+}

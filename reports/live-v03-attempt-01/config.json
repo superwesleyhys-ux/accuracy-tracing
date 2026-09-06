@@ -1,0 +1,34 @@
+{
+  "model": "gpt-6-astra",
+  "max_rounds": 5,
+  "budget": {
+    "calls": 24,
+    "output_tokens": 36000,
+    "per_call_output_tokens": 2500,
+    "seconds": 600
+  },
+  "input_sha256": "4efef214c4c2d220407ee05c775945fad7377dc31328c07ccdad3842deb75cfc",
+  "source_sha256": {
+    "newsverify/__init__.py": "ab434be0dec8ad3ad32945bce9c0bab051e74526d5c65718197fd2c9f69c5dca",
+    "newsverify/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "newsverify/cli.py": "8c810053cae5b605d46d4004fd92e8920ca6fcc9a813d205f68ed96bb73a515b",
+    "newsverify/comparison.py": "b35ddbb2e82a5a763aac31982f28c984ca50a242ecb07a1245128e09199279c5",
+    "newsverify/core.py": "8f148c272de3be772581dc78644411fa2b56d1eb809045ef6423620ac7a41d88",
+    "newsverify/decisions.py": "fe93d618b0f122591b39def16e952a4076c4fc66d69d81198c28489e245b4b3e",
+    "newsverify/evaluation.py": "2c971584562232d979fa9523c610b94a53c6d76a74940dbc58a581773c336e4f",
+    "newsverify/provenance.py": "0e109c44d7a709ab58be2bd4a53b0d54a740df1f8c732ba4b7e586edf14a9f4b",
+    "newsverify/providers.py": "7cb362d1f89270e82b1b34590eecac607a43896a6bbe763c3b88b0254970b568",
+    "newsverify/retrieval.py": "0fac14ff28e05bb9b0df4d070584a627b09d98b02d7d29141e297e5f128b2321",
+    "newsverify/trace_demo.py": "960c78e0fc2aa2bb428dd13db59c3c8314c7e7ffe533d2fe64d80267474b1251",
+    "experiments/loop_compare.py": "40d25f993a08f2723e6f3c0e3d8e65a898b6083945b786c23e2aa20ef8b9d504",
+    "experiments/model_io.py": "94ced29c567118df752b88e04007ab42932a8472a516234a130986a7e0766479",
+    "experiments/secure_run.py": "269360969cd5bb8b69a222924df90d7b119e35c38039af5f6fd24518243303ae",
+    "experiments/semantic_adapter.py": "8fadca23659102447030d0bbfa0af4d3fc04e3677e4ecdbff0d7d20a34e4029f"
+  },
+  "comparison": "exact first-round checkpoint versus continued loop; same decision function",
+  "control": "one-round all-materials control for flagged cases separates access from repeated reasoning",
+  "original_agent_reexecuted": false,
+  "gold_access_during_inference": false,
+  "actual_spend_equal": false,
+  "input_tokens_capped": false
+}

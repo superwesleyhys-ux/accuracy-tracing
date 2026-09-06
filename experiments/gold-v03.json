@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "dataset_kind": "synthetic_contract_examples",
+  "cases": [
+    {
+      "id": "bridge-evidence",
+      "assessment_mode": "evidence",
+      "decision": "false"
+    },
+    {
+      "id": "library-evidence",
+      "assessment_mode": "evidence",
+      "decision": "true"
+    },
+    {
+      "id": "chain-evidence",
+      "assessment_mode": "evidence",
+      "decision": "true"
+    },
+    {
+      "id": "conflict-evidence",
+      "assessment_mode": "evidence",
+      "decision": "disputed"
+    },
+    {
+      "id": "world-unknown",
+      "assessment_mode": "world",
+      "decision": "unverifiable"
+    }
+  ],
+  "limitations": "Author-written contract examples, not independently adjudicated or held out. Evidence cases score entailment within named documents, not real-world truth."
+}

@@ -1,0 +1,79 @@
+{
+  "id": "virgin-galactic-commercial-service-2023",
+  "variant": "loop",
+  "status": "completed",
+  "prediction": {
+    "id": "virgin-galactic-commercial-service-2023",
+    "assessment_mode": "evidence",
+    "as_of": "2024-12-31T23:59:59Z",
+    "decision": "true",
+    "assessments": {
+      "evidence": {
+        "raw_verdict": "supported",
+        "decision": "supported",
+        "blocking_gap_ids": []
+      },
+      "world": {
+        "raw_verdict": "supported",
+        "decision": "supported",
+        "blocking_gap_ids": []
+      }
+    },
+    "provenance_status": "original_material_located",
+    "assessment_valid": true,
+    "stop_reason": "complete"
+  },
+  "checkpoints": [
+    {
+      "round": 1,
+      "id": "virgin-galactic-commercial-service-2023",
+      "decision": "unverifiable",
+      "assessment_mode": "evidence",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": [
+            "evidence-scope-outcome-missing"
+          ]
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "provenance_status": "original_material_located"
+    },
+    {
+      "round": 2,
+      "id": "virgin-galactic-commercial-service-2023",
+      "decision": "true",
+      "assessment_mode": "evidence",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        }
+      },
+      "provenance_status": "original_material_located"
+    }
+  ],
+  "usage": {
+    "model_calls": 4,
+    "input_tokens": 7728,
+    "output_tokens": 3500,
+    "seconds": 64.03126933297608
+  },
+  "actual_new_api_usage": {
+    "model_calls": 4,
+    "input_tokens": 7728,
+    "output_tokens": 3500
+  }
+}

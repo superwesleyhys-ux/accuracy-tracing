@@ -1,0 +1,58 @@
+{
+  "id": "world-unknown",
+  "variant": "loop",
+  "status": "completed",
+  "prediction": {
+    "id": "world-unknown",
+    "assessment_mode": "world",
+    "as_of": "2026-09-04T20:00:00Z",
+    "decision": "unverifiable",
+    "assessments": {
+      "evidence": {
+        "raw_verdict": "supported",
+        "decision": "supported",
+        "blocking_gap_ids": []
+      },
+      "world": {
+        "raw_verdict": "unresolved",
+        "decision": "unresolved",
+        "blocking_gap_ids": []
+      }
+    },
+    "provenance_status": "original_material_located",
+    "assessment_valid": true,
+    "stop_reason": "provider_exhausted"
+  },
+  "checkpoints": [
+    {
+      "round": 1,
+      "id": "world-unknown",
+      "decision": "unverifiable",
+      "assessment_mode": "world",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "provenance_status": "original_material_located"
+    }
+  ],
+  "usage": {
+    "model_calls": 4,
+    "input_tokens": 6913,
+    "output_tokens": 3568,
+    "seconds": 69.21119869099493
+  },
+  "actual_new_api_usage": {
+    "model_calls": 2,
+    "input_tokens": 3750,
+    "output_tokens": 1351
+  }
+}

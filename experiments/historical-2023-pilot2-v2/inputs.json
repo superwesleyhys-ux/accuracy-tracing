@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "target": {
+        "id": "virgin-galactic-commercial-service-2023",
+        "text": "Virgin Galactic will commence commercial service during the second quarter of 2023.",
+        "as_of": "2024-12-31T23:59:59Z",
+        "source_version_id": "virgin-commercial-claim-2023",
+        "assessment_mode": "evidence",
+        "evidence_scope": [
+          "virgin-commercial-outcome-2024"
+        ]
+      },
+      "materials": [
+        {
+          "version_id": "virgin-commercial-claim-2023",
+          "url": "https://www.sec.gov/Archives/edgar/data/1706946/000170694623000032/spce-20230331.htm",
+          "content": "Virgin Galactic Q1 2023 Form 10-Q | SEC filing dated May 9, 2023\nCommercial service is currently expected to commence in the second quarter of 2023.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2023-05-09T23:59:59Z",
+          "available_at": "2023-05-09T23:59:59Z",
+          "availability_basis": "Immutable SEC EDGAR accession 0001706946-23-000032, filed May 9, 2023; raw filing identity is recorded in sources.json.",
+          "issuer": "Virgin Galactic Holdings, Inc. (filed with the U.S. SEC)"
+        },
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "url": "https://www.sec.gov/Archives/edgar/data/1706946/000170694624000039/spce-20231231.htm",
+          "content": "Virgin Galactic 2023 Form 10-K | SEC filing dated February 27, 2024\nIn June 2023, 'Galactic 01,' marked the start of commercial service.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2024-02-27T23:59:59Z",
+          "available_at": "2024-02-27T23:59:59Z",
+          "availability_basis": "Immutable SEC EDGAR accession 0001706946-24-000039, filed February 27, 2024; raw filing identity is recorded in sources.json.",
+          "issuer": "Virgin Galactic Holdings, Inc. (filed with the U.S. SEC)"
+        }
+      ],
+      "seed_ids": [
+        "virgin-commercial-claim-2023"
+      ],
+      "full_evidence_control": false
+    },
+    {
+      "target": {
+        "id": "boeing-starliner-cft-2023",
+        "text": "Boeing will complete the Starliner crewed flight test by December 31, 2023.",
+        "as_of": "2024-12-31T23:59:59Z",
+        "source_version_id": "boeing-starliner-claim-2023",
+        "assessment_mode": "evidence",
+        "evidence_scope": [
+          "boeing-starliner-outcome-2024"
+        ]
+      },
+      "materials": [
+        {
+          "version_id": "boeing-starliner-claim-2023",
+          "url": "https://www.sec.gov/Archives/edgar/data/12927/000001292723000007/ba-20221231.htm",
+          "content": "Boeing 2022 Form 10-K | SEC filing dated January 27, 2023\nA crewed flight test is now expected to be completed in 2023.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2023-01-27T23:59:59Z",
+          "available_at": "2023-01-27T23:59:59Z",
+          "availability_basis": "Immutable SEC EDGAR accession 0000012927-23-000007, filed January 27, 2023; raw filing identity is recorded in sources.json.",
+          "issuer": "The Boeing Company (filed with the U.S. SEC)"
+        },
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "url": "https://www.sec.gov/Archives/edgar/data/12927/000001292724000082/ba-20240930.htm",
+          "content": "Boeing Q3 2024 Form 10-Q | SEC filing dated October 23, 2024\nCommercial Crew\nNational Aeronautics and Space Administration has contracted us to design and build the CST-100 Starliner spacecraft to transport crews to the International Space Station (ISS). In the second quarter of 2022, we successfully completed the uncrewed Orbital Flight Test. During 2023, we increased the reach-forward loss by $288 primarily as a result of delaying the Crewed Flight Test (CFT) following notification by a parachute supplier of an issue identified through testing. The CFT launched on June 5, 2024, and docked with the ISS.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2024-10-23T23:59:59Z",
+          "available_at": "2024-10-23T23:59:59Z",
+          "availability_basis": "Immutable SEC EDGAR accession 0000012927-24-000082, filed October 23, 2024; raw filing identity is recorded in sources.json.",
+          "issuer": "The Boeing Company (filed with the U.S. SEC)"
+        }
+      ],
+      "seed_ids": [
+        "boeing-starliner-claim-2023"
+      ],
+      "full_evidence_control": false
+    }
+  ]
+}

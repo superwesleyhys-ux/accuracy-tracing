@@ -1,0 +1,25 @@
+[
+  {
+    "round": 1,
+    "tasks": [
+      {
+        "id": "origin:chain-evidence",
+        "question": "Find the producing record and evidenced lineage for: The laboratory opens at 8 am.",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null
+      }
+    ],
+    "returned_ids": [
+      "bulletin-a",
+      "bulletin-b",
+      "bulletin-c"
+    ],
+    "feedback": []
+  }
+]

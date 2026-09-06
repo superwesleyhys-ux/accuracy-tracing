@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "target": {
+        "id": "tesla-cybertruck-2023",
+        "text": "Tesla will make its first Cybertruck customer deliveries by December 31, 2023.",
+        "as_of": "2024-12-31T23:59:59Z",
+        "source_version_id": "tesla-cybertruck-claim-2023",
+        "assessment_mode": "evidence",
+        "evidence_scope": ["tesla-cybertruck-outcome-2024"]
+      },
+      "materials": [
+        {
+          "version_id": "tesla-cybertruck-claim-2023",
+          "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828023034588/exhibit991.htm",
+          "content": "Tesla Q3 2023 Update | SEC exhibit filed October 18, 2023\nCybertruck deliveries remain on track for later this year.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2023-10-18T23:59:59Z",
+          "available_at": "2023-10-18T23:59:59Z",
+          "availability_basis": "Immutable SEC EDGAR accession 0001628280-23-034588, filed October 18, 2023; raw filing identity is recorded in sources.json.",
+          "issuer": "Tesla, Inc. (filed with the U.S. SEC)"
+        },
+        {
+          "version_id": "tesla-cybertruck-outcome-2024",
+          "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828024002390/tsla-20231231.htm",
+          "content": "Tesla 2023 Form 10-K | SEC filing dated January 29, 2024\nIn November 2023, we entered the consumer pickup truck market with first deliveries of the Cybertruck.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2024-01-29T23:59:59Z",
+          "available_at": "2024-01-29T23:59:59Z",
+          "availability_basis": "Immutable SEC EDGAR accession 0001628280-24-002390, filed January 29, 2024; raw filing identity is recorded in sources.json.",
+          "issuer": "Tesla, Inc. (filed with the U.S. SEC)"
+        }
+      ],
+      "seed_ids": ["tesla-cybertruck-claim-2023"],
+      "full_evidence_control": true
+    },
+    {
+      "target": {
+        "id": "virgin-galactic-commercial-service-2023",
+        "text": "Virgin Galactic will commence commercial service during the second quarter of 2023.",
+        "as_of": "2024-12-31T23:59:59Z",
+        "source_version_id": "virgin-commercial-claim-2023",
+        "assessment_mode": "evidence",
+        "evidence_scope": ["virgin-commercial-outcome-2024"]
+      },
+      "materials": [
+        {
+          "version_id": "virgin-commercial-claim-2023",
+          "url": "https://www.sec.gov/Archives/edgar/data/1706946/000170694623000032/spce-20230331.htm",
+          "content": "Virgin Galactic Q1 2023 Form 10-Q | SEC filing dated May 9, 2023\nCommercial service is currently expected to commence in the second quarter of 2023.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2023-05-09T23:59:59Z",
+          "available_at": "2023-05-09T23:59:59Z",
+          "availability_basis": "Immutable SEC EDGAR accession 0001706946-23-000032, filed May 9, 2023; raw filing identity is recorded in sources.json.",
+          "issuer": "Virgin Galactic Holdings, Inc. (filed with the U.S. SEC)"
+        },
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "url": "https://www.sec.gov/Archives/edgar/data/1706946/000170694624000039/spce-20231231.htm",
+          "content": "Virgin Galactic 2023 Form 10-K | SEC filing dated February 27, 2024\nIn June 2023, 'Galactic 01,' marked the start of commercial service.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2024-02-27T23:59:59Z",
+          "available_at": "2024-02-27T23:59:59Z",
+          "availability_basis": "Immutable SEC EDGAR accession 0001706946-24-000039, filed February 27, 2024; raw filing identity is recorded in sources.json.",
+          "issuer": "Virgin Galactic Holdings, Inc. (filed with the U.S. SEC)"
+        }
+      ],
+      "seed_ids": ["virgin-commercial-claim-2023"],
+      "full_evidence_control": false
+    },
+    {
+      "target": {
+        "id": "nasa-osiris-rex-2023",
+        "text": "On September 24, 2023, OSIRIS-REx will release its sample return capsule and the capsule will land at the Utah Test and Training Range.",
+        "as_of": "2024-12-31T23:59:59Z",
+        "source_version_id": "nasa-osiris-rex-claim-2023",
+        "assessment_mode": "evidence",
+        "evidence_scope": ["nasa-osiris-rex-outcome-2024"]
+      },
+      "materials": [
+        {
+          "version_id": "nasa-osiris-rex-claim-2023",
+          "url": "https://ntrs.nasa.gov/api/citations/20230000731/downloads/Polit_SampleReturn_PE_timeline_2023-01-10.pdf",
+          "content": "NASA NTRS citation 20230000731 | distribution date February 1, 2023\nOn September 24, 2023, the OSIRIS-REx spacecraft will fly by Earth and release the SRC, which will land at the Utah Test and Training Range (UTTR).",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2023-02-01T23:59:59Z",
+          "available_at": "2023-02-01T23:59:59Z",
+          "availability_basis": "Versioned NASA NTRS citation 20230000731 has a February 1, 2023 distribution date; raw PDF identity is recorded in sources.json.",
+          "issuer": "NASA"
+        },
+        {
+          "version_id": "nasa-osiris-rex-outcome-2024",
+          "url": "https://ntrs.nasa.gov/api/citations/20240000803/downloads/OREx_ER_Entry_Targeting_Strategy_and_Man_Perf_v3.pdf",
+          "content": "NASA NTRS citation 20240000803 | distribution date February 1, 2024\nThe mission successfully completed a sequence of key events, including SRC release, and landed the capsule in the Utah Test and Training Range (UTTR) on September 24, 2023.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2024-02-01T23:59:59Z",
+          "available_at": "2024-02-01T23:59:59Z",
+          "availability_basis": "Versioned NASA NTRS citation 20240000803 has a February 1, 2024 distribution date; raw PDF identity is recorded in sources.json.",
+          "issuer": "NASA"
+        }
+      ],
+      "seed_ids": ["nasa-osiris-rex-claim-2023"],
+      "full_evidence_control": false
+    },
+    {
+      "target": {
+        "id": "sec-t1-2024",
+        "text": "On May 28, 2024, the U.S. securities market covered by the SEC amendments will move from T+2 to T+1 settlement.",
+        "as_of": "2024-12-31T23:59:59Z",
+        "source_version_id": "sec-t1-claim-2023",
+        "assessment_mode": "evidence",
+        "evidence_scope": ["sec-t1-outcome-2024"]
+      },
+      "materials": [
+        {
+          "version_id": "sec-t1-claim-2023",
+          "url": "https://www.sec.gov/files/rules/final/2023/34-96930.pdf",
+          "content": "SEC Final Rule 34-96930 | February 15, 2023\nThe Commission is adopting rule amendments to shorten the standard settlement cycle for most broker-dealer transactions from two business days after the trade date (T+2) to one business day after the trade date (T+1). The Commission is moving the compliance date to Tuesday, May 28, 2024.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2023-02-15T23:59:59Z",
+          "available_at": "2023-07-30T11:57:21Z",
+          "availability_basis": "Official SEC final-rule PDF dated February 15, 2023; exact file bytes are evidenced by a July 30, 2023 archive snapshot recorded in sources.json.",
+          "issuer": "U.S. Securities and Exchange Commission"
+        },
+        {
+          "version_id": "sec-t1-outcome-2024",
+          "url": "https://www.sec.gov/newsroom/speeches-statements/gensler-sifma-102124",
+          "content": "U.S. SEC | Modernizing Equity Markets: Even the Leader Must Keep Training | October 21, 2024\nOn May 28, 2024, we achieved this. The equities, corporate bonds, and municipal markets successfully moved to T+1.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2024-10-21T23:59:59Z",
+          "available_at": "2024-11-07T21:59:54Z",
+          "availability_basis": "Official SEC speech dated October 21, 2024; exact page bytes are evidenced by a November 7, 2024 archive snapshot recorded in sources.json.",
+          "issuer": "U.S. Securities and Exchange Commission"
+        }
+      ],
+      "seed_ids": ["sec-t1-claim-2023"],
+      "full_evidence_control": true
+    },
+    {
+      "target": {
+        "id": "lucid-production-2023",
+        "text": "Lucid will manufacture more than 10,000 vehicles during 2023.",
+        "as_of": "2024-12-31T23:59:59Z",
+        "source_version_id": "lucid-production-claim-2023",
+        "assessment_mode": "evidence",
+        "evidence_scope": ["lucid-production-outcome-2024"]
+      },
+      "materials": [
+        {
+          "version_id": "lucid-production-claim-2023",
+          "url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828023027783/q2fy23ex991.htm",
+          "content": "Lucid Q2 2023 results | SEC exhibit filed August 7, 2023\nLucid is on track to manufacture more than 10,000 vehicles in 2023.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2023-08-07T23:59:59Z",
+          "available_at": "2023-08-07T23:59:59Z",
+          "availability_basis": "Immutable SEC EDGAR accession 0001628280-23-027783, filed August 7, 2023; raw filing identity is recorded in sources.json.",
+          "issuer": "Lucid Group, Inc. (filed with the U.S. SEC)"
+        },
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828024005904/q423ex991k.htm",
+          "content": "Lucid Q4 2023 results | SEC exhibit filed February 21, 2024\nOn a full-year basis, the Company produced 8,428 vehicles.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2024-02-21T23:59:59Z",
+          "available_at": "2024-02-21T23:59:59Z",
+          "availability_basis": "Immutable SEC EDGAR accession 0001628280-24-005904, filed February 21, 2024; raw filing identity is recorded in sources.json.",
+          "issuer": "Lucid Group, Inc. (filed with the U.S. SEC)"
+        }
+      ],
+      "seed_ids": ["lucid-production-claim-2023"],
+      "full_evidence_control": true
+    },
+    {
+      "target": {
+        "id": "boeing-starliner-cft-2023",
+        "text": "Boeing will complete the Starliner crewed flight test by December 31, 2023.",
+        "as_of": "2024-12-31T23:59:59Z",
+        "source_version_id": "boeing-starliner-claim-2023",
+        "assessment_mode": "evidence",
+        "evidence_scope": ["boeing-starliner-outcome-2024"]
+      },
+      "materials": [
+        {
+          "version_id": "boeing-starliner-claim-2023",
+          "url": "https://www.sec.gov/Archives/edgar/data/12927/000001292723000007/ba-20221231.htm",
+          "content": "Boeing 2022 Form 10-K | SEC filing dated January 27, 2023\nA crewed flight test is now expected to be completed in 2023.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2023-01-27T23:59:59Z",
+          "available_at": "2023-01-27T23:59:59Z",
+          "availability_basis": "Immutable SEC EDGAR accession 0000012927-23-000007, filed January 27, 2023; raw filing identity is recorded in sources.json.",
+          "issuer": "The Boeing Company (filed with the U.S. SEC)"
+        },
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "url": "https://www.sec.gov/Archives/edgar/data/12927/000001292724000082/ba-20240930.htm",
+          "content": "Boeing Q3 2024 Form 10-Q | SEC filing dated October 23, 2024\nThe CFT launched on June 5, 2024, and docked with the ISS.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2024-10-23T23:59:59Z",
+          "available_at": "2024-10-23T23:59:59Z",
+          "availability_basis": "Immutable SEC EDGAR accession 0000012927-24-000082, filed October 23, 2024; raw filing identity is recorded in sources.json.",
+          "issuer": "The Boeing Company (filed with the U.S. SEC)"
+        }
+      ],
+      "seed_ids": ["boeing-starliner-claim-2023"],
+      "full_evidence_control": false
+    },
+    {
+      "target": {
+        "id": "wto-merchandise-trade-2023",
+        "text": "World merchandise trade volume will grow by 1.7% in 2023.",
+        "as_of": "2024-12-31T23:59:59Z",
+        "source_version_id": "wto-trade-claim-2023",
+        "assessment_mode": "evidence",
+        "evidence_scope": ["wto-trade-outcome-2024"]
+      },
+      "materials": [
+        {
+          "version_id": "wto-trade-claim-2023",
+          "url": "https://www.wto.org/english/res_e/booksp_e/trade_outlook23_e.pdf",
+          "content": "World Trade Organization | Global Trade Outlook and Statistics | April 5, 2023\nWorld merchandise trade volume is projected to grow 1.7% in 2023 before picking up to 3.2% in 2024.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2023-04-05T23:59:59Z",
+          "available_at": "2023-04-05T23:59:59Z",
+          "availability_basis": "Dated, static report PDF on the WTO official domain; raw PDF identity is recorded in sources.json.",
+          "issuer": "World Trade Organization"
+        },
+        {
+          "version_id": "wto-trade-outcome-2024",
+          "url": "https://www.wto.org/english/res_e/booksp_e/trade_outlook24_e.pdf",
+          "content": "World Trade Organization | Global Trade Outlook and Statistics | April 10, 2024\nfollowing a larger-than-expected decline of -1.2% in 2023.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2024-04-10T23:59:59Z",
+          "available_at": "2024-04-10T23:59:59Z",
+          "availability_basis": "Dated, static report PDF on the WTO official domain; raw PDF identity is recorded in sources.json.",
+          "issuer": "World Trade Organization"
+        }
+      ],
+      "seed_ids": ["wto-trade-claim-2023"],
+      "full_evidence_control": true
+    },
+    {
+      "target": {
+        "id": "noaa-atlantic-storms-2023",
+        "text": "The 2023 Atlantic hurricane season will finish with between 12 and 17 named storms, inclusive.",
+        "as_of": "2024-12-31T23:59:59Z",
+        "source_version_id": "noaa-storms-claim-2023",
+        "assessment_mode": "evidence",
+        "evidence_scope": ["noaa-storms-outcome-2024"]
+      },
+      "materials": [
+        {
+          "version_id": "noaa-storms-claim-2023",
+          "url": "https://www.noaa.gov/sites/default/files/2023-05/2023HurricaneSeasonOutlookBriefing.pdf",
+          "content": "NOAA | 2023 Hurricane Season Outlook Hill Briefing | May 25, 2023\nAll ranges of activity are given with a 70% probability. Atlantic: Near-Normal Season; 12-17 Named Storms; 5-9 Hurricanes; 1-4 Major Hurricanes; 70%-145% Median ACE. Outlooks are for overall seasonal activity. They are not a hurricane landfall forecast.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2023-05-25T20:39:56Z",
+          "available_at": "2023-05-25T20:39:56Z",
+          "availability_basis": "Dated static briefing PDF in NOAA's 2023-05 path; official Last-Modified, ETag, PDF metadata, and raw identity are recorded in sources.json.",
+          "issuer": "National Oceanic and Atmospheric Administration"
+        },
+        {
+          "version_id": "noaa-storms-outcome-2024",
+          "url": "https://repository.library.noaa.gov/view/noaa/67833/noaa_67833_DS1.pdf",
+          "content": "NOAA Institutional Repository | The 2023 Atlantic Hurricane Season | September 2024\nThe 2023 Atlantic hurricane season was above normal, producing 20 named storms, 7 hurricanes, 3 major hurricanes, and seasonal accumulated cyclone energy that exceeded the 1991-2020 average.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2024-09-01T00:00:00Z",
+          "available_at": "2024-09-30T23:59:59Z",
+          "availability_basis": "NOAA Institutional Repository record 67833, September 2024 issue; the paper was accepted July 8, 2024 and its PDF metadata and raw identity are recorded in sources.json.",
+          "issuer": "National Oceanic and Atmospheric Administration"
+        }
+      ],
+      "seed_ids": ["noaa-storms-claim-2023"],
+      "full_evidence_control": false
+    }
+  ]
+}

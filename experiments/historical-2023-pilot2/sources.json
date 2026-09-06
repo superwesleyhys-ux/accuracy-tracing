@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "historical-2023-resolved-by-2024-pilot2-v1",
+  "task": "Resolve propositions published in 2023 using only frozen official evidence published and available by the end of 2024.",
+  "claim_window": {
+    "start": "2023-01-01T00:00:00Z",
+    "end": "2023-12-31T23:59:59Z"
+  },
+  "evidence_cutoff": "2024-12-31T23:59:59Z",
+  "capture": {
+    "method": "Manual body-only transcription from immutable or versioned official primary artifacts, with exact excerpt hashes and raw-artifact identities.",
+    "retrieved_at": "2026-09-06T04:05:15Z",
+    "artifact_policy": "Raw artifacts were fetched and hashed during curation but are not vendored; the offline audit validates the committed manifest and excerpt bindings, while source URLs and version locators enable independent review.",
+    "gold_policy": "No label, verdict, or adjudication pointer appears in this inference-readable manifest."
+  },
+  "cases": [
+    {
+      "id": "virgin-galactic-commercial-service-2023",
+      "event_id": "virgin-galactic-commercial-service-start",
+      "domain": "commercial_spaceflight",
+      "modality": "forecast_resolution",
+      "claim_made_at": "2023-05-09T23:59:59Z",
+      "resolution_deadline": "2024-12-31T23:59:59Z",
+      "normalization": "Resolve whether Virgin Galactic began commercial service during April through June 2023.",
+      "materials": [
+        {
+          "version_id": "virgin-commercial-claim-2023",
+          "role": "claim",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1706946/000170694623000032/spce-20230331.htm",
+          "content_sha256": "6964cc3447a9441df863a2d27c4653999c7aa2678c525d9dc36d4e228cc33057",
+          "source_format": "sec_edgar_html",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "sec_edgar_accession",
+            "locator": "https://www.sec.gov/Archives/edgar/data/1706946/000170694623000032/0001706946-23-000032-index.htm",
+            "observed_at": "2023-05-09T23:59:59Z",
+            "identifier": "SEC accession 0001706946-23-000032, Form 10-Q",
+            "artifact_sha256": "9b2e43b6c5813a9afef3d7b1cbac90eb08d26f24fda4972281ed0dc8b1841d4d",
+            "artifact_bytes": 1076833
+          }
+        },
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "role": "outcome",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1706946/000170694624000039/spce-20231231.htm",
+          "content_sha256": "bf0c556c3895f926c0e53b6bc024d15fa4c5334b14d012f3c724f8c628712b66",
+          "source_format": "sec_edgar_html",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "sec_edgar_accession",
+            "locator": "https://www.sec.gov/Archives/edgar/data/1706946/000170694624000039/0001706946-24-000039-index.htm",
+            "observed_at": "2024-02-27T23:59:59Z",
+            "identifier": "SEC accession 0001706946-24-000039, Form 10-K",
+            "artifact_sha256": "703deb531e9b7e355dc31c11e397f01247f70278877ada8c02e9ab020041b6f7",
+            "artifact_bytes": 1956889
+          }
+        }
+      ]
+    },
+    {
+      "id": "boeing-starliner-cft-2023",
+      "event_id": "boeing-starliner-crewed-flight-test",
+      "domain": "commercial_spaceflight",
+      "modality": "forecast_resolution",
+      "claim_made_at": "2023-01-27T23:59:59Z",
+      "resolution_deadline": "2024-12-31T23:59:59Z",
+      "normalization": "Resolve whether Boeing completed the Starliner crewed flight test no later than December 31, 2023.",
+      "materials": [
+        {
+          "version_id": "boeing-starliner-claim-2023",
+          "role": "claim",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/12927/000001292723000007/ba-20221231.htm",
+          "content_sha256": "398f412d6c54d7e23006e8c6c26b8ff42204979fd5d5c9511312a80b68ce7adb",
+          "source_format": "sec_edgar_html",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "sec_edgar_accession",
+            "locator": "https://www.sec.gov/Archives/edgar/data/12927/000001292723000007/0000012927-23-000007-index.htm",
+            "observed_at": "2023-01-27T23:59:59Z",
+            "identifier": "SEC accession 0000012927-23-000007, Form 10-K",
+            "artifact_sha256": "1ae4a90bf95ab690394210b6d9d8695cf2fc3c35c599b35c7e0fc43ffb1b4440",
+            "artifact_bytes": 4270814
+          }
+        },
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "role": "outcome",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/12927/000001292724000082/ba-20240930.htm",
+          "content_sha256": "1ec51c987ab454b970f38d308e5278e2c162994ba2338e4fa9e769dfa162df96",
+          "source_format": "sec_edgar_html",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "sec_edgar_accession",
+            "locator": "https://www.sec.gov/Archives/edgar/data/12927/000001292724000082/0000012927-24-000082-index.htm",
+            "observed_at": "2024-10-23T23:59:59Z",
+            "identifier": "SEC accession 0000012927-24-000082, Form 10-Q",
+            "artifact_sha256": "4a062538d6dee5c3133178e93a73e08afac7a4e2c5b8f01af0af357094c965f1",
+            "artifact_bytes": 1998711
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1371 @@
+{
+  "schema_version": "0.3",
+  "scope": "plugin-supplied semantic analyses; no built-in truth oracle",
+  "target": {
+    "id": "boeing-starliner-cft-2023",
+    "text": "Boeing will complete the Starliner crewed flight test by December 31, 2023.",
+    "as_of": "2024-12-31T23:59:59Z",
+    "source_version_id": "boeing-starliner-claim-2023",
+    "assessment_mode": "evidence",
+    "evidence_scope": [
+      "boeing-starliner-outcome-2024"
+    ]
+  },
+  "config": {
+    "max_rounds": 5,
+    "max_documents": 18,
+    "max_decomposition_calls": 18
+  },
+  "provenance_status": "original_material_located",
+  "fact_status": "contradicted",
+  "stop_reason": "complete",
+  "usage": {
+    "rounds": 2,
+    "documents": 2,
+    "unique_versions": 2,
+    "decomposition_calls": 2,
+    "verification_calls": 2
+  },
+  "decision_status": "contradicted",
+  "assessments": {
+    "evidence": {
+      "raw_verdict": "contradicted",
+      "decision": "contradicted",
+      "blocking_gap_ids": []
+    },
+    "world": {
+      "raw_verdict": "contradicted",
+      "decision": "contradicted",
+      "blocking_gap_ids": []
+    }
+  },
+  "assessment_valid": true,
+  "materials": [
+    {
+      "version_id": "boeing-starliner-claim-2023",
+      "url": "https://www.sec.gov/Archives/edgar/data/12927/000001292723000007/ba-20221231.htm",
+      "content": "Boeing 2022 Form 10-K | SEC filing dated January 27, 2023\nA crewed flight test is now expected to be completed in 2023.",
+      "retrieved_at": "2026-09-06T04:05:15Z",
+      "published_at": "2023-01-27T23:59:59Z",
+      "available_at": "2023-01-27T23:59:59Z",
+      "availability_basis": "Immutable SEC EDGAR accession 0000012927-23-000007, filed January 27, 2023; raw filing identity is recorded in sources.json.",
+      "issuer": "The Boeing Company (filed with the U.S. SEC)"
+    },
+    {
+      "version_id": "boeing-starliner-outcome-2024",
+      "url": "https://www.sec.gov/Archives/edgar/data/12927/000001292724000082/ba-20240930.htm",
+      "content": "Boeing Q3 2024 Form 10-Q | SEC filing dated October 23, 2024\nCommercial Crew\nNational Aeronautics and Space Administration has contracted us to design and build the CST-100 Starliner spacecraft to transport crews to the International Space Station (ISS). In the second quarter of 2022, we successfully completed the uncrewed Orbital Flight Test. During 2023, we increased the reach-forward loss by $288 primarily as a result of delaying the Crewed Flight Test (CFT) following notification by a parachute supplier of an issue identified through testing. The CFT launched on June 5, 2024, and docked with the ISS.",
+      "retrieved_at": "2026-09-06T04:05:15Z",
+      "published_at": "2024-10-23T23:59:59Z",
+      "available_at": "2024-10-23T23:59:59Z",
+      "availability_basis": "Immutable SEC EDGAR accession 0000012927-24-000082, filed October 23, 2024; raw filing identity is recorded in sources.json.",
+      "issuer": "The Boeing Company (filed with the U.S. SEC)"
+    }
+  ],
+  "eligible_version_ids": [
+    "boeing-starliner-claim-2023",
+    "boeing-starliner-outcome-2024"
+  ],
+  "observations": [
+    {
+      "version_id": "boeing-starliner-claim-2023",
+      "retrieved_at": "2026-09-06T04:05:15Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": [],
+      "task_ids": []
+    },
+    {
+      "version_id": "boeing-starliner-outcome-2024",
+      "retrieved_at": "2026-09-06T04:05:15Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": [],
+      "task_ids": [
+        "evidence-scope-outcome-missing"
+      ]
+    }
+  ],
+  "retrieval_feedback": [
+    {
+      "round": 2,
+      "gap_id": "evidence-scope-outcome-missing",
+      "action": "search",
+      "locator": "Retrieve the designated snapshot boeing-starliner-outcome-2024",
+      "status": "returned",
+      "reason": "matching snapshots returned",
+      "version_ids": [
+        "boeing-starliner-outcome-2024"
+      ]
+    }
+  ],
+  "analyses": {
+    "boeing-starliner-claim-2023": {
+      "fragments": [
+        {
+          "id": "cft-completion-forecast",
+          "text": "A crewed flight test is expected to be completed in 2023.",
+          "span": {
+            "version_id": "boeing-starliner-claim-2023",
+            "start": 58,
+            "end": 119,
+            "quote": "A crewed flight test is now expected to be completed in 2023."
+          },
+          "parent_id": "boeing-starliner-cft-2023",
+          "qualifiers": [
+            "This is a contemporaneous expectation, not a guarantee or a report of completion.",
+            "The sentence does not explicitly identify Starliner."
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "boeing-starliner-claim-2023",
+              "start": 79,
+              "end": 94,
+              "quote": "is now expected"
+            }
+          ]
+        },
+        {
+          "id": "cft-forecast-year",
+          "text": "The expected completion year is 2023.",
+          "span": {
+            "version_id": "boeing-starliner-claim-2023",
+            "start": 101,
+            "end": 118,
+            "quote": "completed in 2023"
+          },
+          "parent_id": "cft-completion-forecast",
+          "qualifiers": [
+            "The source specifies a calendar year, not an explicit December 31 deadline."
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "boeing-starliner-claim-2023",
+              "start": 111,
+              "end": 118,
+              "quote": "in 2023"
+            }
+          ]
+        }
+      ],
+      "relations": [],
+      "gaps": [
+        {
+          "id": "evidence-scope-outcome-missing",
+          "question": "What does the designated evidence-scope snapshot say about completion by the target deadline?",
+          "stage": "verification",
+          "dimension": "evidence",
+          "blocking": false,
+          "target_id": "boeing-starliner-cft-2023",
+          "basis": [
+            {
+              "version_id": "boeing-starliner-claim-2023",
+              "start": 58,
+              "end": 119,
+              "quote": "A crewed flight test is now expected to be completed in 2023."
+            }
+          ],
+          "decision_impact": "The supplied forecast cannot substitute for the absent evidence-scope document; the evidence assessment remains undetermined.",
+          "action": "search",
+          "locator": "Retrieve the designated snapshot boeing-starliner-outcome-2024",
+          "probe_id": null
+        }
+      ],
+      "resolutions": [
+        {
+          "gap_id": "origin:boeing-starliner-cft-2023",
+          "basis": [
+            {
+              "version_id": "boeing-starliner-claim-2023",
+              "start": 0,
+              "end": 57,
+              "quote": "Boeing 2022 Form 10-K | SEC filing dated January 27, 2023"
+            },
+            {
+              "version_id": "boeing-starliner-claim-2023",
+              "start": 58,
+              "end": 119,
+              "quote": "A crewed flight test is now expected to be completed in 2023."
+            }
+          ],
+          "rationale": "The snapshot identifies Boeing's filing as the producing record for the qualified forecast. No upstream citation is visible. This establishes the forecast's recorded origin, not the target's truth or its stronger certainty."
+        }
+      ],
+      "origins": [
+        {
+          "target_id": "boeing-starliner-cft-2023",
+          "version_id": "boeing-starliner-claim-2023",
+          "basis": [
+            {
+              "version_id": "boeing-starliner-claim-2023",
+              "start": 0,
+              "end": 57,
+              "quote": "Boeing 2022 Form 10-K | SEC filing dated January 27, 2023"
+            },
+            {
+              "version_id": "boeing-starliner-claim-2023",
+              "start": 58,
+              "end": 119,
+              "quote": "A crewed flight test is now expected to be completed in 2023."
+            }
+          ],
+          "material_kind": "original_record",
+          "rationale": "The record identifies itself as Boeing's Form 10-K and contains the completion expectation."
+        }
+      ],
+      "notes": "Evidence assessment: undetermined because boeing-starliner-outcome-2024 is not supplied. The current source is outside the designated evidence scope. World verification: unknown; no world-authentication requirement is imposed.",
+      "revisit_versions": []
+    },
+    "boeing-starliner-outcome-2024": {
+      "fragments": [
+        {
+          "id": "starliner-contract-scope",
+          "text": "NASA contracted Boeing to design and build Starliner to transport crews to the ISS.",
+          "span": {
+            "version_id": "boeing-starliner-outcome-2024",
+            "start": 77,
+            "end": 254,
+            "quote": "National Aeronautics and Space Administration has contracted us to design and build the CST-100 Starliner spacecraft to transport crews to the International Space Station (ISS)."
+          },
+          "parent_id": "boeing-starliner-cft-2023",
+          "qualifiers": [],
+          "qualifier_spans": []
+        },
+        {
+          "id": "uncrewed-test-completion",
+          "text": "Boeing reports completing the uncrewed Orbital Flight Test in the second quarter of 2022.",
+          "span": {
+            "version_id": "boeing-starliner-outcome-2024",
+            "start": 255,
+            "end": 345,
+            "quote": "In the second quarter of 2022, we successfully completed the uncrewed Orbital Flight Test."
+          },
+          "parent_id": "boeing-starliner-cft-2023",
+          "qualifiers": [
+            "This completion concerns the uncrewed test, not the target's crewed test."
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "boeing-starliner-outcome-2024",
+              "start": 255,
+              "end": 285,
+              "quote": "In the second quarter of 2022,"
+            },
+            {
+              "version_id": "boeing-starliner-outcome-2024",
+              "start": 316,
+              "end": 344,
+              "quote": "uncrewed Orbital Flight Test"
+            }
+          ]
+        },
+        {
+          "id": "cft-delay-and-loss",
+          "text": "During 2023, Boeing increased its reach-forward loss by $288 primarily because of delaying the CFT following a parachute supplier's notification of a testing issue.",
+          "span": {
+            "version_id": "boeing-starliner-outcome-2024",
+            "start": 346,
+            "end": 552,
+            "quote": "During 2023, we increased the reach-forward loss by $288 primarily as a result of delaying the Crewed Flight Test (CFT) following notification by a parachute supplier of an issue identified through testing."
+          },
+          "parent_id": "boeing-starliner-cft-2023",
+          "qualifiers": [
+            "The snapshot gives $288 without a scaling unit.",
+            "The delay is described as the primary, not necessarily sole, reason for the increase."
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "boeing-starliner-outcome-2024",
+              "start": 346,
+              "end": 358,
+              "quote": "During 2023,"
+            },
+            {
+              "version_id": "boeing-starliner-outcome-2024",
+              "start": 398,
+              "end": 427,
+              "quote": "$288 primarily as a result of"
+            },
+            {
+              "version_id": "boeing-starliner-outcome-2024",
+              "start": 466,
+              "end": 552,
+              "quote": "following notification by a parachute supplier of an issue identified through testing."
+            }
+          ]
+        },
+        {
+          "id": "cft-launch-date",
+          "text": "The CFT launched on June 5, 2024.",
+          "span": {
+            "version_id": "boeing-starliner-outcome-2024",
+            "start": 553,
+            "end": 586,
+            "quote": "The CFT launched on June 5, 2024,"
+          },
+          "parent_id": "boeing-starliner-cft-2023",
+          "qualifiers": [
+            "The reported launch is after the target's December 31, 2023 completion deadline.",
+            "Launch is not a statement of completion."
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "boeing-starliner-outcome-2024",
+              "start": 561,
+              "end": 585,
+              "quote": "launched on June 5, 2024"
+            }
+          ]
+        },
+        {
+          "id": "cft-docking",
+          "text": "The CFT docked with the ISS.",
+          "span": {
+            "version_id": "boeing-starliner-outcome-2024",
+            "start": 553,
+            "end": 611,
+            "quote": "The CFT launched on June 5, 2024, and docked with the ISS."
+          },
+          "parent_id": "boeing-starliner-cft-2023",
+          "qualifiers": [
+            "No separate docking date or crewed-test completion date is supplied."
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "boeing-starliner-outcome-2024",
+              "start": 591,
+              "end": 611,
+              "quote": "docked with the ISS."
+            }
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "id": "outcome-contradicts-2023-completion",
+          "from_version": "boeing-starliner-outcome-2024",
+          "to_version": "boeing-starliner-claim-2023",
+          "kind": "contradicts",
+          "status": "inferred",
+          "basis": [
+            {
+              "version_id": "boeing-starliner-outcome-2024",
+              "start": 553,
+              "end": 611,
+              "quote": "The CFT launched on June 5, 2024, and docked with the ISS."
+            }
+          ],
+          "rationale": "The reported June 2024 launch implies that this flight test was not completed by December 31, 2023. This contradicts the unchanged target's timing, rather than denying that the earlier record expressed an expectation.",
+          "upstream_locator": null
+        }
+      ],
+      "gaps": [],
+      "resolutions": [
+        {
+          "gap_id": "evidence-scope-outcome-missing",
+          "basis": [
+            {
+              "version_id": "boeing-starliner-outcome-2024",
+              "start": 553,
+              "end": 611,
+              "quote": "The CFT launched on June 5, 2024, and docked with the ISS."
+            }
+          ],
+          "rationale": "The designated evidence-scope snapshot is now supplied. Its launch date contradicts completion by the target deadline; world authentication is not required to resolve this evidence-only question."
+        }
+      ],
+      "origins": [
+        {
+          "target_id": "boeing-starliner-cft-2023",
+          "version_id": "boeing-starliner-outcome-2024",
+          "basis": [
+            {
+              "version_id": "boeing-starliner-outcome-2024",
+              "start": 0,
+              "end": 60,
+              "quote": "Boeing Q3 2024 Form 10-Q | SEC filing dated October 23, 2024"
+            }
+          ],
+          "material_kind": "original_record",
+          "rationale": "The visible heading identifies Boeing's own quarterly filing, an original corporate reporting record. That publishing role does not independently establish truth."
+        }
+      ],
+      "notes": "Evidence assessment: contradicted by the designated snapshot through temporal inference, not an explicit negation. World verification: unknown; no independent verification is supplied. No visible upstream citation is present. The later outcome does not require reinterpreting the earlier forecast.",
+      "revisit_versions": []
+    }
+  },
+  "analysis_history": [
+    {
+      "revision": 1,
+      "round": 1,
+      "version_id": "boeing-starliner-claim-2023",
+      "duplicate": false,
+      "revisit": false,
+      "retrieval_receipt": {
+        "version_id": "boeing-starliner-claim-2023",
+        "task_ids": [],
+        "revisit": false,
+        "tasks": [],
+        "attribution": "envelope",
+        "duplicate": false,
+        "eligible": true
+      },
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "cft-completion-forecast",
+            "text": "A crewed flight test is expected to be completed in 2023.",
+            "span": {
+              "version_id": "boeing-starliner-claim-2023",
+              "start": 58,
+              "end": 119,
+              "quote": "A crewed flight test is now expected to be completed in 2023."
+            },
+            "parent_id": "boeing-starliner-cft-2023",
+            "qualifiers": [
+              "This is a contemporaneous expectation, not a guarantee or a report of completion.",
+              "The sentence does not explicitly identify Starliner."
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "boeing-starliner-claim-2023",
+                "start": 79,
+                "end": 94,
+                "quote": "is now expected"
+              }
+            ]
+          },
+          {
+            "id": "cft-forecast-year",
+            "text": "The expected completion year is 2023.",
+            "span": {
+              "version_id": "boeing-starliner-claim-2023",
+              "start": 101,
+              "end": 118,
+              "quote": "completed in 2023"
+            },
+            "parent_id": "cft-completion-forecast",
+            "qualifiers": [
+              "The source specifies a calendar year, not an explicit December 31 deadline."
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "boeing-starliner-claim-2023",
+                "start": 111,
+                "end": 118,
+                "quote": "in 2023"
+              }
+            ]
+          }
+        ],
+        "relations": [],
+        "gaps": [
+          {
+            "id": "evidence-scope-outcome-missing",
+            "question": "What does the designated evidence-scope snapshot say about completion by the target deadline?",
+            "stage": "verification",
+            "dimension": "evidence",
+            "blocking": false,
+            "target_id": "boeing-starliner-cft-2023",
+            "basis": [
+              {
+                "version_id": "boeing-starliner-claim-2023",
+                "start": 58,
+                "end": 119,
+                "quote": "A crewed flight test is now expected to be completed in 2023."
+              }
+            ],
+            "decision_impact": "The supplied forecast cannot substitute for the absent evidence-scope document; the evidence assessment remains undetermined.",
+            "action": "search",
+            "locator": "Retrieve the designated snapshot boeing-starliner-outcome-2024",
+            "probe_id": null
+          }
+        ],
+        "resolutions": [
+          {
+            "gap_id": "origin:boeing-starliner-cft-2023",
+            "basis": [
+              {
+                "version_id": "boeing-starliner-claim-2023",
+                "start": 0,
+                "end": 57,
+                "quote": "Boeing 2022 Form 10-K | SEC filing dated January 27, 2023"
+              },
+              {
+                "version_id": "boeing-starliner-claim-2023",
+                "start": 58,
+                "end": 119,
+                "quote": "A crewed flight test is now expected to be completed in 2023."
+              }
+            ],
+            "rationale": "The snapshot identifies Boeing's filing as the producing record for the qualified forecast. No upstream citation is visible. This establishes the forecast's recorded origin, not the target's truth or its stronger certainty."
+          }
+        ],
+        "origins": [
+          {
+            "target_id": "boeing-starliner-cft-2023",
+            "version_id": "boeing-starliner-claim-2023",
+            "basis": [
+              {
+                "version_id": "boeing-starliner-claim-2023",
+                "start": 0,
+                "end": 57,
+                "quote": "Boeing 2022 Form 10-K | SEC filing dated January 27, 2023"
+              },
+              {
+                "version_id": "boeing-starliner-claim-2023",
+                "start": 58,
+                "end": 119,
+                "quote": "A crewed flight test is now expected to be completed in 2023."
+              }
+            ],
+            "material_kind": "original_record",
+            "rationale": "The record identifies itself as Boeing's Form 10-K and contains the completion expectation."
+          }
+        ],
+        "notes": "Evidence assessment: undetermined because boeing-starliner-outcome-2024 is not supplied. The current source is outside the designated evidence scope. World verification: unknown; no world-authentication requirement is imposed.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    },
+    {
+      "revision": 2,
+      "round": 2,
+      "version_id": "boeing-starliner-outcome-2024",
+      "duplicate": false,
+      "revisit": false,
+      "retrieval_receipt": {
+        "version_id": "boeing-starliner-outcome-2024",
+        "task_ids": [
+          "evidence-scope-outcome-missing"
+        ],
+        "revisit": false,
+        "tasks": [
+          {
+            "id": "evidence-scope-outcome-missing",
+            "question": "What does the designated evidence-scope snapshot say about completion by the target deadline?",
+            "stage": "verification",
+            "dimension": "evidence",
+            "blocking": false,
+            "target_id": "boeing-starliner-cft-2023",
+            "basis": [
+              {
+                "version_id": "boeing-starliner-claim-2023",
+                "start": 58,
+                "end": 119,
+                "quote": "A crewed flight test is now expected to be completed in 2023."
+              }
+            ],
+            "decision_impact": "The supplied forecast cannot substitute for the absent evidence-scope document; the evidence assessment remains undetermined.",
+            "action": "search",
+            "locator": "Retrieve the designated snapshot boeing-starliner-outcome-2024",
+            "probe_id": null
+          }
+        ],
+        "attribution": "envelope",
+        "duplicate": false,
+        "eligible": true
+      },
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "starliner-contract-scope",
+            "text": "NASA contracted Boeing to design and build Starliner to transport crews to the ISS.",
+            "span": {
+              "version_id": "boeing-starliner-outcome-2024",
+              "start": 77,
+              "end": 254,
+              "quote": "National Aeronautics and Space Administration has contracted us to design and build the CST-100 Starliner spacecraft to transport crews to the International Space Station (ISS)."
+            },
+            "parent_id": "boeing-starliner-cft-2023",
+            "qualifiers": [],
+            "qualifier_spans": []
+          },
+          {
+            "id": "uncrewed-test-completion",
+            "text": "Boeing reports completing the uncrewed Orbital Flight Test in the second quarter of 2022.",
+            "span": {
+              "version_id": "boeing-starliner-outcome-2024",
+              "start": 255,
+              "end": 345,
+              "quote": "In the second quarter of 2022, we successfully completed the uncrewed Orbital Flight Test."
+            },
+            "parent_id": "boeing-starliner-cft-2023",
+            "qualifiers": [
+              "This completion concerns the uncrewed test, not the target's crewed test."
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "boeing-starliner-outcome-2024",
+                "start": 255,
+                "end": 285,
+                "quote": "In the second quarter of 2022,"
+              },
+              {
+                "version_id": "boeing-starliner-outcome-2024",
+                "start": 316,
+                "end": 344,
+                "quote": "uncrewed Orbital Flight Test"
+              }
+            ]
+          },
+          {
+            "id": "cft-delay-and-loss",
+            "text": "During 2023, Boeing increased its reach-forward loss by $288 primarily because of delaying the CFT following a parachute supplier's notification of a testing issue.",
+            "span": {
+              "version_id": "boeing-starliner-outcome-2024",
+              "start": 346,
+              "end": 552,
+              "quote": "During 2023, we increased the reach-forward loss by $288 primarily as a result of delaying the Crewed Flight Test (CFT) following notification by a parachute supplier of an issue identified through testing."
+            },
+            "parent_id": "boeing-starliner-cft-2023",
+            "qualifiers": [
+              "The snapshot gives $288 without a scaling unit.",
+              "The delay is described as the primary, not necessarily sole, reason for the increase."
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "boeing-starliner-outcome-2024",
+                "start": 346,
+                "end": 358,
+                "quote": "During 2023,"
+              },
+              {
+                "version_id": "boeing-starliner-outcome-2024",
+                "start": 398,
+                "end": 427,
+                "quote": "$288 primarily as a result of"
+              },
+              {
+                "version_id": "boeing-starliner-outcome-2024",
+                "start": 466,
+                "end": 552,
+                "quote": "following notification by a parachute supplier of an issue identified through testing."
+              }
+            ]
+          },
+          {
+            "id": "cft-launch-date",
+            "text": "The CFT launched on June 5, 2024.",
+            "span": {
+              "version_id": "boeing-starliner-outcome-2024",
+              "start": 553,
+              "end": 586,
+              "quote": "The CFT launched on June 5, 2024,"
+            },
+            "parent_id": "boeing-starliner-cft-2023",
+            "qualifiers": [
+              "The reported launch is after the target's December 31, 2023 completion deadline.",
+              "Launch is not a statement of completion."
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "boeing-starliner-outcome-2024",
+                "start": 561,
+                "end": 585,
+                "quote": "launched on June 5, 2024"
+              }
+            ]
+          },
+          {
+            "id": "cft-docking",
+            "text": "The CFT docked with the ISS.",
+            "span": {
+              "version_id": "boeing-starliner-outcome-2024",
+              "start": 553,
+              "end": 611,
+              "quote": "The CFT launched on June 5, 2024, and docked with the ISS."
+            },
+            "parent_id": "boeing-starliner-cft-2023",
+            "qualifiers": [
+              "No separate docking date or crewed-test completion date is supplied."
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "boeing-starliner-outcome-2024",
+                "start": 591,
+                "end": 611,
+                "quote": "docked with the ISS."
+              }
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "outcome-contradicts-2023-completion",
+            "from_version": "boeing-starliner-outcome-2024",
+            "to_version": "boeing-starliner-claim-2023",
+            "kind": "contradicts",
+            "status": "inferred",
+            "basis": [
+              {
+                "version_id": "boeing-starliner-outcome-2024",
+                "start": 553,
+                "end": 611,
+                "quote": "The CFT launched on June 5, 2024, and docked with the ISS."
+              }
+            ],
+            "rationale": "The reported June 2024 launch implies that this flight test was not completed by December 31, 2023. This contradicts the unchanged target's timing, rather than denying that the earlier record expressed an expectation.",
+            "upstream_locator": null
+          }
+        ],
+        "gaps": [],
+        "resolutions": [
+          {
+            "gap_id": "evidence-scope-outcome-missing",
+            "basis": [
+              {
+                "version_id": "boeing-starliner-outcome-2024",
+                "start": 553,
+                "end": 611,
+                "quote": "The CFT launched on June 5, 2024, and docked with the ISS."
+              }
+            ],
+            "rationale": "The designated evidence-scope snapshot is now supplied. Its launch date contradicts completion by the target deadline; world authentication is not required to resolve this evidence-only question."
+          }
+        ],
+        "origins": [
+          {
+            "target_id": "boeing-starliner-cft-2023",
+            "version_id": "boeing-starliner-outcome-2024",
+            "basis": [
+              {
+                "version_id": "boeing-starliner-outcome-2024",
+                "start": 0,
+                "end": 60,
+                "quote": "Boeing Q3 2024 Form 10-Q | SEC filing dated October 23, 2024"
+              }
+            ],
+            "material_kind": "original_record",
+            "rationale": "The visible heading identifies Boeing's own quarterly filing, an original corporate reporting record. That publishing role does not independently establish truth."
+          }
+        ],
+        "notes": "Evidence assessment: contradicted by the designated snapshot through temporal inference, not an explicit negation. World verification: unknown; no independent verification is supplied. No visible upstream citation is present. The later outcome does not require reinterpreting the earlier forecast.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    }
+  ],
+  "fragments": [
+    {
+      "id": "cft-completion-forecast",
+      "text": "A crewed flight test is expected to be completed in 2023.",
+      "span": {
+        "version_id": "boeing-starliner-claim-2023",
+        "start": 58,
+        "end": 119,
+        "quote": "A crewed flight test is now expected to be completed in 2023."
+      },
+      "parent_id": "boeing-starliner-cft-2023",
+      "qualifiers": [
+        "This is a contemporaneous expectation, not a guarantee or a report of completion.",
+        "The sentence does not explicitly identify Starliner."
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "boeing-starliner-claim-2023",
+          "start": 79,
+          "end": 94,
+          "quote": "is now expected"
+        }
+      ]
+    },
+    {
+      "id": "cft-forecast-year",
+      "text": "The expected completion year is 2023.",
+      "span": {
+        "version_id": "boeing-starliner-claim-2023",
+        "start": 101,
+        "end": 118,
+        "quote": "completed in 2023"
+      },
+      "parent_id": "cft-completion-forecast",
+      "qualifiers": [
+        "The source specifies a calendar year, not an explicit December 31 deadline."
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "boeing-starliner-claim-2023",
+          "start": 111,
+          "end": 118,
+          "quote": "in 2023"
+        }
+      ]
+    },
+    {
+      "id": "starliner-contract-scope",
+      "text": "NASA contracted Boeing to design and build Starliner to transport crews to the ISS.",
+      "span": {
+        "version_id": "boeing-starliner-outcome-2024",
+        "start": 77,
+        "end": 254,
+        "quote": "National Aeronautics and Space Administration has contracted us to design and build the CST-100 Starliner spacecraft to transport crews to the International Space Station (ISS)."
+      },
+      "parent_id": "boeing-starliner-cft-2023",
+      "qualifiers": [],
+      "qualifier_spans": []
+    },
+    {
+      "id": "uncrewed-test-completion",
+      "text": "Boeing reports completing the uncrewed Orbital Flight Test in the second quarter of 2022.",
+      "span": {
+        "version_id": "boeing-starliner-outcome-2024",
+        "start": 255,
+        "end": 345,
+        "quote": "In the second quarter of 2022, we successfully completed the uncrewed Orbital Flight Test."
+      },
+      "parent_id": "boeing-starliner-cft-2023",
+      "qualifiers": [
+        "This completion concerns the uncrewed test, not the target's crewed test."
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "start": 255,
+          "end": 285,
+          "quote": "In the second quarter of 2022,"
+        },
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "start": 316,
+          "end": 344,
+          "quote": "uncrewed Orbital Flight Test"
+        }
+      ]
+    },
+    {
+      "id": "cft-delay-and-loss",
+      "text": "During 2023, Boeing increased its reach-forward loss by $288 primarily because of delaying the CFT following a parachute supplier's notification of a testing issue.",
+      "span": {
+        "version_id": "boeing-starliner-outcome-2024",
+        "start": 346,
+        "end": 552,
+        "quote": "During 2023, we increased the reach-forward loss by $288 primarily as a result of delaying the Crewed Flight Test (CFT) following notification by a parachute supplier of an issue identified through testing."
+      },
+      "parent_id": "boeing-starliner-cft-2023",
+      "qualifiers": [
+        "The snapshot gives $288 without a scaling unit.",
+        "The delay is described as the primary, not necessarily sole, reason for the increase."
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "start": 346,
+          "end": 358,
+          "quote": "During 2023,"
+        },
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "start": 398,
+          "end": 427,
+          "quote": "$288 primarily as a result of"
+        },
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "start": 466,
+          "end": 552,
+          "quote": "following notification by a parachute supplier of an issue identified through testing."
+        }
+      ]
+    },
+    {
+      "id": "cft-launch-date",
+      "text": "The CFT launched on June 5, 2024.",
+      "span": {
+        "version_id": "boeing-starliner-outcome-2024",
+        "start": 553,
+        "end": 586,
+        "quote": "The CFT launched on June 5, 2024,"
+      },
+      "parent_id": "boeing-starliner-cft-2023",
+      "qualifiers": [
+        "The reported launch is after the target's December 31, 2023 completion deadline.",
+        "Launch is not a statement of completion."
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "start": 561,
+          "end": 585,
+          "quote": "launched on June 5, 2024"
+        }
+      ]
+    },
+    {
+      "id": "cft-docking",
+      "text": "The CFT docked with the ISS.",
+      "span": {
+        "version_id": "boeing-starliner-outcome-2024",
+        "start": 553,
+        "end": 611,
+        "quote": "The CFT launched on June 5, 2024, and docked with the ISS."
+      },
+      "parent_id": "boeing-starliner-cft-2023",
+      "qualifiers": [
+        "No separate docking date or crewed-test completion date is supplied."
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "start": 591,
+          "end": 611,
+          "quote": "docked with the ISS."
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "outcome-contradicts-2023-completion",
+      "from_version": "boeing-starliner-outcome-2024",
+      "to_version": "boeing-starliner-claim-2023",
+      "kind": "contradicts",
+      "status": "inferred",
+      "basis": [
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "start": 553,
+          "end": 611,
+          "quote": "The CFT launched on June 5, 2024, and docked with the ISS."
+        }
+      ],
+      "rationale": "The reported June 2024 launch implies that this flight test was not completed by December 31, 2023. This contradicts the unchanged target's timing, rather than denying that the earlier record expressed an expectation.",
+      "upstream_locator": null
+    }
+  ],
+  "origins": [
+    {
+      "target_id": "boeing-starliner-cft-2023",
+      "version_id": "boeing-starliner-claim-2023",
+      "basis": [
+        {
+          "version_id": "boeing-starliner-claim-2023",
+          "start": 0,
+          "end": 57,
+          "quote": "Boeing 2022 Form 10-K | SEC filing dated January 27, 2023"
+        },
+        {
+          "version_id": "boeing-starliner-claim-2023",
+          "start": 58,
+          "end": 119,
+          "quote": "A crewed flight test is now expected to be completed in 2023."
+        }
+      ],
+      "material_kind": "original_record",
+      "rationale": "The record identifies itself as Boeing's Form 10-K and contains the completion expectation."
+    },
+    {
+      "target_id": "boeing-starliner-cft-2023",
+      "version_id": "boeing-starliner-outcome-2024",
+      "basis": [
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "start": 0,
+          "end": 60,
+          "quote": "Boeing Q3 2024 Form 10-Q | SEC filing dated October 23, 2024"
+        }
+      ],
+      "material_kind": "original_record",
+      "rationale": "The visible heading identifies Boeing's own quarterly filing, an original corporate reporting record. That publishing role does not independently establish truth."
+    }
+  ],
+  "gaps": [],
+  "resolutions": [
+    {
+      "gap_id": "evidence-scope-outcome-missing",
+      "basis": [
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "start": 553,
+          "end": 611,
+          "quote": "The CFT launched on June 5, 2024, and docked with the ISS."
+        }
+      ],
+      "rationale": "The designated evidence-scope snapshot is now supplied. Its launch date contradicts completion by the target deadline; world authentication is not required to resolve this evidence-only question."
+    },
+    {
+      "gap_id": "origin:boeing-starliner-cft-2023",
+      "basis": [
+        {
+          "version_id": "boeing-starliner-claim-2023",
+          "start": 0,
+          "end": 57,
+          "quote": "Boeing 2022 Form 10-K | SEC filing dated January 27, 2023"
+        },
+        {
+          "version_id": "boeing-starliner-claim-2023",
+          "start": 58,
+          "end": 119,
+          "quote": "A crewed flight test is now expected to be completed in 2023."
+        }
+      ],
+      "rationale": "The snapshot identifies Boeing's filing as the producing record for the qualified forecast. No upstream citation is visible. This establishes the forecast's recorded origin, not the target's truth or its stronger certainty."
+    }
+  ],
+  "verification_history": [
+    {
+      "round": 1,
+      "verdict": "unresolved",
+      "basis": [],
+      "rationale": "The designated evidence-scope snapshot, boeing-starliner-outcome-2024, is unavailable. The visible forecast is outside that scope and cannot substitute for it. Retrieve the missing snapshot through the existing verification gap.",
+      "gaps": [],
+      "resolutions": [],
+      "evidence_verdict": "unresolved",
+      "world_verdict": "unresolved",
+      "world_basis": [],
+      "world_rationale": "The supplied filing states an expectation, not an actual completion outcome. No supplied evidence independently establishes whether the crewed flight test was completed by December 31, 2023, as assessed at December 31, 2024."
+    },
+    {
+      "round": 2,
+      "verdict": "contradicted",
+      "basis": [
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "start": 553,
+          "end": 611,
+          "quote": "The CFT launched on June 5, 2024, and docked with the ISS."
+        }
+      ],
+      "rationale": "The scoped record places the crewed flight test's launch in June 2024, after the December 31, 2023 completion deadline. This contradicts the unchanged target; a flight test cannot be completed before it launches.",
+      "gaps": [],
+      "resolutions": [],
+      "evidence_verdict": "contradicted",
+      "world_verdict": "contradicted",
+      "world_basis": [
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "start": 553,
+          "end": 611,
+          "quote": "The CFT launched on June 5, 2024, and docked with the ISS."
+        }
+      ],
+      "world_rationale": "The supplied snapshot is identified as Boeing's original SEC filing through an immutable EDGAR accession, available before the as-of date. Its retrospective report of a June 2024 launch establishes that completion did not occur in 2023. This assessment relies on that primary record, not agreement between copies."
+    }
+  ],
+  "operations": [
+    {
+      "sequence": 1,
+      "round": 1,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "origin:boeing-starliner-cft-2023",
+          "question": "Find the producing record and evidenced lineage for: Boeing will complete the Starliner crewed flight test by December 31, 2023.",
+          "stage": "provenance",
+          "dimension": "auto",
+          "blocking": true,
+          "target_id": null,
+          "basis": [],
+          "decision_impact": "",
+          "action": "search",
+          "locator": null,
+          "probe_id": null
+        }
+      ],
+      "limit": 18
+    },
+    {
+      "sequence": 2,
+      "round": 1,
+      "action": "retrieval_attribution_validated",
+      "version_id": "boeing-starliner-claim-2023",
+      "task_ids": [],
+      "attribution": "envelope"
+    },
+    {
+      "sequence": 3,
+      "round": 1,
+      "action": "snapshot_saved",
+      "version_id": "boeing-starliner-claim-2023",
+      "sha256": "4afad4c4031c844e65b15fe2ca9cdd2f434c0b86b1d55689674fbb43fb5ec9fb",
+      "eligible": true
+    },
+    {
+      "sequence": 4,
+      "round": 1,
+      "action": "decompose_started",
+      "version_id": "boeing-starliner-claim-2023",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 5,
+      "round": 1,
+      "action": "decompose_completed",
+      "version_id": "boeing-starliner-claim-2023",
+      "revision": 1
+    },
+    {
+      "sequence": 6,
+      "round": 1,
+      "action": "alignment_checked",
+      "version_id": "boeing-starliner-claim-2023",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 7,
+      "round": 1,
+      "action": "graph_updated",
+      "version_id": "boeing-starliner-claim-2023",
+      "open_gaps": 1
+    },
+    {
+      "sequence": 8,
+      "round": 1,
+      "action": "verification_started"
+    },
+    {
+      "sequence": 9,
+      "round": 1,
+      "action": "verification_completed",
+      "verdict": "unresolved",
+      "decision": "unresolved",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "followup_tasks": 0,
+      "provenance_status": "original_material_located"
+    },
+    {
+      "sequence": 10,
+      "round": 1,
+      "action": "assessment_changed",
+      "previous": null,
+      "current": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "basis": [],
+      "world_basis": []
+    },
+    {
+      "sequence": 11,
+      "round": 1,
+      "action": "followup_tasks_queued",
+      "gap_ids": [
+        "evidence-scope-outcome-missing"
+      ]
+    },
+    {
+      "sequence": 12,
+      "round": 1,
+      "action": "progress_checked",
+      "new_eligible_versions": 1,
+      "new_structure": true
+    },
+    {
+      "sequence": 13,
+      "round": 2,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "evidence-scope-outcome-missing",
+          "question": "What does the designated evidence-scope snapshot say about completion by the target deadline?",
+          "stage": "verification",
+          "dimension": "evidence",
+          "blocking": false,
+          "target_id": "boeing-starliner-cft-2023",
+          "basis": [
+            {
+              "version_id": "boeing-starliner-claim-2023",
+              "start": 58,
+              "end": 119,
+              "quote": "A crewed flight test is now expected to be completed in 2023."
+            }
+          ],
+          "decision_impact": "The supplied forecast cannot substitute for the absent evidence-scope document; the evidence assessment remains undetermined.",
+          "action": "search",
+          "locator": "Retrieve the designated snapshot boeing-starliner-outcome-2024",
+          "probe_id": null
+        }
+      ],
+      "limit": 17
+    },
+    {
+      "sequence": 14,
+      "round": 2,
+      "action": "retrieval_attribution_validated",
+      "version_id": "boeing-starliner-outcome-2024",
+      "task_ids": [
+        "evidence-scope-outcome-missing"
+      ],
+      "attribution": "envelope"
+    },
+    {
+      "sequence": 15,
+      "round": 2,
+      "action": "snapshot_saved",
+      "version_id": "boeing-starliner-outcome-2024",
+      "sha256": "b2728c8eb80ebd4094724595f2dc6873ea2471951ef1a2d9477621d79ea85a72",
+      "eligible": true
+    },
+    {
+      "sequence": 16,
+      "round": 2,
+      "action": "decompose_started",
+      "version_id": "boeing-starliner-outcome-2024",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 17,
+      "round": 2,
+      "action": "decompose_completed",
+      "version_id": "boeing-starliner-outcome-2024",
+      "revision": 2
+    },
+    {
+      "sequence": 18,
+      "round": 2,
+      "action": "alignment_checked",
+      "version_id": "boeing-starliner-outcome-2024",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 19,
+      "round": 2,
+      "action": "graph_updated",
+      "version_id": "boeing-starliner-outcome-2024",
+      "open_gaps": 0
+    },
+    {
+      "sequence": 20,
+      "round": 2,
+      "action": "retrieval_feedback",
+      "feedback": {
+        "round": 2,
+        "gap_id": "evidence-scope-outcome-missing",
+        "action": "search",
+        "locator": "Retrieve the designated snapshot boeing-starliner-outcome-2024",
+        "status": "returned",
+        "reason": "matching snapshots returned",
+        "version_ids": [
+          "boeing-starliner-outcome-2024"
+        ]
+      }
+    },
+    {
+      "sequence": 21,
+      "round": 2,
+      "action": "verification_started"
+    },
+    {
+      "sequence": 22,
+      "round": 2,
+      "action": "verification_completed",
+      "verdict": "contradicted",
+      "decision": "contradicted",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        }
+      },
+      "followup_tasks": 0,
+      "provenance_status": "original_material_located"
+    },
+    {
+      "sequence": 23,
+      "round": 2,
+      "action": "assessment_changed",
+      "previous": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "current": {
+        "evidence": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        }
+      },
+      "basis": [
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "start": 553,
+          "end": 611,
+          "quote": "The CFT launched on June 5, 2024, and docked with the ISS."
+        }
+      ],
+      "world_basis": [
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "start": 553,
+          "end": 611,
+          "quote": "The CFT launched on June 5, 2024, and docked with the ISS."
+        }
+      ]
+    },
+    {
+      "sequence": 24,
+      "round": 2,
+      "action": "stopped",
+      "reason": "complete"
+    }
+  ],
+  "errors": [],
+  "model_call_lineage": {
+    "schema_version": 1,
+    "call_artifact_sha256": "81a32e468e4e0d763183ca3f422f4b4db530c8a4d6af171104b8ffe8b9bb14c8",
+    "responses": [
+      {
+        "sequence": 1,
+        "response_id": "chatcmpl-EL1N0ixMyV3Zzu8xn5wydN1vYYFyZ",
+        "output_sha256": "bc6deb0f977b0142f51f22ee6a2ee2a561861384169333f58fcdbd8f698e41d5"
+      },
+      {
+        "sequence": 2,
+        "response_id": "chatcmpl-EL1NP9Kz7VfqRopfngR8vA5j0819h",
+        "output_sha256": "ff5f4dd94ea44a840de55816b958da4f186db342d0adfa314b3071e73745b1fb"
+      },
+      {
+        "sequence": 3,
+        "response_id": "chatcmpl-EL1NUSgzzcxSmhnyxsoHs8wXAeaiy",
+        "output_sha256": "83992434b0415de9955ff6bae7ad2e2ccd811ccecc26cd31d4421394d5ec17cf"
+      },
+      {
+        "sequence": 4,
+        "response_id": "chatcmpl-EL1O54LzZ2nb9OlHIJSxMbd9AnKJj",
+        "output_sha256": "1737e041ac992bd3ca42c4b8153e3473699b449a5eb2da55dd04f5ed3f04ba5c"
+      }
+    ]
+  }
+}

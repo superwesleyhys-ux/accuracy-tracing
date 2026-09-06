@@ -1,0 +1,197 @@
+[
+  {
+    "id": "virgin-galactic-commercial-service-2023",
+    "variant": "loop",
+    "status": "completed",
+    "prediction": {
+      "id": "virgin-galactic-commercial-service-2023",
+      "assessment_mode": "evidence",
+      "as_of": "2024-12-31T23:59:59Z",
+      "decision": "unverifiable",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "provenance_status": "original_material_located",
+      "assessment_valid": true,
+      "stop_reason": "provider_exhausted"
+    },
+    "checkpoints": [
+      {
+        "round": 1,
+        "id": "virgin-galactic-commercial-service-2023",
+        "decision": "unverifiable",
+        "assessment_mode": "evidence",
+        "assessments": {
+          "evidence": {
+            "raw_verdict": "unresolved",
+            "decision": "unresolved",
+            "blocking_gap_ids": []
+          },
+          "world": {
+            "raw_verdict": "unresolved",
+            "decision": "unresolved",
+            "blocking_gap_ids": []
+          }
+        },
+        "provenance_status": "original_material_located"
+      }
+    ],
+    "usage": {
+      "model_calls": 2,
+      "input_tokens": 3054,
+      "output_tokens": 1329,
+      "seconds": 30.626264917082153
+    },
+    "actual_new_api_usage": {
+      "model_calls": 2,
+      "input_tokens": 3054,
+      "output_tokens": 1329
+    }
+  },
+  {
+    "id": "lucid-production-2023",
+    "variant": "loop",
+    "status": "completed",
+    "prediction": {
+      "id": "lucid-production-2023",
+      "assessment_mode": "evidence",
+      "as_of": "2024-12-31T23:59:59Z",
+      "decision": "false",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        }
+      },
+      "provenance_status": "original_material_located",
+      "assessment_valid": true,
+      "stop_reason": "complete"
+    },
+    "checkpoints": [
+      {
+        "round": 1,
+        "id": "lucid-production-2023",
+        "decision": "unverifiable",
+        "assessment_mode": "evidence",
+        "assessments": {
+          "evidence": {
+            "raw_verdict": "unresolved",
+            "decision": "unresolved",
+            "blocking_gap_ids": [
+              "evidence:lucid-production-outcome-2024"
+            ]
+          },
+          "world": {
+            "raw_verdict": "unresolved",
+            "decision": "unresolved",
+            "blocking_gap_ids": []
+          }
+        },
+        "provenance_status": "original_material_located"
+      },
+      {
+        "round": 2,
+        "id": "lucid-production-2023",
+        "decision": "false",
+        "assessment_mode": "evidence",
+        "assessments": {
+          "evidence": {
+            "raw_verdict": "contradicted",
+            "decision": "contradicted",
+            "blocking_gap_ids": []
+          },
+          "world": {
+            "raw_verdict": "contradicted",
+            "decision": "contradicted",
+            "blocking_gap_ids": []
+          }
+        },
+        "provenance_status": "original_material_located"
+      }
+    ],
+    "usage": {
+      "model_calls": 4,
+      "input_tokens": 7848,
+      "output_tokens": 3462,
+      "seconds": 67.42794904101174
+    },
+    "actual_new_api_usage": {
+      "model_calls": 4,
+      "input_tokens": 7848,
+      "output_tokens": 3462
+    }
+  },
+  {
+    "id": "lucid-production-2023",
+    "variant": "full_evidence_once",
+    "status": "completed",
+    "prediction": {
+      "id": "lucid-production-2023",
+      "assessment_mode": "evidence",
+      "as_of": "2024-12-31T23:59:59Z",
+      "decision": "false",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        }
+      },
+      "provenance_status": "original_material_located",
+      "assessment_valid": true,
+      "stop_reason": "complete"
+    },
+    "checkpoints": [
+      {
+        "round": 1,
+        "id": "lucid-production-2023",
+        "decision": "false",
+        "assessment_mode": "evidence",
+        "assessments": {
+          "evidence": {
+            "raw_verdict": "contradicted",
+            "decision": "contradicted",
+            "blocking_gap_ids": []
+          },
+          "world": {
+            "raw_verdict": "contradicted",
+            "decision": "contradicted",
+            "blocking_gap_ids": []
+          }
+        },
+        "provenance_status": "original_material_located"
+      }
+    ],
+    "usage": {
+      "model_calls": 3,
+      "input_tokens": 5737,
+      "output_tokens": 3161,
+      "seconds": 53.75134016701486
+    },
+    "actual_new_api_usage": {
+      "model_calls": 3,
+      "input_tokens": 5737,
+      "output_tokens": 3161
+    }
+  }
+]

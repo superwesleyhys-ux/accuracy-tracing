@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "target": {
+        "id": "virgin-galactic-commercial-service-2023",
+        "text": "Virgin Galactic will commence commercial service during the second quarter of 2023.",
+        "as_of": "2024-12-31T23:59:59Z",
+        "source_version_id": "virgin-commercial-claim-2023",
+        "assessment_mode": "evidence",
+        "evidence_scope": [
+          "virgin-commercial-outcome-2024"
+        ]
+      },
+      "materials": [
+        {
+          "version_id": "virgin-commercial-claim-2023",
+          "url": "https://www.sec.gov/Archives/edgar/data/1706946/000170694623000032/spce-20230331.htm",
+          "content": "Virgin Galactic Q1 2023 Form 10-Q | SEC filing dated May 9, 2023\nCommercial service is currently expected to commence in the second quarter of 2023.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2023-05-09T23:59:59Z",
+          "available_at": "2023-05-09T23:59:59Z",
+          "availability_basis": "Immutable SEC EDGAR accession 0001706946-23-000032, filed May 9, 2023; raw filing identity is recorded in sources.json.",
+          "issuer": "Virgin Galactic Holdings, Inc. (filed with the U.S. SEC)"
+        },
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "url": "https://www.sec.gov/Archives/edgar/data/1706946/000170694624000039/spce-20231231.htm",
+          "content": "Virgin Galactic 2023 Form 10-K | SEC filing dated February 27, 2024\nIn June 2023, we completed our first commercial spaceflight, 'Galactic 01,' which marked the start of our commercial service.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2024-02-27T23:59:59Z",
+          "available_at": "2024-02-27T23:59:59Z",
+          "availability_basis": "Immutable SEC EDGAR accession 0001706946-24-000039, filed February 27, 2024; raw filing identity is recorded in sources.json.",
+          "issuer": "Virgin Galactic Holdings, Inc. (filed with the U.S. SEC)"
+        }
+      ],
+      "seed_ids": [
+        "virgin-commercial-claim-2023"
+      ],
+      "full_evidence_control": false
+    },
+    {
+      "target": {
+        "id": "lucid-production-2023",
+        "text": "Lucid will manufacture more than 10,000 vehicles during 2023.",
+        "as_of": "2024-12-31T23:59:59Z",
+        "source_version_id": "lucid-production-claim-2023",
+        "assessment_mode": "evidence",
+        "evidence_scope": [
+          "lucid-production-outcome-2024"
+        ]
+      },
+      "materials": [
+        {
+          "version_id": "lucid-production-claim-2023",
+          "url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828023027783/q2fy23ex991.htm",
+          "content": "Lucid Q2 2023 results | SEC exhibit filed August 7, 2023\nLucid is on track to manufacture more than 10,000 vehicles in 2023.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2023-08-07T23:59:59Z",
+          "available_at": "2023-08-07T23:59:59Z",
+          "availability_basis": "Immutable SEC EDGAR accession 0001628280-23-027783, filed August 7, 2023; raw filing identity is recorded in sources.json.",
+          "issuer": "Lucid Group, Inc. (filed with the U.S. SEC)"
+        },
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828024005904/q423ex991k.htm",
+          "content": "Lucid Q4 2023 results | SEC exhibit filed February 21, 2024\nOn a full-year basis, the Company produced 8,428 vehicles.",
+          "retrieved_at": "2026-09-06T04:05:15Z",
+          "published_at": "2024-02-21T23:59:59Z",
+          "available_at": "2024-02-21T23:59:59Z",
+          "availability_basis": "Immutable SEC EDGAR accession 0001628280-24-005904, filed February 21, 2024; raw filing identity is recorded in sources.json.",
+          "issuer": "Lucid Group, Inc. (filed with the U.S. SEC)"
+        }
+      ],
+      "seed_ids": [
+        "lucid-production-claim-2023"
+      ],
+      "full_evidence_control": true
+    }
+  ]
+}

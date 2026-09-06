@@ -1,0 +1,52 @@
+[
+  {
+    "round": 1,
+    "tasks": [
+      {
+        "id": "origin:library-evidence",
+        "question": "Find the producing record and evidenced lineage for: The library now closes at 9 pm.",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null
+      }
+    ],
+    "returned_ids": [
+      "library-article",
+      "library-notice"
+    ],
+    "feedback": []
+  },
+  {
+    "round": 2,
+    "tasks": [
+      {
+        "id": "lineage:library-evidence",
+        "question": "Provide the target source version and an evidenced citation/derivation path to an original material",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null
+      }
+    ],
+    "returned_ids": [],
+    "feedback": [
+      {
+        "gap_id": "lineage:library-evidence",
+        "action": "search",
+        "locator": null,
+        "status": "unavailable",
+        "reason": "no unseen match in fixed snapshot index; live web unavailable",
+        "version_ids": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "dataset_kind": "author_curated_historical_forecast_pilot2",
+  "cases": [
+    {
+      "id": "virgin-galactic-commercial-service-2023",
+      "event_id": "virgin-galactic-commercial-service-start",
+      "assessment_mode": "evidence",
+      "decision": "true",
+      "adjudication_source_version_ids": [
+        "virgin-commercial-outcome-2024"
+      ],
+      "rationale": "The filed 10-K identifies Galactic 01 in June 2023 as the start of commercial service; June falls in the second quarter.",
+      "basis": [
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "quote": "In June 2023, 'Galactic 01,' marked the start of commercial service."
+        }
+      ]
+    },
+    {
+      "id": "boeing-starliner-cft-2023",
+      "event_id": "boeing-starliner-crewed-flight-test",
+      "assessment_mode": "evidence",
+      "decision": "false",
+      "adjudication_source_version_ids": [
+        "boeing-starliner-outcome-2024"
+      ],
+      "rationale": "The crewed flight test did not launch until June 5, 2024, so it could not have been completed by December 31, 2023.",
+      "basis": [
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "quote": "The CFT launched on June 5, 2024, and docked with the ISS."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "This is a retrospectively selected, author-curated eight-case pilot, not an independently reviewed, held-out, representative, or deployment benchmark.",
+    "The protocol isolates admissible evidence by publication/version cutoff, but it cannot remove post-cutoff knowledge from current model parameters.",
+    "Exact-label results from eight cases are descriptive smoke-test results and do not establish a general accuracy improvement."
+  ]
+}

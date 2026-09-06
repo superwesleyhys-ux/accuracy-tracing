@@ -1,0 +1,686 @@
+{
+  "schema_version": "0.3",
+  "scope": "plugin-supplied semantic analyses; no built-in truth oracle",
+  "target": {
+    "id": "conflict-evidence",
+    "text": "The ferry is operating today.",
+    "as_of": "2026-09-04T20:00:00Z",
+    "source_version_id": "report-a",
+    "assessment_mode": "evidence",
+    "evidence_scope": [
+      "report-a",
+      "report-b"
+    ]
+  },
+  "config": {
+    "max_rounds": 5,
+    "max_documents": 18,
+    "max_decomposition_calls": 18
+  },
+  "provenance_status": "partial",
+  "fact_status": "unresolved",
+  "stop_reason": "provider_exhausted",
+  "usage": {
+    "rounds": 2,
+    "documents": 2,
+    "unique_versions": 2,
+    "decomposition_calls": 2,
+    "verification_calls": 1
+  },
+  "decision_status": "conflicting",
+  "assessments": {
+    "evidence": {
+      "raw_verdict": "conflicting",
+      "decision": "conflicting",
+      "blocking_gap_ids": []
+    },
+    "world": {
+      "raw_verdict": "unresolved",
+      "decision": "unresolved",
+      "blocking_gap_ids": []
+    }
+  },
+  "assessment_valid": true,
+  "materials": [
+    {
+      "version_id": "report-a",
+      "url": "https://example.org/report-a",
+      "content": "The ferry is operating today.",
+      "retrieved_at": "2026-09-04T20:00:00Z",
+      "published_at": "2026-09-04T10:00:00Z",
+      "available_at": "2026-09-04T10:00:00Z",
+      "availability_basis": "Synthetic exact-version capture; no external authentication.",
+      "issuer": "Fictional publisher"
+    },
+    {
+      "version_id": "report-b",
+      "url": "https://example.org/report-b",
+      "content": "The ferry is not operating today.",
+      "retrieved_at": "2026-09-04T20:00:00Z",
+      "published_at": "2026-09-04T10:00:00Z",
+      "available_at": "2026-09-04T10:00:00Z",
+      "availability_basis": "Synthetic exact-version capture; no external authentication.",
+      "issuer": "Fictional publisher"
+    }
+  ],
+  "eligible_version_ids": [
+    "report-a",
+    "report-b"
+  ],
+  "observations": [
+    {
+      "version_id": "report-a",
+      "retrieved_at": "2026-09-04T20:00:00Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "version_id": "report-b",
+      "retrieved_at": "2026-09-04T20:00:00Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": []
+    }
+  ],
+  "analyses": {
+    "report-a": {
+      "fragments": [
+        {
+          "id": "ferry-operating",
+          "text": "The ferry is operating today.",
+          "span": {
+            "version_id": "report-a",
+            "start": 0,
+            "end": 29,
+            "quote": "The ferry is operating today."
+          },
+          "parent_id": "conflict-evidence",
+          "qualifiers": [
+            "Affirmative operating-status claim limited to 'today'; the supplied publication date is 2026-09-04. No time of day is specified."
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "report-a",
+              "start": 23,
+              "end": 28,
+              "quote": "today"
+            }
+          ]
+        }
+      ],
+      "relations": [],
+      "gaps": [
+        {
+          "id": "missing-report-b",
+          "question": "What does the other evidence-scope document, report-b, say about the target?",
+          "stage": "verification",
+          "dimension": "evidence",
+          "blocking": false,
+          "target_id": "conflict-evidence",
+          "basis": [],
+          "decision_impact": "Report-a states the target verbatim; the absent report-b prevents assessing agreement or conflict across the full evidence scope.",
+          "action": "search",
+          "locator": "report-b exact-version snapshot"
+        }
+      ],
+      "resolutions": [],
+      "origins": [],
+      "notes": "Report-a supports the unchanged target as a statement in the evidence, not as world verification. World status remains unknown. No citation or publishing-role statement is visible, so no lineage or originality finding is made; the existing provenance gap remains unresolved.",
+      "revisit_versions": []
+    },
+    "report-b": {
+      "fragments": [
+        {
+          "id": "report-b-denial",
+          "text": "The ferry is not operating today.",
+          "span": {
+            "version_id": "report-b",
+            "start": 0,
+            "end": 33,
+            "quote": "The ferry is not operating today."
+          },
+          "parent_id": "conflict-evidence",
+          "qualifiers": [
+            "Explicitly negates operation of the ferry.",
+            "Limited to 'today'; no numerical claim or broader time interval is stated."
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "report-b",
+              "start": 13,
+              "end": 16,
+              "quote": "not"
+            },
+            {
+              "version_id": "report-b",
+              "start": 27,
+              "end": 32,
+              "quote": "today"
+            }
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "id": "report-b-contradicts-report-a",
+          "from_version": "report-b",
+          "to_version": "report-a",
+          "kind": "contradicts",
+          "status": "direct",
+          "basis": [
+            {
+              "version_id": "report-b",
+              "start": 0,
+              "end": 33,
+              "quote": "The ferry is not operating today."
+            },
+            {
+              "version_id": "report-a",
+              "start": 0,
+              "end": 29,
+              "quote": "The ferry is operating today."
+            }
+          ],
+          "rationale": "The evidence-scope documents assert opposite operating statuses for 'today' and have the same supplied publication date.",
+          "upstream_locator": null
+        }
+      ],
+      "gaps": [],
+      "resolutions": [
+        {
+          "gap_id": "missing-report-b",
+          "basis": [
+            {
+              "version_id": "report-b",
+              "start": 0,
+              "end": 33,
+              "quote": "The ferry is not operating today."
+            }
+          ],
+          "rationale": "The previously missing snapshot is now visible and explicitly denies the target, establishing conflict across the evidence scope."
+        }
+      ],
+      "origins": [],
+      "notes": "Evidence assessment: conflicting statements, not unanimous support. World status remains unknown. No publishing-role or lineage evidence resolves origin:conflict-evidence; that provenance uncertainty does not prevent this evidence-only assessment.",
+      "revisit_versions": []
+    }
+  },
+  "analysis_history": [
+    {
+      "revision": 1,
+      "round": 1,
+      "version_id": "report-a",
+      "duplicate": false,
+      "revisit": false,
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "ferry-operating",
+            "text": "The ferry is operating today.",
+            "span": {
+              "version_id": "report-a",
+              "start": 0,
+              "end": 29,
+              "quote": "The ferry is operating today."
+            },
+            "parent_id": "conflict-evidence",
+            "qualifiers": [
+              "Affirmative operating-status claim limited to 'today'; the supplied publication date is 2026-09-04. No time of day is specified."
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "report-a",
+                "start": 23,
+                "end": 28,
+                "quote": "today"
+              }
+            ]
+          }
+        ],
+        "relations": [],
+        "gaps": [
+          {
+            "id": "missing-report-b",
+            "question": "What does the other evidence-scope document, report-b, say about the target?",
+            "stage": "verification",
+            "dimension": "evidence",
+            "blocking": false,
+            "target_id": "conflict-evidence",
+            "basis": [],
+            "decision_impact": "Report-a states the target verbatim; the absent report-b prevents assessing agreement or conflict across the full evidence scope.",
+            "action": "search",
+            "locator": "report-b exact-version snapshot"
+          }
+        ],
+        "resolutions": [],
+        "origins": [],
+        "notes": "Report-a supports the unchanged target as a statement in the evidence, not as world verification. World status remains unknown. No citation or publishing-role statement is visible, so no lineage or originality finding is made; the existing provenance gap remains unresolved.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    },
+    {
+      "revision": 2,
+      "round": 1,
+      "version_id": "report-b",
+      "duplicate": false,
+      "revisit": false,
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "report-b-denial",
+            "text": "The ferry is not operating today.",
+            "span": {
+              "version_id": "report-b",
+              "start": 0,
+              "end": 33,
+              "quote": "The ferry is not operating today."
+            },
+            "parent_id": "conflict-evidence",
+            "qualifiers": [
+              "Explicitly negates operation of the ferry.",
+              "Limited to 'today'; no numerical claim or broader time interval is stated."
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "report-b",
+                "start": 13,
+                "end": 16,
+                "quote": "not"
+              },
+              {
+                "version_id": "report-b",
+                "start": 27,
+                "end": 32,
+                "quote": "today"
+              }
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "report-b-contradicts-report-a",
+            "from_version": "report-b",
+            "to_version": "report-a",
+            "kind": "contradicts",
+            "status": "direct",
+            "basis": [
+              {
+                "version_id": "report-b",
+                "start": 0,
+                "end": 33,
+                "quote": "The ferry is not operating today."
+              },
+              {
+                "version_id": "report-a",
+                "start": 0,
+                "end": 29,
+                "quote": "The ferry is operating today."
+              }
+            ],
+            "rationale": "The evidence-scope documents assert opposite operating statuses for 'today' and have the same supplied publication date.",
+            "upstream_locator": null
+          }
+        ],
+        "gaps": [],
+        "resolutions": [
+          {
+            "gap_id": "missing-report-b",
+            "basis": [
+              {
+                "version_id": "report-b",
+                "start": 0,
+                "end": 33,
+                "quote": "The ferry is not operating today."
+              }
+            ],
+            "rationale": "The previously missing snapshot is now visible and explicitly denies the target, establishing conflict across the evidence scope."
+          }
+        ],
+        "origins": [],
+        "notes": "Evidence assessment: conflicting statements, not unanimous support. World status remains unknown. No publishing-role or lineage evidence resolves origin:conflict-evidence; that provenance uncertainty does not prevent this evidence-only assessment.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    }
+  ],
+  "fragments": [
+    {
+      "id": "ferry-operating",
+      "text": "The ferry is operating today.",
+      "span": {
+        "version_id": "report-a",
+        "start": 0,
+        "end": 29,
+        "quote": "The ferry is operating today."
+      },
+      "parent_id": "conflict-evidence",
+      "qualifiers": [
+        "Affirmative operating-status claim limited to 'today'; the supplied publication date is 2026-09-04. No time of day is specified."
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "report-a",
+          "start": 23,
+          "end": 28,
+          "quote": "today"
+        }
+      ]
+    },
+    {
+      "id": "report-b-denial",
+      "text": "The ferry is not operating today.",
+      "span": {
+        "version_id": "report-b",
+        "start": 0,
+        "end": 33,
+        "quote": "The ferry is not operating today."
+      },
+      "parent_id": "conflict-evidence",
+      "qualifiers": [
+        "Explicitly negates operation of the ferry.",
+        "Limited to 'today'; no numerical claim or broader time interval is stated."
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "report-b",
+          "start": 13,
+          "end": 16,
+          "quote": "not"
+        },
+        {
+          "version_id": "report-b",
+          "start": 27,
+          "end": 32,
+          "quote": "today"
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "report-b-contradicts-report-a",
+      "from_version": "report-b",
+      "to_version": "report-a",
+      "kind": "contradicts",
+      "status": "direct",
+      "basis": [
+        {
+          "version_id": "report-b",
+          "start": 0,
+          "end": 33,
+          "quote": "The ferry is not operating today."
+        },
+        {
+          "version_id": "report-a",
+          "start": 0,
+          "end": 29,
+          "quote": "The ferry is operating today."
+        }
+      ],
+      "rationale": "The evidence-scope documents assert opposite operating statuses for 'today' and have the same supplied publication date.",
+      "upstream_locator": null
+    }
+  ],
+  "origins": [],
+  "gaps": [
+    {
+      "id": "origin:conflict-evidence",
+      "question": "Find the producing record and evidenced lineage for: The ferry is operating today.",
+      "stage": "provenance",
+      "dimension": "auto",
+      "blocking": true,
+      "target_id": null,
+      "basis": [],
+      "decision_impact": "",
+      "action": "search",
+      "locator": null
+    }
+  ],
+  "resolutions": [
+    {
+      "gap_id": "missing-report-b",
+      "basis": [
+        {
+          "version_id": "report-b",
+          "start": 0,
+          "end": 33,
+          "quote": "The ferry is not operating today."
+        }
+      ],
+      "rationale": "The previously missing snapshot is now visible and explicitly denies the target, establishing conflict across the evidence scope."
+    }
+  ],
+  "verification_history": [
+    {
+      "round": 1,
+      "verdict": "conflicting",
+      "basis": [
+        {
+          "version_id": "report-a",
+          "start": 0,
+          "end": 29,
+          "quote": "The ferry is operating today."
+        },
+        {
+          "version_id": "report-b",
+          "start": 0,
+          "end": 33,
+          "quote": "The ferry is not operating today."
+        }
+      ],
+      "rationale": "The scoped records directly disagree: report-a affirms the unchanged target, while report-b explicitly denies it. Neither record supersedes the other.",
+      "gaps": [],
+      "resolutions": [],
+      "evidence_verdict": "conflicting",
+      "world_verdict": "unresolved",
+      "world_basis": [],
+      "world_rationale": "Both snapshots are unauthenticated assertions from a fictional publisher. No supplied independent evidence establishes whether the ferry was operating on September 4, 2026, as of the specified time."
+    }
+  ],
+  "operations": [
+    {
+      "sequence": 1,
+      "round": 1,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "origin:conflict-evidence",
+          "question": "Find the producing record and evidenced lineage for: The ferry is operating today.",
+          "stage": "provenance",
+          "dimension": "auto",
+          "blocking": true,
+          "target_id": null,
+          "basis": [],
+          "decision_impact": "",
+          "action": "search",
+          "locator": null
+        }
+      ],
+      "limit": 18
+    },
+    {
+      "sequence": 2,
+      "round": 1,
+      "action": "snapshot_saved",
+      "version_id": "report-a",
+      "sha256": "c7b10f720f5a45c276975885bd49a51693bee785d7a7a8572fcc43b018b90dd6",
+      "eligible": true
+    },
+    {
+      "sequence": 3,
+      "round": 1,
+      "action": "decompose_started",
+      "version_id": "report-a",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 4,
+      "round": 1,
+      "action": "decompose_completed",
+      "version_id": "report-a",
+      "revision": 1
+    },
+    {
+      "sequence": 5,
+      "round": 1,
+      "action": "alignment_checked",
+      "version_id": "report-a",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 6,
+      "round": 1,
+      "action": "graph_updated",
+      "version_id": "report-a",
+      "open_gaps": 2
+    },
+    {
+      "sequence": 7,
+      "round": 1,
+      "action": "snapshot_saved",
+      "version_id": "report-b",
+      "sha256": "c83481dd398dca7d3d5c537e8b91888929cc34c7b3fc1074a48bc5270b02914b",
+      "eligible": true
+    },
+    {
+      "sequence": 8,
+      "round": 1,
+      "action": "decompose_started",
+      "version_id": "report-b",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 9,
+      "round": 1,
+      "action": "decompose_completed",
+      "version_id": "report-b",
+      "revision": 2
+    },
+    {
+      "sequence": 10,
+      "round": 1,
+      "action": "alignment_checked",
+      "version_id": "report-b",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 11,
+      "round": 1,
+      "action": "graph_updated",
+      "version_id": "report-b",
+      "open_gaps": 1
+    },
+    {
+      "sequence": 12,
+      "round": 1,
+      "action": "verification_started"
+    },
+    {
+      "sequence": 13,
+      "round": 1,
+      "action": "verification_completed",
+      "verdict": "unresolved",
+      "decision": "conflicting",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "conflicting",
+          "decision": "conflicting",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "followup_tasks": 0,
+      "provenance_status": "partial"
+    },
+    {
+      "sequence": 14,
+      "round": 1,
+      "action": "assessment_changed",
+      "previous": null,
+      "current": {
+        "evidence": {
+          "raw_verdict": "conflicting",
+          "decision": "conflicting",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "basis": [
+        {
+          "version_id": "report-a",
+          "start": 0,
+          "end": 29,
+          "quote": "The ferry is operating today."
+        },
+        {
+          "version_id": "report-b",
+          "start": 0,
+          "end": 33,
+          "quote": "The ferry is not operating today."
+        }
+      ],
+      "world_basis": []
+    },
+    {
+      "sequence": 15,
+      "round": 1,
+      "action": "progress_checked",
+      "new_eligible_versions": 2,
+      "new_structure": true
+    },
+    {
+      "sequence": 16,
+      "round": 2,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "origin:conflict-evidence",
+          "question": "Find the producing record and evidenced lineage for: The ferry is operating today.",
+          "stage": "provenance",
+          "dimension": "auto",
+          "blocking": true,
+          "target_id": null,
+          "basis": [],
+          "decision_impact": "",
+          "action": "search",
+          "locator": null
+        }
+      ],
+      "limit": 16
+    },
+    {
+      "sequence": 17,
+      "round": 2,
+      "action": "retrieval_feedback",
+      "feedback": {
+        "gap_id": "origin:conflict-evidence",
+        "action": "search",
+        "locator": null,
+        "status": "unavailable",
+        "reason": "no unseen match in fixed snapshot index; live web unavailable",
+        "version_ids": []
+      }
+    },
+    {
+      "sequence": 18,
+      "round": 2,
+      "action": "stopped",
+      "reason": "provider_exhausted"
+    }
+  ],
+  "errors": []
+}

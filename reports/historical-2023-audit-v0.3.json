@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "benchmark_id": "historical-2023-resolved-by-2024-v1",
+  "case_count": 8,
+  "claim_window": {
+    "start": "2023-01-01T00:00:00Z",
+    "end": "2023-12-31T23:59:59Z"
+  },
+  "evidence_cutoff": "2024-12-31T23:59:59Z",
+  "labels": {
+    "true": 4,
+    "false": 4
+  },
+  "checks": [
+    "gold isolated from inference inputs and source metadata",
+    "all claims made in 2023",
+    "all declared evidence publication and availability timestamps fall on or before the 2024 cutoff",
+    "all model-visible input text rejects explicit four-digit years from 2025 onward; audit-only retrieved_at is excluded",
+    "declared body-only official-source captures match their internal content hashes",
+    "seed/source/scope roles and pre-run checksums are internally consistent",
+    "a clean committed worktree is separately required before model calls",
+    "version-proof records are dataset declarations; this audit does not independently authenticate remote artifacts",
+    "run call/output/trace checksums can establish internal consistency, not that an output came from the API"
+  ],
+  "corpus_description": "8 real-world 2023 propositions with declared official-source claim and outcome evidence",
+  "corpus_synthetic": false,
+  "release_validation_scope": {
+    "contract_audit_performed": true,
+    "remote_artifacts_independently_authenticated": false,
+    "live_model_ab_performed": false,
+    "accuracy_measured": false
+  }
+}

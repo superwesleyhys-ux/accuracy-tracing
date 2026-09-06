@@ -1,0 +1,387 @@
+{
+  "benchmark_type": "synthetic_annotated_policy_cases",
+  "limitations": [
+    "Checks expected policy behavior, not real-world news accuracy or semantic verification.",
+    "The one-round baseline receives less evidence; this is not an equal-budget accuracy comparison.",
+    "Stance, timestamps, and provenance are supplied annotations, not independently authenticated facts."
+  ],
+  "case_count": 22,
+  "policy_expectations_matched": 22,
+  "all_policy_expectations_matched": true,
+  "results": [
+    {
+      "name": "independent_sources_arrive_across_rounds",
+      "expected_status": "supported",
+      "loop_status": "supported",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 2,
+      "documents_examined": 2,
+      "stop_reason": "evidence_threshold",
+      "independent_source_counts": {
+        "supports": 2,
+        "contradicts": 0,
+        "neutral": 0,
+        "total": 2,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "later_refutation_changes_first_pass",
+      "expected_status": "conflicting",
+      "loop_status": "conflicting",
+      "single_pass_status": "supported",
+      "policy_expectation_matched": true,
+      "rounds": 2,
+      "documents_examined": 3,
+      "stop_reason": "conflict_found",
+      "independent_source_counts": {
+        "supports": 2,
+        "contradicts": 1,
+        "neutral": 0,
+        "total": 3,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "independent_refutations",
+      "expected_status": "contradicted",
+      "loop_status": "contradicted",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 2,
+      "documents_examined": 2,
+      "stop_reason": "evidence_threshold",
+      "independent_source_counts": {
+        "supports": 0,
+        "contradicts": 2,
+        "neutral": 0,
+        "total": 2,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "syndication_is_one_origin",
+      "expected_status": "unresolved",
+      "loop_status": "unresolved",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 3,
+      "documents_examined": 2,
+      "stop_reason": "no_new_evidence",
+      "independent_source_counts": {
+        "supports": 1,
+        "contradicts": 0,
+        "neutral": 0,
+        "total": 1,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "same_publisher_is_one_source",
+      "expected_status": "unresolved",
+      "loop_status": "unresolved",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 3,
+      "documents_examined": 2,
+      "stop_reason": "no_new_evidence",
+      "independent_source_counts": {
+        "supports": 1,
+        "contradicts": 0,
+        "neutral": 0,
+        "total": 1,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "tracking_url_variants_are_one_document",
+      "expected_status": "unresolved",
+      "loop_status": "unresolved",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 3,
+      "documents_examined": 2,
+      "stop_reason": "no_new_evidence",
+      "independent_source_counts": {
+        "supports": 1,
+        "contradicts": 0,
+        "neutral": 0,
+        "total": 1,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "identical_text_is_one_origin",
+      "expected_status": "unresolved",
+      "loop_status": "unresolved",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 3,
+      "documents_examined": 2,
+      "stop_reason": "no_new_evidence",
+      "independent_source_counts": {
+        "supports": 1,
+        "contradicts": 0,
+        "neutral": 0,
+        "total": 1,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "unsupported_quote_is_rejected",
+      "expected_status": "unresolved",
+      "loop_status": "unresolved",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 2,
+      "documents_examined": 2,
+      "stop_reason": "no_new_evidence",
+      "independent_source_counts": {
+        "supports": 0,
+        "contradicts": 0,
+        "neutral": 0,
+        "total": 0,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "stale_news_does_not_confirm_current_claim",
+      "expected_status": "unresolved",
+      "loop_status": "unresolved",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 2,
+      "documents_examined": 2,
+      "stop_reason": "no_new_evidence",
+      "independent_source_counts": {
+        "supports": 0,
+        "contradicts": 0,
+        "neutral": 0,
+        "total": 0,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "future_retrieval_cannot_leak_into_replay",
+      "expected_status": "unresolved",
+      "loop_status": "unresolved",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 2,
+      "documents_examined": 2,
+      "stop_reason": "no_new_evidence",
+      "independent_source_counts": {
+        "supports": 0,
+        "contradicts": 0,
+        "neutral": 0,
+        "total": 0,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "naive_timestamp_is_rejected",
+      "expected_status": "unresolved",
+      "loop_status": "unresolved",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 2,
+      "documents_examined": 2,
+      "stop_reason": "no_new_evidence",
+      "independent_source_counts": {
+        "supports": 0,
+        "contradicts": 0,
+        "neutral": 0,
+        "total": 0,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "missing_provenance_is_rejected",
+      "expected_status": "unresolved",
+      "loop_status": "unresolved",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 2,
+      "documents_examined": 2,
+      "stop_reason": "no_new_evidence",
+      "independent_source_counts": {
+        "supports": 0,
+        "contradicts": 0,
+        "neutral": 0,
+        "total": 0,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "neutral_evidence_is_not_support",
+      "expected_status": "unresolved",
+      "loop_status": "unresolved",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 2,
+      "documents_examined": 1,
+      "stop_reason": "no_new_evidence",
+      "independent_source_counts": {
+        "supports": 0,
+        "contradicts": 0,
+        "neutral": 1,
+        "total": 1,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "empty_search_abstains",
+      "expected_status": "unresolved",
+      "loop_status": "unresolved",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 2,
+      "documents_examined": 0,
+      "stop_reason": "no_new_evidence",
+      "independent_source_counts": {
+        "supports": 0,
+        "contradicts": 0,
+        "neutral": 0,
+        "total": 0,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "different_claim_cannot_be_reused",
+      "expected_status": "unresolved",
+      "loop_status": "unresolved",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 2,
+      "documents_examined": 2,
+      "stop_reason": "no_new_evidence",
+      "independent_source_counts": {
+        "supports": 0,
+        "contradicts": 0,
+        "neutral": 0,
+        "total": 0,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "transitive_source_dependencies",
+      "expected_status": "unresolved",
+      "loop_status": "unresolved",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 3,
+      "documents_examined": 3,
+      "stop_reason": "no_new_evidence",
+      "independent_source_counts": {
+        "supports": 1,
+        "contradicts": 0,
+        "neutral": 0,
+        "total": 1,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "same_source_conflict_is_visible",
+      "expected_status": "conflicting",
+      "loop_status": "conflicting",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 2,
+      "documents_examined": 2,
+      "stop_reason": "conflict_found",
+      "independent_source_counts": {
+        "supports": 1,
+        "contradicts": 1,
+        "neutral": 0,
+        "total": 1,
+        "conflicting": 1
+      }
+    },
+    {
+      "name": "instructions_remain_inert_source_text",
+      "expected_status": "unresolved",
+      "loop_status": "unresolved",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 2,
+      "documents_examined": 1,
+      "stop_reason": "no_new_evidence",
+      "independent_source_counts": {
+        "supports": 0,
+        "contradicts": 0,
+        "neutral": 1,
+        "total": 1,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "retrieval_before_publication_is_rejected",
+      "expected_status": "unresolved",
+      "loop_status": "unresolved",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 2,
+      "documents_examined": 2,
+      "stop_reason": "no_new_evidence",
+      "independent_source_counts": {
+        "supports": 0,
+        "contradicts": 0,
+        "neutral": 0,
+        "total": 0,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "same_evidence_repeated_does_not_boost_support",
+      "expected_status": "unresolved",
+      "loop_status": "unresolved",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 2,
+      "documents_examined": 2,
+      "stop_reason": "no_new_evidence",
+      "independent_source_counts": {
+        "supports": 1,
+        "contradicts": 0,
+        "neutral": 0,
+        "total": 1,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "higher_threshold_is_configurable",
+      "expected_status": "supported",
+      "loop_status": "supported",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 2,
+      "documents_examined": 3,
+      "stop_reason": "evidence_threshold",
+      "independent_source_counts": {
+        "supports": 3,
+        "contradicts": 0,
+        "neutral": 0,
+        "total": 3,
+        "conflicting": 0
+      }
+    },
+    {
+      "name": "invalid_url_is_rejected",
+      "expected_status": "unresolved",
+      "loop_status": "unresolved",
+      "single_pass_status": "unresolved",
+      "policy_expectation_matched": true,
+      "rounds": 2,
+      "documents_examined": 2,
+      "stop_reason": "no_new_evidence",
+      "independent_source_counts": {
+        "supports": 0,
+        "contradicts": 0,
+        "neutral": 0,
+        "total": 0,
+        "conflicting": 0
+      }
+    }
+  ]
+}

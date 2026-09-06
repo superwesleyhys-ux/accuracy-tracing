@@ -1,0 +1,378 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "historical-2023-resolved-by-2024-v1",
+  "task": "Resolve propositions published in 2023 using only frozen official evidence published and available by the end of 2024.",
+  "claim_window": {
+    "start": "2023-01-01T00:00:00Z",
+    "end": "2023-12-31T23:59:59Z"
+  },
+  "evidence_cutoff": "2024-12-31T23:59:59Z",
+  "capture": {
+    "method": "Manual body-only transcription from immutable or versioned official primary artifacts, with exact excerpt hashes and raw-artifact identities.",
+    "retrieved_at": "2026-09-06T04:05:15Z",
+    "artifact_policy": "Raw artifacts were fetched and hashed during curation but are not vendored; the offline audit validates the committed manifest and excerpt bindings, while source URLs and version locators enable independent review.",
+    "gold_policy": "No label, verdict, or adjudication pointer appears in this inference-readable manifest."
+  },
+  "cases": [
+    {
+      "id": "tesla-cybertruck-2023",
+      "event_id": "tesla-cybertruck-first-deliveries",
+      "domain": "automotive",
+      "modality": "forecast_resolution",
+      "claim_made_at": "2023-10-18T23:59:59Z",
+      "resolution_deadline": "2024-12-31T23:59:59Z",
+      "normalization": "Resolve whether the first Cybertruck customer deliveries occurred no later than December 31, 2023.",
+      "materials": [
+        {
+          "version_id": "tesla-cybertruck-claim-2023",
+          "role": "claim",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828023034588/exhibit991.htm",
+          "content_sha256": "4872ad4a4da3bde575a0818d91cb93d772411775541e4d4c1ae6c2b21cddfdbf",
+          "source_format": "sec_edgar_html",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "sec_edgar_accession",
+            "locator": "https://www.sec.gov/Archives/edgar/data/1318605/000162828023034588/0001628280-23-034588-index.htm",
+            "observed_at": "2023-10-18T23:59:59Z",
+            "identifier": "SEC accession 0001628280-23-034588, exhibit 99.1",
+            "artifact_sha256": "548eb43591179ce5044fca05641160cfbe712190b12c54d659a2abb3fe61f550",
+            "artifact_bytes": 41068
+          }
+        },
+        {
+          "version_id": "tesla-cybertruck-outcome-2024",
+          "role": "outcome",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828024002390/tsla-20231231.htm",
+          "content_sha256": "1e40b64bb43c72df57b098342e0befdb2237a0f2d33faff367fe2cab0d010f60",
+          "source_format": "sec_edgar_html",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "sec_edgar_accession",
+            "locator": "https://www.sec.gov/Archives/edgar/data/1318605/000162828024002390/0001628280-24-002390-index.htm",
+            "observed_at": "2024-01-29T23:59:59Z",
+            "identifier": "SEC accession 0001628280-24-002390, Form 10-K",
+            "artifact_sha256": "b14dc117f67a9c03d7b22c23c35757c52256c58d82cd38607fbcb590f025a577",
+            "artifact_bytes": 2672746
+          }
+        }
+      ]
+    },
+    {
+      "id": "virgin-galactic-commercial-service-2023",
+      "event_id": "virgin-galactic-commercial-service-start",
+      "domain": "commercial_spaceflight",
+      "modality": "forecast_resolution",
+      "claim_made_at": "2023-05-09T23:59:59Z",
+      "resolution_deadline": "2024-12-31T23:59:59Z",
+      "normalization": "Resolve whether Virgin Galactic began commercial service during April through June 2023.",
+      "materials": [
+        {
+          "version_id": "virgin-commercial-claim-2023",
+          "role": "claim",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1706946/000170694623000032/spce-20230331.htm",
+          "content_sha256": "6964cc3447a9441df863a2d27c4653999c7aa2678c525d9dc36d4e228cc33057",
+          "source_format": "sec_edgar_html",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "sec_edgar_accession",
+            "locator": "https://www.sec.gov/Archives/edgar/data/1706946/000170694623000032/0001706946-23-000032-index.htm",
+            "observed_at": "2023-05-09T23:59:59Z",
+            "identifier": "SEC accession 0001706946-23-000032, Form 10-Q",
+            "artifact_sha256": "9b2e43b6c5813a9afef3d7b1cbac90eb08d26f24fda4972281ed0dc8b1841d4d",
+            "artifact_bytes": 1076833
+          }
+        },
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "role": "outcome",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1706946/000170694624000039/spce-20231231.htm",
+          "content_sha256": "bf0c556c3895f926c0e53b6bc024d15fa4c5334b14d012f3c724f8c628712b66",
+          "source_format": "sec_edgar_html",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "sec_edgar_accession",
+            "locator": "https://www.sec.gov/Archives/edgar/data/1706946/000170694624000039/0001706946-24-000039-index.htm",
+            "observed_at": "2024-02-27T23:59:59Z",
+            "identifier": "SEC accession 0001706946-24-000039, Form 10-K",
+            "artifact_sha256": "703deb531e9b7e355dc31c11e397f01247f70278877ada8c02e9ab020041b6f7",
+            "artifact_bytes": 1956889
+          }
+        }
+      ]
+    },
+    {
+      "id": "nasa-osiris-rex-2023",
+      "event_id": "nasa-osiris-rex-capsule-return",
+      "domain": "space_science",
+      "modality": "forecast_resolution",
+      "claim_made_at": "2023-02-01T23:59:59Z",
+      "resolution_deadline": "2024-12-31T23:59:59Z",
+      "normalization": "Resolve both capsule release and landing at the named range on September 24, 2023.",
+      "materials": [
+        {
+          "version_id": "nasa-osiris-rex-claim-2023",
+          "role": "claim",
+          "source_url": "https://ntrs.nasa.gov/api/citations/20230000731/downloads/Polit_SampleReturn_PE_timeline_2023-01-10.pdf",
+          "content_sha256": "8134522672bde01df4e7ef266bfd2cbae82eaaca5c419e44a8c6c9776bf294a1",
+          "source_format": "nasa_ntrs_pdf",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "nasa_ntrs_citation",
+            "locator": "https://ntrs.nasa.gov/citations/20230000731",
+            "observed_at": "2023-02-01T23:59:59Z",
+            "identifier": "NASA NTRS citation 20230000731; distribution date 2023-02-01",
+            "artifact_sha256": "465d0037ad06b3452789655343d3f14041b40e8bcdfc8499aa9ef08bed50a395",
+            "artifact_bytes": 753662
+          }
+        },
+        {
+          "version_id": "nasa-osiris-rex-outcome-2024",
+          "role": "outcome",
+          "source_url": "https://ntrs.nasa.gov/api/citations/20240000803/downloads/OREx_ER_Entry_Targeting_Strategy_and_Man_Perf_v3.pdf",
+          "content_sha256": "92706f6bd99a7c536f3e9dfab603b9d7930d4b630423f52ec0238e1d08edb7e6",
+          "source_format": "nasa_ntrs_pdf",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "nasa_ntrs_citation",
+            "locator": "https://ntrs.nasa.gov/citations/20240000803",
+            "observed_at": "2024-02-01T23:59:59Z",
+            "identifier": "NASA NTRS citation 20240000803; distribution date 2024-02-01",
+            "artifact_sha256": "cfeee4f9b5c6c0431a76e5a6d012ef7f515d29318b57d4a3e8b3ffce4a11aecd",
+            "artifact_bytes": 2949661
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-t1-2024",
+      "event_id": "us-securities-t1-transition",
+      "domain": "financial_regulation",
+      "modality": "rule_schedule_resolution",
+      "claim_made_at": "2023-02-15T23:59:59Z",
+      "resolution_deadline": "2024-12-31T23:59:59Z",
+      "normalization": "Resolve whether the covered U.S. markets actually moved to T+1 on May 28, 2024, not merely whether the SEC adopted that schedule.",
+      "materials": [
+        {
+          "version_id": "sec-t1-claim-2023",
+          "role": "claim",
+          "source_url": "https://www.sec.gov/files/rules/final/2023/34-96930.pdf",
+          "content_sha256": "d94a4823af06714b4d373ba444bc79395abfe114a3d84891df9ce65d5e341d57",
+          "source_format": "sec_final_rule_pdf",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "timestamped_web_archive",
+            "locator": "https://web.archive.org/web/20230730115721id_/https://www.sec.gov/files/rules/final/2023/34-96930.pdf",
+            "observed_at": "2023-07-30T11:57:21Z",
+            "identifier": "SEC Release 34-96930; Wayback snapshot 20230730115721",
+            "artifact_sha256": "e214bf80244fe9107c867d7abeb6a6b969029c519566036e42b081977a9b575a",
+            "artifact_bytes": 2301204
+          }
+        },
+        {
+          "version_id": "sec-t1-outcome-2024",
+          "role": "outcome",
+          "source_url": "https://www.sec.gov/newsroom/speeches-statements/gensler-sifma-102124",
+          "content_sha256": "b5d3dd90b70e3cde2327896ae1daae059aeb9578e7cc8fcab70573c9a0a6f56b",
+          "source_format": "sec_official_html",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "timestamped_web_archive",
+            "locator": "https://web.archive.org/web/20241107215954id_/https://www.sec.gov/newsroom/speeches-statements/gensler-sifma-102124",
+            "observed_at": "2024-11-07T21:59:54Z",
+            "identifier": "SEC speech dated 2024-10-21; Wayback snapshot 20241107215954",
+            "artifact_sha256": "f5006c2f7b3fa499e99018b66e1d58889ba256962a37ac1f9e633f917fb29246",
+            "artifact_bytes": 86953
+          }
+        }
+      ]
+    },
+    {
+      "id": "lucid-production-2023",
+      "event_id": "lucid-full-year-2023-production",
+      "domain": "automotive",
+      "modality": "numeric_forecast_resolution",
+      "claim_made_at": "2023-08-07T23:59:59Z",
+      "resolution_deadline": "2024-12-31T23:59:59Z",
+      "normalization": "Resolve whether Lucid's full-year 2023 manufactured vehicle count was strictly greater than 10,000.",
+      "materials": [
+        {
+          "version_id": "lucid-production-claim-2023",
+          "role": "claim",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828023027783/q2fy23ex991.htm",
+          "content_sha256": "ebd29c29b4aaab4f895266e3cd1099f165a14977da18eaaa29ccb3a582fd5d9a",
+          "source_format": "sec_edgar_html",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "sec_edgar_accession",
+            "locator": "https://www.sec.gov/Archives/edgar/data/1811210/000162828023027783/0001628280-23-027783-index.htm",
+            "observed_at": "2023-08-07T23:59:59Z",
+            "identifier": "SEC accession 0001628280-23-027783, exhibit 99.1",
+            "artifact_sha256": "ffa68b2f2da23f6d566fb0afb67a9acaeea17f99e87a098e2f7dbf63c0d4e0a8",
+            "artifact_bytes": 262488
+          }
+        },
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "role": "outcome",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828024005904/q423ex991k.htm",
+          "content_sha256": "c1a119d3f6eeff76f7cc5e1666f1c43ab5c7eba59085cef2e0c1634632e4bc90",
+          "source_format": "sec_edgar_html",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "sec_edgar_accession",
+            "locator": "https://www.sec.gov/Archives/edgar/data/1811210/000162828024005904/0001628280-24-005904-index.htm",
+            "observed_at": "2024-02-21T23:59:59Z",
+            "identifier": "SEC accession 0001628280-24-005904, exhibit 99.1",
+            "artifact_sha256": "b4ad74ee5fa5a4344b7e02b474d9e2a6761ec85903ef471e572d1d1be854ccc2",
+            "artifact_bytes": 268167
+          }
+        }
+      ]
+    },
+    {
+      "id": "boeing-starliner-cft-2023",
+      "event_id": "boeing-starliner-crewed-flight-test",
+      "domain": "commercial_spaceflight",
+      "modality": "forecast_resolution",
+      "claim_made_at": "2023-01-27T23:59:59Z",
+      "resolution_deadline": "2024-12-31T23:59:59Z",
+      "normalization": "Resolve whether Boeing completed the Starliner crewed flight test no later than December 31, 2023.",
+      "materials": [
+        {
+          "version_id": "boeing-starliner-claim-2023",
+          "role": "claim",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/12927/000001292723000007/ba-20221231.htm",
+          "content_sha256": "398f412d6c54d7e23006e8c6c26b8ff42204979fd5d5c9511312a80b68ce7adb",
+          "source_format": "sec_edgar_html",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "sec_edgar_accession",
+            "locator": "https://www.sec.gov/Archives/edgar/data/12927/000001292723000007/0000012927-23-000007-index.htm",
+            "observed_at": "2023-01-27T23:59:59Z",
+            "identifier": "SEC accession 0000012927-23-000007, Form 10-K",
+            "artifact_sha256": "1ae4a90bf95ab690394210b6d9d8695cf2fc3c35c599b35c7e0fc43ffb1b4440",
+            "artifact_bytes": 4270814
+          }
+        },
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "role": "outcome",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/12927/000001292724000082/ba-20240930.htm",
+          "content_sha256": "1ec51c987ab454b970f38d308e5278e2c162994ba2338e4fa9e769dfa162df96",
+          "source_format": "sec_edgar_html",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "sec_edgar_accession",
+            "locator": "https://www.sec.gov/Archives/edgar/data/12927/000001292724000082/0000012927-24-000082-index.htm",
+            "observed_at": "2024-10-23T23:59:59Z",
+            "identifier": "SEC accession 0000012927-24-000082, Form 10-Q",
+            "artifact_sha256": "4a062538d6dee5c3133178e93a73e08afac7a4e2c5b8f01af0af357094c965f1",
+            "artifact_bytes": 1998711
+          }
+        }
+      ]
+    },
+    {
+      "id": "wto-merchandise-trade-2023",
+      "event_id": "world-merchandise-trade-volume-2023",
+      "domain": "global_trade",
+      "modality": "numeric_forecast_resolution",
+      "claim_made_at": "2023-04-05T12:00:00Z",
+      "resolution_deadline": "2024-12-31T23:59:59Z",
+      "normalization": "Resolve the full-year 2023 world merchandise trade volume growth rate against the projected positive 1.7 percent.",
+      "materials": [
+        {
+          "version_id": "wto-trade-claim-2023",
+          "role": "claim",
+          "source_url": "https://www.wto.org/english/res_e/booksp_e/trade_outlook23_e.pdf",
+          "content_sha256": "e629d9becd81fdbf982c7faac2d93411ee0096e64ac0857fc9a805a23cb14d0c",
+          "source_format": "wto_report_pdf",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "dated_official_pdf",
+            "locator": "https://www.wto.org/english/res_e/booksp_e/trade_outlook23_e.pdf",
+            "observed_at": "2023-04-05T23:59:59Z",
+            "identifier": "WTO Global Trade Outlook and Statistics 2023; HTTP ETag b4f2faf4c367d91:0; embargo 2023-04-05 14:00 Geneva",
+            "artifact_sha256": "38fbb4f00e9c896dc7b9e821c3ad15ca4742fea8aa3f362d6161f6b01c356333",
+            "artifact_bytes": 977122
+          }
+        },
+        {
+          "version_id": "wto-trade-outcome-2024",
+          "role": "outcome",
+          "source_url": "https://www.wto.org/english/res_e/booksp_e/trade_outlook24_e.pdf",
+          "content_sha256": "8739101cbf5afd5235ea235157e5f54e09965d092c6bf1456ea74f8c7399cb48",
+          "source_format": "wto_report_pdf",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "dated_official_pdf",
+            "locator": "https://www.wto.org/english/res_e/booksp_e/trade_outlook24_e.pdf",
+            "observed_at": "2024-04-10T23:59:59Z",
+            "identifier": "WTO Global Trade Outlook and Statistics, April 2024; HTTP ETag 3b3f32468bda1:0",
+            "artifact_sha256": "8dd7db3c62ec465c279f4ccabc38da127c0edeebda591a05f685a18601f6e8bb",
+            "artifact_bytes": 1815763
+          }
+        }
+      ]
+    },
+    {
+      "id": "noaa-atlantic-storms-2023",
+      "event_id": "atlantic-named-storm-count-2023",
+      "domain": "seasonal_weather",
+      "modality": "range_forecast_resolution",
+      "claim_made_at": "2023-05-25T20:39:56Z",
+      "resolution_deadline": "2024-12-31T23:59:59Z",
+      "normalization": "Resolve whether the final 2023 Atlantic named-storm count was within the inclusive range 12 through 17; do not reinterpret this as a landfall forecast.",
+      "materials": [
+        {
+          "version_id": "noaa-storms-claim-2023",
+          "role": "claim",
+          "source_url": "https://www.noaa.gov/sites/default/files/2023-05/2023HurricaneSeasonOutlookBriefing.pdf",
+          "content_sha256": "9d71740d78a611eb6965ca7562ab7fc0312e08647c8011bbf365db9e74a124e8",
+          "source_format": "noaa_briefing_pdf",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "dated_official_pdf",
+            "locator": "https://www.noaa.gov/sites/default/files/2023-05/2023HurricaneSeasonOutlookBriefing.pdf",
+            "observed_at": "2023-05-25T20:39:56Z",
+            "identifier": "NOAA 2023 Hurricane Season Outlook Hill Briefing; HTTP ETag 63246f-5fc8a9f98e23f; PDF p.23",
+            "artifact_sha256": "5bb6aebbc42ad25cde7941529c1cba588456a7a00e2175acd62f3cdf7f47faeb",
+            "artifact_bytes": 6497391
+          }
+        },
+        {
+          "version_id": "noaa-storms-outcome-2024",
+          "role": "outcome",
+          "source_url": "https://repository.library.noaa.gov/view/noaa/67833/noaa_67833_DS1.pdf",
+          "content_sha256": "5f4867fe325637c109950172c80282e260ae15561efe7eabb9c160576b2e33cf",
+          "source_format": "noaa_repository_pdf",
+          "official_source": true,
+          "body_only": true,
+          "version_proof": {
+            "kind": "official_repository_record",
+            "locator": "https://repository.library.noaa.gov/view/noaa/67833",
+            "observed_at": "2024-09-30T23:59:59Z",
+            "identifier": "NOAA repository record 67833; September 2024 issue; accepted 2024-07-08",
+            "artifact_sha256": "52ebe3ebd52ff8329097efc77d6af4f34d7510c888abd62acfdea2805b8042b7",
+            "artifact_bytes": 3647461
+          }
+        }
+      ]
+    }
+  ]
+}

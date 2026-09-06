@@ -1,0 +1,82 @@
+{
+  "release": "0.3.0",
+  "generated_at": "2026-09-06T09:12:55.370754+00:00",
+  "tests_run": 250,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "test_groups": {
+    "test_comparison": 6,
+    "test_evaluation": 19,
+    "test_harness": 25,
+    "test_historical_compare": 22,
+    "test_provenance": 26,
+    "test_release": 4,
+    "test_repair": 48,
+    "test_semantic_adapter": 18,
+    "test_staged_semantic": 58,
+    "test_target_plan_grounding": 24
+  },
+  "metric_contracts_checked": [
+    "VP",
+    "FR",
+    "TR",
+    "SR",
+    "EN",
+    "CA",
+    "HFAR"
+  ],
+  "trace_demo_usage": {
+    "rounds": 3,
+    "documents": 4,
+    "unique_versions": 4,
+    "decomposition_calls": 6,
+    "verification_calls": 3
+  },
+  "trace_demo_provenance": "original_material_located",
+  "trace_demo_fact_status": "contradicted",
+  "trace_demo_stop": "complete",
+  "packaging": {
+    "status": "passed",
+    "version": "0.3.0",
+    "distribution_scope": "core CLI/trace engine in wheel; staged experiments from source checkout",
+    "wheel": "newsverify_harness-0.3.0-py3-none-any.whl",
+    "wheel_required_files": [
+      "newsverify/__init__.py",
+      "newsverify/cli.py",
+      "newsverify/decisions.py",
+      "newsverify/provenance.py",
+      "newsverify/retrieval.py"
+    ],
+    "installed_version": "0.3.0",
+    "installed_core_demo": "passed",
+    "source_staged_help": "passed"
+  },
+  "all_data_synthetic": false,
+  "offline_demo_data_synthetic": true,
+  "historical_2023_audit": {
+    "status": "passed",
+    "artifact": "reports/historical-2023-audit-v0.3.json",
+    "benchmark_id": "historical-2023-resolved-by-2024-v1",
+    "case_count": 8,
+    "claim_window": {
+      "start": "2023-01-01T00:00:00Z",
+      "end": "2023-12-31T23:59:59Z"
+    },
+    "evidence_cutoff": "2024-12-31T23:59:59Z",
+    "labels": {
+      "true": 4,
+      "false": 4
+    },
+    "corpus_synthetic": false,
+    "declared_official_source_evidence": true,
+    "contract_audit_performed": true,
+    "remote_artifacts_independently_authenticated": false
+  },
+  "live_news_requests": 0,
+  "model_api_calls": 0,
+  "staged_model_run_performed": false,
+  "live_model_ab_performed": false,
+  "realworld_accuracy_measured": false
+}

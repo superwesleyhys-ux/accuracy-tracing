@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "historical-2023-resolved-by-2024-pilot2-v1",
+  "execution_profile": "equal-v1",
+  "arms": [
+    {
+      "name": "monolithic",
+      "status": "completed",
+      "return_code": 0,
+      "actual_model_calls": 8,
+      "logical_model_calls": 8,
+      "cases": [
+        {
+          "id": "virgin-galactic-commercial-service-2023",
+          "status": "completed",
+          "decision": "true",
+          "error_type": null,
+          "usage": {
+            "model_calls": 4,
+            "input_tokens": 7609,
+            "output_tokens": 3196,
+            "seconds": 54.73551179096103
+          },
+          "actual_new_api_usage": {
+            "model_calls": 4,
+            "input_tokens": 7609,
+            "output_tokens": 3196
+          }
+        },
+        {
+          "id": "boeing-starliner-cft-2023",
+          "status": "completed",
+          "decision": "false",
+          "error_type": null,
+          "usage": {
+            "model_calls": 4,
+            "input_tokens": 7775,
+            "output_tokens": 3360,
+            "seconds": 54.368984541040845
+          },
+          "actual_new_api_usage": {
+            "model_calls": 4,
+            "input_tokens": 7775,
+            "output_tokens": 3360
+          }
+        }
+      ],
+      "full_evidence_controls": []
+    },
+    {
+      "name": "staged",
+      "status": "has_errors",
+      "return_code": 1,
+      "actual_model_calls": 14,
+      "logical_model_calls": 14,
+      "cases": [
+        {
+          "id": "virgin-galactic-commercial-service-2023",
+          "status": "error",
+          "decision": "unverifiable",
+          "error_type": "StagedSemanticError",
+          "usage": {
+            "model_calls": 7,
+            "input_tokens": 7836,
+            "output_tokens": 1740,
+            "seconds": 46.34988037496805
+          },
+          "actual_new_api_usage": {
+            "model_calls": 7,
+            "input_tokens": 7836,
+            "output_tokens": 1740
+          }
+        },
+        {
+          "id": "boeing-starliner-cft-2023",
+          "status": "error",
+          "decision": "unverifiable",
+          "error_type": "StagedSemanticError",
+          "usage": {
+            "model_calls": 7,
+            "input_tokens": 7924,
+            "output_tokens": 1548,
+            "seconds": 38.149657499976456
+          },
+          "actual_new_api_usage": {
+            "model_calls": 7,
+            "input_tokens": 7924,
+            "output_tokens": 1548
+          }
+        }
+      ],
+      "full_evidence_controls": []
+    }
+  ]
+}

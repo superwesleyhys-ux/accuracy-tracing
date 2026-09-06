@@ -1,0 +1,53 @@
+{
+  "id": "bridge-evidence",
+  "variant": "loop",
+  "status": "completed",
+  "prediction": {
+    "id": "bridge-evidence",
+    "assessment_mode": "evidence",
+    "as_of": "2026-09-04T20:00:00Z",
+    "decision": "false",
+    "assessments": {
+      "evidence": {
+        "raw_verdict": "contradicted",
+        "decision": "contradicted",
+        "blocking_gap_ids": []
+      },
+      "world": {
+        "raw_verdict": "unresolved",
+        "decision": "unresolved",
+        "blocking_gap_ids": []
+      }
+    },
+    "provenance_status": "original_material_located",
+    "assessment_valid": true,
+    "stop_reason": "complete"
+  },
+  "checkpoints": [
+    {
+      "round": 1,
+      "id": "bridge-evidence",
+      "decision": "false",
+      "assessment_mode": "evidence",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "provenance_status": "original_material_located"
+    }
+  ],
+  "usage": {
+    "model_calls": 4,
+    "input_tokens": 6888,
+    "output_tokens": 3611,
+    "seconds": 66.31267465600104
+  }
+}

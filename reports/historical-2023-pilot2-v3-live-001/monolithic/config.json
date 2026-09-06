@@ -1,0 +1,53 @@
+{
+  "model": "gpt-6-astra",
+  "reasoning_effort": null,
+  "execution_profile": "equal-v1",
+  "max_rounds": 5,
+  "trace_config": {
+    "max_rounds": 5,
+    "max_documents": 18,
+    "max_decomposition_calls": 18
+  },
+  "budget": {
+    "calls": 128,
+    "output_tokens": 480000,
+    "per_call_output_tokens": 8000,
+    "seconds": 1800
+  },
+  "model_retrieved_at_exposed": false,
+  "source_manifest_sha256": "11287c92379d8bc3a65273ede2be200bc5df5e54bdea213719fe472e14f90d13",
+  "git_commit": "c722888bb4be0c31caedf0de3654267e935eb064",
+  "semantic_mode": "monolithic",
+  "max_inner_repairs": 0,
+  "input_sha256": "c86b8e56f4c4b76025ed7caf482074762be319b3dcad5cc9bcee4028c96c5816",
+  "source_sha256": {
+    "newsverify/__init__.py": "0ac9f5e7253a49739180448259a9dfe2dc85ab7537f23074481d449136b77c96",
+    "newsverify/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "newsverify/cli.py": "8c810053cae5b605d46d4004fd92e8920ca6fcc9a813d205f68ed96bb73a515b",
+    "newsverify/comparison.py": "b35ddbb2e82a5a763aac31982f28c984ca50a242ecb07a1245128e09199279c5",
+    "newsverify/core.py": "8f148c272de3be772581dc78644411fa2b56d1eb809045ef6423620ac7a41d88",
+    "newsverify/decisions.py": "fe93d618b0f122591b39def16e952a4076c4fc66d69d81198c28489e245b4b3e",
+    "newsverify/evaluation.py": "2c971584562232d979fa9523c610b94a53c6d76a74940dbc58a581773c336e4f",
+    "newsverify/provenance.py": "7992f982f14162871b9d2066c6a9c8c499b85260e18453e4b5859ca7589d54cc",
+    "newsverify/providers.py": "7cb362d1f89270e82b1b34590eecac607a43896a6bbe763c3b88b0254970b568",
+    "newsverify/retrieval.py": "9e8b1a32656f8aeab7eed6250c3efce35f4e1c45b711c492365b3e87beed2567",
+    "newsverify/trace_demo.py": "960c78e0fc2aa2bb428dd13db59c3c8314c7e7ffe533d2fe64d80267474b1251",
+    "experiments/historical_compare.py": "9b14cf9dc732eaa92d86d145b1a429ebefcb557e4271a2a7525ed011f7acde8b",
+    "experiments/loop_compare.py": "5316d395ad4338f118c5f5d55d4ddd9a6c83ac8a16ca6b791a9565c17ce0cc72",
+    "experiments/model_io.py": "2b082b6f0d19e75bd3619004e0b4f8637090feaf82d1c2c68fa7952346e95417",
+    "experiments/prompt_specs.py": "badd4e7b35e10cec3c50528057bc110d19005febd9aa8ae4eba68751c163efcb",
+    "experiments/secure_run.py": "3f869162b7ee60082f750d972f5b2afe0a61dac92344ee162f84534c05811cb5",
+    "experiments/semantic_adapter.py": "07d9ace4d83c96d0c06fbf682fe1732a583655a94e5389b3401da7400ef9c407",
+    "experiments/staged_semantic.py": "ea2b7bf3a74ebd0bf1ff79cb89647dad39f6ddecf6a63f426c9d263dac4cffd3",
+    "experiments/target_plan.py": "ebdf7d4e9e18fe70bb0de400d36f9b4fd7d50dd03574c47850c6c1d3a4a4e6e9"
+  },
+  "comparison": "exact first-round checkpoint versus continued loop; same decision function",
+  "control": "one-round all-materials control for flagged cases separates access from repeated reasoning",
+  "original_agent_reexecuted": false,
+  "gold_access_during_inference": false,
+  "actual_spend_equal": false,
+  "input_tokens_capped": false,
+  "prompt_manifest": null,
+  "reuse_from": null,
+  "cache_rule": "same case/variant and run-level execution-profile/trace-config; exact requested-model/reasoning/system/user/schema/response-mode/output-cap match; one-shot replay; historical time/tokens charged"
+}

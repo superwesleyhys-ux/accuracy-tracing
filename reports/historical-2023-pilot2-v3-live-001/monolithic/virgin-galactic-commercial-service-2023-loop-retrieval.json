@@ -1,0 +1,59 @@
+[
+  {
+    "round": 1,
+    "tasks": [
+      {
+        "id": "origin:virgin-galactic-commercial-service-2023",
+        "question": "Find the producing record and evidenced lineage for: Virgin Galactic will commence commercial service during the second quarter of 2023.",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null,
+        "probe_id": null
+      }
+    ],
+    "planned_ids": [
+      "virgin-commercial-claim-2023"
+    ],
+    "returned_ids": [
+      "virgin-commercial-claim-2023"
+    ],
+    "attribution": {},
+    "feedback": []
+  },
+  {
+    "round": 2,
+    "tasks": [
+      {
+        "id": "retrieve-scoped-commercial-outcome",
+        "question": "What does virgin-commercial-outcome-2024 report about when Virgin Galactic commenced commercial service?",
+        "stage": "verification",
+        "dimension": "evidence",
+        "blocking": false,
+        "target_id": "virgin-galactic-commercial-service-2023",
+        "basis": [],
+        "decision_impact": "A scoped statement placing commencement in Q2 2023 would support the target; a statement placing it outside that quarter would contradict it.",
+        "action": "fetch",
+        "locator": "version_id:virgin-commercial-outcome-2024",
+        "probe_id": null
+      }
+    ],
+    "planned_ids": [],
+    "returned_ids": [],
+    "attribution": {},
+    "feedback": [
+      {
+        "gap_id": "retrieve-scoped-commercial-outcome",
+        "action": "fetch",
+        "locator": "version_id:virgin-commercial-outcome-2024",
+        "status": "unavailable",
+        "reason": "no unseen match in fixed snapshot index; live web unavailable",
+        "version_ids": []
+      }
+    ]
+  }
+]

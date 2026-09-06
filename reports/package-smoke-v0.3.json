@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "version": "0.3.0",
+  "distribution_scope": "core CLI/trace engine in wheel; staged experiments from source checkout",
+  "wheel": "newsverify_harness-0.3.0-py3-none-any.whl",
+  "wheel_required_files": [
+    "newsverify/__init__.py",
+    "newsverify/cli.py",
+    "newsverify/decisions.py",
+    "newsverify/provenance.py",
+    "newsverify/retrieval.py"
+  ],
+  "installed_version": "0.3.0",
+  "installed_core_demo": "passed",
+  "source_staged_help": "passed"
+}

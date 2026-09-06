@@ -1,0 +1,425 @@
+{
+  "prompt_manifest": {
+    "version": "staged-validation-v5",
+    "target_plan_version": "deterministic-target-plan-v4",
+    "stages": {
+      "atoms": {
+        "prompt_sha256": "d4689c70d37d4afa8ef6139b2e766a51f85f0fd5b74b38797e778c0cb9c2af59",
+        "schema_sha256": "a0a676a8ceac4961596f8ea057f579ef5eeb93980c3c39b3cbb88f81d692bc9b"
+      },
+      "lineage": {
+        "prompt_sha256": "229dbdbbcea5df9ee86d45b91f0c98cb636645e5bfc5279ac40972bd0092ff8d",
+        "schema_sha256": "892c80a8fdb57a98d8ca917cd9926142883645fcc84036a063ebc24740535bc4"
+      },
+      "decomposition_critic": {
+        "prompt_sha256": "47125cea7fce0618a01b4d75107f0413c0caf80600bd25726797ba3c8fe62a49",
+        "schema_sha256": "9d5d4e1d01a1cdc27368fd7880e55862fb0a263e3fa4babb767595c184d00134"
+      },
+      "evidence": {
+        "prompt_sha256": "13a19f7652855526a099a94ed87f248b01daaec78b974b586169672e8f0097a4",
+        "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f"
+      },
+      "world": {
+        "prompt_sha256": "679a24e5a244c45b7d332fb5f3354b869bff7044ffa447364d487c5f7612986f",
+        "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f"
+      },
+      "evidence_critic": {
+        "prompt_sha256": "51808a204c719b0cfc2def68e5f1c937e637a9e6f8c8655de2b568170cce7d50",
+        "schema_sha256": "f31d5df8f2a48083ea4af0f45daf80582f409aa724b969c836b46d8d69575025"
+      },
+      "world_critic": {
+        "prompt_sha256": "2bf842fb7c8fb4133841267feed89cb6a10f2494bd776af7476cc988f3c775fc",
+        "schema_sha256": "f31d5df8f2a48083ea4af0f45daf80582f409aa724b969c836b46d8d69575025"
+      }
+    }
+  },
+  "target_plans": {
+    "boeing-starliner-cft-2023": {
+      "version": "deterministic-target-plan-v4",
+      "target_id": "boeing-starliner-cft-2023",
+      "target_text_sha256": "c3d71073226cdcd3f9b464f5cd2501c644d864b0e729d60169c4b615cb7c6593",
+      "operator": "all",
+      "probes": [
+        {
+          "number": 1,
+          "id": "boeing-starliner-cft-2023:probe:cce75521614a1bb2f130",
+          "text": "Boeing will complete the Starliner crewed flight test by December 31, 2023.",
+          "start": 0,
+          "end": 75,
+          "required_dimensions": [
+            "actor_subject",
+            "predicate_object",
+            "scope_location",
+            "time"
+          ]
+        }
+      ],
+      "plan_sha256": "550456095ea7a5094d417b24fb0424e429686c61b11ddb061668930305066f6f"
+    }
+  },
+  "decomposition": [
+    {
+      "sequence": 1,
+      "material": "boeing-starliner-claim-2023",
+      "round": 1,
+      "stage": "atoms",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "d4689c70d37d4afa8ef6139b2e766a51f85f0fd5b74b38797e778c0cb9c2af59",
+      "payload_sha256": "5f824a0837499f4ca204fd8193875048c272fc9c5564d58496d94d4e9d7c54ed",
+      "schema_sha256": "a0a676a8ceac4961596f8ea057f579ef5eeb93980c3c39b3cbb88f81d692bc9b",
+      "status": "accepted",
+      "transaction_id": "decompose:boeing-starliner-cft-2023:boeing-starliner-claim-2023:1",
+      "model_call_sequence": 1,
+      "request_digest": "34ce1a2746e15861a0f7b4701ba99f4c8d69973467615dd8f62a39dc1f7c90bb",
+      "response_id": "chatcmpl-EL1OOKkHpof2sOqNnhY5ScKc4RtFH",
+      "usage": {
+        "input_tokens": 879,
+        "output_tokens": 107
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "81f8747fabcbcad64ea6d91ea9f2952e4f2c6ef8cfe5d87c74b79f2317356a45"
+    },
+    {
+      "sequence": 2,
+      "material": "boeing-starliner-claim-2023",
+      "round": 1,
+      "stage": "lineage",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "229dbdbbcea5df9ee86d45b91f0c98cb636645e5bfc5279ac40972bd0092ff8d",
+      "payload_sha256": "90c80117fd75ffd9389a95a0fba77bc8ca1820140ea7a195449ea8d2d6cb4090",
+      "schema_sha256": "892c80a8fdb57a98d8ca917cd9926142883645fcc84036a063ebc24740535bc4",
+      "status": "accepted",
+      "transaction_id": "decompose:boeing-starliner-cft-2023:boeing-starliner-claim-2023:1",
+      "model_call_sequence": 2,
+      "request_digest": "aea5ed3a260f336c06e20f9018458a4adc2a17aa0c88926130ed5535911635a0",
+      "response_id": "chatcmpl-EL1OT0nR2Ahb3cCqEheGjHiGzSWje",
+      "usage": {
+        "input_tokens": 1102,
+        "output_tokens": 112
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "db9aa9f45e087ec98f994f8d7d80f245df35db4ad7264f4e5a61818398f15b20"
+    },
+    {
+      "sequence": 3,
+      "material": "boeing-starliner-claim-2023",
+      "round": 1,
+      "stage": "decomposition_critic",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "47125cea7fce0618a01b4d75107f0413c0caf80600bd25726797ba3c8fe62a49",
+      "payload_sha256": "42ddf7d63aca4dddb26d2b80a9b591cd55e1f0830fa485724d8b7229f89f4adf",
+      "schema_sha256": "9d5d4e1d01a1cdc27368fd7880e55862fb0a263e3fa4babb767595c184d00134",
+      "status": "accepted",
+      "transaction_id": "decompose:boeing-starliner-cft-2023:boeing-starliner-claim-2023:1",
+      "model_call_sequence": 3,
+      "request_digest": "97b01abcc35a246bcf0f1fa2e697670da72c686657494a327d76e093eebf7dbc",
+      "response_id": "chatcmpl-EL1OWBOLK3fzHS8rHLfm4dwdm4BiS",
+      "usage": {
+        "input_tokens": 1084,
+        "output_tokens": 63
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "6a2cfe81bfbaf11777ea6071088b27f1b6259796a7db1cd46b63981c232135b7"
+    },
+    {
+      "sequence": 4,
+      "material": "boeing-starliner-claim-2023",
+      "round": 1,
+      "stage": "decomposition_assembly",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "input_sha256": "064c04bac55c09ab441fd9d26a9ea70d7c124eb003d937d5b6782fa1dbcf9426",
+      "status": "accepted",
+      "transaction_id": "decompose:boeing-starliner-cft-2023:boeing-starliner-claim-2023:1",
+      "output_sha256": "3281f1a80b6070d63b48cd913a4a6f291b910bfde729f360bddb7fe96f6e20cb"
+    },
+    {
+      "sequence": 5,
+      "material": "boeing-starliner-outcome-2024",
+      "round": 2,
+      "stage": "atoms",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "d4689c70d37d4afa8ef6139b2e766a51f85f0fd5b74b38797e778c0cb9c2af59",
+      "payload_sha256": "36d934859d7cdf2e6c6e1da8430746feefa87a4ad640bf99c5f19335fa9f111a",
+      "schema_sha256": "a0a676a8ceac4961596f8ea057f579ef5eeb93980c3c39b3cbb88f81d692bc9b",
+      "status": "accepted",
+      "transaction_id": "decompose:boeing-starliner-cft-2023:boeing-starliner-outcome-2024:2",
+      "model_call_sequence": 8,
+      "request_digest": "7aecdfa029e5a0ad21e634c5d5db9e2695c3736976d61df174b0cb7bcf39176c",
+      "response_id": "chatcmpl-EL1OpZuMsOv92WXt9O3LvJjFgqe8A",
+      "usage": {
+        "input_tokens": 1216,
+        "output_tokens": 432
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "084e05eb51b59f74d2f1b7f4755a67612df9faeb78992a6751f621f12538a59a"
+    },
+    {
+      "sequence": 6,
+      "material": "boeing-starliner-outcome-2024",
+      "round": 2,
+      "stage": "lineage",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "229dbdbbcea5df9ee86d45b91f0c98cb636645e5bfc5279ac40972bd0092ff8d",
+      "payload_sha256": "5b05389f0f58154b75b5f36343b69195f9d95b0cf4d63c84653f1f3dfb4f6cee",
+      "schema_sha256": "892c80a8fdb57a98d8ca917cd9926142883645fcc84036a063ebc24740535bc4",
+      "status": "accepted",
+      "transaction_id": "decompose:boeing-starliner-cft-2023:boeing-starliner-outcome-2024:2",
+      "model_call_sequence": 9,
+      "request_digest": "bc08d8d0588573882edeff7e35a2491086225efec49fc25428606778219f945c",
+      "response_id": "chatcmpl-EL1OyNVQqQ42JirgVQKr3UT5k8eOf",
+      "usage": {
+        "input_tokens": 1483,
+        "output_tokens": 189
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "8c5c43b7c0e9fef516277ed9eb89c9126b18dfb9321b8744b22597595a143bc9"
+    },
+    {
+      "sequence": 7,
+      "material": "boeing-starliner-outcome-2024",
+      "round": 2,
+      "stage": "decomposition_critic",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "47125cea7fce0618a01b4d75107f0413c0caf80600bd25726797ba3c8fe62a49",
+      "payload_sha256": "2dfb41f7ac78e4ac417631fdae893d3d66c0befc1353993e580a153b23456bf4",
+      "schema_sha256": "9d5d4e1d01a1cdc27368fd7880e55862fb0a263e3fa4babb767595c184d00134",
+      "status": "repair_requested",
+      "transaction_id": "decompose:boeing-starliner-cft-2023:boeing-starliner-outcome-2024:2",
+      "model_call_sequence": 10,
+      "request_digest": "2352d9bf2df7bdc63b29c151f005c24a38321225455c87645965ee16bf73f52f",
+      "response_id": "chatcmpl-EL1P5GsgsPrlYD9OpA7uWjzsW5g4J",
+      "usage": {
+        "input_tokens": 2187,
+        "output_tokens": 135
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "22fa1e4cdeb862425184fb4d0f5b277bc570550519eceb03a2807f5c90f07464"
+    },
+    {
+      "sequence": 8,
+      "material": "boeing-starliner-outcome-2024",
+      "round": 2,
+      "stage": "atoms",
+      "repair": 1,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "d4689c70d37d4afa8ef6139b2e766a51f85f0fd5b74b38797e778c0cb9c2af59",
+      "payload_sha256": "0d81a25bb9da8d94a346a299799cc4650d8891bd90ffdbd9b4cbbe9a78eb397e",
+      "schema_sha256": "a0a676a8ceac4961596f8ea057f579ef5eeb93980c3c39b3cbb88f81d692bc9b",
+      "status": "accepted",
+      "transaction_id": "decompose:boeing-starliner-cft-2023:boeing-starliner-outcome-2024:2",
+      "repair_of": 5,
+      "model_call_sequence": 11,
+      "request_digest": "0fd70929ce2d3546e50ede7e7edc44077b2c7c1c1177029ec9cb2c18929acbb6",
+      "response_id": "chatcmpl-EL1P90UpvODQDQQxpQNcrju8V3ks3",
+      "usage": {
+        "input_tokens": 1510,
+        "output_tokens": 274
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "2f5431559e9922309b2f31315ca49ad2127021f3f092054906d543b92247300f"
+    },
+    {
+      "sequence": 9,
+      "material": "boeing-starliner-outcome-2024",
+      "round": 2,
+      "stage": "decomposition_critic",
+      "repair": 1,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "47125cea7fce0618a01b4d75107f0413c0caf80600bd25726797ba3c8fe62a49",
+      "payload_sha256": "7fccfda8d93cf1ffa1f7dbf32495e7d056c349305555b874af75c2a4e9ac6032",
+      "schema_sha256": "9d5d4e1d01a1cdc27368fd7880e55862fb0a263e3fa4babb767595c184d00134",
+      "status": "accepted",
+      "transaction_id": "decompose:boeing-starliner-cft-2023:boeing-starliner-outcome-2024:2",
+      "repair_of": 7,
+      "model_call_sequence": 12,
+      "request_digest": "761af938c923ae9d28251b72410eaf481aadb3ff4f24aeb7df52dbf708fd64d2",
+      "response_id": "chatcmpl-EL1PEAK00aN6D4l0mdweySrGqOf1m",
+      "usage": {
+        "input_tokens": 2207,
+        "output_tokens": 79
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "6a2cfe81bfbaf11777ea6071088b27f1b6259796a7db1cd46b63981c232135b7"
+    },
+    {
+      "sequence": 10,
+      "material": "boeing-starliner-outcome-2024",
+      "round": 2,
+      "stage": "decomposition_assembly",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "input_sha256": "3689eefcc372ebcbbadd44d65aa957eac88e5111e37af57f34859618caa290ad",
+      "status": "accepted",
+      "transaction_id": "decompose:boeing-starliner-cft-2023:boeing-starliner-outcome-2024:2",
+      "output_sha256": "0c5c4d248fa866180ec6d6febab3c13d9816cb0870bdaa1b4d6a470070ea8220"
+    }
+  ],
+  "verification": [
+    {
+      "sequence": 1,
+      "material": null,
+      "round": 1,
+      "stage": "evidence",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "13a19f7652855526a099a94ed87f248b01daaec78b974b586169672e8f0097a4",
+      "payload_sha256": "29bccc161e637966cb71fe4bc03e7002e3851890234bb965a01e10753f6a4fef",
+      "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f",
+      "status": "accepted",
+      "transaction_id": "verify:boeing-starliner-cft-2023:all:1",
+      "model_call_sequence": 4,
+      "request_digest": "0b9794b8379c13c7d7b42cb770d657accf1c95959f0cdc91c79f75de9d811782",
+      "response_id": "chatcmpl-EL1OarF2vXRkoXsmnRvsDMyQDQlwN",
+      "usage": {
+        "input_tokens": 1142,
+        "output_tokens": 188
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "8ac4d53d81d9ed77ce35ada90cb2ad6ddd00bd98f7586788608f1a81887b1fb3"
+    },
+    {
+      "sequence": 2,
+      "material": null,
+      "round": 1,
+      "stage": "evidence_critic",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "51808a204c719b0cfc2def68e5f1c937e637a9e6f8c8655de2b568170cce7d50",
+      "payload_sha256": "c6f112e7ec920b271a409b8ddfc9292678b6f601efee8a347da4c54dc33dc297",
+      "schema_sha256": "f31d5df8f2a48083ea4af0f45daf80582f409aa724b969c836b46d8d69575025",
+      "status": "accepted",
+      "transaction_id": "verify:boeing-starliner-cft-2023:all:1",
+      "model_call_sequence": 5,
+      "request_digest": "81a82485d70a99182b39a889e6352c2bd23c59375ae1fc88a302b23acb61ab40",
+      "response_id": "chatcmpl-EL1Of6eNJm3zMk0NZN0yu1oPn7nYF",
+      "usage": {
+        "input_tokens": 775,
+        "output_tokens": 16
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "4416c91dc608e25f6475ab7236fc707f72899b1a5c64747aed881b95d0be0395"
+    },
+    {
+      "sequence": 3,
+      "material": null,
+      "round": 1,
+      "stage": "world",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "679a24e5a244c45b7d332fb5f3354b869bff7044ffa447364d487c5f7612986f",
+      "payload_sha256": "93a1fe657a044d0961227811eb442b22f03e44b33c2165ba3fbd14b0a70be697",
+      "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f",
+      "status": "accepted",
+      "transaction_id": "verify:boeing-starliner-cft-2023:all:1",
+      "model_call_sequence": 6,
+      "request_digest": "64ab7e00a084497989251340ea3936fc76f8472e6a4e04a5a1534273ac11c417",
+      "response_id": "chatcmpl-EL1Oi38W4cjCg7syDaNIdgaGruTEL",
+      "usage": {
+        "input_tokens": 1365,
+        "output_tokens": 192
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "94e5951f137098478f97023bb1465720a612ddea69fcd21ff9f69acfc300a564"
+    },
+    {
+      "sequence": 4,
+      "material": null,
+      "round": 1,
+      "stage": "world_critic",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "2bf842fb7c8fb4133841267feed89cb6a10f2494bd776af7476cc988f3c775fc",
+      "payload_sha256": "c0eb5e026800e08f2923e518528d3a82ecea485bc4a8d15a974efb15a420da3c",
+      "schema_sha256": "f31d5df8f2a48083ea4af0f45daf80582f409aa724b969c836b46d8d69575025",
+      "status": "accepted",
+      "transaction_id": "verify:boeing-starliner-cft-2023:all:1",
+      "model_call_sequence": 7,
+      "request_digest": "6302e16e15b2a5b6315c039454ce052468658847ca387c020c558f3d29f2dfb4",
+      "response_id": "chatcmpl-EL1OnJ6QYhPwmnHHMpu0FfUqzyMmF",
+      "usage": {
+        "input_tokens": 1057,
+        "output_tokens": 60
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "4416c91dc608e25f6475ab7236fc707f72899b1a5c64747aed881b95d0be0395"
+    },
+    {
+      "sequence": 5,
+      "material": null,
+      "round": 1,
+      "stage": "judgement_assembly",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "input_sha256": "7895c3d0bfcfe8b587ea9aa557ffa84a46745ca623b8f59e01e013f4a6eea615",
+      "status": "accepted",
+      "transaction_id": "verify:boeing-starliner-cft-2023:all:1",
+      "output_sha256": "8bdf194d445e58148d6aaea7ff8964af6983800fe8a716f185d12c435df60191"
+    },
+    {
+      "sequence": 6,
+      "material": null,
+      "round": 2,
+      "stage": "evidence",
+      "repair": 0,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "13a19f7652855526a099a94ed87f248b01daaec78b974b586169672e8f0097a4",
+      "payload_sha256": "3c7b84b0d0d561db458ef812f6a942469ab5a96623e55bdf055e444722bef074",
+      "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f",
+      "status": "repair_requested",
+      "transaction_id": "verify:boeing-starliner-cft-2023:all:2",
+      "model_call_sequence": 13,
+      "request_digest": "0c46d52644e0a2061e3cedabbd4082e58b5a2e3a783ea335b2a6da655b8478a0",
+      "response_id": "chatcmpl-EL1PHE3PO5MxEjnTXeJZODI2mKrmV",
+      "usage": {
+        "input_tokens": 1960,
+        "output_tokens": 555
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "7f1a34af67e4dfffcf51212933c03b6675f9889920f227283609aedebbfbf13f"
+    },
+    {
+      "sequence": 7,
+      "material": null,
+      "round": 2,
+      "stage": "evidence",
+      "repair": 1,
+      "prompt_version": "staged-validation-v5",
+      "system_prompt_sha256": "13a19f7652855526a099a94ed87f248b01daaec78b974b586169672e8f0097a4",
+      "payload_sha256": "e52ed2906b2572b049fff9f55991e53913cab151cd67227fffc553541fbfe851",
+      "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f",
+      "status": "repair_exhausted",
+      "transaction_id": "verify:boeing-starliner-cft-2023:all:2",
+      "repair_of": 6,
+      "model_call_sequence": 14,
+      "request_digest": "52fcfd39fe5bdd316cf8d6c6c740c3d87b78b6005300491d4d5d659877862801",
+      "response_id": "chatcmpl-EL1PRKucyZ6Q0PUtLjoDGK3wDIKMZ",
+      "usage": {
+        "input_tokens": 2379,
+        "output_tokens": 536
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "d02f902a75a86c48adab55049595ccf9027d8c5fd44c075c76b816b0efaf2585"
+    }
+  ]
+}

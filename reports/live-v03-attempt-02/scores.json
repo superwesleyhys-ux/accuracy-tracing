@@ -1,0 +1,74 @@
+{
+  "status": "scored",
+  "dataset_kind": "synthetic_contract_examples",
+  "cases": [
+    {
+      "id": "bridge-evidence",
+      "gold": "false",
+      "first_round": "false",
+      "last_round": "false",
+      "rounds_verified": 1,
+      "first_correct": true,
+      "last_correct": true,
+      "status": "completed"
+    },
+    {
+      "id": "library-evidence",
+      "gold": "true",
+      "first_round": "true",
+      "last_round": "true",
+      "rounds_verified": 1,
+      "first_correct": true,
+      "last_correct": true,
+      "status": "completed"
+    },
+    {
+      "id": "conflict-evidence",
+      "gold": "disputed",
+      "first_round": "disputed",
+      "last_round": "disputed",
+      "rounds_verified": 1,
+      "first_correct": true,
+      "last_correct": true,
+      "status": "completed"
+    },
+    {
+      "id": "chain-evidence",
+      "gold": "true",
+      "first_round": "unverifiable",
+      "last_round": "true",
+      "rounds_verified": 2,
+      "first_correct": false,
+      "last_correct": true,
+      "status": "completed"
+    },
+    {
+      "id": "world-unknown",
+      "gold": "unverifiable",
+      "first_round": "unverifiable",
+      "last_round": "unverifiable",
+      "rounds_verified": 1,
+      "first_correct": true,
+      "last_correct": true,
+      "status": "completed"
+    }
+  ],
+  "controls": [
+    {
+      "id": "chain-evidence",
+      "decision": "true",
+      "status": "completed"
+    }
+  ],
+  "overall": {
+    "n": 5,
+    "first_correct": 4,
+    "last_correct": 5
+  },
+  "limits": [
+    "Not independently reviewed or held out; not real-news accuracy.",
+    "First-round baseline reuses the exact live prefix; no stochastic independent baseline run.",
+    "Additional retrieval can change evidence access; consult the full-evidence control.",
+    "No synthetic confidence probabilities or aggregate NVScore were invented."
+  ]
+}

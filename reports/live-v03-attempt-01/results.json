@@ -1,0 +1,341 @@
+[
+  {
+    "id": "library-evidence",
+    "variant": "loop",
+    "status": "completed",
+    "prediction": {
+      "id": "library-evidence",
+      "assessment_mode": "evidence",
+      "as_of": "2026-09-04T20:00:00Z",
+      "decision": "true",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "provenance_status": "partial",
+      "assessment_valid": true,
+      "stop_reason": "provider_exhausted"
+    },
+    "checkpoints": [
+      {
+        "round": 1,
+        "id": "library-evidence",
+        "decision": "true",
+        "assessment_mode": "evidence",
+        "assessments": {
+          "evidence": {
+            "raw_verdict": "supported",
+            "decision": "supported",
+            "blocking_gap_ids": []
+          },
+          "world": {
+            "raw_verdict": "unresolved",
+            "decision": "unresolved",
+            "blocking_gap_ids": []
+          }
+        },
+        "provenance_status": "partial"
+      }
+    ],
+    "usage": {
+      "model_calls": 3,
+      "input_tokens": 4586,
+      "output_tokens": 2617,
+      "seconds": 50.6583921890051
+    }
+  },
+  {
+    "id": "bridge-evidence",
+    "variant": "loop",
+    "status": "completed",
+    "prediction": {
+      "id": "bridge-evidence",
+      "assessment_mode": "evidence",
+      "as_of": "2026-09-04T20:00:00Z",
+      "decision": "false",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "provenance_status": "original_material_located",
+      "assessment_valid": true,
+      "stop_reason": "complete"
+    },
+    "checkpoints": [
+      {
+        "round": 1,
+        "id": "bridge-evidence",
+        "decision": "false",
+        "assessment_mode": "evidence",
+        "assessments": {
+          "evidence": {
+            "raw_verdict": "contradicted",
+            "decision": "contradicted",
+            "blocking_gap_ids": []
+          },
+          "world": {
+            "raw_verdict": "unresolved",
+            "decision": "unresolved",
+            "blocking_gap_ids": []
+          }
+        },
+        "provenance_status": "original_material_located"
+      }
+    ],
+    "usage": {
+      "model_calls": 4,
+      "input_tokens": 6888,
+      "output_tokens": 3611,
+      "seconds": 66.31267465600104
+    }
+  },
+  {
+    "id": "conflict-evidence",
+    "variant": "loop",
+    "status": "completed",
+    "prediction": {
+      "id": "conflict-evidence",
+      "assessment_mode": "evidence",
+      "as_of": "2026-09-04T20:00:00Z",
+      "decision": "disputed",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "conflicting",
+          "decision": "conflicting",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "provenance_status": "partial",
+      "assessment_valid": true,
+      "stop_reason": "provider_exhausted"
+    },
+    "checkpoints": [
+      {
+        "round": 1,
+        "id": "conflict-evidence",
+        "decision": "disputed",
+        "assessment_mode": "evidence",
+        "assessments": {
+          "evidence": {
+            "raw_verdict": "conflicting",
+            "decision": "conflicting",
+            "blocking_gap_ids": []
+          },
+          "world": {
+            "raw_verdict": "unresolved",
+            "decision": "unresolved",
+            "blocking_gap_ids": []
+          }
+        },
+        "provenance_status": "partial"
+      }
+    ],
+    "usage": {
+      "model_calls": 3,
+      "input_tokens": 4283,
+      "output_tokens": 1344,
+      "seconds": 32.02177514199866
+    }
+  },
+  {
+    "id": "chain-evidence",
+    "variant": "loop",
+    "status": "completed",
+    "prediction": {
+      "id": "chain-evidence",
+      "assessment_mode": "evidence",
+      "as_of": "2026-09-04T20:00:00Z",
+      "decision": "true",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "provenance_status": "partial",
+      "assessment_valid": true,
+      "stop_reason": "provider_exhausted"
+    },
+    "checkpoints": [
+      {
+        "round": 1,
+        "id": "chain-evidence",
+        "decision": "unverifiable",
+        "assessment_mode": "evidence",
+        "assessments": {
+          "evidence": {
+            "raw_verdict": "unresolved",
+            "decision": "unresolved",
+            "blocking_gap_ids": [
+              "fetch-scoped-bulletin-c"
+            ]
+          },
+          "world": {
+            "raw_verdict": "unresolved",
+            "decision": "unresolved",
+            "blocking_gap_ids": []
+          }
+        },
+        "provenance_status": "partial"
+      },
+      {
+        "round": 2,
+        "id": "chain-evidence",
+        "decision": "true",
+        "assessment_mode": "evidence",
+        "assessments": {
+          "evidence": {
+            "raw_verdict": "supported",
+            "decision": "supported",
+            "blocking_gap_ids": []
+          },
+          "world": {
+            "raw_verdict": "unresolved",
+            "decision": "unresolved",
+            "blocking_gap_ids": []
+          }
+        },
+        "provenance_status": "partial"
+      }
+    ],
+    "usage": {
+      "model_calls": 5,
+      "input_tokens": 8265,
+      "output_tokens": 4112,
+      "seconds": 71.4153319879988
+    }
+  },
+  {
+    "id": "world-unknown",
+    "variant": "loop",
+    "status": "completed",
+    "prediction": {
+      "id": "world-unknown",
+      "assessment_mode": "world",
+      "as_of": "2026-09-04T20:00:00Z",
+      "decision": "unverifiable",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "provenance_status": "partial",
+      "assessment_valid": true,
+      "stop_reason": "provider_exhausted"
+    },
+    "checkpoints": [
+      {
+        "round": 1,
+        "id": "world-unknown",
+        "decision": "unverifiable",
+        "assessment_mode": "world",
+        "assessments": {
+          "evidence": {
+            "raw_verdict": "supported",
+            "decision": "supported",
+            "blocking_gap_ids": []
+          },
+          "world": {
+            "raw_verdict": "unresolved",
+            "decision": "unresolved",
+            "blocking_gap_ids": []
+          }
+        },
+        "provenance_status": "partial"
+      }
+    ],
+    "usage": {
+      "model_calls": 3,
+      "input_tokens": 4587,
+      "output_tokens": 2555,
+      "seconds": 46.60373166199861
+    }
+  },
+  {
+    "id": "chain-evidence",
+    "variant": "full_evidence_once",
+    "status": "completed",
+    "prediction": {
+      "id": "chain-evidence",
+      "assessment_mode": "evidence",
+      "as_of": "2026-09-04T20:00:00Z",
+      "decision": "true",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "provenance_status": "original_material_located",
+      "assessment_valid": true,
+      "stop_reason": "complete"
+    },
+    "checkpoints": [
+      {
+        "round": 1,
+        "id": "chain-evidence",
+        "decision": "true",
+        "assessment_mode": "evidence",
+        "assessments": {
+          "evidence": {
+            "raw_verdict": "supported",
+            "decision": "supported",
+            "blocking_gap_ids": []
+          },
+          "world": {
+            "raw_verdict": "unresolved",
+            "decision": "unresolved",
+            "blocking_gap_ids": []
+          }
+        },
+        "provenance_status": "original_material_located"
+      }
+    ],
+    "usage": {
+      "model_calls": 5,
+      "input_tokens": 9312,
+      "output_tokens": 4669,
+      "seconds": 82.6377262850001
+    }
+  }
+]

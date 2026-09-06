@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "historical-2023-resolved-by-2024-pilot2-v2",
+  "pre_run_checksum": true,
+  "files": {
+    "inputs.json": "eedcde44b083128cd9ddba7e6fdb3cd30b679e5819e8fb949830154d3670834b",
+    "sources.json": "4fb4bcff55530035c9b1dfa054c3f42647c72cc1599f260fee4319611bcba21d",
+    "gold.json": "9a46747380a72c7b1ec41fb2bfc8d051dc9c4725ca7a47668f250a7c1ccdca78"
+  },
+  "rule": "Inference may read only inputs.json, sources.json, and this checksum manifest. Gold is opened only by audit or score after both arms finish. This two-case v2 pilot preserves the v1 cases, order, labels, and cutoff while transparently expanding only the Boeing outcome excerpt with contiguous text from the same raw SEC artifact; a clean Git commit containing all inference inputs is required before model calls."
+}

@@ -1,0 +1,6 @@
+{
+  "status": "has_errors",
+  "actual_model_calls": 26,
+  "logical_model_calls": 26,
+  "replayed_model_calls": 0
+}

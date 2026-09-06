@@ -1,0 +1,321 @@
+{
+  "prompt_manifest": {
+    "version": "staged-validation-v6",
+    "target_plan_version": "deterministic-target-plan-v6",
+    "stages": {
+      "atoms": {
+        "prompt_sha256": "d4689c70d37d4afa8ef6139b2e766a51f85f0fd5b74b38797e778c0cb9c2af59",
+        "schema_sha256": "a0a676a8ceac4961596f8ea057f579ef5eeb93980c3c39b3cbb88f81d692bc9b"
+      },
+      "lineage": {
+        "prompt_sha256": "229dbdbbcea5df9ee86d45b91f0c98cb636645e5bfc5279ac40972bd0092ff8d",
+        "schema_sha256": "892c80a8fdb57a98d8ca917cd9926142883645fcc84036a063ebc24740535bc4"
+      },
+      "decomposition_critic": {
+        "prompt_sha256": "47125cea7fce0618a01b4d75107f0413c0caf80600bd25726797ba3c8fe62a49",
+        "schema_sha256": "9d5d4e1d01a1cdc27368fd7880e55862fb0a263e3fa4babb767595c184d00134"
+      },
+      "evidence": {
+        "prompt_sha256": "10545c37d3f53b131328f77ccb40dea8488ffd96e9f4263f6407a6d505de3352",
+        "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f"
+      },
+      "world": {
+        "prompt_sha256": "f657fc577de3c8150b7a73ae9da0b08172b8ca07c2a85afc04973ee035f96ca4",
+        "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f"
+      },
+      "evidence_critic": {
+        "prompt_sha256": "51808a204c719b0cfc2def68e5f1c937e637a9e6f8c8655de2b568170cce7d50",
+        "schema_sha256": "f31d5df8f2a48083ea4af0f45daf80582f409aa724b969c836b46d8d69575025"
+      },
+      "world_critic": {
+        "prompt_sha256": "2bf842fb7c8fb4133841267feed89cb6a10f2494bd776af7476cc988f3c775fc",
+        "schema_sha256": "f31d5df8f2a48083ea4af0f45daf80582f409aa724b969c836b46d8d69575025"
+      }
+    }
+  },
+  "target_plans": {
+    "lucid-production-2023": {
+      "version": "deterministic-target-plan-v6",
+      "target_id": "lucid-production-2023",
+      "target_text_sha256": "a8a71c9d0406f26a4e7df735f45a0abf7c588420dcb23c48f926228cdf255b47",
+      "operator": "all",
+      "probes": [
+        {
+          "number": 1,
+          "id": "lucid-production-2023:probe:c1b73ed9a537bcce2095",
+          "text": "Lucid will manufacture more than 10,000 vehicles during 2023.",
+          "start": 0,
+          "end": 61,
+          "required_dimensions": [
+            "actor_subject",
+            "predicate_object",
+            "scope_location",
+            "quantity_unit_denominator",
+            "time",
+            "comparison_baseline"
+          ]
+        }
+      ],
+      "plan_sha256": "1383b7cfb82ec0f5f4d49b3e53ebcedf299863e4357df2e96191e54fa67c2a6f"
+    }
+  },
+  "decomposition": [
+    {
+      "sequence": 1,
+      "material": "lucid-production-claim-2023",
+      "round": 1,
+      "stage": "atoms",
+      "repair": 0,
+      "prompt_version": "staged-validation-v6",
+      "system_prompt_sha256": "d4689c70d37d4afa8ef6139b2e766a51f85f0fd5b74b38797e778c0cb9c2af59",
+      "payload_sha256": "a54cf52632fd2fa40fbffca1256ddd7c05ade16432d8f37f25ad4a92704a9e3c",
+      "schema_sha256": "a0a676a8ceac4961596f8ea057f579ef5eeb93980c3c39b3cbb88f81d692bc9b",
+      "status": "accepted",
+      "transaction_id": "decompose:lucid-production-2023:lucid-production-claim-2023:1",
+      "model_call_sequence": 1,
+      "request_digest": "005e651e4802f3876033f8ed2c872199d07c476296909e2977ddec1936387e39",
+      "response_id": "chatcmpl-EL2gpToNGANbp00G2BBg8zgxmPbuu",
+      "usage": {
+        "input_tokens": 882,
+        "output_tokens": 91
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "0bff4616471ffca6916915859949da62af05678a8ddea4bb41d350d74ebec8d7"
+    },
+    {
+      "sequence": 2,
+      "material": "lucid-production-claim-2023",
+      "round": 1,
+      "stage": "lineage",
+      "repair": 0,
+      "prompt_version": "staged-validation-v6",
+      "system_prompt_sha256": "229dbdbbcea5df9ee86d45b91f0c98cb636645e5bfc5279ac40972bd0092ff8d",
+      "payload_sha256": "84dc3df27df448206b57ddbe424253220c56c31d5cc3ce8402cd34eef33aa783",
+      "schema_sha256": "892c80a8fdb57a98d8ca917cd9926142883645fcc84036a063ebc24740535bc4",
+      "status": "accepted",
+      "transaction_id": "decompose:lucid-production-2023:lucid-production-claim-2023:1",
+      "model_call_sequence": 2,
+      "request_digest": "3ee59809d718f242623dd7ed9a1856fe029b11b754fcae5777b1dbb25fbcad1d",
+      "response_id": "chatcmpl-EL2gsh5iuy4Cbzjxbrkjd7GTMZ31w",
+      "usage": {
+        "input_tokens": 1105,
+        "output_tokens": 84
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "afd766cefb5285c9a7e88240b06fc0a7e34f4c2c8c9bc37e5650fe4a758907bc"
+    },
+    {
+      "sequence": 3,
+      "material": "lucid-production-claim-2023",
+      "round": 1,
+      "stage": "decomposition_critic",
+      "repair": 0,
+      "prompt_version": "staged-validation-v6",
+      "system_prompt_sha256": "47125cea7fce0618a01b4d75107f0413c0caf80600bd25726797ba3c8fe62a49",
+      "payload_sha256": "f6b78c336ac14a38fae79150f9fdbe388ee05baf42b0eb0b8d3d3b47ac2bea93",
+      "schema_sha256": "9d5d4e1d01a1cdc27368fd7880e55862fb0a263e3fa4babb767595c184d00134",
+      "status": "accepted",
+      "transaction_id": "decompose:lucid-production-2023:lucid-production-claim-2023:1",
+      "model_call_sequence": 3,
+      "request_digest": "d6e19daf4d9ef34dcbb575857b5e0f657a0c9985a1edb3382165e532ab135904",
+      "response_id": "chatcmpl-EL2gwDNRtUk1oc0qQp7xgAZWQyomU",
+      "usage": {
+        "input_tokens": 1093,
+        "output_tokens": 90
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "6a2cfe81bfbaf11777ea6071088b27f1b6259796a7db1cd46b63981c232135b7"
+    },
+    {
+      "sequence": 4,
+      "material": "lucid-production-claim-2023",
+      "round": 1,
+      "stage": "decomposition_assembly",
+      "repair": 0,
+      "prompt_version": "staged-validation-v6",
+      "input_sha256": "e7257270126c50f2f620ddf6211c7da9e8929f6628585eb576489049fd068f0d",
+      "status": "accepted",
+      "transaction_id": "decompose:lucid-production-2023:lucid-production-claim-2023:1",
+      "output_sha256": "11dd0afca4d6015d18b942f9ebbf017c75866f38a44163a8efbef20f8bc9e6bc"
+    },
+    {
+      "sequence": 5,
+      "material": "lucid-production-outcome-2024",
+      "round": 1,
+      "stage": "atoms",
+      "repair": 0,
+      "prompt_version": "staged-validation-v6",
+      "system_prompt_sha256": "d4689c70d37d4afa8ef6139b2e766a51f85f0fd5b74b38797e778c0cb9c2af59",
+      "payload_sha256": "a73c4d49b9eb5432c8bfdba5369014f56e95423069653e62cd0c1a6f0713c329",
+      "schema_sha256": "a0a676a8ceac4961596f8ea057f579ef5eeb93980c3c39b3cbb88f81d692bc9b",
+      "status": "accepted",
+      "transaction_id": "decompose:lucid-production-2023:lucid-production-outcome-2024:2",
+      "model_call_sequence": 4,
+      "request_digest": "246143a0bfd37a49c8ef6a35f8a46697ebcbd931e95b34c0857b1e6e59cfcf52",
+      "response_id": "chatcmpl-EL2h0jHDlKs5SQlP2A3Uz7AOa61qY",
+      "usage": {
+        "input_tokens": 877,
+        "output_tokens": 84
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "d16e29d7a0340ab14d0801222f45ae3b751ebf205825da382a9f2ed71be12bd6"
+    },
+    {
+      "sequence": 6,
+      "material": "lucid-production-outcome-2024",
+      "round": 1,
+      "stage": "lineage",
+      "repair": 0,
+      "prompt_version": "staged-validation-v6",
+      "system_prompt_sha256": "229dbdbbcea5df9ee86d45b91f0c98cb636645e5bfc5279ac40972bd0092ff8d",
+      "payload_sha256": "af82c6447c30f7520e4d000d9664f18a16b6983fd93209fc9ad1f669416163a4",
+      "schema_sha256": "892c80a8fdb57a98d8ca917cd9926142883645fcc84036a063ebc24740535bc4",
+      "status": "accepted",
+      "transaction_id": "decompose:lucid-production-2023:lucid-production-outcome-2024:2",
+      "model_call_sequence": 5,
+      "request_digest": "31454532277973356b573626330dc1eaf0f2616feeac6367371d60c1e5cf1e62",
+      "response_id": "chatcmpl-EL2h3CjON7qH5xSZo5Nve8dcYkw7L",
+      "usage": {
+        "input_tokens": 1143,
+        "output_tokens": 190
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "8871ec100b363e26b0ca64680456274eb64000a2105cc5bb819be004886cd2e7"
+    },
+    {
+      "sequence": 7,
+      "material": "lucid-production-outcome-2024",
+      "round": 1,
+      "stage": "decomposition_critic",
+      "repair": 0,
+      "prompt_version": "staged-validation-v6",
+      "system_prompt_sha256": "47125cea7fce0618a01b4d75107f0413c0caf80600bd25726797ba3c8fe62a49",
+      "payload_sha256": "5cc5ab8fd5862a9d1539a7fa8c828ecf4b1a5f5d22f841871e268d47933bfaa3",
+      "schema_sha256": "9d5d4e1d01a1cdc27368fd7880e55862fb0a263e3fa4babb767595c184d00134",
+      "status": "accepted",
+      "transaction_id": "decompose:lucid-production-2023:lucid-production-outcome-2024:2",
+      "model_call_sequence": 6,
+      "request_digest": "c20015bcd7919cdbf61217755834a9838807e28dcbf44fd1697a893b782ceba6",
+      "response_id": "chatcmpl-EL2h917WoMP5QBWGDbhuoqc39SUPW",
+      "usage": {
+        "input_tokens": 1066,
+        "output_tokens": 59
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "6a2cfe81bfbaf11777ea6071088b27f1b6259796a7db1cd46b63981c232135b7"
+    },
+    {
+      "sequence": 8,
+      "material": "lucid-production-outcome-2024",
+      "round": 1,
+      "stage": "decomposition_assembly",
+      "repair": 0,
+      "prompt_version": "staged-validation-v6",
+      "input_sha256": "355ff2cbba96fab0540839a57170c70e0594af7cc4c78efca4c4fdd6198e5e37",
+      "status": "accepted",
+      "transaction_id": "decompose:lucid-production-2023:lucid-production-outcome-2024:2",
+      "output_sha256": "5e9c92975552867c4e28e63e9fbba479a78bafc266000e2cea40dac58ac7d2fe"
+    }
+  ],
+  "verification": [
+    {
+      "sequence": 1,
+      "material": null,
+      "round": 1,
+      "stage": "evidence",
+      "repair": 0,
+      "prompt_version": "staged-validation-v6",
+      "system_prompt_sha256": "10545c37d3f53b131328f77ccb40dea8488ffd96e9f4263f6407a6d505de3352",
+      "payload_sha256": "32f95297fb293a57d113325f8dbfef2257c6857f431dc5b181fbcec515aceaae",
+      "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f",
+      "status": "accepted",
+      "transaction_id": "verify:lucid-production-2023:all:1",
+      "model_call_sequence": 7,
+      "request_digest": "c7ec9943536e58543d24ac328dce857ccd0b4b74fc42c1f89198c2d48687e0fa",
+      "response_id": "chatcmpl-EL2hCoxsRclNXOASKSYRkBdf7NkiM",
+      "usage": {
+        "input_tokens": 1539,
+        "output_tokens": 316
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "1f2fceac25af78935ef6dbb40f0fd053d65e6c43e013eef3293248d74cf4631e"
+    },
+    {
+      "sequence": 2,
+      "material": null,
+      "round": 1,
+      "stage": "evidence_critic",
+      "repair": 0,
+      "prompt_version": "staged-validation-v6",
+      "system_prompt_sha256": "51808a204c719b0cfc2def68e5f1c937e637a9e6f8c8655de2b568170cce7d50",
+      "payload_sha256": "c15ccfcb594213b3e54d68f463a459ce06b04f391f9aedca97f385322f77be91",
+      "schema_sha256": "f31d5df8f2a48083ea4af0f45daf80582f409aa724b969c836b46d8d69575025",
+      "status": "accepted",
+      "transaction_id": "verify:lucid-production-2023:all:1",
+      "model_call_sequence": 8,
+      "request_digest": "71373e44ec79642c0c7a8e1e177d8452c55cf7c9ec4647a1bb477aaf511c7f13",
+      "response_id": "chatcmpl-EL2hIshtT3ii8skeDJoHeb6UdLYd8",
+      "usage": {
+        "input_tokens": 1201,
+        "output_tokens": 63
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "4416c91dc608e25f6475ab7236fc707f72899b1a5c64747aed881b95d0be0395"
+    },
+    {
+      "sequence": 3,
+      "material": null,
+      "round": 1,
+      "stage": "world",
+      "repair": 0,
+      "prompt_version": "staged-validation-v6",
+      "system_prompt_sha256": "f657fc577de3c8150b7a73ae9da0b08172b8ca07c2a85afc04973ee035f96ca4",
+      "payload_sha256": "e086e95531a3832ac99c4403db860854d1e494330c90f410baf352262350e71a",
+      "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f",
+      "status": "repair_requested",
+      "transaction_id": "verify:lucid-production-2023:all:1",
+      "model_call_sequence": 9,
+      "request_digest": "e725962349ce4d785b46ac502f851babb8af72eca2e25732c8e02bf12d95bf4d",
+      "response_id": "chatcmpl-EL2hLILKhezcFoMYD64vgaP7rLnMo",
+      "usage": {
+        "input_tokens": 1803,
+        "output_tokens": 536
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "71a8315e5cfcb39b9ead6a0ca9cbe77df9e4f6bfd5ab60acdbbdae3f6d7bbc85"
+    },
+    {
+      "sequence": 4,
+      "material": null,
+      "round": 1,
+      "stage": "world",
+      "repair": 1,
+      "prompt_version": "staged-validation-v6",
+      "system_prompt_sha256": "f657fc577de3c8150b7a73ae9da0b08172b8ca07c2a85afc04973ee035f96ca4",
+      "payload_sha256": "d19f62705c643662c2b32b716abf03d49ee6184ac2ffa2876cede99fd74eeba3",
+      "schema_sha256": "e8e9eddd04057e88a6c40d2b26a9fb91ffc540a253fe23655df667639ce23b4f",
+      "status": "repair_exhausted",
+      "transaction_id": "verify:lucid-production-2023:all:1",
+      "repair_of": 3,
+      "model_call_sequence": 10,
+      "request_digest": "16b275112d095c19ed62268b454d04ec16a4db52f89f320517688de8ba8d29f6",
+      "response_id": "chatcmpl-EL2hYpQCVtsCB1ZjyxD7sryH0oNxQ",
+      "usage": {
+        "input_tokens": 2155,
+        "output_tokens": 446
+      },
+      "actual_model": "gpt-6-astra",
+      "requested_model": "gpt-6-astra",
+      "output_sha256": "c5eb6fb74453efee65154a5f616b1dcf1cce7da895bb063e72d8cca5c10c9098"
+    }
+  ]
+}

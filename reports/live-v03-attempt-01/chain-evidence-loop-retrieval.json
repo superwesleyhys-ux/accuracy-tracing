@@ -1,0 +1,139 @@
+[
+  {
+    "round": 1,
+    "tasks": [
+      {
+        "id": "origin:chain-evidence",
+        "question": "Find the producing record and evidenced lineage for: The laboratory opens at 8 am.",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null
+      }
+    ],
+    "returned_ids": [
+      "bulletin-a"
+    ],
+    "feedback": []
+  },
+  {
+    "round": 2,
+    "tasks": [
+      {
+        "id": "origin:chain-evidence",
+        "question": "Find the producing record and evidenced lineage for: The laboratory opens at 8 am.",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null
+      },
+      {
+        "id": "fetch-bulletin-b",
+        "question": "What does the cited archived release say, and what upstream lineage does it identify?",
+        "stage": "provenance",
+        "dimension": "provenance",
+        "blocking": false,
+        "target_id": "chain-evidence",
+        "basis": [
+          {
+            "version_id": "bulletin-a",
+            "start": 39,
+            "end": 100,
+            "quote": "follow the archived release at https://example.org/bulletin-b"
+          }
+        ],
+        "decision_impact": "Fetching the release can extend the visible lineage; the citation alone cannot establish what evidence-scope bulletin-c says.",
+        "action": "fetch",
+        "locator": "https://example.org/bulletin-b"
+      },
+      {
+        "id": "fetch-scoped-bulletin-c",
+        "question": "Does bulletin-c state that the laboratory opens at 8 am?",
+        "stage": "verification",
+        "dimension": "evidence",
+        "blocking": true,
+        "target_id": "chain-evidence",
+        "basis": [
+          {
+            "version_id": "bulletin-a",
+            "start": 39,
+            "end": 100,
+            "quote": "follow the archived release at https://example.org/bulletin-b"
+          }
+        ],
+        "decision_impact": "Supplying the scoped bulletin-c snapshot could support, contradict, or leave unresolved the opening-time claim; the visible citation does not supply that record.",
+        "action": "fetch",
+        "locator": "version_id:bulletin-c"
+      }
+    ],
+    "returned_ids": [
+      "bulletin-c",
+      "bulletin-b"
+    ],
+    "feedback": [
+      {
+        "gap_id": "origin:chain-evidence",
+        "action": "search",
+        "locator": null,
+        "status": "returned",
+        "reason": "matching snapshots returned",
+        "version_ids": [
+          "bulletin-c",
+          "bulletin-b"
+        ]
+      },
+      {
+        "gap_id": "fetch-bulletin-b",
+        "action": "fetch",
+        "locator": "https://example.org/bulletin-b",
+        "status": "unavailable",
+        "reason": "no unseen match in fixed snapshot index; live web unavailable",
+        "version_ids": []
+      },
+      {
+        "gap_id": "fetch-scoped-bulletin-c",
+        "action": "fetch",
+        "locator": "version_id:bulletin-c",
+        "status": "unavailable",
+        "reason": "no unseen match in fixed snapshot index; live web unavailable",
+        "version_ids": []
+      }
+    ]
+  },
+  {
+    "round": 3,
+    "tasks": [
+      {
+        "id": "lineage:chain-evidence",
+        "question": "Provide the target source version and an evidenced citation/derivation path to an original material",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null
+      }
+    ],
+    "returned_ids": [],
+    "feedback": [
+      {
+        "gap_id": "lineage:chain-evidence",
+        "action": "search",
+        "locator": null,
+        "status": "unavailable",
+        "reason": "no unseen match in fixed snapshot index; live web unavailable",
+        "version_ids": []
+      }
+    ]
+  }
+]

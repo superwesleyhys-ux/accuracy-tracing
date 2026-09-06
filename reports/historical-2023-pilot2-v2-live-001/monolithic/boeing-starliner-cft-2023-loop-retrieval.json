@@ -1,0 +1,76 @@
+[
+  {
+    "round": 1,
+    "tasks": [
+      {
+        "id": "origin:boeing-starliner-cft-2023",
+        "question": "Find the producing record and evidenced lineage for: Boeing will complete the Starliner crewed flight test by December 31, 2023.",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null,
+        "probe_id": null
+      }
+    ],
+    "planned_ids": [
+      "boeing-starliner-claim-2023"
+    ],
+    "returned_ids": [
+      "boeing-starliner-claim-2023"
+    ],
+    "attribution": {},
+    "feedback": []
+  },
+  {
+    "round": 2,
+    "tasks": [
+      {
+        "id": "evidence-scope-outcome-missing",
+        "question": "What does the designated evidence-scope snapshot say about completion by the target deadline?",
+        "stage": "verification",
+        "dimension": "evidence",
+        "blocking": false,
+        "target_id": "boeing-starliner-cft-2023",
+        "basis": [
+          {
+            "version_id": "boeing-starliner-claim-2023",
+            "start": 58,
+            "end": 119,
+            "quote": "A crewed flight test is now expected to be completed in 2023."
+          }
+        ],
+        "decision_impact": "The supplied forecast cannot substitute for the absent evidence-scope document; the evidence assessment remains undetermined.",
+        "action": "search",
+        "locator": "Retrieve the designated snapshot boeing-starliner-outcome-2024",
+        "probe_id": null
+      }
+    ],
+    "planned_ids": [
+      "boeing-starliner-outcome-2024"
+    ],
+    "returned_ids": [
+      "boeing-starliner-outcome-2024"
+    ],
+    "attribution": {
+      "boeing-starliner-outcome-2024": [
+        "evidence-scope-outcome-missing"
+      ]
+    },
+    "feedback": [
+      {
+        "gap_id": "evidence-scope-outcome-missing",
+        "action": "search",
+        "locator": "Retrieve the designated snapshot boeing-starliner-outcome-2024",
+        "status": "returned",
+        "reason": "matching snapshots returned",
+        "version_ids": [
+          "boeing-starliner-outcome-2024"
+        ]
+      }
+    ]
+  }
+]

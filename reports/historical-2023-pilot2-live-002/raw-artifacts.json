@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "scope": "checksummed raw arm artifacts",
+  "files": {
+    "monolithic/boeing-starliner-cft-2023-loop-calls.json": "0b378389f75c5e8e16c35d87c29b081f7390a8b94df662e6ed7cbdf31a7285dd",
+    "monolithic/boeing-starliner-cft-2023-loop-result.json": "3a392461c6542a6aa2e210e605f02b94e0a775b167240309dd4b96d136089db6",
+    "monolithic/boeing-starliner-cft-2023-loop-retrieval.json": "7ea9b0842f1f01e17137e41d8232afbb6070f944fe08ae49caa586122ab1cc2a",
+    "monolithic/boeing-starliner-cft-2023-loop-trace.json": "9662afa185bba3aee37421687aee548f59e4bca3ce095252645eb7ea1080b6e5",
+    "monolithic/config.json": "e49ddcddc7e4994e4e661b1b3d020b0b93c8ccf990c73cdf689636862ee2309b",
+    "monolithic/results.json": "52f139a94d1bddcd1bf1adc45aa36af86aa156187cd99106b8fba08416108747",
+    "monolithic/status.json": "d4ed849790ff12d270b3e5f8737f882b211d11a781de1828537046c96826e67e",
+    "monolithic/virgin-galactic-commercial-service-2023-loop-calls.json": "2508150eb5dbe1596b9009c108c1e2cb6a705b5962d37fa50821a064f2383642",
+    "monolithic/virgin-galactic-commercial-service-2023-loop-result.json": "7b18a7c7eb4db09e95e4f8e646baeb63ce0df8de42a1eb201272c713668790d4",
+    "monolithic/virgin-galactic-commercial-service-2023-loop-retrieval.json": "28f4a5faefedded1331be6459db7dbf5e661b5d9e9d7315fb1628388f18e54f2",
+    "monolithic/virgin-galactic-commercial-service-2023-loop-trace.json": "d6c5193fa489e7162062be8dc47fdbc356e54aeaac4865c1ee06e46264c57f85",
+    "staged/boeing-starliner-cft-2023-loop-calls.json": "c6483481c6d7f23503072bab08a8548720c47ba398398aa710da73ab0062836a",
+    "staged/boeing-starliner-cft-2023-loop-result.json": "20ccb8a3d68f93e820af47ff59702542326d6dd6779f24718e9e7e765d0c2dd5",
+    "staged/boeing-starliner-cft-2023-loop-retrieval.json": "15b5a1d19859d413aca409df3061df70190623dc2c110282c677016420e7f882",
+    "staged/boeing-starliner-cft-2023-loop-semantic-stages.json": "acc1ab0cd397731fdec610f34ef5806bfbcc9d266c8e5c68c30f641965338c21",
+    "staged/boeing-starliner-cft-2023-loop-trace.json": "08b1009baeaf1b9a8045b2a2329f52af0482791740f03a9f81b5cfda1334910a",
+    "staged/config.json": "6daa4e3178d3a2a68a30ba56a81773a6aec756fda6607fd23ffe00ae39210a6b",
+    "staged/results.json": "bcb5a8edd0ca87e5f8ffdab32047da379d2071fcfb1932a6863a5fc494e9c2cd",
+    "staged/status.json": "7a5a077e3b6e046aae8d1a0ca736f39c9d4a63eb7b07447caf7c9f17440153fe",
+    "staged/virgin-galactic-commercial-service-2023-loop-calls.json": "03b653f8541899d91b58df1c7a4018f591ba9029a06ba93b9072de20c5e3cb30",
+    "staged/virgin-galactic-commercial-service-2023-loop-result.json": "43678b93c4fb2379c3051678b0dc592e9063cbaaa530f9097544a9b848607882",
+    "staged/virgin-galactic-commercial-service-2023-loop-retrieval.json": "80b6721d95664678b9dbec6add56899bd4ca7b5dbbc742e69d3f2d0ad96592bb",
+    "staged/virgin-galactic-commercial-service-2023-loop-semantic-stages.json": "c0d93349350ff168b30058645c83526d4222f581e0295a91b126be8d02bbcb0f",
+    "staged/virgin-galactic-commercial-service-2023-loop-trace.json": "d096391de7905f5124d70dee4e419833cdddda4fb03fefc271aa9b39e3ca6129"
+  }
+}

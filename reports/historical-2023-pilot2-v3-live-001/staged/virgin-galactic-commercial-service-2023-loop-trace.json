@@ -1,0 +1,1029 @@
+{
+  "schema_version": "0.3",
+  "scope": "plugin-supplied semantic analyses; no built-in truth oracle",
+  "target": {
+    "id": "virgin-galactic-commercial-service-2023",
+    "text": "Virgin Galactic will commence commercial service during the second quarter of 2023.",
+    "as_of": "2024-12-31T23:59:59Z",
+    "source_version_id": "virgin-commercial-claim-2023",
+    "assessment_mode": "evidence",
+    "evidence_scope": [
+      "virgin-commercial-outcome-2024"
+    ]
+  },
+  "config": {
+    "max_rounds": 5,
+    "max_documents": 18,
+    "max_decomposition_calls": 18
+  },
+  "provenance_status": "partial",
+  "fact_status": "supported",
+  "stop_reason": "provider_exhausted",
+  "usage": {
+    "rounds": 3,
+    "documents": 2,
+    "unique_versions": 2,
+    "decomposition_calls": 2,
+    "verification_calls": 3
+  },
+  "decision_status": "supported",
+  "assessments": {
+    "evidence": {
+      "raw_verdict": "supported",
+      "decision": "supported",
+      "blocking_gap_ids": []
+    },
+    "world": {
+      "raw_verdict": "supported",
+      "decision": "supported",
+      "blocking_gap_ids": []
+    }
+  },
+  "assessment_valid": true,
+  "materials": [
+    {
+      "version_id": "virgin-commercial-claim-2023",
+      "url": "https://www.sec.gov/Archives/edgar/data/1706946/000170694623000032/spce-20230331.htm",
+      "content": "Virgin Galactic Q1 2023 Form 10-Q | SEC filing dated May 9, 2023\nCommercial service is currently expected to commence in the second quarter of 2023.",
+      "retrieved_at": "2026-09-06T04:05:15Z",
+      "published_at": "2023-05-09T23:59:59Z",
+      "available_at": "2023-05-09T23:59:59Z",
+      "availability_basis": "Immutable SEC EDGAR accession 0001706946-23-000032, filed May 9, 2023; raw filing identity is recorded in sources.json.",
+      "issuer": "Virgin Galactic Holdings, Inc. (filed with the U.S. SEC)"
+    },
+    {
+      "version_id": "virgin-commercial-outcome-2024",
+      "url": "https://www.sec.gov/Archives/edgar/data/1706946/000170694624000039/spce-20231231.htm",
+      "content": "Virgin Galactic 2023 Form 10-K | SEC filing dated February 27, 2024\nIn June 2023, we completed our first commercial spaceflight, 'Galactic 01,' which marked the start of our commercial service.",
+      "retrieved_at": "2026-09-06T04:05:15Z",
+      "published_at": "2024-02-27T23:59:59Z",
+      "available_at": "2024-02-27T23:59:59Z",
+      "availability_basis": "Immutable SEC EDGAR accession 0001706946-24-000039, filed February 27, 2024; raw filing identity is recorded in sources.json.",
+      "issuer": "Virgin Galactic Holdings, Inc. (filed with the U.S. SEC)"
+    }
+  ],
+  "eligible_version_ids": [
+    "virgin-commercial-claim-2023",
+    "virgin-commercial-outcome-2024"
+  ],
+  "observations": [
+    {
+      "version_id": "virgin-commercial-claim-2023",
+      "retrieved_at": "2026-09-06T04:05:15Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": [],
+      "task_ids": []
+    },
+    {
+      "version_id": "virgin-commercial-outcome-2024",
+      "retrieved_at": "2026-09-06T04:05:15Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": [],
+      "task_ids": [
+        "origin:virgin-galactic-commercial-service-2023",
+        "virgin-galactic-commercial-service-2023:missing-scope:1a5a3de273dc01f308f9"
+      ]
+    }
+  ],
+  "retrieval_feedback": [
+    {
+      "round": 2,
+      "gap_id": "virgin-galactic-commercial-service-2023:missing-scope:1a5a3de273dc01f308f9",
+      "action": "fetch",
+      "locator": "virgin-commercial-outcome-2024",
+      "status": "returned",
+      "reason": "matching snapshots returned",
+      "version_ids": [
+        "virgin-commercial-outcome-2024"
+      ]
+    },
+    {
+      "round": 2,
+      "gap_id": "origin:virgin-galactic-commercial-service-2023",
+      "action": "search",
+      "locator": null,
+      "status": "returned",
+      "reason": "matching snapshots returned",
+      "version_ids": [
+        "virgin-commercial-outcome-2024"
+      ]
+    },
+    {
+      "round": 3,
+      "gap_id": "origin:virgin-galactic-commercial-service-2023",
+      "action": "search",
+      "locator": null,
+      "status": "unavailable",
+      "reason": "no unseen match in fixed snapshot index; live web unavailable",
+      "version_ids": []
+    }
+  ],
+  "analyses": {
+    "virgin-commercial-claim-2023": {
+      "fragments": [
+        {
+          "id": "virgin-commercial-claim-2023:atom:ffd5679cf467fcfa0e20",
+          "text": "Virgin Galactic's May 9, 2023 filing states that commercial service is currently expected to commence in the second quarter of 2023.",
+          "span": {
+            "version_id": "virgin-commercial-claim-2023",
+            "start": 65,
+            "end": 148,
+            "quote": "Commercial service is currently expected to commence in the second quarter of 2023."
+          },
+          "parent_id": "virgin-galactic-commercial-service-2023",
+          "qualifiers": [
+            "currently expected",
+            "in the second quarter of 2023"
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "virgin-commercial-claim-2023",
+              "start": 87,
+              "end": 105,
+              "quote": "currently expected"
+            },
+            {
+              "version_id": "virgin-commercial-claim-2023",
+              "start": 118,
+              "end": 147,
+              "quote": "in the second quarter of 2023"
+            }
+          ]
+        }
+      ],
+      "relations": [],
+      "gaps": [],
+      "resolutions": [],
+      "origins": [],
+      "notes": "The supplied statement expresses an expectation, not an observed commencement of service.\nThe supplied content contains no explicit source-side citations or statement establishing originality. Issuer metadata identifies Virgin Galactic Holdings, Inc. as the filer with the U.S. SEC. No prior lineage findings require retention.",
+      "revisit_versions": []
+    },
+    "virgin-commercial-outcome-2024": {
+      "fragments": [
+        {
+          "id": "virgin-commercial-outcome-2024:atom:b86d4b87d3dd8d73d059",
+          "text": "Virgin Galactic reported completing its first commercial spaceflight, 'Galactic 01,' in June 2023, marking the start of its commercial service.",
+          "span": {
+            "version_id": "virgin-commercial-outcome-2024",
+            "start": 68,
+            "end": 193,
+            "quote": "In June 2023, we completed our first commercial spaceflight, 'Galactic 01,' which marked the start of our commercial service."
+          },
+          "parent_id": "virgin-galactic-commercial-service-2023",
+          "qualifiers": [
+            "In June 2023",
+            "first commercial spaceflight",
+            "'Galactic 01,'"
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "virgin-commercial-outcome-2024",
+              "start": 68,
+              "end": 80,
+              "quote": "In June 2023"
+            },
+            {
+              "version_id": "virgin-commercial-outcome-2024",
+              "start": 99,
+              "end": 127,
+              "quote": "first commercial spaceflight"
+            },
+            {
+              "version_id": "virgin-commercial-outcome-2024",
+              "start": 129,
+              "end": 143,
+              "quote": "'Galactic 01,'"
+            }
+          ]
+        }
+      ],
+      "relations": [],
+      "gaps": [],
+      "resolutions": [],
+      "origins": [],
+      "notes": "The snapshot identifies a Virgin Galactic SEC filing and reports completion of its first commercial spaceflight. It contains no explicit source-side citations or statement establishing originality. The reported outcome does not establish a lineage relationship to the earlier claim version or warrant revisiting its decomposition or lineage.",
+      "revisit_versions": []
+    }
+  },
+  "analysis_history": [
+    {
+      "revision": 1,
+      "round": 1,
+      "version_id": "virgin-commercial-claim-2023",
+      "duplicate": false,
+      "revisit": false,
+      "retrieval_receipt": {
+        "version_id": "virgin-commercial-claim-2023",
+        "task_ids": [],
+        "revisit": false,
+        "tasks": [],
+        "attribution": "envelope",
+        "duplicate": false,
+        "eligible": true
+      },
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "virgin-commercial-claim-2023:atom:ffd5679cf467fcfa0e20",
+            "text": "Virgin Galactic's May 9, 2023 filing states that commercial service is currently expected to commence in the second quarter of 2023.",
+            "span": {
+              "version_id": "virgin-commercial-claim-2023",
+              "start": 65,
+              "end": 148,
+              "quote": "Commercial service is currently expected to commence in the second quarter of 2023."
+            },
+            "parent_id": "virgin-galactic-commercial-service-2023",
+            "qualifiers": [
+              "currently expected",
+              "in the second quarter of 2023"
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "virgin-commercial-claim-2023",
+                "start": 87,
+                "end": 105,
+                "quote": "currently expected"
+              },
+              {
+                "version_id": "virgin-commercial-claim-2023",
+                "start": 118,
+                "end": 147,
+                "quote": "in the second quarter of 2023"
+              }
+            ]
+          }
+        ],
+        "relations": [],
+        "gaps": [],
+        "resolutions": [],
+        "origins": [],
+        "notes": "The supplied statement expresses an expectation, not an observed commencement of service.\nThe supplied content contains no explicit source-side citations or statement establishing originality. Issuer metadata identifies Virgin Galactic Holdings, Inc. as the filer with the U.S. SEC. No prior lineage findings require retention.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    },
+    {
+      "revision": 2,
+      "round": 2,
+      "version_id": "virgin-commercial-outcome-2024",
+      "duplicate": false,
+      "revisit": false,
+      "retrieval_receipt": {
+        "version_id": "virgin-commercial-outcome-2024",
+        "task_ids": [
+          "origin:virgin-galactic-commercial-service-2023",
+          "virgin-galactic-commercial-service-2023:missing-scope:1a5a3de273dc01f308f9"
+        ],
+        "revisit": false,
+        "tasks": [
+          {
+            "id": "origin:virgin-galactic-commercial-service-2023",
+            "question": "Find the producing record and evidenced lineage for: Virgin Galactic will commence commercial service during the second quarter of 2023.",
+            "stage": "provenance",
+            "dimension": "auto",
+            "blocking": true,
+            "target_id": null,
+            "basis": [],
+            "decision_impact": "",
+            "action": "search",
+            "locator": null,
+            "probe_id": null
+          },
+          {
+            "id": "virgin-galactic-commercial-service-2023:missing-scope:1a5a3de273dc01f308f9",
+            "question": "Retrieve the frozen evidence-scope version: virgin-commercial-outcome-2024",
+            "stage": "verification",
+            "dimension": "evidence",
+            "blocking": false,
+            "target_id": "virgin-galactic-commercial-service-2023",
+            "basis": [],
+            "decision_impact": "The missing scoped version can change evidence entailment.",
+            "action": "fetch",
+            "locator": "virgin-commercial-outcome-2024",
+            "probe_id": null
+          }
+        ],
+        "attribution": "envelope",
+        "duplicate": false,
+        "eligible": true
+      },
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "virgin-commercial-outcome-2024:atom:b86d4b87d3dd8d73d059",
+            "text": "Virgin Galactic reported completing its first commercial spaceflight, 'Galactic 01,' in June 2023, marking the start of its commercial service.",
+            "span": {
+              "version_id": "virgin-commercial-outcome-2024",
+              "start": 68,
+              "end": 193,
+              "quote": "In June 2023, we completed our first commercial spaceflight, 'Galactic 01,' which marked the start of our commercial service."
+            },
+            "parent_id": "virgin-galactic-commercial-service-2023",
+            "qualifiers": [
+              "In June 2023",
+              "first commercial spaceflight",
+              "'Galactic 01,'"
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "virgin-commercial-outcome-2024",
+                "start": 68,
+                "end": 80,
+                "quote": "In June 2023"
+              },
+              {
+                "version_id": "virgin-commercial-outcome-2024",
+                "start": 99,
+                "end": 127,
+                "quote": "first commercial spaceflight"
+              },
+              {
+                "version_id": "virgin-commercial-outcome-2024",
+                "start": 129,
+                "end": 143,
+                "quote": "'Galactic 01,'"
+              }
+            ]
+          }
+        ],
+        "relations": [],
+        "gaps": [],
+        "resolutions": [],
+        "origins": [],
+        "notes": "The snapshot identifies a Virgin Galactic SEC filing and reports completion of its first commercial spaceflight. It contains no explicit source-side citations or statement establishing originality. The reported outcome does not establish a lineage relationship to the earlier claim version or warrant revisiting its decomposition or lineage.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    }
+  ],
+  "fragments": [
+    {
+      "id": "virgin-commercial-claim-2023:atom:ffd5679cf467fcfa0e20",
+      "text": "Virgin Galactic's May 9, 2023 filing states that commercial service is currently expected to commence in the second quarter of 2023.",
+      "span": {
+        "version_id": "virgin-commercial-claim-2023",
+        "start": 65,
+        "end": 148,
+        "quote": "Commercial service is currently expected to commence in the second quarter of 2023."
+      },
+      "parent_id": "virgin-galactic-commercial-service-2023",
+      "qualifiers": [
+        "currently expected",
+        "in the second quarter of 2023"
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "virgin-commercial-claim-2023",
+          "start": 87,
+          "end": 105,
+          "quote": "currently expected"
+        },
+        {
+          "version_id": "virgin-commercial-claim-2023",
+          "start": 118,
+          "end": 147,
+          "quote": "in the second quarter of 2023"
+        }
+      ]
+    },
+    {
+      "id": "virgin-commercial-outcome-2024:atom:b86d4b87d3dd8d73d059",
+      "text": "Virgin Galactic reported completing its first commercial spaceflight, 'Galactic 01,' in June 2023, marking the start of its commercial service.",
+      "span": {
+        "version_id": "virgin-commercial-outcome-2024",
+        "start": 68,
+        "end": 193,
+        "quote": "In June 2023, we completed our first commercial spaceflight, 'Galactic 01,' which marked the start of our commercial service."
+      },
+      "parent_id": "virgin-galactic-commercial-service-2023",
+      "qualifiers": [
+        "In June 2023",
+        "first commercial spaceflight",
+        "'Galactic 01,'"
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "start": 68,
+          "end": 80,
+          "quote": "In June 2023"
+        },
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "start": 99,
+          "end": 127,
+          "quote": "first commercial spaceflight"
+        },
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "start": 129,
+          "end": 143,
+          "quote": "'Galactic 01,'"
+        }
+      ]
+    }
+  ],
+  "relations": [],
+  "origins": [],
+  "gaps": [
+    {
+      "id": "origin:virgin-galactic-commercial-service-2023",
+      "question": "Find the producing record and evidenced lineage for: Virgin Galactic will commence commercial service during the second quarter of 2023.",
+      "stage": "provenance",
+      "dimension": "auto",
+      "blocking": true,
+      "target_id": null,
+      "basis": [],
+      "decision_impact": "",
+      "action": "search",
+      "locator": null,
+      "probe_id": null
+    }
+  ],
+  "resolutions": [
+    {
+      "gap_id": "virgin-galactic-commercial-service-2023:missing-scope:1a5a3de273dc01f308f9",
+      "basis": [
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "start": 0,
+          "end": 193,
+          "quote": "Virgin Galactic 2023 Form 10-K | SEC filing dated February 27, 2024\nIn June 2023, we completed our first commercial spaceflight, 'Galactic 01,' which marked the start of our commercial service."
+        }
+      ],
+      "rationale": "The exact frozen evidence-scope version was returned and admitted."
+    }
+  ],
+  "verification_history": [
+    {
+      "round": 1,
+      "verdict": "unresolved",
+      "basis": [],
+      "rationale": "probe 1 (Virgin Galactic will commence commercial service during the second quarter of 2023.): actor_subject=unresolved: The frozen-scope document is missing; no evidence identifies the actor.; predicate_object=unresolved: The frozen-scope document is missing; no evidence addresses commencement of commercial service.; scope_location=unresolved: The frozen-scope document is missing; no evidence establishes the event scope.; time=unresolved: The frozen-scope document is missing; no evidence establishes whether commencement occurred during the second quarter of 2023. [stop=scope_unavailable]",
+      "gaps": [
+        {
+          "id": "virgin-galactic-commercial-service-2023:missing-scope:1a5a3de273dc01f308f9",
+          "question": "Retrieve the frozen evidence-scope version: virgin-commercial-outcome-2024",
+          "stage": "verification",
+          "dimension": "evidence",
+          "blocking": false,
+          "target_id": "virgin-galactic-commercial-service-2023",
+          "basis": [],
+          "decision_impact": "The missing scoped version can change evidence entailment.",
+          "action": "fetch",
+          "locator": "virgin-commercial-outcome-2024",
+          "probe_id": null
+        }
+      ],
+      "resolutions": [],
+      "evidence_verdict": "unresolved",
+      "world_verdict": "unresolved",
+      "world_basis": [],
+      "world_rationale": "probe 1 (Virgin Galactic will commence commercial service during the second quarter of 2023.): actor_subject=unresolved: The exact evidence-scope version virgin-commercial-outcome-2024 is absent; world verification is deferred to evidence-layer retrieval.; predicate_object=unresolved: The supplied forecast does not establish actual commencement, and the designated outcome evidence is unavailable.; scope_location=unresolved: The designated outcome evidence needed to verify the commercial-service event is unavailable.; time=unresolved: The supplied second-quarter expectation does not establish actual commencement timing; the designated outcome evidence is unavailable. [stop=scope_unavailable]"
+    },
+    {
+      "round": 2,
+      "verdict": "supported",
+      "basis": [
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "start": 0,
+          "end": 193,
+          "quote": "Virgin Galactic 2023 Form 10-K | SEC filing dated February 27, 2024\nIn June 2023, we completed our first commercial spaceflight, 'Galactic 01,' which marked the start of our commercial service."
+        }
+      ],
+      "rationale": "probe 1 (Virgin Galactic will commence commercial service during the second quarter of 2023.): actor_subject=supported: The adjacent filing heading identifies Virgin Galactic as the issuer speaking as 'we'.; predicate_object=supported: The filing explicitly reports the start of commercial service, supporting the predicted commencement.; scope_location=supported: The passage concerns Virgin Galactic's commercial service, matching the target's scope; the target specifies no location.; time=supported: The reported start occurred in June 2023, within the second quarter of 2023.",
+      "gaps": [],
+      "resolutions": [
+        {
+          "gap_id": "virgin-galactic-commercial-service-2023:missing-scope:1a5a3de273dc01f308f9",
+          "basis": [
+            {
+              "version_id": "virgin-commercial-outcome-2024",
+              "start": 0,
+              "end": 193,
+              "quote": "Virgin Galactic 2023 Form 10-K | SEC filing dated February 27, 2024\nIn June 2023, we completed our first commercial spaceflight, 'Galactic 01,' which marked the start of our commercial service."
+            }
+          ],
+          "rationale": "The exact frozen evidence-scope version was returned and admitted."
+        }
+      ],
+      "evidence_verdict": "supported",
+      "world_verdict": "supported",
+      "world_basis": [
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "start": 0,
+          "end": 193,
+          "quote": "Virgin Galactic 2023 Form 10-K | SEC filing dated February 27, 2024\nIn June 2023, we completed our first commercial spaceflight, 'Galactic 01,' which marked the start of our commercial service."
+        }
+      ],
+      "world_rationale": "probe 1 (Virgin Galactic will commence commercial service during the second quarter of 2023.): actor_subject=supported: The adjacent filing heading identifies Virgin Galactic as the issuer reporting the completed event.; predicate_object=supported: The retrospective SEC filing reports an actual completed flight marking the start of commercial service, rather than merely repeating the earlier forecast. The supplied immutable accession establishes its filing provenance before as_of.; scope_location=supported: The event concerns Virgin Galactic's own commercial spaceflight service, matching the target's scope.; time=supported: The filing dates the start of commercial service to June 2023, within the second quarter of 2023."
+    },
+    {
+      "round": 3,
+      "verdict": "supported",
+      "basis": [
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "start": 0,
+          "end": 193,
+          "quote": "Virgin Galactic 2023 Form 10-K | SEC filing dated February 27, 2024\nIn June 2023, we completed our first commercial spaceflight, 'Galactic 01,' which marked the start of our commercial service."
+        }
+      ],
+      "rationale": "probe 1 (Virgin Galactic will commence commercial service during the second quarter of 2023.): actor_subject=supported: The filing heading identifies Virgin Galactic as the issuer reporting the start of its commercial service.; predicate_object=supported: The issuer reports that its completed first commercial spaceflight marked the start of commercial service, supporting the predicted commencement.; scope_location=supported: The passage concerns Virgin Galactic's own commercial service, matching the target's scope; the target specifies no location.; time=supported: The reported start occurred in June 2023, within the second quarter of 2023.",
+      "gaps": [],
+      "resolutions": [],
+      "evidence_verdict": "supported",
+      "world_verdict": "supported",
+      "world_basis": [
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "start": 0,
+          "end": 193,
+          "quote": "Virgin Galactic 2023 Form 10-K | SEC filing dated February 27, 2024\nIn June 2023, we completed our first commercial spaceflight, 'Galactic 01,' which marked the start of our commercial service."
+        }
+      ],
+      "world_rationale": "probe 1 (Virgin Galactic will commence commercial service during the second quarter of 2023.): actor_subject=supported: The adjacent filing heading identifies Virgin Galactic as the issuer reporting the completed event.; predicate_object=supported: The retrospective SEC filing reports an actual completed flight marking the start of commercial service, rather than merely repeating the earlier forecast. The supplied immutable accession establishes its filing provenance before as_of.; scope_location=supported: The event concerns Virgin Galactic's own commercial spaceflight service, matching the target's scope.; time=supported: The filing dates the start of commercial service to June 2023, within the second quarter of 2023."
+    }
+  ],
+  "operations": [
+    {
+      "sequence": 1,
+      "round": 1,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "origin:virgin-galactic-commercial-service-2023",
+          "question": "Find the producing record and evidenced lineage for: Virgin Galactic will commence commercial service during the second quarter of 2023.",
+          "stage": "provenance",
+          "dimension": "auto",
+          "blocking": true,
+          "target_id": null,
+          "basis": [],
+          "decision_impact": "",
+          "action": "search",
+          "locator": null,
+          "probe_id": null
+        }
+      ],
+      "limit": 18
+    },
+    {
+      "sequence": 2,
+      "round": 1,
+      "action": "retrieval_attribution_validated",
+      "version_id": "virgin-commercial-claim-2023",
+      "task_ids": [],
+      "attribution": "envelope"
+    },
+    {
+      "sequence": 3,
+      "round": 1,
+      "action": "snapshot_saved",
+      "version_id": "virgin-commercial-claim-2023",
+      "sha256": "014758002670394a96c023e29a45245b04cbfdca2ebb0489c2060ea830ebd74a",
+      "eligible": true
+    },
+    {
+      "sequence": 4,
+      "round": 1,
+      "action": "decompose_started",
+      "version_id": "virgin-commercial-claim-2023",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 5,
+      "round": 1,
+      "action": "decompose_completed",
+      "version_id": "virgin-commercial-claim-2023",
+      "revision": 1
+    },
+    {
+      "sequence": 6,
+      "round": 1,
+      "action": "alignment_checked",
+      "version_id": "virgin-commercial-claim-2023",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 7,
+      "round": 1,
+      "action": "graph_updated",
+      "version_id": "virgin-commercial-claim-2023",
+      "open_gaps": 1
+    },
+    {
+      "sequence": 8,
+      "round": 1,
+      "action": "verification_started"
+    },
+    {
+      "sequence": 9,
+      "round": 1,
+      "action": "verification_completed",
+      "verdict": "unresolved",
+      "decision": "unresolved",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "followup_tasks": 1,
+      "provenance_status": "partial"
+    },
+    {
+      "sequence": 10,
+      "round": 1,
+      "action": "assessment_changed",
+      "previous": null,
+      "current": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "basis": [],
+      "world_basis": []
+    },
+    {
+      "sequence": 11,
+      "round": 1,
+      "action": "followup_tasks_queued",
+      "gap_ids": [
+        "virgin-galactic-commercial-service-2023:missing-scope:1a5a3de273dc01f308f9"
+      ]
+    },
+    {
+      "sequence": 12,
+      "round": 1,
+      "action": "progress_checked",
+      "new_eligible_versions": 1,
+      "new_structure": true
+    },
+    {
+      "sequence": 13,
+      "round": 2,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "origin:virgin-galactic-commercial-service-2023",
+          "question": "Find the producing record and evidenced lineage for: Virgin Galactic will commence commercial service during the second quarter of 2023.",
+          "stage": "provenance",
+          "dimension": "auto",
+          "blocking": true,
+          "target_id": null,
+          "basis": [],
+          "decision_impact": "",
+          "action": "search",
+          "locator": null,
+          "probe_id": null
+        },
+        {
+          "id": "virgin-galactic-commercial-service-2023:missing-scope:1a5a3de273dc01f308f9",
+          "question": "Retrieve the frozen evidence-scope version: virgin-commercial-outcome-2024",
+          "stage": "verification",
+          "dimension": "evidence",
+          "blocking": false,
+          "target_id": "virgin-galactic-commercial-service-2023",
+          "basis": [],
+          "decision_impact": "The missing scoped version can change evidence entailment.",
+          "action": "fetch",
+          "locator": "virgin-commercial-outcome-2024",
+          "probe_id": null
+        }
+      ],
+      "limit": 17
+    },
+    {
+      "sequence": 14,
+      "round": 2,
+      "action": "retrieval_attribution_validated",
+      "version_id": "virgin-commercial-outcome-2024",
+      "task_ids": [
+        "origin:virgin-galactic-commercial-service-2023",
+        "virgin-galactic-commercial-service-2023:missing-scope:1a5a3de273dc01f308f9"
+      ],
+      "attribution": "envelope"
+    },
+    {
+      "sequence": 15,
+      "round": 2,
+      "action": "snapshot_saved",
+      "version_id": "virgin-commercial-outcome-2024",
+      "sha256": "66605949a0541a62f37ffb402c42a4c3d6af2129c39370f52892c49036584b8d",
+      "eligible": true
+    },
+    {
+      "sequence": 16,
+      "round": 2,
+      "action": "decompose_started",
+      "version_id": "virgin-commercial-outcome-2024",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 17,
+      "round": 2,
+      "action": "decompose_completed",
+      "version_id": "virgin-commercial-outcome-2024",
+      "revision": 2
+    },
+    {
+      "sequence": 18,
+      "round": 2,
+      "action": "alignment_checked",
+      "version_id": "virgin-commercial-outcome-2024",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 19,
+      "round": 2,
+      "action": "graph_updated",
+      "version_id": "virgin-commercial-outcome-2024",
+      "open_gaps": 2
+    },
+    {
+      "sequence": 20,
+      "round": 2,
+      "action": "retrieval_feedback",
+      "feedback": {
+        "round": 2,
+        "gap_id": "virgin-galactic-commercial-service-2023:missing-scope:1a5a3de273dc01f308f9",
+        "action": "fetch",
+        "locator": "virgin-commercial-outcome-2024",
+        "status": "returned",
+        "reason": "matching snapshots returned",
+        "version_ids": [
+          "virgin-commercial-outcome-2024"
+        ]
+      }
+    },
+    {
+      "sequence": 21,
+      "round": 2,
+      "action": "retrieval_feedback",
+      "feedback": {
+        "round": 2,
+        "gap_id": "origin:virgin-galactic-commercial-service-2023",
+        "action": "search",
+        "locator": null,
+        "status": "returned",
+        "reason": "matching snapshots returned",
+        "version_ids": [
+          "virgin-commercial-outcome-2024"
+        ]
+      }
+    },
+    {
+      "sequence": 22,
+      "round": 2,
+      "action": "verification_started"
+    },
+    {
+      "sequence": 23,
+      "round": 2,
+      "action": "verification_completed",
+      "verdict": "supported",
+      "decision": "supported",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        }
+      },
+      "followup_tasks": 0,
+      "provenance_status": "partial"
+    },
+    {
+      "sequence": 24,
+      "round": 2,
+      "action": "assessment_changed",
+      "previous": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "current": {
+        "evidence": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        }
+      },
+      "basis": [
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "start": 0,
+          "end": 193,
+          "quote": "Virgin Galactic 2023 Form 10-K | SEC filing dated February 27, 2024\nIn June 2023, we completed our first commercial spaceflight, 'Galactic 01,' which marked the start of our commercial service."
+        }
+      ],
+      "world_basis": [
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "start": 0,
+          "end": 193,
+          "quote": "Virgin Galactic 2023 Form 10-K | SEC filing dated February 27, 2024\nIn June 2023, we completed our first commercial spaceflight, 'Galactic 01,' which marked the start of our commercial service."
+        }
+      ]
+    },
+    {
+      "sequence": 25,
+      "round": 2,
+      "action": "progress_checked",
+      "new_eligible_versions": 1,
+      "new_structure": true
+    },
+    {
+      "sequence": 26,
+      "round": 3,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "origin:virgin-galactic-commercial-service-2023",
+          "question": "Find the producing record and evidenced lineage for: Virgin Galactic will commence commercial service during the second quarter of 2023.",
+          "stage": "provenance",
+          "dimension": "auto",
+          "blocking": true,
+          "target_id": null,
+          "basis": [],
+          "decision_impact": "",
+          "action": "search",
+          "locator": null,
+          "probe_id": null
+        }
+      ],
+      "limit": 16
+    },
+    {
+      "sequence": 27,
+      "round": 3,
+      "action": "retrieval_feedback",
+      "feedback": {
+        "round": 3,
+        "gap_id": "origin:virgin-galactic-commercial-service-2023",
+        "action": "search",
+        "locator": null,
+        "status": "unavailable",
+        "reason": "no unseen match in fixed snapshot index; live web unavailable",
+        "version_ids": []
+      }
+    },
+    {
+      "sequence": 28,
+      "round": 3,
+      "action": "verification_started"
+    },
+    {
+      "sequence": 29,
+      "round": 3,
+      "action": "verification_completed",
+      "verdict": "supported",
+      "decision": "supported",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        }
+      },
+      "followup_tasks": 0,
+      "provenance_status": "partial"
+    },
+    {
+      "sequence": 30,
+      "round": 3,
+      "action": "stopped",
+      "reason": "provider_exhausted"
+    }
+  ],
+  "errors": [],
+  "model_call_lineage": {
+    "schema_version": 1,
+    "call_artifact_sha256": "5cb4a2c2f9fcbd97d3d6abcb8f6fd75e1e5fa936a5e202860465200d4cc46dfe",
+    "responses": [
+      {
+        "sequence": 1,
+        "response_id": "chatcmpl-EL2fjcUTcLZ7q9iOMJbbztf6pbGmT",
+        "output_sha256": "475d9a4711238fb00ba92c1f338fc719ffc6469a569cec12e6f51b20e675cb36"
+      },
+      {
+        "sequence": 2,
+        "response_id": "chatcmpl-EL2fmbWhUL3OMe857Wh1DS9aczDlF",
+        "output_sha256": "42203bcd167d06ffb82d13694509ce8a5fa87279a06513ab064be0a80d21ec81"
+      },
+      {
+        "sequence": 3,
+        "response_id": "chatcmpl-EL2frKhxYzVwYgjpxa3QJqOZ0cfSE",
+        "output_sha256": "629f0cd7ee606355a01c385d7e66408999568f934169eb46cd265ea890c8bbf6"
+      },
+      {
+        "sequence": 4,
+        "response_id": "chatcmpl-EL2fuK7Zleh5q75auq96pTHbxAmL4",
+        "output_sha256": "949e44f5538cc109feccadb7b40a3ecd6460d4ad26b2c2a0260d5e4b8df9b74b"
+      },
+      {
+        "sequence": 5,
+        "response_id": "chatcmpl-EL2fy5G4lHBnfqoZFgZI55QwxSwvN",
+        "output_sha256": "a74e4f5c0e9fe9e2b67771750dbece3d5d8dec5733ca6350ceec8e31a053ab07"
+      },
+      {
+        "sequence": 6,
+        "response_id": "chatcmpl-EL2g1amuZmOvwn0eY0q4VjJ4gKMEm",
+        "output_sha256": "0aa614cce39e80071fa3581c246408fa83493c53331d78acdee06cf0e429f989"
+      },
+      {
+        "sequence": 7,
+        "response_id": "chatcmpl-EL2g5lMJr6A811wYoz6iJylwXJLqv",
+        "output_sha256": "a74e4f5c0e9fe9e2b67771750dbece3d5d8dec5733ca6350ceec8e31a053ab07"
+      },
+      {
+        "sequence": 8,
+        "response_id": "chatcmpl-EL2gCacnoLaZKcBEoVewZdynn8LIA",
+        "output_sha256": "fb77881176ae58c3b358f8fdd6c172e980776be95690bd15e2f9fbccb1b37af4"
+      },
+      {
+        "sequence": 9,
+        "response_id": "chatcmpl-EL2gFfHxZho0JbyMBO59dPRUJUzyA",
+        "output_sha256": "96e986507876d9b54df8b11d02d8f25c2e7cbc7375f577e979a26ef421af6365"
+      },
+      {
+        "sequence": 10,
+        "response_id": "chatcmpl-EL2gLGIobnoa9Ix9FtjW2e4dtMPw0",
+        "output_sha256": "629f0cd7ee606355a01c385d7e66408999568f934169eb46cd265ea890c8bbf6"
+      },
+      {
+        "sequence": 11,
+        "response_id": "chatcmpl-EL2gO1wQ1GOGaQdRiGo6lzDY19Ddw",
+        "output_sha256": "6b5f8ba66bd272595ede5bf23f1dd6e35d47df200132bef8b1adf888c3812ea6"
+      },
+      {
+        "sequence": 12,
+        "response_id": "chatcmpl-EL2gT0WopMx34NmIn2nCLCeMjhM1r",
+        "output_sha256": "a74e4f5c0e9fe9e2b67771750dbece3d5d8dec5733ca6350ceec8e31a053ab07"
+      },
+      {
+        "sequence": 13,
+        "response_id": "chatcmpl-EL2gWV8hSFTsmTgH8wwPEBKpcfwKa",
+        "output_sha256": "77f7d03293138dcdba36e70be24fcfca772e0d754ead50a1e179f3c97ed3e9b7"
+      },
+      {
+        "sequence": 14,
+        "response_id": "chatcmpl-EL2gduvtuW439QDQcN1l5l7qhGDSS",
+        "output_sha256": "a74e4f5c0e9fe9e2b67771750dbece3d5d8dec5733ca6350ceec8e31a053ab07"
+      },
+      {
+        "sequence": 15,
+        "response_id": "chatcmpl-EL2ggFYzCvOwYUDgAkCMclMf1BDmW",
+        "output_sha256": "3f2b01fba73112b8be4c53376e274409ae3d4a37a633a8cc75c1958e36d6f0cc"
+      },
+      {
+        "sequence": 16,
+        "response_id": "chatcmpl-EL2gmj4tqe0fgd5MiVo4gaHUwLLuB",
+        "output_sha256": "a74e4f5c0e9fe9e2b67771750dbece3d5d8dec5733ca6350ceec8e31a053ab07"
+      }
+    ]
+  }
+}

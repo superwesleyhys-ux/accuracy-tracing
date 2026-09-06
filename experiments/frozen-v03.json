@@ -1,0 +1,14 @@
+{
+  "files": {
+    "inputs-v03.json": "4efef214c4c2d220407ee05c775945fad7377dc31328c07ccdad3842deb75cfc",
+    "gold-v03.json": "a09220f0465dc0afa1f7504cad7370a805c8408b02631ba5dd983f84e023c850"
+  },
+  "frozen_before_live_calls": true,
+  "max_rounds": 5,
+  "prefix_baseline": "actual first-round checkpoint",
+  "holdout": false,
+  "full_evidence_control_ids": [
+    "chain-evidence"
+  ],
+  "rule": "Keep all cases and all failed attempts; never edit gold to match outputs."
+}

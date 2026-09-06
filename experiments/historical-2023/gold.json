@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "dataset_kind": "author_curated_historical_forecast_pilot",
+  "cases": [
+    {
+      "id": "tesla-cybertruck-2023",
+      "event_id": "tesla-cybertruck-first-deliveries",
+      "assessment_mode": "evidence",
+      "decision": "true",
+      "adjudication_source_version_ids": ["tesla-cybertruck-outcome-2024"],
+      "rationale": "The filed 10-K says the first Cybertruck deliveries occurred in November 2023, before the proposition's year-end deadline.",
+      "basis": [
+        {
+          "version_id": "tesla-cybertruck-outcome-2024",
+          "quote": "In November 2023, we entered the consumer pickup truck market with first deliveries of the Cybertruck."
+        }
+      ]
+    },
+    {
+      "id": "virgin-galactic-commercial-service-2023",
+      "event_id": "virgin-galactic-commercial-service-start",
+      "assessment_mode": "evidence",
+      "decision": "true",
+      "adjudication_source_version_ids": ["virgin-commercial-outcome-2024"],
+      "rationale": "The filed 10-K identifies Galactic 01 in June 2023 as the start of commercial service; June falls in the second quarter.",
+      "basis": [
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "quote": "In June 2023, 'Galactic 01,' marked the start of commercial service."
+        }
+      ]
+    },
+    {
+      "id": "nasa-osiris-rex-2023",
+      "event_id": "nasa-osiris-rex-capsule-return",
+      "assessment_mode": "evidence",
+      "decision": "true",
+      "adjudication_source_version_ids": ["nasa-osiris-rex-outcome-2024"],
+      "rationale": "NASA's post-entry technical paper records both capsule release and landing at UTTR on September 24, 2023.",
+      "basis": [
+        {
+          "version_id": "nasa-osiris-rex-outcome-2024",
+          "quote": "The mission successfully completed a sequence of key events, including SRC release, and landed the capsule in the Utah Test and Training Range (UTTR) on September 24, 2023."
+        }
+      ]
+    },
+    {
+      "id": "sec-t1-2024",
+      "event_id": "us-securities-t1-transition",
+      "assessment_mode": "evidence",
+      "decision": "true",
+      "adjudication_source_version_ids": ["sec-t1-outcome-2024"],
+      "rationale": "The cutoff-archived SEC speech states that the relevant markets successfully moved to T+1 on May 28, 2024.",
+      "basis": [
+        {
+          "version_id": "sec-t1-outcome-2024",
+          "quote": "On May 28, 2024, we achieved this. The equities, corporate bonds, and municipal markets successfully moved to T+1."
+        }
+      ]
+    },
+    {
+      "id": "lucid-production-2023",
+      "event_id": "lucid-full-year-2023-production",
+      "assessment_mode": "evidence",
+      "decision": "false",
+      "adjudication_source_version_ids": ["lucid-production-outcome-2024"],
+      "rationale": "Lucid reported full-year production of 8,428 vehicles, below and not greater than 10,000.",
+      "basis": [
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "quote": "On a full-year basis, the Company produced 8,428 vehicles."
+        }
+      ]
+    },
+    {
+      "id": "boeing-starliner-cft-2023",
+      "event_id": "boeing-starliner-crewed-flight-test",
+      "assessment_mode": "evidence",
+      "decision": "false",
+      "adjudication_source_version_ids": ["boeing-starliner-outcome-2024"],
+      "rationale": "The crewed flight test did not launch until June 5, 2024, so it could not have been completed by December 31, 2023.",
+      "basis": [
+        {
+          "version_id": "boeing-starliner-outcome-2024",
+          "quote": "The CFT launched on June 5, 2024, and docked with the ISS."
+        }
+      ]
+    },
+    {
+      "id": "wto-merchandise-trade-2023",
+      "event_id": "world-merchandise-trade-volume-2023",
+      "assessment_mode": "evidence",
+      "decision": "false",
+      "adjudication_source_version_ids": ["wto-trade-outcome-2024"],
+      "rationale": "WTO's 2024 report records a 1.2% decline in 2023 rather than 1.7% growth.",
+      "basis": [
+        {
+          "version_id": "wto-trade-outcome-2024",
+          "quote": "following a larger-than-expected decline of -1.2% in 2023."
+        }
+      ]
+    },
+    {
+      "id": "noaa-atlantic-storms-2023",
+      "event_id": "atlantic-named-storm-count-2023",
+      "assessment_mode": "evidence",
+      "decision": "false",
+      "adjudication_source_version_ids": ["noaa-storms-outcome-2024"],
+      "rationale": "NOAA's season report records 20 named storms, which is outside the inclusive forecast range of 12 through 17.",
+      "basis": [
+        {
+          "version_id": "noaa-storms-outcome-2024",
+          "quote": "The 2023 Atlantic hurricane season was above normal, producing 20 named storms, 7 hurricanes, 3 major hurricanes, and seasonal accumulated cyclone energy that exceeded the 1991-2020 average."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "This is a retrospectively selected, author-curated eight-case pilot, not an independently reviewed, held-out, representative, or deployment benchmark.",
+    "The protocol isolates admissible evidence by publication/version cutoff, but it cannot remove post-cutoff knowledge from current model parameters.",
+    "Exact-label results from eight cases are descriptive smoke-test results and do not establish a general accuracy improvement."
+  ]
+}

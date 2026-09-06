@@ -1,0 +1,124 @@
+[
+  {
+    "round": 1,
+    "tasks": [
+      {
+        "id": "origin:virgin-galactic-commercial-service-2023",
+        "question": "Find the producing record and evidenced lineage for: Virgin Galactic will commence commercial service during the second quarter of 2023.",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null,
+        "probe_id": null
+      }
+    ],
+    "planned_ids": [
+      "virgin-commercial-claim-2023"
+    ],
+    "returned_ids": [
+      "virgin-commercial-claim-2023"
+    ],
+    "attribution": {},
+    "feedback": []
+  },
+  {
+    "round": 2,
+    "tasks": [
+      {
+        "id": "origin:virgin-galactic-commercial-service-2023",
+        "question": "Find the producing record and evidenced lineage for: Virgin Galactic will commence commercial service during the second quarter of 2023.",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null,
+        "probe_id": null
+      },
+      {
+        "id": "virgin-galactic-commercial-service-2023:missing-scope:1a5a3de273dc01f308f9",
+        "question": "Retrieve the frozen evidence-scope version: virgin-commercial-outcome-2024",
+        "stage": "verification",
+        "dimension": "evidence",
+        "blocking": false,
+        "target_id": "virgin-galactic-commercial-service-2023",
+        "basis": [],
+        "decision_impact": "The missing scoped version can change evidence entailment.",
+        "action": "fetch",
+        "locator": "virgin-commercial-outcome-2024",
+        "probe_id": null
+      }
+    ],
+    "planned_ids": [
+      "virgin-commercial-outcome-2024"
+    ],
+    "returned_ids": [
+      "virgin-commercial-outcome-2024"
+    ],
+    "attribution": {
+      "virgin-commercial-outcome-2024": [
+        "origin:virgin-galactic-commercial-service-2023",
+        "virgin-galactic-commercial-service-2023:missing-scope:1a5a3de273dc01f308f9"
+      ]
+    },
+    "feedback": [
+      {
+        "gap_id": "virgin-galactic-commercial-service-2023:missing-scope:1a5a3de273dc01f308f9",
+        "action": "fetch",
+        "locator": "virgin-commercial-outcome-2024",
+        "status": "returned",
+        "reason": "matching snapshots returned",
+        "version_ids": [
+          "virgin-commercial-outcome-2024"
+        ]
+      },
+      {
+        "gap_id": "origin:virgin-galactic-commercial-service-2023",
+        "action": "search",
+        "locator": null,
+        "status": "returned",
+        "reason": "matching snapshots returned",
+        "version_ids": [
+          "virgin-commercial-outcome-2024"
+        ]
+      }
+    ]
+  },
+  {
+    "round": 3,
+    "tasks": [
+      {
+        "id": "origin:virgin-galactic-commercial-service-2023",
+        "question": "Find the producing record and evidenced lineage for: Virgin Galactic will commence commercial service during the second quarter of 2023.",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null,
+        "probe_id": null
+      }
+    ],
+    "planned_ids": [],
+    "returned_ids": [],
+    "attribution": {},
+    "feedback": [
+      {
+        "gap_id": "origin:virgin-galactic-commercial-service-2023",
+        "action": "search",
+        "locator": null,
+        "status": "unavailable",
+        "reason": "no unseen match in fixed snapshot index; live web unavailable",
+        "version_ids": []
+      }
+    ]
+  }
+]

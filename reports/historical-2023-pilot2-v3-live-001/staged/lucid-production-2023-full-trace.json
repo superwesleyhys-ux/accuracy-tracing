@@ -1,0 +1,576 @@
+{
+  "schema_version": "0.3",
+  "scope": "plugin-supplied semantic analyses; no built-in truth oracle",
+  "target": {
+    "id": "lucid-production-2023",
+    "text": "Lucid will manufacture more than 10,000 vehicles during 2023.",
+    "as_of": "2024-12-31T23:59:59Z",
+    "source_version_id": "lucid-production-claim-2023",
+    "assessment_mode": "evidence",
+    "evidence_scope": [
+      "lucid-production-outcome-2024"
+    ]
+  },
+  "config": {
+    "max_rounds": 1,
+    "max_documents": 18,
+    "max_decomposition_calls": 18
+  },
+  "provenance_status": "unresolved",
+  "fact_status": "unresolved",
+  "stop_reason": "verifier_error",
+  "usage": {
+    "rounds": 1,
+    "documents": 2,
+    "unique_versions": 2,
+    "decomposition_calls": 2,
+    "verification_calls": 1
+  },
+  "decision_status": "unresolved",
+  "assessments": null,
+  "assessment_valid": false,
+  "materials": [
+    {
+      "version_id": "lucid-production-claim-2023",
+      "url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828023027783/q2fy23ex991.htm",
+      "content": "Lucid Q2 2023 results | SEC exhibit filed August 7, 2023\nLucid is on track to manufacture more than 10,000 vehicles in 2023.",
+      "retrieved_at": "2026-09-06T04:05:15Z",
+      "published_at": "2023-08-07T23:59:59Z",
+      "available_at": "2023-08-07T23:59:59Z",
+      "availability_basis": "Immutable SEC EDGAR accession 0001628280-23-027783, filed August 7, 2023; raw filing identity is recorded in sources.json.",
+      "issuer": "Lucid Group, Inc. (filed with the U.S. SEC)"
+    },
+    {
+      "version_id": "lucid-production-outcome-2024",
+      "url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828024005904/q423ex991k.htm",
+      "content": "Lucid Q4 2023 results | SEC exhibit filed February 21, 2024\nOn a full-year basis, the Company produced 8,428 vehicles.",
+      "retrieved_at": "2026-09-06T04:05:15Z",
+      "published_at": "2024-02-21T23:59:59Z",
+      "available_at": "2024-02-21T23:59:59Z",
+      "availability_basis": "Immutable SEC EDGAR accession 0001628280-24-005904, filed February 21, 2024; raw filing identity is recorded in sources.json.",
+      "issuer": "Lucid Group, Inc. (filed with the U.S. SEC)"
+    }
+  ],
+  "eligible_version_ids": [
+    "lucid-production-claim-2023",
+    "lucid-production-outcome-2024"
+  ],
+  "observations": [
+    {
+      "version_id": "lucid-production-claim-2023",
+      "retrieved_at": "2026-09-06T04:05:15Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": [],
+      "task_ids": []
+    },
+    {
+      "version_id": "lucid-production-outcome-2024",
+      "retrieved_at": "2026-09-06T04:05:15Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": [],
+      "task_ids": []
+    }
+  ],
+  "retrieval_feedback": [],
+  "analyses": {
+    "lucid-production-claim-2023": {
+      "fragments": [
+        {
+          "id": "lucid-production-claim-2023:atom:5a74232c2d7cb1054c44",
+          "text": "Lucid is on track to manufacture more than 10,000 vehicles in 2023.",
+          "span": {
+            "version_id": "lucid-production-claim-2023",
+            "start": 57,
+            "end": 124,
+            "quote": "Lucid is on track to manufacture more than 10,000 vehicles in 2023."
+          },
+          "parent_id": "lucid-production-2023",
+          "qualifiers": [
+            "on track",
+            "more than 10,000 vehicles",
+            "in 2023"
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "lucid-production-claim-2023",
+              "start": 66,
+              "end": 74,
+              "quote": "on track"
+            },
+            {
+              "version_id": "lucid-production-claim-2023",
+              "start": 90,
+              "end": 115,
+              "quote": "more than 10,000 vehicles"
+            },
+            {
+              "version_id": "lucid-production-claim-2023",
+              "start": 116,
+              "end": 123,
+              "quote": "in 2023"
+            }
+          ]
+        }
+      ],
+      "relations": [],
+      "gaps": [],
+      "resolutions": [],
+      "origins": [],
+      "notes": "The material states an on-track projection, not a completed production outcome.\nThe supplied content identifies a Lucid Q2 2023 results SEC exhibit but contains no explicit source-side citations or statement establishing originality. The envelope identifies Lucid Group, Inc. as issuer and the SEC as filing venue; filing does not establish SEC authorship or endorsement. No prior lineage findings require retention.",
+      "revisit_versions": []
+    },
+    "lucid-production-outcome-2024": {
+      "fragments": [
+        {
+          "id": "lucid-production-outcome-2024:atom:cbf9464a494d5a4c7d6b",
+          "text": "Lucid produced 8,428 vehicles for the full year 2023.",
+          "span": {
+            "version_id": "lucid-production-outcome-2024",
+            "start": 0,
+            "end": 118,
+            "quote": "Lucid Q4 2023 results | SEC exhibit filed February 21, 2024\nOn a full-year basis, the Company produced 8,428 vehicles."
+          },
+          "parent_id": "lucid-production-2023",
+          "qualifiers": [
+            "2023",
+            "On a full-year basis"
+          ],
+          "qualifier_spans": [
+            {
+              "version_id": "lucid-production-outcome-2024",
+              "start": 9,
+              "end": 13,
+              "quote": "2023"
+            },
+            {
+              "version_id": "lucid-production-outcome-2024",
+              "start": 60,
+              "end": 80,
+              "quote": "On a full-year basis"
+            }
+          ]
+        }
+      ],
+      "relations": [],
+      "gaps": [],
+      "resolutions": [],
+      "origins": [],
+      "notes": "The supplied material identifies Lucid Group, Inc. as issuer and the document as an SEC exhibit filed February 21, 2024. It contains no explicit source-side citations or statement establishing originality. No prior lineage findings require retention.",
+      "revisit_versions": []
+    }
+  },
+  "analysis_history": [
+    {
+      "revision": 1,
+      "round": 1,
+      "version_id": "lucid-production-claim-2023",
+      "duplicate": false,
+      "revisit": false,
+      "retrieval_receipt": {
+        "version_id": "lucid-production-claim-2023",
+        "task_ids": [],
+        "revisit": false,
+        "tasks": [],
+        "attribution": "envelope",
+        "duplicate": false,
+        "eligible": true
+      },
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "lucid-production-claim-2023:atom:5a74232c2d7cb1054c44",
+            "text": "Lucid is on track to manufacture more than 10,000 vehicles in 2023.",
+            "span": {
+              "version_id": "lucid-production-claim-2023",
+              "start": 57,
+              "end": 124,
+              "quote": "Lucid is on track to manufacture more than 10,000 vehicles in 2023."
+            },
+            "parent_id": "lucid-production-2023",
+            "qualifiers": [
+              "on track",
+              "more than 10,000 vehicles",
+              "in 2023"
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "lucid-production-claim-2023",
+                "start": 66,
+                "end": 74,
+                "quote": "on track"
+              },
+              {
+                "version_id": "lucid-production-claim-2023",
+                "start": 90,
+                "end": 115,
+                "quote": "more than 10,000 vehicles"
+              },
+              {
+                "version_id": "lucid-production-claim-2023",
+                "start": 116,
+                "end": 123,
+                "quote": "in 2023"
+              }
+            ]
+          }
+        ],
+        "relations": [],
+        "gaps": [],
+        "resolutions": [],
+        "origins": [],
+        "notes": "The material states an on-track projection, not a completed production outcome.\nThe supplied content identifies a Lucid Q2 2023 results SEC exhibit but contains no explicit source-side citations or statement establishing originality. The envelope identifies Lucid Group, Inc. as issuer and the SEC as filing venue; filing does not establish SEC authorship or endorsement. No prior lineage findings require retention.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    },
+    {
+      "revision": 2,
+      "round": 1,
+      "version_id": "lucid-production-outcome-2024",
+      "duplicate": false,
+      "revisit": false,
+      "retrieval_receipt": {
+        "version_id": "lucid-production-outcome-2024",
+        "task_ids": [],
+        "revisit": false,
+        "tasks": [],
+        "attribution": "envelope",
+        "duplicate": false,
+        "eligible": true
+      },
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "lucid-production-outcome-2024:atom:cbf9464a494d5a4c7d6b",
+            "text": "Lucid produced 8,428 vehicles for the full year 2023.",
+            "span": {
+              "version_id": "lucid-production-outcome-2024",
+              "start": 0,
+              "end": 118,
+              "quote": "Lucid Q4 2023 results | SEC exhibit filed February 21, 2024\nOn a full-year basis, the Company produced 8,428 vehicles."
+            },
+            "parent_id": "lucid-production-2023",
+            "qualifiers": [
+              "2023",
+              "On a full-year basis"
+            ],
+            "qualifier_spans": [
+              {
+                "version_id": "lucid-production-outcome-2024",
+                "start": 9,
+                "end": 13,
+                "quote": "2023"
+              },
+              {
+                "version_id": "lucid-production-outcome-2024",
+                "start": 60,
+                "end": 80,
+                "quote": "On a full-year basis"
+              }
+            ]
+          }
+        ],
+        "relations": [],
+        "gaps": [],
+        "resolutions": [],
+        "origins": [],
+        "notes": "The supplied material identifies Lucid Group, Inc. as issuer and the document as an SEC exhibit filed February 21, 2024. It contains no explicit source-side citations or statement establishing originality. No prior lineage findings require retention.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    }
+  ],
+  "fragments": [
+    {
+      "id": "lucid-production-claim-2023:atom:5a74232c2d7cb1054c44",
+      "text": "Lucid is on track to manufacture more than 10,000 vehicles in 2023.",
+      "span": {
+        "version_id": "lucid-production-claim-2023",
+        "start": 57,
+        "end": 124,
+        "quote": "Lucid is on track to manufacture more than 10,000 vehicles in 2023."
+      },
+      "parent_id": "lucid-production-2023",
+      "qualifiers": [
+        "on track",
+        "more than 10,000 vehicles",
+        "in 2023"
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "lucid-production-claim-2023",
+          "start": 66,
+          "end": 74,
+          "quote": "on track"
+        },
+        {
+          "version_id": "lucid-production-claim-2023",
+          "start": 90,
+          "end": 115,
+          "quote": "more than 10,000 vehicles"
+        },
+        {
+          "version_id": "lucid-production-claim-2023",
+          "start": 116,
+          "end": 123,
+          "quote": "in 2023"
+        }
+      ]
+    },
+    {
+      "id": "lucid-production-outcome-2024:atom:cbf9464a494d5a4c7d6b",
+      "text": "Lucid produced 8,428 vehicles for the full year 2023.",
+      "span": {
+        "version_id": "lucid-production-outcome-2024",
+        "start": 0,
+        "end": 118,
+        "quote": "Lucid Q4 2023 results | SEC exhibit filed February 21, 2024\nOn a full-year basis, the Company produced 8,428 vehicles."
+      },
+      "parent_id": "lucid-production-2023",
+      "qualifiers": [
+        "2023",
+        "On a full-year basis"
+      ],
+      "qualifier_spans": [
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "start": 9,
+          "end": 13,
+          "quote": "2023"
+        },
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "start": 60,
+          "end": 80,
+          "quote": "On a full-year basis"
+        }
+      ]
+    }
+  ],
+  "relations": [],
+  "origins": [],
+  "gaps": [
+    {
+      "id": "origin:lucid-production-2023",
+      "question": "Find the producing record and evidenced lineage for: Lucid will manufacture more than 10,000 vehicles during 2023.",
+      "stage": "provenance",
+      "dimension": "auto",
+      "blocking": true,
+      "target_id": null,
+      "basis": [],
+      "decision_impact": "",
+      "action": "search",
+      "locator": null,
+      "probe_id": null
+    }
+  ],
+  "resolutions": [],
+  "verification_history": [],
+  "operations": [
+    {
+      "sequence": 1,
+      "round": 1,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "origin:lucid-production-2023",
+          "question": "Find the producing record and evidenced lineage for: Lucid will manufacture more than 10,000 vehicles during 2023.",
+          "stage": "provenance",
+          "dimension": "auto",
+          "blocking": true,
+          "target_id": null,
+          "basis": [],
+          "decision_impact": "",
+          "action": "search",
+          "locator": null,
+          "probe_id": null
+        }
+      ],
+      "limit": 18
+    },
+    {
+      "sequence": 2,
+      "round": 1,
+      "action": "retrieval_attribution_validated",
+      "version_id": "lucid-production-claim-2023",
+      "task_ids": [],
+      "attribution": "envelope"
+    },
+    {
+      "sequence": 3,
+      "round": 1,
+      "action": "snapshot_saved",
+      "version_id": "lucid-production-claim-2023",
+      "sha256": "f563325e7af346d9f72983b6088facfe6ea525de52bfc7962cb9e5db25cb3fec",
+      "eligible": true
+    },
+    {
+      "sequence": 4,
+      "round": 1,
+      "action": "decompose_started",
+      "version_id": "lucid-production-claim-2023",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 5,
+      "round": 1,
+      "action": "decompose_completed",
+      "version_id": "lucid-production-claim-2023",
+      "revision": 1
+    },
+    {
+      "sequence": 6,
+      "round": 1,
+      "action": "alignment_checked",
+      "version_id": "lucid-production-claim-2023",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 7,
+      "round": 1,
+      "action": "graph_updated",
+      "version_id": "lucid-production-claim-2023",
+      "open_gaps": 1
+    },
+    {
+      "sequence": 8,
+      "round": 1,
+      "action": "retrieval_attribution_validated",
+      "version_id": "lucid-production-outcome-2024",
+      "task_ids": [],
+      "attribution": "envelope"
+    },
+    {
+      "sequence": 9,
+      "round": 1,
+      "action": "snapshot_saved",
+      "version_id": "lucid-production-outcome-2024",
+      "sha256": "e36bc0f99dff4028b9fd50584d9b9a7bb9fd3c3303c2369e092ae44fde8b0ff6",
+      "eligible": true
+    },
+    {
+      "sequence": 10,
+      "round": 1,
+      "action": "decompose_started",
+      "version_id": "lucid-production-outcome-2024",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 11,
+      "round": 1,
+      "action": "decompose_completed",
+      "version_id": "lucid-production-outcome-2024",
+      "revision": 2
+    },
+    {
+      "sequence": 12,
+      "round": 1,
+      "action": "alignment_checked",
+      "version_id": "lucid-production-outcome-2024",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 13,
+      "round": 1,
+      "action": "graph_updated",
+      "version_id": "lucid-production-outcome-2024",
+      "open_gaps": 1
+    },
+    {
+      "sequence": 14,
+      "round": 1,
+      "action": "verification_started"
+    },
+    {
+      "sequence": 15,
+      "round": 1,
+      "action": "error",
+      "stage": "verifier",
+      "message": "staged semantic world: conclusive probe cannot carry a stop reason"
+    },
+    {
+      "sequence": 16,
+      "round": 1,
+      "action": "stopped",
+      "reason": "verifier_error"
+    }
+  ],
+  "errors": [
+    {
+      "stage": "verifier",
+      "type": "StagedSemanticError",
+      "message": "staged semantic world: conclusive probe cannot carry a stop reason"
+    }
+  ],
+  "model_call_lineage": {
+    "schema_version": 1,
+    "call_artifact_sha256": "f8b083593983aa3ab63a2f66337326de3a08172817d257a1fd068ac62e049697",
+    "responses": [
+      {
+        "sequence": 1,
+        "response_id": "chatcmpl-EL2gpToNGANbp00G2BBg8zgxmPbuu",
+        "output_sha256": "0b5535889763d740bd89349f903492999ee95f1be50e02b5cdae6ac61e71723b"
+      },
+      {
+        "sequence": 2,
+        "response_id": "chatcmpl-EL2gsh5iuy4Cbzjxbrkjd7GTMZ31w",
+        "output_sha256": "9cf21d72992a0b4302b8476cbab23f2001425d4345df7d5f2f7b2ae89a396b39"
+      },
+      {
+        "sequence": 3,
+        "response_id": "chatcmpl-EL2gwDNRtUk1oc0qQp7xgAZWQyomU",
+        "output_sha256": "629f0cd7ee606355a01c385d7e66408999568f934169eb46cd265ea890c8bbf6"
+      },
+      {
+        "sequence": 4,
+        "response_id": "chatcmpl-EL2h0jHDlKs5SQlP2A3Uz7AOa61qY",
+        "output_sha256": "cb3e6e978ffb3e0df795dc63c8cdbd01d14702eda5b56fc6443f1c30a787401c"
+      },
+      {
+        "sequence": 5,
+        "response_id": "chatcmpl-EL2h3CjON7qH5xSZo5Nve8dcYkw7L",
+        "output_sha256": "ef5ad95e71b6592b121b247123fc0271f117d32ac70ad7d93216555a0432e45a"
+      },
+      {
+        "sequence": 6,
+        "response_id": "chatcmpl-EL2h917WoMP5QBWGDbhuoqc39SUPW",
+        "output_sha256": "629f0cd7ee606355a01c385d7e66408999568f934169eb46cd265ea890c8bbf6"
+      },
+      {
+        "sequence": 7,
+        "response_id": "chatcmpl-EL2hCoxsRclNXOASKSYRkBdf7NkiM",
+        "output_sha256": "d47bd1f117c0f2848b1f3a149a02d45aa4090d3a2bdfb6563baedcead7ede58a"
+      },
+      {
+        "sequence": 8,
+        "response_id": "chatcmpl-EL2hIshtT3ii8skeDJoHeb6UdLYd8",
+        "output_sha256": "a74e4f5c0e9fe9e2b67771750dbece3d5d8dec5733ca6350ceec8e31a053ab07"
+      },
+      {
+        "sequence": 9,
+        "response_id": "chatcmpl-EL2hLILKhezcFoMYD64vgaP7rLnMo",
+        "output_sha256": "29dbd59f256e8ee9850817dfe40c177acf710a2a1806d86d3bc9a49b44856990"
+      },
+      {
+        "sequence": 10,
+        "response_id": "chatcmpl-EL2hYpQCVtsCB1ZjyxD7sryH0oNxQ",
+        "output_sha256": "5d9890fb803a52117711dd2a42f8e625b6bdb66f50ef3efff449811712f8b36b"
+      }
+    ]
+  },
+  "execution_failure": {
+    "schema_version": 1,
+    "error_type": "StagedSemanticError",
+    "trace_stage": "verifier",
+    "trace_error_type": "StagedSemanticError",
+    "call_artifact_sha256": "f8b083593983aa3ab63a2f66337326de3a08172817d257a1fd068ac62e049697",
+    "failed_call_sequence": null,
+    "failed_call_error_type": null
+  }
+}

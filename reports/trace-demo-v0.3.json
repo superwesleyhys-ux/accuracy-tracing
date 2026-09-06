@@ -1,0 +1,1560 @@
+{
+  "schema_version": "0.3",
+  "scope": "plugin-supplied semantic analyses; no built-in truth oracle",
+  "target": {
+    "id": "staff-cut",
+    "text": "Northstar has already cut 30% of staff.",
+    "as_of": "2026-09-04T20:00:00Z",
+    "source_version_id": "headline:v1",
+    "assessment_mode": "world",
+    "evidence_scope": []
+  },
+  "config": {
+    "max_rounds": 4,
+    "max_documents": 12,
+    "max_decomposition_calls": 20
+  },
+  "provenance_status": "original_material_located",
+  "fact_status": "contradicted",
+  "stop_reason": "complete",
+  "usage": {
+    "rounds": 3,
+    "documents": 4,
+    "unique_versions": 4,
+    "decomposition_calls": 6,
+    "verification_calls": 3
+  },
+  "decision_status": "contradicted",
+  "assessments": {
+    "evidence": {
+      "raw_verdict": "contradicted",
+      "decision": "contradicted",
+      "blocking_gap_ids": []
+    },
+    "world": {
+      "raw_verdict": "contradicted",
+      "decision": "contradicted",
+      "blocking_gap_ids": []
+    }
+  },
+  "assessment_valid": true,
+  "materials": [
+    {
+      "version_id": "headline:v1",
+      "url": "https://news.example/headline",
+      "content": "Northstar has already cut 30% of staff. Source: https://dispatch.example/report",
+      "retrieved_at": "2026-09-05T01:00:00Z",
+      "published_at": "2026-09-04T12:00:00Z",
+      "available_at": "2026-09-04T12:00:00Z",
+      "availability_basis": "Synthetic fixture asserts the exact version was archived at this time.",
+      "issuer": "synthetic-publisher"
+    },
+    {
+      "version_id": "dispatch:v1",
+      "url": "https://dispatch.example/report",
+      "content": "Northstar plans to cut 30% of staff. Source: https://records.example/meeting",
+      "retrieved_at": "2026-09-05T01:00:00Z",
+      "published_at": "2026-09-04T11:00:00Z",
+      "available_at": "2026-09-04T11:00:00Z",
+      "availability_basis": "Synthetic fixture asserts the exact version was archived at this time.",
+      "issuer": "synthetic-publisher"
+    },
+    {
+      "version_id": "minutes:v1",
+      "url": "https://records.example/meeting",
+      "content": "Meeting record: discussing next year's external-services budget; reduction ceiling 30%.",
+      "retrieved_at": "2026-09-05T01:00:00Z",
+      "published_at": "2026-08-01T09:00:00Z",
+      "available_at": "2026-08-01T09:00:00Z",
+      "availability_basis": "Synthetic fixture asserts the exact version was archived at this time.",
+      "issuer": "synthetic-publisher"
+    },
+    {
+      "version_id": "headline:v2",
+      "url": "https://news.example/headline",
+      "content": "Correction: no staff cuts have been implemented. The earlier 30% figure was a proposed ceiling for next year's external-services budget.",
+      "retrieved_at": "2026-09-05T01:00:00Z",
+      "published_at": "2026-09-04T18:00:00Z",
+      "available_at": "2026-09-04T18:00:00Z",
+      "availability_basis": "Synthetic fixture asserts the exact version was archived at this time.",
+      "issuer": "synthetic-publisher"
+    }
+  ],
+  "eligible_version_ids": [
+    "headline:v1",
+    "dispatch:v1",
+    "minutes:v1",
+    "headline:v2"
+  ],
+  "observations": [
+    {
+      "version_id": "headline:v1",
+      "retrieved_at": "2026-09-05T01:00:00Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": [],
+      "task_ids": []
+    },
+    {
+      "version_id": "dispatch:v1",
+      "retrieved_at": "2026-09-05T01:00:00Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": [],
+      "task_ids": []
+    },
+    {
+      "version_id": "minutes:v1",
+      "retrieved_at": "2026-09-05T01:00:00Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": [],
+      "task_ids": []
+    },
+    {
+      "version_id": "headline:v2",
+      "retrieved_at": "2026-09-05T01:00:00Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": [],
+      "task_ids": []
+    }
+  ],
+  "retrieval_feedback": [],
+  "analyses": {
+    "headline:v1": {
+      "fragments": [
+        {
+          "id": "headline:v1:statement",
+          "text": "Northstar has already cut 30% of staff. Source: https://dispatch.example/report",
+          "span": {
+            "version_id": "headline:v1",
+            "start": 0,
+            "end": 79,
+            "quote": "Northstar has already cut 30% of staff. Source: https://dispatch.example/report"
+          },
+          "parent_id": "staff-cut",
+          "qualifiers": [],
+          "qualifier_spans": []
+        }
+      ],
+      "relations": [
+        {
+          "id": "headline-to-dispatch",
+          "from_version": "headline:v1",
+          "to_version": "dispatch:v1",
+          "kind": "cites",
+          "status": "direct",
+          "basis": [
+            {
+              "version_id": "headline:v1",
+              "start": 0,
+              "end": 79,
+              "quote": "Northstar has already cut 30% of staff. Source: https://dispatch.example/report"
+            }
+          ],
+          "rationale": "The headline explicitly names the dispatch; availability is tracked separately.",
+          "upstream_locator": "https://dispatch.example/report"
+        }
+      ],
+      "gaps": [],
+      "resolutions": [],
+      "origins": [],
+      "notes": "",
+      "revisit_versions": []
+    },
+    "dispatch:v1": {
+      "fragments": [
+        {
+          "id": "dispatch:v1:statement",
+          "text": "Northstar plans to cut 30% of staff. Source: https://records.example/meeting",
+          "span": {
+            "version_id": "dispatch:v1",
+            "start": 0,
+            "end": 76,
+            "quote": "Northstar plans to cut 30% of staff. Source: https://records.example/meeting"
+          },
+          "parent_id": "staff-cut",
+          "qualifiers": [],
+          "qualifier_spans": []
+        }
+      ],
+      "relations": [
+        {
+          "id": "dispatch-to-minutes",
+          "from_version": "dispatch:v1",
+          "to_version": "minutes:v1",
+          "kind": "cites",
+          "status": "direct",
+          "basis": [
+            {
+              "version_id": "dispatch:v1",
+              "start": 0,
+              "end": 76,
+              "quote": "Northstar plans to cut 30% of staff. Source: https://records.example/meeting"
+            }
+          ],
+          "rationale": "The dispatch explicitly attributes the figure to meeting minutes.",
+          "upstream_locator": "https://records.example/meeting"
+        }
+      ],
+      "gaps": [],
+      "resolutions": [
+        {
+          "gap_id": "dispatch",
+          "basis": [
+            {
+              "version_id": "dispatch:v1",
+              "start": 0,
+              "end": 76,
+              "quote": "Northstar plans to cut 30% of staff. Source: https://records.example/meeting"
+            }
+          ],
+          "rationale": "Located the explicitly named dispatch version."
+        }
+      ],
+      "origins": [],
+      "notes": "",
+      "revisit_versions": []
+    },
+    "minutes:v1": {
+      "fragments": [
+        {
+          "id": "minutes:v1:statement",
+          "text": "Meeting record: discussing next year's external-services budget; reduction ceiling 30%.",
+          "span": {
+            "version_id": "minutes:v1",
+            "start": 0,
+            "end": 87,
+            "quote": "Meeting record: discussing next year's external-services budget; reduction ceiling 30%."
+          },
+          "parent_id": "staff-cut",
+          "qualifiers": [
+            "discussing",
+            "next year",
+            "ceiling",
+            "external-services budget"
+          ],
+          "qualifier_spans": []
+        }
+      ],
+      "relations": [],
+      "gaps": [],
+      "resolutions": [
+        {
+          "gap_id": "minutes",
+          "basis": [
+            {
+              "version_id": "minutes:v1",
+              "start": 0,
+              "end": 87,
+              "quote": "Meeting record: discussing next year's external-services budget; reduction ceiling 30%."
+            }
+          ],
+          "rationale": "Located the producing meeting record."
+        },
+        {
+          "gap_id": "origin:staff-cut",
+          "basis": [
+            {
+              "version_id": "minutes:v1",
+              "start": 0,
+              "end": 87,
+              "quote": "Meeting record: discussing next year's external-services budget; reduction ceiling 30%."
+            }
+          ],
+          "rationale": "The fixture explicitly links the headline through the dispatch to this record."
+        }
+      ],
+      "origins": [
+        {
+          "target_id": "staff-cut",
+          "version_id": "minutes:v1",
+          "basis": [
+            {
+              "version_id": "minutes:v1",
+              "start": 0,
+              "end": 87,
+              "quote": "Meeting record: discussing next year's external-services budget; reduction ceiling 30%."
+            }
+          ],
+          "material_kind": "original_record",
+          "rationale": "Synthetic annotated meeting record is the producing source of the cited figure."
+        }
+      ],
+      "notes": "The original is about a future budget ceiling; the target remains an already-completed staff-cut claim.",
+      "revisit_versions": [
+        "dispatch:v1"
+      ]
+    },
+    "headline:v2": {
+      "fragments": [
+        {
+          "id": "headline:v2:statement",
+          "text": "Correction: no staff cuts have been implemented. The earlier 30% figure was a proposed ceiling for next year's external-services budget.",
+          "span": {
+            "version_id": "headline:v2",
+            "start": 0,
+            "end": 136,
+            "quote": "Correction: no staff cuts have been implemented. The earlier 30% figure was a proposed ceiling for next year's external-services budget."
+          },
+          "parent_id": "staff-cut",
+          "qualifiers": [],
+          "qualifier_spans": []
+        }
+      ],
+      "relations": [
+        {
+          "id": "correction-contradicts-headline",
+          "from_version": "headline:v2",
+          "to_version": "headline:v1",
+          "kind": "contradicts",
+          "status": "direct",
+          "basis": [
+            {
+              "version_id": "headline:v2",
+              "start": 0,
+              "end": 136,
+              "quote": "Correction: no staff cuts have been implemented. The earlier 30% figure was a proposed ceiling for next year's external-services budget."
+            }
+          ],
+          "rationale": "Semantic contradiction is kept separate from citation lineage.",
+          "upstream_locator": null
+        }
+      ],
+      "gaps": [],
+      "resolutions": [],
+      "origins": [],
+      "notes": "Verification requested this correction; it entered psi before verification.",
+      "revisit_versions": []
+    }
+  },
+  "analysis_history": [
+    {
+      "revision": 1,
+      "round": 1,
+      "version_id": "headline:v1",
+      "duplicate": false,
+      "revisit": false,
+      "retrieval_receipt": {
+        "version_id": "headline:v1",
+        "task_ids": [],
+        "revisit": false,
+        "tasks": [],
+        "attribution": "legacy_unattributed",
+        "duplicate": false,
+        "eligible": true
+      },
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "headline:v1:statement",
+            "text": "Northstar has already cut 30% of staff. Source: https://dispatch.example/report",
+            "span": {
+              "version_id": "headline:v1",
+              "start": 0,
+              "end": 79,
+              "quote": "Northstar has already cut 30% of staff. Source: https://dispatch.example/report"
+            },
+            "parent_id": "staff-cut",
+            "qualifiers": [],
+            "qualifier_spans": []
+          }
+        ],
+        "relations": [
+          {
+            "id": "headline-to-dispatch",
+            "from_version": "headline:v1",
+            "to_version": null,
+            "kind": "cites",
+            "status": "declared",
+            "basis": [
+              {
+                "version_id": "headline:v1",
+                "start": 0,
+                "end": 79,
+                "quote": "Northstar has already cut 30% of staff. Source: https://dispatch.example/report"
+              }
+            ],
+            "rationale": "The headline explicitly names the dispatch; availability is tracked separately.",
+            "upstream_locator": "https://dispatch.example/report"
+          }
+        ],
+        "gaps": [
+          {
+            "id": "dispatch",
+            "question": "Retrieve the dispatch named in the headline",
+            "stage": "provenance",
+            "dimension": "auto",
+            "blocking": true,
+            "target_id": null,
+            "basis": [],
+            "decision_impact": "",
+            "action": "search",
+            "locator": null,
+            "probe_id": null
+          }
+        ],
+        "resolutions": [],
+        "origins": [],
+        "notes": "",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    },
+    {
+      "revision": 2,
+      "round": 2,
+      "version_id": "dispatch:v1",
+      "duplicate": false,
+      "revisit": false,
+      "retrieval_receipt": {
+        "version_id": "dispatch:v1",
+        "task_ids": [],
+        "revisit": false,
+        "tasks": [],
+        "attribution": "legacy_unattributed",
+        "duplicate": false,
+        "eligible": true
+      },
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "dispatch:v1:statement",
+            "text": "Northstar plans to cut 30% of staff. Source: https://records.example/meeting",
+            "span": {
+              "version_id": "dispatch:v1",
+              "start": 0,
+              "end": 76,
+              "quote": "Northstar plans to cut 30% of staff. Source: https://records.example/meeting"
+            },
+            "parent_id": "staff-cut",
+            "qualifiers": [],
+            "qualifier_spans": []
+          }
+        ],
+        "relations": [
+          {
+            "id": "dispatch-to-minutes",
+            "from_version": "dispatch:v1",
+            "to_version": null,
+            "kind": "cites",
+            "status": "declared",
+            "basis": [
+              {
+                "version_id": "dispatch:v1",
+                "start": 0,
+                "end": 76,
+                "quote": "Northstar plans to cut 30% of staff. Source: https://records.example/meeting"
+              }
+            ],
+            "rationale": "The dispatch explicitly attributes the figure to meeting minutes.",
+            "upstream_locator": "https://records.example/meeting"
+          }
+        ],
+        "gaps": [
+          {
+            "id": "minutes",
+            "question": "Retrieve the meeting record and determine what 30% modifies",
+            "stage": "provenance",
+            "dimension": "auto",
+            "blocking": true,
+            "target_id": null,
+            "basis": [],
+            "decision_impact": "",
+            "action": "search",
+            "locator": null,
+            "probe_id": null
+          }
+        ],
+        "resolutions": [
+          {
+            "gap_id": "dispatch",
+            "basis": [
+              {
+                "version_id": "dispatch:v1",
+                "start": 0,
+                "end": 76,
+                "quote": "Northstar plans to cut 30% of staff. Source: https://records.example/meeting"
+              }
+            ],
+            "rationale": "Located the explicitly named dispatch version."
+          }
+        ],
+        "origins": [],
+        "notes": "",
+        "revisit_versions": [
+          "headline:v1"
+        ]
+      },
+      "exclusion_reasons": []
+    },
+    {
+      "revision": 3,
+      "round": 2,
+      "version_id": "headline:v1",
+      "duplicate": true,
+      "revisit": true,
+      "retrieval_receipt": {
+        "version_id": "headline:v1",
+        "task_ids": [],
+        "revisit": true,
+        "duplicate": true,
+        "eligible": true
+      },
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "headline:v1:statement",
+            "text": "Northstar has already cut 30% of staff. Source: https://dispatch.example/report",
+            "span": {
+              "version_id": "headline:v1",
+              "start": 0,
+              "end": 79,
+              "quote": "Northstar has already cut 30% of staff. Source: https://dispatch.example/report"
+            },
+            "parent_id": "staff-cut",
+            "qualifiers": [],
+            "qualifier_spans": []
+          }
+        ],
+        "relations": [
+          {
+            "id": "headline-to-dispatch",
+            "from_version": "headline:v1",
+            "to_version": "dispatch:v1",
+            "kind": "cites",
+            "status": "direct",
+            "basis": [
+              {
+                "version_id": "headline:v1",
+                "start": 0,
+                "end": 79,
+                "quote": "Northstar has already cut 30% of staff. Source: https://dispatch.example/report"
+              }
+            ],
+            "rationale": "The headline explicitly names the dispatch; availability is tracked separately.",
+            "upstream_locator": "https://dispatch.example/report"
+          }
+        ],
+        "gaps": [],
+        "resolutions": [],
+        "origins": [],
+        "notes": "",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    },
+    {
+      "revision": 4,
+      "round": 2,
+      "version_id": "minutes:v1",
+      "duplicate": false,
+      "revisit": false,
+      "retrieval_receipt": {
+        "version_id": "minutes:v1",
+        "task_ids": [],
+        "revisit": false,
+        "tasks": [],
+        "attribution": "legacy_unattributed",
+        "duplicate": false,
+        "eligible": true
+      },
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "minutes:v1:statement",
+            "text": "Meeting record: discussing next year's external-services budget; reduction ceiling 30%.",
+            "span": {
+              "version_id": "minutes:v1",
+              "start": 0,
+              "end": 87,
+              "quote": "Meeting record: discussing next year's external-services budget; reduction ceiling 30%."
+            },
+            "parent_id": "staff-cut",
+            "qualifiers": [
+              "discussing",
+              "next year",
+              "ceiling",
+              "external-services budget"
+            ],
+            "qualifier_spans": []
+          }
+        ],
+        "relations": [],
+        "gaps": [],
+        "resolutions": [
+          {
+            "gap_id": "minutes",
+            "basis": [
+              {
+                "version_id": "minutes:v1",
+                "start": 0,
+                "end": 87,
+                "quote": "Meeting record: discussing next year's external-services budget; reduction ceiling 30%."
+              }
+            ],
+            "rationale": "Located the producing meeting record."
+          },
+          {
+            "gap_id": "origin:staff-cut",
+            "basis": [
+              {
+                "version_id": "minutes:v1",
+                "start": 0,
+                "end": 87,
+                "quote": "Meeting record: discussing next year's external-services budget; reduction ceiling 30%."
+              }
+            ],
+            "rationale": "The fixture explicitly links the headline through the dispatch to this record."
+          }
+        ],
+        "origins": [
+          {
+            "target_id": "staff-cut",
+            "version_id": "minutes:v1",
+            "basis": [
+              {
+                "version_id": "minutes:v1",
+                "start": 0,
+                "end": 87,
+                "quote": "Meeting record: discussing next year's external-services budget; reduction ceiling 30%."
+              }
+            ],
+            "material_kind": "original_record",
+            "rationale": "Synthetic annotated meeting record is the producing source of the cited figure."
+          }
+        ],
+        "notes": "The original is about a future budget ceiling; the target remains an already-completed staff-cut claim.",
+        "revisit_versions": [
+          "dispatch:v1"
+        ]
+      },
+      "exclusion_reasons": []
+    },
+    {
+      "revision": 5,
+      "round": 2,
+      "version_id": "dispatch:v1",
+      "duplicate": true,
+      "revisit": true,
+      "retrieval_receipt": {
+        "version_id": "dispatch:v1",
+        "task_ids": [],
+        "revisit": true,
+        "duplicate": true,
+        "eligible": true
+      },
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "dispatch:v1:statement",
+            "text": "Northstar plans to cut 30% of staff. Source: https://records.example/meeting",
+            "span": {
+              "version_id": "dispatch:v1",
+              "start": 0,
+              "end": 76,
+              "quote": "Northstar plans to cut 30% of staff. Source: https://records.example/meeting"
+            },
+            "parent_id": "staff-cut",
+            "qualifiers": [],
+            "qualifier_spans": []
+          }
+        ],
+        "relations": [
+          {
+            "id": "dispatch-to-minutes",
+            "from_version": "dispatch:v1",
+            "to_version": "minutes:v1",
+            "kind": "cites",
+            "status": "direct",
+            "basis": [
+              {
+                "version_id": "dispatch:v1",
+                "start": 0,
+                "end": 76,
+                "quote": "Northstar plans to cut 30% of staff. Source: https://records.example/meeting"
+              }
+            ],
+            "rationale": "The dispatch explicitly attributes the figure to meeting minutes.",
+            "upstream_locator": "https://records.example/meeting"
+          }
+        ],
+        "gaps": [],
+        "resolutions": [
+          {
+            "gap_id": "dispatch",
+            "basis": [
+              {
+                "version_id": "dispatch:v1",
+                "start": 0,
+                "end": 76,
+                "quote": "Northstar plans to cut 30% of staff. Source: https://records.example/meeting"
+              }
+            ],
+            "rationale": "Located the explicitly named dispatch version."
+          }
+        ],
+        "origins": [],
+        "notes": "",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    },
+    {
+      "revision": 6,
+      "round": 3,
+      "version_id": "headline:v2",
+      "duplicate": false,
+      "revisit": false,
+      "retrieval_receipt": {
+        "version_id": "headline:v2",
+        "task_ids": [],
+        "revisit": false,
+        "tasks": [],
+        "attribution": "legacy_unattributed",
+        "duplicate": false,
+        "eligible": true
+      },
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "headline:v2:statement",
+            "text": "Correction: no staff cuts have been implemented. The earlier 30% figure was a proposed ceiling for next year's external-services budget.",
+            "span": {
+              "version_id": "headline:v2",
+              "start": 0,
+              "end": 136,
+              "quote": "Correction: no staff cuts have been implemented. The earlier 30% figure was a proposed ceiling for next year's external-services budget."
+            },
+            "parent_id": "staff-cut",
+            "qualifiers": [],
+            "qualifier_spans": []
+          }
+        ],
+        "relations": [
+          {
+            "id": "correction-contradicts-headline",
+            "from_version": "headline:v2",
+            "to_version": "headline:v1",
+            "kind": "contradicts",
+            "status": "direct",
+            "basis": [
+              {
+                "version_id": "headline:v2",
+                "start": 0,
+                "end": 136,
+                "quote": "Correction: no staff cuts have been implemented. The earlier 30% figure was a proposed ceiling for next year's external-services budget."
+              }
+            ],
+            "rationale": "Semantic contradiction is kept separate from citation lineage.",
+            "upstream_locator": null
+          }
+        ],
+        "gaps": [],
+        "resolutions": [],
+        "origins": [],
+        "notes": "Verification requested this correction; it entered psi before verification.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    }
+  ],
+  "fragments": [
+    {
+      "id": "headline:v1:statement",
+      "text": "Northstar has already cut 30% of staff. Source: https://dispatch.example/report",
+      "span": {
+        "version_id": "headline:v1",
+        "start": 0,
+        "end": 79,
+        "quote": "Northstar has already cut 30% of staff. Source: https://dispatch.example/report"
+      },
+      "parent_id": "staff-cut",
+      "qualifiers": [],
+      "qualifier_spans": []
+    },
+    {
+      "id": "dispatch:v1:statement",
+      "text": "Northstar plans to cut 30% of staff. Source: https://records.example/meeting",
+      "span": {
+        "version_id": "dispatch:v1",
+        "start": 0,
+        "end": 76,
+        "quote": "Northstar plans to cut 30% of staff. Source: https://records.example/meeting"
+      },
+      "parent_id": "staff-cut",
+      "qualifiers": [],
+      "qualifier_spans": []
+    },
+    {
+      "id": "minutes:v1:statement",
+      "text": "Meeting record: discussing next year's external-services budget; reduction ceiling 30%.",
+      "span": {
+        "version_id": "minutes:v1",
+        "start": 0,
+        "end": 87,
+        "quote": "Meeting record: discussing next year's external-services budget; reduction ceiling 30%."
+      },
+      "parent_id": "staff-cut",
+      "qualifiers": [
+        "discussing",
+        "next year",
+        "ceiling",
+        "external-services budget"
+      ],
+      "qualifier_spans": []
+    },
+    {
+      "id": "headline:v2:statement",
+      "text": "Correction: no staff cuts have been implemented. The earlier 30% figure was a proposed ceiling for next year's external-services budget.",
+      "span": {
+        "version_id": "headline:v2",
+        "start": 0,
+        "end": 136,
+        "quote": "Correction: no staff cuts have been implemented. The earlier 30% figure was a proposed ceiling for next year's external-services budget."
+      },
+      "parent_id": "staff-cut",
+      "qualifiers": [],
+      "qualifier_spans": []
+    }
+  ],
+  "relations": [
+    {
+      "id": "headline-to-dispatch",
+      "from_version": "headline:v1",
+      "to_version": "dispatch:v1",
+      "kind": "cites",
+      "status": "direct",
+      "basis": [
+        {
+          "version_id": "headline:v1",
+          "start": 0,
+          "end": 79,
+          "quote": "Northstar has already cut 30% of staff. Source: https://dispatch.example/report"
+        }
+      ],
+      "rationale": "The headline explicitly names the dispatch; availability is tracked separately.",
+      "upstream_locator": "https://dispatch.example/report"
+    },
+    {
+      "id": "dispatch-to-minutes",
+      "from_version": "dispatch:v1",
+      "to_version": "minutes:v1",
+      "kind": "cites",
+      "status": "direct",
+      "basis": [
+        {
+          "version_id": "dispatch:v1",
+          "start": 0,
+          "end": 76,
+          "quote": "Northstar plans to cut 30% of staff. Source: https://records.example/meeting"
+        }
+      ],
+      "rationale": "The dispatch explicitly attributes the figure to meeting minutes.",
+      "upstream_locator": "https://records.example/meeting"
+    },
+    {
+      "id": "correction-contradicts-headline",
+      "from_version": "headline:v2",
+      "to_version": "headline:v1",
+      "kind": "contradicts",
+      "status": "direct",
+      "basis": [
+        {
+          "version_id": "headline:v2",
+          "start": 0,
+          "end": 136,
+          "quote": "Correction: no staff cuts have been implemented. The earlier 30% figure was a proposed ceiling for next year's external-services budget."
+        }
+      ],
+      "rationale": "Semantic contradiction is kept separate from citation lineage.",
+      "upstream_locator": null
+    }
+  ],
+  "origins": [
+    {
+      "target_id": "staff-cut",
+      "version_id": "minutes:v1",
+      "basis": [
+        {
+          "version_id": "minutes:v1",
+          "start": 0,
+          "end": 87,
+          "quote": "Meeting record: discussing next year's external-services budget; reduction ceiling 30%."
+        }
+      ],
+      "material_kind": "original_record",
+      "rationale": "Synthetic annotated meeting record is the producing source of the cited figure."
+    }
+  ],
+  "gaps": [],
+  "resolutions": [
+    {
+      "gap_id": "dispatch",
+      "basis": [
+        {
+          "version_id": "dispatch:v1",
+          "start": 0,
+          "end": 76,
+          "quote": "Northstar plans to cut 30% of staff. Source: https://records.example/meeting"
+        }
+      ],
+      "rationale": "Located the explicitly named dispatch version."
+    },
+    {
+      "gap_id": "minutes",
+      "basis": [
+        {
+          "version_id": "minutes:v1",
+          "start": 0,
+          "end": 87,
+          "quote": "Meeting record: discussing next year's external-services budget; reduction ceiling 30%."
+        }
+      ],
+      "rationale": "Located the producing meeting record."
+    },
+    {
+      "gap_id": "origin:staff-cut",
+      "basis": [
+        {
+          "version_id": "minutes:v1",
+          "start": 0,
+          "end": 87,
+          "quote": "Meeting record: discussing next year's external-services budget; reduction ceiling 30%."
+        }
+      ],
+      "rationale": "The fixture explicitly links the headline through the dispatch to this record."
+    },
+    {
+      "gap_id": "verification:staff",
+      "basis": [
+        {
+          "version_id": "headline:v2",
+          "start": 0,
+          "end": 136,
+          "quote": "Correction: no staff cuts have been implemented. The earlier 30% figure was a proposed ceiling for next year's external-services budget."
+        }
+      ],
+      "rationale": "Correction addresses the outstanding implemented-cuts question."
+    }
+  ],
+  "verification_history": [
+    {
+      "round": 1,
+      "verdict": "unresolved",
+      "basis": [],
+      "rationale": "Awaiting the producing record.",
+      "gaps": [],
+      "resolutions": [],
+      "evidence_verdict": null,
+      "world_verdict": null,
+      "world_basis": [],
+      "world_rationale": ""
+    },
+    {
+      "round": 2,
+      "verdict": "unresolved",
+      "basis": [],
+      "rationale": "Budget wording does not establish whether staff cuts occurred; seek a correction.",
+      "gaps": [
+        {
+          "id": "verification:staff",
+          "question": "Find the publisher correction or direct record of implemented staff cuts",
+          "stage": "verification",
+          "dimension": "auto",
+          "blocking": true,
+          "target_id": null,
+          "basis": [],
+          "decision_impact": "",
+          "action": "search",
+          "locator": null,
+          "probe_id": null
+        }
+      ],
+      "resolutions": [],
+      "evidence_verdict": null,
+      "world_verdict": null,
+      "world_basis": [],
+      "world_rationale": ""
+    },
+    {
+      "round": 3,
+      "verdict": "contradicted",
+      "basis": [
+        {
+          "version_id": "headline:v2",
+          "start": 0,
+          "end": 136,
+          "quote": "Correction: no staff cuts have been implemented. The earlier 30% figure was a proposed ceiling for next year's external-services budget."
+        }
+      ],
+      "rationale": "Synthetic correction explicitly says the reported staff cut did not occur.",
+      "gaps": [],
+      "resolutions": [
+        {
+          "gap_id": "verification:staff",
+          "basis": [
+            {
+              "version_id": "headline:v2",
+              "start": 0,
+              "end": 136,
+              "quote": "Correction: no staff cuts have been implemented. The earlier 30% figure was a proposed ceiling for next year's external-services budget."
+            }
+          ],
+          "rationale": "Correction addresses the outstanding implemented-cuts question."
+        }
+      ],
+      "evidence_verdict": null,
+      "world_verdict": null,
+      "world_basis": [],
+      "world_rationale": ""
+    }
+  ],
+  "operations": [
+    {
+      "sequence": 1,
+      "round": 1,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "origin:staff-cut",
+          "question": "Find the producing record and evidenced lineage for: Northstar has already cut 30% of staff.",
+          "stage": "provenance",
+          "dimension": "auto",
+          "blocking": true,
+          "target_id": null,
+          "basis": [],
+          "decision_impact": "",
+          "action": "search",
+          "locator": null,
+          "probe_id": null
+        }
+      ],
+      "limit": 12
+    },
+    {
+      "sequence": 2,
+      "round": 1,
+      "action": "retrieval_attribution_validated",
+      "version_id": "headline:v1",
+      "task_ids": [],
+      "attribution": "legacy_unattributed"
+    },
+    {
+      "sequence": 3,
+      "round": 1,
+      "action": "snapshot_saved",
+      "version_id": "headline:v1",
+      "sha256": "dbe3463f1abfcbc4ee22a520e64627337ccd30b714b7afecead1c01d907b8318",
+      "eligible": true
+    },
+    {
+      "sequence": 4,
+      "round": 1,
+      "action": "decompose_started",
+      "version_id": "headline:v1",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 5,
+      "round": 1,
+      "action": "decompose_completed",
+      "version_id": "headline:v1",
+      "revision": 1
+    },
+    {
+      "sequence": 6,
+      "round": 1,
+      "action": "alignment_checked",
+      "version_id": "headline:v1",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 7,
+      "round": 1,
+      "action": "graph_updated",
+      "version_id": "headline:v1",
+      "open_gaps": 2
+    },
+    {
+      "sequence": 8,
+      "round": 1,
+      "action": "verification_started"
+    },
+    {
+      "sequence": 9,
+      "round": 1,
+      "action": "verification_completed",
+      "verdict": "unresolved",
+      "decision": "unresolved",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "followup_tasks": 0,
+      "provenance_status": "partial"
+    },
+    {
+      "sequence": 10,
+      "round": 1,
+      "action": "assessment_changed",
+      "previous": null,
+      "current": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "basis": [],
+      "world_basis": []
+    },
+    {
+      "sequence": 11,
+      "round": 1,
+      "action": "followup_tasks_queued",
+      "gap_ids": [
+        "dispatch"
+      ]
+    },
+    {
+      "sequence": 12,
+      "round": 1,
+      "action": "progress_checked",
+      "new_eligible_versions": 1,
+      "new_structure": true
+    },
+    {
+      "sequence": 13,
+      "round": 2,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "origin:staff-cut",
+          "question": "Find the producing record and evidenced lineage for: Northstar has already cut 30% of staff.",
+          "stage": "provenance",
+          "dimension": "auto",
+          "blocking": true,
+          "target_id": null,
+          "basis": [],
+          "decision_impact": "",
+          "action": "search",
+          "locator": null,
+          "probe_id": null
+        },
+        {
+          "id": "dispatch",
+          "question": "Retrieve the dispatch named in the headline",
+          "stage": "provenance",
+          "dimension": "auto",
+          "blocking": true,
+          "target_id": null,
+          "basis": [],
+          "decision_impact": "",
+          "action": "search",
+          "locator": null,
+          "probe_id": null
+        }
+      ],
+      "limit": 11
+    },
+    {
+      "sequence": 14,
+      "round": 2,
+      "action": "retrieval_attribution_validated",
+      "version_id": "dispatch:v1",
+      "task_ids": [],
+      "attribution": "legacy_unattributed"
+    },
+    {
+      "sequence": 15,
+      "round": 2,
+      "action": "snapshot_saved",
+      "version_id": "dispatch:v1",
+      "sha256": "5b64f6bef585583e55c7a9904b20d5398b44e60cf9082522b5f566e0b09f2cba",
+      "eligible": true
+    },
+    {
+      "sequence": 16,
+      "round": 2,
+      "action": "decompose_started",
+      "version_id": "dispatch:v1",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 17,
+      "round": 2,
+      "action": "decompose_completed",
+      "version_id": "dispatch:v1",
+      "revision": 2
+    },
+    {
+      "sequence": 18,
+      "round": 2,
+      "action": "alignment_checked",
+      "version_id": "dispatch:v1",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 19,
+      "round": 2,
+      "action": "graph_updated",
+      "version_id": "dispatch:v1",
+      "open_gaps": 2
+    },
+    {
+      "sequence": 20,
+      "round": 2,
+      "action": "revisit_requested",
+      "version_id": "headline:v1"
+    },
+    {
+      "sequence": 21,
+      "round": 2,
+      "action": "decompose_started",
+      "version_id": "headline:v1",
+      "duplicate": true,
+      "revisit": true
+    },
+    {
+      "sequence": 22,
+      "round": 2,
+      "action": "decompose_completed",
+      "version_id": "headline:v1",
+      "revision": 3
+    },
+    {
+      "sequence": 23,
+      "round": 2,
+      "action": "alignment_checked",
+      "version_id": "headline:v1",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 24,
+      "round": 2,
+      "action": "graph_updated",
+      "version_id": "headline:v1",
+      "open_gaps": 2
+    },
+    {
+      "sequence": 25,
+      "round": 2,
+      "action": "retrieval_attribution_validated",
+      "version_id": "minutes:v1",
+      "task_ids": [],
+      "attribution": "legacy_unattributed"
+    },
+    {
+      "sequence": 26,
+      "round": 2,
+      "action": "snapshot_saved",
+      "version_id": "minutes:v1",
+      "sha256": "060f838f7b9f4281b6505f3a007d0370477cb398b981f0b8b95b39f2adf3f6c8",
+      "eligible": true
+    },
+    {
+      "sequence": 27,
+      "round": 2,
+      "action": "decompose_started",
+      "version_id": "minutes:v1",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 28,
+      "round": 2,
+      "action": "decompose_completed",
+      "version_id": "minutes:v1",
+      "revision": 4
+    },
+    {
+      "sequence": 29,
+      "round": 2,
+      "action": "alignment_checked",
+      "version_id": "minutes:v1",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 30,
+      "round": 2,
+      "action": "graph_updated",
+      "version_id": "minutes:v1",
+      "open_gaps": 1
+    },
+    {
+      "sequence": 31,
+      "round": 2,
+      "action": "revisit_requested",
+      "version_id": "dispatch:v1"
+    },
+    {
+      "sequence": 32,
+      "round": 2,
+      "action": "decompose_started",
+      "version_id": "dispatch:v1",
+      "duplicate": true,
+      "revisit": true
+    },
+    {
+      "sequence": 33,
+      "round": 2,
+      "action": "decompose_completed",
+      "version_id": "dispatch:v1",
+      "revision": 5
+    },
+    {
+      "sequence": 34,
+      "round": 2,
+      "action": "alignment_checked",
+      "version_id": "dispatch:v1",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 35,
+      "round": 2,
+      "action": "graph_updated",
+      "version_id": "dispatch:v1",
+      "open_gaps": 0
+    },
+    {
+      "sequence": 36,
+      "round": 2,
+      "action": "verification_started"
+    },
+    {
+      "sequence": 37,
+      "round": 2,
+      "action": "verification_completed",
+      "verdict": "unresolved",
+      "decision": "unresolved",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": [
+            "verification:staff"
+          ]
+        }
+      },
+      "followup_tasks": 1,
+      "provenance_status": "original_material_located"
+    },
+    {
+      "sequence": 38,
+      "round": 2,
+      "action": "assessment_changed",
+      "previous": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "current": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": [
+            "verification:staff"
+          ]
+        }
+      },
+      "basis": [],
+      "world_basis": []
+    },
+    {
+      "sequence": 39,
+      "round": 2,
+      "action": "followup_tasks_queued",
+      "gap_ids": [
+        "verification:staff"
+      ]
+    },
+    {
+      "sequence": 40,
+      "round": 2,
+      "action": "progress_checked",
+      "new_eligible_versions": 2,
+      "new_structure": true
+    },
+    {
+      "sequence": 41,
+      "round": 3,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "verification:staff",
+          "question": "Find the publisher correction or direct record of implemented staff cuts",
+          "stage": "verification",
+          "dimension": "auto",
+          "blocking": true,
+          "target_id": null,
+          "basis": [],
+          "decision_impact": "",
+          "action": "search",
+          "locator": null,
+          "probe_id": null
+        }
+      ],
+      "limit": 9
+    },
+    {
+      "sequence": 42,
+      "round": 3,
+      "action": "retrieval_attribution_validated",
+      "version_id": "headline:v2",
+      "task_ids": [],
+      "attribution": "legacy_unattributed"
+    },
+    {
+      "sequence": 43,
+      "round": 3,
+      "action": "snapshot_saved",
+      "version_id": "headline:v2",
+      "sha256": "2dc70314dd0545a7d8f63d65d6f95acfcc6db5547ccce660c806b59c37dd22a1",
+      "eligible": true
+    },
+    {
+      "sequence": 44,
+      "round": 3,
+      "action": "decompose_started",
+      "version_id": "headline:v2",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 45,
+      "round": 3,
+      "action": "decompose_completed",
+      "version_id": "headline:v2",
+      "revision": 6
+    },
+    {
+      "sequence": 46,
+      "round": 3,
+      "action": "alignment_checked",
+      "version_id": "headline:v2",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 47,
+      "round": 3,
+      "action": "graph_updated",
+      "version_id": "headline:v2",
+      "open_gaps": 1
+    },
+    {
+      "sequence": 48,
+      "round": 3,
+      "action": "verification_started"
+    },
+    {
+      "sequence": 49,
+      "round": 3,
+      "action": "verification_completed",
+      "verdict": "contradicted",
+      "decision": "contradicted",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        }
+      },
+      "followup_tasks": 0,
+      "provenance_status": "original_material_located"
+    },
+    {
+      "sequence": 50,
+      "round": 3,
+      "action": "assessment_changed",
+      "previous": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": [
+            "verification:staff"
+          ]
+        }
+      },
+      "current": {
+        "evidence": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "contradicted",
+          "decision": "contradicted",
+          "blocking_gap_ids": []
+        }
+      },
+      "basis": [
+        {
+          "version_id": "headline:v2",
+          "start": 0,
+          "end": 136,
+          "quote": "Correction: no staff cuts have been implemented. The earlier 30% figure was a proposed ceiling for next year's external-services budget."
+        }
+      ],
+      "world_basis": []
+    },
+    {
+      "sequence": 51,
+      "round": 3,
+      "action": "stopped",
+      "reason": "complete"
+    }
+  ],
+  "errors": [],
+  "evaluation_mode": "synthetic_annotated_replay",
+  "accuracy_claim": "None. This demonstrates orchestration contracts, not real-news accuracy."
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "historical-2023-resolved-by-2024-v1",
+  "pre_run_checksum": true,
+  "files": {
+    "inputs.json": "23e358c5d6297dda935bec6c8680ac5d276e87227a15251e1fd96483b85aa7aa",
+    "sources.json": "5f6520cc36b8f8d10c14109a2d3eef3aca81e4b77bbf1715a70605d25e853455",
+    "gold.json": "42b71c1ef22924fb09b08a71e3fdef3996991af056757b64f64f3e62ba6f6dbf"
+  },
+  "rule": "Inference may read only inputs.json, sources.json, and this checksum manifest. Gold is opened only by audit or score after both arms finish. This file is an internal consistency checksum, not a trusted timestamp; a clean Git commit containing all inference inputs is required before model calls. Never edit a frozen benchmark to match model output; create a new benchmark version instead."
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "dataset_kind": "author_curated_historical_forecast_pilot2_v3",
+  "cases": [
+    {
+      "id": "virgin-galactic-commercial-service-2023",
+      "event_id": "virgin-galactic-commercial-service-start",
+      "assessment_mode": "evidence",
+      "decision": "true",
+      "adjudication_source_version_ids": [
+        "virgin-commercial-outcome-2024"
+      ],
+      "rationale": "The filed 10-K states in the issuer's first person that its June 2023 Galactic 01 flight marked the start of its commercial service; June falls in the second quarter.",
+      "basis": [
+        {
+          "version_id": "virgin-commercial-outcome-2024",
+          "quote": "In June 2023, we completed our first commercial spaceflight, 'Galactic 01,' which marked the start of our commercial service."
+        }
+      ]
+    },
+    {
+      "id": "lucid-production-2023",
+      "event_id": "lucid-full-year-2023-production",
+      "assessment_mode": "evidence",
+      "decision": "false",
+      "adjudication_source_version_ids": [
+        "lucid-production-outcome-2024"
+      ],
+      "rationale": "Lucid reported full-year production of 8,428 vehicles, below and not greater than 10,000.",
+      "basis": [
+        {
+          "version_id": "lucid-production-outcome-2024",
+          "quote": "On a full-year basis, the Company produced 8,428 vehicles."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "This is a retrospectively selected, author-curated two-case pilot and a disclosed post-hoc correction, not an independently reviewed, held-out, representative, preregistered, or deployment benchmark.",
+    "The protocol isolates admissible evidence by publication/version cutoff, but it cannot remove post-cutoff knowledge from current model parameters.",
+    "Exact-label results from two cases are descriptive smoke-test results and do not establish a general accuracy improvement.",
+    "V3 replaces the Boeing case after evaluating v1/v2 behavior, so v3 results must not be pooled with earlier pilot results as if its case selection predated those observations."
+  ]
+}

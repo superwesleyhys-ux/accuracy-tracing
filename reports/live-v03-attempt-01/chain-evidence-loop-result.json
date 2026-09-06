@@ -1,0 +1,74 @@
+{
+  "id": "chain-evidence",
+  "variant": "loop",
+  "status": "completed",
+  "prediction": {
+    "id": "chain-evidence",
+    "assessment_mode": "evidence",
+    "as_of": "2026-09-04T20:00:00Z",
+    "decision": "true",
+    "assessments": {
+      "evidence": {
+        "raw_verdict": "supported",
+        "decision": "supported",
+        "blocking_gap_ids": []
+      },
+      "world": {
+        "raw_verdict": "unresolved",
+        "decision": "unresolved",
+        "blocking_gap_ids": []
+      }
+    },
+    "provenance_status": "partial",
+    "assessment_valid": true,
+    "stop_reason": "provider_exhausted"
+  },
+  "checkpoints": [
+    {
+      "round": 1,
+      "id": "chain-evidence",
+      "decision": "unverifiable",
+      "assessment_mode": "evidence",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": [
+            "fetch-scoped-bulletin-c"
+          ]
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "provenance_status": "partial"
+    },
+    {
+      "round": 2,
+      "id": "chain-evidence",
+      "decision": "true",
+      "assessment_mode": "evidence",
+      "assessments": {
+        "evidence": {
+          "raw_verdict": "supported",
+          "decision": "supported",
+          "blocking_gap_ids": []
+        },
+        "world": {
+          "raw_verdict": "unresolved",
+          "decision": "unresolved",
+          "blocking_gap_ids": []
+        }
+      },
+      "provenance_status": "partial"
+    }
+  ],
+  "usage": {
+    "model_calls": 5,
+    "input_tokens": 8265,
+    "output_tokens": 4112,
+    "seconds": 71.4153319879988
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "dataset_kind": "synthetic",
+  "case_count": 4,
+  "event_count": 4,
+  "metrics": {
+    "VP": {
+      "value": 0.5,
+      "numerator": 1,
+      "denominator": 2,
+      "wilson95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ]
+    },
+    "FR": {
+      "value": 0.5,
+      "numerator": 1,
+      "denominator": 2,
+      "wilson95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ]
+    },
+    "TR": {
+      "value": 0.5,
+      "numerator": 1,
+      "denominator": 2,
+      "wilson95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ]
+    },
+    "SR": {
+      "value": 0.6666666666666666,
+      "numerator": 2,
+      "denominator": 3,
+      "wilson95": [
+        0.2076596008020477,
+        0.9385080552796037
+      ]
+    },
+    "EN": {
+      "value": 0.6666666666666666,
+      "numerator": 2,
+      "denominator": 3,
+      "wilson95": [
+        0.2076596008020477,
+        0.9385080552796037
+      ]
+    },
+    "HFAR": {
+      "value": 0.5,
+      "numerator": 1,
+      "denominator": 2,
+      "wilson95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ]
+    },
+    "CA": {
+      "value": 0.65625,
+      "brier_multiclass": 0.6875,
+      "probability_cases": 4,
+      "required_cases": 4,
+      "note": "Normalized Brier quality; calibration plus discrimination, not calibration alone."
+    }
+  },
+  "diagnostics": {
+    "source_precision": {
+      "value": 0.6666666666666666,
+      "numerator": 2,
+      "denominator": 3,
+      "wilson95": [
+        0.2076596008020477,
+        0.9385080552796037
+      ]
+    },
+    "unknown_source_false_promotion": {
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "wilson95": [
+        0.20654931437723745,
+        1.0
+      ]
+    },
+    "edge_precision": {
+      "value": 0.6666666666666666,
+      "numerator": 2,
+      "denominator": 3,
+      "wilson95": [
+        0.2076596008020477,
+        0.9385080552796037
+      ]
+    },
+    "annotated_edge_recall": {
+      "value": 0.6666666666666666,
+      "numerator": 2,
+      "denominator": 3,
+      "wilson95": [
+        0.2076596008020477,
+        0.9385080552796037
+      ]
+    },
+    "evidence_support_recall": {
+      "value": 1.0,
+      "numerator": 2,
+      "denominator": 2,
+      "wilson95": [
+        0.34238022750665303,
+        1.0
+      ]
+    },
+    "stance_accuracy": {
+      "value": 0.75,
+      "numerator": 3,
+      "denominator": 4,
+      "wilson95": [
+        0.30064184258240184,
+        0.9544127391902995
+      ]
+    },
+    "false_identification_recall": {
+      "value": 0.5,
+      "numerator": 1,
+      "denominator": 2,
+      "wilson95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ]
+    },
+    "classification_accuracy": {
+      "value": 0.5,
+      "numerator": 2,
+      "denominator": 4,
+      "wilson95": [
+        0.15003898915214947,
+        0.8499610108478506
+      ]
+    },
+    "admission_coverage": {
+      "value": 0.5,
+      "numerator": 2,
+      "denominator": 4,
+      "wilson95": [
+        0.15003898915214947,
+        0.8499610108478506
+      ]
+    },
+    "duplicate_pair_f1": {
+      "value": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    "ECE10": {
+      "value": 0.4375,
+      "bins": [
+        {
+          "count": 0,
+          "confidence_sum": 0.0,
+          "correct_sum": 0
+        },
+        {
+          "count": 0,
+          "confidence_sum": 0.0,
+          "correct_sum": 0
+        },
+        {
+          "count": 1,
+          "confidence_sum": 0.25,
+          "correct_sum": 1
+        },
+        {
+          "count": 0,
+          "confidence_sum": 0.0,
+          "correct_sum": 0
+        },
+        {
+          "count": 0,
+          "confidence_sum": 0.0,
+          "correct_sum": 0
+        },
+        {
+          "count": 0,
+          "confidence_sum": 0.0,
+          "correct_sum": 0
+        },
+        {
+          "count": 0,
+          "confidence_sum": 0.0,
+          "correct_sum": 0
+        },
+        {
+          "count": 0,
+          "confidence_sum": 0.0,
+          "correct_sum": 0
+        },
+        {
+          "count": 0,
+          "confidence_sum": 0.0,
+          "correct_sum": 0
+        },
+        {
+          "count": 3,
+          "confidence_sum": 3.0,
+          "correct_sum": 2
+        }
+      ]
+    }
+  },
+  "confusion_matrix": {
+    "true": {
+      "true": 1,
+      "false": 0,
+      "disputed": 0,
+      "unverifiable": 1
+    },
+    "false": {
+      "true": 1,
+      "false": 1,
+      "disputed": 0,
+      "unverifiable": 0
+    },
+    "disputed": {
+      "true": 0,
+      "false": 0,
+      "disputed": 0,
+      "unverifiable": 0
+    },
+    "unverifiable": {
+      "true": 0,
+      "false": 0,
+      "disputed": 0,
+      "unverifiable": 0
+    }
+  },
+  "aggregate": {
+    "name": "NVScore-v0.2-experimental",
+    "value": 14.002370512344195,
+    "weights": {
+      "VP": 0.25,
+      "FR": 0.2,
+      "TR": 0.15,
+      "SR": 0.15,
+      "EN": 0.15,
+      "CA": 0.1
+    },
+    "missing_metrics": [],
+    "status": "computed",
+    "official_benchmark": false
+  },
+  "limitations": [
+    "Gold labels must be separately adjudicated at the stated evidence cutoff.",
+    "Synthetic results validate arithmetic and contracts, not real-news accuracy.",
+    "Wilson intervals are per-unit binomial references; correlated cases require event-cluster analysis.",
+    "NVScore weights are provisional design choices, not validated or official acceptance thresholds.",
+    "A computed aggregate is not a deployment gate; inspect coverage, false roots, duplication and high-risk errors."
+  ],
+  "cases": [
+    {
+      "id": "t1",
+      "event_id": "event-a",
+      "truth": "true",
+      "decision": "true",
+      "source_correct": true,
+      "provenance_status": "resolved"
+    },
+    {
+      "id": "t2",
+      "event_id": "event-b",
+      "truth": "true",
+      "decision": "unverifiable",
+      "source_correct": false,
+      "provenance_status": "unresolved"
+    },
+    {
+      "id": "f1",
+      "event_id": "event-c",
+      "truth": "false",
+      "decision": "false",
+      "source_correct": true,
+      "provenance_status": "resolved"
+    },
+    {
+      "id": "f2",
+      "event_id": "event-d",
+      "truth": "false",
+      "decision": "true",
+      "source_correct": false,
+      "provenance_status": "resolved"
+    }
+  ]
+}

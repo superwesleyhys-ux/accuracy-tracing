@@ -1,0 +1,28 @@
+[
+  {
+    "round": 1,
+    "tasks": [
+      {
+        "id": "origin:virgin-galactic-commercial-service-2023",
+        "question": "Find the producing record and evidenced lineage for: Virgin Galactic will commence commercial service during the second quarter of 2023.",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null,
+        "probe_id": null
+      }
+    ],
+    "planned_ids": [
+      "virgin-commercial-claim-2023"
+    ],
+    "returned_ids": [
+      "virgin-commercial-claim-2023"
+    ],
+    "attribution": {},
+    "feedback": []
+  }
+]

@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "target": {
+        "id": "bridge-evidence",
+        "text": "The bridge has already reopened.",
+        "as_of": "2026-09-04T20:00:00Z",
+        "source_version_id": "bridge-article",
+        "assessment_mode": "evidence",
+        "evidence_scope": [
+          "bridge-notice"
+        ]
+      },
+      "materials": [
+        {
+          "version_id": "bridge-article",
+          "url": "https://example.org/bridge-article",
+          "content": "The bridge has already reopened, according to https://example.org/bridge-notice.",
+          "retrieved_at": "2026-09-04T20:00:00Z",
+          "published_at": "2026-09-04T10:00:00Z",
+          "available_at": "2026-09-04T10:00:00Z",
+          "availability_basis": "Synthetic exact-version capture; no external authentication.",
+          "issuer": "Fictional publisher"
+        },
+        {
+          "version_id": "bridge-notice",
+          "url": "https://example.org/bridge-notice",
+          "content": "Bridge operations notice: The bridge remains closed. Reopening is planned for next month.",
+          "retrieved_at": "2026-09-04T20:00:00Z",
+          "published_at": "2026-09-04T10:00:00Z",
+          "available_at": "2026-09-04T10:00:00Z",
+          "availability_basis": "Synthetic exact-version capture; no external authentication.",
+          "issuer": "Fictional publisher"
+        }
+      ],
+      "seed_ids": [
+        "bridge-article",
+        "bridge-notice"
+      ],
+      "full_evidence_control": false
+    },
+    {
+      "target": {
+        "id": "library-evidence",
+        "text": "The library now closes at 9 pm.",
+        "as_of": "2026-09-04T20:00:00Z",
+        "source_version_id": "library-article",
+        "assessment_mode": "evidence",
+        "evidence_scope": [
+          "library-notice"
+        ]
+      },
+      "materials": [
+        {
+          "version_id": "library-article",
+          "url": "https://example.org/library-article",
+          "content": "The library now closes at 9 pm, quoting https://example.org/library-notice.",
+          "retrieved_at": "2026-09-04T20:00:00Z",
+          "published_at": "2026-09-04T10:00:00Z",
+          "available_at": "2026-09-04T10:00:00Z",
+          "availability_basis": "Synthetic exact-version capture; no external authentication.",
+          "issuer": "Fictional publisher"
+        },
+        {
+          "version_id": "library-notice",
+          "url": "https://example.org/library-notice",
+          "content": "Library schedule bulletin: The library extends its closing time to 9 pm starting today.",
+          "retrieved_at": "2026-09-04T20:00:00Z",
+          "published_at": "2026-09-04T10:00:00Z",
+          "available_at": "2026-09-04T10:00:00Z",
+          "availability_basis": "Synthetic exact-version capture; no external authentication.",
+          "issuer": "Fictional publisher"
+        }
+      ],
+      "seed_ids": [
+        "library-article",
+        "library-notice"
+      ],
+      "full_evidence_control": false
+    },
+    {
+      "target": {
+        "id": "chain-evidence",
+        "text": "The laboratory opens at 8 am.",
+        "as_of": "2026-09-04T20:00:00Z",
+        "source_version_id": "bulletin-a",
+        "assessment_mode": "evidence",
+        "evidence_scope": [
+          "bulletin-c"
+        ]
+      },
+      "materials": [
+        {
+          "version_id": "bulletin-a",
+          "url": "https://example.org/bulletin-a",
+          "content": "For the laboratory hours announcement, follow the archived release at https://example.org/bulletin-b.",
+          "retrieved_at": "2026-09-04T20:00:00Z",
+          "published_at": "2026-09-04T10:00:00Z",
+          "available_at": "2026-09-04T10:00:00Z",
+          "availability_basis": "Synthetic exact-version capture; no external authentication.",
+          "issuer": "Fictional publisher"
+        },
+        {
+          "version_id": "bulletin-b",
+          "url": "https://example.org/bulletin-b",
+          "content": "This digest cites the issued laboratory schedule at https://example.org/bulletin-c.",
+          "retrieved_at": "2026-09-04T20:00:00Z",
+          "published_at": "2026-09-04T10:00:00Z",
+          "available_at": "2026-09-04T10:00:00Z",
+          "availability_basis": "Synthetic exact-version capture; no external authentication.",
+          "issuer": "Fictional publisher"
+        },
+        {
+          "version_id": "bulletin-c",
+          "url": "https://example.org/bulletin-c",
+          "content": "Laboratory schedule bulletin: The laboratory opens at 8 am starting today.",
+          "retrieved_at": "2026-09-04T20:00:00Z",
+          "published_at": "2026-09-04T10:00:00Z",
+          "available_at": "2026-09-04T10:00:00Z",
+          "availability_basis": "Synthetic exact-version capture; no external authentication.",
+          "issuer": "Fictional publisher"
+        }
+      ],
+      "seed_ids": [
+        "bulletin-a"
+      ],
+      "full_evidence_control": true
+    },
+    {
+      "target": {
+        "id": "conflict-evidence",
+        "text": "The ferry is operating today.",
+        "as_of": "2026-09-04T20:00:00Z",
+        "source_version_id": "report-a",
+        "assessment_mode": "evidence",
+        "evidence_scope": [
+          "report-a",
+          "report-b"
+        ]
+      },
+      "materials": [
+        {
+          "version_id": "report-a",
+          "url": "https://example.org/report-a",
+          "content": "The ferry is operating today.",
+          "retrieved_at": "2026-09-04T20:00:00Z",
+          "published_at": "2026-09-04T10:00:00Z",
+          "available_at": "2026-09-04T10:00:00Z",
+          "availability_basis": "Synthetic exact-version capture; no external authentication.",
+          "issuer": "Fictional publisher"
+        },
+        {
+          "version_id": "report-b",
+          "url": "https://example.org/report-b",
+          "content": "The ferry is not operating today.",
+          "retrieved_at": "2026-09-04T20:00:00Z",
+          "published_at": "2026-09-04T10:00:00Z",
+          "available_at": "2026-09-04T10:00:00Z",
+          "availability_basis": "Synthetic exact-version capture; no external authentication.",
+          "issuer": "Fictional publisher"
+        }
+      ],
+      "seed_ids": [
+        "report-a",
+        "report-b"
+      ],
+      "full_evidence_control": false
+    },
+    {
+      "target": {
+        "id": "world-unknown",
+        "text": "The library now closes at 9 pm.",
+        "as_of": "2026-09-04T20:00:00Z",
+        "source_version_id": "library-article",
+        "assessment_mode": "world",
+        "evidence_scope": [
+          "library-notice"
+        ]
+      },
+      "materials": [
+        {
+          "version_id": "library-article",
+          "url": "https://example.org/library-article",
+          "content": "The library now closes at 9 pm, quoting https://example.org/library-notice.",
+          "retrieved_at": "2026-09-04T20:00:00Z",
+          "published_at": "2026-09-04T10:00:00Z",
+          "available_at": "2026-09-04T10:00:00Z",
+          "availability_basis": "Synthetic exact-version capture; no external authentication.",
+          "issuer": "Fictional publisher"
+        },
+        {
+          "version_id": "library-notice",
+          "url": "https://example.org/library-notice",
+          "content": "Library schedule bulletin: The library extends its closing time to 9 pm starting today.",
+          "retrieved_at": "2026-09-04T20:00:00Z",
+          "published_at": "2026-09-04T10:00:00Z",
+          "available_at": "2026-09-04T10:00:00Z",
+          "availability_basis": "Synthetic exact-version capture; no external authentication.",
+          "issuer": "Fictional publisher"
+        }
+      ],
+      "seed_ids": [
+        "library-article",
+        "library-notice"
+      ],
+      "full_evidence_control": false
+    }
+  ]
+}

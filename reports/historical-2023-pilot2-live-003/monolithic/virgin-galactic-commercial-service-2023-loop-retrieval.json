@@ -1,0 +1,76 @@
+[
+  {
+    "round": 1,
+    "tasks": [
+      {
+        "id": "origin:virgin-galactic-commercial-service-2023",
+        "question": "Find the producing record and evidenced lineage for: Virgin Galactic will commence commercial service during the second quarter of 2023.",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null,
+        "probe_id": null
+      }
+    ],
+    "planned_ids": [
+      "virgin-commercial-claim-2023"
+    ],
+    "returned_ids": [
+      "virgin-commercial-claim-2023"
+    ],
+    "attribution": {},
+    "feedback": []
+  },
+  {
+    "round": 2,
+    "tasks": [
+      {
+        "id": "evidence-scope-outcome-missing",
+        "question": "What does the designated evidence-scope snapshot virgin-commercial-outcome-2024 say about commencement during Q2 2023?",
+        "stage": "verification",
+        "dimension": "evidence",
+        "blocking": true,
+        "target_id": "virgin-galactic-commercial-service-2023",
+        "basis": [
+          {
+            "version_id": "virgin-commercial-claim-2023",
+            "start": 65,
+            "end": 148,
+            "quote": "Commercial service is currently expected to commence in the second quarter of 2023."
+          }
+        ],
+        "decision_impact": "The supplied source states a forecast and is outside the designated evidence scope. The absent scoped snapshot is needed to assess what that document says, without requiring world authentication.",
+        "action": "search",
+        "locator": "virgin-commercial-outcome-2024 Virgin Galactic commercial service second quarter 2023",
+        "probe_id": null
+      }
+    ],
+    "planned_ids": [
+      "virgin-commercial-outcome-2024"
+    ],
+    "returned_ids": [
+      "virgin-commercial-outcome-2024"
+    ],
+    "attribution": {
+      "virgin-commercial-outcome-2024": [
+        "evidence-scope-outcome-missing"
+      ]
+    },
+    "feedback": [
+      {
+        "gap_id": "evidence-scope-outcome-missing",
+        "action": "search",
+        "locator": "virgin-commercial-outcome-2024 Virgin Galactic commercial service second quarter 2023",
+        "status": "returned",
+        "reason": "matching snapshots returned",
+        "version_ids": [
+          "virgin-commercial-outcome-2024"
+        ]
+      }
+    ]
+  }
+]

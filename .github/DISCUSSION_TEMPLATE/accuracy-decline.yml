@@ -1,0 +1,56 @@
+title: "[Accuracy decline] "
+labels:
+  - accuracy decline
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for a reproducible metric regression or weaker trace outcome.
+        Synthetic fixtures must not be presented as evidence of real-world accuracy.
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: Affected metric or behavior
+      options:
+        - VP — trusted-feed precision
+        - FR — false-claim rejection
+        - TR — true-claim release
+        - SR — original-source success
+        - EN — supporting-evidence precision
+        - CA — probability quality
+        - HFAR — high-risk false admission
+        - Trace or provenance behavior
+        - Other diagnostic
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Compared versions or commits
+      description: Identify the baseline and candidate versions.
+      placeholder: "baseline: abc123; candidate: def456"
+    validations:
+      required: true
+  - type: textarea
+    id: decline
+    attributes:
+      label: Observed decline
+      description: Include the before and after values, dataset kind, and investigation cutoff.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction details
+      description: Include commands, fixtures, model and corpus IDs, budgets, and relevant logs.
+    validations:
+      required: true
+  - type: checkboxes
+    id: evidence-scope
+    attributes:
+      label: Evidence scope
+      options:
+        - label: I identified whether the evidence is synthetic, hand-authored, or independently reviewed real-news data.
+          required: true
+        - label: I did not infer a real-world accuracy claim from synthetic replay or repeated model agreement.
+          required: true

@@ -1,0 +1,24 @@
+[
+  {
+    "round": 1,
+    "tasks": [
+      {
+        "id": "origin:bridge-evidence",
+        "question": "Find the producing record and evidenced lineage for: The bridge has already reopened.",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null
+      }
+    ],
+    "returned_ids": [
+      "bridge-article",
+      "bridge-notice"
+    ],
+    "feedback": []
+  }
+]

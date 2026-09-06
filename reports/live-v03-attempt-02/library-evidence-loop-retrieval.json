@@ -1,0 +1,24 @@
+[
+  {
+    "round": 1,
+    "tasks": [
+      {
+        "id": "origin:library-evidence",
+        "question": "Find the producing record and evidenced lineage for: The library now closes at 9 pm.",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null
+      }
+    ],
+    "returned_ids": [
+      "library-article",
+      "library-notice"
+    ],
+    "feedback": []
+  }
+]

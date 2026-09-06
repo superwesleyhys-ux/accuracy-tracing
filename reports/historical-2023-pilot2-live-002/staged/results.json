@@ -1,0 +1,58 @@
+[
+  {
+    "id": "boeing-starliner-cft-2023",
+    "variant": "loop",
+    "status": "error",
+    "prediction": {
+      "id": "boeing-starliner-cft-2023",
+      "assessment_mode": "evidence",
+      "as_of": "2024-12-31T23:59:59Z",
+      "decision": "unverifiable",
+      "assessments": null,
+      "provenance_status": "unresolved",
+      "assessment_valid": false,
+      "stop_reason": "verifier_error"
+    },
+    "checkpoints": [],
+    "error_type": "StagedSemanticError",
+    "usage": {
+      "model_calls": 7,
+      "input_tokens": 7924,
+      "output_tokens": 1548,
+      "seconds": 38.149657499976456
+    },
+    "actual_new_api_usage": {
+      "model_calls": 7,
+      "input_tokens": 7924,
+      "output_tokens": 1548
+    }
+  },
+  {
+    "id": "virgin-galactic-commercial-service-2023",
+    "variant": "loop",
+    "status": "error",
+    "prediction": {
+      "id": "virgin-galactic-commercial-service-2023",
+      "assessment_mode": "evidence",
+      "as_of": "2024-12-31T23:59:59Z",
+      "decision": "unverifiable",
+      "assessments": null,
+      "provenance_status": "unresolved",
+      "assessment_valid": false,
+      "stop_reason": "verifier_error"
+    },
+    "checkpoints": [],
+    "error_type": "StagedSemanticError",
+    "usage": {
+      "model_calls": 7,
+      "input_tokens": 7836,
+      "output_tokens": 1740,
+      "seconds": 46.34988037496805
+    },
+    "actual_new_api_usage": {
+      "model_calls": 7,
+      "input_tokens": 7836,
+      "output_tokens": 1740
+    }
+  }
+]

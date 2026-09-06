@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "historical-2023-resolved-by-2024-pilot2-v1",
+  "pre_run_checksum": true,
+  "files": {
+    "inputs.json": "05509ee5dfceba9067d07ffc59bb60b3230fceaf9013f4a7dbca5ee9dfc400ab",
+    "sources.json": "92159de53b2e39080c48ce8b562b57608b8cb2158a46cc1b36c6d1938d1e324e",
+    "gold.json": "2f17e5fdff01341956eab9695f2edf3c6fcf87414116ff0f766603ed8e04956d"
+  },
+  "rule": "Inference may read only inputs.json, sources.json, and this checksum manifest. Gold is opened only by audit or score after both arms finish. This two-case pilot is a frozen subset of historical-2023-resolved-by-2024-v1; a clean Git commit containing all inference inputs is required before model calls."
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "round": 1,
+    "tasks": [
+      {
+        "id": "origin:boeing-starliner-cft-2023",
+        "question": "Find the producing record and evidenced lineage for: Boeing will complete the Starliner crewed flight test by December 31, 2023.",
+        "stage": "provenance",
+        "dimension": "auto",
+        "blocking": true,
+        "target_id": null,
+        "basis": [],
+        "decision_impact": "",
+        "action": "search",
+        "locator": null,
+        "probe_id": null
+      }
+    ],
+    "planned_ids": [
+      "boeing-starliner-claim-2023"
+    ],
+    "returned_ids": [
+      "boeing-starliner-claim-2023"
+    ],
+    "attribution": {},
+    "feedback": []
+  }
+]
