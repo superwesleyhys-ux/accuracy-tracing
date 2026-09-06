@@ -1,4 +1,10 @@
-# Accuracy Tracing — NewsVerify Harness
+# FactCircuit development archive
+
+> This public repository preserves the early Accuracy Tracing / NewsVerify
+> Harness development milestone. The project is now **FactCircuit**; use the
+> [canonical repository](https://github.com/superwesleyhys-ux/factcircuit) for
+> the current package, documentation, releases, and contributions. Historical
+> names below are intentionally retained as part of the archived record.
 
 Version 0.2.0: a bounded, auditable news provenance loop with **decomposition on every retrieval return**, a separate verification feedback stage, and a fixed-target evaluation toolkit.
 
@@ -69,4 +75,5 @@ The trace engine and scorer have separate schemas. A production exporter and ind
 
 `python -m newsverify demo`, `verify`, and `benchmark` retain the v0.1 annotated-evidence policy runner in `core.py`. Its publisher/origin grouping and 72-hour default window are legacy policy choices, not the v0.2 provenance algorithm. Its 22 synthetic scenarios remain regression tests, not real-news accuracy estimates. The earlier [adapter contract](docs/ADAPTER_CONTRACT.md) applies to that runner only.
 
-Released under the [MIT License](LICENSE). Source repository: [superwesleyhys-ux/accuracy-tracing](https://github.com/superwesleyhys-ux/accuracy-tracing).
+Released under the [MIT License](LICENSE). Current project:
+[superwesleyhys-ux/factcircuit](https://github.com/superwesleyhys-ux/factcircuit).

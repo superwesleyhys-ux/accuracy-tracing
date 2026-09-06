@@ -29,8 +29,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5913,
-      "sha256": "6a1cfa49673fb2202d51c21b17adeb66ac509bab79e591884a1fd1165abfb234"
+      "bytes": 6276,
+      "sha256": "265c01a2d1977931fc9e078a4748bdb23387f3ab7fdf20a6ec1d28d965ec3b46"
     },
     {
       "path": "dist/newsverify_harness-0.2.0-py3-none-any.whl",
