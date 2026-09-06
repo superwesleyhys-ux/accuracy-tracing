@@ -9,7 +9,7 @@ current supported release is 0.3.x.
 
 Do not put credentials, private feeds, personal data, or an exploitable proof
 of concept in a public issue or discussion. Use GitHub's
-[private vulnerability reporting](https://github.com/superwesleyhys-ux/accuracy-tracing/security/advisories/new)
+[private vulnerability reporting](https://github.com/superwesleyhys-ux/factcircuit/security/advisories/new)
 to contact the maintainer with:
 
 - the affected version or commit;
@@ -19,7 +19,7 @@ to contact the maintainer with:
 
 Reports about ordinary accuracy regressions, incomplete evidence, or weaker
 trace outcomes belong in the
-[Accuracy decline discussion category](https://github.com/superwesleyhys-ux/accuracy-tracing/discussions/categories/accuracy-decline).
+[Accuracy decline discussion category](https://github.com/superwesleyhys-ux/factcircuit/discussions/categories/accuracy-decline).
 
 ## Credential handling
 
@@ -31,7 +31,7 @@ exposed and rotate it immediately.
 
 ## Security boundary
 
-Accuracy Tracing is a research harness. Its cutoff gates, hashes, validation
+FactCircuit is a research harness. Its cutoff gates, hashes, validation
 contracts, and audit records make failures easier to inspect; they are not a
 sandbox, a remote-source authenticity service, or a guarantee that a model has
 forgotten knowledge acquired after a historical cutoff.

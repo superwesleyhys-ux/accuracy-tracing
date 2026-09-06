@@ -11,7 +11,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from newsverify import __version__
+from factcircuit import __version__
 
 MANIFEST = ROOT / "RELEASE_MANIFEST.json"
 SELF = "RELEASE_MANIFEST.json"
@@ -44,7 +44,7 @@ def record(path):
 
 def expected(include_untracked=False):
     return {
-        "project": "accuracy tracing",
+        "project": "FactCircuit",
         "version": __version__,
         "scope": "all git-tracked release checkout files except this self-referential manifest",
         "files": [record(path) for path in repository_paths(include_untracked)],

@@ -14,14 +14,13 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from newsverify import __version__
-from newsverify.comparison import compare
-from newsverify.evaluation import evaluate
-from newsverify.trace_demo import run_demo
+from factcircuit import __version__
+from factcircuit.comparison import compare
+from factcircuit.evaluation import evaluate
+from factcircuit.trace_demo import run_demo
 
 
-SERIES = ".".join(__version__.split(".")[:2])
-TAG = "v" + SERIES
+TAG = "v" + __version__
 HISTORICAL_DATA = ROOT / "experiments" / "historical-2023"
 HISTORICAL_AUDIT_NAME = f"historical-2023-audit-{TAG}.json"
 HISTORICAL_CASE_COUNT = 8
@@ -48,7 +47,7 @@ def package_smoke():
         "version": __version__,
         "distribution_scope": "core CLI/trace engine in wheel; staged experiments from source checkout",
     }
-    with tempfile.TemporaryDirectory(prefix="newsverify-release-") as temporary:
+    with tempfile.TemporaryDirectory(prefix="factcircuit-release-") as temporary:
         temporary_path = Path(temporary)
         wheelhouse = temporary_path / "wheelhouse"
         wheelhouse.mkdir()
@@ -61,7 +60,7 @@ def package_smoke():
             result["output_tail"] = built.stdout[-2000:]
             return result
         wheels = sorted(wheelhouse.glob(
-            f"newsverify_harness-{__version__}-*.whl"))
+            f"factcircuit-{__version__}-*.whl"))
         if len(wheels) != 1:
             result["failure_stage"] = "wheel_selection"
             result["wheel_count"] = len(wheels)
@@ -70,6 +69,9 @@ def package_smoke():
         with zipfile.ZipFile(wheel) as archive:
             names = set(archive.namelist())
         required = {
+            "factcircuit/__init__.py", "factcircuit/cli.py",
+            "factcircuit/decisions.py", "factcircuit/provenance.py",
+            "factcircuit/retrieval.py",
             "newsverify/__init__.py", "newsverify/cli.py",
             "newsverify/decisions.py", "newsverify/provenance.py",
             "newsverify/retrieval.py",
@@ -94,9 +96,11 @@ def package_smoke():
             return result
         imported = _run([
             python, "-c",
-            "import newsverify; assert newsverify.__version__ == " + repr(__version__),
+            ("import factcircuit, newsverify; "
+             "assert factcircuit.__version__ == newsverify.__version__ == "
+             + repr(__version__)),
         ], cwd=temporary_path)
-        demo = _run([python, "-m", "newsverify", "demo"], cwd=temporary_path)
+        demo = _run([python, "-m", "factcircuit", "demo"], cwd=temporary_path)
         source_staged = _run([
             sys.executable, "experiments/loop_compare.py", "--help",
         ])
@@ -249,7 +253,7 @@ def main():
         encoding="utf-8")
 
     lines = [
-        f"# Accuracy Tracing {TAG}：发布验收记录", "",
+        f"# FactCircuit {TAG}：发布验收记录", "",
         f"生成时间：{validation['generated_at']}", "",
         "本报告描述当前源码的离线测试、安装烟测，以及 historical-2023 真实命题语料的合同审计。没有调用新闻检索服务或模型 API，没有执行 live staged/monolithic A/B，也没有测得真实准确率。", "",
         "## 运行结果", "",

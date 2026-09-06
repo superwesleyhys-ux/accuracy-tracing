@@ -1,13 +1,13 @@
-# Accuracy Tracing v0.3 adapter contract
+# FactCircuit v0.3 adapter contract
 
-`newsverify.provenance.run_provenance` orchestrates immutable snapshots, exact source spans, bounded retrieval, decomposition, source lineage and layered verification. It has no built-in truth oracle or network dependency. Plug-ins supply semantic findings; the runner validates structure, ordering, scope and evidence references.
+`factcircuit.provenance.run_provenance` orchestrates immutable snapshots, exact source spans, bounded retrieval, decomposition, source lineage and layered verification. It has no built-in truth oracle or network dependency. Plug-ins supply semantic findings; the runner validates structure, ordering, scope and evidence references.
 
-The legacy `newsverify.core` policy API remains separate. Historical v0.2 reports are retained as historical artifacts; this document describes the current v0.3 contract.
+The legacy policy API remains separate. The earlier `newsverify` import path is retained as a compatibility alias. Historical v0.2/v0.3 reports keep their original names and contents; this document describes the current contract.
 
 ## Public entry point
 
 ```python
-from newsverify.provenance import (
+from factcircuit.provenance import (
     MaterialVersion, RetrievalHit, Target, TraceConfig, run_provenance,
 )
 

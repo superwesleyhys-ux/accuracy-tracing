@@ -1,6 +1,6 @@
-# Contributing to Accuracy Tracing
+# Contributing to FactCircuit
 
-NewsVerify Harness welcomes small, reproducible changes that make evidence handling easier to inspect and harder to misuse.
+FactCircuit welcomes small, reproducible changes that make evidence handling easier to inspect and harder to misuse.
 
 Useful first contributions include a failing evidence fixture, a source-lineage edge case, clearer rejection messages, or an adapter that follows the documented contract. Discuss a new external dependency or a policy change in an issue before building it.
 
@@ -11,7 +11,7 @@ Use Python 3.11 or later. From the repository directory, run:
 ```bash
 python3 -m pip install -e .
 python3 -m unittest discover -s tests -v
-python3 -m newsverify benchmark examples/benchmark.json --output reports/benchmark.json
+python3 -m factcircuit benchmark examples/benchmark.json --output reports/benchmark.json
 ```
 
 Before opening a pull request, also run `python3 scripts/validate_release.py`
@@ -31,6 +31,6 @@ Include the behavior you changed, why it matters, and a minimal fixture or test 
 Contributions are made under the project's [MIT License](LICENSE). Report a defect with enough information to reproduce it, without publishing secrets from your environment.
 
 Use a regular issue for code defects and proposals. Use the dedicated
-[Accuracy decline discussion category](https://github.com/superwesleyhys-ux/accuracy-tracing/discussions/categories/accuracy-decline)
+[Accuracy decline discussion category](https://github.com/superwesleyhys-ux/factcircuit/discussions/categories/accuracy-decline)
 for before/after metric regressions or weaker trace outcomes. Report security
 issues privately as described in [SECURITY.md](SECURITY.md).

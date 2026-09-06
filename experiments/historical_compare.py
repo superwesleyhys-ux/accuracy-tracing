@@ -719,7 +719,11 @@ def run(args):
         return _blocked(out, reason)
     if not os.environ.get("OPENAI_API_KEY"):
         return _blocked(out, "blocked_missing_auth")
-    if os.environ.get("ACCURACY_TRACING_ALLOW_MODEL_CALLS") != "1":
+    model_calls_authorized = (
+        os.environ.get("FACTCIRCUIT_ALLOW_MODEL_CALLS") == "1"
+        or os.environ.get("ACCURACY_TRACING_ALLOW_MODEL_CALLS") == "1"
+    )
+    if not model_calls_authorized:
         return _blocked(out, "blocked_model_calls_not_authorized")
 
     arm_results = []

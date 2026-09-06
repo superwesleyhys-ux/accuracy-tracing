@@ -12,7 +12,7 @@ import json
 import re
 from urllib.parse import urlsplit
 
-from newsverify import provenance as p
+from factcircuit import provenance as p
 
 try:  # Experiment scripts place this directory directly on sys.path.
     from prompt_specs import (

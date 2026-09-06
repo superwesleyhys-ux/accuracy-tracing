@@ -1,8 +1,8 @@
-# Accuracy Tracing: project brief
+# FactCircuit: project brief
 
 ## Purpose
 
-Accuracy Tracing is an open-source verification harness for systems that need
+FactCircuit is an open-source verification harness for systems that need
 more than a final label. Given a fixed claim and evidence cutoff, it records
 which source versions were eligible, which exact spans supported or
 contradicted the target, how sources relate, what remained unresolved, which
@@ -10,11 +10,13 @@ retrieval tasks were issued, and why the process stopped.
 
 The core research question is whether bounded, task-directed re-retrieval and
 staged semantic validation improve claim verification over a monolithic pass
-without hiding the additional cost or failure modes. Version 0.3.0 supplies the
+without hiding the additional cost or failure modes. Version 0.3.0 supplied the
 runtime, evaluation contracts, frozen historical corpus, and an initial
-two-case comparison. It does not yet answer that question at population scale.
+two-case comparison. Version 0.3.1 adds the FactCircuit package and compatibility
+entry points without changing those results. The project does not yet answer
+the research question at population scale.
 
-## What is public in 0.3.0
+## What is public in 0.3.1
 
 | Component | Included now | Next evidence needed |
 | --- | --- | --- |
@@ -44,7 +46,7 @@ material, call, output, and wall-time bounds.
 
 The integration boundary is narrow. A news tracker can produce candidate
 claims and retrieved documents; an adapter converts those outputs to the
-harness contract. Accuracy Tracing returns a policy decision and audit record
+harness contract. FactCircuit returns a policy decision and audit record
 that the tracker can display, queue for review, or revisit when evidence
 changes.
 
@@ -54,7 +56,7 @@ package does not claim to reconstruct or include any earlier private tracker.
 
 ## Evidence to date
 
-The offline core and staged contracts are covered by 250 passing tests, with CI
+The offline core and staged contracts are covered by 254 passing tests, with CI
 on Python 3.11–3.13. In the frozen two-case historical pilot, the original
 monolithic adapter scored 1/2 and the staged adapter scored 2/2. The staged arm
 used substantially more calls and tokens, the cases were selected post-hoc,

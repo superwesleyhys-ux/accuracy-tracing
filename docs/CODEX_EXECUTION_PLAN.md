@@ -1,5 +1,8 @@
 # Codex execution plan — accuracy tracing
 
+> 品牌迁移说明（v0.3.1）：项目现名为 **FactCircuit**。本文是 v0.2/v0.3
+> 的历史执行交接记录，因此旧目录、distribution 与 import 名称按原文保留。
+
 > v0.3 update: [REPAIR_V0.3.md](REPAIR_V0.3.md) supersedes conflicting implementation and adapter notes below.
 
 This file is the executable engineering handoff. The current Codex workspace has already started and implemented the v0.2 reference milestone; do not recreate it from scratch. Use `ACCURACY_TRACING_SPEC.md` as the product and evaluation contract.

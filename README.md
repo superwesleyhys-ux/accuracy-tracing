@@ -1,15 +1,15 @@
-# Accuracy Tracing — NewsVerify Harness
+# FactCircuit
 
-> **Trace the evidence. Reopen affected analyses. Know why the loop stopped.**
+> **Trace every claim. Close the evidence loop.**
 
-[![Policy tests](https://github.com/superwesleyhys-ux/accuracy-tracing/actions/workflows/ci.yml/badge.svg)](https://github.com/superwesleyhys-ux/accuracy-tracing/actions/workflows/ci.yml)
+[![Policy tests](https://github.com/superwesleyhys-ux/factcircuit/actions/workflows/ci.yml/badge.svg)](https://github.com/superwesleyhys-ux/factcircuit/actions/workflows/ci.yml)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](pyproject.toml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-2ea44f.svg)](LICENSE)
 [![Research preview](https://img.shields.io/badge/status-research_preview-orange.svg)](#project-status)
 
-**Accuracy Tracing turns claim verification from a one-shot label into a
-replayable evidence process.** Most verification systems return an answer.
-Accuracy Tracing preserves the path: immutable source versions, exact evidence
+**FactCircuit turns claim verification from a one-shot label into a replayable
+evidence circuit.** Most verification systems return an answer. FactCircuit
+preserves the path: immutable source versions, exact evidence
 spans, staged semantic checks, unresolved gaps, bounded retrieval tasks, stop
 reasons, hashes, and resource usage.
 
@@ -18,7 +18,7 @@ auditable verification loops over changing news evidence. The standard-library
 core runs offline; the optional model adapter adds a seven-stage validation loop
 with deterministic Python assembly and fail-closed contracts.
 
-## Why Accuracy Tracing?
+## Why FactCircuit?
 
 News verification fails in ways that a final `true` or `false` label cannot
 show. URLs are revised. Syndicated stories look independent. A nearby number,
@@ -26,7 +26,7 @@ date, negation, or actor can silently attach to the wrong event. A retrieval
 loop can also forget why it searched, reuse stale feedback, or leak material
 published after the evaluation cutoff.
 
-Accuracy Tracing makes those failure surfaces explicit:
+FactCircuit makes those failure surfaces explicit:
 
 - **Evidence is versioned, not overwritten.** Same-URL revisions retain
   separate identities, exact source spans, timestamps, and content hashes.
@@ -113,13 +113,13 @@ Python 3.11 or newer is required. The core has no runtime dependency outside
 the standard library.
 
 ```bash
-git clone https://github.com/superwesleyhys-ux/accuracy-tracing.git
-cd accuracy-tracing
+git clone https://github.com/superwesleyhys-ux/factcircuit.git
+cd factcircuit
 python3 -m venv .venv
 source .venv/bin/activate
 python3 -m pip install -e .
 
-python3 -m newsverify trace-demo --output reports/trace-demo-local.json
+python3 -m factcircuit trace-demo --output reports/trace-demo-local.json
 python3 -m unittest discover -s tests -v
 ```
 
@@ -130,12 +130,12 @@ and records why the loop terminates.
 ### Score and compare fixed predictions
 
 ```bash
-python3 -m newsverify score \
+python3 -m factcircuit score \
   examples/evaluation_gold.json \
   examples/evaluation_predictions.json \
   --output reports/all-metrics-local.json
 
-python3 -m newsverify compare \
+python3 -m factcircuit compare \
   examples/evaluation_gold.json \
   examples/comparison_baseline.json \
   examples/comparison_candidate.json \
@@ -187,6 +187,8 @@ their resource use as well as their scores.
 The core entry point is:
 
 ```python
+from factcircuit.provenance import run_provenance
+
 run_provenance(target, provider, decomposer=None, verifier=None, config=None)
 ```
 
@@ -220,11 +222,19 @@ not establish truth by themselves.
 
 ## Project status
 
-Version 0.3.0 is a **research preview**, not a production fact-checking service.
-The release gate contains 250 passing tests, and GitHub Actions exercises Python
-3.11, 3.12, and 3.13. The core CLI, offline trace engine, evaluation toolkit,
-staged model adapter, frozen historical corpus, and raw pilot artifacts are
-included.
+Version 0.3.1 is a **research preview**, not a production fact-checking service.
+The release gate contains 254 regression tests, and GitHub Actions exercises
+Python 3.11, 3.12, and 3.13. The core CLI, offline trace engine,
+evaluation toolkit, staged model adapter, frozen historical corpus, and raw
+pilot artifacts are included.
+
+### Name and compatibility
+
+Version 0.3.1 renames the project and Python distribution from Accuracy
+Tracing / NewsVerify Harness to **FactCircuit**. New integrations should use
+the `factcircuit` import package and command. The existing `newsverify` imports
+and command remain supported as compatibility entry points, and the original
+v0.2/v0.3 reports retain their historical names and contents.
 
 Current boundaries are deliberate and visible:
 
@@ -242,11 +252,12 @@ Current boundaries are deliberate and visible:
 
 ## Documentation
 
-- [Design specification and metric definitions](docs/ACCURACY_TRACING_SPEC.md)
+- [FactCircuit specification index](docs/FACTCIRCUIT_SPEC.md)
+- [Original design specification and metric definitions](docs/ACCURACY_TRACING_SPEC.md)
 - [Staged validation loop](docs/STAGED_VALIDATION_LOOP.md)
 - [Trace adapter API](docs/TRACE_ADAPTER.md)
 - [Historical 2023 benchmark contract](docs/HISTORICAL_2023_BENCHMARK.md)
-- [v0.3 validation record](reports/VALIDATION_V0.3.md)
+- [v0.3.1 validation record](reports/VALIDATION_V0.3.1.md)
 - [v0.3 repair and migration contract](docs/REPAIR_V0.3.md)
 - [Roadmap](docs/ROADMAP.md)
 - [Changelog](CHANGELOG.md)
@@ -255,7 +266,7 @@ Current boundaries are deliberate and visible:
 
 Small, reproducible contributions are welcome. Start with
 [`CONTRIBUTING.md`](CONTRIBUTING.md), open an issue for a defect or proposal, or
-use the dedicated [Accuracy decline discussion category](https://github.com/superwesleyhys-ux/accuracy-tracing/discussions/categories/accuracy-decline)
+use the dedicated [Accuracy decline discussion category](https://github.com/superwesleyhys-ux/factcircuit/discussions/categories/accuracy-decline)
 to report a measurable regression with its corpus, configuration, budgets, and
 trace artifacts.
 

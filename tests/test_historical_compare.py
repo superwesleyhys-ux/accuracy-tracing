@@ -543,7 +543,7 @@ class HistoricalComparisonTests(unittest.TestCase):
                            return_value=self._clean_git()),
               patch.dict(os.environ, {
                   "OPENAI_API_KEY": "configured",
-                  "ACCURACY_TRACING_ALLOW_MODEL_CALLS": "1",
+                  "FACTCIRCUIT_ALLOW_MODEL_CALLS": "1",
               }, clear=True)):
             self.assertEqual(1, historical.run(self._args(output=str(output))))
         return output, calls

@@ -1,7 +1,22 @@
 # Changelog
 
-All notable changes to Accuracy Tracing are documented here. The project uses
+All notable changes to FactCircuit are documented here. The project uses
 semantic versioning for its public releases.
+
+## 0.3.1 — 2026-09-06
+
+### FactCircuit rebrand
+
+- Renamed the project and GitHub repository to **FactCircuit**.
+- Renamed the Python distribution to `factcircuit` and added the canonical
+  `factcircuit` import package and command.
+- Retained the `newsverify` import package and command as compatibility entry
+  points for existing integrations.
+- Updated current documentation, repository links, package metadata, security
+  guidance, and CI examples without rewriting v0.2/v0.3 audit artifacts.
+
+This release changes branding and entry points, not verification policy,
+historical results, or the evidence-loop algorithm.
 
 ## 0.3.0 — 2026-09-06
 

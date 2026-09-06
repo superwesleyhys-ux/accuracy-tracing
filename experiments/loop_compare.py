@@ -15,9 +15,9 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from newsverify import provenance as p
-from newsverify.decisions import present_decision, round_decisions
-from newsverify.retrieval import SnapshotSearchProvider
+from factcircuit import provenance as p
+from factcircuit.decisions import present_decision, round_decisions
+from factcircuit.retrieval import SnapshotSearchProvider
 from model_io import (Budget, BudgetClient, PriorResponseCache,
                       ResourceBudgetError, digest, write)
 from semantic_adapter import Decomposer as MonolithicDecomposer, Verifier as MonolithicVerifier
@@ -109,7 +109,8 @@ def missing_trace_failure(error_type, records):
 def source_hashes():
     """Hash the exact Python implementation admitted to a comparison run."""
     return {str(f.relative_to(ROOT)): hashlib.sha256(f.read_bytes()).hexdigest()
-            for base in [ROOT / "newsverify", ROOT / "experiments"]
+            for base in [ROOT / "factcircuit", ROOT / "newsverify",
+                         ROOT / "experiments"]
             for f in sorted(base.glob("*.py"))}
 
 

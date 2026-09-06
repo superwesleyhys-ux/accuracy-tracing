@@ -7,6 +7,7 @@ import tempfile
 import tomllib
 import unittest
 
+import factcircuit
 import newsverify
 from scripts import validate_release
 
@@ -18,7 +19,9 @@ class ReleaseIntegrityTests(unittest.TestCase):
     def test_project_and_runtime_versions_match(self):
         project = tomllib.loads(
             (ROOT / "pyproject.toml").read_text(encoding="utf-8"))
-        self.assertEqual(project["project"]["version"], newsverify.__version__)
+        self.assertEqual(project["project"]["name"], "factcircuit")
+        self.assertEqual(project["project"]["version"], factcircuit.__version__)
+        self.assertEqual(factcircuit.__version__, newsverify.__version__)
 
     def test_release_manifest_matches_git_checkout(self):
         probe = subprocess.run(
@@ -49,9 +52,9 @@ class ReleaseIntegrityTests(unittest.TestCase):
             "tests/test_staged_semantic.py",
             "tests/test_historical_compare.py",
             "docs/HISTORICAL_2023_BENCHMARK.md",
-            "reports/historical-2023-audit-v0.3.json",
-            "reports/VALIDATION_V0.3.md",
-            "reports/package-smoke-v0.3.json",
+            f"reports/historical-2023-audit-v{factcircuit.__version__}.json",
+            f"reports/VALIDATION_V{factcircuit.__version__}.md",
+            f"reports/package-smoke-v{factcircuit.__version__}.json",
         }
         self.assertEqual(set(), required - paths)
 

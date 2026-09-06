@@ -60,8 +60,8 @@ def benchmark(payload):
     }
 
 
-def main(argv=None):
-    parser = argparse.ArgumentParser(description=__doc__)
+def main(argv=None, *, prog="newsverify"):
+    parser = argparse.ArgumentParser(prog=prog, description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
     for command in ("demo", "trace-demo", "verify", "benchmark"):
         child = sub.add_parser(command)
@@ -113,7 +113,7 @@ def main(argv=None):
             print(rendered, end="")
         return 1 if args.command == "benchmark" and not result["all_policy_expectations_matched"] else 0
     except (OSError, ValueError, TypeError, KeyError) as exc:
-        print(f"newsverify: {exc}", file=sys.stderr)
+        print(f"{prog}: {exc}", file=sys.stderr)
         return 2
 
 

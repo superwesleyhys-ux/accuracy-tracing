@@ -10,7 +10,7 @@ This document supersedes conflicting v0.2 adapter/implementation notes. The lega
 
 The report adds `assessments`, `decision_status`, and `assessment_valid`. `assessments[dimension]` stores `raw_verdict`, the gated `decision`, and `blocking_gap_ids`. `fact_status` continues to describe the world decision. Evidence findings are preserved when world verification remains unknown. `decision_status` follows the fixed target assessment mode. Errors invalidate final decision presentation while retaining prior audited findings.
 
-Use `newsverify.decisions.present_decision(report)` for every compared variant. `round_decisions(report)` exposes actual completed-round checkpoints using the same label mapping. Neither function calls a model or invents confidence probabilities. Changing assessment mode means changing the task and requires separate gold labels; it is not a way to repair an old score after seeing predictions.
+Use `factcircuit.decisions.present_decision(report)` for every compared variant. `round_decisions(report)` exposes actual completed-round checkpoints using the same label mapping. The former `newsverify` import remains compatible. Neither function calls a model or invents confidence probabilities. Changing assessment mode means changing the task and requires separate gold labels; it is not a way to repair an old score after seeing predictions.
 
 ## Gaps have scope and executable actions
 

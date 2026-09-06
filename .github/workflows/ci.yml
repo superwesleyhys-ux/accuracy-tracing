@@ -23,9 +23,9 @@ jobs:
       - name: Run regression tests
         run: python -m unittest discover -s tests -v
       - name: Check synthetic policy cases
-        run: python -m newsverify benchmark examples/benchmark.json --output reports/benchmark.json
+        run: python -m factcircuit benchmark examples/benchmark.json --output reports/benchmark.json
       - name: Check package installation
         run: |
           python -m pip install .
           cd /tmp
-          newsverify demo
+          factcircuit demo

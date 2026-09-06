@@ -67,7 +67,7 @@ For a live comparison, first commit the frozen benchmark, revoke any credential 
 
 ```bash
 # OPENAI_API_KEY must already be present in the process environment.
-export ACCURACY_TRACING_ALLOW_MODEL_CALLS=1
+export FACTCIRCUIT_ALLOW_MODEL_CALLS=1
 python3 experiments/historical_compare.py run \
   --inputs experiments/historical-2023/inputs.json \
   --sources experiments/historical-2023/sources.json \
@@ -75,8 +75,11 @@ python3 experiments/historical_compare.py run \
   --output reports/historical-2023-run-001 \
   --model MODEL_NAME \
   --reasoning-effort medium
-unset ACCURACY_TRACING_ALLOW_MODEL_CALLS
+unset FACTCIRCUIT_ALLOW_MODEL_CALLS
 ```
+
+`ACCURACY_TRACING_ALLOW_MODEL_CALLS=1` remains accepted for scripts created
+before the FactCircuit rename.
 
 Only after both arms finish, score against the separately checksummed gold:
 

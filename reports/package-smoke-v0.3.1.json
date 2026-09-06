@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "version": "0.3.1",
+  "distribution_scope": "core CLI/trace engine in wheel; staged experiments from source checkout",
+  "wheel": "factcircuit-0.3.1-py3-none-any.whl",
+  "wheel_required_files": [
+    "factcircuit/__init__.py",
+    "factcircuit/cli.py",
+    "factcircuit/decisions.py",
+    "factcircuit/provenance.py",
+    "factcircuit/retrieval.py",
+    "newsverify/__init__.py",
+    "newsverify/cli.py",
+    "newsverify/decisions.py",
+    "newsverify/provenance.py",
+    "newsverify/retrieval.py"
+  ],
+  "installed_version": "0.3.1",
+  "installed_core_demo": "passed",
+  "source_staged_help": "passed"
+}
