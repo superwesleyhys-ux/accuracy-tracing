@@ -1,0 +1,5 @@
+{
+  "max_rounds": 4,
+  "max_documents": 12,
+  "max_decomposition_calls": 20
+}

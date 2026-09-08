@@ -109,23 +109,51 @@ raw calls, retrieval records, traces, frozen inputs, and checksums.
 
 ## Quick start
 
-Python 3.11 or newer is required. The core has no runtime dependency outside
-the standard library.
+Start with the pinned **v0.3.2** release. You need Git and Python 3.11 or newer.
+Installation downloads build tools; the first example then runs entirely
+offline with no API key, model download or runtime dependencies.
+
+### macOS / Linux
 
 ```bash
-git clone https://github.com/superwesleyhys-ux/factcircuit.git
+git clone --branch v0.3.2 --depth 1 https://github.com/superwesleyhys-ux/factcircuit.git
 cd factcircuit
 python3 -m venv .venv
-source .venv/bin/activate
-python3 -m pip install -e .
-
-python3 -m factcircuit trace-demo --output reports/trace-demo-local.json
-python3 -m unittest discover -s tests -v
+.venv/bin/python -m pip install .
+.venv/bin/python -m factcircuit --version
+.venv/bin/python -m factcircuit quickstart --output runs/first-run
 ```
 
-The trace demo follows four material versions across three retrieval rounds,
-reopens affected earlier analyses, routes a correction through decomposition,
-and records why the loop terminates.
+### Windows PowerShell
+
+```powershell
+git clone --branch v0.3.2 --depth 1 https://github.com/superwesleyhys-ux/factcircuit.git
+cd factcircuit
+py -3 -m venv .venv
+.venv\Scripts\python.exe -m pip install .
+.venv\Scripts\python.exe -m factcircuit --version
+.venv\Scripts\python.exe -m factcircuit quickstart --output runs/first-run
+```
+
+Expected terminal output:
+
+```text
+factcircuit 0.3.2
+Offline annotated example: contradicted; 3 rounds; 0 model calls.
+Read runs/first-run/SUMMARY.md
+```
+
+Open `runs/first-run/SUMMARY.md`. The same directory contains `inputs.json`,
+`config.json` and `trace.json`. Four fictional evidence versions pass through
+three retrieval rounds, including source tracing and a publisher correction.
+The semantic annotations are hand-authored; this checks the working evidence
+loop, not model accuracy. Existing output directories are never overwritten.
+
+See the [first-run guide](docs/QUICKSTART.md) for configuration, expected fields,
+troubleshooting, and running your own claims with a local model. Local GGUF
+inference uses separately installed weights; the provided setup selects Qwen,
+not Astra. The original `trace-demo`, `score`, and `compare` commands remain
+available. Use the Python executable from your virtual environment below.
 
 ### Score and compare fixed predictions
 
@@ -159,6 +187,77 @@ python3 experiments/historical_compare.py audit \
   --gold experiments/historical-2023-pilot2-v3/gold.json \
   --output reports/historical-2023-audit-local.json
 ```
+
+### Run fresh verification on your own CPU
+
+The local model path loads GGUF weights with llama.cpp in a local Python worker.
+It generates new responses and executes the same staged or monolithic verifier.
+It requires no OpenAI SDK, API key, or hosted inference service. The worker
+disables networking and stops on errors or timeouts without cloud fallback.
+
+```bash
+python3 scripts/configure_local.py
+.venv-local/bin/python experiments/local_inference.py \
+  --config .local/model.json \
+  --output reports/my-local-inference
+```
+
+On Windows, run `python scripts/configure_local.py` and use
+`.venv-local\Scripts\python.exe` for the inference Python executable.
+Use Python 3.11 or later with an available llama.cpp CPU wheel; the initial
+installation and fresh inference were tested on Linux x86_64 with Python 3.12.
+Setup downloads the pinned 2.50 GB Qwen3-4B-Instruct-2507 Q4_K_M model and checks
+its SHA-256 before writing `.local/model.json`. The weights and machine-specific
+configuration are excluded from git. Only installation requires downloads;
+subsequent inference reads local files. CPU mode is the default, with up to
+eight threads and a 16,384-token context. The config permits a GPU layer count
+when a compatible llama.cpp build and hardware are supplied.
+
+The local command defaults to the staged loop. `--semantic-mode monolithic`
+selects the earlier adapter; `--case ID` selects one case. Controls are included
+only with `--include-controls`. Use a new output directory for every run.
+Generation runs sequentially against one loaded model, with per-case budgets
+and a worker deadline. If the worker times out it is stopped; no remote retry
+is possible. Raw local requests and outputs, usage, traces and errors are saved.
+The local decoder restricts source references to each layer's supplied material
+IDs. Missing scoped evidence cannot produce a conclusive dimension verdict.
+String and array length limits remain in the original prompts and Python gates;
+the sampling grammar omits them to avoid llama.cpp grammar expansion limits.
+
+Local tokens consume compute and memory but are not billed by a model API.
+Local latency and verification quality must be measured independently from the
+archived Astra results. No model download or successful installation alone
+establishes news accuracy. The snapshot provider still searches supplied
+materials rather than the open web.
+
+### Re-execute archived comparisons locally
+
+This source-checkout command runs the current verification code against saved
+model responses. It requires no API key, SDK, network connection, or local model.
+It is deterministic response replay and does not generate new model answers.
+
+```bash
+python3 experiments/local_replay.py \
+  --archive reports/historical-2023-pilot2-v3-live-001 \
+  --inputs experiments/historical-2023-pilot2-v3/inputs.json \
+  --sources experiments/historical-2023-pilot2-v3/sources.json \
+  --freeze experiments/historical-2023-pilot2-v3/freeze.json \
+  --gold experiments/historical-2023-pilot2-v3/gold.json \
+  --output reports/local-replay-my-run
+```
+
+API status is `not_used` with zero requests. `execution_status` reports whether
+the archived calls could be replayed; `verification_status` separately retains
+semantic failures. This pilot replays all six case/arm/control combinations,
+including the known staged Lucid full-evidence error. Exit code 1 means replay
+or verification errors were retained; exit code 2 means setup or archive
+validation failed. Use a fresh output directory for each run.
+
+Call hashes and exact requests are checked before accepting saved responses.
+Optional gold labels are opened after replay, and scores are explicitly marked
+`archived_response_replay`. They do not constitute a new accuracy measurement.
+An invalid API key cannot block this local path. Fresh model inference still
+requires a separately configured model runtime.
 
 ### Run a model-backed comparison
 
@@ -222,9 +321,10 @@ not establish truth by themselves.
 
 ## Project status
 
-Version 0.3.1 is a **research preview**, not a production fact-checking service.
-The release gate contains 254 regression tests, and GitHub Actions exercises
-Python 3.11, 3.12, and 3.13. The core CLI, offline trace engine,
+Version 0.3.2 provides a reproducible first-run release of this **research preview**.
+The semantic model adapter remains experimental. GitHub Actions exercises
+the regression suite on Python 3.11, 3.12, and 3.13 and the installed first-run
+command on Linux, macOS, and Windows. The core CLI, offline trace engine,
 evaluation toolkit, staged model adapter, frozen historical corpus, and raw
 pilot artifacts are included.
 
@@ -253,11 +353,13 @@ Current boundaries are deliberate and visible:
 ## Documentation
 
 - [FactCircuit specification index](docs/FACTCIRCUIT_SPEC.md)
+- [Installation, configuration and complete first run](docs/QUICKSTART.md)
+- [v0.3.2 release notes](docs/releases/v0.3.2.md)
 - [Original design specification and metric definitions](docs/ACCURACY_TRACING_SPEC.md)
 - [Staged validation loop](docs/STAGED_VALIDATION_LOOP.md)
 - [Trace adapter API](docs/TRACE_ADAPTER.md)
 - [Historical 2023 benchmark contract](docs/HISTORICAL_2023_BENCHMARK.md)
-- [v0.3.1 validation record](reports/VALIDATION_V0.3.1.md)
+- [v0.3.2 validation record](reports/VALIDATION_V0.3.2.md)
 - [v0.3 repair and migration contract](docs/REPAIR_V0.3.md)
 - [Roadmap](docs/ROADMAP.md)
 - [Changelog](CHANGELOG.md)

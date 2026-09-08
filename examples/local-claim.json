@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "target": {
+        "id": "fictional-library-opening",
+        "text": "The fictional Elmbridge Library opened on June 3, 2026.",
+        "as_of": "2026-06-05T23:59:59Z",
+        "source_version_id": "library-record:v1",
+        "assessment_mode": "evidence",
+        "evidence_scope": ["Supplied fictional library record only; no external facts."]
+      },
+      "materials": [
+        {
+          "version_id": "library-record:v1",
+          "url": "https://library.example/opening",
+          "content": "Fictional demonstration record: Elmbridge Library opened to the public on June 3, 2026.",
+          "retrieved_at": "2026-06-05T12:00:00Z",
+          "published_at": "2026-06-04T12:00:00Z",
+          "available_at": "2026-06-04T12:00:00Z",
+          "availability_basis": "Synthetic fixture timestamp; no real publication or retrieval is asserted.",
+          "issuer": "fictional-elmbridge-library"
+        }
+      ],
+      "seed_ids": ["library-record:v1"],
+      "full_evidence_control": false
+    }
+  ]
+}

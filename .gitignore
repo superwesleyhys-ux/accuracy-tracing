@@ -14,3 +14,7 @@ dist/
 .env.*
 !.env.example
 private-data/
+.models/
+.local/
+.venv-local/
+runs/

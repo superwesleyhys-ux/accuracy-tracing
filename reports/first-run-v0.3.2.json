@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "version": "0.3.2",
+  "platform": "linux",
+  "python": "3.12.13",
+  "model_api_calls": 0,
+  "new_model_inference": false,
+  "wheel": "factcircuit-0.3.2-py3-none-any.whl",
+  "installed_version": "factcircuit 0.3.2",
+  "outside_checkout": true,
+  "installed_default_example": "passed",
+  "installed_configured_example": "passed",
+  "compatibility_cli": "passed"
+}

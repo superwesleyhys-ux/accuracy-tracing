@@ -18,6 +18,7 @@ from factcircuit import __version__
 from factcircuit.comparison import compare
 from factcircuit.evaluation import evaluate
 from factcircuit.trace_demo import run_demo
+from scripts.smoke_first_run import smoke_first_run
 
 
 TAG = "v" + __version__
@@ -209,6 +210,10 @@ def main():
     (reports / f"package-smoke-{TAG}.json").write_text(
         json.dumps(packaging, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8")
+    first_run = smoke_first_run()
+    (reports / f"first-run-{TAG}.json").write_text(
+        json.dumps(first_run, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8")
     historical_audit = historical_benchmark_audit(
         reports / HISTORICAL_AUDIT_NAME)
     validation = {
@@ -226,6 +231,7 @@ def main():
         "trace_demo_fact_status": trace["fact_status"],
         "trace_demo_stop": trace["stop_reason"],
         "packaging": packaging,
+        "installed_first_run": first_run,
         "all_data_synthetic": False,
         "offline_demo_data_synthetic": True,
         "historical_2023_audit": {
@@ -259,6 +265,7 @@ def main():
         "## 运行结果", "",
         f"- 测试：{test_result.testsRun} 项；失败 {len(test_result.failures)}；错误 {len(test_result.errors)}；跳过 {len(test_result.skipped)}。",
         f"- 核心 wheel 安装检查：{packaging['status']}。",
+        f"- 仓库目录外首次运行检查：{first_run['status']}；含完整示例、缩小预算示例和旧命令兼容。",
         "- staged 分阶段运行时：源码 checkout 导入/CLI 帮助烟测；本次没有执行模型推理。", "",
         "| 测试组 | 数量 |", "|---|---:|",
     ]
@@ -311,6 +318,7 @@ def main():
     print(json.dumps(validation, ensure_ascii=False, indent=2))
     passed = (test_result.wasSuccessful()
               and packaging["status"] == "passed"
+              and first_run["status"] == "passed"
               and historical_audit["status"] == "passed")
     return 0 if passed else 1
 
