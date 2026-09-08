@@ -160,6 +160,35 @@ python3 experiments/historical_compare.py audit \
   --output reports/historical-2023-audit-local.json
 ```
 
+### Re-execute archived comparisons locally
+
+This source-checkout command runs the current verification code against saved
+model responses. It requires no API key, SDK, network connection, or local model.
+It is deterministic response replay and does not generate new model answers.
+
+```bash
+python3 experiments/local_replay.py \
+  --archive reports/historical-2023-pilot2-v3-live-001 \
+  --inputs experiments/historical-2023-pilot2-v3/inputs.json \
+  --sources experiments/historical-2023-pilot2-v3/sources.json \
+  --freeze experiments/historical-2023-pilot2-v3/freeze.json \
+  --gold experiments/historical-2023-pilot2-v3/gold.json \
+  --output reports/local-replay-my-run
+```
+
+API status is `not_used` with zero requests. `execution_status` reports whether
+the archived calls could be replayed; `verification_status` separately retains
+semantic failures. This pilot replays all six case/arm/control combinations,
+including the known staged Lucid full-evidence error. Exit code 1 means replay
+or verification errors were retained; exit code 2 means setup or archive
+validation failed. Use a fresh output directory for each run.
+
+Call hashes and exact requests are checked before accepting saved responses.
+Optional gold labels are opened after replay, and scores are explicitly marked
+`archived_response_replay`. They do not constitute a new accuracy measurement.
+An invalid API key cannot block this local path. Fresh model inference still
+requires a separately configured model runtime.
+
 ### Run a model-backed comparison
 
 The experimental runtime is source-checkout-only. Install the pinned optional
