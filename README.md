@@ -160,6 +160,48 @@ python3 experiments/historical_compare.py audit \
   --output reports/historical-2023-audit-local.json
 ```
 
+### Run fresh verification on your own CPU
+
+The local model path loads GGUF weights with llama.cpp in a local Python worker.
+It generates new responses and executes the same staged or monolithic verifier.
+It requires no OpenAI SDK, API key, or hosted inference service. The worker
+disables networking and stops on errors or timeouts without cloud fallback.
+
+```bash
+python3 scripts/configure_local.py
+.venv-local/bin/python experiments/local_inference.py \
+  --config .local/model.json \
+  --output reports/my-local-inference
+```
+
+On Windows, run `python scripts/configure_local.py` and use
+`.venv-local\Scripts\python.exe` for the inference Python executable.
+Use Python 3.11 or later with an available llama.cpp CPU wheel; the initial
+installation and fresh inference were tested on Linux x86_64 with Python 3.12.
+Setup downloads the pinned 2.50 GB Qwen3-4B-Instruct-2507 Q4_K_M model and checks
+its SHA-256 before writing `.local/model.json`. The weights and machine-specific
+configuration are excluded from git. Only installation requires downloads;
+subsequent inference reads local files. CPU mode is the default, with up to
+eight threads and a 16,384-token context. The config permits a GPU layer count
+when a compatible llama.cpp build and hardware are supplied.
+
+The local command defaults to the staged loop. `--semantic-mode monolithic`
+selects the earlier adapter; `--case ID` selects one case. Controls are included
+only with `--include-controls`. Use a new output directory for every run.
+Generation runs sequentially against one loaded model, with per-case budgets
+and a worker deadline. If the worker times out it is stopped; no remote retry
+is possible. Raw local requests and outputs, usage, traces and errors are saved.
+The local decoder restricts source references to each layer's supplied material
+IDs. Missing scoped evidence cannot produce a conclusive dimension verdict.
+String and array length limits remain in the original prompts and Python gates;
+the sampling grammar omits them to avoid llama.cpp grammar expansion limits.
+
+Local tokens consume compute and memory but are not billed by a model API.
+Local latency and verification quality must be measured independently from the
+archived Astra results. No model download or successful installation alone
+establishes news accuracy. The snapshot provider still searches supplied
+materials rather than the open web.
+
 ### Re-execute archived comparisons locally
 
 This source-checkout command runs the current verification code against saved
