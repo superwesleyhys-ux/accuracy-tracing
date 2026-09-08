@@ -20,8 +20,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 155,
-      "sha256": "a0e1a2960f8ec951997781d9b9218040b1ae56d6154f868cea99dc59bccda9f9"
+      "bytes": 185,
+      "sha256": "540352b37d3c202ee52d0f0e837c03915c141046b040b6b2d3dea8c4daa56e86"
     },
     {
       "path": "CHANGELOG.md",
@@ -40,8 +40,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 13563,
-      "sha256": "93c33cd6c48aa4b6e5e0f6ee57c555c201703b2540e93f0c5c6b29211b1fbb5b"
+      "bytes": 15954,
+      "sha256": "cb8bfcb49420d6fd9502c824f448ec63586687095416bd5ea275f6ceddce522b"
     },
     {
       "path": "SECURITY.md",
@@ -247,6 +247,16 @@
       "path": "experiments/inputs-v03.json",
       "bytes": 7816,
       "sha256": "4efef214c4c2d220407ee05c775945fad7377dc31328c07ccdad3842deb75cfc"
+    },
+    {
+      "path": "experiments/local_inference.py",
+      "bytes": 6340,
+      "sha256": "bca14f7af21fe5a3b2246786aea1ac0d517552f290ecb9c0567312fa8d6e3b90"
+    },
+    {
+      "path": "experiments/local_model.py",
+      "bytes": 10687,
+      "sha256": "ad33f86aff7dfdffd22fb40bcd431c7d62b96f36cb358948ea97725451acdc18"
     },
     {
       "path": "experiments/local_replay.py",
@@ -1769,9 +1779,24 @@
       "sha256": "864975dac2eae9d255097e2c4cf343f87123ba1ed52fadba453723f01bd8f782"
     },
     {
+      "path": "requirements-local.txt",
+      "bytes": 125,
+      "sha256": "8f0751ab42c8aef9665dfcf1607d971bd1f270e4285d8040fe2339bf62136b49"
+    },
+    {
+      "path": "scripts/configure_local.py",
+      "bytes": 1296,
+      "sha256": "8b0b57249e331670a16d1c00b1bb7a96e12fc30908566f5136c3ac642f428a2e"
+    },
+    {
       "path": "scripts/release_manifest.py",
       "bytes": 2133,
       "sha256": "01f16e86bc3c813d2726082f225ec10383c542a297677d94856ae4564ba60508"
+    },
+    {
+      "path": "scripts/setup_local_model.py",
+      "bytes": 3154,
+      "sha256": "c51857723f1e0b0201e3c952ea785b8eab242dfb2bf10b9935bdfab51716de85"
     },
     {
       "path": "scripts/validate_release.py",
@@ -1802,6 +1827,11 @@
       "path": "tests/test_historical_compare.py",
       "bytes": 49833,
       "sha256": "0bf9d7f6ec8a3d8ee3e7fc1b31b697ff661aad1253745fb7a12241d9526c65ef"
+    },
+    {
+      "path": "tests/test_local_model.py",
+      "bytes": 9940,
+      "sha256": "8d69b104649dc6aed15d14ad67682348ebd941eb2bc0e23f3fad6aae84daff61"
     },
     {
       "path": "tests/test_local_replay.py",
