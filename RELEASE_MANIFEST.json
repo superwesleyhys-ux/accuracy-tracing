@@ -40,8 +40,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12071,
-      "sha256": "f1c46d08884862c8707b369c0965f64eb5a5185aa5a2e212f4ede54d1380a9ff"
+      "bytes": 13563,
+      "sha256": "93c33cd6c48aa4b6e5e0f6ee57c555c201703b2540e93f0c5c6b29211b1fbb5b"
     },
     {
       "path": "SECURITY.md",
@@ -247,6 +247,11 @@
       "path": "experiments/inputs-v03.json",
       "bytes": 7816,
       "sha256": "4efef214c4c2d220407ee05c775945fad7377dc31328c07ccdad3842deb75cfc"
+    },
+    {
+      "path": "experiments/local_replay.py",
+      "bytes": 7515,
+      "sha256": "e14df18fe390c0610ef37ac1c23818f2d3540c3b1b3d531f177a0eed1cefb23e"
     },
     {
       "path": "experiments/loop_compare.py",
@@ -1797,6 +1802,11 @@
       "path": "tests/test_historical_compare.py",
       "bytes": 49833,
       "sha256": "0bf9d7f6ec8a3d8ee3e7fc1b31b697ff661aad1253745fb7a12241d9526c65ef"
+    },
+    {
+      "path": "tests/test_local_replay.py",
+      "bytes": 5360,
+      "sha256": "c71dc00e1e0024bb66f406235bc7d363310a89c586c22a287e353a603c2924f7"
     },
     {
       "path": "tests/test_provenance.py",
