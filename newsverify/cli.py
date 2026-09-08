@@ -62,7 +62,12 @@ def benchmark(payload):
 
 def main(argv=None, *, prog="newsverify"):
     parser = argparse.ArgumentParser(prog=prog, description=__doc__)
+    from . import __version__
+    parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     sub = parser.add_subparsers(dest="command", required=True)
+    quickstart_parser = sub.add_parser("quickstart", help="run the offline annotated example and save a readable walkthrough")
+    quickstart_parser.add_argument("--output", type=Path, required=True, help="new directory for inputs, config, trace and summary")
+    quickstart_parser.add_argument("--config", type=Path, help="optional JSON resource budgets; no credentials")
     for command in ("demo", "trace-demo", "verify", "benchmark"):
         child = sub.add_parser(command)
         if command not in ("demo", "trace-demo"):
@@ -81,7 +86,17 @@ def main(argv=None, *, prog="newsverify"):
     compare_parser.add_argument("--output", type=Path)
     args = parser.parse_args(argv)
     try:
-        if args.command == "trace-demo":
+        if args.command == "quickstart":
+            from .quickstart import run_quickstart
+            config = json.loads(args.config.read_text(encoding="utf-8")) if args.config else None
+            if args.config and config is None:
+                raise ValueError("quickstart config must be a JSON object")
+            result = run_quickstart(args.output, config)
+            print(f"Offline annotated example: {result['fact_status']}; "
+                  f"{result['usage']['rounds']} rounds; 0 model calls.")
+            print(f"Read {args.output / 'SUMMARY.md'}")
+            return 0 if result["assessment_valid"] else 1
+        elif args.command == "trace-demo":
             from .trace_demo import run_demo
             result = run_demo()
         elif args.command == "compare":

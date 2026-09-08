@@ -3,6 +3,20 @@
 All notable changes to FactCircuit are documented here. The project uses
 semantic versioning for its public releases.
 
+## 0.3.2 — 2026-09-08
+
+- Added a packaged offline `quickstart` command with input/config/trace artifacts
+  and a readable summary; existing output directories are preserved.
+- Added configurable example budgets, `--version`, a first-run guide for
+  macOS/Linux/Windows, and a minimal input for custom local model runs.
+- Included isolated local GGUF inference and archived-response replay from the
+  local-execution branches, with explicit separation from fresh Astra inference.
+- Added wheel installation and first-run CI checks outside the source checkout,
+  and release assets gated on passing checks.
+
+This is a usability release of the research preview. It does not establish new
+accuracy results or resolve the documented experimental semantic control error.
+
 ## 0.3.1 — 2026-09-06
 
 ### FactCircuit rebrand

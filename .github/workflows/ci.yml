@@ -29,3 +29,51 @@ jobs:
           python -m pip install .
           cd /tmp
           factcircuit demo
+
+  first-run:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Test the installed wheel outside the checkout
+        run: python scripts/smoke_first_run.py
+
+  release:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: [test, first-run]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Publish the verified version if it has no release yet
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          release_version=$(python -c 'import tomllib; print(tomllib.load(open("pyproject.toml", "rb"))["project"]["version"])')
+          release_tag="v${release_version}"
+          if gh release view "$release_tag" >/dev/null 2>&1; then
+            echo "Release $release_tag already exists."
+            exit 0
+          fi
+          test -f "docs/releases/${release_tag}.md"
+          python scripts/release_manifest.py check
+          python -m pip wheel . --no-deps --wheel-dir dist
+          (cd dist && sha256sum *.whl > SHA256SUMS.txt)
+          gh release create "$release_tag" dist/*.whl dist/SHA256SUMS.txt \
+            --target "$GITHUB_SHA" --title "FactCircuit $release_tag" \
+            --notes-file "docs/releases/${release_tag}.md"

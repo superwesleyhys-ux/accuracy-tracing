@@ -55,6 +55,7 @@ class ReleaseIntegrityTests(unittest.TestCase):
             f"reports/historical-2023-audit-v{factcircuit.__version__}.json",
             f"reports/VALIDATION_V{factcircuit.__version__}.md",
             f"reports/package-smoke-v{factcircuit.__version__}.json",
+            f"reports/first-run-v{factcircuit.__version__}.json",
         }
         self.assertEqual(set(), required - paths)
 

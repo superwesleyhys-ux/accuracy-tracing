@@ -1,0 +1,214 @@
+{
+  "dataset_kind": "synthetic",
+  "declared_budgets_match": true,
+  "model_id": "no-model-handwritten-fixture",
+  "corpus_id": "synthetic-four-case-v1",
+  "per_target_budget": {
+    "retrieval_calls": 3,
+    "model_tokens": 1000,
+    "wall_seconds": 60
+  },
+  "baseline_name": "identical-handwritten-baseline",
+  "candidate_name": "identical-handwritten-candidate",
+  "bootstrap_samples": 100,
+  "seed": 0,
+  "event_count": 4,
+  "differences": {
+    "VP": {
+      "baseline": 0.5,
+      "candidate": 0.5,
+      "delta": 0.0,
+      "event_bootstrap95": null,
+      "valid_bootstrap_samples": 93,
+      "interval_status": "insufficient_events_or_undefined_resample_metrics",
+      "preferred_direction": "higher"
+    },
+    "FR": {
+      "baseline": 0.5,
+      "candidate": 0.5,
+      "delta": 0.0,
+      "event_bootstrap95": null,
+      "valid_bootstrap_samples": 97,
+      "interval_status": "insufficient_events_or_undefined_resample_metrics",
+      "preferred_direction": "higher"
+    },
+    "TR": {
+      "baseline": 0.5,
+      "candidate": 0.5,
+      "delta": 0.0,
+      "event_bootstrap95": null,
+      "valid_bootstrap_samples": 92,
+      "interval_status": "insufficient_events_or_undefined_resample_metrics",
+      "preferred_direction": "higher"
+    },
+    "SR": {
+      "baseline": 0.6666666666666666,
+      "candidate": 0.6666666666666666,
+      "delta": 0.0,
+      "event_bootstrap95": null,
+      "valid_bootstrap_samples": 98,
+      "interval_status": "insufficient_events_or_undefined_resample_metrics",
+      "preferred_direction": "higher"
+    },
+    "EN": {
+      "baseline": 0.6666666666666666,
+      "candidate": 0.6666666666666666,
+      "delta": 0.0,
+      "event_bootstrap95": null,
+      "valid_bootstrap_samples": 58,
+      "interval_status": "insufficient_events_or_undefined_resample_metrics",
+      "preferred_direction": "higher"
+    },
+    "HFAR": {
+      "baseline": 0.5,
+      "candidate": 0.5,
+      "delta": 0.0,
+      "event_bootstrap95": null,
+      "valid_bootstrap_samples": 97,
+      "interval_status": "insufficient_events_or_undefined_resample_metrics",
+      "preferred_direction": "lower"
+    },
+    "CA": {
+      "baseline": 0.65625,
+      "candidate": 0.65625,
+      "delta": 0.0,
+      "event_bootstrap95": [
+        0.0,
+        0.0
+      ],
+      "valid_bootstrap_samples": 100,
+      "interval_status": "computed",
+      "preferred_direction": "higher"
+    },
+    "source_precision": {
+      "baseline": 0.6666666666666666,
+      "candidate": 0.6666666666666666,
+      "delta": 0.0,
+      "event_bootstrap95": [
+        0.0,
+        0.0
+      ],
+      "valid_bootstrap_samples": 100,
+      "interval_status": "computed",
+      "preferred_direction": "higher"
+    },
+    "unknown_source_false_promotion": {
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "delta": 0.0,
+      "event_bootstrap95": null,
+      "valid_bootstrap_samples": 69,
+      "interval_status": "insufficient_events_or_undefined_resample_metrics",
+      "preferred_direction": "lower"
+    },
+    "edge_precision": {
+      "baseline": 0.6666666666666666,
+      "candidate": 0.6666666666666666,
+      "delta": 0.0,
+      "event_bootstrap95": [
+        0.0,
+        0.0
+      ],
+      "valid_bootstrap_samples": 100,
+      "interval_status": "computed",
+      "preferred_direction": "higher"
+    },
+    "annotated_edge_recall": {
+      "baseline": 0.6666666666666666,
+      "candidate": 0.6666666666666666,
+      "delta": 0.0,
+      "event_bootstrap95": null,
+      "valid_bootstrap_samples": 98,
+      "interval_status": "insufficient_events_or_undefined_resample_metrics",
+      "preferred_direction": "higher"
+    },
+    "evidence_support_recall": {
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "delta": 0.0,
+      "event_bootstrap95": null,
+      "valid_bootstrap_samples": 58,
+      "interval_status": "insufficient_events_or_undefined_resample_metrics",
+      "preferred_direction": "higher"
+    },
+    "stance_accuracy": {
+      "baseline": 0.75,
+      "candidate": 0.75,
+      "delta": 0.0,
+      "event_bootstrap95": null,
+      "valid_bootstrap_samples": 89,
+      "interval_status": "insufficient_events_or_undefined_resample_metrics",
+      "preferred_direction": "higher"
+    },
+    "false_identification_recall": {
+      "baseline": 0.5,
+      "candidate": 0.5,
+      "delta": 0.0,
+      "event_bootstrap95": null,
+      "valid_bootstrap_samples": 97,
+      "interval_status": "insufficient_events_or_undefined_resample_metrics",
+      "preferred_direction": "higher"
+    },
+    "classification_accuracy": {
+      "baseline": 0.5,
+      "candidate": 0.5,
+      "delta": 0.0,
+      "event_bootstrap95": [
+        0.0,
+        0.0
+      ],
+      "valid_bootstrap_samples": 100,
+      "interval_status": "computed",
+      "preferred_direction": "higher"
+    },
+    "admission_coverage": {
+      "baseline": 0.5,
+      "candidate": 0.5,
+      "delta": 0.0,
+      "event_bootstrap95": [
+        0.0,
+        0.0
+      ],
+      "valid_bootstrap_samples": 100,
+      "interval_status": "computed",
+      "preferred_direction": "higher"
+    },
+    "duplicate_pair_f1": {
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "delta": 0.0,
+      "event_bootstrap95": null,
+      "valid_bootstrap_samples": 58,
+      "interval_status": "insufficient_events_or_undefined_resample_metrics",
+      "preferred_direction": "higher"
+    },
+    "ECE10": {
+      "baseline": 0.4375,
+      "candidate": 0.4375,
+      "delta": 0.0,
+      "event_bootstrap95": [
+        0.0,
+        0.0
+      ],
+      "valid_bootstrap_samples": 100,
+      "interval_status": "computed",
+      "preferred_direction": "lower"
+    },
+    "NVScore": {
+      "baseline": 14.002370512344195,
+      "candidate": 14.002370512344195,
+      "delta": 0.0,
+      "event_bootstrap95": null,
+      "valid_bootstrap_samples": 55,
+      "interval_status": "insufficient_events_or_undefined_resample_metrics",
+      "preferred_direction": "higher"
+    }
+  },
+  "conclusion": "synthetic_no_realworld_claim",
+  "limitations": [
+    "Matching declared budgets and usage is not independent verification of real model execution.",
+    "Intervals are unadjusted exploratory event-cluster percentile intervals, not a simultaneous seven-metric claim.",
+    "Any undefined bootstrap resample suppresses that interval; no silent conditional resampling.",
+    "A small number of events or handwritten predictions cannot demonstrate deployment readiness."
+  ]
+}

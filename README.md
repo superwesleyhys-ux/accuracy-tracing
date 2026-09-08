@@ -109,23 +109,51 @@ raw calls, retrieval records, traces, frozen inputs, and checksums.
 
 ## Quick start
 
-Python 3.11 or newer is required. The core has no runtime dependency outside
-the standard library.
+Start with the pinned **v0.3.2** release. You need Git and Python 3.11 or newer.
+Installation downloads build tools; the first example then runs entirely
+offline with no API key, model download or runtime dependencies.
+
+### macOS / Linux
 
 ```bash
-git clone https://github.com/superwesleyhys-ux/factcircuit.git
+git clone --branch v0.3.2 --depth 1 https://github.com/superwesleyhys-ux/factcircuit.git
 cd factcircuit
 python3 -m venv .venv
-source .venv/bin/activate
-python3 -m pip install -e .
-
-python3 -m factcircuit trace-demo --output reports/trace-demo-local.json
-python3 -m unittest discover -s tests -v
+.venv/bin/python -m pip install .
+.venv/bin/python -m factcircuit --version
+.venv/bin/python -m factcircuit quickstart --output runs/first-run
 ```
 
-The trace demo follows four material versions across three retrieval rounds,
-reopens affected earlier analyses, routes a correction through decomposition,
-and records why the loop terminates.
+### Windows PowerShell
+
+```powershell
+git clone --branch v0.3.2 --depth 1 https://github.com/superwesleyhys-ux/factcircuit.git
+cd factcircuit
+py -3 -m venv .venv
+.venv\Scripts\python.exe -m pip install .
+.venv\Scripts\python.exe -m factcircuit --version
+.venv\Scripts\python.exe -m factcircuit quickstart --output runs/first-run
+```
+
+Expected terminal output:
+
+```text
+factcircuit 0.3.2
+Offline annotated example: contradicted; 3 rounds; 0 model calls.
+Read runs/first-run/SUMMARY.md
+```
+
+Open `runs/first-run/SUMMARY.md`. The same directory contains `inputs.json`,
+`config.json` and `trace.json`. Four fictional evidence versions pass through
+three retrieval rounds, including source tracing and a publisher correction.
+The semantic annotations are hand-authored; this checks the working evidence
+loop, not model accuracy. Existing output directories are never overwritten.
+
+See the [first-run guide](docs/QUICKSTART.md) for configuration, expected fields,
+troubleshooting, and running your own claims with a local model. Local GGUF
+inference uses separately installed weights; the provided setup selects Qwen,
+not Astra. The original `trace-demo`, `score`, and `compare` commands remain
+available. Use the Python executable from your virtual environment below.
 
 ### Score and compare fixed predictions
 
@@ -293,9 +321,10 @@ not establish truth by themselves.
 
 ## Project status
 
-Version 0.3.1 is a **research preview**, not a production fact-checking service.
-The release gate contains 254 regression tests, and GitHub Actions exercises
-Python 3.11, 3.12, and 3.13. The core CLI, offline trace engine,
+Version 0.3.2 provides a reproducible first-run release of this **research preview**.
+The semantic model adapter remains experimental. GitHub Actions exercises
+the regression suite on Python 3.11, 3.12, and 3.13 and the installed first-run
+command on Linux, macOS, and Windows. The core CLI, offline trace engine,
 evaluation toolkit, staged model adapter, frozen historical corpus, and raw
 pilot artifacts are included.
 
@@ -324,11 +353,13 @@ Current boundaries are deliberate and visible:
 ## Documentation
 
 - [FactCircuit specification index](docs/FACTCIRCUIT_SPEC.md)
+- [Installation, configuration and complete first run](docs/QUICKSTART.md)
+- [v0.3.2 release notes](docs/releases/v0.3.2.md)
 - [Original design specification and metric definitions](docs/ACCURACY_TRACING_SPEC.md)
 - [Staged validation loop](docs/STAGED_VALIDATION_LOOP.md)
 - [Trace adapter API](docs/TRACE_ADAPTER.md)
 - [Historical 2023 benchmark contract](docs/HISTORICAL_2023_BENCHMARK.md)
-- [v0.3.1 validation record](reports/VALIDATION_V0.3.1.md)
+- [v0.3.2 validation record](reports/VALIDATION_V0.3.2.md)
 - [v0.3 repair and migration contract](docs/REPAIR_V0.3.md)
 - [Roadmap](docs/ROADMAP.md)
 - [Changelog](CHANGELOG.md)
