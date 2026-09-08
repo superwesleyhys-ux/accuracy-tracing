@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "case_count": 8,
+  "run_count": 16,
+  "event_family_count": 2,
+  "public_receipt_count": 48,
+  "source_metadata_count": 8,
+  "raw_sources_bundled": false,
+  "model_prose_or_prompts_bundled": false,
+  "exporter_sha256": "add8b430113281ad9dfdfd8e5fa710142378c5a39d53e55700034c58d96459e7",
+  "local_archive_sha256": {
+    "summary": "d50b48e47b70926cdde07935470ecd091322d466acc723972e304cc24120cc65",
+    "sanitized_receipts": "0c800e6acdd010f1fdac057949e71e9671a60b570525029015dc42327c164822",
+    "source_candidates": "75e5e1a493145b1fa6ee8229e1765777047e620d73514daf277bb3e981238752"
+  },
+  "public_file_sha256": {
+    "RESULTS.json": "3ea591bf6015b84d8d336a90c455a114fe07da886ec8b53b49bb6cc23fbc7b16",
+    "RECEIPTS.json": "233ee9fe5a5515504e1d2a4ea826246163a3eef51510c72e4be1560a06b2c9e2",
+    "SOURCES.json": "ff5ac28ed33fc26302a6869f654ddb18984ca7510877b941cf296070f0465e76",
+    "README.md": "4c8e21d84c8bc2b747ce6dad5d7502d19c1367e749ecea8584bc3433109e30d5"
+  }
+}

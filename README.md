@@ -99,7 +99,7 @@ The call cap includes selection, decomposition and verification. There is no
 enforced total-token ceiling.
 
 [Experiment code and reproducibility limits](experiments/README.md) describe
-the public receipts and locally retained evidence archive. The 170 automated
+the public receipts and locally retained evidence archive. The 176 automated
 tests use controlled fixtures; real model outcomes and actual loop execution
 are reported separately. Verification questions reopened by newer evidence
 cannot be silently closed by an older resolution, and provenance gap identities
@@ -116,6 +116,23 @@ in the original batch. All 49 original and follow-up model calls succeeded.
 Neither the flawed original tally nor the selected repair establishes general
 accuracy superiority. Full source captures remain local; public numeric
 receipts can be independently checked without redistributing publisher text.
+
+The separate [historical-cutoff comparison](reports/historical-evaluation-20260908/README.md)
+tests two pre-2024 research papers with public fabrication findings in 2025.
+Only historical paper text available by December 31, 2023 enters the model;
+later findings are held separately for scoring. Named cases and identity-masked
+variants are reported separately, with true attribution controls. This is a
+small retrospective test of supplied evidence, not a way to remove later
+knowledge from the model's training. Abstaining on authenticity does not count
+as detecting fabrication.
+
+Both paths left both named authenticity claims unresolved and correctly answered
+both attribution controls. The harness used 363,147 tokens versus 92,818 for
+Astra alone (3.91 times as many). The masked cases retained one timeout in
+each arm; its missing usage prevents an exact whole-batch token total. A separate
+[Inspect AI replay](reports/historical-inspect-audit-20260908/README.md)
+checks the saved outcomes without new model calls. These results show no advance
+fabrication-detection benefit on this two-event sample.
 
 ## Trace engine
 

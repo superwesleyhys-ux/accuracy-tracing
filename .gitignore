@@ -25,3 +25,9 @@ experiments/gstack-harness-eval-20260908/*
 !experiments/gstack-harness-eval-20260908/summarize_test.py
 !experiments/gstack-harness-eval-20260908/verify_data.py
 !experiments/gstack-harness-eval-20260908/verify_local_isolation.py
+!experiments/historical-cutoff-20260908/
+experiments/historical-cutoff-20260908/*
+!experiments/historical-cutoff-20260908/run_test.py
+!experiments/historical-cutoff-20260908/summarize_test.py
+!experiments/historical-cutoff-20260908/inspect_replay.py
+!experiments/historical-cutoff-20260908/PROTOCOL.md

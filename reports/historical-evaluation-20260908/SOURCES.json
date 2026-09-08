@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "osaka-dat-2023:original",
+      "event_family": "osaka-dat-2023",
+      "role": "eligible_original",
+      "title": "DAT (deacylating autotransporter toxin) from Bordetella parapertussis demyristoylates Gαi GTPases and contributes to cough",
+      "canonical_url": "https://doi.org/10.1073/pnas.2308260120",
+      "publication_year": 2023,
+      "available_at": "2023-12-06T11:59:59Z",
+      "availability_evidence": "Publisher body states publication 2023-09-25; download footers identify 2023-11-30; repository availability is 2023-12-05. Availability is a conservative end-of-date upper bound, not a known publication clocktime. The current repository cover was excluded.",
+      "raw_sha256": "31a96e7500f875b91c12c24107379d9aab3d43533c8b09d21f6ec4be424ed73f",
+      "capture_kind": "original_pdf",
+      "source_bytes_bundled": false
+    },
+    {
+      "id": "hargreaves-metals-2017:original",
+      "event_family": "hargreaves-metals-2017",
+      "role": "eligible_original",
+      "title": "Distribution of trace metals (Cu, Pb, Ni, Zn) between particulate, colloidal and truly dissolved fractions in wastewater treatment",
+      "canonical_url": "https://doi.org/10.1016/j.chemosphere.2017.02.034",
+      "publication_year": 2017,
+      "available_at": "2020-03-09T04:28:50Z",
+      "availability_evidence": "All extracted text from the retained 18-page accepted-manuscript PDF captured by the Internet Archive at 2020-03-09 04:28:50 UTC; Memento-Datetime and original response date corroborate the capture. The PDF identifies the May 2017 issue and ends in references. Referenced table and figure sheets are absent from the text packet. The archived PDF URL containing a historical session parameter is deliberately not published.",
+      "raw_sha256": "9a8c14d175d89a36f342e97824eddde9064a479a3c23e1531c6747254c1064ff",
+      "capture_kind": "original_pdf",
+      "source_bytes_bundled": false
+    },
+    {
+      "id": "osaka-dat-2023:later:1",
+      "event_family": "osaka-dat-2023",
+      "role": "held_out_later_finding",
+      "title": "Institutional announcement of research misconduct findings",
+      "canonical_url": "https://www.osaka-u.ac.jp/en/news/topics/2025/02/07001",
+      "publication_year": 2025,
+      "available_at": null,
+      "availability_evidence": "Public institutional announcement and paper retraction in February 2025; the retained investigation report may include later November 2025 revisions. Private investigation began in 2024.",
+      "raw_sha256": "9c96ebed383e0688d3f17e8500c6d6d5f542b647241157aff4115957f2422b51",
+      "capture_kind": "institutional_html",
+      "source_bytes_bundled": false
+    },
+    {
+      "id": "osaka-dat-2023:later:2",
+      "event_family": "osaka-dat-2023",
+      "role": "held_out_later_finding",
+      "title": "Institutional investigation report on research misconduct",
+      "canonical_url": "https://www.osaka-u.ac.jp/ja/news/topics/2025/02/files/4h3a9t/@@download/file",
+      "publication_year": 2025,
+      "available_at": null,
+      "availability_evidence": "Public institutional announcement and paper retraction in February 2025; the retained investigation report may include later November 2025 revisions. Private investigation began in 2024.",
+      "raw_sha256": "73ac0f90ae4dbe33ecbbdf2ec6d31a7f613dddd61264df4c45ca9879fb4d898a",
+      "capture_kind": "institutional_pdf",
+      "source_bytes_bundled": false
+    },
+    {
+      "id": "osaka-dat-2023:later:3",
+      "event_family": "osaka-dat-2023",
+      "role": "held_out_later_finding",
+      "title": "Retraction of the 2023 DAT study",
+      "canonical_url": "https://doi.org/10.1073/pnas.2501149122",
+      "publication_year": 2025,
+      "available_at": null,
+      "availability_evidence": "Public institutional announcement and paper retraction in February 2025; the retained investigation report may include later November 2025 revisions. Private investigation began in 2024.",
+      "raw_sha256": "1d3dbf3ef1a255b60c2d3f3268cae587a28ebc38b35947786922a9435e2fbb9f",
+      "capture_kind": "publisher_xml",
+      "source_bytes_bundled": false
+    },
+    {
+      "id": "hargreaves-metals-2017:later:1",
+      "event_family": "hargreaves-metals-2017",
+      "role": "held_out_later_finding",
+      "title": "Publisher notice for the retracted 2017 trace-metal study",
+      "canonical_url": "https://www.sciencedirect.com/science/article/abs/pii/S0045653517302126",
+      "publication_year": 2025,
+      "available_at": null,
+      "availability_evidence": "Publisher and university identify a 2025 fabrication finding. The separate notice has an August 2025 issue date; the exact earliest public disclosure and private admission dates are not established.",
+      "raw_sha256": "45932bc1fc796b5efc20073cbee60d10276828493963e8b78a97dee994c0e3f1",
+      "capture_kind": "publisher_text_capture",
+      "source_bytes_bundled": false
+    },
+    {
+      "id": "hargreaves-metals-2017:later:2",
+      "event_family": "hargreaves-metals-2017",
+      "role": "held_out_later_finding",
+      "title": "Institutional repository record for the withdrawn trace-metal study",
+      "canonical_url": "https://dspace.lib.cranfield.ac.uk/handle/1826/11505",
+      "publication_year": 2025,
+      "available_at": null,
+      "availability_evidence": "Publisher and university identify a 2025 fabrication finding. The separate notice has an August 2025 issue date; the exact earliest public disclosure and private admission dates are not established.",
+      "raw_sha256": "677d6c2d35fb0ca84b90ff28684e4ebcdadd76a07fb9598913610d67a86bc7b0",
+      "capture_kind": "repository_json",
+      "source_bytes_bundled": false
+    },
+    {
+      "id": "hargreaves-metals-2017:later:3",
+      "event_family": "hargreaves-metals-2017",
+      "role": "held_out_later_finding",
+      "title": "Retraction notice for the 2017 trace-metal study",
+      "canonical_url": "https://doi.org/10.1016/j.chemosphere.2025.144440",
+      "publication_year": 2025,
+      "available_at": null,
+      "availability_evidence": "Publisher and university identify a 2025 fabrication finding. The separate notice has an August 2025 issue date; the exact earliest public disclosure and private admission dates are not established.",
+      "raw_sha256": "dedc31d7afe73f842051f2e423d5ea1012f3c300cf6a8680be4c26fba0267e65",
+      "capture_kind": "publisher_xml",
+      "source_bytes_bundled": false
+    }
+  ],
+  "hash_scope": "Hashes identify retained original local captures; a web-tool text capture hash is not a raw HTTP response hash. No publisher text, figure, quotation or response header is redistributed."
+}

@@ -1,0 +1,583 @@
+{
+  "schema_version": 1,
+  "kind": "offline_replay_of_saved_real_batch",
+  "new_model_test": false,
+  "no_model_calls": true,
+  "generation_attempts": 0,
+  "inspect_model_events": 0,
+  "inspect_model": "none",
+  "inspect_version": "0.3.264.dev23+gec3bf0995",
+  "inspect_commit": "ec3bf0995fb6435f452f158f85ca423803aa0f98",
+  "script_sha256": "1218f5cf7b669bc370e7e2798cb7741da68d62e393af6b57d3f24495841cde97",
+  "source_artifact_sha256": {
+    "manifest": "275f68c90c3fc8afde37ebb4ef1970e51de0d85f31dbe03083a192c7c3aec530",
+    "corpus": "b5ad5c900145a7a5b208fe8752c1051119d2be18bfa45ececd4d025f6dcf2826",
+    "preflight": "fc9255761f4488186801bab2cdba6310ea53bcaf1a542586878ac3d4a1f2da27",
+    "registration": "4f58eeacedde73fc41e2ff0ff972afd1dc8f685199038e82d7c06f0fcbb85575",
+    "predictions": "a395e16e674913d62d0b239228da094ef39d77a3e7c517953ca4c415e85b3e1d",
+    "gold": "b2b10af8b6c3018088ead31a5b0ab91f91f6c6e000903f0cf67c5679b30d328a",
+    "recorded_sidecars_index": "87ca67a35ce943be565f99b5207f6d9aaed2298947f3fb75d13a5af1d7d0da34"
+  },
+  "event_family_count": 2,
+  "case_count": 8,
+  "saved_run_count": 16,
+  "replayed_run_count": 16,
+  "saved_logical_calls": 48,
+  "saved_failed_calls": 2,
+  "failure_denominator": "all_saved_runs_explicit_zero_on_failure",
+  "scores_by_variant": {
+    "original": {
+      "direct": {
+        "cases": 4,
+        "completed": 4,
+        "evidence_valid": 4,
+        "cutoff_matches": 4,
+        "authenticity_cases": 2,
+        "accepted_later_false_claims": 0,
+        "called_later_false_claims_false": 0,
+        "authenticity_abstentions": 2,
+        "unwarranted_settled_cutoff_verdicts": 0,
+        "controls": 2,
+        "control_matches": 2
+      },
+      "double_loop": {
+        "cases": 4,
+        "completed": 4,
+        "evidence_valid": 4,
+        "cutoff_matches": 4,
+        "authenticity_cases": 2,
+        "accepted_later_false_claims": 0,
+        "called_later_false_claims_false": 0,
+        "authenticity_abstentions": 2,
+        "unwarranted_settled_cutoff_verdicts": 0,
+        "controls": 2,
+        "control_matches": 2
+      }
+    },
+    "blinded": {
+      "direct": {
+        "cases": 4,
+        "completed": 3,
+        "evidence_valid": 3,
+        "cutoff_matches": 3,
+        "authenticity_cases": 2,
+        "accepted_later_false_claims": 0,
+        "called_later_false_claims_false": 0,
+        "authenticity_abstentions": 1,
+        "unwarranted_settled_cutoff_verdicts": 0,
+        "controls": 2,
+        "control_matches": 2
+      },
+      "double_loop": {
+        "cases": 4,
+        "completed": 3,
+        "evidence_valid": 3,
+        "cutoff_matches": 3,
+        "authenticity_cases": 2,
+        "accepted_later_false_claims": 0,
+        "called_later_false_claims_false": 0,
+        "authenticity_abstentions": 1,
+        "unwarranted_settled_cutoff_verdicts": 0,
+        "controls": 2,
+        "control_matches": 2
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "h01",
+      "condition": "direct",
+      "variant": "original",
+      "role": "authenticity",
+      "event_family": "osaka-dat-2023",
+      "observed": "unresolved",
+      "raw_verdict": "unresolved",
+      "cutoff_expected": "unresolved",
+      "future_expected": "contradicted",
+      "pipeline_success": true,
+      "citation_integrity": true,
+      "valid": true,
+      "cutoff_match": true,
+      "future_verdict_match": false,
+      "abstained": true,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 1,
+      "failed_calls": 0
+    },
+    {
+      "id": "h01",
+      "condition": "double_loop",
+      "variant": "original",
+      "role": "authenticity",
+      "event_family": "osaka-dat-2023",
+      "observed": "unresolved",
+      "raw_verdict": "unresolved",
+      "cutoff_expected": "unresolved",
+      "future_expected": "contradicted",
+      "pipeline_success": true,
+      "citation_integrity": true,
+      "valid": true,
+      "cutoff_match": true,
+      "future_verdict_match": false,
+      "abstained": true,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 6,
+      "failed_calls": 0
+    },
+    {
+      "id": "h02",
+      "condition": "direct",
+      "variant": "original",
+      "role": "attribution_control",
+      "event_family": "osaka-dat-2023",
+      "observed": "supported",
+      "raw_verdict": "supported",
+      "cutoff_expected": "supported",
+      "future_expected": "supported",
+      "pipeline_success": true,
+      "citation_integrity": true,
+      "valid": true,
+      "cutoff_match": true,
+      "future_verdict_match": true,
+      "abstained": false,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 1,
+      "failed_calls": 0
+    },
+    {
+      "id": "h02",
+      "condition": "double_loop",
+      "variant": "original",
+      "role": "attribution_control",
+      "event_family": "osaka-dat-2023",
+      "observed": "supported",
+      "raw_verdict": "supported",
+      "cutoff_expected": "supported",
+      "future_expected": "supported",
+      "pipeline_success": true,
+      "citation_integrity": true,
+      "valid": true,
+      "cutoff_match": true,
+      "future_verdict_match": true,
+      "abstained": false,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 2,
+      "failed_calls": 0
+    },
+    {
+      "id": "h03",
+      "condition": "direct",
+      "variant": "blinded",
+      "role": "authenticity",
+      "event_family": "osaka-dat-2023",
+      "observed": "unresolved",
+      "raw_verdict": "unresolved",
+      "cutoff_expected": "unresolved",
+      "future_expected": "contradicted",
+      "pipeline_success": true,
+      "citation_integrity": true,
+      "valid": true,
+      "cutoff_match": true,
+      "future_verdict_match": false,
+      "abstained": true,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 1,
+      "failed_calls": 0
+    },
+    {
+      "id": "h03",
+      "condition": "double_loop",
+      "variant": "blinded",
+      "role": "authenticity",
+      "event_family": "osaka-dat-2023",
+      "observed": "unresolved",
+      "raw_verdict": "unresolved",
+      "cutoff_expected": "unresolved",
+      "future_expected": "contradicted",
+      "pipeline_success": true,
+      "citation_integrity": true,
+      "valid": true,
+      "cutoff_match": true,
+      "future_verdict_match": false,
+      "abstained": true,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 6,
+      "failed_calls": 0
+    },
+    {
+      "id": "h04",
+      "condition": "direct",
+      "variant": "blinded",
+      "role": "attribution_control",
+      "event_family": "osaka-dat-2023",
+      "observed": "supported",
+      "raw_verdict": "supported",
+      "cutoff_expected": "supported",
+      "future_expected": "supported",
+      "pipeline_success": true,
+      "citation_integrity": true,
+      "valid": true,
+      "cutoff_match": true,
+      "future_verdict_match": true,
+      "abstained": false,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 1,
+      "failed_calls": 0
+    },
+    {
+      "id": "h04",
+      "condition": "double_loop",
+      "variant": "blinded",
+      "role": "attribution_control",
+      "event_family": "osaka-dat-2023",
+      "observed": "supported",
+      "raw_verdict": "supported",
+      "cutoff_expected": "supported",
+      "future_expected": "supported",
+      "pipeline_success": true,
+      "citation_integrity": true,
+      "valid": true,
+      "cutoff_match": true,
+      "future_verdict_match": true,
+      "abstained": false,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 2,
+      "failed_calls": 0
+    },
+    {
+      "id": "h05",
+      "condition": "direct",
+      "variant": "original",
+      "role": "authenticity",
+      "event_family": "hargreaves-metals-2017",
+      "observed": "unresolved",
+      "raw_verdict": "unresolved",
+      "cutoff_expected": "unresolved",
+      "future_expected": "contradicted",
+      "pipeline_success": true,
+      "citation_integrity": true,
+      "valid": true,
+      "cutoff_match": true,
+      "future_verdict_match": false,
+      "abstained": true,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 1,
+      "failed_calls": 0
+    },
+    {
+      "id": "h05",
+      "condition": "double_loop",
+      "variant": "original",
+      "role": "authenticity",
+      "event_family": "hargreaves-metals-2017",
+      "observed": "unresolved",
+      "raw_verdict": "unresolved",
+      "cutoff_expected": "unresolved",
+      "future_expected": "contradicted",
+      "pipeline_success": true,
+      "citation_integrity": true,
+      "valid": true,
+      "cutoff_match": true,
+      "future_verdict_match": false,
+      "abstained": true,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 6,
+      "failed_calls": 0
+    },
+    {
+      "id": "h06",
+      "condition": "direct",
+      "variant": "original",
+      "role": "attribution_control",
+      "event_family": "hargreaves-metals-2017",
+      "observed": "supported",
+      "raw_verdict": "supported",
+      "cutoff_expected": "supported",
+      "future_expected": "supported",
+      "pipeline_success": true,
+      "citation_integrity": true,
+      "valid": true,
+      "cutoff_match": true,
+      "future_verdict_match": true,
+      "abstained": false,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 1,
+      "failed_calls": 0
+    },
+    {
+      "id": "h06",
+      "condition": "double_loop",
+      "variant": "original",
+      "role": "attribution_control",
+      "event_family": "hargreaves-metals-2017",
+      "observed": "supported",
+      "raw_verdict": "supported",
+      "cutoff_expected": "supported",
+      "future_expected": "supported",
+      "pipeline_success": true,
+      "citation_integrity": true,
+      "valid": true,
+      "cutoff_match": true,
+      "future_verdict_match": true,
+      "abstained": false,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 6,
+      "failed_calls": 0
+    },
+    {
+      "id": "h07",
+      "condition": "direct",
+      "variant": "blinded",
+      "role": "authenticity",
+      "event_family": "hargreaves-metals-2017",
+      "observed": "execution_failed",
+      "raw_verdict": null,
+      "cutoff_expected": "unresolved",
+      "future_expected": "contradicted",
+      "pipeline_success": false,
+      "citation_integrity": false,
+      "valid": false,
+      "cutoff_match": false,
+      "future_verdict_match": false,
+      "abstained": false,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 1,
+      "failed_calls": 1
+    },
+    {
+      "id": "h07",
+      "condition": "double_loop",
+      "variant": "blinded",
+      "role": "authenticity",
+      "event_family": "hargreaves-metals-2017",
+      "observed": "unresolved",
+      "raw_verdict": "unresolved",
+      "cutoff_expected": "unresolved",
+      "future_expected": "contradicted",
+      "pipeline_success": false,
+      "citation_integrity": true,
+      "valid": false,
+      "cutoff_match": false,
+      "future_verdict_match": false,
+      "abstained": false,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 6,
+      "failed_calls": 1
+    },
+    {
+      "id": "h08",
+      "condition": "direct",
+      "variant": "blinded",
+      "role": "attribution_control",
+      "event_family": "hargreaves-metals-2017",
+      "observed": "supported",
+      "raw_verdict": "supported",
+      "cutoff_expected": "supported",
+      "future_expected": "supported",
+      "pipeline_success": true,
+      "citation_integrity": true,
+      "valid": true,
+      "cutoff_match": true,
+      "future_verdict_match": true,
+      "abstained": false,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 1,
+      "failed_calls": 0
+    },
+    {
+      "id": "h08",
+      "condition": "double_loop",
+      "variant": "blinded",
+      "role": "attribution_control",
+      "event_family": "hargreaves-metals-2017",
+      "observed": "supported",
+      "raw_verdict": "supported",
+      "cutoff_expected": "supported",
+      "future_expected": "supported",
+      "pipeline_success": true,
+      "citation_integrity": true,
+      "valid": true,
+      "cutoff_match": true,
+      "future_verdict_match": true,
+      "abstained": false,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 6,
+      "failed_calls": 0
+    }
+  ],
+  "inspect_task_metrics": {
+    "historical_replay_original_direct": {
+      "samples": 4,
+      "metrics": {
+        "pipeline_success": {
+          "mean": 1.0
+        },
+        "valid": {
+          "mean": 1.0
+        },
+        "cutoff_match": {
+          "mean": 1.0
+        },
+        "future_verdict_match": {
+          "mean": 0.5
+        },
+        "abstained": {
+          "mean": 0.5
+        },
+        "accepted_later_false_claim": {
+          "mean": 0.0
+        },
+        "called_later_false_claim_false": {
+          "mean": 0.0
+        },
+        "unwarranted_settled_cutoff_verdict": {
+          "mean": 0.0
+        }
+      }
+    },
+    "historical_replay_original_double_loop": {
+      "samples": 4,
+      "metrics": {
+        "pipeline_success": {
+          "mean": 1.0
+        },
+        "valid": {
+          "mean": 1.0
+        },
+        "cutoff_match": {
+          "mean": 1.0
+        },
+        "future_verdict_match": {
+          "mean": 0.5
+        },
+        "abstained": {
+          "mean": 0.5
+        },
+        "accepted_later_false_claim": {
+          "mean": 0.0
+        },
+        "called_later_false_claim_false": {
+          "mean": 0.0
+        },
+        "unwarranted_settled_cutoff_verdict": {
+          "mean": 0.0
+        }
+      }
+    },
+    "historical_replay_blinded_direct": {
+      "samples": 4,
+      "metrics": {
+        "pipeline_success": {
+          "mean": 0.75
+        },
+        "valid": {
+          "mean": 0.75
+        },
+        "cutoff_match": {
+          "mean": 0.75
+        },
+        "future_verdict_match": {
+          "mean": 0.5
+        },
+        "abstained": {
+          "mean": 0.25
+        },
+        "accepted_later_false_claim": {
+          "mean": 0.0
+        },
+        "called_later_false_claim_false": {
+          "mean": 0.0
+        },
+        "unwarranted_settled_cutoff_verdict": {
+          "mean": 0.0
+        }
+      }
+    },
+    "historical_replay_blinded_double_loop": {
+      "samples": 4,
+      "metrics": {
+        "pipeline_success": {
+          "mean": 0.75
+        },
+        "valid": {
+          "mean": 0.75
+        },
+        "cutoff_match": {
+          "mean": 0.75
+        },
+        "future_verdict_match": {
+          "mean": 0.5
+        },
+        "abstained": {
+          "mean": 0.25
+        },
+        "accepted_later_false_claim": {
+          "mean": 0.0
+        },
+        "called_later_false_claim_false": {
+          "mean": 0.0
+        },
+        "unwarranted_settled_cutoff_verdict": {
+          "mean": 0.0
+        }
+      }
+    }
+  },
+  "inspect_log_sha256": {
+    "historical_replay_original_direct": "abb235855e71d3c66f0c8509ec7067afaedcebf7a1276ec152027ad2ac5deff6",
+    "historical_replay_original_double_loop": "9c33d8266b8141b43e625a7dbd4807a450df223ca84f5ab308aca366689c01df",
+    "historical_replay_blinded_direct": "c7c76c14691b12111eea799b7d2552b8ae34d0991daa3a38f7d21af361a60b98",
+    "historical_replay_blinded_double_loop": "962e4cd9c1357e2dc4610499fd2a0cb26ebc83e3a05d537dc2dd26eae9ecb496"
+  },
+  "original_scorer_agreement": {
+    "row_outcomes_match": true,
+    "aggregate_outcomes_match": true,
+    "rows_compared": 16,
+    "fields_per_row": 11,
+    "differences": [],
+    "reference_summary_sha256": "d50b48e47b70926cdde07935470ecd091322d466acc723972e304cc24120cc65"
+  },
+  "scope": {
+    "independent_score_implementation": true,
+    "independent_inference": false,
+    "new_gold_adjudication": false,
+    "independent_event_families_added": 0,
+    "pretrained_future_knowledge_excluded": false,
+    "semantic_entailment_rejudged": false,
+    "image_forensics_tested": false
+  },
+  "inspect_metric_aggregation_verified": true,
+  "private_audit_result_sha256": "e0c35e3a89d098432d40c6e32ff19fb135db80ba491576113263b700afa2f14b"
+}
