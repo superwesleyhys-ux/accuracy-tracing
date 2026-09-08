@@ -9,6 +9,7 @@ from .core import run_verification
 from .providers import ReplayProvider
 from .evaluation import evaluate
 from .comparison import compare
+from .local import run_local
 
 STATUSES = {"supported", "contradicted", "conflicting", "unresolved"}
 
@@ -63,11 +64,18 @@ def benchmark(payload):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
-    for command in ("demo", "trace-demo", "verify", "benchmark"):
+    for command in ("demo", "trace-demo", "trace", "trace-model", "verify", "benchmark"):
         child = sub.add_parser(command)
         if command not in ("demo", "trace-demo"):
             child.add_argument("input", type=Path)
         child.add_argument("--output", type=Path)
+        if command == "trace-model":
+            child.add_argument("--tunnel", choices=("local", "api"), default="local",
+                               help="model execution path (default: local Codex CLI)")
+            child.add_argument("--model", help="model ID (default: configured Codex model)")
+            child.add_argument("--reasoning-effort", help="reasoning effort (default: Codex setting or medium)")
+            child.add_argument("--timeout", type=float, default=180,
+                               help="timeout in seconds for each model call (default: 180)")
     score_parser = sub.add_parser("score")
     score_parser.add_argument("gold", type=Path)
     score_parser.add_argument("predictions", type=Path)
@@ -103,7 +111,16 @@ def main(argv=None):
             raw = args.input.read_text(encoding="utf-8")
         if args.command not in ("score", "trace-demo", "compare"):
             payload = json.loads(raw)
-            result = benchmark(payload) if args.command == "benchmark" else run_fixture(payload)
+            if args.command == "trace":
+                result = run_local(payload)
+            elif args.command == "trace-model":
+                from .model_runner import run_model_trace
+                result = run_model_trace(payload, tunnel=args.tunnel, model=args.model,
+                                         reasoning_effort=args.reasoning_effort, timeout=args.timeout)
+            elif args.command == "benchmark":
+                result = benchmark(payload)
+            else:
+                result = run_fixture(payload)
         rendered = json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False) + "\n"
         if args.output:
             args.output.parent.mkdir(parents=True, exist_ok=True)
@@ -111,6 +128,8 @@ def main(argv=None):
             print(f"Wrote {args.output}")
         else:
             print(rendered, end="")
+        if args.command == "trace-model" and result["errors"]:
+            return 1
         return 1 if args.command == "benchmark" and not result["all_policy_expectations_matched"] else 0
     except (OSError, ValueError, TypeError, KeyError) as exc:
         print(f"newsverify: {exc}", file=sys.stderr)

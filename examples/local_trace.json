@@ -1,0 +1,22 @@
+{
+  "target": {
+    "id": "local-example",
+    "text": "Northstar has already cut 30% of staff.",
+    "as_of": "2026-09-04T20:00:00Z",
+    "source_version_id": "headline:v1"
+  },
+  "rounds": [
+    [
+      {
+        "version_id": "headline:v1",
+        "url": "https://news.example/headline",
+        "content": "Northstar has already cut 30% of staff.",
+        "retrieved_at": "2026-09-05T01:00:00Z",
+        "available_at": "2026-09-04T12:00:00Z",
+        "availability_basis": "Synthetic local snapshot for harness demonstration.",
+        "issuer": "synthetic-publisher"
+      }
+    ]
+  ],
+  "config": {"max_rounds": 3, "max_documents": 10, "max_decomposition_calls": 10}
+}

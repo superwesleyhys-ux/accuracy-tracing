@@ -1,6 +1,7 @@
 __pycache__/
 *.py[cod]
 .venv/
+.venv*/
 build/
 dist/
 *.egg-info/
@@ -8,3 +9,15 @@ dist/
 .env.*
 !.env.example
 private-data/
+
+# Local evidence archives contain full third-party texts, model packets and
+# machine/session diagnostics. Publish metrics under reports/ instead.
+experiments/*
+!experiments/README.md
+!experiments/double-loop-pilot/
+experiments/double-loop-pilot/*
+!experiments/double-loop-pilot/*.py
+!experiments/double-loop-pilot/requirements.lock.txt
+!experiments/gstack-harness-eval-20260908/
+experiments/gstack-harness-eval-20260908/*
+!experiments/gstack-harness-eval-20260908/*.py

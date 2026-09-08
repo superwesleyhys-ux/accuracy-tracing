@@ -321,9 +321,12 @@ def run_provenance(target: Target | dict, provider: TraceProvider,
     errors = []
     initial = Gap("origin:" + target.id, "Find the producing record and evidenced lineage for: " + target.text)
     gaps = {initial.id: initial}
+    provenance_gap_ids = {initial.id}
     resolved = {}
     verification_gaps = {}
     verification_resolved = {}
+    verification_gap_revisions = {}
+    analysis_resolution_revisions = {}
     runtime_gaps = {}
     fragments = {}
     relations = {}
@@ -354,7 +357,7 @@ def run_provenance(target: Target | dict, provider: TraceProvider,
         origins.clear()
         proposed_gaps = {initial.id: initial, **runtime_gaps}
         proposed_resolved = {}
-        for analysis in current_analyses.values():
+        for version_id, analysis in current_analyses.items():
             for item in analysis.fragments:
                 fragments[item.id] = item
             for item in analysis.relations:
@@ -364,13 +367,20 @@ def run_provenance(target: Target | dict, provider: TraceProvider,
             for item in analysis.gaps:
                 proposed_gaps[item.id] = item
             for item in analysis.resolutions:
-                proposed_resolved[item.gap_id] = item
+                # A verifier's newer request supersedes earlier evidence. A
+                # rebuild or unchanged revisit must not silently close it again.
+                if analysis_resolution_revisions[version_id][item.gap_id] >= verification_gap_revisions.get(item.gap_id, 0):
+                    proposed_resolved[item.gap_id] = item
+        # Gap identity keeps its stage even if a later analysis removes or
+        # resolves the request. Verifiers cannot relabel provenance as fact work.
+        provenance_gap_ids.update(item.id for item in proposed_gaps.values() if item.stage == "provenance")
         # Preserve verification tasks until explicitly resolved by either stage.
         proposed_gaps.update(verification_gaps)
         proposed_resolved.update(verification_resolved)
         if origins and not has_origin_path():
             proposed_gaps["lineage:" + target.id] = Gap("lineage:" + target.id,
                 "Provide the target source version and an evidenced citation/derivation path to an original material")
+            provenance_gap_ids.add("lineage:" + target.id)
         gaps.clear()
         gaps.update({key: value for key, value in proposed_gaps.items() if key not in proposed_resolved})
         resolved.clear()
@@ -434,6 +444,18 @@ def run_provenance(target: Target | dict, provider: TraceProvider,
             return ()
         eligible[material.version_id] = material
         previous = current_analyses.pop(material.version_id, None)
+        previous_resolutions = {item.gap_id: item for item in previous.resolutions} if previous else {}
+        previous_revisions = analysis_resolution_revisions.get(material.version_id, {})
+        accepted_revision = len(history) + len(verifications)
+        # Preserve the age of unchanged evidence, including cosmetic rationale
+        # edits. New or changed evidence can explicitly answer a reopened gap.
+        analysis_resolution_revisions[material.version_id] = {
+            item.gap_id: previous_revisions[item.gap_id]
+            if item.gap_id in previous_resolutions
+            and set(item.basis) == set(previous_resolutions[item.gap_id].basis)
+            else accepted_revision
+            for item in analysis.resolutions
+        }
         current_analyses[material.version_id] = analysis
         event("alignment_checked", version_id=material.version_id, analysis_changed=previous != analysis)
         rebuild()
@@ -540,9 +562,11 @@ def run_provenance(target: Target | dict, provider: TraceProvider,
                     _gap(item)
                     if item.stage != "verification":
                         raise ValueError("verifier search gaps must use stage=verification")
+                    if item.id in provenance_gap_ids:
+                        raise ValueError("verifier may not replace provenance gaps")
                 for item in check.resolutions:
                     _resolution(item, eligible)
-                    if item.gap_id in gaps and gaps[item.gap_id].stage != "verification":
+                    if item.gap_id in provenance_gap_ids:
                         raise ValueError("verifier may not resolve provenance gaps")
             except Exception as exc:
                 fail("verifier", exc)
@@ -550,6 +574,7 @@ def run_provenance(target: Target | dict, provider: TraceProvider,
             verifications.append({"round": round_number, **asdict(check)})
             for item in check.gaps:
                 verification_gaps[item.id] = item
+                verification_gap_revisions[item.id] = len(history) + len(verifications)
                 verification_resolved.pop(item.id, None)
             for item in check.resolutions:
                 verification_gaps.pop(item.gap_id, None)
