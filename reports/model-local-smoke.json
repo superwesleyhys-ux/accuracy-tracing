@@ -1,0 +1,365 @@
+{
+  "schema_version": "0.2",
+  "scope": "plugin-supplied semantic analyses; no built-in truth oracle",
+  "target": {
+    "id": "model-example",
+    "text": "The Vellum Workshop box held exactly 12 blue cubes at noon on 12 June 2026.",
+    "as_of": "2026-06-12T18:00:00Z",
+    "source_version_id": "vellum-ledger:v1"
+  },
+  "config": {
+    "max_rounds": 1,
+    "max_documents": 1,
+    "max_decomposition_calls": 1
+  },
+  "provenance_status": "partial",
+  "fact_status": "unresolved",
+  "stop_reason": "document_budget",
+  "usage": {
+    "rounds": 1,
+    "documents": 1,
+    "unique_versions": 1,
+    "decomposition_calls": 1,
+    "verification_calls": 1
+  },
+  "materials": [
+    {
+      "version_id": "vellum-ledger:v1",
+      "url": "https://vellum.example/count-ledger",
+      "content": "Original Vellum Workshop count ledger: at noon on 12 June 2026, the keeper directly inspected the box and counted exactly 12 blue cubes. This is a fictional record for a harness integration example.",
+      "retrieved_at": "2026-06-13T09:00:00Z",
+      "published_at": "2026-06-12T12:05:00Z",
+      "available_at": "2026-06-12T12:05:00Z",
+      "availability_basis": "Synthetic fixture stipulates this exact version was available at the stated time.",
+      "issuer": "synthetic-keeper"
+    }
+  ],
+  "eligible_version_ids": [
+    "vellum-ledger:v1"
+  ],
+  "observations": [
+    {
+      "version_id": "vellum-ledger:v1",
+      "retrieved_at": "2026-06-13T09:00:00Z",
+      "duplicate": false,
+      "eligible": true,
+      "reasons": []
+    }
+  ],
+  "analyses": {
+    "vellum-ledger:v1": {
+      "fragments": [
+        {
+          "id": "vellum-ledger:v1:model:0",
+          "text": "The ledger states that the keeper directly inspected the Vellum Workshop box at noon on 12 June 2026.",
+          "span": {
+            "version_id": "vellum-ledger:v1",
+            "start": 0,
+            "end": 101,
+            "quote": "Original Vellum Workshop count ledger: at noon on 12 June 2026, the keeper directly inspected the box"
+          },
+          "parent_id": "model-example",
+          "qualifiers": [
+            "Attributed to the supplied ledger; direct inspection is asserted by that record."
+          ]
+        },
+        {
+          "id": "vellum-ledger:v1:model:1",
+          "text": "The ledger states that the keeper counted exactly 12 blue cubes in the box during that inspection.",
+          "span": {
+            "version_id": "vellum-ledger:v1",
+            "start": 102,
+            "end": 136,
+            "quote": "and counted exactly 12 blue cubes."
+          },
+          "parent_id": "model-example",
+          "qualifiers": [
+            "Exactly 12; blue cubes; the box inspected at noon on 12 June 2026.",
+            "The reported count is not independent confirmation of the contents."
+          ]
+        },
+        {
+          "id": "vellum-ledger:v1:model:2",
+          "text": "The material identifies itself as a fictional record for a harness integration example.",
+          "span": {
+            "version_id": "vellum-ledger:v1",
+            "start": 137,
+            "end": 198,
+            "quote": "This is a fictional record for a harness integration example."
+          },
+          "parent_id": "model-example",
+          "qualifiers": [
+            "Applies to the entire supplied record."
+          ]
+        }
+      ],
+      "relations": [],
+      "gaps": [],
+      "resolutions": [],
+      "origins": [],
+      "notes": "The fixture stipulates that this exact version was available at 2026-06-12T12:05:00Z, before the target cutoff, despite retrieval the following day. No additional producing record or independent lineage evidence is supplied.",
+      "revisit_versions": []
+    }
+  },
+  "analysis_history": [
+    {
+      "revision": 1,
+      "round": 1,
+      "version_id": "vellum-ledger:v1",
+      "duplicate": false,
+      "revisit": false,
+      "accepted": true,
+      "analysis": {
+        "fragments": [
+          {
+            "id": "vellum-ledger:v1:model:0",
+            "text": "The ledger states that the keeper directly inspected the Vellum Workshop box at noon on 12 June 2026.",
+            "span": {
+              "version_id": "vellum-ledger:v1",
+              "start": 0,
+              "end": 101,
+              "quote": "Original Vellum Workshop count ledger: at noon on 12 June 2026, the keeper directly inspected the box"
+            },
+            "parent_id": "model-example",
+            "qualifiers": [
+              "Attributed to the supplied ledger; direct inspection is asserted by that record."
+            ]
+          },
+          {
+            "id": "vellum-ledger:v1:model:1",
+            "text": "The ledger states that the keeper counted exactly 12 blue cubes in the box during that inspection.",
+            "span": {
+              "version_id": "vellum-ledger:v1",
+              "start": 102,
+              "end": 136,
+              "quote": "and counted exactly 12 blue cubes."
+            },
+            "parent_id": "model-example",
+            "qualifiers": [
+              "Exactly 12; blue cubes; the box inspected at noon on 12 June 2026.",
+              "The reported count is not independent confirmation of the contents."
+            ]
+          },
+          {
+            "id": "vellum-ledger:v1:model:2",
+            "text": "The material identifies itself as a fictional record for a harness integration example.",
+            "span": {
+              "version_id": "vellum-ledger:v1",
+              "start": 137,
+              "end": 198,
+              "quote": "This is a fictional record for a harness integration example."
+            },
+            "parent_id": "model-example",
+            "qualifiers": [
+              "Applies to the entire supplied record."
+            ]
+          }
+        ],
+        "relations": [],
+        "gaps": [],
+        "resolutions": [],
+        "origins": [],
+        "notes": "The fixture stipulates that this exact version was available at 2026-06-12T12:05:00Z, before the target cutoff, despite retrieval the following day. No additional producing record or independent lineage evidence is supplied.",
+        "revisit_versions": []
+      },
+      "exclusion_reasons": []
+    }
+  ],
+  "fragments": [
+    {
+      "id": "vellum-ledger:v1:model:0",
+      "text": "The ledger states that the keeper directly inspected the Vellum Workshop box at noon on 12 June 2026.",
+      "span": {
+        "version_id": "vellum-ledger:v1",
+        "start": 0,
+        "end": 101,
+        "quote": "Original Vellum Workshop count ledger: at noon on 12 June 2026, the keeper directly inspected the box"
+      },
+      "parent_id": "model-example",
+      "qualifiers": [
+        "Attributed to the supplied ledger; direct inspection is asserted by that record."
+      ]
+    },
+    {
+      "id": "vellum-ledger:v1:model:1",
+      "text": "The ledger states that the keeper counted exactly 12 blue cubes in the box during that inspection.",
+      "span": {
+        "version_id": "vellum-ledger:v1",
+        "start": 102,
+        "end": 136,
+        "quote": "and counted exactly 12 blue cubes."
+      },
+      "parent_id": "model-example",
+      "qualifiers": [
+        "Exactly 12; blue cubes; the box inspected at noon on 12 June 2026.",
+        "The reported count is not independent confirmation of the contents."
+      ]
+    },
+    {
+      "id": "vellum-ledger:v1:model:2",
+      "text": "The material identifies itself as a fictional record for a harness integration example.",
+      "span": {
+        "version_id": "vellum-ledger:v1",
+        "start": 137,
+        "end": 198,
+        "quote": "This is a fictional record for a harness integration example."
+      },
+      "parent_id": "model-example",
+      "qualifiers": [
+        "Applies to the entire supplied record."
+      ]
+    }
+  ],
+  "relations": [],
+  "origins": [],
+  "gaps": [
+    {
+      "id": "origin:model-example",
+      "question": "Find the producing record and evidenced lineage for: The Vellum Workshop box held exactly 12 blue cubes at noon on 12 June 2026.",
+      "stage": "provenance"
+    }
+  ],
+  "resolutions": [],
+  "verification_history": [
+    {
+      "round": 1,
+      "verdict": "unresolved",
+      "basis": [
+        {
+          "version_id": "vellum-ledger:v1",
+          "start": 0,
+          "end": 136,
+          "quote": "Original Vellum Workshop count ledger: at noon on 12 June 2026, the keeper directly inspected the box and counted exactly 12 blue cubes."
+        },
+        {
+          "version_id": "vellum-ledger:v1",
+          "start": 137,
+          "end": 198,
+          "quote": "This is a fictional record for a harness integration example."
+        }
+      ],
+      "rationale": "The exact version was stipulated available before the cutoff, but it explicitly identifies itself as fictional. Its asserted inspection and count therefore cannot establish the historical box contents. No eligible evidence settles the target.",
+      "gaps": [],
+      "resolutions": []
+    }
+  ],
+  "operations": [
+    {
+      "sequence": 1,
+      "round": 1,
+      "action": "search",
+      "tasks": [
+        {
+          "id": "origin:model-example",
+          "question": "Find the producing record and evidenced lineage for: The Vellum Workshop box held exactly 12 blue cubes at noon on 12 June 2026.",
+          "stage": "provenance"
+        }
+      ],
+      "limit": 1
+    },
+    {
+      "sequence": 2,
+      "round": 1,
+      "action": "snapshot_saved",
+      "version_id": "vellum-ledger:v1",
+      "sha256": "df47acba5e76450d9cde6e91ab6edd03c8bbc14f4c0bb18a0e6d910387bdead0",
+      "eligible": true
+    },
+    {
+      "sequence": 3,
+      "round": 1,
+      "action": "decompose_started",
+      "version_id": "vellum-ledger:v1",
+      "duplicate": false,
+      "revisit": false
+    },
+    {
+      "sequence": 4,
+      "round": 1,
+      "action": "decompose_completed",
+      "version_id": "vellum-ledger:v1",
+      "revision": 1
+    },
+    {
+      "sequence": 5,
+      "round": 1,
+      "action": "alignment_checked",
+      "version_id": "vellum-ledger:v1",
+      "analysis_changed": true
+    },
+    {
+      "sequence": 6,
+      "round": 1,
+      "action": "graph_updated",
+      "version_id": "vellum-ledger:v1",
+      "open_gaps": 1
+    },
+    {
+      "sequence": 7,
+      "round": 1,
+      "action": "verification_started"
+    },
+    {
+      "sequence": 8,
+      "round": 1,
+      "action": "verification_completed",
+      "verdict": "unresolved",
+      "followup_tasks": 0
+    },
+    {
+      "sequence": 9,
+      "round": 1,
+      "action": "progress_checked",
+      "new_eligible_versions": 1,
+      "new_structure": true
+    },
+    {
+      "sequence": 10,
+      "round": 1,
+      "action": "stopped",
+      "reason": "document_budget"
+    }
+  ],
+  "errors": [],
+  "execution_mode": "model_trace",
+  "execution": {
+    "tunnel": "local",
+    "model": "gpt-6-astra",
+    "reasoning_effort": "medium",
+    "model_calls": [
+      {
+        "stage": "decompose",
+        "tunnel": "local",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "timeout_seconds": 180.0,
+        "wall_seconds": 29.482186375069432,
+        "success": true,
+        "status": "completed",
+        "usage": {
+          "input_tokens": 10423,
+          "cached_input_tokens": 0,
+          "output_tokens": 248
+        },
+        "exit_code": 0
+      },
+      {
+        "stage": "verify",
+        "tunnel": "local",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "timeout_seconds": 180.0,
+        "wall_seconds": 9.960514499922283,
+        "success": true,
+        "status": "completed",
+        "usage": {
+          "input_tokens": 11218,
+          "cached_input_tokens": 7552,
+          "output_tokens": 132
+        },
+        "exit_code": 0
+      }
+    ],
+    "scope": "Claim extraction and fact verification over local snapshots; source lineage and active retrieval are not inferred."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "validated_at": "2026-09-08T15:58:38.374015+00:00",
+  "tests_passed": 132,
+  "input_sha256": "587242e9dc3a4ec9fcd5c8a3d9e82c446dafd62b7a222214794ef91c8e5143ae",
+  "default_tunnel": "local",
+  "cross_tunnel_fallback": false,
+  "live_smoke": [
+    {
+      "tunnel": "local",
+      "fact_status": "unresolved",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "model_calls": 2,
+      "call_wall_seconds": 39.442700874991715,
+      "input_tokens": 21641,
+      "output_tokens": 380,
+      "errors": [],
+      "report": "reports/model-local-smoke.json"
+    },
+    {
+      "tunnel": "api",
+      "fact_status": "unresolved",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "model_calls": 2,
+      "call_wall_seconds": 18.14246549992822,
+      "input_tokens": 2254,
+      "output_tokens": 594,
+      "errors": [],
+      "report": "reports/model-api-smoke.json"
+    }
+  ],
+  "initial_api_tls_failure_preserved": "reports/model-api-smoke-initial-error.json",
+  "limitations": [
+    "Synthetic integration example, not accuracy or performance evidence.",
+    "Same requested model/settings; Codex CLI instructions differ from direct API.",
+    "Both semantic verdicts were unresolved, a successful abstention rather than an execution error."
+  ]
+}

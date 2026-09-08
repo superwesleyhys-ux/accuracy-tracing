@@ -1,0 +1,178 @@
+{
+  "scope": "Metadata for nine original captures plus one repaired extraction; source bytes, outbound-link lists and observed redirect URLs are excluded.",
+  "hash_scope": "Hashes refer to the original local raw, extracted-text and metadata files, not downloaded current versions.",
+  "sources": [
+    {
+      "version_id": "s01",
+      "title": "NASA Lucy Images Reveal Asteroid Dinkinesh to be Surprisingly Complex",
+      "canonical_url": "https://www.nasa.gov/solar-system/asteroids/nasa-lucy-images-reveal-asteroid-dinkinesh-to-be-surprisingly-complex/",
+      "attribution": "NASA; William Steigerwald",
+      "role": "inference source",
+      "captured_at": "2026-09-08T20:43:50.259417+00:00",
+      "observed_available_at": "2026-09-08T20:43:50.259417+00:00",
+      "raw_sha256": "6a8619f3f16f582f0c184d8c53318040e0841f33e540fc18594c8f1d973b797b",
+      "text_sha256": "a66d59862151713a4cb30a624bdda5679f5a9250f76219022309328e5b3ccfc7",
+      "metadata_sha256": "dcfdd4a69ae59dd9e3392c16bc065f6f8877f3c4a01750746885bab399b06511",
+      "license": {
+        "notice": "No blanket redistribution permission asserted; source and third-party credits apply",
+        "url": null
+      },
+      "source_bytes_bundled": false
+    },
+    {
+      "version_id": "s02",
+      "title": "A contact binary satellite of the asteroid (152830) Dinkinesh",
+      "canonical_url": "https://www.nature.com/articles/s41586-024-07378-0",
+      "attribution": "Levison et al.; Nature",
+      "role": "inference source",
+      "captured_at": "2026-09-08T20:43:51.218591+00:00",
+      "observed_available_at": "2026-09-08T20:43:51.218591+00:00",
+      "raw_sha256": "f7337dd45826781455b5514162b644bc7d8e8ba34ee8de16e775f5362a4d0845",
+      "text_sha256": "86fce2812840d2d470114c5345ab26ececa8f9ed7eee003e1b3d55baea07f607",
+      "metadata_sha256": "2a113b3d6d2ba2f1c384ef07f6612fa3d077db28212f672c33a6cd127eda5788",
+      "license": {
+        "notice": "CC BY 4.0 stated by the published source",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "source_bytes_bundled": false
+    },
+    {
+      "version_id": "s03",
+      "title": "New Atom-Based Thermometer Measures Temperature More Accurately",
+      "canonical_url": "https://www.nist.gov/news-events/news/2025/01/new-atom-based-thermometer-measures-temperature-more-accurately",
+      "attribution": "National Institute of Standards and Technology",
+      "role": "inference source",
+      "captured_at": "2026-09-08T20:43:50.246201+00:00",
+      "observed_available_at": "2026-09-08T20:43:50.246201+00:00",
+      "raw_sha256": "d3629d5abce5cfee39e2ed84271dee56fabeeb428f9655f604e1fbe12004ec93",
+      "text_sha256": "37181e7f490b304aec27e31b43c58672743cb9e441224f66a5bb0eac5f1d6460",
+      "metadata_sha256": "d7279c940991edd93f7fb8f69b56be1a13f9c586b5165616b146cc376a26e23b",
+      "license": {
+        "notice": "No blanket redistribution permission asserted; source and third-party credits apply",
+        "url": null
+      },
+      "source_bytes_bundled": false
+    },
+    {
+      "version_id": "s04",
+      "title": "Primary quantum thermometry of mm-wave blackbody radiation via induced state transfer in Rydberg states of cold atoms",
+      "canonical_url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=958238",
+      "attribution": "Schlossberger et al.; Physical Review Research; NIST repository",
+      "role": "inference source",
+      "captured_at": "2026-09-08T20:45:15.875843+00:00",
+      "observed_available_at": "2026-09-08T20:45:15.875843+00:00",
+      "raw_sha256": "b04508cc982b25cdcd0d2c5234c5d842a8bd0e9b6683c027f02c2bbd651df9a1",
+      "text_sha256": "3546cadfc84c694884bb77bda4996bb00a1f10a62a3d676c1d38d7c5a63f18d2",
+      "metadata_sha256": "f641d17e204aa27149caad167eff102d0fcbd2ad4c12f88077e79fb0fb12975e",
+      "license": {
+        "notice": "CC BY 4.0 stated by the published source",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "source_bytes_bundled": false
+    },
+    {
+      "version_id": "s05",
+      "title": "A new model offers robots precise pick-and-place solutions",
+      "canonical_url": "https://news.mit.edu/2024/new-model-offers-robots-precise-pick-place-solutions-0809",
+      "attribution": "MIT News; Anne Wilson; Department of Mechanical Engineering",
+      "role": "inference source",
+      "captured_at": "2026-09-08T20:43:50.525267+00:00",
+      "observed_available_at": "2026-09-08T20:43:50.525267+00:00",
+      "raw_sha256": "efcda6ab7746d2810d5db762100584ffb3af188d6ff02cd700e992a4fd1856c0",
+      "text_sha256": "34b4fc0c71d96c618ac87198944353bbc5534da6fcdba522600748cbbd6591a1",
+      "metadata_sha256": "a21507fcf5137edf20bd5ceae680611aea594895bf33df9c3f7e350e9f9b8218",
+      "license": {
+        "notice": "No blanket redistribution permission asserted; source and third-party credits apply",
+        "url": null
+      },
+      "source_bytes_bundled": false
+    },
+    {
+      "version_id": "s06",
+      "title": "The MCube Lab - simPLE: simulation to precisely pick, localize, regrasp, and place objects",
+      "canonical_url": "https://mcube.mit.edu/research/simPLE.html",
+      "attribution": "MIT MCube Lab; Maria Bauza and Antonia Bronars",
+      "role": "inference source",
+      "captured_at": "2026-09-08T20:45:06.722311+00:00",
+      "observed_available_at": "2026-09-08T20:45:06.722311+00:00",
+      "raw_sha256": "bc84e6992ac28fb418a9967518013e4041681757bc71450303d353829f029f47",
+      "text_sha256": "2b324c803544c020952f91fb60f401fb967033c8eb416e94337c94ac462e3013",
+      "metadata_sha256": "864b21ec63a3e55cdcf422838af928999599eee7e8c29eadf3d90ca88f128eef",
+      "license": {
+        "notice": "No blanket redistribution permission asserted; source and third-party credits apply",
+        "url": null
+      },
+      "source_bytes_bundled": false
+    },
+    {
+      "version_id": "s07",
+      "title": "Primary quantum thermometry of mm-wave blackbody radiation via induced state transfer in Rydberg states of cold atoms",
+      "canonical_url": "https://www.nist.gov/publications/primary-quantum-thermometry-mm-wave-blackbody-radiation-induced-state-transfer-rydberg",
+      "attribution": "National Institute of Standards and Technology",
+      "role": "access/adjudication audit only; excluded from inference pools",
+      "captured_at": "2026-09-08T20:44:11.552793+00:00",
+      "observed_available_at": "2026-09-08T20:44:11.552793+00:00",
+      "raw_sha256": "6f698bd7644162a6b7af8a67807b0f9f34be39cdaf46bf44a3c38272def827af",
+      "text_sha256": "e7527eecb99d573d57affb05e9aa82157b133f4db5a74b340c764845e95c5ed7",
+      "metadata_sha256": "e229fd19917b095943463af13ca7d0114dfbc670a4f994367762dcb5751e56ab",
+      "license": {
+        "notice": "No blanket redistribution permission asserted; source and third-party credits apply",
+        "url": null
+      },
+      "source_bytes_bundled": false
+    },
+    {
+      "version_id": "s08",
+      "title": "simPLE: a visuotactile method learned in simulation to precisely pick, localize, regrasp, and place objects",
+      "canonical_url": "https://arxiv.org/html/2307.13133v1",
+      "attribution": "Bauza et al.; arXiv:2307.13133v1",
+      "role": "access/adjudication audit only; excluded from inference pools",
+      "captured_at": "2026-09-08T20:44:11.332011+00:00",
+      "observed_available_at": "2026-09-08T20:44:11.332011+00:00",
+      "raw_sha256": "896a2fe455f5d25246380d5d5a473395d6a7c357b0ef1a6dd6c98360b79eb092",
+      "text_sha256": "216271ddbf889d6507c6c613d71085dafd9f3387aad166c59de523da054dc222",
+      "metadata_sha256": "e41017b04aff495a67a3992d2b8272dad27571034540b4ca54482b7be09e5367",
+      "license": {
+        "notice": "No blanket redistribution permission asserted; source and third-party credits apply",
+        "url": null
+      },
+      "source_bytes_bundled": false
+    },
+    {
+      "version_id": "s09",
+      "title": "Primary quantum thermometry of mm-wave blackbody radiation via induced state transfer in Rydberg states of cold atoms",
+      "canonical_url": "https://arxiv.org/html/2410.11694v2",
+      "attribution": "Schlossberger et al.; arXiv:2410.11694v2",
+      "role": "access/adjudication audit only; excluded from inference pools",
+      "captured_at": "2026-09-08T20:44:26.651466+00:00",
+      "observed_available_at": "2026-09-08T20:44:26.651466+00:00",
+      "raw_sha256": "1270affd430639f1add3835705b550a0c7b2e4f89284a5eea2cd3897e10c4bcd",
+      "text_sha256": "268cff4821eee4fbe2a921d3bfb945beaf7011a5dfedac84e1d29ae2554dc5de",
+      "metadata_sha256": "1ad526db1d6c55b3a8df6bfd9ce5b2614627f2bf008a4ee0dd4ce327663011fe",
+      "license": {
+        "notice": "No blanket redistribution permission asserted; source and third-party credits apply",
+        "url": null
+      },
+      "source_bytes_bundled": false
+    },
+    {
+      "version_id": "s03r",
+      "title": "New Atom-Based Thermometer Measures Temperature More Accurately",
+      "canonical_url": "https://www.nist.gov/news-events/news/2025/01/new-atom-based-thermometer-measures-temperature-more-accurately",
+      "attribution": "National Institute of Standards and Technology",
+      "role": "post-hoc repair source only",
+      "captured_at": "2026-09-08T20:43:50.246201+00:00",
+      "observed_available_at": "2026-09-08T20:43:50.246201+00:00",
+      "raw_sha256": "d3629d5abce5cfee39e2ed84271dee56fabeeb428f9655f604e1fbe12004ec93",
+      "text_sha256": "d691769b057f894d9c5a702623ddbfa842585983284b5736720bbc911f99f449",
+      "metadata_sha256": "69d74d9228912b9fb261c5e4931d3726f33381a6747000adcb883dd39c4ee319",
+      "license": {
+        "notice": "No blanket redistribution permission asserted; source and third-party credits apply",
+        "url": null
+      },
+      "source_bytes_bundled": false,
+      "published_at": "2025-01-23T07:00-05:00",
+      "extraction_change": "Restored the captured article dateline; complete source text remains local."
+    }
+  ]
+}

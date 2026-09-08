@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "raw_sources_bundled": false,
+  "prompts_or_freeform_model_responses_bundled": false,
+  "original_cases": 6,
+  "original_runs": 12,
+  "original_logical_calls": 42,
+  "separate_post_hoc_cases": 1,
+  "separate_post_hoc_runs": 2,
+  "separate_post_hoc_logical_calls": 7,
+  "total_public_receipts": 49,
+  "source_metadata_records": 10,
+  "exporter_sha256": "42e93c2245f7e66b2831230175bb63c2ac421df4af36fb77f78ddf633373db1b",
+  "local_archive_sha256": {
+    "original.aggregate": "b80a71f74e5ca9d0ff38537bdb395fb52f23ea40d5c91b86eb3f3a86ef9bcc51",
+    "original.manifest": "678ef2cd7c48848c5810a0a71c5e9e065c2f23b1a23ab14cf8c58907e67f5627",
+    "original.summary": "a216144502f7ccd9aced13fac21f77d273f9895d81e607df52f04c79b83e47b2",
+    "original.corpus": "ee69de1070652b285d4e30bc3c1d1fcd3403976266707ebc9270b4293d4dbf06",
+    "original.gold": "8c665dcbba266fa66e795a2b2d16b8ca176115d9ecde33c665480e31333b27a0",
+    "repair.aggregate": "16306fcb30952f0edd1645106865b34313ee86f991448db8176d1cb385eb064b",
+    "repair.manifest": "086b309c26c5c6176bb59b1c8461d986e897da938e527c7567052d73d3bd4a13",
+    "repair.summary": "3ee52dce1c7f34075c8777ee26bc8fd58d0b260608ffe4630326b98a40efbff9",
+    "repair.corpus": "2b1465e448376106f529a466bb682113e413af6bc3115bd761f7ac4f20ccaba1",
+    "repair.gold": "ea51678506347b68b78ed9218c1d52f11118691cd469d752f02cc2386d9cf33b"
+  },
+  "public_file_sha256": {
+    "RESULTS.json": "3f0fc0497abdec1ba75fde87bcb196579aca1533612b8e0fa4e34aa910966c1d",
+    "RECEIPTS.json": "9ce8d5124fae3f55ccfdf62a6abaa06a45f1ddac5a56032873062c6ad7d92451",
+    "SOURCES.json": "a3ae8d72b90b0a0f80fdb63ee69bd8e3415b2be03d8ccab866157830298d796f",
+    "README.md": "2c41455a7a86bda184a8cc5d31300e8bf34e7716b2f466a5a07ebff247b87b8f"
+  },
+  "verification_scope": "Recompute published accounting and denominators from sanitized receipts; source-free hashes cannot establish semantic accuracy or reproduce original inference."
+}

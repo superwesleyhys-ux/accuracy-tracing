@@ -10,15 +10,15 @@ Milestones are ordered by dependency, not promised dates. The current deliverabl
 
 Done when a new contributor can reproduce the demo and inspect why each fixture received its outcome.
 
-## 2. Connect one live provider
+## 2. Connect local harness materials
 
 - Inspect the actual earlier tracker before writing its integration.
-- Add one adapter with explicit query intent handling, timeouts, rate limits, retry caps, spend limits, and safe logging.
+- Add a local adapter with explicit query intent handling, bounded work, and safe logging. Use snapshot files or the hosting harness’s material store; no API client or credentials are required.
 - Capture retrieval timestamps, original publication times, publisher identifiers, origin identifiers, and retrieval failures.
 - Support reproducible replay of permitted snapshots. Document how snippets differ from full-page text.
 - Test corrections, redirects, missing timestamps, updates to an existing URL, and syndicated reports.
 
-Done when the same archived input reproduces the same core decision and live failures produce a visible incomplete result.
+Done when the same archived input reproduces the same core decision and missing local materials produce a visible incomplete result.
 
 ## 3. Build a blind news benchmark
 

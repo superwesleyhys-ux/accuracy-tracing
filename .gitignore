@@ -16,8 +16,12 @@ experiments/*
 !experiments/README.md
 !experiments/double-loop-pilot/
 experiments/double-loop-pilot/*
-!experiments/double-loop-pilot/*.py
+!experiments/double-loop-pilot/run_test.py
+!experiments/double-loop-pilot/summarize_test.py
 !experiments/double-loop-pilot/requirements.lock.txt
 !experiments/gstack-harness-eval-20260908/
 experiments/gstack-harness-eval-20260908/*
-!experiments/gstack-harness-eval-20260908/*.py
+!experiments/gstack-harness-eval-20260908/run_test.py
+!experiments/gstack-harness-eval-20260908/summarize_test.py
+!experiments/gstack-harness-eval-20260908/verify_data.py
+!experiments/gstack-harness-eval-20260908/verify_local_isolation.py

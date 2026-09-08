@@ -1,0 +1,724 @@
+{
+  "schema_version": "1.0",
+  "evaluation": "Astra through local Codex versus the same Astra with NewsVerify double-loop harness",
+  "label_origin": "Agent-authored and agent-reviewed before inference; not independent human adjudication.",
+  "batches": [
+    {
+      "id": "original",
+      "post_hoc": false,
+      "pooled_with_other_batches": false,
+      "case_count": 6,
+      "event_family_count": 3,
+      "started_at": "2026-09-08T21:13:58.842013+00:00",
+      "finished_at": "2026-09-08T21:27:26.485325+00:00",
+      "configuration": {
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "tunnel": "local",
+        "workers": 1,
+        "timeout_seconds_per_call": 90,
+        "max_model_calls_per_harness_case": 10,
+        "max_total_logical_calls": 66,
+        "orchestration_retries": 0,
+        "internal_cli_transport_retries": "not controlled or counted separately",
+        "cross_route_fallback": false,
+        "equal_token_budget": false,
+        "local_cli_version": "codex-cli 0.153.1"
+      },
+      "cases": [
+        {
+          "id": "c01",
+          "target_text": "Levison et al.'s 2024 Dinkinesh study estimated a volume-equivalent spherical diameter of 719 ± 24 metres for Dinkinesh.",
+          "as_of": "2026-09-08T21:10:23.405563+00:00",
+          "source_version_id": "s01",
+          "initial_version_ids": [
+            "s01"
+          ],
+          "pool_version_ids": [
+            "s01",
+            "s02"
+          ]
+        },
+        {
+          "id": "c02",
+          "target_text": "Levison et al.'s 2024 Dinkinesh study concludes that Selam's orbit is prograde with respect to Dinkinesh's heliocentric orbit.",
+          "as_of": "2026-09-08T21:10:23.405563+00:00",
+          "source_version_id": "s01",
+          "initial_version_ids": [
+            "s01"
+          ],
+          "pool_version_ids": [
+            "s01",
+            "s02"
+          ]
+        },
+        {
+          "id": "c03",
+          "target_text": "In the Rydberg thermometry study described by NIST on January 23, 2025, each measurement took 354 milliseconds, consisting of 231 milliseconds of experiment and 123 milliseconds of dead time.",
+          "as_of": "2026-09-08T21:10:23.405563+00:00",
+          "source_version_id": "s03",
+          "initial_version_ids": [
+            "s03"
+          ],
+          "pool_version_ids": [
+            "s03",
+            "s04"
+          ]
+        },
+        {
+          "id": "c04",
+          "target_text": "In the Rydberg thermometry study described by NIST on January 23, 2025, the two ionization electrodes were placed 56 millimetres apart.",
+          "as_of": "2026-09-08T21:10:23.405563+00:00",
+          "source_version_id": "s03",
+          "initial_version_ids": [
+            "s03"
+          ],
+          "pool_version_ids": [
+            "s03"
+          ]
+        },
+        {
+          "id": "c05",
+          "target_text": "The MIT MCube Lab's simPLE project page reports a pick-and-place demonstration using 12 diverse objects.",
+          "as_of": "2026-09-08T21:10:23.405563+00:00",
+          "source_version_id": "s05",
+          "initial_version_ids": [
+            "s05"
+          ],
+          "pool_version_ids": [
+            "s05",
+            "s06"
+          ]
+        },
+        {
+          "id": "c06",
+          "target_text": "For each object in the simPLE pick-and-place study, the researchers conducted 20 trials beginning from an unknown object pose.",
+          "as_of": "2026-09-08T21:10:23.405563+00:00",
+          "source_version_id": "s05",
+          "initial_version_ids": [
+            "s05"
+          ],
+          "pool_version_ids": [
+            "s05",
+            "s06"
+          ]
+        }
+      ],
+      "registered_labels": [
+        {
+          "case_id": "c01",
+          "expected_fact_status": "supported"
+        },
+        {
+          "case_id": "c02",
+          "expected_fact_status": "contradicted"
+        },
+        {
+          "case_id": "c03",
+          "expected_fact_status": "supported"
+        },
+        {
+          "case_id": "c04",
+          "expected_fact_status": "unresolved"
+        },
+        {
+          "case_id": "c05",
+          "expected_fact_status": "contradicted"
+        },
+        {
+          "case_id": "c06",
+          "expected_fact_status": "unresolved"
+        }
+      ],
+      "runs": [
+        {
+          "case_id": "c01",
+          "condition": "direct",
+          "visible_verdict": "supported",
+          "raw_verdict": "supported",
+          "pipeline_success": true,
+          "registered_label_match": true,
+          "locally_audited_quote_integrity": true,
+          "error_count": 0,
+          "error_types": [],
+          "receipt_ids": [
+            "original:c01:direct:01"
+          ],
+          "logical_calls": 1,
+          "loop_flags": {
+            "accepted_revisit_executed": false,
+            "reanalysis_executed": false,
+            "verification_feedback_executed": false,
+            "both_loops_executed": false
+          },
+          "elapsed_seconds": 6.998475500033237,
+          "clock_discrepancy": false
+        },
+        {
+          "case_id": "c01",
+          "condition": "double_loop",
+          "visible_verdict": "supported",
+          "raw_verdict": "supported",
+          "pipeline_success": true,
+          "registered_label_match": true,
+          "locally_audited_quote_integrity": true,
+          "error_count": 0,
+          "error_types": [],
+          "receipt_ids": [
+            "original:c01:double_loop:01",
+            "original:c01:double_loop:02",
+            "original:c01:double_loop:03",
+            "original:c01:double_loop:04",
+            "original:c01:double_loop:05",
+            "original:c01:double_loop:06"
+          ],
+          "logical_calls": 6,
+          "loop_flags": {
+            "accepted_revisit_executed": true,
+            "reanalysis_executed": true,
+            "verification_feedback_executed": true,
+            "both_loops_executed": true
+          },
+          "elapsed_seconds": 135.1373567909468,
+          "clock_discrepancy": false
+        },
+        {
+          "case_id": "c02",
+          "condition": "double_loop",
+          "visible_verdict": "contradicted",
+          "raw_verdict": "contradicted",
+          "pipeline_success": true,
+          "registered_label_match": true,
+          "locally_audited_quote_integrity": true,
+          "error_count": 0,
+          "error_types": [],
+          "receipt_ids": [
+            "original:c02:double_loop:01",
+            "original:c02:double_loop:02",
+            "original:c02:double_loop:03",
+            "original:c02:double_loop:04",
+            "original:c02:double_loop:05",
+            "original:c02:double_loop:06"
+          ],
+          "logical_calls": 6,
+          "loop_flags": {
+            "accepted_revisit_executed": true,
+            "reanalysis_executed": true,
+            "verification_feedback_executed": true,
+            "both_loops_executed": true
+          },
+          "elapsed_seconds": 137.38331837498117,
+          "clock_discrepancy": false
+        },
+        {
+          "case_id": "c02",
+          "condition": "direct",
+          "visible_verdict": "contradicted",
+          "raw_verdict": "contradicted",
+          "pipeline_success": true,
+          "registered_label_match": true,
+          "locally_audited_quote_integrity": true,
+          "error_count": 0,
+          "error_types": [],
+          "receipt_ids": [
+            "original:c02:direct:01"
+          ],
+          "logical_calls": 1,
+          "loop_flags": {
+            "accepted_revisit_executed": false,
+            "reanalysis_executed": false,
+            "verification_feedback_executed": false,
+            "both_loops_executed": false
+          },
+          "elapsed_seconds": 8.865057665971108,
+          "clock_discrepancy": false
+        },
+        {
+          "case_id": "c03",
+          "condition": "direct",
+          "visible_verdict": "supported",
+          "raw_verdict": "supported",
+          "pipeline_success": true,
+          "registered_label_match": true,
+          "locally_audited_quote_integrity": true,
+          "error_count": 0,
+          "error_types": [],
+          "receipt_ids": [
+            "original:c03:direct:01"
+          ],
+          "logical_calls": 1,
+          "loop_flags": {
+            "accepted_revisit_executed": false,
+            "reanalysis_executed": false,
+            "verification_feedback_executed": false,
+            "both_loops_executed": false
+          },
+          "elapsed_seconds": 9.157383666024543,
+          "clock_discrepancy": false
+        },
+        {
+          "case_id": "c03",
+          "condition": "double_loop",
+          "visible_verdict": "unresolved",
+          "raw_verdict": "unresolved",
+          "pipeline_success": true,
+          "registered_label_match": false,
+          "locally_audited_quote_integrity": true,
+          "error_count": 0,
+          "error_types": [],
+          "receipt_ids": [
+            "original:c03:double_loop:01",
+            "original:c03:double_loop:02",
+            "original:c03:double_loop:03",
+            "original:c03:double_loop:04",
+            "original:c03:double_loop:05",
+            "original:c03:double_loop:06",
+            "original:c03:double_loop:07"
+          ],
+          "logical_calls": 7,
+          "loop_flags": {
+            "accepted_revisit_executed": true,
+            "reanalysis_executed": true,
+            "verification_feedback_executed": true,
+            "both_loops_executed": true
+          },
+          "elapsed_seconds": 158.69622433301993,
+          "clock_discrepancy": false
+        },
+        {
+          "case_id": "c04",
+          "condition": "double_loop",
+          "visible_verdict": "unresolved",
+          "raw_verdict": "unresolved",
+          "pipeline_success": true,
+          "registered_label_match": true,
+          "locally_audited_quote_integrity": true,
+          "error_count": 0,
+          "error_types": [],
+          "receipt_ids": [
+            "original:c04:double_loop:01",
+            "original:c04:double_loop:02",
+            "original:c04:double_loop:03"
+          ],
+          "logical_calls": 3,
+          "loop_flags": {
+            "accepted_revisit_executed": false,
+            "reanalysis_executed": false,
+            "verification_feedback_executed": false,
+            "both_loops_executed": false
+          },
+          "elapsed_seconds": 48.78433920897078,
+          "clock_discrepancy": false
+        },
+        {
+          "case_id": "c04",
+          "condition": "direct",
+          "visible_verdict": "unresolved",
+          "raw_verdict": "unresolved",
+          "pipeline_success": true,
+          "registered_label_match": true,
+          "locally_audited_quote_integrity": true,
+          "error_count": 0,
+          "error_types": [],
+          "receipt_ids": [
+            "original:c04:direct:01"
+          ],
+          "logical_calls": 1,
+          "loop_flags": {
+            "accepted_revisit_executed": false,
+            "reanalysis_executed": false,
+            "verification_feedback_executed": false,
+            "both_loops_executed": false
+          },
+          "elapsed_seconds": 7.7241370000410825,
+          "clock_discrepancy": false
+        },
+        {
+          "case_id": "c05",
+          "condition": "direct",
+          "visible_verdict": "contradicted",
+          "raw_verdict": "contradicted",
+          "pipeline_success": true,
+          "registered_label_match": true,
+          "locally_audited_quote_integrity": true,
+          "error_count": 0,
+          "error_types": [],
+          "receipt_ids": [
+            "original:c05:direct:01"
+          ],
+          "logical_calls": 1,
+          "loop_flags": {
+            "accepted_revisit_executed": false,
+            "reanalysis_executed": false,
+            "verification_feedback_executed": false,
+            "both_loops_executed": false
+          },
+          "elapsed_seconds": 7.2057552500627935,
+          "clock_discrepancy": false
+        },
+        {
+          "case_id": "c05",
+          "condition": "double_loop",
+          "visible_verdict": "contradicted",
+          "raw_verdict": "contradicted",
+          "pipeline_success": true,
+          "registered_label_match": true,
+          "locally_audited_quote_integrity": true,
+          "error_count": 0,
+          "error_types": [],
+          "receipt_ids": [
+            "original:c05:double_loop:01",
+            "original:c05:double_loop:02",
+            "original:c05:double_loop:03",
+            "original:c05:double_loop:04",
+            "original:c05:double_loop:05",
+            "original:c05:double_loop:06",
+            "original:c05:double_loop:07"
+          ],
+          "logical_calls": 7,
+          "loop_flags": {
+            "accepted_revisit_executed": true,
+            "reanalysis_executed": true,
+            "verification_feedback_executed": true,
+            "both_loops_executed": true
+          },
+          "elapsed_seconds": 142.21174204093404,
+          "clock_discrepancy": false
+        },
+        {
+          "case_id": "c06",
+          "condition": "double_loop",
+          "visible_verdict": "unresolved",
+          "raw_verdict": "unresolved",
+          "pipeline_success": true,
+          "registered_label_match": true,
+          "locally_audited_quote_integrity": true,
+          "error_count": 0,
+          "error_types": [],
+          "receipt_ids": [
+            "original:c06:double_loop:01",
+            "original:c06:double_loop:02",
+            "original:c06:double_loop:03",
+            "original:c06:double_loop:04",
+            "original:c06:double_loop:05",
+            "original:c06:double_loop:06",
+            "original:c06:double_loop:07"
+          ],
+          "logical_calls": 7,
+          "loop_flags": {
+            "accepted_revisit_executed": true,
+            "reanalysis_executed": true,
+            "verification_feedback_executed": true,
+            "both_loops_executed": true
+          },
+          "elapsed_seconds": 132.56850545899943,
+          "clock_discrepancy": false
+        },
+        {
+          "case_id": "c06",
+          "condition": "direct",
+          "visible_verdict": "unresolved",
+          "raw_verdict": "unresolved",
+          "pipeline_success": true,
+          "registered_label_match": true,
+          "locally_audited_quote_integrity": true,
+          "error_count": 0,
+          "error_types": [],
+          "receipt_ids": [
+            "original:c06:direct:01"
+          ],
+          "logical_calls": 1,
+          "loop_flags": {
+            "accepted_revisit_executed": false,
+            "reanalysis_executed": false,
+            "verification_feedback_executed": false,
+            "both_loops_executed": false
+          },
+          "elapsed_seconds": 12.848344333935529,
+          "clock_discrepancy": false
+        }
+      ],
+      "accounting": {
+        "conditions": {
+          "direct": {
+            "cases": 6,
+            "completed": 6,
+            "registered_label_matches": 6,
+            "locally_audited_quote_integrity_matches": 6,
+            "logical_calls": 6,
+            "successful_calls": 6,
+            "known_usage_calls": 6,
+            "known_input_tokens": 104402,
+            "known_output_tokens": 584,
+            "total_tokens": 104986,
+            "cached_input_tokens": 37760
+          },
+          "double_loop": {
+            "cases": 6,
+            "completed": 6,
+            "registered_label_matches": 5,
+            "locally_audited_quote_integrity_matches": 5,
+            "logical_calls": 36,
+            "successful_calls": 36,
+            "known_usage_calls": 36,
+            "known_input_tokens": 580718,
+            "known_output_tokens": 19600,
+            "total_tokens": 600318,
+            "cached_input_tokens": 69632
+          }
+        },
+        "stages": [
+          {
+            "condition": "direct",
+            "stage": "direct",
+            "logical_calls": 6,
+            "successful_calls": 6,
+            "known_usage_calls": 6,
+            "known_input_tokens": 104402,
+            "known_output_tokens": 584,
+            "total_tokens": 104986,
+            "cached_input_tokens": 37760
+          },
+          {
+            "condition": "double_loop",
+            "stage": "decompose",
+            "logical_calls": 16,
+            "successful_calls": 16,
+            "known_usage_calls": 16,
+            "known_input_tokens": 291147,
+            "known_output_tokens": 15331,
+            "total_tokens": 306478,
+            "cached_input_tokens": 23808
+          },
+          {
+            "condition": "double_loop",
+            "stage": "select",
+            "logical_calls": 5,
+            "successful_calls": 5,
+            "known_usage_calls": 5,
+            "known_input_tokens": 47541,
+            "known_output_tokens": 330,
+            "total_tokens": 47871,
+            "cached_input_tokens": 15104
+          },
+          {
+            "condition": "double_loop",
+            "stage": "verify",
+            "logical_calls": 15,
+            "successful_calls": 15,
+            "known_usage_calls": 15,
+            "known_input_tokens": 242030,
+            "known_output_tokens": 3939,
+            "total_tokens": 245969,
+            "cached_input_tokens": 30720
+          }
+        ]
+      }
+    },
+    {
+      "id": "repair",
+      "post_hoc": true,
+      "pooled_with_other_batches": false,
+      "case_count": 1,
+      "event_family_count": 1,
+      "started_at": "2026-09-08T21:27:47.666928+00:00",
+      "finished_at": "2026-09-08T21:30:13.611844+00:00",
+      "configuration": {
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "tunnel": "local",
+        "workers": 1,
+        "timeout_seconds_per_call": 90,
+        "max_model_calls_per_harness_case": 10,
+        "max_total_logical_calls": 11,
+        "orchestration_retries": 0,
+        "internal_cli_transport_retries": "not controlled or counted separately",
+        "cross_route_fallback": false,
+        "equal_token_budget": false,
+        "local_cli_version": "codex-cli 0.153.1"
+      },
+      "cases": [
+        {
+          "id": "c03r",
+          "target_text": "In the Rydberg thermometry study described by NIST on January 23, 2025, each experimental shot took 354 milliseconds, consisting of 231 milliseconds of experiment and 123 milliseconds of dead time.",
+          "as_of": "2026-09-08T21:10:23.405563+00:00",
+          "source_version_id": "s03r",
+          "initial_version_ids": [
+            "s03r"
+          ],
+          "pool_version_ids": [
+            "s03r",
+            "s04"
+          ]
+        }
+      ],
+      "registered_labels": [
+        {
+          "case_id": "c03r",
+          "expected_fact_status": "supported"
+        }
+      ],
+      "runs": [
+        {
+          "case_id": "c03r",
+          "condition": "direct",
+          "visible_verdict": "supported",
+          "raw_verdict": "supported",
+          "pipeline_success": true,
+          "registered_label_match": true,
+          "locally_audited_quote_integrity": true,
+          "error_count": 0,
+          "error_types": [],
+          "receipt_ids": [
+            "repair:c03r:direct:01"
+          ],
+          "logical_calls": 1,
+          "loop_flags": {
+            "accepted_revisit_executed": false,
+            "reanalysis_executed": false,
+            "verification_feedback_executed": false,
+            "both_loops_executed": false
+          },
+          "elapsed_seconds": 8.289485082961619,
+          "clock_discrepancy": false
+        },
+        {
+          "case_id": "c03r",
+          "condition": "double_loop",
+          "visible_verdict": "supported",
+          "raw_verdict": "supported",
+          "pipeline_success": true,
+          "registered_label_match": true,
+          "locally_audited_quote_integrity": true,
+          "error_count": 0,
+          "error_types": [],
+          "receipt_ids": [
+            "repair:c03r:double_loop:01",
+            "repair:c03r:double_loop:02",
+            "repair:c03r:double_loop:03",
+            "repair:c03r:double_loop:04",
+            "repair:c03r:double_loop:05",
+            "repair:c03r:double_loop:06"
+          ],
+          "logical_calls": 6,
+          "loop_flags": {
+            "accepted_revisit_executed": true,
+            "reanalysis_executed": true,
+            "verification_feedback_executed": true,
+            "both_loops_executed": true
+          },
+          "elapsed_seconds": 137.60609983291943,
+          "clock_discrepancy": false
+        }
+      ],
+      "accounting": {
+        "conditions": {
+          "direct": {
+            "cases": 1,
+            "completed": 1,
+            "registered_label_matches": 1,
+            "locally_audited_quote_integrity_matches": 1,
+            "logical_calls": 1,
+            "successful_calls": 1,
+            "known_usage_calls": 1,
+            "known_input_tokens": 17985,
+            "known_output_tokens": 152,
+            "total_tokens": 18137,
+            "cached_input_tokens": 0
+          },
+          "double_loop": {
+            "cases": 1,
+            "completed": 1,
+            "registered_label_matches": 1,
+            "locally_audited_quote_integrity_matches": 1,
+            "logical_calls": 6,
+            "successful_calls": 6,
+            "known_usage_calls": 6,
+            "known_input_tokens": 94479,
+            "known_output_tokens": 3737,
+            "total_tokens": 98216,
+            "cached_input_tokens": 7936
+          }
+        },
+        "stages": [
+          {
+            "condition": "direct",
+            "stage": "direct",
+            "logical_calls": 1,
+            "successful_calls": 1,
+            "known_usage_calls": 1,
+            "known_input_tokens": 17985,
+            "known_output_tokens": 152,
+            "total_tokens": 18137,
+            "cached_input_tokens": 0
+          },
+          {
+            "condition": "double_loop",
+            "stage": "decompose",
+            "logical_calls": 3,
+            "successful_calls": 3,
+            "known_usage_calls": 3,
+            "known_input_tokens": 52692,
+            "known_output_tokens": 3117,
+            "total_tokens": 55809,
+            "cached_input_tokens": 7936
+          },
+          {
+            "condition": "double_loop",
+            "stage": "select",
+            "logical_calls": 1,
+            "successful_calls": 1,
+            "known_usage_calls": 1,
+            "known_input_tokens": 9500,
+            "known_output_tokens": 66,
+            "total_tokens": 9566,
+            "cached_input_tokens": 0
+          },
+          {
+            "condition": "double_loop",
+            "stage": "verify",
+            "logical_calls": 2,
+            "successful_calls": 2,
+            "known_usage_calls": 2,
+            "known_input_tokens": 32287,
+            "known_output_tokens": 554,
+            "total_tokens": 32841,
+            "cached_input_tokens": 0
+          }
+        ]
+      }
+    }
+  ],
+  "c03_defect": {
+    "classification": "corpus_gold_defect",
+    "post_hoc_review": true,
+    "review_not_blind_to_outputs": true,
+    "registered_label_preserved": "supported",
+    "strict_packet_relative_label_after_review": "unresolved",
+    "reason": "The original packet omitted the NIST article dateline asserted by the target; its quoted publication date identified the paper. The harness left the missing date unresolved.",
+    "original_scores_unchanged": true
+  },
+  "five_case_sensitivity_subset": {
+    "source_batch": "original",
+    "excluded_case": "c03",
+    "post_hoc": true,
+    "replaces_primary_score": false,
+    "conditions": {
+      "direct": {
+        "cases": 5,
+        "registered_label_matches": 5
+      },
+      "double_loop": {
+        "cases": 5,
+        "registered_label_matches": 5
+      }
+    }
+  },
+  "repair_limit": "Selected post-hoc c03r restores the captured news dateline and changes each measurement to each experimental shot together. Neither final citation list explicitly quotes the restored dateline. Repair results are never pooled with the original six cases.",
+  "limits": [
+    "Six constructed cases are clustered across three events; no general accuracy superiority is established.",
+    "The direct arm receives the entire eligible source pool immediately; the harness retrieves adaptively from the same finite pool with unequal computation.",
+    "Installed skill catalogs were excluded; built-in Codex instructions remain. This is not raw base-model API or offline-weight inference.",
+    "Quote-integrity and loop flags are locally audited claims; public receipts alone cannot verify semantic evidence or operation histories."
+  ]
+}
