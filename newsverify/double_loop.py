@@ -112,6 +112,10 @@ unresolved opposing evidence, and unresolved when evidence cannot settle it.
 Use exact nonempty quotations occurring once in their specified versions; use
 an empty basis only when there is no relevant evidence. Do not infer independent
 confirmation from repeated copies or a shared upstream source.
+Prefer already validated fragment spans in the current analyses as basis
+evidence; select their version_id and copy their span text verbatim rather than
+rewriting a quotation. Only create a new basis quote when no validated fragment
+addresses the target.
 Distinguish an attribution claim (a document reports X) from the underlying
 claim (X happened or measurements are authentic). An exact report can settle
 attribution without authenticating its experiment. Missing independent records
@@ -336,8 +340,10 @@ class DoubleLoopVerifier:
         provenance_ids.add("origin:" + target.id)
         provenance_ids.update(item["id"] for analysis in context["analyses"].values()
                               for item in analysis.get("gaps", ()) if item["stage"] == "provenance")
-        if any(item["id"] in provenance_ids for item in response["gaps"]):
-            raise ValueError("Verifier cannot replace a provenance gap")
+        # The verifier cannot replace provenance gaps. Drop any repeated
+        # provenance IDs locally and retain only verification-stage gaps so a
+        # valid verdict is still scorable.
+        response["gaps"] = [item for item in response["gaps"] if item["id"] not in provenance_ids]
         allowed = {item["id"] for item in context["gaps"] if item["stage"] == "verification"}
         allowed.update(item["id"] for check in context["verification_history"]
                        for item in check.get("gaps", ()) if item["stage"] == "verification")

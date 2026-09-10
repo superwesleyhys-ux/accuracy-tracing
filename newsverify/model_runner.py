@@ -131,6 +131,10 @@ class ModelVerifier:
         materials = {item["version_id"]: item for item in context["materials"]}
         basis = tuple(exact_span(item["version_id"], item["quote"], materials)
                       for item in response["basis"])
+        # Keep the serialized model receipt aligned with the canonical local
+        # spans used for scoring, including harmless whitespace normalization.
+        response["basis"] = [{"version_id": span.version_id, "quote": span.quote}
+                              for span in basis]
         return VerificationResult(response["verdict"], basis, response["rationale"])
 
 
