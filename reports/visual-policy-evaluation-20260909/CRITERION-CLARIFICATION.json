@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "status": "clarification_complete",
+  "frozen_judgments_and_completed_trial_unchanged": true,
+  "predictions_mappings_fresh_judgments_read": false,
+  "criterion_sensitive": true,
+  "reason": "The target concerns actual observation-to-origin assignment, not mere attribution. The original account nevertheless supplies affirmative firsthand evidence. The frozen unresolved judgment applied a stronger provenance-verification threshold; absent raw records alone do not uniquely require unresolved under ordinary prima-facie support.",
+  "necessary_gap_precision": "A missing acquisition-to-presentation link prevents independent authentication; it is not automatically a necessary gap for every ordinary evidential-support judgment. No mandatory second-source rule is justified.",
+  "new_or_changed_cutoff_labels": 0,
+  "comment_date_counts": {
+    "through_2023": 1,
+    "2024": 4,
+    "2025_2026": 8,
+    "after_2026": 0
+  },
+  "five_comparison_asset_date_counts": {
+    "through_2023": 0,
+    "2024": 5,
+    "2025_2026": 0,
+    "after_2026": 0
+  },
+  "combined_record_date_counts": {
+    "through_2023": 1,
+    "2024": 9,
+    "2025_2026": 8,
+    "after_2026": 0
+  },
+  "distinct_retained_comment_objects": 13,
+  "distinct_recovered_comparison_assets": 5,
+  "potential_pre2024_scoped_critique_texts": 1,
+  "direct_pre2024_exact_target_critique_texts_identified": 0,
+  "pre2024_comparison_assets_in_recovered_set": 0,
+  "newly_admitted_or_added_materials": 0,
+  "prospective_gap": "The pre-cutoff-dated comment concerns a different component of the same work. Its linked comparison image is not in the retained five-asset set. A separate historical-version/projection check is needed before any future scoped use; it does not supply exact-target falsity by itself.",
+  "counting_and_date_limits": [
+    "Counts separate comments and asset objects; neither is a count of independent sources.",
+    "The current whole discussion capture is not eligible wholesale.",
+    "Current primary comment dates/update history and server asset metadata support documentary association, not immutable historical-byte proof.",
+    "No universal earliest-date claim or automatic backdating of quoted material."
+  ],
+  "external_operations": 0,
+  "model_calls": 0,
+  "review_sha256": "afd443c0320d50c58cfe439e690b5976f2fe98848bcdd49805991e570423daa2",
+  "dated_inventory_sha256": "e661e066bb1919c4e01c735a918d584963420b40bf3d3d79f5437abccf642f72"
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "validated_at": "2026-09-09T09:35:37.348571+00:00",
+  "reviewer": "root_source_blind",
+  "tests_passed": 30,
+  "author_integration_tests": 12,
+  "root_independent_tests": 18,
+  "test_result": "all_passed",
+  "model_calls": 0,
+  "fixtures": "entirely fictional; full sandbox worker exercised",
+  "real_private_case_or_gold_values_read": false,
+  "code_files_sha256": {
+    "contracts.py": "384e51e2bf7bb861b110bc50c723881b47afdbde1d21eb094904a1fac0e8ec10",
+    "run_test.py": "83c115fb85d665c77d2e97f97baca41222e7a4aa5b72e64996698a99b2878a43",
+    "summarize_test.py": "3da76a8d89a6d242a90cdad66dd50bdbc692e51a6168d2851c85ca8d2bf82411",
+    "test_independent.py": "6a9a9715a767eadabf8233f82af8ae5eaf8a7965b6da5cae743a46389a8fd98d",
+    "test_mixed_runner.py": "3be46308ff55c47e1fc9ae3d398e092554d8d75cc80cf793b68303e329690697"
+  },
+  "resolved_findings": [
+    "reject supplied version count above configured document cap",
+    "bind archived copies to original registered hash and recheck before process launch",
+    "validate nullable formal schemas through existing full validator",
+    "count interrupted formal input attempts against formal cap",
+    "parse the single verified gold byte buffer only after actual request audits"
+  ],
+  "prior_failure_record": "continuations/20260909T0735/ROOT-PRELIMINARY-RUNNER-REVIEW.json",
+  "scope_limits": [
+    "Offline software validation does not admit real evidence or prove model accuracy.",
+    "Prelaunch setup/process-creation exception leaves an incomplete, unscored attempt directory; it is not a successful or fabricated worker batch.",
+    "Model inference remains contingent on final reviewed combined packet and preregistration."
+  ]
+}

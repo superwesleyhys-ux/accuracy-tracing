@@ -1,0 +1,53 @@
+{
+  "both_loop_rows": 0,
+  "code_files_verified": 26,
+  "complete_diagnostic_captures": 21,
+  "direct_tokens": 70057,
+  "dominant_harness_stages": [
+    {
+      "calls": 4,
+      "harness_share": 0.1799995497890069,
+      "stage": "verify",
+      "tokens": 103951
+    },
+    {
+      "calls": 3,
+      "harness_share": 0.16100237746035978,
+      "stage": "source_trace",
+      "tokens": 92980
+    },
+    {
+      "calls": 3,
+      "harness_share": 0.1388398755339762,
+      "stage": "decompose",
+      "tokens": 80181
+    }
+  ],
+  "failed_calls": 0,
+  "guidance_applications": 7,
+  "harness_rows": 2,
+  "harness_tokens": 577507,
+  "input_gold_isolation_audit_passed": true,
+  "known_usage_calls": 21,
+  "limitations": [
+    "No transport failure or both-loop execution observed.",
+    "Integrity and token completeness do not establish semantic accuracy or gain.",
+    "No source-specific policy advice or future/gold exposure used in this review."
+  ],
+  "old_frozen_runner_entries_verified": 326,
+  "planned_rows": 4,
+  "reanalysis_rows": 0,
+  "result_files_unchanged": 202,
+  "review_sha256": "15b7efca6b7acd70bbc16990f569c3943c23d5c02663091c4f23df181c2c38b7",
+  "reviewer_model_calls": 0,
+  "reviewer_source_calls": 0,
+  "root_inference_archive_entries_verified": 200,
+  "schema_version": 1,
+  "score_usage_reproduced": true,
+  "semantic_join_status": "separate pending workflow",
+  "successful_calls": 21,
+  "total_tokens": 647564,
+  "valid_rows": 4,
+  "verdict": "passed",
+  "verification_feedback_rows": 1
+}

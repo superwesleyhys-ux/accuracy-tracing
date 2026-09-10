@@ -1,0 +1,2820 @@
+{
+  "schema_version": 1,
+  "model": "gpt-6-astra",
+  "reasoning_effort": "medium",
+  "tunnel": "local",
+  "cutoff": "2023-12-31T23:59:59Z",
+  "event_families": 2,
+  "cases": 8,
+  "runs": 16,
+  "round_id": "confirmation",
+  "phase": "confirmation",
+  "development_round": 2,
+  "research_mode": "claim",
+  "plan_sha256": "82e358f2d0ca5a6a8c2f242d08fecf77197db27389708b248bbfa4c126c75ae3",
+  "protocol_sha256": "528cdf71a8f91fb603d3f9dfc42573b7c7958af9ec7ec97f75081a4e558fbc2a",
+  "code_manifest_sha256": "34d6410b1c16e0b372ee290d83aa188467b65cd73eaa70a335d850e895160598",
+  "worker_corpus_sha256": "8a1aeabb5c56ce331acef8cd703cee96ff96f6f2bbe994631230bf3322c03e02",
+  "conditions": {
+    "direct": {
+      "cases": 8,
+      "pipeline_completed": 8,
+      "evidence_valid": 8,
+      "failed_or_invalid": 0,
+      "attempts": 8,
+      "successful_calls": 8,
+      "known_usage_calls": 8,
+      "usage_complete": true,
+      "known_input_tokens": 184504,
+      "input_tokens": 184504,
+      "known_output_tokens": 1381,
+      "output_tokens": 1381,
+      "known_total_tokens": 185885,
+      "total_tokens": 185885,
+      "known_cached_input_tokens": 22656,
+      "known_cached_input_tokens_calls": 8,
+      "cached_input_tokens": 22656,
+      "known_reasoning_output_tokens": 0,
+      "known_reasoning_output_tokens_calls": 8,
+      "reasoning_output_tokens": 0
+    },
+    "news_tracing": {
+      "cases": 8,
+      "pipeline_completed": 8,
+      "evidence_valid": 8,
+      "failed_or_invalid": 0,
+      "attempts": 70,
+      "successful_calls": 70,
+      "known_usage_calls": 70,
+      "usage_complete": true,
+      "known_input_tokens": 1184953,
+      "input_tokens": 1184953,
+      "known_output_tokens": 28197,
+      "output_tokens": 28197,
+      "known_total_tokens": 1213150,
+      "total_tokens": 1213150,
+      "known_cached_input_tokens": 178432,
+      "known_cached_input_tokens_calls": 70,
+      "cached_input_tokens": 178432,
+      "known_reasoning_output_tokens": 1187,
+      "known_reasoning_output_tokens_calls": 70,
+      "reasoning_output_tokens": 1187
+    }
+  },
+  "scores_by_variant": {
+    "original": {
+      "direct": {
+        "cases": 4,
+        "pipeline_completed": 4,
+        "evidence_valid": 4,
+        "failed_or_invalid": 0,
+        "cutoff_matches": 4,
+        "formal_evidence_valid": 4,
+        "formal_cutoff_matches": 4,
+        "unwarranted_settled_cutoff_verdicts": 0,
+        "future_verdict_matches": 2,
+        "authenticity_cases": 2,
+        "authenticity_abstentions": 2,
+        "authenticity_called_false": 0,
+        "authenticity_accepted": 0,
+        "authenticity_conflicts": 0,
+        "authenticity_failed_or_invalid": 0,
+        "controls": 2,
+        "control_matches": 2
+      },
+      "news_tracing": {
+        "cases": 4,
+        "pipeline_completed": 4,
+        "evidence_valid": 4,
+        "failed_or_invalid": 0,
+        "cutoff_matches": 4,
+        "formal_evidence_valid": 4,
+        "formal_cutoff_matches": 4,
+        "unwarranted_settled_cutoff_verdicts": 0,
+        "future_verdict_matches": 2,
+        "authenticity_cases": 2,
+        "authenticity_abstentions": 2,
+        "authenticity_called_false": 0,
+        "authenticity_accepted": 0,
+        "authenticity_conflicts": 0,
+        "authenticity_failed_or_invalid": 0,
+        "controls": 2,
+        "control_matches": 2
+      }
+    },
+    "blinded": {
+      "direct": {
+        "cases": 4,
+        "pipeline_completed": 4,
+        "evidence_valid": 4,
+        "failed_or_invalid": 0,
+        "cutoff_matches": 4,
+        "formal_evidence_valid": 4,
+        "formal_cutoff_matches": 4,
+        "unwarranted_settled_cutoff_verdicts": 0,
+        "future_verdict_matches": 2,
+        "authenticity_cases": 2,
+        "authenticity_abstentions": 2,
+        "authenticity_called_false": 0,
+        "authenticity_accepted": 0,
+        "authenticity_conflicts": 0,
+        "authenticity_failed_or_invalid": 0,
+        "controls": 2,
+        "control_matches": 2
+      },
+      "news_tracing": {
+        "cases": 4,
+        "pipeline_completed": 4,
+        "evidence_valid": 4,
+        "failed_or_invalid": 0,
+        "cutoff_matches": 4,
+        "formal_evidence_valid": 4,
+        "formal_cutoff_matches": 4,
+        "unwarranted_settled_cutoff_verdicts": 0,
+        "future_verdict_matches": 2,
+        "authenticity_cases": 2,
+        "authenticity_abstentions": 2,
+        "authenticity_called_false": 0,
+        "authenticity_accepted": 0,
+        "authenticity_conflicts": 0,
+        "authenticity_failed_or_invalid": 0,
+        "controls": 2,
+        "control_matches": 2
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "h01",
+      "condition": "direct",
+      "event_family": "osaka-dat-2023",
+      "role": "authenticity",
+      "variant": "original",
+      "cutoff_expected": "unresolved",
+      "future_expected": "contradicted",
+      "pipeline_success": true,
+      "formal_pipeline_success": true,
+      "citation_integrity": true,
+      "formal_evidence_valid": true,
+      "valid": true,
+      "observed": "unresolved",
+      "raw_verdict": "unresolved",
+      "error_count": 0,
+      "shape_valid": true,
+      "displayed_provenance_status": null,
+      "citation_count": 2,
+      "mechanisms": {
+        "accepted_revisit_executed": false,
+        "reanalysis_executed": false,
+        "verification_feedback_executed": false,
+        "both_loops_executed": false,
+        "recorded_analysis_changed": false
+      },
+      "clock_discrepancy": false,
+      "invalid_research_responses": 0,
+      "research_required_phases_completed": true,
+      "cutoff_match": true,
+      "formal_cutoff_match": true,
+      "formal_future_verdict_match": false,
+      "formal_abstained": true,
+      "future_verdict_match": false,
+      "abstained": true,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 1,
+      "usage": {
+        "attempts": 1,
+        "successful_calls": 1,
+        "known_usage_calls": 1,
+        "usage_complete": true,
+        "known_input_tokens": 25551,
+        "input_tokens": 25551,
+        "known_output_tokens": 237,
+        "output_tokens": 237,
+        "known_total_tokens": 25788,
+        "total_tokens": 25788,
+        "known_cached_input_tokens": 7552,
+        "known_cached_input_tokens_calls": 1,
+        "cached_input_tokens": 7552,
+        "known_reasoning_output_tokens": 0,
+        "known_reasoning_output_tokens_calls": 1,
+        "reasoning_output_tokens": 0
+      },
+      "explicit_future_years_in_final_prose": []
+    },
+    {
+      "id": "h01",
+      "condition": "news_tracing",
+      "event_family": "osaka-dat-2023",
+      "role": "authenticity",
+      "variant": "original",
+      "cutoff_expected": "unresolved",
+      "future_expected": "contradicted",
+      "pipeline_success": true,
+      "formal_pipeline_success": true,
+      "citation_integrity": true,
+      "formal_evidence_valid": true,
+      "valid": true,
+      "observed": "unresolved",
+      "raw_verdict": "unresolved",
+      "error_count": 0,
+      "shape_valid": true,
+      "displayed_provenance_status": "partial",
+      "citation_count": 2,
+      "mechanisms": {
+        "accepted_revisit_executed": true,
+        "reanalysis_executed": true,
+        "verification_feedback_executed": true,
+        "both_loops_executed": true,
+        "recorded_analysis_changed": true
+      },
+      "clock_discrepancy": false,
+      "invalid_research_responses": 0,
+      "research_required_phases_completed": true,
+      "cutoff_match": true,
+      "formal_cutoff_match": true,
+      "formal_future_verdict_match": false,
+      "formal_abstained": true,
+      "future_verdict_match": false,
+      "abstained": true,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 11,
+      "usage": {
+        "attempts": 11,
+        "successful_calls": 11,
+        "known_usage_calls": 11,
+        "usage_complete": true,
+        "known_input_tokens": 206268,
+        "input_tokens": 206268,
+        "known_output_tokens": 5090,
+        "output_tokens": 5090,
+        "known_total_tokens": 211358,
+        "total_tokens": 211358,
+        "known_cached_input_tokens": 15104,
+        "known_cached_input_tokens_calls": 11,
+        "cached_input_tokens": 15104,
+        "known_reasoning_output_tokens": 152,
+        "known_reasoning_output_tokens_calls": 11,
+        "reasoning_output_tokens": 152
+      },
+      "explicit_future_years_in_final_prose": []
+    },
+    {
+      "id": "h02",
+      "condition": "news_tracing",
+      "event_family": "osaka-dat-2023",
+      "role": "attribution_control",
+      "variant": "original",
+      "cutoff_expected": "supported",
+      "future_expected": "supported",
+      "pipeline_success": true,
+      "formal_pipeline_success": true,
+      "citation_integrity": true,
+      "formal_evidence_valid": true,
+      "valid": true,
+      "observed": "supported",
+      "raw_verdict": "supported",
+      "error_count": 0,
+      "shape_valid": true,
+      "displayed_provenance_status": "original_material_located",
+      "citation_count": 2,
+      "mechanisms": {
+        "accepted_revisit_executed": false,
+        "reanalysis_executed": false,
+        "verification_feedback_executed": false,
+        "both_loops_executed": false,
+        "recorded_analysis_changed": false
+      },
+      "clock_discrepancy": false,
+      "invalid_research_responses": 0,
+      "research_required_phases_completed": true,
+      "cutoff_match": true,
+      "formal_cutoff_match": true,
+      "formal_future_verdict_match": true,
+      "formal_abstained": false,
+      "future_verdict_match": true,
+      "abstained": false,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 5,
+      "usage": {
+        "attempts": 5,
+        "successful_calls": 5,
+        "known_usage_calls": 5,
+        "usage_complete": true,
+        "known_input_tokens": 70287,
+        "input_tokens": 70287,
+        "known_output_tokens": 1262,
+        "output_tokens": 1262,
+        "known_total_tokens": 71549,
+        "total_tokens": 71549,
+        "known_cached_input_tokens": 7936,
+        "known_cached_input_tokens_calls": 5,
+        "cached_input_tokens": 7936,
+        "known_reasoning_output_tokens": 118,
+        "known_reasoning_output_tokens_calls": 5,
+        "reasoning_output_tokens": 118
+      },
+      "explicit_future_years_in_final_prose": []
+    },
+    {
+      "id": "h02",
+      "condition": "direct",
+      "event_family": "osaka-dat-2023",
+      "role": "attribution_control",
+      "variant": "original",
+      "cutoff_expected": "supported",
+      "future_expected": "supported",
+      "pipeline_success": true,
+      "formal_pipeline_success": true,
+      "citation_integrity": true,
+      "formal_evidence_valid": true,
+      "valid": true,
+      "observed": "supported",
+      "raw_verdict": "supported",
+      "error_count": 0,
+      "shape_valid": true,
+      "displayed_provenance_status": null,
+      "citation_count": 2,
+      "mechanisms": {
+        "accepted_revisit_executed": false,
+        "reanalysis_executed": false,
+        "verification_feedback_executed": false,
+        "both_loops_executed": false,
+        "recorded_analysis_changed": false
+      },
+      "clock_discrepancy": false,
+      "invalid_research_responses": 0,
+      "research_required_phases_completed": true,
+      "cutoff_match": true,
+      "formal_cutoff_match": true,
+      "formal_future_verdict_match": true,
+      "formal_abstained": false,
+      "future_verdict_match": true,
+      "abstained": false,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 1,
+      "usage": {
+        "attempts": 1,
+        "successful_calls": 1,
+        "known_usage_calls": 1,
+        "usage_complete": true,
+        "known_input_tokens": 25529,
+        "input_tokens": 25529,
+        "known_output_tokens": 135,
+        "output_tokens": 135,
+        "known_total_tokens": 25664,
+        "total_tokens": 25664,
+        "known_cached_input_tokens": 0,
+        "known_cached_input_tokens_calls": 1,
+        "cached_input_tokens": 0,
+        "known_reasoning_output_tokens": 0,
+        "known_reasoning_output_tokens_calls": 1,
+        "reasoning_output_tokens": 0
+      },
+      "explicit_future_years_in_final_prose": []
+    },
+    {
+      "id": "h03",
+      "condition": "direct",
+      "event_family": "osaka-dat-2023",
+      "role": "authenticity",
+      "variant": "blinded",
+      "cutoff_expected": "unresolved",
+      "future_expected": "contradicted",
+      "pipeline_success": true,
+      "formal_pipeline_success": true,
+      "citation_integrity": true,
+      "formal_evidence_valid": true,
+      "valid": true,
+      "observed": "unresolved",
+      "raw_verdict": "unresolved",
+      "error_count": 0,
+      "shape_valid": true,
+      "displayed_provenance_status": null,
+      "citation_count": 2,
+      "mechanisms": {
+        "accepted_revisit_executed": false,
+        "reanalysis_executed": false,
+        "verification_feedback_executed": false,
+        "both_loops_executed": false,
+        "recorded_analysis_changed": false
+      },
+      "clock_discrepancy": false,
+      "invalid_research_responses": 0,
+      "research_required_phases_completed": true,
+      "cutoff_match": true,
+      "formal_cutoff_match": true,
+      "formal_future_verdict_match": false,
+      "formal_abstained": true,
+      "future_verdict_match": false,
+      "abstained": true,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 1,
+      "usage": {
+        "attempts": 1,
+        "successful_calls": 1,
+        "known_usage_calls": 1,
+        "usage_complete": true,
+        "known_input_tokens": 25536,
+        "input_tokens": 25536,
+        "known_output_tokens": 236,
+        "output_tokens": 236,
+        "known_total_tokens": 25772,
+        "total_tokens": 25772,
+        "known_cached_input_tokens": 7552,
+        "known_cached_input_tokens_calls": 1,
+        "cached_input_tokens": 7552,
+        "known_reasoning_output_tokens": 0,
+        "known_reasoning_output_tokens_calls": 1,
+        "reasoning_output_tokens": 0
+      },
+      "explicit_future_years_in_final_prose": []
+    },
+    {
+      "id": "h03",
+      "condition": "news_tracing",
+      "event_family": "osaka-dat-2023",
+      "role": "authenticity",
+      "variant": "blinded",
+      "cutoff_expected": "unresolved",
+      "future_expected": "contradicted",
+      "pipeline_success": true,
+      "formal_pipeline_success": true,
+      "citation_integrity": true,
+      "formal_evidence_valid": true,
+      "valid": true,
+      "observed": "unresolved",
+      "raw_verdict": "unresolved",
+      "error_count": 0,
+      "shape_valid": true,
+      "displayed_provenance_status": "partial",
+      "citation_count": 2,
+      "mechanisms": {
+        "accepted_revisit_executed": true,
+        "reanalysis_executed": true,
+        "verification_feedback_executed": true,
+        "both_loops_executed": true,
+        "recorded_analysis_changed": true
+      },
+      "clock_discrepancy": false,
+      "invalid_research_responses": 0,
+      "research_required_phases_completed": true,
+      "cutoff_match": true,
+      "formal_cutoff_match": true,
+      "formal_future_verdict_match": false,
+      "formal_abstained": true,
+      "future_verdict_match": false,
+      "abstained": true,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 11,
+      "usage": {
+        "attempts": 11,
+        "successful_calls": 11,
+        "known_usage_calls": 11,
+        "usage_complete": true,
+        "known_input_tokens": 207030,
+        "input_tokens": 207030,
+        "known_output_tokens": 5479,
+        "output_tokens": 5479,
+        "known_total_tokens": 212509,
+        "total_tokens": 212509,
+        "known_cached_input_tokens": 31232,
+        "known_cached_input_tokens_calls": 11,
+        "cached_input_tokens": 31232,
+        "known_reasoning_output_tokens": 240,
+        "known_reasoning_output_tokens_calls": 11,
+        "reasoning_output_tokens": 240
+      },
+      "explicit_future_years_in_final_prose": []
+    },
+    {
+      "id": "h04",
+      "condition": "news_tracing",
+      "event_family": "osaka-dat-2023",
+      "role": "attribution_control",
+      "variant": "blinded",
+      "cutoff_expected": "supported",
+      "future_expected": "supported",
+      "pipeline_success": true,
+      "formal_pipeline_success": true,
+      "citation_integrity": true,
+      "formal_evidence_valid": true,
+      "valid": true,
+      "observed": "supported",
+      "raw_verdict": "supported",
+      "error_count": 0,
+      "shape_valid": true,
+      "displayed_provenance_status": "original_material_located",
+      "citation_count": 2,
+      "mechanisms": {
+        "accepted_revisit_executed": false,
+        "reanalysis_executed": false,
+        "verification_feedback_executed": false,
+        "both_loops_executed": false,
+        "recorded_analysis_changed": false
+      },
+      "clock_discrepancy": false,
+      "invalid_research_responses": 0,
+      "research_required_phases_completed": true,
+      "cutoff_match": true,
+      "formal_cutoff_match": true,
+      "formal_future_verdict_match": true,
+      "formal_abstained": false,
+      "future_verdict_match": true,
+      "abstained": false,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 5,
+      "usage": {
+        "attempts": 5,
+        "successful_calls": 5,
+        "known_usage_calls": 5,
+        "usage_complete": true,
+        "known_input_tokens": 70069,
+        "input_tokens": 70069,
+        "known_output_tokens": 1149,
+        "output_tokens": 1149,
+        "known_total_tokens": 71218,
+        "total_tokens": 71218,
+        "known_cached_input_tokens": 0,
+        "known_cached_input_tokens_calls": 5,
+        "cached_input_tokens": 0,
+        "known_reasoning_output_tokens": 80,
+        "known_reasoning_output_tokens_calls": 5,
+        "reasoning_output_tokens": 80
+      },
+      "explicit_future_years_in_final_prose": []
+    },
+    {
+      "id": "h04",
+      "condition": "direct",
+      "event_family": "osaka-dat-2023",
+      "role": "attribution_control",
+      "variant": "blinded",
+      "cutoff_expected": "supported",
+      "future_expected": "supported",
+      "pipeline_success": true,
+      "formal_pipeline_success": true,
+      "citation_integrity": true,
+      "formal_evidence_valid": true,
+      "valid": true,
+      "observed": "supported",
+      "raw_verdict": "supported",
+      "error_count": 0,
+      "shape_valid": true,
+      "displayed_provenance_status": null,
+      "citation_count": 2,
+      "mechanisms": {
+        "accepted_revisit_executed": false,
+        "reanalysis_executed": false,
+        "verification_feedback_executed": false,
+        "both_loops_executed": false,
+        "recorded_analysis_changed": false
+      },
+      "clock_discrepancy": false,
+      "invalid_research_responses": 0,
+      "research_required_phases_completed": true,
+      "cutoff_match": true,
+      "formal_cutoff_match": true,
+      "formal_future_verdict_match": true,
+      "formal_abstained": false,
+      "future_verdict_match": true,
+      "abstained": false,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 1,
+      "usage": {
+        "attempts": 1,
+        "successful_calls": 1,
+        "known_usage_calls": 1,
+        "usage_complete": true,
+        "known_input_tokens": 25520,
+        "input_tokens": 25520,
+        "known_output_tokens": 167,
+        "output_tokens": 167,
+        "known_total_tokens": 25687,
+        "total_tokens": 25687,
+        "known_cached_input_tokens": 0,
+        "known_cached_input_tokens_calls": 1,
+        "cached_input_tokens": 0,
+        "known_reasoning_output_tokens": 0,
+        "known_reasoning_output_tokens_calls": 1,
+        "reasoning_output_tokens": 0
+      },
+      "explicit_future_years_in_final_prose": []
+    },
+    {
+      "id": "h05",
+      "condition": "direct",
+      "event_family": "hargreaves-metals-2017",
+      "role": "authenticity",
+      "variant": "original",
+      "cutoff_expected": "unresolved",
+      "future_expected": "contradicted",
+      "pipeline_success": true,
+      "formal_pipeline_success": true,
+      "citation_integrity": true,
+      "formal_evidence_valid": true,
+      "valid": true,
+      "observed": "unresolved",
+      "raw_verdict": "unresolved",
+      "error_count": 0,
+      "shape_valid": true,
+      "displayed_provenance_status": null,
+      "citation_count": 2,
+      "mechanisms": {
+        "accepted_revisit_executed": false,
+        "reanalysis_executed": false,
+        "verification_feedback_executed": false,
+        "both_loops_executed": false,
+        "recorded_analysis_changed": false
+      },
+      "clock_discrepancy": false,
+      "invalid_research_responses": 0,
+      "research_required_phases_completed": true,
+      "cutoff_match": true,
+      "formal_cutoff_match": true,
+      "formal_future_verdict_match": false,
+      "formal_abstained": true,
+      "future_verdict_match": false,
+      "abstained": true,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 1,
+      "usage": {
+        "attempts": 1,
+        "successful_calls": 1,
+        "known_usage_calls": 1,
+        "usage_complete": true,
+        "known_input_tokens": 20665,
+        "input_tokens": 20665,
+        "known_output_tokens": 188,
+        "output_tokens": 188,
+        "known_total_tokens": 20853,
+        "total_tokens": 20853,
+        "known_cached_input_tokens": 0,
+        "known_cached_input_tokens_calls": 1,
+        "cached_input_tokens": 0,
+        "known_reasoning_output_tokens": 0,
+        "known_reasoning_output_tokens_calls": 1,
+        "reasoning_output_tokens": 0
+      },
+      "explicit_future_years_in_final_prose": []
+    },
+    {
+      "id": "h05",
+      "condition": "news_tracing",
+      "event_family": "hargreaves-metals-2017",
+      "role": "authenticity",
+      "variant": "original",
+      "cutoff_expected": "unresolved",
+      "future_expected": "contradicted",
+      "pipeline_success": true,
+      "formal_pipeline_success": true,
+      "citation_integrity": true,
+      "formal_evidence_valid": true,
+      "valid": true,
+      "observed": "unresolved",
+      "raw_verdict": "unresolved",
+      "error_count": 0,
+      "shape_valid": true,
+      "displayed_provenance_status": "partial",
+      "citation_count": 2,
+      "mechanisms": {
+        "accepted_revisit_executed": true,
+        "reanalysis_executed": true,
+        "verification_feedback_executed": true,
+        "both_loops_executed": true,
+        "recorded_analysis_changed": true
+      },
+      "clock_discrepancy": false,
+      "invalid_research_responses": 0,
+      "research_required_phases_completed": true,
+      "cutoff_match": true,
+      "formal_cutoff_match": true,
+      "formal_future_verdict_match": false,
+      "formal_abstained": true,
+      "future_verdict_match": false,
+      "abstained": true,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 11,
+      "usage": {
+        "attempts": 11,
+        "successful_calls": 11,
+        "known_usage_calls": 11,
+        "usage_complete": true,
+        "known_input_tokens": 181889,
+        "input_tokens": 181889,
+        "known_output_tokens": 4730,
+        "output_tokens": 4730,
+        "known_total_tokens": 186619,
+        "total_tokens": 186619,
+        "known_cached_input_tokens": 15360,
+        "known_cached_input_tokens_calls": 11,
+        "cached_input_tokens": 15360,
+        "known_reasoning_output_tokens": 58,
+        "known_reasoning_output_tokens_calls": 11,
+        "reasoning_output_tokens": 58
+      },
+      "explicit_future_years_in_final_prose": []
+    },
+    {
+      "id": "h06",
+      "condition": "news_tracing",
+      "event_family": "hargreaves-metals-2017",
+      "role": "attribution_control",
+      "variant": "original",
+      "cutoff_expected": "supported",
+      "future_expected": "supported",
+      "pipeline_success": true,
+      "formal_pipeline_success": true,
+      "citation_integrity": true,
+      "formal_evidence_valid": true,
+      "valid": true,
+      "observed": "supported",
+      "raw_verdict": "supported",
+      "error_count": 0,
+      "shape_valid": true,
+      "displayed_provenance_status": "unresolved",
+      "citation_count": 1,
+      "mechanisms": {
+        "accepted_revisit_executed": true,
+        "reanalysis_executed": true,
+        "verification_feedback_executed": false,
+        "both_loops_executed": false,
+        "recorded_analysis_changed": true
+      },
+      "clock_discrepancy": false,
+      "invalid_research_responses": 0,
+      "research_required_phases_completed": true,
+      "cutoff_match": true,
+      "formal_cutoff_match": true,
+      "formal_future_verdict_match": true,
+      "formal_abstained": false,
+      "future_verdict_match": true,
+      "abstained": false,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 8,
+      "usage": {
+        "attempts": 8,
+        "successful_calls": 8,
+        "known_usage_calls": 8,
+        "usage_complete": true,
+        "known_input_tokens": 134781,
+        "input_tokens": 134781,
+        "known_output_tokens": 2837,
+        "output_tokens": 2837,
+        "known_total_tokens": 137618,
+        "total_tokens": 137618,
+        "known_cached_input_tokens": 23424,
+        "known_cached_input_tokens_calls": 8,
+        "cached_input_tokens": 23424,
+        "known_reasoning_output_tokens": 157,
+        "known_reasoning_output_tokens_calls": 8,
+        "reasoning_output_tokens": 157
+      },
+      "explicit_future_years_in_final_prose": []
+    },
+    {
+      "id": "h06",
+      "condition": "direct",
+      "event_family": "hargreaves-metals-2017",
+      "role": "attribution_control",
+      "variant": "original",
+      "cutoff_expected": "supported",
+      "future_expected": "supported",
+      "pipeline_success": true,
+      "formal_pipeline_success": true,
+      "citation_integrity": true,
+      "formal_evidence_valid": true,
+      "valid": true,
+      "observed": "supported",
+      "raw_verdict": "supported",
+      "error_count": 0,
+      "shape_valid": true,
+      "displayed_provenance_status": null,
+      "citation_count": 1,
+      "mechanisms": {
+        "accepted_revisit_executed": false,
+        "reanalysis_executed": false,
+        "verification_feedback_executed": false,
+        "both_loops_executed": false,
+        "recorded_analysis_changed": false
+      },
+      "clock_discrepancy": false,
+      "invalid_research_responses": 0,
+      "research_required_phases_completed": true,
+      "cutoff_match": true,
+      "formal_cutoff_match": true,
+      "formal_future_verdict_match": true,
+      "formal_abstained": false,
+      "future_verdict_match": true,
+      "abstained": false,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 1,
+      "usage": {
+        "attempts": 1,
+        "successful_calls": 1,
+        "known_usage_calls": 1,
+        "usage_complete": true,
+        "known_input_tokens": 20659,
+        "input_tokens": 20659,
+        "known_output_tokens": 106,
+        "output_tokens": 106,
+        "known_total_tokens": 20765,
+        "total_tokens": 20765,
+        "known_cached_input_tokens": 0,
+        "known_cached_input_tokens_calls": 1,
+        "cached_input_tokens": 0,
+        "known_reasoning_output_tokens": 0,
+        "known_reasoning_output_tokens_calls": 1,
+        "reasoning_output_tokens": 0
+      },
+      "explicit_future_years_in_final_prose": []
+    },
+    {
+      "id": "h07",
+      "condition": "direct",
+      "event_family": "hargreaves-metals-2017",
+      "role": "authenticity",
+      "variant": "blinded",
+      "cutoff_expected": "unresolved",
+      "future_expected": "contradicted",
+      "pipeline_success": true,
+      "formal_pipeline_success": true,
+      "citation_integrity": true,
+      "formal_evidence_valid": true,
+      "valid": true,
+      "observed": "unresolved",
+      "raw_verdict": "unresolved",
+      "error_count": 0,
+      "shape_valid": true,
+      "displayed_provenance_status": null,
+      "citation_count": 2,
+      "mechanisms": {
+        "accepted_revisit_executed": false,
+        "reanalysis_executed": false,
+        "verification_feedback_executed": false,
+        "both_loops_executed": false,
+        "recorded_analysis_changed": false
+      },
+      "clock_discrepancy": false,
+      "invalid_research_responses": 0,
+      "research_required_phases_completed": true,
+      "cutoff_match": true,
+      "formal_cutoff_match": true,
+      "formal_future_verdict_match": false,
+      "formal_abstained": true,
+      "future_verdict_match": false,
+      "abstained": true,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 1,
+      "usage": {
+        "attempts": 1,
+        "successful_calls": 1,
+        "known_usage_calls": 1,
+        "usage_complete": true,
+        "known_input_tokens": 20501,
+        "input_tokens": 20501,
+        "known_output_tokens": 204,
+        "output_tokens": 204,
+        "known_total_tokens": 20705,
+        "total_tokens": 20705,
+        "known_cached_input_tokens": 7552,
+        "known_cached_input_tokens_calls": 1,
+        "cached_input_tokens": 7552,
+        "known_reasoning_output_tokens": 0,
+        "known_reasoning_output_tokens_calls": 1,
+        "reasoning_output_tokens": 0
+      },
+      "explicit_future_years_in_final_prose": []
+    },
+    {
+      "id": "h07",
+      "condition": "news_tracing",
+      "event_family": "hargreaves-metals-2017",
+      "role": "authenticity",
+      "variant": "blinded",
+      "cutoff_expected": "unresolved",
+      "future_expected": "contradicted",
+      "pipeline_success": true,
+      "formal_pipeline_success": true,
+      "citation_integrity": true,
+      "formal_evidence_valid": true,
+      "valid": true,
+      "observed": "unresolved",
+      "raw_verdict": "unresolved",
+      "error_count": 0,
+      "shape_valid": true,
+      "displayed_provenance_status": "partial",
+      "citation_count": 2,
+      "mechanisms": {
+        "accepted_revisit_executed": true,
+        "reanalysis_executed": true,
+        "verification_feedback_executed": true,
+        "both_loops_executed": true,
+        "recorded_analysis_changed": true
+      },
+      "clock_discrepancy": false,
+      "invalid_research_responses": 0,
+      "research_required_phases_completed": true,
+      "cutoff_match": true,
+      "formal_cutoff_match": true,
+      "formal_future_verdict_match": false,
+      "formal_abstained": true,
+      "future_verdict_match": false,
+      "abstained": true,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 11,
+      "usage": {
+        "attempts": 11,
+        "successful_calls": 11,
+        "known_usage_calls": 11,
+        "usage_complete": true,
+        "known_input_tokens": 180554,
+        "input_tokens": 180554,
+        "known_output_tokens": 4849,
+        "output_tokens": 4849,
+        "known_total_tokens": 185403,
+        "total_tokens": 185403,
+        "known_cached_input_tokens": 38656,
+        "known_cached_input_tokens_calls": 11,
+        "cached_input_tokens": 38656,
+        "known_reasoning_output_tokens": 213,
+        "known_reasoning_output_tokens_calls": 11,
+        "reasoning_output_tokens": 213
+      },
+      "explicit_future_years_in_final_prose": []
+    },
+    {
+      "id": "h08",
+      "condition": "news_tracing",
+      "event_family": "hargreaves-metals-2017",
+      "role": "attribution_control",
+      "variant": "blinded",
+      "cutoff_expected": "supported",
+      "future_expected": "supported",
+      "pipeline_success": true,
+      "formal_pipeline_success": true,
+      "citation_integrity": true,
+      "formal_evidence_valid": true,
+      "valid": true,
+      "observed": "supported",
+      "raw_verdict": "supported",
+      "error_count": 0,
+      "shape_valid": true,
+      "displayed_provenance_status": "unresolved",
+      "citation_count": 1,
+      "mechanisms": {
+        "accepted_revisit_executed": true,
+        "reanalysis_executed": true,
+        "verification_feedback_executed": false,
+        "both_loops_executed": false,
+        "recorded_analysis_changed": true
+      },
+      "clock_discrepancy": false,
+      "invalid_research_responses": 0,
+      "research_required_phases_completed": true,
+      "cutoff_match": true,
+      "formal_cutoff_match": true,
+      "formal_future_verdict_match": true,
+      "formal_abstained": false,
+      "future_verdict_match": true,
+      "abstained": false,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 8,
+      "usage": {
+        "attempts": 8,
+        "successful_calls": 8,
+        "known_usage_calls": 8,
+        "usage_complete": true,
+        "known_input_tokens": 134075,
+        "input_tokens": 134075,
+        "known_output_tokens": 2801,
+        "output_tokens": 2801,
+        "known_total_tokens": 136876,
+        "total_tokens": 136876,
+        "known_cached_input_tokens": 46720,
+        "known_cached_input_tokens_calls": 8,
+        "cached_input_tokens": 46720,
+        "known_reasoning_output_tokens": 169,
+        "known_reasoning_output_tokens_calls": 8,
+        "reasoning_output_tokens": 169
+      },
+      "explicit_future_years_in_final_prose": []
+    },
+    {
+      "id": "h08",
+      "condition": "direct",
+      "event_family": "hargreaves-metals-2017",
+      "role": "attribution_control",
+      "variant": "blinded",
+      "cutoff_expected": "supported",
+      "future_expected": "supported",
+      "pipeline_success": true,
+      "formal_pipeline_success": true,
+      "citation_integrity": true,
+      "formal_evidence_valid": true,
+      "valid": true,
+      "observed": "supported",
+      "raw_verdict": "supported",
+      "error_count": 0,
+      "shape_valid": true,
+      "displayed_provenance_status": null,
+      "citation_count": 1,
+      "mechanisms": {
+        "accepted_revisit_executed": false,
+        "reanalysis_executed": false,
+        "verification_feedback_executed": false,
+        "both_loops_executed": false,
+        "recorded_analysis_changed": false
+      },
+      "clock_discrepancy": false,
+      "invalid_research_responses": 0,
+      "research_required_phases_completed": true,
+      "cutoff_match": true,
+      "formal_cutoff_match": true,
+      "formal_future_verdict_match": true,
+      "formal_abstained": false,
+      "future_verdict_match": true,
+      "abstained": false,
+      "accepted_later_false_claim": false,
+      "called_later_false_claim_false": false,
+      "unwarranted_settled_cutoff_verdict": false,
+      "logical_calls": 1,
+      "usage": {
+        "attempts": 1,
+        "successful_calls": 1,
+        "known_usage_calls": 1,
+        "usage_complete": true,
+        "known_input_tokens": 20543,
+        "input_tokens": 20543,
+        "known_output_tokens": 108,
+        "output_tokens": 108,
+        "known_total_tokens": 20651,
+        "total_tokens": 20651,
+        "known_cached_input_tokens": 0,
+        "known_cached_input_tokens_calls": 1,
+        "cached_input_tokens": 0,
+        "known_reasoning_output_tokens": 0,
+        "known_reasoning_output_tokens_calls": 1,
+        "reasoning_output_tokens": 0
+      },
+      "explicit_future_years_in_final_prose": []
+    }
+  ],
+  "stages": [
+    {
+      "condition": "direct",
+      "stage": "direct",
+      "phase": "direct",
+      "attempts": 8,
+      "successful_calls": 8,
+      "known_usage_calls": 8,
+      "usage_complete": true,
+      "known_input_tokens": 184504,
+      "input_tokens": 184504,
+      "known_output_tokens": 1381,
+      "output_tokens": 1381,
+      "known_total_tokens": 185885,
+      "total_tokens": 185885,
+      "known_cached_input_tokens": 22656,
+      "known_cached_input_tokens_calls": 8,
+      "cached_input_tokens": 22656,
+      "known_reasoning_output_tokens": 0,
+      "known_reasoning_output_tokens_calls": 8,
+      "reasoning_output_tokens": 0
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "decompose",
+      "phase": "formal",
+      "attempts": 20,
+      "successful_calls": 20,
+      "known_usage_calls": 20,
+      "usage_complete": true,
+      "known_input_tokens": 394100,
+      "input_tokens": 394100,
+      "known_output_tokens": 17427,
+      "output_tokens": 17427,
+      "known_total_tokens": 411527,
+      "total_tokens": 411527,
+      "known_cached_input_tokens": 79360,
+      "known_cached_input_tokens_calls": 20,
+      "cached_input_tokens": 79360,
+      "known_reasoning_output_tokens": 1089,
+      "known_reasoning_output_tokens_calls": 20,
+      "reasoning_output_tokens": 1089
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "deconstruct",
+      "phase": "research",
+      "attempts": 8,
+      "successful_calls": 8,
+      "known_usage_calls": 8,
+      "usage_complete": true,
+      "known_input_tokens": 118538,
+      "input_tokens": 118538,
+      "known_output_tokens": 1067,
+      "output_tokens": 1067,
+      "known_total_tokens": 119605,
+      "total_tokens": 119605,
+      "known_cached_input_tokens": 22656,
+      "known_cached_input_tokens_calls": 8,
+      "cached_input_tokens": 22656,
+      "known_reasoning_output_tokens": 0,
+      "known_reasoning_output_tokens_calls": 8,
+      "reasoning_output_tokens": 0
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "search_plan",
+      "phase": "research",
+      "attempts": 8,
+      "successful_calls": 8,
+      "known_usage_calls": 8,
+      "usage_complete": true,
+      "known_input_tokens": 118915,
+      "input_tokens": 118915,
+      "known_output_tokens": 832,
+      "output_tokens": 832,
+      "known_total_tokens": 119747,
+      "total_tokens": 119747,
+      "known_cached_input_tokens": 7552,
+      "known_cached_input_tokens_calls": 8,
+      "cached_input_tokens": 7552,
+      "known_reasoning_output_tokens": 98,
+      "known_reasoning_output_tokens_calls": 8,
+      "reasoning_output_tokens": 98
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "source_trace",
+      "phase": "research",
+      "attempts": 8,
+      "successful_calls": 8,
+      "known_usage_calls": 8,
+      "usage_complete": true,
+      "known_input_tokens": 119498,
+      "input_tokens": 119498,
+      "known_output_tokens": 2841,
+      "output_tokens": 2841,
+      "known_total_tokens": 122339,
+      "total_tokens": 122339,
+      "known_cached_input_tokens": 7552,
+      "known_cached_input_tokens_calls": 8,
+      "cached_input_tokens": 7552,
+      "known_reasoning_output_tokens": 0,
+      "known_reasoning_output_tokens_calls": 8,
+      "reasoning_output_tokens": 0
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "source_verify",
+      "phase": "research",
+      "attempts": 4,
+      "successful_calls": 4,
+      "known_usage_calls": 4,
+      "usage_complete": true,
+      "known_input_tokens": 62498,
+      "input_tokens": 62498,
+      "known_output_tokens": 635,
+      "output_tokens": 635,
+      "known_total_tokens": 63133,
+      "total_tokens": 63133,
+      "known_cached_input_tokens": 0,
+      "known_cached_input_tokens_calls": 4,
+      "cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "known_reasoning_output_tokens_calls": 4,
+      "reasoning_output_tokens": 0
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "synthesis",
+      "phase": "research",
+      "attempts": 8,
+      "successful_calls": 8,
+      "known_usage_calls": 8,
+      "usage_complete": true,
+      "known_input_tokens": 125246,
+      "input_tokens": 125246,
+      "known_output_tokens": 2282,
+      "output_tokens": 2282,
+      "known_total_tokens": 127528,
+      "total_tokens": 127528,
+      "known_cached_input_tokens": 7552,
+      "known_cached_input_tokens_calls": 8,
+      "cached_input_tokens": 7552,
+      "known_reasoning_output_tokens": 0,
+      "known_reasoning_output_tokens_calls": 8,
+      "reasoning_output_tokens": 0
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "verify",
+      "phase": "formal",
+      "attempts": 14,
+      "successful_calls": 14,
+      "known_usage_calls": 14,
+      "usage_complete": true,
+      "known_input_tokens": 246158,
+      "input_tokens": 246158,
+      "known_output_tokens": 3113,
+      "output_tokens": 3113,
+      "known_total_tokens": 249271,
+      "total_tokens": 249271,
+      "known_cached_input_tokens": 53760,
+      "known_cached_input_tokens_calls": 14,
+      "cached_input_tokens": 53760,
+      "known_reasoning_output_tokens": 0,
+      "known_reasoning_output_tokens_calls": 14,
+      "reasoning_output_tokens": 0
+    }
+  ],
+  "source_metadata": [
+    {
+      "case_id": "h01",
+      "version_id": "v1",
+      "canonical_url": "https://doi.org/10.1073/pnas.2308260120",
+      "content_sha256": "53c648815b8267a431aed8f5b1e7a16b4141cbf1d9259d4eb8b69ac68ad1d2f4",
+      "available_at": "2023-12-06T11:59:59Z"
+    },
+    {
+      "case_id": "h01",
+      "version_id": "v2",
+      "canonical_url": "https://doi.org/10.1073/pnas.2308260120",
+      "content_sha256": "94cd9e31be4261a7795cfa4bda5a033e80828094e6f69e5e9fa8d4103e2ea6ce",
+      "available_at": "2023-12-06T11:59:59Z"
+    },
+    {
+      "case_id": "h02",
+      "version_id": "v1",
+      "canonical_url": "https://doi.org/10.1073/pnas.2308260120",
+      "content_sha256": "53c648815b8267a431aed8f5b1e7a16b4141cbf1d9259d4eb8b69ac68ad1d2f4",
+      "available_at": "2023-12-06T11:59:59Z"
+    },
+    {
+      "case_id": "h02",
+      "version_id": "v2",
+      "canonical_url": "https://doi.org/10.1073/pnas.2308260120",
+      "content_sha256": "94cd9e31be4261a7795cfa4bda5a033e80828094e6f69e5e9fa8d4103e2ea6ce",
+      "available_at": "2023-12-06T11:59:59Z"
+    },
+    {
+      "case_id": "h03",
+      "version_id": "v1",
+      "canonical_url": "https://historical-record.invalid/article-a",
+      "content_sha256": "54d5fcc1c0acdb667f1bd38ca99dc090b4f60668324a9cc773c37d7cedd49d0f",
+      "available_at": "2023-12-06T11:59:59Z"
+    },
+    {
+      "case_id": "h03",
+      "version_id": "v2",
+      "canonical_url": "https://historical-record.invalid/article-a",
+      "content_sha256": "d03bf2fcad35fe442550b7efc933f20c349bb99f485a2df03015cbeb491800d2",
+      "available_at": "2023-12-06T11:59:59Z"
+    },
+    {
+      "case_id": "h04",
+      "version_id": "v1",
+      "canonical_url": "https://historical-record.invalid/article-a",
+      "content_sha256": "54d5fcc1c0acdb667f1bd38ca99dc090b4f60668324a9cc773c37d7cedd49d0f",
+      "available_at": "2023-12-06T11:59:59Z"
+    },
+    {
+      "case_id": "h04",
+      "version_id": "v2",
+      "canonical_url": "https://historical-record.invalid/article-a",
+      "content_sha256": "d03bf2fcad35fe442550b7efc933f20c349bb99f485a2df03015cbeb491800d2",
+      "available_at": "2023-12-06T11:59:59Z"
+    },
+    {
+      "case_id": "h05",
+      "version_id": "v1",
+      "canonical_url": "https://doi.org/10.1016/j.chemosphere.2017.02.034",
+      "content_sha256": "e88ff2bf66a1b8573c290e399c0a29376e8ac9d98eb7163e72bf205db1b45a70",
+      "available_at": "2020-03-09T04:28:50Z"
+    },
+    {
+      "case_id": "h05",
+      "version_id": "v2",
+      "canonical_url": "https://doi.org/10.1016/j.chemosphere.2017.02.034",
+      "content_sha256": "da06f95e45db1df845d03fa08630b1a1adf5ff5a7acd449c73df8009c756ad23",
+      "available_at": "2020-03-09T04:28:50Z"
+    },
+    {
+      "case_id": "h06",
+      "version_id": "v1",
+      "canonical_url": "https://doi.org/10.1016/j.chemosphere.2017.02.034",
+      "content_sha256": "e88ff2bf66a1b8573c290e399c0a29376e8ac9d98eb7163e72bf205db1b45a70",
+      "available_at": "2020-03-09T04:28:50Z"
+    },
+    {
+      "case_id": "h06",
+      "version_id": "v2",
+      "canonical_url": "https://doi.org/10.1016/j.chemosphere.2017.02.034",
+      "content_sha256": "da06f95e45db1df845d03fa08630b1a1adf5ff5a7acd449c73df8009c756ad23",
+      "available_at": "2020-03-09T04:28:50Z"
+    },
+    {
+      "case_id": "h07",
+      "version_id": "v1",
+      "canonical_url": "https://historical-record.invalid/article-b",
+      "content_sha256": "b206355c17eec0192f829b6a60a886b971f87321b06b18967895a21bb6dbfe3d",
+      "available_at": "2020-03-09T04:28:50Z"
+    },
+    {
+      "case_id": "h07",
+      "version_id": "v2",
+      "canonical_url": "https://historical-record.invalid/article-b",
+      "content_sha256": "66b706c4abc6f6992f5430815de56bee97489f83e9f20bea53ae143812ccd81f",
+      "available_at": "2020-03-09T04:28:50Z"
+    },
+    {
+      "case_id": "h08",
+      "version_id": "v1",
+      "canonical_url": "https://historical-record.invalid/article-b",
+      "content_sha256": "b206355c17eec0192f829b6a60a886b971f87321b06b18967895a21bb6dbfe3d",
+      "available_at": "2020-03-09T04:28:50Z"
+    },
+    {
+      "case_id": "h08",
+      "version_id": "v2",
+      "canonical_url": "https://historical-record.invalid/article-b",
+      "content_sha256": "66b706c4abc6f6992f5430815de56bee97489f83e9f20bea53ae143812ccd81f",
+      "available_at": "2020-03-09T04:28:50Z"
+    }
+  ],
+  "exposure": [
+    {
+      "receipt_id": "h01:direct:01",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h01:news_tracing:01",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 2622,
+          "content_start": 0,
+          "content_end": 2622,
+          "text_sha256": "53c648815b8267a431aed8f5b1e7a16b4141cbf1d9259d4eb8b69ac68ad1d2f4"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "06094f588ec46266ca79f2634ecb36b340a76aadfc29b23e46fa47fd978a9bfb"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h01:news_tracing:02",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 2622,
+          "content_start": 0,
+          "content_end": 2622,
+          "text_sha256": "53c648815b8267a431aed8f5b1e7a16b4141cbf1d9259d4eb8b69ac68ad1d2f4"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "06094f588ec46266ca79f2634ecb36b340a76aadfc29b23e46fa47fd978a9bfb"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h01:news_tracing:03",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 2622,
+          "content_start": 0,
+          "content_end": 2622,
+          "text_sha256": "53c648815b8267a431aed8f5b1e7a16b4141cbf1d9259d4eb8b69ac68ad1d2f4"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "06094f588ec46266ca79f2634ecb36b340a76aadfc29b23e46fa47fd978a9bfb"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h01:news_tracing:04",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 2622,
+          "content_start": 0,
+          "content_end": 2622,
+          "text_sha256": "53c648815b8267a431aed8f5b1e7a16b4141cbf1d9259d4eb8b69ac68ad1d2f4"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "06094f588ec46266ca79f2634ecb36b340a76aadfc29b23e46fa47fd978a9bfb"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h01:news_tracing:05",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 2622,
+          "content_start": 0,
+          "content_end": 2622,
+          "text_sha256": "53c648815b8267a431aed8f5b1e7a16b4141cbf1d9259d4eb8b69ac68ad1d2f4"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "06094f588ec46266ca79f2634ecb36b340a76aadfc29b23e46fa47fd978a9bfb"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h01:news_tracing:06",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 2622,
+          "content_start": 0,
+          "content_end": 2622,
+          "text_sha256": "53c648815b8267a431aed8f5b1e7a16b4141cbf1d9259d4eb8b69ac68ad1d2f4"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "06094f588ec46266ca79f2634ecb36b340a76aadfc29b23e46fa47fd978a9bfb"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h01:news_tracing:07",
+      "full_material_ids": [
+        "v1"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h01:news_tracing:08",
+      "full_material_ids": [
+        "v1"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h01:news_tracing:09",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h01:news_tracing:10",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h01:news_tracing:11",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h02:news_tracing:01",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 2622,
+          "content_start": 0,
+          "content_end": 2622,
+          "text_sha256": "53c648815b8267a431aed8f5b1e7a16b4141cbf1d9259d4eb8b69ac68ad1d2f4"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "06094f588ec46266ca79f2634ecb36b340a76aadfc29b23e46fa47fd978a9bfb"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h02:news_tracing:02",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 2622,
+          "content_start": 0,
+          "content_end": 2622,
+          "text_sha256": "53c648815b8267a431aed8f5b1e7a16b4141cbf1d9259d4eb8b69ac68ad1d2f4"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "06094f588ec46266ca79f2634ecb36b340a76aadfc29b23e46fa47fd978a9bfb"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h02:news_tracing:03",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 2622,
+          "content_start": 0,
+          "content_end": 2622,
+          "text_sha256": "53c648815b8267a431aed8f5b1e7a16b4141cbf1d9259d4eb8b69ac68ad1d2f4"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "06094f588ec46266ca79f2634ecb36b340a76aadfc29b23e46fa47fd978a9bfb"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h02:news_tracing:04",
+      "full_material_ids": [
+        "v1"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h02:news_tracing:05",
+      "full_material_ids": [
+        "v1"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h02:direct:01",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h03:direct:01",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h03:news_tracing:01",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 2631,
+          "content_start": 0,
+          "content_end": 2631,
+          "text_sha256": "54d5fcc1c0acdb667f1bd38ca99dc090b4f60668324a9cc773c37d7cedd49d0f"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "526f593b64123384ca2222eda79d4277356c08abc261e8a2b2626ed049ecc952"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h03:news_tracing:02",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 2631,
+          "content_start": 0,
+          "content_end": 2631,
+          "text_sha256": "54d5fcc1c0acdb667f1bd38ca99dc090b4f60668324a9cc773c37d7cedd49d0f"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "526f593b64123384ca2222eda79d4277356c08abc261e8a2b2626ed049ecc952"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h03:news_tracing:03",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 2631,
+          "content_start": 0,
+          "content_end": 2631,
+          "text_sha256": "54d5fcc1c0acdb667f1bd38ca99dc090b4f60668324a9cc773c37d7cedd49d0f"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "526f593b64123384ca2222eda79d4277356c08abc261e8a2b2626ed049ecc952"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h03:news_tracing:04",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 2631,
+          "content_start": 0,
+          "content_end": 2631,
+          "text_sha256": "54d5fcc1c0acdb667f1bd38ca99dc090b4f60668324a9cc773c37d7cedd49d0f"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "526f593b64123384ca2222eda79d4277356c08abc261e8a2b2626ed049ecc952"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h03:news_tracing:05",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 2631,
+          "content_start": 0,
+          "content_end": 2631,
+          "text_sha256": "54d5fcc1c0acdb667f1bd38ca99dc090b4f60668324a9cc773c37d7cedd49d0f"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "526f593b64123384ca2222eda79d4277356c08abc261e8a2b2626ed049ecc952"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h03:news_tracing:06",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 2631,
+          "content_start": 0,
+          "content_end": 2631,
+          "text_sha256": "54d5fcc1c0acdb667f1bd38ca99dc090b4f60668324a9cc773c37d7cedd49d0f"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "526f593b64123384ca2222eda79d4277356c08abc261e8a2b2626ed049ecc952"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h03:news_tracing:07",
+      "full_material_ids": [
+        "v1"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h03:news_tracing:08",
+      "full_material_ids": [
+        "v1"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h03:news_tracing:09",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h03:news_tracing:10",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h03:news_tracing:11",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h04:news_tracing:01",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 2631,
+          "content_start": 0,
+          "content_end": 2631,
+          "text_sha256": "54d5fcc1c0acdb667f1bd38ca99dc090b4f60668324a9cc773c37d7cedd49d0f"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "526f593b64123384ca2222eda79d4277356c08abc261e8a2b2626ed049ecc952"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h04:news_tracing:02",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 2631,
+          "content_start": 0,
+          "content_end": 2631,
+          "text_sha256": "54d5fcc1c0acdb667f1bd38ca99dc090b4f60668324a9cc773c37d7cedd49d0f"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "526f593b64123384ca2222eda79d4277356c08abc261e8a2b2626ed049ecc952"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h04:news_tracing:03",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 2631,
+          "content_start": 0,
+          "content_end": 2631,
+          "text_sha256": "54d5fcc1c0acdb667f1bd38ca99dc090b4f60668324a9cc773c37d7cedd49d0f"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "526f593b64123384ca2222eda79d4277356c08abc261e8a2b2626ed049ecc952"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h04:news_tracing:04",
+      "full_material_ids": [
+        "v1"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h04:news_tracing:05",
+      "full_material_ids": [
+        "v1"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h04:direct:01",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h05:direct:01",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h05:news_tracing:01",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 1349,
+          "content_start": 0,
+          "content_end": 1349,
+          "text_sha256": "e88ff2bf66a1b8573c290e399c0a29376e8ac9d98eb7163e72bf205db1b45a70"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "2fb1f4b41d3b011e8aba8822b15ad582264fe4ede55f69957d69e60f9387e808"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h05:news_tracing:02",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 1349,
+          "content_start": 0,
+          "content_end": 1349,
+          "text_sha256": "e88ff2bf66a1b8573c290e399c0a29376e8ac9d98eb7163e72bf205db1b45a70"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "2fb1f4b41d3b011e8aba8822b15ad582264fe4ede55f69957d69e60f9387e808"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h05:news_tracing:03",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 1349,
+          "content_start": 0,
+          "content_end": 1349,
+          "text_sha256": "e88ff2bf66a1b8573c290e399c0a29376e8ac9d98eb7163e72bf205db1b45a70"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "2fb1f4b41d3b011e8aba8822b15ad582264fe4ede55f69957d69e60f9387e808"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h05:news_tracing:04",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 1349,
+          "content_start": 0,
+          "content_end": 1349,
+          "text_sha256": "e88ff2bf66a1b8573c290e399c0a29376e8ac9d98eb7163e72bf205db1b45a70"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "2fb1f4b41d3b011e8aba8822b15ad582264fe4ede55f69957d69e60f9387e808"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h05:news_tracing:05",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 1349,
+          "content_start": 0,
+          "content_end": 1349,
+          "text_sha256": "e88ff2bf66a1b8573c290e399c0a29376e8ac9d98eb7163e72bf205db1b45a70"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "2fb1f4b41d3b011e8aba8822b15ad582264fe4ede55f69957d69e60f9387e808"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h05:news_tracing:06",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 1349,
+          "content_start": 0,
+          "content_end": 1349,
+          "text_sha256": "e88ff2bf66a1b8573c290e399c0a29376e8ac9d98eb7163e72bf205db1b45a70"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "2fb1f4b41d3b011e8aba8822b15ad582264fe4ede55f69957d69e60f9387e808"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h05:news_tracing:07",
+      "full_material_ids": [
+        "v1"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:08",
+      "full_material_ids": [
+        "v1"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:09",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:10",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:11",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h06:news_tracing:01",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 1349,
+          "content_start": 0,
+          "content_end": 1349,
+          "text_sha256": "e88ff2bf66a1b8573c290e399c0a29376e8ac9d98eb7163e72bf205db1b45a70"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "2fb1f4b41d3b011e8aba8822b15ad582264fe4ede55f69957d69e60f9387e808"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h06:news_tracing:02",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 1349,
+          "content_start": 0,
+          "content_end": 1349,
+          "text_sha256": "e88ff2bf66a1b8573c290e399c0a29376e8ac9d98eb7163e72bf205db1b45a70"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "2fb1f4b41d3b011e8aba8822b15ad582264fe4ede55f69957d69e60f9387e808"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h06:news_tracing:03",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 1349,
+          "content_start": 0,
+          "content_end": 1349,
+          "text_sha256": "e88ff2bf66a1b8573c290e399c0a29376e8ac9d98eb7163e72bf205db1b45a70"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "2fb1f4b41d3b011e8aba8822b15ad582264fe4ede55f69957d69e60f9387e808"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h06:news_tracing:04",
+      "full_material_ids": [
+        "v1"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h06:news_tracing:05",
+      "full_material_ids": [
+        "v1"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h06:news_tracing:06",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h06:news_tracing:07",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h06:news_tracing:08",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h06:direct:01",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h07:direct:01",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h07:news_tracing:01",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 1323,
+          "content_start": 0,
+          "content_end": 1323,
+          "text_sha256": "b206355c17eec0192f829b6a60a886b971f87321b06b18967895a21bb6dbfe3d"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "0029d32089d280ebae1074e69e4a105ebed8e2f5c72c4c72766b725351160e24"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h07:news_tracing:02",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 1323,
+          "content_start": 0,
+          "content_end": 1323,
+          "text_sha256": "b206355c17eec0192f829b6a60a886b971f87321b06b18967895a21bb6dbfe3d"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "0029d32089d280ebae1074e69e4a105ebed8e2f5c72c4c72766b725351160e24"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h07:news_tracing:03",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 1323,
+          "content_start": 0,
+          "content_end": 1323,
+          "text_sha256": "b206355c17eec0192f829b6a60a886b971f87321b06b18967895a21bb6dbfe3d"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "0029d32089d280ebae1074e69e4a105ebed8e2f5c72c4c72766b725351160e24"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h07:news_tracing:04",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 1323,
+          "content_start": 0,
+          "content_end": 1323,
+          "text_sha256": "b206355c17eec0192f829b6a60a886b971f87321b06b18967895a21bb6dbfe3d"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "0029d32089d280ebae1074e69e4a105ebed8e2f5c72c4c72766b725351160e24"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h07:news_tracing:05",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 1323,
+          "content_start": 0,
+          "content_end": 1323,
+          "text_sha256": "b206355c17eec0192f829b6a60a886b971f87321b06b18967895a21bb6dbfe3d"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "0029d32089d280ebae1074e69e4a105ebed8e2f5c72c4c72766b725351160e24"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h07:news_tracing:06",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 1323,
+          "content_start": 0,
+          "content_end": 1323,
+          "text_sha256": "b206355c17eec0192f829b6a60a886b971f87321b06b18967895a21bb6dbfe3d"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "0029d32089d280ebae1074e69e4a105ebed8e2f5c72c4c72766b725351160e24"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h07:news_tracing:07",
+      "full_material_ids": [
+        "v1"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h07:news_tracing:08",
+      "full_material_ids": [
+        "v1"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h07:news_tracing:09",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h07:news_tracing:10",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h07:news_tracing:11",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h08:news_tracing:01",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 1323,
+          "content_start": 0,
+          "content_end": 1323,
+          "text_sha256": "b206355c17eec0192f829b6a60a886b971f87321b06b18967895a21bb6dbfe3d"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "0029d32089d280ebae1074e69e4a105ebed8e2f5c72c4c72766b725351160e24"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h08:news_tracing:02",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 1323,
+          "content_start": 0,
+          "content_end": 1323,
+          "text_sha256": "b206355c17eec0192f829b6a60a886b971f87321b06b18967895a21bb6dbfe3d"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "0029d32089d280ebae1074e69e4a105ebed8e2f5c72c4c72766b725351160e24"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h08:news_tracing:03",
+      "full_material_ids": [],
+      "catalog_preview_ids": [],
+      "research_excerpts": [
+        {
+          "matching_version_ids": [
+            "v1"
+          ],
+          "characters": 1323,
+          "content_start": 0,
+          "content_end": 1323,
+          "text_sha256": "b206355c17eec0192f829b6a60a886b971f87321b06b18967895a21bb6dbfe3d"
+        },
+        {
+          "matching_version_ids": [
+            "v2"
+          ],
+          "characters": 16000,
+          "content_start": 0,
+          "content_end": 16000,
+          "text_sha256": "0029d32089d280ebae1074e69e4a105ebed8e2f5c72c4c72766b725351160e24"
+        }
+      ],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    },
+    {
+      "receipt_id": "h08:news_tracing:04",
+      "full_material_ids": [
+        "v1"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h08:news_tracing:05",
+      "full_material_ids": [
+        "v1"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h08:news_tracing:06",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h08:news_tracing:07",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h08:news_tracing:08",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": true
+    },
+    {
+      "receipt_id": "h08:direct:01",
+      "full_material_ids": [
+        "v1",
+        "v2"
+      ],
+      "catalog_preview_ids": [],
+      "research_excerpts": [],
+      "canonical_materials_only": true,
+      "untrusted_research_advice_present": false
+    }
+  ],
+  "manifest_sha256": "325fd7c8010bac274e0459e58957d41030f59f36ebef16107579fd6fe8076d28",
+  "registration_sha256": "0612a229b9ff9aa63221277eb0c09744952dae8a590cc322a389196c547585b7",
+  "corpus_sha256": "b5ad5c900145a7a5b208fe8752c1051119d2be18bfa45ececd4d025f6dcf2826",
+  "gold_sha256": "b2b10af8b6c3018088ead31a5b0ab91f91f6c6e000903f0cf67c5679b30d328a",
+  "scorer_sha256": "41c9231559c68fc359be0985ca551a4f4a194f94ea29bc9e66ef5384fb742e47",
+  "helper_sha256": "f5524ee1a92bb5be07d8148477e416d6a11db2ab82cf41ef4ffbf116649e771f",
+  "frozen_input_checks_passed": true,
+  "scope": {
+    "primary_validity_requires_all_research_and_formal_stages_successful": true,
+    "formal_validity_is_a_separate_diagnostic": true,
+    "future_gold_parsed_after_all_request_audits": true,
+    "model_memory_erased": false,
+    "independent_held_out_accuracy": false,
+    "development_cases_previously_observed": true,
+    "confirmation_is_same_family_sensitivity_not_external_validation": true,
+    "equal_token_budget": false,
+    "source_bytes_or_model_prose_published": false,
+    "direct_baseline": "Skill-free local Codex Astra receiving the entire canonical pool; not raw model weights.",
+    "research_evidence": "Every eligible source version remains visible with exact prefix offsets; fair allocation up to 16000 characters each and 60000 total. Same-URL versions are not independent evidence.",
+    "formal_evidence": "Initial canonical version plus selected eligible snapshots. Bounded research advice is visible as untrusted proposals; it cannot admit evidence or resolve gaps.",
+    "future_scores": "Abstention is not advance detection; matching later falsehood can be unjustified by cutoff evidence.",
+    "usage": "Logical invocations include failures; internal CLI retries are not separately controlled. Cached input is included in input tokens, not added again.",
+    "future_screen": "Final rationale/quote year screening only; absence does not establish absence of model memory."
+  }
+}

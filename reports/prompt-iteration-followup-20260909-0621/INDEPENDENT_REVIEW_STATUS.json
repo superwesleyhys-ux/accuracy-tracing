@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "counts": {
+    "registered_max_new_nonbiological_families": 4,
+    "new_nonbiological_families_reviewed": 2,
+    "prior_families_reopened": 0,
+    "exclusion_indexes_checked": 5,
+    "explicit_prior_family_entries_inspected": 37,
+    "registered_max_external_operations": 20,
+    "external_operations": 20,
+    "search_queries": 8,
+    "web_url_opens": 5,
+    "direct_http_requests": 7,
+    "direct_http_successes": 5,
+    "direct_http_errors": 2,
+    "direct_http_403": 1,
+    "direct_http_404": 1,
+    "web_open_errors": 2,
+    "technical_error_operations": 4,
+    "empty_archive_availability_results": 2,
+    "http200_application_shells": 1,
+    "http200_non_substantive_original_recoveries": 3,
+    "retained_http_body_files_including_errors": 7,
+    "retained_provider_return_records": 13,
+    "distinct_provider_return_values": 7,
+    "operation_timestamp_pairs_checked": 20,
+    "operation_receipt_hashes_checked": 20,
+    "successful_derived_results_reproduced": 5,
+    "derived_link_normalization_differences": 0,
+    "complete_historical_originals": 0,
+    "new_admitted_cases": 0,
+    "new_proposed_inputs_or_gold": 0,
+    "models_called": 0,
+    "benchmark_runs": 0,
+    "audit_network_operations": 0,
+    "fully_bound_formal_date_gates_complete": 0,
+    "exact_target_first_public_establishment_gates_complete": 0,
+    "both_date_gates_complete": 0,
+    "prior_manifests_verified": 7,
+    "prior_unique_files_verified": 243,
+    "prior_file_mismatches": 0,
+    "prior_manifest_commitment_mismatches": 0,
+    "prior_exclusion_index_mismatches": 0,
+    "current_manifest_entries_verified": 55,
+    "current_manifest_entry_mismatches": 0,
+    "unmanifested_current_files": 0,
+    "reviewed_true_controls_preserved": 1,
+    "substantive_receipt_discrepancies": 0,
+    "external_elapsed_seconds": 406.518048,
+    "manifest_finalization_elapsed_seconds": 554.459627,
+    "concrete_distinct_unattempted_route_categories": 2
+  },
+  "readiness": {
+    "independent_audit_complete": true,
+    "registered_bounds_pass": true,
+    "new_family_exclusion_check_pass": true,
+    "local_receipt_integrity_pass": true,
+    "no_admission_appropriate": true,
+    "historical_original_and_qualifications_ready": false,
+    "exact_original_to_later_finding_binding_ready": false,
+    "both_chronology_gates_ready": false,
+    "benchmark_ready": false,
+    "judicial_finding_requirement_added": false,
+    "source_qualifications_preserved": true,
+    "dates_or_labels_rewritten": false,
+    "old_sources_outputs_or_code_changed_by_audit": false
+  },
+  "receipt_quality_and_limits": [
+    "All 20 operation entries match their requests, start/end timestamps and hashed records. All seven delivered HTTP bodies, including both HTTP error bodies, remain preserved. All 13 provider records match the return-hash commitments.",
+    "Batch queries and opens are counted individually. Common batch responses are duplicated across per-operation records: 13 provider records contain seven distinct return values. Errors inside mixed-success batches were attributed to the requested failing operation, rather than counting the whole batch as failed.",
+    "All five successful derived results reproduce from retained bytes. HTTP success is not source recovery: two archive responses contain no snapshot, one body is only an application shell, and the remaining successful raw results are metadata.",
+    "Provider outputs contain publisher-attributed notice text and other discovery text, not newly recovered raw publisher documents or underlying analysis programs. Internal provider requests and absolute completeness against unrecorded execution history cannot be independently established from these files alone.",
+    "The before-cutoff search operator returned later and unrelated material. It is not a reliable absence test or proof of first public establishment."
+  ],
+  "substantive_admission_findings": [
+    "An appropriate primary publisher notice can support a narrowly scoped factual contradiction without a judicial finding. The retained notice attributes its conclusion to examination of relevant files/programs and preserves evidential qualifications. It does not establish intentional fabrication, absence of all underlying work, or falsity of unrelated results.",
+    "The original full text, figures, captions, qualifications and historically authenticated version remain unrecovered. The source-recovery target has not been verified against original wording; publication metadata and an abstract do not complete that binding.",
+    "Earlier primary analysis and public reporting contain serious evidence concerning related work and another disputed item. The delivered texts do not establish the exact selected provenance assertion for the older work, but linked primary records remain unreviewed; they must not be silently discarded or treated as automatically identical.",
+    "The formal notice date and issue date are separate. Earlier private concerns and author/integrity notifications are not shown as public establishment. No inference of firstness follows from a finite or empty search; both exact-target date gates remain incomplete.",
+    "The second family has broad primary corporate disclosures but no selected historical public claim or item-level finding binding. Aggregate irregularities cannot justify all-products, all-measurements or otherwise expanded falsehood labels.",
+    "No proposed corpus or gold exists. No-admission is justified by the original-version, exact-binding and chronology gaps, independently of the satisfactory receipt integrity."
+  ],
+  "next_route_distinction": {
+    "distinct_unattempted_original_route": "A retained registry record supplies an unrequested public metadata location that may lead to a distinct full-text or archived original. It may only redirect to an already blocked endpoint; do not call it recovered evidence or guarantee success.",
+    "distinct_unattempted_chronology_route": "The retained earlier article links primary institutional records. A separately bounded review can establish their precise document/item scope before deciding whether they affect the target chronology.",
+    "already_attempted_routes": "Do not repeat unchanged blocked publisher/full-text/download, unavailable accepted-manuscript, empty archive, application-shell or metadata-only routes. Resume an identical route only with concrete changed availability.",
+    "retirement_scope": "The completed 20-operation pass is closed. Specific untried routes remain, so the record does not support declaring all recovery routes exhausted. The broad second family needs a concrete item-level appendix and historical public artifact before more generic searching is useful."
+  },
+  "hashes": {
+    "source_manifest_sha256": "7c2577bf6ff6855fe06e8350cec7e3f6db012e92ac1dc255583dee9885629cb0",
+    "source_status_sha256": "e89cbd912df93f189914eee4f732916572aba7e7ff65f57cce8ccedfcc259e84",
+    "preregistration_sha256": "dfeb4da332239ca91caded83ee732c547cb682bd5bd539a400db68d09c9b811a",
+    "operation_index_sha256": "abced6ba0f343d2881e6fe56e1d0472ab9a88bc5bb11e8f945d148c15a09530a",
+    "return_hashes_sha256": "0f8cbd4dd2f761fbab5d2c1865e102b7762db4b405b85f37ae68b092874619f6",
+    "screening_sha256": "1131f0d11e87eabb399c6a89157ce8a713b93291eb0a29710a471f2fc529e786",
+    "preservation_sha256": "2fc4b01d5c0945dcbd8c0f0edcbc3fe31c4010acc7ad17d6aca94a4a85ab6994",
+    "excluded_indexes_sha256": "5838d971ada8d5a31834e44682aaaf159f4a506b719bcf3be4f47060e79e78cf",
+    "source_semantic_review_sha256": "aed5f5076df5d63f9fa5dde6320bd46b201b0e120c9b959f71586ab0fb994a08",
+    "source_resume_sha256": "db95184f8cb3b9bfa4dbacdd1267622fc6493a143fde395bf4122cbfcae66e85",
+    "admission_interpretation_sha256": "bbc54a921e8967621f3ca9e3c8ef3f3941ce24a532db8abae4d47d93bd5acf15",
+    "reviewed_control_input_sha256": "5ed4f7b8dc7d657ab805c811fa4c0c6653946b72a6dca7808d018c9e8013fd0c",
+    "reviewed_control_gold_sha256": "0b861d55577c64be0c8f2454a33e705b8d5ae001eb812ce0383acb59ea3dbc62",
+    "independent_review_sha256": "eea5b405dc02009dcece9919f40893aea14d14f05ce32bf3f9defe1d4d18b91a"
+  },
+  "prior_manifest_checks": [
+    {
+      "manifest_sha256": "5adfa46888ae08c9e3cb3ce14e8f6aa6126c347ab45cf7e02ae5dfa4831cc0c7",
+      "files_checked": 50,
+      "mismatches": 0
+    },
+    {
+      "manifest_sha256": "b189b213d386370cb3ad5e9a304e93f452a954ef8a15d5c23a30e35d1e9777b0",
+      "files_checked": 18,
+      "mismatches": 0
+    },
+    {
+      "manifest_sha256": "ac047f55ea25e3fbd4b9f60be1610bf6baaafa55b75a3468d67b180ee071c52d",
+      "files_checked": 25,
+      "mismatches": 0
+    },
+    {
+      "manifest_sha256": "12bf6da8591db4014708a3b1ae6198e813025d5003e3a163020ede4598ef305c",
+      "files_checked": 18,
+      "mismatches": 0
+    },
+    {
+      "manifest_sha256": "402d3a089282c101a146203d57171de578922f985904207ce4d176d07f323240",
+      "files_checked": 61,
+      "mismatches": 0
+    },
+    {
+      "manifest_sha256": "f926da674e7949e8db60f3f04af8cff375a15028c02d5fd813f31be50f2f1310",
+      "files_checked": 3,
+      "mismatches": 0
+    },
+    {
+      "manifest_sha256": "9dcfca23cd09d10a4ff3b30e8ac5ce2b7a610cbf03ec35a28d450b3f8d89e1bf",
+      "files_checked": 68,
+      "mismatches": 0
+    }
+  ]
+}

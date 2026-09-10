@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-10T05:09:43.001639+00:00",
+  "phase": "policy_preparation_and_source_feasibility",
+  "policy": "candidate-6-complete-admission-before-verification",
+  "substantive_change": "Complete initial eligible-material admission with all decompositions required before preliminary verification; strict saved-response replay before unchanged final extension stages.",
+  "preparation_frozen": true,
+  "preparation_manifest_sha256": "4568a37f3101c836d503efd35b6c10bbd4a53a0085439757c328656343c01db4",
+  "baseline_changed": false,
+  "c5_final_prompts_changed": false,
+  "c5_rerun": false,
+  "c6_benchmark_calls": 0,
+  "offline_tests": {
+    "integrated": {
+      "passed": 47,
+      "failed": 0,
+      "evidence": "Tool transcript session20641 exit0; separate complete raw log not retained"
+    },
+    "independent_component": {
+      "passed": 9,
+      "failed": 0
+    },
+    "independent_replay": {
+      "passed": 7,
+      "failed": 0
+    },
+    "count_as_model_calls": false,
+    "count_as_news_accuracy": false
+  },
+  "source_operations": {
+    "first_pass": 12,
+    "multisource_pass": 8,
+    "targeted_visual_recovery": 4,
+    "total": 24,
+    "all_closed": true,
+    "per_request_decomposition_saved": true
+  },
+  "new_source_readiness": {
+    "admitted_affirmative_controls": 1,
+    "conditional_corrected_fact_candidates": 1,
+    "first_public_establishment_gate_resolved_for_conditional_case": false,
+    "proposed_cases_with_multiple_usable_materials": 0,
+    "recovered_original_figures": 0,
+    "ready_real_mixed_pairs": 0
+  },
+  "visual_probe_status": "one_successful_infrastructure_call_independently_verified",
+  "tokens_optimization_active": false,
+  "real_news_accuracy_measured_in_this_continuation": false,
+  "advantage_over_direct_established": false,
+  "goal_met": false,
+  "production_installed": false,
+  "source_blind_root": true,
+  "prior_completed_result_preserved": {
+    "c5_synthetic_correct_direct": 8,
+    "c5_synthetic_correct_harness": 8,
+    "c5_denominator_each": 8,
+    "latest_real_later_false_detection_each": 0,
+    "latest_real_later_false_denominator_each": 1
+  },
+  "preparation_is_not_live_registration": true,
+  "infrastructure_model_calls": 1,
+  "infrastructure_known_tokens": 9158,
+  "completed_at": "2026-09-10T05:16:24.115000+00:00",
+  "status": "completed_preparation_and_infrastructure_probe_no_news_trial",
+  "source_reviews_completed": true,
+  "independent_visual_review_manifest_sha256": "6fa40249dfebf1985bfda51f51edaabc9e5b8227f6891575751bd9c0822d3988",
+  "same_policy_benchmark_rerun": false
+}

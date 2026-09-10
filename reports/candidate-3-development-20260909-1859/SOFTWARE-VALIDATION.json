@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "validated_at": "2026-09-09T19:06:07.649875+00:00",
+  "tests_passed": 38,
+  "root_independent_tests": 19,
+  "author_tests": 19,
+  "all_passed": true,
+  "code_review": "driver additions are exact generic suffix/profile/dependency bindings; source/evidence/transport/budget/accounting logic unchanged",
+  "fictional_full_worker_results": 4,
+  "fictional_full_worker_attempts": 20,
+  "semantic_model_safeguards_tested": false,
+  "model_calls": 0,
+  "new_private_source_or_gold_reads": false,
+  "files_sha256": {
+    "contracts.py": "5e700640aaf9d259601c895826346701c29acb7bd02416f30e36ff7b790f8dab",
+    "run_test.py": "89d4df0d80d16385c57493d8cf6dcaff43041e0f9632f2905e0d26fca19879e8",
+    "summarize_test.py": "164cccd3777bdb4ab0075f0b4d342afd9d4070cdeaa58eabed4ce5b036d214e4",
+    "audit_helper.py": "277bbcbef5e95f3a3aa8258fc93ff7ebcfa1644a7dbd2f667adf9de52f73fe27",
+    "test_independent.py": "1d4df9484df2a82b3ad0ad91444d713ca19c25835b664888f6125372de123a7e",
+    "test_mixed_runner.py": "c0faed70e532ae150e5806b49872dcef1a9e900970c614234103646b5e7a06b2",
+    "test_candidate_profile.py": "3a90abb6ca3654dd2c0e7ec46682f300778660422680edd34ca284406ece4dc8"
+  },
+  "test_output_sha256": "64187f074c782b57a8d4e44f33cd6840b312d41a3de31edd62d920db3d112e27"
+}

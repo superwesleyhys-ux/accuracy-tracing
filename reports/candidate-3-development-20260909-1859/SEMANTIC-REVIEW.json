@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-09-09T19:21:27.707088+00:00",
+  "status": "candidate3_semantic_review_complete; no_improvement",
+  "phase": "exposed_development",
+  "counts": {
+    "planned_outcomes": 4,
+    "completed_outcomes": 4,
+    "successful_calls": 15,
+    "request_schema_transport_valid_outcomes": 4,
+    "canonical_final_quote_valid_outcomes": 4,
+    "final_quote_objects": 10,
+    "all_response_quote_objects_verified": 22,
+    "normalized_formal_spans_checked": 16,
+    "semantically_entailed_real_world_outcomes": 2,
+    "semantic_overclaims": 2,
+    "attribution_substitution_outcomes": 1,
+    "unsupported_evidence_role_upgrade_outcomes": 1,
+    "formal_rounds_per_harness_case": [
+      1,
+      1
+    ],
+    "formal_revisits": 0,
+    "stage_call_counts": {
+      "direct": 2,
+      "deconstruct": 2,
+      "search_plan": 2,
+      "synthesis": 2,
+      "decompose": 2,
+      "verify": 2,
+      "source_trace": 2,
+      "source_verify": 1
+    },
+    "new_external_sources": 0,
+    "claimed_executed_arithmetic_derivations": 0,
+    "unsupplied_visual_or_private_record_inspection_claims": 0,
+    "observed_later_finding_leakage": 0
+  },
+  "by_arm": {
+    "direct": {
+      "cutoff_correct": 1,
+      "cutoff_denominator": 2,
+      "future_correct": 1,
+      "future_denominator": 2,
+      "later_false_detected": 0,
+      "later_false_denominator": 1,
+      "false_acceptances": 1,
+      "true_control_correct": 1,
+      "true_control_denominator": 1,
+      "true_control_false_accusations": 0,
+      "abstentions": 0,
+      "conflicts": 0,
+      "failed_or_unexecuted": 0
+    },
+    "news_tracing": {
+      "cutoff_correct": 1,
+      "cutoff_denominator": 2,
+      "future_correct": 1,
+      "future_denominator": 2,
+      "later_false_detected": 0,
+      "later_false_denominator": 1,
+      "false_acceptances": 1,
+      "true_control_correct": 1,
+      "true_control_denominator": 1,
+      "true_control_false_accusations": 0,
+      "abstentions": 0,
+      "conflicts": 0,
+      "failed_or_unexecuted": 0
+    }
+  },
+  "generic_observed_failures": [
+    "Direct continues to substitute accurate attribution for the underlying-fact target.",
+    "Harness upgrades the same original assertion to sufficient firsthand evidence, using internal agreement and no found counterexample without a new evidential warrant."
+  ],
+  "comparison_to_prior": "The prior explicit verdict/explanation mismatch becomes an unsupported upgrade of evidence role in the harness. The factual result is unchanged, and true-control support is retained.",
+  "generic_mechanism": "A verdict/rationale consistency check can be satisfied by upgrading the description of evidence. Being the original publisher of an assertion, having direct knowledge claimed by that publisher, and supplying adequate evidence for the target are separate judgments. Internal agreement and no found counterexample cannot alone bridge an unestablished observation or derivation step.",
+  "generic_next_hypothesis": "Test whether an auditable evidence-to-claim warrant prevents unsupported evidence-role promotion while preserving sufficient firsthand observations and checkable derivations. Use independently labeled fictional or new untouched contrasts separating an original assertion record from an adequately established target. Do not require a second source universally or presume a source false. No source-specific suffix is proposed.",
+  "execution_limit": "One formal round per harness, no revisits; optional claim-mode stages were omitted. Do not credit skipped checks or a second corrective loop.",
+  "root_audit_correction_verified": "Fifteen success:true/completed receipts confirm corrected v2. Original row audits and model outcomes are unchanged; v1 had a derived count bug.",
+  "no_future_or_private_source_leakage_observed": true,
+  "memory_absence_proven": false,
+  "all_fictional_semantic_safeguards_model_tested": false,
+  "frozen_files_modified": false,
+  "network_calls_by_reviewer": 0,
+  "model_calls_by_reviewer": 0,
+  "commitments": {
+    "registration_sha256": "af1f16abe020619bc4c30a917d5e7aa1b149a67affdc1e7480dc8848ffae2de2",
+    "actual_request_audit_v1_sha256": "84d10379b36f74db0f09de8c6cb57da23c30a5d43f66b0fe88443f17dc3ea71f",
+    "actual_request_audit_v2_sha256": "1f061ac083148488376290859475c6ed13f1da8a9c485da164f0d5cd14677d8a",
+    "results_manifest_sha256": "f2a31665cb48978371048f39caef008ac6396a937091fc26d18ca5825292c1e6",
+    "scorer_summary_sha256": "131b088485d3c875ef6c295ea7ea9c303f56c4a1ed1eda9a95eeee5b466c594b",
+    "sanitized_receipts_sha256": "bc9c0760f400a1811fbf411e83d2ab7f02a7b938b7a830209ea382b2b4d29b06",
+    "independent_evidence_check_sha256": "8f76c018cf37b7e522a48847e59a218ff7a9c6aa182f818b9f83103e4ec87b8f",
+    "private_review_sha256": "cbec1bb771d28316e704888e95b78aaf776e5b1c2a33120188128797b8855192"
+  }
+}

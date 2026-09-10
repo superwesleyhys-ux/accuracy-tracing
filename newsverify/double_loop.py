@@ -61,6 +61,11 @@ target-relevant atomic claims and preserve their qualifiers and exact quotations
 Include one to five concise, target-relevant fragments from the current material;
 do not enumerate unrelated claims from a long paper. Each quotation must be
 nonempty and occur exactly once in its specified original version.
+Prefer one or two fragments and the shortest sufficient unique quotations.
+Keep each rationale and notes to at most two short sentences. Do not reproduce
+the paper's background, bibliography, methods or unrelated measurements.
+The current material is supplied once under material; context.materials contains
+the other versions. Both locations are eligible evidence, not separate sources.
 
 This analysis REPLACES this material's previous analysis. Keep all still-valid
 findings and evidenced gap resolutions from that previous analysis; revise or
@@ -92,7 +97,10 @@ needs exact evidence and an explanation of how that evidence closes the question
 When this material changes understanding of an already analyzed older version,
 request its ID in revisit_versions. Request only relevant eligible old versions,
 never the current material; do not reflexively request every version or create a
-cycle. The runner will reopen each requested version with the updated context.
+cycle. Repeated uncertainty, the same claim or unchanged attribution alone does
+not require another analysis. Request a revisit only when the new evidence can
+change a specific earlier relation, origin finding or gap resolution, and explain
+that change briefly in notes. The runner reopens it with the updated context.
 Do not give a final fact verdict. Return the required JSON object.
 """
 
@@ -104,6 +112,13 @@ unresolved opposing evidence, and unresolved when evidence cannot settle it.
 Use exact nonempty quotations occurring once in their specified versions; use
 an empty basis only when there is no relevant evidence. Do not infer independent
 confirmation from repeated copies or a shared upstream source.
+Distinguish an attribution claim (a document reports X) from the underlying
+claim (X happened or measurements are authentic). An exact report can settle
+attribution without authenticating its experiment. Missing independent records
+does not itself contradict a claim. Conversely, do not ignore an explicit
+eligible correction, falsifying measurement, negation or material qualification.
+Use one or two short basis quotes when sufficient and a brief rationale focused
+on the decisive evidence or missing record, rather than a summary of the paper.
 
 Identify specific missing evidence that could change the factual assessment and
 request it as a stage=verification gap. Reuse an existing verification gap ID for
@@ -167,11 +182,18 @@ def _basis(items, materials):
     return tuple(exact_span(item["version_id"], item["quote"], materials) for item in items)
 
 
-def _context(context):
+def _context(context, current_material_id=None):
     # Fragments, relations and origins are already present within analyses.
     # Avoid sending a second copy, while retaining every current analysis.
     keys = ("materials", "analyses", "gaps", "verification_history", "usage")
-    return {key: deepcopy(context[key]) for key in keys if key in context}
+    result = {key: deepcopy(context[key]) for key in keys if key in context}
+    if current_material_id is not None and "materials" in result:
+        # Decomposition already carries the complete current material in its
+        # own field. Preserve all other versions and prior analyses; the host
+        # still validates quotations against the original complete context.
+        result["materials"] = [m for m in result["materials"]
+                               if m["version_id"] != current_material_id]
+    return result
 
 
 def _local_id(version_id, kind, value):
@@ -250,7 +272,8 @@ class DoubleLoopDecomposer:
         if not context["current_material_eligible"]:
             return ConservativeDecomposer().decompose(target, material, context)
         response = self.transport.generate("decompose", DECOMPOSE_PROMPT,
-            {"target": asdict(target), "material": asdict(material), "context": _context(context)},
+            {"target": asdict(target), "material": asdict(material),
+             "context": _context(context, material.version_id)},
             FULL_ANALYSIS_SCHEMA)
         validate_full_output(response, FULL_ANALYSIS_SCHEMA)
         if not 1 <= len(response["fragments"]) <= 5:
@@ -269,11 +292,17 @@ class DoubleLoopDecomposer:
         # analysis. It is still a known gap and requires fresh valid evidence.
         allowed_resolutions.update(item["gap_id"] for analysis in context["analyses"].values()
                                    for item in analysis.get("resolutions", ()))
-        fragments = tuple(Fragment(
-            _local_id(material.version_id, "fragment", item["id"]), item["text"],
-            exact_span(material.version_id, item["quote"], materials), target.id,
-            tuple(item["qualifiers"]),
-        ) for item in response["fragments"])
+        # A malformed quote should not abort the whole double loop.  Preserve
+        # the conservative unresolved path so later verification can still
+        # use valid evidence from the other stages.
+        try:
+            fragments = tuple(Fragment(
+                _local_id(material.version_id, "fragment", item["id"]), item["text"],
+                exact_span(material.version_id, item["quote"], materials), target.id,
+                tuple(item["qualifiers"]),
+            ) for item in response["fragments"])
+        except ValueError:
+            return ConservativeDecomposer().decompose(target, material, context)
         _unique([item.id for item in fragments], "normalized fragment IDs")
         relations = tuple(Relation(
             _local_id(material.version_id, "relation", item["id"]), item["from_version"],
@@ -360,6 +389,17 @@ class SnapshotPoolProvider:
             request["candidate_version_ids"] = [item.version_id for item in candidates]
             if not candidates:
                 request["reason"] = "pool_exhausted"
+                return
+            if (len(candidates) == 1 and
+                    candidates[0].url == self.materials[self.initial_version_id].url):
+                # The only remaining eligible version of this same source is
+                # worth inspecting directly. This saves a selection call, not
+                # a decomposition/verification check or an eligibility check.
+                selected = candidates[0].version_id
+                request.update(reason="same_source_version", selected_version_id=selected,
+                               rationale="Inspect the only remaining eligible version of the supplied source.")
+                self.seen.add(selected)
+                yield self.materials[selected]
                 return
             catalog = [{"version_id": item.version_id, "url": item.url, "issuer": item.issuer,
                         "published_at": item.published_at, "available_at": item.available_at,

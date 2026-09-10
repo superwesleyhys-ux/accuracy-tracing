@@ -8,7 +8,7 @@
 
 Version 0.2.0: a bounded, auditable news provenance loop with **decomposition on every retrieval return**, a separate verification feedback stage, and a fixed-target evaluation toolkit.
 
-**Status: local harness with offline replay and two model execution paths.** Semantic judgments in the demo are hand-authored annotations. The default decomposer preserves original text and leaves source questions unresolved. Model-backed tracing supports local Codex execution and an optional OpenAI API tunnel. No live news adapter, independently reviewed real-news benchmark or measured real-world accuracy improvement is included.
+**Status: local harness with offline replay, opt-in live news tracing, and two model execution paths.** Semantic judgments in the demo are hand-authored annotations. The default decomposer preserves original text and leaves source questions unresolved. Model-backed tracing supports local Codex execution and an optional OpenAI API tunnel. The live adapter follows fetched source links and checks each claim separately; a measured real-world accuracy improvement has not been established.
 
 Repository Discussions are enabled, and the repository includes a prepared **Accuracy decline** reporting form for reproducible metric regressions or weaker trace outcomes. Reports should identify the affected metric or behavior, include the run configuration, and avoid treating synthetic fixtures as real-world performance evidence.
 
@@ -48,6 +48,22 @@ hosted model through the existing Codex login; this is not offline inference,
 an equal-compute experiment, or a held-out real-news accuracy result.
 
 ## Two model execution tunnels
+
+For news articles, `trace-news` integrates the uploaded news-tracing project with
+the double-loop harness. It fetches the article, follows its upstream links,
+then reports source origin and factual support separately for every assessed
+claim. Local Codex execution is the default; the API route remains explicit.
+
+```sh
+python -m newsverify trace-news examples/news_tracing.json --model gpt-6-astra --output reports/news-trace.json
+```
+
+This command uses live public pages and model calls. See
+[news tracing](docs/NEWS_TRACING.md) for snapshots, budgets, limitations, and the
+exact imported-code manifest. Original sources may contain false claims;
+finding one does not by itself establish truth.
+The [real integration test](reports/news-tracing-integration-20260908/README.md)
+records a partial source chain, its missing research paper, and measured usage.
 
 Both tunnels run the same decomposition and verification adapters in the local
 harness. **Local is the default** for `trace-model`. Select API explicitly:

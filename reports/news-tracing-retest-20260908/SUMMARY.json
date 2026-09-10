@@ -1,0 +1,256 @@
+{
+  "scope": "Fresh real local Astra rerun of the same current-web case and settings; not a bare-model control or historical fake-news accuracy benchmark.",
+  "run_id": "retest-20260908T232959Z",
+  "settings": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "medium",
+    "tunnel": "local",
+    "timeout_seconds": 75,
+    "max_model_calls": 24
+  },
+  "same_input_and_config": true,
+  "summary": {
+    "news_items": 1,
+    "completed": 0,
+    "partial": 1,
+    "failed": 0,
+    "claims": 1,
+    "located_origins": 0
+  },
+  "wall_seconds": 323.8064887500368,
+  "usage": {
+    "calls": 16,
+    "successful_calls": 16,
+    "known_usage_calls": 16,
+    "known_input_tokens": 349840,
+    "known_output_tokens": 8605,
+    "known_total_tokens": 358445,
+    "total_tokens": 358445,
+    "known_cached_input_tokens": 23552
+  },
+  "claim": {
+    "text": "Hubble identified eight visible rings in galaxy LEDA 1313424, and Keck observations confirmed a ninth ring.",
+    "fact_status": "unresolved",
+    "provenance_status": "partial",
+    "errors": []
+  },
+  "origin_summary": {
+    "status": "unresolved",
+    "sources": [],
+    "claim_count": 1,
+    "located_claims": 0,
+    "upstream_candidates": [
+      {
+        "depth": 1,
+        "url": "https://science.nasa.gov/missions/hubble/hubble-investigates-galaxy-with-nine-rings/",
+        "fetched": true,
+        "rationale": "ScienceDaily explicitly links the NASA page as its story materials and cites the DOI as the journal reference for the Bullseye galaxy study involving HST and Keck. Both are target-relevant upstream references worth fetching; their contents and the claim remain unverified here.",
+        "assessment": "Observed source link selected for retrieval; originality and truth remain subject to the claim checks."
+      },
+      {
+        "depth": 1,
+        "url": "http://dx.doi.org/10.3847/2041-8213/ad9f5c",
+        "fetched": false,
+        "rationale": "ScienceDaily explicitly links the NASA page as its story materials and cites the DOI as the journal reference for the Bullseye galaxy study involving HST and Keck. Both are target-relevant upstream references worth fetching; their contents and the claim remain unverified here.",
+        "assessment": "Observed source link selected for retrieval; originality and truth remain subject to the claim checks."
+      }
+    ],
+    "scope": "Origins require model-assessed original material and a direct source path, with exact source quotations and observed destination links checked by the harness. This is not independent semantic authentication, proof of earliest publication, or proof of truth."
+  },
+  "errors": [
+    {
+      "stage": "source_collection",
+      "operation": "fetch",
+      "code": "invalid_url",
+      "url": "http://dx.doi.org/10.3847/2041-8213/ad9f5c"
+    }
+  ],
+  "stage_usage": {
+    "origin_links": {
+      "calls": 1,
+      "known_usage_calls": 1,
+      "known_input_tokens": 23956,
+      "known_output_tokens": 118
+    },
+    "deconstruct": {
+      "calls": 1,
+      "known_usage_calls": 1,
+      "known_input_tokens": 18458,
+      "known_output_tokens": 149
+    },
+    "search_plan": {
+      "calls": 1,
+      "known_usage_calls": 1,
+      "known_input_tokens": 18600,
+      "known_output_tokens": 93
+    },
+    "source_trace": {
+      "calls": 1,
+      "known_usage_calls": 1,
+      "known_input_tokens": 18550,
+      "known_output_tokens": 690
+    },
+    "source_verify": {
+      "calls": 1,
+      "known_usage_calls": 1,
+      "known_input_tokens": 19221,
+      "known_output_tokens": 390
+    },
+    "timeline_build": {
+      "calls": 1,
+      "known_usage_calls": 1,
+      "known_input_tokens": 19397,
+      "known_output_tokens": 871
+    },
+    "perspective": {
+      "calls": 1,
+      "known_usage_calls": 1,
+      "known_input_tokens": 19330,
+      "known_output_tokens": 153
+    },
+    "direct_response": {
+      "calls": 1,
+      "known_usage_calls": 1,
+      "known_input_tokens": 20059,
+      "known_output_tokens": 256
+    },
+    "synthesis": {
+      "calls": 1,
+      "known_usage_calls": 1,
+      "known_input_tokens": 20906,
+      "known_output_tokens": 1103
+    },
+    "decompose": {
+      "calls": 3,
+      "known_usage_calls": 3,
+      "known_input_tokens": 83330,
+      "known_output_tokens": 3773
+    },
+    "verify": {
+      "calls": 3,
+      "known_usage_calls": 3,
+      "known_input_tokens": 78419,
+      "known_output_tokens": 939
+    },
+    "select": {
+      "calls": 1,
+      "known_usage_calls": 1,
+      "known_input_tokens": 9614,
+      "known_output_tokens": 70
+    }
+  },
+  "source_comparison": [
+    {
+      "url": "https://www.sciencedaily.com/releases/2025/02/250204132023.htm",
+      "same_retained_text": true,
+      "fresh_text_sha256": "f3eac440839b2120a15e1f61877f8be13428d8263e491edb160b54dadabd36f7"
+    },
+    {
+      "url": "https://science.nasa.gov/missions/hubble/hubble-investigates-galaxy-with-nine-rings/",
+      "same_retained_text": true,
+      "fresh_text_sha256": "5b99faf55927e6e673e25d4a914de82ac87664f71923e5de8238c6d219c17140"
+    }
+  ],
+  "baseline": {
+    "summary": {
+      "news_items": 1,
+      "completed": 0,
+      "partial": 1,
+      "failed": 0,
+      "claims": 1,
+      "located_origins": 0
+    },
+    "claim": {
+      "text": "Hubble identified eight visible rings in galaxy LEDA 1313424, and Keck observations confirmed a ninth ring.",
+      "fact_status": "unresolved",
+      "provenance_status": "partial",
+      "stop_reason": "empty_results"
+    },
+    "transport": {
+      "tunnel": "local",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "model_calls": 16,
+      "successful_calls": 16,
+      "known_usage_calls": 16,
+      "usage": {
+        "input_tokens": 346096,
+        "output_tokens": 8856,
+        "cached_input_tokens": 30848,
+        "total_tokens": 354952
+      },
+      "wall_seconds": 330.7605763330357
+    },
+    "errors": [
+      {
+        "stage": "timeline_build",
+        "type": "InvalidField",
+        "message": "causal_links must be a string"
+      },
+      {
+        "stage": "source_collection",
+        "operation": "fetch",
+        "code": "extracted_text_too_large",
+        "url": "http://dx.doi.org/10.3847/2041-8213/ad9f5c"
+      }
+    ]
+  },
+  "validation": {
+    "deterministic_tests_passed": 213,
+    "code_unchanged_during_rerun": true,
+    "baseline_hash_unchanged": true
+  },
+  "result_sha256": "12c8e1fa980c01f8cf30d59228d06090b6fa775cac65f98c7f735e7935c7ccb8",
+  "separate_paper_diagnostic": {
+    "diagnostic_only": true,
+    "no_model_calls": true,
+    "injected_into_retest": false,
+    "fetch_invocations": 1,
+    "requested_url": "http://dx.doi.org/10.3847/2041-8213/ad9f5c",
+    "started_at": "2026-09-08T23:30:41.309211+00:00",
+    "finished_at": "2026-09-08T23:30:42.322216+00:00",
+    "limits": {
+      "max_chars": 200000,
+      "max_bytes": 1000000,
+      "timeout_seconds": 15.0
+    },
+    "success": false,
+    "capture": null,
+    "requests": [
+      {
+        "operation": "fetch",
+        "url": "http://dx.doi.org/10.3847/2041-8213/ad9f5c",
+        "success": false
+      },
+      {
+        "operation": "http",
+        "url": "http://dx.doi.org/10.3847/2041-8213/ad9f5c",
+        "status": 301
+      },
+      {
+        "operation": "http",
+        "url": "https://dx.doi.org/10.3847/2041-8213/ad9f5c",
+        "status": 302
+      },
+      {
+        "operation": "http",
+        "url": "https://iopscience.iop.org/article/10.3847/2041-8213/ad9f5c",
+        "status": 302
+      }
+    ],
+    "errors": [
+      {
+        "operation": "fetch",
+        "code": "invalid_url",
+        "url": "http://dx.doi.org/10.3847/2041-8213/ad9f5c"
+      }
+    ],
+    "assessment": {
+      "title": null,
+      "content_type": null,
+      "main_article_text_present": null,
+      "conclusion": "The single higher-limit fetch failed URL validation after a 302 from the IOP article endpoint. No final response body was obtained, so title, content type, extracted length and main-text versus boilerplate content cannot be assessed. This attempt does not explain or reproduce the earlier extracted_text_too_large failure.",
+      "retry_performed": false
+    }
+  }
+}

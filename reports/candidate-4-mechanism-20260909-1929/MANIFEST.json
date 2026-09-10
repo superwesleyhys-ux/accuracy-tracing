@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-09-10T01:52:54.658039+00:00",
+  "scope": "Local source-free report and audited synthetic outcomes; not a GitHub publication or real-news superiority claim.",
+  "files": {
+    "ACTUAL-REQUEST-AUDIT.json": "463fee1731f4f476f655cff0d40be654d4856aaf7e71e93a02765096534aa6b9",
+    "INTEGRITY-STATUS.json": "a6ce1db2bd50d2e5ebe9a2afcc46fd4a2df2fd66f9d9da20ea838eec7b6d3d6d",
+    "JOIN-VALIDATION.json": "607bd5358c178c7d7f8d037b6453991db22db60f4ddf8c8cdd29ffa9e721dc0a",
+    "PRESERVATION.json": "00af510590769c74f8d1bc3b6e8c6796de98d979abae8ec58901024ee964380c",
+    "PROTOCOL.md": "64c01b96f85632f74cbad231e4400e099bd12ead2eba55a942a7d90845df042f",
+    "README.md": "06ed1b94cdf40dcef50cd4bf1ebd617d6120f0ca203c50f141d4e519089e4117",
+    "REAL-HANDOFF-STATUS.json": "7bf67cb680203526c485cb781ccd3132d235b5f8edb53af4fc1394cbba789e67",
+    "REAL-INPUT-REVIEW-STATUS.json": "52a31d39b6707005090c3cbdaa5dcad3c2a4b95a68b8b1efa33e600c23d237f8",
+    "RECEIPTS.json": "2aa257c3ed24d77a6838aa95ba3f5e1191a6c64f2a505ab90978c86731c0b9ec",
+    "REGISTRATION.json": "c66bb4ab0f7f12a8e1f3ed5e3f10d323fe5f73ba9e08d767ff9132dedd90c829",
+    "SEMANTIC-COMPARISON.json": "d13d369856bd35734a61d1f227bfccf39012932703679a100e7d0ca737f34048",
+    "SEMANTIC-REVIEW-STATUS.json": "580ba0f069201877e5dd9e93a098a161d226863f82548854c8f9a56ce27fd9b4",
+    "SUMMARY.json": "14d824b3940bbb2fdb26e906a365930299400ce301e8d272870b20f8c23278f4"
+  },
+  "private_commitments": {
+    "semantic_review": "ead9066ceaed69ce7e9833dff086ffe3f8b3bd97e078e9f46b2f359daff2f2e9",
+    "semantic_review_manifest": "262d2ca7da57cb757548eaaa5d769668203f7e0897e959856340c52736d7d757",
+    "integrity_final_review": "494bf5a1200849e24bbb070cfcd9f093300d63ece04c100766fd6edcb95aa2fb",
+    "integrity_final_manifest": "08283d152f074029a0368f48382e850b7f8483dd1e5870c5f1eb0e06e399ef33",
+    "final_real_handoff_manifest": "8c63335a8769175fd0d1f2369ba56a147d4e2000ff958de35a06e235db1991fa"
+  },
+  "superiority_established": false
+}

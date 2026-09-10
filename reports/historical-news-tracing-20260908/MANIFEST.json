@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "case_count": 8,
+  "run_count": 16,
+  "event_family_count": 2,
+  "receipt_count": 116,
+  "publisher_sha256": "1b4029d4fa325b2c578965bbb11c18fcd77f6c87b383b2625ba4e5e0587972ab",
+  "source_bytes_bundled": false,
+  "model_prose_bundled": false,
+  "public_file_sha256": {
+    "SUMMARY.json": "1f21cbd6970f4bc67466fec4d1edec30e925f94b7c99e4f887ef3f6be0d757d3",
+    "SANITIZED_RECEIPTS.json": "6a94d33568eab6eb5830891b1948b3d6635da41f3c161f060ed1dc0c518b0d06",
+    "REGISTRATION.json": "a97be7da95f33160d9b4d3593a9ba4693c73bbc14fdceda8b70970f9a4ecc4a2",
+    "PREREGISTRATION_MANIFEST.json": "4c83775860c2ae3079b6b4274413741f6951068e74839f3f7d0ee8718825241d",
+    "PROTOCOL.md": "4a5516f45192fc37c73b8b62e970f7908ee77a098f55348098de014956fdd021",
+    "README.md": "60acc69bd92c660e7f9d5882eecf5ad00923302edeb86f3f26a3389ae1a7de4c"
+  },
+  "scoring_commitments": {
+    "manifest_sha256": "67fb4c04ac5f7c2f96675aa19e87802196a2816bda907a3b9b8e76be8a65b8c9",
+    "registration_sha256": "a97be7da95f33160d9b4d3593a9ba4693c73bbc14fdceda8b70970f9a4ecc4a2",
+    "corpus_sha256": "b5ad5c900145a7a5b208fe8752c1051119d2be18bfa45ececd4d025f6dcf2826",
+    "gold_sha256": "b2b10af8b6c3018088ead31a5b0ab91f91f6c6e000903f0cf67c5679b30d328a",
+    "scorer_sha256": "b6ea4a6183d1502825de4e2cbe7bfd4a097ab2dc7949f9ccfce77e1e8ca3600e",
+    "helper_sha256": "f5524ee1a92bb5be07d8148477e416d6a11db2ab82cf41ef4ffbf116649e771f"
+  },
+  "authored_failure_notes": [
+    "Formatting failure: h02 source_trace returned a valid outer response, but its result_json string was missing the final ]}. Parsing failed at character 567 after an otherwise completed 11-second call. newsverify/news_client.py:17 permits an arbitrary string; lines 149-155 validate the outer envelope and then parse the inner JSON. A future fix should enforce the stage-specific nested structure. This run was not repaired or rescored.",
+    "Execution failures: eight calls timed out at 90 seconds (h03: source_verify, timeline_build, direct_response; h06: decompose; h08: direct_response, decompose; h07: grounding_check, timeline_build). Two other turns failed or were incomplete (h05: source_trace; h07: direct_response), with usage retained. Six requested workflows therefore failed. The h06/h08 formal loops failed after earlier supported answers, so those earlier answers do not rescue completion. Remaining causal explanations for timeouts/incomplete turns are not established.",
+    "Research-to-verification handoff: with explicit claims, newsverify/news_tracing_runner.py:252 uses those fixed claims, and lines 288-295 send only the target, materials, initial source IDs and configuration into the formal loop. The research findings, gaps and timeline are not passed as advisory context. In this setup, added research cannot directly change the formal evidence or planning; it adds work and possible failures. The measured research and formal token subtotals are 948,527 and 604,917, respectively, with missing usage in both.",
+    "Evidence access and origin: newsverify/news_tracing_runner.py:79 collapses research snapshots sharing a URL; newsverify/news_client.py:67-77 exposes only each retained source's first 16,000 characters. All eight cases share URLs across excerpt/full-paper versions, so the targeted excerpt is not separately preserved for research; formal verification retains both versions. The two displayed original_material_located outcomes (h02/h04) are named/masked variants of one attribution control, not two independently authenticated experiments. No added fabrication detection was observed; the frozen packets lack independent laboratory records."
+  ]
+}

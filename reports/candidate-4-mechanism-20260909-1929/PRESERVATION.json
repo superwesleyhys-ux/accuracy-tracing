@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-10T01:51:35.561576+00:00",
+  "manifest_checks": [
+    {
+      "manifest": "semantic-runner-1929/FROZEN-FILES.json",
+      "manifest_sha256": "8d645137ae8a161893d8d90f0ab0e09e2e87df0108ab0691a6afc19bd3ce5f78",
+      "entries": 973,
+      "all_match": true
+    },
+    {
+      "manifest": "semantic-runner-1929-v2/FROZEN-FILES.json",
+      "manifest_sha256": "c2949f046f49962bbb72321b318812a9e3bc4ced47705d0d245820cea2f3c15d",
+      "entries": 974,
+      "all_match": true
+    },
+    {
+      "manifest": "candidate-3-dev-1859/FROZEN-FILES.json",
+      "manifest_sha256": "86c0d6284a09f289220e6092a0f7d68255bb0ef0e8029e88c95c32b311b04478",
+      "entries": 119,
+      "all_match": true
+    },
+    {
+      "manifest": "candidate-3-runner-1859/FROZEN-FILES.json",
+      "manifest_sha256": "b6235a39b2606183e2baeef7abde67461236a38bb663636a54320a036c51757e",
+      "entries": 148,
+      "all_match": true
+    },
+    {
+      "manifest": "candidate-4-preparation/FROZEN-FILES.json",
+      "manifest_sha256": "15d940cb1cb1b4f210c428fc6214cf8a549140280c61da3582c76145d0b223b6",
+      "entries": 2,
+      "all_match": true
+    },
+    {
+      "manifest": "semantic-fixtures-1929/MANIFEST.json",
+      "manifest_sha256": "29593ef88191f8380c50eb0b13459f5473f914c8d44dfa502e10fcee72bf8290",
+      "entries": 9,
+      "all_match": true
+    },
+    {
+      "manifest": "semantic-fixture-review-1929/MANIFEST.json",
+      "manifest_sha256": "f702292c6ef89a560ef0bc685a9e85629b4f63196268785a30e320b740da94cb",
+      "entries": 3,
+      "all_match": true
+    },
+    {
+      "manifest": "semantic-review-1929-preparation/FROZEN-FILES.json",
+      "manifest_sha256": "f87808da04ac17cf675bbbcf81603a82a4988959bf963df8fec24931a256ec40",
+      "entries": 2,
+      "all_match": true
+    },
+    {
+      "manifest": "private/independent-news-intake-1929/MANIFEST.json",
+      "manifest_sha256": "f4f779164ada64d67e3c74a2ac55d20e23a8e5d611e57a5cb08d66a57fbe64c9",
+      "entries": 133,
+      "all_match": true
+    },
+    {
+      "manifest": "private/independent-news-recovery-1929/MANIFEST.json",
+      "manifest_sha256": "d87da062fde676d0dfd69a023eee8af8448772d9a5181bbe70c8633e6c11eb8d",
+      "entries": 24,
+      "all_match": true
+    },
+    {
+      "manifest": "private/independent-news-inputs-v2-1929/MANIFEST.json",
+      "manifest_sha256": "a499601d2ac78e959a29152e7868c098d0eb3dc576971036454db78275d6ae28",
+      "entries": 16,
+      "all_match": true
+    },
+    {
+      "manifest": "private/independent-news-cutoff-review-v2-1929/MANIFEST.json",
+      "manifest_sha256": "d6c9aeea8cf7f254511d2fc863d9d09118cfea50c1ce3f0fc938bec7dc4a1b06",
+      "entries": 2,
+      "all_match": true
+    },
+    {
+      "manifest": "private/semantic-independent-review-1929/MANIFEST.json",
+      "manifest_sha256": "262d2ca7da57cb757548eaaa5d769668203f7e0897e959856340c52736d7d757",
+      "entries": 2,
+      "all_match": true
+    },
+    {
+      "manifest": "private/semantic-independent-review-1929/JOIN-ADDENDUM-MANIFEST.json",
+      "manifest_sha256": "adbdaa298e98c184624f31ca850d987421426bf3b595afbfe4d912f2abaf8e21",
+      "entries": 1,
+      "all_match": true
+    },
+    {
+      "manifest": "private/semantic-trial-1929-integrity-review/FINAL-MANIFEST.json",
+      "manifest_sha256": "08283d152f074029a0368f48382e850b7f8483dd1e5870c5f1eb0e06e399ef33",
+      "entries": 8,
+      "all_match": true
+    }
+  ],
+  "entries_checked": 2416,
+  "unique_files_checked": 2416,
+  "all_match": true,
+  "path_resolution": "Archive entries are manifest-relative. Digest strings and sha256/bytes records are validated according to their actual shape.",
+  "wrapper_preflight_notes": [
+    "An initial wrapper rejected an ambiguous README basename across unrelated roots before any result was written.",
+    "A second wrapper compared a nested digest/bytes object to a digest string; the actual file digest matched. Shape handling was corrected, with no artifact changes."
+  ],
+  "private_source_and_gold_files_hashed_without_decoding": true,
+  "current_mutable_state_not_compared_to_old_snapshot_hash": true
+}

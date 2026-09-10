@@ -1,0 +1,179 @@
+{
+  "cases": 8,
+  "planned_rows": 16,
+  "batch_status": "completed",
+  "usage": {
+    "attempts": 96,
+    "successful_calls": 96,
+    "known_usage_calls": 96,
+    "usage_complete": true,
+    "known_input_tokens": 1097239,
+    "input_tokens": 1097239,
+    "known_output_tokens": 31917,
+    "output_tokens": 31917,
+    "known_total_tokens": 1129156,
+    "total_tokens": 1129156,
+    "known_cached_input_tokens": 69120,
+    "known_cached_input_tokens_calls": 96,
+    "cached_input_tokens": 69120,
+    "known_reasoning_output_tokens": 1016,
+    "known_reasoning_output_tokens_calls": 96,
+    "reasoning_output_tokens": 1016,
+    "unknown_terminal_attempts": 0
+  },
+  "usage_by_condition": {
+    "direct": {
+      "attempts": 8,
+      "successful_calls": 8,
+      "known_usage_calls": 8,
+      "usage_complete": true,
+      "known_input_tokens": 78355,
+      "input_tokens": 78355,
+      "known_output_tokens": 1490,
+      "output_tokens": 1490,
+      "known_total_tokens": 79845,
+      "total_tokens": 79845,
+      "known_cached_input_tokens": 0,
+      "known_cached_input_tokens_calls": 8,
+      "cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "known_reasoning_output_tokens_calls": 8,
+      "reasoning_output_tokens": 0,
+      "unknown_terminal_attempts": 0
+    },
+    "news_tracing": {
+      "attempts": 88,
+      "successful_calls": 88,
+      "known_usage_calls": 88,
+      "usage_complete": true,
+      "known_input_tokens": 1018884,
+      "input_tokens": 1018884,
+      "known_output_tokens": 30427,
+      "output_tokens": 30427,
+      "known_total_tokens": 1049311,
+      "total_tokens": 1049311,
+      "known_cached_input_tokens": 69120,
+      "known_cached_input_tokens_calls": 88,
+      "cached_input_tokens": 69120,
+      "known_reasoning_output_tokens": 1016,
+      "known_reasoning_output_tokens_calls": 88,
+      "reasoning_output_tokens": 1016,
+      "unknown_terminal_attempts": 0
+    }
+  },
+  "actual_request_audit_sha256": "c7158056923b279d51b9d4f0612dafd226a4f16c767c550ee7ca2969aa125bab",
+  "scope": {
+    "synthetic_only": true,
+    "semantic_validity_independently_required": true,
+    "real_news_accuracy_measured": false,
+    "superiority_established": false,
+    "preliminary_candidate3_is_same_run_diagnostic": true,
+    "fatal_primary_unavailable": false,
+    "equal_token_budget": false,
+    "token_totals_exclude_orchestration_and_review_usage": true,
+    "internal_cli_retries_independently_counted": false
+  },
+  "conditions": {
+    "direct": {
+      "planned_rows": 8,
+      "valid_completed": 8,
+      "failed": 0,
+      "unexecuted": 0,
+      "verdict_counts": {
+        "conflicting": 1,
+        "contradicted": 2,
+        "supported": 3,
+        "unresolved": 2
+      },
+      "primary": {
+        "available": true,
+        "denominator": 8,
+        "label_matches": 8,
+        "label_agreement_rate": 1.0
+      },
+      "expected_label_strata": {
+        "conflicting": {
+          "planned": 1,
+          "valid_label_matches": 1,
+          "failed_or_unexecuted": 0
+        },
+        "contradicted": {
+          "planned": 2,
+          "valid_label_matches": 2,
+          "failed_or_unexecuted": 0
+        },
+        "supported": {
+          "planned": 3,
+          "valid_label_matches": 3,
+          "failed_or_unexecuted": 0
+        },
+        "unresolved": {
+          "planned": 2,
+          "valid_label_matches": 2,
+          "failed_or_unexecuted": 0
+        }
+      },
+      "true_controls": {
+        "planned": 2,
+        "accepted": 2,
+        "false_accusations": 0
+      }
+    },
+    "news_tracing": {
+      "planned_rows": 8,
+      "valid_completed": 8,
+      "failed": 0,
+      "unexecuted": 0,
+      "verdict_counts": {
+        "conflicting": 1,
+        "contradicted": 2,
+        "supported": 3,
+        "unresolved": 2
+      },
+      "primary": {
+        "available": true,
+        "denominator": 8,
+        "label_matches": 8,
+        "label_agreement_rate": 1.0
+      },
+      "expected_label_strata": {
+        "conflicting": {
+          "planned": 1,
+          "valid_label_matches": 1,
+          "failed_or_unexecuted": 0
+        },
+        "contradicted": {
+          "planned": 2,
+          "valid_label_matches": 2,
+          "failed_or_unexecuted": 0
+        },
+        "supported": {
+          "planned": 3,
+          "valid_label_matches": 3,
+          "failed_or_unexecuted": 0
+        },
+        "unresolved": {
+          "planned": 2,
+          "valid_label_matches": 2,
+          "failed_or_unexecuted": 0
+        }
+      },
+      "true_controls": {
+        "planned": 2,
+        "accepted": 2,
+        "false_accusations": 0
+      }
+    }
+  },
+  "preliminary_candidate3": {
+    "diagnostic_only": true,
+    "denominator": 8,
+    "valid": 8,
+    "label_matches": 7,
+    "changed_verdicts": 1,
+    "final_minus_preliminary_matches": 1,
+    "independent_fresh_comparator": false
+  },
+  "harness_minus_direct_matches": 0,
+  "summary_sha256": "70590164d5f037d2d6590bed1f4c3f9cd7706e6678a1f04d920747d89def6dc7"
+}

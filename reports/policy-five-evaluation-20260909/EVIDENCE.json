@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "artifact_sha256": {
+    "registration": "874e195eac68813678712402fc608c566074f33f957345c778882ae052f0751d",
+    "policy": "c2cffa2634007b75b99f4ae6085e9891289ffcd8f4ecc03eefc57d21cb8582cb",
+    "adapter": "d05db854c67631e651d63dd91ef281740942c608721ef683d499241d365ce10b",
+    "actual_request_audit": "c7158056923b279d51b9d4f0612dafd226a4f16c767c550ee7ca2969aa125bab",
+    "original_summary": "70590164d5f037d2d6590bed1f4c3f9cd7706e6678a1f04d920747d89def6dc7",
+    "inference_archive": "f3fb4d0ed0bb78dc631d5d8ba64686ac159d2626e0f811b4b205e8aad9c35af3",
+    "blinded_semantic_review": "e88a1d41b41a855f7715204e9fa44fbccf26c07729d6fdeaf39cd666fd697c9f",
+    "semantic_join_manifest": "0ac7420d72f7b5a2ee3be393ebd9c10ac9e676c73cace274aaa49d6fd5e79897",
+    "integrity_review": "209682ff3f4b33bf7adbfc8b9de79da79ac24b10a89c5efd8e60fa3ae18b413d",
+    "source_admission_manifest": "b4b484e91e861a0670f4b5f01130e9f6cab88d8a80a747adc1c5173f3a477bd1"
+  },
+  "private_source_or_gold_contents_published": false
+}

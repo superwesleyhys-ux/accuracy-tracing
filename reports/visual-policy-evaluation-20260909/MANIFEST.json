@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-09-10T06:20:05.150079+00:00",
+  "source_free_public_report": true,
+  "files": {
+    "CRITERION-CLARIFICATION.json": "488f0c54e3958e0aec57160d23a9af479f7e8a2ae4b18d299b5a94e8651c98cf",
+    "LABEL-COMPARISON.json": "f407ca378b3be2c46c11582a654d8d34fa2ecb0ba8484cecde4e6c788e237750",
+    "README.md": "31af2ba1f274e84c10fbca9559c65d700bd8855382b1c07c02b9586b24980545",
+    "RECEIPTS.json": "8771b19dc57f67462f134c0d971cab7d7535307712c9ab02c7c0dfa7be096274",
+    "RUN-SUMMARY.json": "089431d11d1f5a8bdd8457dc1b4806cb2c296471a6d434a1823ca3016017015c",
+    "SEMANTIC-COMPARISON.json": "97ecf3033503197fe279eafec2f83725d1242fc7af48fa0fa0d3333fd5fe1957"
+  }
+}

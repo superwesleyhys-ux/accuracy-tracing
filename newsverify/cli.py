@@ -87,9 +87,25 @@ def main(argv=None):
     compare_parser.add_argument("--bootstrap-samples", type=int, default=500)
     compare_parser.add_argument("--seed", type=int, default=0)
     compare_parser.add_argument("--output", type=Path)
+    news_parser = sub.add_parser("trace-news", help="trace each news claim to source records and verify it")
+    news_parser.add_argument("input", type=Path, help="JSON file containing a news list")
+    news_parser.add_argument("--output", type=Path)
+    news_parser.add_argument("--tunnel", choices=("local", "api"), default="local")
+    news_parser.add_argument("--model")
+    news_parser.add_argument("--reasoning-effort")
+    news_parser.add_argument("--timeout", type=float, default=90)
+    news_parser.add_argument("--max-model-calls", type=int, default=40,
+                             help="shared research and claim-tracing call cap for the whole news batch")
     args = parser.parse_args(argv)
     try:
-        if args.command == "trace-demo":
+        if args.command == "trace-news":
+            if args.output and args.output.resolve() == args.input.resolve():
+                raise ValueError("output must differ from input")
+            from .news_tracing_runner import run_news_tracing
+            result = run_news_tracing(json.loads(args.input.read_text(encoding="utf-8")),
+                tunnel=args.tunnel, model=args.model, reasoning_effort=args.reasoning_effort,
+                timeout=args.timeout, max_model_calls=args.max_model_calls)
+        elif args.command == "trace-demo":
             from .trace_demo import run_demo
             result = run_demo()
         elif args.command == "compare":
@@ -109,7 +125,7 @@ def main(argv=None):
             if args.output and args.output.resolve() == args.input.resolve():
                 raise ValueError("output must differ from input")
             raw = args.input.read_text(encoding="utf-8")
-        if args.command not in ("score", "trace-demo", "compare"):
+        if args.command not in ("score", "trace-demo", "compare", "trace-news"):
             payload = json.loads(raw)
             if args.command == "trace":
                 result = run_local(payload)
@@ -130,6 +146,8 @@ def main(argv=None):
             print(rendered, end="")
         if args.command == "trace-model" and result["errors"]:
             return 1
+        if args.command == "trace-news":
+            return 1 if result["summary"]["failed"] or result["summary"]["partial"] else 0
         return 1 if args.command == "benchmark" and not result["all_policy_expectations_matched"] else 0
     except (OSError, ValueError, TypeError, KeyError) as exc:
         print(f"newsverify: {exc}", file=sys.stderr)

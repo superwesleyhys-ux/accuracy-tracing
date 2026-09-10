@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "bounded_unblinded_diagnostic_supported",
+  "changed_rows": 1,
+  "preliminary_label_matches": 7,
+  "final_label_matches": 8,
+  "denominator": 8,
+  "within_pipeline_match_change": 1,
+  "fresh_comparator": false,
+  "canonical_quote_occurrences_verified": 15,
+  "unique_canonical_spans_verified": 7,
+  "private_diagnostic_sha256": "fedbc9d86deba40ac461503397abbf6ac4aae6319596f156d8b5fbafd7e437dc",
+  "generic_explanation": "The preliminary verifier evaluated one admitted record and treated a competing record as absent. The independent challenge and adjudicator received the complete supplied pool, cited a material conflict within the same target scope, and preserved the conflict because the records supplied no basis for giving either precedence.",
+  "causal_limit": "This one observed repair does not isolate verdict blinding from complete-pool exposure, additional calls or adjudication. Both final arms still tie.",
+  "assessment_unblinded": true,
+  "performed_after_individual_judgment_freeze": true,
+  "new_model_calls": 0,
+  "new_source_operations": 0,
+  "prompt_edits": 0,
+  "gold_changes": 0
+}

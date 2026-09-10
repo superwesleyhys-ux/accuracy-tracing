@@ -1,0 +1,529 @@
+{
+  "schema_version": 1,
+  "test_stub": false,
+  "experiment_id": "new-family-trial-1955",
+  "phase": "new_family_diagnostic",
+  "batch_status": "completed",
+  "cases": 2,
+  "planned_rows": 4,
+  "model": "gpt-6-astra",
+  "reasoning_effort": "medium",
+  "tunnel": "local",
+  "usage": {
+    "attempts": 21,
+    "successful_calls": 21,
+    "known_usage_calls": 21,
+    "usage_complete": true,
+    "known_input_tokens": 639647,
+    "input_tokens": 639647,
+    "known_output_tokens": 7917,
+    "output_tokens": 7917,
+    "known_total_tokens": 647564,
+    "total_tokens": 647564,
+    "known_cached_input_tokens": 15232,
+    "known_cached_input_tokens_calls": 21,
+    "cached_input_tokens": 15232,
+    "known_reasoning_output_tokens": 533,
+    "known_reasoning_output_tokens_calls": 21,
+    "reasoning_output_tokens": 533,
+    "interrupted_unknown_attempts": 0
+  },
+  "usage_by_condition": {
+    "direct": {
+      "attempts": 2,
+      "successful_calls": 2,
+      "known_usage_calls": 2,
+      "usage_complete": true,
+      "known_input_tokens": 69392,
+      "input_tokens": 69392,
+      "known_output_tokens": 665,
+      "output_tokens": 665,
+      "known_total_tokens": 70057,
+      "total_tokens": 70057,
+      "known_cached_input_tokens": 0,
+      "known_cached_input_tokens_calls": 2,
+      "cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "known_reasoning_output_tokens_calls": 2,
+      "reasoning_output_tokens": 0,
+      "interrupted_unknown_attempts": 0
+    },
+    "news_tracing": {
+      "attempts": 19,
+      "successful_calls": 19,
+      "known_usage_calls": 19,
+      "usage_complete": true,
+      "known_input_tokens": 570255,
+      "input_tokens": 570255,
+      "known_output_tokens": 7252,
+      "output_tokens": 7252,
+      "known_total_tokens": 577507,
+      "total_tokens": 577507,
+      "known_cached_input_tokens": 15232,
+      "known_cached_input_tokens_calls": 19,
+      "cached_input_tokens": 15232,
+      "known_reasoning_output_tokens": 533,
+      "known_reasoning_output_tokens_calls": 19,
+      "reasoning_output_tokens": 533,
+      "interrupted_unknown_attempts": 0
+    }
+  },
+  "stages": [
+    {
+      "condition": "direct",
+      "stage": "direct",
+      "attempts": 2,
+      "successful_calls": 2,
+      "known_usage_calls": 2,
+      "usage_complete": true,
+      "known_input_tokens": 69392,
+      "input_tokens": 69392,
+      "known_output_tokens": 665,
+      "output_tokens": 665,
+      "known_total_tokens": 70057,
+      "total_tokens": 70057,
+      "known_cached_input_tokens": 0,
+      "known_cached_input_tokens_calls": 2,
+      "cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "known_reasoning_output_tokens_calls": 2,
+      "reasoning_output_tokens": 0,
+      "interrupted_unknown_attempts": 0
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "decompose",
+      "attempts": 3,
+      "successful_calls": 3,
+      "known_usage_calls": 3,
+      "usage_complete": true,
+      "known_input_tokens": 77861,
+      "input_tokens": 77861,
+      "known_output_tokens": 2320,
+      "output_tokens": 2320,
+      "known_total_tokens": 80181,
+      "total_tokens": 80181,
+      "known_cached_input_tokens": 0,
+      "known_cached_input_tokens_calls": 3,
+      "cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 320,
+      "known_reasoning_output_tokens_calls": 3,
+      "reasoning_output_tokens": 320,
+      "interrupted_unknown_attempts": 0
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "deconstruct",
+      "attempts": 2,
+      "successful_calls": 2,
+      "known_usage_calls": 2,
+      "usage_complete": true,
+      "known_input_tokens": 70845,
+      "input_tokens": 70845,
+      "known_output_tokens": 322,
+      "output_tokens": 322,
+      "known_total_tokens": 71167,
+      "total_tokens": 71167,
+      "known_cached_input_tokens": 7552,
+      "known_cached_input_tokens_calls": 2,
+      "cached_input_tokens": 7552,
+      "known_reasoning_output_tokens": 0,
+      "known_reasoning_output_tokens_calls": 2,
+      "reasoning_output_tokens": 0,
+      "interrupted_unknown_attempts": 0
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "search_plan",
+      "attempts": 2,
+      "successful_calls": 2,
+      "known_usage_calls": 2,
+      "usage_complete": true,
+      "known_input_tokens": 70997,
+      "input_tokens": 70997,
+      "known_output_tokens": 318,
+      "output_tokens": 318,
+      "known_total_tokens": 71315,
+      "total_tokens": 71315,
+      "known_cached_input_tokens": 0,
+      "known_cached_input_tokens_calls": 2,
+      "cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 75,
+      "known_reasoning_output_tokens_calls": 2,
+      "reasoning_output_tokens": 75,
+      "interrupted_unknown_attempts": 0
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "select",
+      "attempts": 1,
+      "successful_calls": 1,
+      "known_usage_calls": 1,
+      "usage_complete": true,
+      "known_input_tokens": 10261,
+      "input_tokens": 10261,
+      "known_output_tokens": 80,
+      "output_tokens": 80,
+      "known_total_tokens": 10341,
+      "total_tokens": 10341,
+      "known_cached_input_tokens": 0,
+      "known_cached_input_tokens_calls": 1,
+      "cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "known_reasoning_output_tokens_calls": 1,
+      "reasoning_output_tokens": 0,
+      "interrupted_unknown_attempts": 0
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "source_trace",
+      "attempts": 3,
+      "successful_calls": 3,
+      "known_usage_calls": 3,
+      "usage_complete": true,
+      "known_input_tokens": 91621,
+      "input_tokens": 91621,
+      "known_output_tokens": 1359,
+      "output_tokens": 1359,
+      "known_total_tokens": 92980,
+      "total_tokens": 92980,
+      "known_cached_input_tokens": 0,
+      "known_cached_input_tokens_calls": 3,
+      "cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "known_reasoning_output_tokens_calls": 3,
+      "reasoning_output_tokens": 0,
+      "interrupted_unknown_attempts": 0
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "source_verify",
+      "attempts": 2,
+      "successful_calls": 2,
+      "known_usage_calls": 2,
+      "usage_complete": true,
+      "known_input_tokens": 72351,
+      "input_tokens": 72351,
+      "known_output_tokens": 708,
+      "output_tokens": 708,
+      "known_total_tokens": 73059,
+      "total_tokens": 73059,
+      "known_cached_input_tokens": 0,
+      "known_cached_input_tokens_calls": 2,
+      "cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "known_reasoning_output_tokens_calls": 2,
+      "reasoning_output_tokens": 0,
+      "interrupted_unknown_attempts": 0
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "synthesis",
+      "attempts": 2,
+      "successful_calls": 2,
+      "known_usage_calls": 2,
+      "usage_complete": true,
+      "known_input_tokens": 73734,
+      "input_tokens": 73734,
+      "known_output_tokens": 779,
+      "output_tokens": 779,
+      "known_total_tokens": 74513,
+      "total_tokens": 74513,
+      "known_cached_input_tokens": 0,
+      "known_cached_input_tokens_calls": 2,
+      "cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "known_reasoning_output_tokens_calls": 2,
+      "reasoning_output_tokens": 0,
+      "interrupted_unknown_attempts": 0
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "verify",
+      "attempts": 4,
+      "successful_calls": 4,
+      "known_usage_calls": 4,
+      "usage_complete": true,
+      "known_input_tokens": 102585,
+      "input_tokens": 102585,
+      "known_output_tokens": 1366,
+      "output_tokens": 1366,
+      "known_total_tokens": 103951,
+      "total_tokens": 103951,
+      "known_cached_input_tokens": 7680,
+      "known_cached_input_tokens_calls": 4,
+      "cached_input_tokens": 7680,
+      "known_reasoning_output_tokens": 138,
+      "known_reasoning_output_tokens_calls": 4,
+      "reasoning_output_tokens": 138,
+      "interrupted_unknown_attempts": 0
+    }
+  ],
+  "manifest_sha256": "59d2cde73ac10c7499562d28ecedfbddc8fde32b18673c01073b433c2ac1df14",
+  "registration_sha256": "2d6a674b124e8e86715c9d277abe8b5a49984f37e340c78b804c0ebcdd2d9812",
+  "comparison": {
+    "case_count": 2,
+    "planned_rows": 4,
+    "primary_comparison_available": true,
+    "conditions": {
+      "direct": {
+        "planned_rows": 2,
+        "primary": {
+          "available": true,
+          "denominator": 2,
+          "cutoff_matches": 2,
+          "future_matches": 1,
+          "cutoff_match_rate": 1.0,
+          "future_match_rate": 0.5
+        },
+        "execution_status_counts": {
+          "completed": 2,
+          "failed": 0,
+          "unexecuted": 0
+        },
+        "recorded_outcome_diagnostics": {
+          "supported": 2,
+          "contradicted": 0,
+          "unresolved": 0,
+          "conflicting": 0,
+          "failed_or_invalid": 0
+        },
+        "recorded_settled_cutoff_mismatches": 0,
+        "formal_diagnostic": {
+          "denominator": 2,
+          "valid_rows": 2,
+          "cutoff_matches": 2,
+          "future_matches": 1
+        },
+        "truth_strata": {
+          "real_world_false": {
+            "cases": 1,
+            "primary": {
+              "available": true,
+              "denominator": 1,
+              "cutoff_matches": 1,
+              "future_matches": 0,
+              "cutoff_match_rate": 1.0,
+              "future_match_rate": 0.0
+            },
+            "metrics_available": true,
+            "metrics": {
+              "abstentions": 0,
+              "conflicts": 0,
+              "failed_or_invalid": 0,
+              "called_false": 0,
+              "false_acceptances": 1,
+              "cutoff_label_compatible_false_calls": 0
+            },
+            "recorded_settled_cutoff_mismatches": 0,
+            "recorded_outcome_diagnostics": {
+              "supported": 1,
+              "contradicted": 0,
+              "unresolved": 0,
+              "conflicting": 0,
+              "failed_or_invalid": 0
+            }
+          },
+          "real_world_true": {
+            "cases": 1,
+            "primary": {
+              "available": true,
+              "denominator": 1,
+              "cutoff_matches": 1,
+              "future_matches": 1,
+              "cutoff_match_rate": 1.0,
+              "future_match_rate": 1.0
+            },
+            "metrics_available": true,
+            "metrics": {
+              "abstentions": 0,
+              "conflicts": 0,
+              "failed_or_invalid": 0,
+              "true_acceptances": 1,
+              "false_accusations": 0
+            },
+            "recorded_settled_cutoff_mismatches": 0,
+            "recorded_outcome_diagnostics": {
+              "supported": 1,
+              "contradicted": 0,
+              "unresolved": 0,
+              "conflicting": 0,
+              "failed_or_invalid": 0
+            }
+          }
+        }
+      },
+      "news_tracing": {
+        "planned_rows": 2,
+        "primary": {
+          "available": true,
+          "denominator": 2,
+          "cutoff_matches": 2,
+          "future_matches": 1,
+          "cutoff_match_rate": 1.0,
+          "future_match_rate": 0.5
+        },
+        "execution_status_counts": {
+          "completed": 2,
+          "failed": 0,
+          "unexecuted": 0
+        },
+        "recorded_outcome_diagnostics": {
+          "supported": 2,
+          "contradicted": 0,
+          "unresolved": 0,
+          "conflicting": 0,
+          "failed_or_invalid": 0
+        },
+        "recorded_settled_cutoff_mismatches": 0,
+        "formal_diagnostic": {
+          "denominator": 2,
+          "valid_rows": 2,
+          "cutoff_matches": 2,
+          "future_matches": 1
+        },
+        "truth_strata": {
+          "real_world_false": {
+            "cases": 1,
+            "primary": {
+              "available": true,
+              "denominator": 1,
+              "cutoff_matches": 1,
+              "future_matches": 0,
+              "cutoff_match_rate": 1.0,
+              "future_match_rate": 0.0
+            },
+            "metrics_available": true,
+            "metrics": {
+              "abstentions": 0,
+              "conflicts": 0,
+              "failed_or_invalid": 0,
+              "called_false": 0,
+              "false_acceptances": 1,
+              "cutoff_label_compatible_false_calls": 0
+            },
+            "recorded_settled_cutoff_mismatches": 0,
+            "recorded_outcome_diagnostics": {
+              "supported": 1,
+              "contradicted": 0,
+              "unresolved": 0,
+              "conflicting": 0,
+              "failed_or_invalid": 0
+            }
+          },
+          "real_world_true": {
+            "cases": 1,
+            "primary": {
+              "available": true,
+              "denominator": 1,
+              "cutoff_matches": 1,
+              "future_matches": 1,
+              "cutoff_match_rate": 1.0,
+              "future_match_rate": 1.0
+            },
+            "metrics_available": true,
+            "metrics": {
+              "abstentions": 0,
+              "conflicts": 0,
+              "failed_or_invalid": 0,
+              "true_acceptances": 1,
+              "false_accusations": 0
+            },
+            "recorded_settled_cutoff_mismatches": 0,
+            "recorded_outcome_diagnostics": {
+              "supported": 1,
+              "contradicted": 0,
+              "unresolved": 0,
+              "conflicting": 0,
+              "failed_or_invalid": 0
+            }
+          }
+        }
+      }
+    },
+    "paired_contrasts": {
+      "cutoff": {
+        "available": true,
+        "denominator": 2,
+        "both_match": 2,
+        "direct_only_matches": 0,
+        "news_tracing_only_matches": 0,
+        "neither_matches": 0,
+        "news_tracing_minus_direct_matches": 0,
+        "recorded_cases_with_failure_or_invalid": 0
+      },
+      "later_outcome": {
+        "available": true,
+        "denominator": 2,
+        "both_match": 1,
+        "direct_only_matches": 0,
+        "news_tracing_only_matches": 0,
+        "neither_matches": 1,
+        "news_tracing_minus_direct_matches": 0,
+        "recorded_cases_with_failure_or_invalid": 0
+      }
+    },
+    "scope": {
+      "offline_component_only": true,
+      "admission_or_request_audit_proved": false,
+      "row_flags_are_diagnostics_when_batch_is_fatal": true,
+      "token_accounting_included": false,
+      "superiority_established": false,
+      "semantic_validity_not_assessed": true,
+      "later_label_agreement_is_not_cutoff_grounded_detection": true,
+      "human_review_of_warrants_required_for_semantic_claims": true
+    }
+  },
+  "semantic_validation": {
+    "finals_reviewed": 4,
+    "semantically_valid": 4,
+    "material_errors_found": 0,
+    "model_quotes_verified": 10,
+    "reviewer_spans_verified": 17,
+    "condition_masked_judgments_frozen_before_join": true,
+    "prior_cutoff_reviewer_exposure_disclosed": true,
+    "review_sha256": "1516b5988250518ce55afe4c9a88ed9efd4c1db2eac2c7efe2b8eec5654fe88e",
+    "join_validated": true,
+    "join_validation_sha256": "0c60fa98ea1022fe78fd497d4fe41dcd47b2d3efc5e30e68e278eeac892e031b",
+    "semantic_cutoff_correct_per_arm": 2,
+    "denominator_per_arm": 2
+  },
+  "integrity_validation": {
+    "rows_valid": 4,
+    "successful_calls": 21,
+    "complete_captures": 21,
+    "capture_truncations": 0,
+    "model_failures": 0,
+    "feedback_rows": 1,
+    "reanalysis_rows": 0,
+    "both_loops_rows": 0,
+    "harness_row_denominator": 2,
+    "review_sha256": "15b7efca6b7acd70bbc16990f569c3943c23d5c02663091c4f23df181c2c38b7"
+  },
+  "policy_change_rule": {
+    "effective_after_this_inference": true,
+    "required_before_every_future_benchmark_round": true,
+    "substantive_behavior_change_required": true,
+    "fixed_original_astra_baseline": true,
+    "old_frozen_results_unchanged": true,
+    "rule_sha256": "2f5e5e9e049e77ea2721ba1363183ac3f97a6082483088a6e6232e6e9b5f2ca9"
+  },
+  "automatic_scoring_scope": {
+    "pilot_only": true,
+    "new_holdout_claimed": false,
+    "independent_event_families": 2,
+    "unchanged_candidate3_guidance": true,
+    "cutoff_only_reviewer_exposed_before_run": true,
+    "source_aware_reviewer_further_prompt_tuning_prohibited": true,
+    "date_precision_preserved_by_post_audit_projector": true,
+    "admission_metadata_is_not_itself_proof": true,
+    "semantic_validity_not_assessed": true,
+    "superiority_established": false,
+    "no_source_network": true,
+    "model_memory_erased": false,
+    "equal_token_budget": false,
+    "token_totals_exclude_codex_orchestration_and_audit_usage": true,
+    "fatal_primary_unavailable": false,
+    "internal_cli_retries_independently_counted": false
+  }
+}

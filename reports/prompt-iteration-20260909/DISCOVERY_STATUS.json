@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "registered_at": "2026-09-09T04:41:28.513377+00:00",
+  "completed_at": "2026-09-09T04:47:30.556400+00:00",
+  "elapsed_seconds": 362.043,
+  "maximum_minutes": 10,
+  "maximum_new_families": 4,
+  "new_families_screened": 4,
+  "new_eligible_later_false_cases": 0,
+  "new_eligible_true_cases": 0,
+  "previous_reviewed_true_cases_preserved": 1,
+  "ready_varied_news_pair": false,
+  "both_date_rules_passed_new_cases": 0,
+  "formal_2025_2026_source_seen_families": 3,
+  "first_public_establishment_still_unverified_families": 4,
+  "model_calls": 0,
+  "frozen_sibling_files_verified": 68,
+  "frozen_sibling_files_changed": 0,
+  "stop_reason": "Family cap reached; admission gates not satisfied; no further discovery in this registered pass.",
+  "safe_next_step": "A bounded continuation may recover the exact contemporary advertisement identified in a later official finding, including qualifications, then verify its archive date and first public establishment separately. Current news reports cannot be strengthened into unsupported total-price or universal-authenticity claims.",
+  "identity_release": "Candidate details stay private; publish only this aggregate status and hashes."
+}

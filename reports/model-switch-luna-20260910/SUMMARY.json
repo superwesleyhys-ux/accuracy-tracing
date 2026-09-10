@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "completed_at": "2026-09-10T07:34:13.028636+00:00",
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "low",
+  "tunnel": "local",
+  "fallback": false,
+  "code_inventory_count": 42,
+  "summary_and_rubric_resolved": true,
+  "semantic_summary_hash_matches": true,
+  "isolated_stub_rows": 4,
+  "isolated_stub_calls": 20,
+  "stub_live_credit": false,
+  "stub_gold_parsed": false,
+  "stub_request_audit_sha256": "e1d1ff2ad0797908f6c3b5983b83e1ad53822ff02dc833a6d0a9629c89dab2cc",
+  "live_probe_calls": 1,
+  "live_probe_passed": true,
+  "live_probe_input_tokens": 6529,
+  "live_probe_output_tokens": 20,
+  "live_probe_total_known_tokens": 6549,
+  "live_probe_seconds": 8.409840082982555,
+  "live_probe_sha256": "73e828fb16d12e5e515ccd6199cd04a47b6ecf27667aaabd3e73fe21c9a40e11",
+  "harness_benchmark_calls": 0,
+  "harness_policy_spent": false,
+  "validation_limits": [
+    "Earlier3checks were shallow/joint-invalid-profile checks, not independent branch coverage.",
+    "Root fixed duplicated summary directory and old exporter hash, then full isolated4row20stubcall run+requestaudit passed.",
+    "One synthetic live text/image check does not prove news accuracy."
+  ],
+  "mini_attempt": "1unsupported model rejection; usage unknown; no retry"
+}

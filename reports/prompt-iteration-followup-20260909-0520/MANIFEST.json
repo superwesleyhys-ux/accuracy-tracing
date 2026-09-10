@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-09T05:33:21.224300+00:00",
+  "accuracy_goal_met": false,
+  "token_optimization_active": false,
+  "files": {
+    "ADMISSION_INTERPRETATION.md": "bbc54a921e8967621f3ca9e3c8ef3f3941ce24a532db8abae4d47d93bd5acf15",
+    "INDEPENDENT_REVIEW_STATUS.json": "4a2367ddb502c2c711fa3801525c326a1e64d06a2b1ffa1847e0038100d947cc",
+    "README.md": "6636310d1db740886a73f713a4c39713d6c8f088c8e2214346fc34471f776251",
+    "RECOVERY_FEEDBACK.md": "88613f1d39fb649ec0c9cd1c50d7d17c35dce2921031e2ec92a64e023e588945",
+    "SOURCE_STATUS.json": "8c08f83af1fbbc9a9ca4c4278d98b95a6b0043a0a7780df3d6cacc420828fc1d",
+    "VALIDATION.json": "aab8aec8765ae4353000bf1e2ef355b68ee43441d83b3eba33a59acedeee9970"
+  }
+}

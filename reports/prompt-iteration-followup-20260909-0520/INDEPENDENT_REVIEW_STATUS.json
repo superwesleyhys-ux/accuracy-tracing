@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "review_readiness": "complete",
+  "counts": {
+    "registered_operation_cap": 12,
+    "recorded_operations": 12,
+    "sequential_operation_ids": true,
+    "search_queries": 5,
+    "direct_http_requests": 5,
+    "direct_http_successes": 2,
+    "direct_http_failures": 3,
+    "browser_attempts": 1,
+    "browser_unavailable_attempts": 1,
+    "web_reader_opens": 1,
+    "web_reader_failed_opens": 1,
+    "unsuccessful_nonsearch_attempts": 5,
+    "retained_successful_responses": 2,
+    "recovered_pre2024_linked_page_replays": 1,
+    "recovered_complete_original_advertisements": 0,
+    "new_admitted_cases": 0,
+    "new_eligible_later_false_cases": 0,
+    "new_eligible_true_cases": 0,
+    "existing_reviewed_true_cases_preserved": 1,
+    "families_revisited": 1,
+    "new_families_screened": 0,
+    "prior_manifests_checked": 5,
+    "prior_file_entries_checked": 157,
+    "prior_unique_files_checked": 157,
+    "prior_file_mismatches": 0,
+    "prior_manifest_commitment_mismatches": 0,
+    "new_manifest_entries_checked": 18,
+    "new_manifest_entry_mismatches": 0,
+    "new_unmanifested_source_pass_files": 0,
+    "retained_replay_response_bytes": 89523,
+    "reproduced_extraction_characters": 7410,
+    "image_elements_in_replay": 21,
+    "unique_image_source_references_in_replay": 20,
+    "archive_wrapper_image_elements": 3,
+    "retained_image_binary_assets": 0,
+    "new_benchmark_model_calls": 0,
+    "audit_network_operations": 0,
+    "source_pass_reported_elapsed_seconds": 298.823,
+    "source_pass_maximum_minutes": 12
+  },
+  "readiness": {
+    "linked_historical_webpage_recovery_supported": true,
+    "complete_original_advertisement_recovered": false,
+    "literal_falsehood_binding_ready": false,
+    "original_visual_context_ready": false,
+    "exact_target_chronology_ready": false,
+    "ready_varied_news_pair": false,
+    "no_admission_appropriate": true,
+    "date_gates_changed": false,
+    "labels_changed": false,
+    "frozen_sources_outputs_code_changed_by_audit": false,
+    "new_inputs_or_gold_created": false
+  },
+  "nonidentifying_limitations": [
+    "The recovery is one linked seller-page HTML replay. It is not the identified original advertisement or an unchanged complete advertisement rendering.",
+    "The linking anchor is confirmed in previously retained current article bytes bearing a historical publication date; historical identity of those article bytes or that anchor is not independently proven.",
+    "The archived page capture follows the promotion window. Its pre-cutoff availability does not establish an unchanged version at the earlier article or promotion date.",
+    "Archive availability metadata, replay URL and body timestamp are internally consistent. The retained response contains archive replay additions and rewritten URLs; no original WARC payload or CDX digest was recovered for independent payload verification.",
+    "The archived text retains material qualifications. It does not support substituting an unqualified total-price assertion, or treating a misleading presentation finding as literal falsity of a separately stated amount.",
+    "Complete visual context is missing. The reported 21 is a count of image elements, including 3 archive-wrapper elements; there are 20 distinct image references, not 21 distinct original advertisement assets.",
+    "Exact original claim-to-finding binding is absent, and decisive reasons or annexures were not retained as newly successful source bytes. Their detailed descriptions and date distinctions remain reported discovery leads, not independently verified findings in this audit.",
+    "The first public establishment gate remains materially unresolved. Earlier allegations or other campaigns are not automatically treated as decisive establishment, and no impossible universal-absence proof is required.",
+    "The count of 12 is verified against the preserved operation log. Five search records contain discovery summaries rather than retained full provider responses, and non-direct operations lack individual timestamps; the files do not independently prove completeness of all historical tool activity.",
+    "The preserved records support stopping without admission. No dates, labels or admission gates were revised."
+  ],
+  "hashes": {
+    "admission_interpretation_sha256": "bbc54a921e8967621f3ca9e3c8ef3f3941ce24a532db8abae4d47d93bd5acf15",
+    "continue_sha256": "f7f2091d12c641d106ed311a2ff532935c86c7df0912f95a0b6667604d87c07c",
+    "recovery_manifest_sha256": "12bf6da8591db4014708a3b1ae6198e813025d5003e3a163020ede4598ef305c",
+    "recovery_status_sha256": "8c08f83af1fbbc9a9ca4c4278d98b95a6b0043a0a7780df3d6cacc420828fc1d",
+    "preregistration_sha256": "f2c2f9596853e21adada97d930040fd635076e55abfa0a33a6ff3aac15827a99",
+    "operations_sha256": "9f69e971a9e3b011a53ed8741e40531b0faff077a64c0ee472ee43d7cf171d3c",
+    "evidence_review_sha256": "1fae01d58740f8c50874e1ca069a2e1f23df2b94e7add4a21335b23d366e3c0b",
+    "availability_response_sha256": "4b006c8ba37c6e7be286b635610e4769783e29f5444058f15fe60959e52e948b",
+    "replay_response_sha256": "9a4868285377a4c586bda87e9b2d2d6700053324b998c7fdfc95b975700188e4",
+    "replay_extraction_sha256": "d11da77eaaf0a6e7f09afb1641892187094f61265e8585651bd7641e4b3e46da",
+    "original_link_reference_sha256": "c6e9adb25dc00b3ab22ac5e49240c017b7d349eec60fe0945fab63de76bf1c80",
+    "existing_control_input_sha256": "5ed4f7b8dc7d657ab805c811fa4c0c6653946b72a6dca7808d018c9e8013fd0c",
+    "existing_control_gold_sha256": "0b861d55577c64be0c8f2454a33e705b8d5ae001eb812ce0383acb59ea3dbc62",
+    "independent_review_sha256": "66dc0c9576e30716952bc54a9d88a45d1c99b579415f247db8560b9afa1c7ca7"
+  },
+  "prior_manifest_checks": [
+    {
+      "manifest_sha256": "5adfa46888ae08c9e3cb3ce14e8f6aa6126c347ab45cf7e02ae5dfa4831cc0c7",
+      "files_checked": 50,
+      "mismatches": 0
+    },
+    {
+      "manifest_sha256": "b189b213d386370cb3ad5e9a304e93f452a954ef8a15d5c23a30e35d1e9777b0",
+      "files_checked": 18,
+      "mismatches": 0
+    },
+    {
+      "manifest_sha256": "ac047f55ea25e3fbd4b9f60be1610bf6baaafa55b75a3468d67b180ee071c52d",
+      "files_checked": 25,
+      "mismatches": 0
+    },
+    {
+      "manifest_sha256": "402d3a089282c101a146203d57171de578922f985904207ce4d176d07f323240",
+      "files_checked": 61,
+      "mismatches": 0
+    },
+    {
+      "manifest_sha256": "f926da674e7949e8db60f3f04af8cff375a15028c02d5fd813f31be50f2f1310",
+      "files_checked": 3,
+      "mismatches": 0
+    }
+  ]
+}

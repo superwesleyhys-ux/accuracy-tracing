@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "audit_kind": "candidate_1_independent_live_binding_and_outcome_audit",
+  "audited_at": "2026-09-09T04:32:07.499141+00:00",
+  "passed": true,
+  "blockers": [],
+  "scope": {
+    "case_ids": [
+      "h05",
+      "h06"
+    ],
+    "conditions": [
+      "direct",
+      "news_tracing"
+    ],
+    "case_count": 2,
+    "run_count": 4,
+    "event_families": 1,
+    "exposed_development_only": true,
+    "private_gold_file_read": false,
+    "registered_outcome_labels_read_from_summary": true,
+    "model_calls_by_this_audit": 0,
+    "attribution_control_is_not_a_genuine_measurement_control": true,
+    "internal_cli_retries_not_independently_counted": true
+  },
+  "artifact_hashes": {
+    "SUMMARY.json": "f68ee5fbc82852837235d64c521be8e03e065ecf367275b9a534c5310aa44bb5",
+    "SANITIZED_RECEIPTS.json": "60bda530826239cc80ec2c9bfab6af7e11dc97efc04315dbaf7ec5d3ca2d7c51",
+    "manifest.json": "a589f4a3de10cfc9fca112862445717cd0778da0c7764cb6d7082560a5e5602e",
+    "registration.json": "8484b4ba25dc41accf2246a9c00dcde60e3124b4960766601f01cb1db16a0d0b",
+    "plan.json": "c79212fc41aae7667f82df0f544d562e2de536a15111779380d6735160873d43",
+    "protocol.md": "a71b5bb15b7976973136a100091e656f1cdeff51cfe2a4e55b258641f3db1fc6",
+    "code-manifest.json": "704b2c820757b059349b7ced0ec51331f75571b0261c14d77a9de9a2b83c0532",
+    "worker-corpus.json": "425b08099402de9492e31760a8c4dce27d78cabc366b12d07ab1ab3a3f3f68e0"
+  },
+  "code_hashes": {
+    "driver_sha256": "ad9d8937b3efe0a9ec699dcbb1eab86e580b65d5f5fb2b048acbb2f54e88723c",
+    "scorer_sha256": "ed01909cbf4e89a0fe312b483a1103b72715b405d99585273bb6c97f33d8ce0d",
+    "proposal_sha256": "d25a4d8e7a0faf8415e868e98bf3f138818dd63c3223e1c0c2b8fa2ce944b2c1",
+    "guidance_sha256": "2ce1b0de9ff5ca756980f76124c31696caac88157adb26c784ab1ea50d42afe7"
+  },
+  "checks": {
+    "registered_and_current_frozen_code_match": true,
+    "registration_precedes_inference": true,
+    "all_actual_request_response_schema_usage_bindings_match": true,
+    "direct_instructions_unchanged": true,
+    "guidance_only_on_harness_decompose_and_verify": true,
+    "all_research_and_select_instructions_unchanged": true,
+    "complete_canonical_text_and_historical_availability": true,
+    "target_and_temporal_boundary_preserved": true,
+    "recorded_local_skill_isolation_passed": true,
+    "worker_filesystem_and_source_network_isolation_receipts_passed": true,
+    "all_final_quotes_exact_and_unique": true,
+    "all_four_outcomes_retained": true,
+    "no_errors_failed_calls_or_unknown_usage": true,
+    "claim_mode_required_stages_completed": true
+  },
+  "coverage": {
+    "logical_calls": 21,
+    "successful_calls": 21,
+    "failed_calls": 0,
+    "known_usage_calls": 21,
+    "unknown_usage_calls": 0,
+    "candidate_guidance_applications": 10,
+    "unchanged_direct_requests": 2,
+    "unchanged_research_requests": 9,
+    "research_characters_each_packet": 44120,
+    "final_quote_spans": 6,
+    "disabled_local_skill_counts": [
+      66
+    ],
+    "frozen_code_files": 24
+  },
+  "usage_by_condition": {
+    "direct": {
+      "input_tokens": 41324,
+      "output_tokens": 300,
+      "cached_input_tokens": 0,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 41624,
+      "calls": 2
+    },
+    "news_tracing": {
+      "input_tokens": 387415,
+      "output_tokens": 8360,
+      "cached_input_tokens": 15872,
+      "reasoning_output_tokens": 552,
+      "total_tokens": 395775,
+      "calls": 19
+    }
+  },
+  "total_tokens": 437399,
+  "stage_call_counts": [
+    {
+      "condition": "direct",
+      "stage": "direct",
+      "calls": 2
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "decompose",
+      "calls": 6
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "deconstruct",
+      "calls": 2
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "search_plan",
+      "calls": 2
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "source_trace",
+      "calls": 2
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "source_verify",
+      "calls": 1
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "synthesis",
+      "calls": 2
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "verify",
+      "calls": 4
+    }
+  ],
+  "outcomes": {
+    "direct": {
+      "cutoff_matches": 2,
+      "cutoff_denominator": 2,
+      "later_false_claims_called_false": 0,
+      "later_false_claim_denominator": 1,
+      "authenticity_abstentions": 1,
+      "attribution_supported": 1,
+      "invalid_or_failed": 0
+    },
+    "news_tracing": {
+      "cutoff_matches": 2,
+      "cutoff_denominator": 2,
+      "later_false_claims_called_false": 0,
+      "later_false_claim_denominator": 1,
+      "authenticity_abstentions": 1,
+      "attribution_supported": 1,
+      "invalid_or_failed": 0
+    }
+  },
+  "call_audit": [
+    {
+      "receipt_id": "h05:direct:01",
+      "stage": "direct",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": false
+    },
+    {
+      "receipt_id": "h05:news_tracing:01",
+      "stage": "deconstruct",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": false
+    },
+    {
+      "receipt_id": "h05:news_tracing:02",
+      "stage": "search_plan",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": false
+    },
+    {
+      "receipt_id": "h05:news_tracing:03",
+      "stage": "source_trace",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": false
+    },
+    {
+      "receipt_id": "h05:news_tracing:04",
+      "stage": "source_trace",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": false
+    },
+    {
+      "receipt_id": "h05:news_tracing:05",
+      "stage": "source_verify",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": false
+    },
+    {
+      "receipt_id": "h05:news_tracing:06",
+      "stage": "synthesis",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": false
+    },
+    {
+      "receipt_id": "h05:news_tracing:07",
+      "stage": "decompose",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:08",
+      "stage": "verify",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:09",
+      "stage": "decompose",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:10",
+      "stage": "decompose",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:11",
+      "stage": "verify",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": true
+    },
+    {
+      "receipt_id": "h06:news_tracing:01",
+      "stage": "deconstruct",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": false
+    },
+    {
+      "receipt_id": "h06:news_tracing:02",
+      "stage": "search_plan",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": false
+    },
+    {
+      "receipt_id": "h06:news_tracing:03",
+      "stage": "synthesis",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": false
+    },
+    {
+      "receipt_id": "h06:news_tracing:04",
+      "stage": "decompose",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": true
+    },
+    {
+      "receipt_id": "h06:news_tracing:05",
+      "stage": "verify",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": true
+    },
+    {
+      "receipt_id": "h06:news_tracing:06",
+      "stage": "decompose",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": true
+    },
+    {
+      "receipt_id": "h06:news_tracing:07",
+      "stage": "decompose",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": true
+    },
+    {
+      "receipt_id": "h06:news_tracing:08",
+      "stage": "verify",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": true
+    },
+    {
+      "receipt_id": "h06:direct:01",
+      "stage": "direct",
+      "request_response_schema_receipt_binding_passed": true,
+      "candidate_guidance_applied": false
+    }
+  ],
+  "private_audit_sha256": "06d3b5cce814bc9424b0a0e823f2643f6fe56e28d875d02ba05d98c412ad7ac7",
+  "scope_note": "Binding/outcome audit only; additional independent manual semantic review is recorded separately. No source bytes or model prose are included."
+}

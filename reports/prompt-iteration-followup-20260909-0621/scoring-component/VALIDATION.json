@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "offline_tests_passed_pending_independent_review",
+  "validated_at": "2026-09-09T06:27:36.379229+00:00",
+  "framework": "stdlib unittest",
+  "tests_run": 30,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "fictional_fixtures_only": true,
+  "real_sources_or_gold_read": false,
+  "model_calls": 0,
+  "network_calls": 0,
+  "runner_integrated": false,
+  "benchmark_registered": false,
+  "admission_proved": false,
+  "request_audits_or_isolation_proved": false,
+  "token_accounting_included": false,
+  "primary_comparison_on_fatal_batch_available": false,
+  "review_requested_changes": {
+    "exact_string_arm_order": true,
+    "settled_cutoff_mismatch_diagnostic": true,
+    "three_new_tests_failed_before_fix": true
+  },
+  "files_sha256": {
+    "scoring.py": "924eef501a34831a74a9ff1aa72a2b6d99f1e6bffcab7b03c421f37d32e74ca4",
+    "test_scoring.py": "36304fde522844dd8915de5854ae05301a35df4b4d46b1f5acef96d3683b8e2b",
+    "README.md": "ff2301c90771f9844cc4165008d96f6062f82d5b06f41e46cfd69cd500e03cc8"
+  }
+}

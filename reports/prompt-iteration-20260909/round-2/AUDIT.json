@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "reviewed_at": "2026-09-09T04:49:17.173380+00:00",
+  "scope": "Read-only audit of all recorded live Round 2 calls and outcomes; no new model/network calls; private gold hashed but not parsed; no frozen files modified",
+  "blockers": [],
+  "hashes": {
+    "run_test.py": "ae66aef95a8dcee96fb99067cbf852d9025d3f88a6fedd12c3616c6a32107b80",
+    "summarize_test.py": "6507589e2a0915ac82af311faf361f062c28ed32ccd4ad13a984e466363a8e91",
+    "registered-scorer.py": "6507589e2a0915ac82af311faf361f062c28ed32ccd4ad13a984e466363a8e91",
+    "REGISTRATION.json": "1e30595e42ba75625347f3790e0af9236fd642fd37a7585b9fa50c0024a0461a",
+    "PLAN.json": "a8b87375e595014d40cdd5830b1e64bd8baa4783ad071ced9e72b0e326f97527",
+    "PROTOCOL.md": "6c3ab9bcc457fc43e7071f51cc22733a9599c14c9a0737ef610168c06a705dcd",
+    "CODE_MANIFEST.json": "4eb08761ad154f3a96a3c195e0d8d5274c44dda67ea352a5b10f73a2940b304e",
+    "results/manifest.json": "b46dad6e8f4ca24e86f3d0e6284c760779108d5f2d5be9f602e8cfa7c7fd6f79",
+    "results/SUMMARY.json": "98eaf9df6c04c792d885506cc14e010e892a64b766a76bcc98bc09e880a58e09",
+    "results/SANITIZED_RECEIPTS.json": "c08514933b50829380f51ad95e5c14d0a6915d5278414567323d5b9a4390b1d0",
+    "results/stage-artifacts/predictions.json": "58998f2251e2a0fed768171c44c3af62304ef919660f50fb94829e5d8c4c4180"
+  },
+  "commitments": {
+    "frozen_code_files_verified": 24,
+    "all_match_independent_preflight": true,
+    "registration_precedes_inference": true,
+    "current_and_archived_scorer_equal_registration": true,
+    "canonical_corpus_sha256": "b5ad5c900145a7a5b208fe8752c1051119d2be18bfa45ececd4d025f6dcf2826",
+    "gold_sha256": "b2b10af8b6c3018088ead31a5b0ab91f91f6c6e000903f0cf67c5679b30d328a",
+    "helper_sha256": "f5524ee1a92bb5be07d8148477e416d6a11db2ab82cf41ef4ffbf116649e771f",
+    "guidance_sha256": "4c6936fe1e18426a00125a800fa98808bc583ccf7ef9b50d8af54773b866ef79"
+  },
+  "execution": {
+    "outcomes": 4,
+    "valid_outcomes": 4,
+    "calls": 18,
+    "successful_calls": 18,
+    "failed_calls": 0,
+    "unknown_usage_calls": 0,
+    "clock_discrepancy_rows": 0,
+    "frozen_worker_isolation_passed": true,
+    "source_network_disabled": true,
+    "skills_disabled_per_call": [
+      66
+    ],
+    "model": "gpt-6-astra",
+    "effort": "medium",
+    "tunnel": "local",
+    "cross_route_fallback": false,
+    "orchestration_retries": 0,
+    "internal_cli_retries_independently_counted": false
+  },
+  "checks": {
+    "registered_verify_batch_read_only_rerun_passed": true,
+    "all_response_schemas_independently_validated": true,
+    "native_research_responses_valid": true,
+    "actual_requests_raw_response_objects_and_receipts_bind": true,
+    "published_receipts_and_exposure_equal_reconstructed": true,
+    "exact_guidance_applications": 7,
+    "unchanged_direct_requests": 2,
+    "unchanged_other_harness_instructions": 9,
+    "all_base_instructions_equal_round_1": true,
+    "full_research_packets": 9,
+    "characters_per_research_packet": 44120,
+    "versions_per_research_packet": 2,
+    "availability_and_exact_offsets_match_canonical": true,
+    "no_registration_gold_fields_or_commitments_in_requests": true,
+    "final_quote_occurrences": 6,
+    "distinct_final_source_spans": 4
+  },
+  "metrics": {
+    "direct": {
+      "input_tokens": 41318,
+      "output_tokens": 351,
+      "total_tokens": 41669,
+      "cached_input_tokens": 7552,
+      "reasoning_output_tokens": 15,
+      "calls": 2
+    },
+    "news_tracing": {
+      "input_tokens": 317567,
+      "output_tokens": 6451,
+      "total_tokens": 324018,
+      "cached_input_tokens": 38656,
+      "reasoning_output_tokens": 421,
+      "calls": 16
+    },
+    "total_tokens": 365687,
+    "harness_to_direct_token_ratio": 7.775996544193525,
+    "cutoff_matches_per_arm": {
+      "direct": {
+        "matches": 2,
+        "denominator": 2
+      },
+      "news_tracing": {
+        "matches": 2,
+        "denominator": 2
+      }
+    },
+    "authenticity_called_false_per_arm": {
+      "direct": {
+        "matches": 0,
+        "denominator": 1
+      },
+      "news_tracing": {
+        "matches": 0,
+        "denominator": 1
+      }
+    },
+    "authenticity_abstentions_per_arm": {
+      "direct": 1,
+      "news_tracing": 1
+    }
+  },
+  "orchestration_findings": [
+    "h05 used 11 harness calls: six research, three decomposition and two verification calls; it consumed two eligible source versions, reanalyzed the first version, and stopped unresolved at the document cap.",
+    "h06 used five harness calls: deconstruct, search_plan, synthesis, decompose and verify. Planning returned no queries, source verification was explicitly skipped for no proposals, and all required claim-mode phases completed. The first formal verification supported the attribution and ended with no open gaps.",
+    "No second h06 formal loop or full-body formal inspection is claimed. Research received both complete supplied versions; h06 formal verification used the eligible abstract only."
+  ],
+  "scope_limits": [
+    "One previously exposed wastewater family; two related target formulations, not an independent holdout or balanced authenticity test.",
+    "The supported control establishes attribution only, not genuine experimental measurements.",
+    "Abstention is not advance fabrication detection, and cutoff 2/2 matches in both arms do not establish an Astra accuracy win.",
+    "All extracted supplied text was present in research; unsupplied figure/table sheets and raw laboratory records remain unassessed.",
+    "Guidance placement and absence of an old overbroad explanation do not establish execution of a new numerical comparison. The separate secondary semantic review determines check quality.",
+    "Token totals cover recorded target-model invocations, including cached input exactly once; this Codex orchestration/audit usage and internal CLI retry accounting are outside these totals."
+  ],
+  "stages": [
+    {
+      "condition": "direct",
+      "stage": "direct",
+      "input_tokens": 41318,
+      "output_tokens": 351,
+      "total_tokens": 41669,
+      "cached_input_tokens": 7552,
+      "reasoning_output_tokens": 15,
+      "calls": 2
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "decompose",
+      "input_tokens": 73018,
+      "output_tokens": 3771,
+      "total_tokens": 76789,
+      "cached_input_tokens": 15872,
+      "reasoning_output_tokens": 364,
+      "calls": 4
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "deconstruct",
+      "input_tokens": 42762,
+      "output_tokens": 291,
+      "total_tokens": 43053,
+      "cached_input_tokens": 7552,
+      "reasoning_output_tokens": 0,
+      "calls": 2
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "search_plan",
+      "input_tokens": 42854,
+      "output_tokens": 236,
+      "total_tokens": 43090,
+      "cached_input_tokens": 0,
+      "reasoning_output_tokens": 26,
+      "calls": 2
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "source_trace",
+      "input_tokens": 43018,
+      "output_tokens": 725,
+      "total_tokens": 43743,
+      "cached_input_tokens": 7552,
+      "reasoning_output_tokens": 0,
+      "calls": 2
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "source_verify",
+      "input_tokens": 22168,
+      "output_tokens": 169,
+      "total_tokens": 22337,
+      "cached_input_tokens": 0,
+      "reasoning_output_tokens": 0,
+      "calls": 1
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "synthesis",
+      "input_tokens": 44470,
+      "output_tokens": 584,
+      "total_tokens": 45054,
+      "cached_input_tokens": 0,
+      "reasoning_output_tokens": 0,
+      "calls": 2
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "verify",
+      "input_tokens": 49277,
+      "output_tokens": 675,
+      "total_tokens": 49952,
+      "cached_input_tokens": 7680,
+      "reasoning_output_tokens": 31,
+      "calls": 3
+    }
+  ],
+  "private_audit_sha256": "40aef713c3bd24ba97d4e9818db10d9420e6e87171e4db31a1054ea8cd1ace3c",
+  "scope_note": "Sanitized binding/outcome audit. Source text and model prose omitted; independent manual explanation review is separate."
+}

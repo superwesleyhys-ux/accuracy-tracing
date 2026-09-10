@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "registered_at": "2026-09-09T05:51:45.568321+00:00",
+  "completed_at": "2026-09-09T06:00:05.855418+00:00",
+  "elapsed_seconds": 500.287,
+  "maximum_minutes": 20,
+  "maximum_operations": 20,
+  "operations_used": 20,
+  "families_revisited": 1,
+  "new_families": 0,
+  "new_admitted_cases": 0,
+  "new_proposed_input_or_gold": false,
+  "ready_varied_news_pair": false,
+  "reviewed_true_control_preserved": 1,
+  "new_model_calls": 0,
+  "recovered_institutional_reasons": 1,
+  "recovered_complete_agreed_facts_annexures": 0,
+  "recovered_later_illustrative_images": 1,
+  "recovered_exact_pre_cutoff_original_ads": 0,
+  "finding_classification": "Institutional reasons support a false conveyed total-price proposition; literal falsity of every printed base-price amount is not established.",
+  "remaining_gates": [
+    "Exact original ad, campaign date/version, qualifications and complete visual context",
+    "Exact target-to-finding binding",
+    "First public establishment of the specific target"
+  ],
+  "operation_counts": {
+    "search_queries": 5,
+    "direct_http_requests": 13,
+    "direct_http_successes": 6,
+    "direct_http_failures": 7,
+    "provider_pdf_text_opens": 1,
+    "provider_page_render_attempts": 1,
+    "provider_page_render_failures": 1
+  },
+  "retention": {
+    "full_delivered_returns_retained": true,
+    "all_per_operation_start_end_times_retained": true,
+    "all_error_bodies_or_provider_errors_retained": true,
+    "hashes_recorded": true,
+    "tool_internal_activity_unobservable": true,
+    "old_missing_receipts_not_reconstructed": true
+  },
+  "frozen_prior_files_verified": 175,
+  "frozen_prior_manifests_verified": 6,
+  "frozen_prior_files_changed": 0,
+  "stop_reason": "All 20 operations used; exact original and complete annexures remain unavailable.",
+  "continuation": "Retire current automatic source routes until a concrete original-post identity or accessible institutional annexure copy becomes available; do not repeat exhausted routes or substitute a different example."
+}

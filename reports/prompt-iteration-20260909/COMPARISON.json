@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "accuracy_goal_met": false,
+  "token_optimization_active": false,
+  "production_candidate_installed": false,
+  "rounds": [
+    {
+      "id": "previous_full_evidence_diagnostic",
+      "cases": 2,
+      "independent_families": 1,
+      "exposed_development_only": true,
+      "conditions": {
+        "direct": {
+          "cutoff_matches": 2,
+          "authenticity_called_false": 0,
+          "authenticity_cases": 1,
+          "calls": 2,
+          "successful_calls": 2,
+          "total_tokens": 41659,
+          "usage_complete": true
+        },
+        "news_tracing": {
+          "cutoff_matches": 2,
+          "authenticity_called_false": 0,
+          "authenticity_cases": 1,
+          "calls": 19,
+          "successful_calls": 19,
+          "total_tokens": 389458,
+          "usage_complete": true
+        }
+      }
+    },
+    {
+      "id": "prompt_candidate_1",
+      "cases": 2,
+      "independent_families": 1,
+      "exposed_development_only": true,
+      "conditions": {
+        "direct": {
+          "cutoff_matches": 2,
+          "authenticity_called_false": 0,
+          "authenticity_cases": 1,
+          "calls": 2,
+          "successful_calls": 2,
+          "total_tokens": 41624,
+          "usage_complete": true
+        },
+        "news_tracing": {
+          "cutoff_matches": 2,
+          "authenticity_called_false": 0,
+          "authenticity_cases": 1,
+          "calls": 19,
+          "successful_calls": 19,
+          "total_tokens": 395775,
+          "usage_complete": true
+        }
+      }
+    },
+    {
+      "id": "prompt_candidate_2",
+      "cases": 2,
+      "independent_families": 1,
+      "exposed_development_only": true,
+      "conditions": {
+        "direct": {
+          "cutoff_matches": 2,
+          "authenticity_called_false": 0,
+          "authenticity_cases": 1,
+          "calls": 2,
+          "successful_calls": 2,
+          "total_tokens": 41669,
+          "usage_complete": true
+        },
+        "news_tracing": {
+          "cutoff_matches": 2,
+          "authenticity_called_false": 0,
+          "authenticity_cases": 1,
+          "calls": 16,
+          "successful_calls": 16,
+          "total_tokens": 324018,
+          "usage_complete": true
+        }
+      }
+    }
+  ],
+  "current_iteration_totals": {
+    "model_rounds": 2,
+    "logical_calls": 39,
+    "successful_calls": 39,
+    "total_tokens": 803086,
+    "outcomes": 8,
+    "distinct_case_questions": 2,
+    "independent_event_families": 1,
+    "warning": "Repeating the same questions does not create additional independent events; previous diagnostic excluded from these totals."
+  }
+}

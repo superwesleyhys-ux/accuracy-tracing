@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-09-09T18:50:56.594251+00:00",
+  "actual_request_audit_passed": true,
+  "gold_parsed_for_this_record": false,
+  "batch_status": "completed",
+  "planned_rows": 4,
+  "actual_receipts": 15,
+  "successful_calls": 15,
+  "source_exposure_audits": 15,
+  "registration_sha256": "10617d9fd97f5ddd305c5734e1b4082303f7f1e8a0bddcbdc53751caac7733b7",
+  "manifest_sha256": "7d4de418b0ec0df7f9443071e90cfa8c64d5bee0295fcf455df14c27b13491ad",
+  "row_statuses": [
+    {
+      "case_id": "cb68b8b4b",
+      "condition": "direct",
+      "execution_status": "completed",
+      "audit_passed": true,
+      "pipeline_valid": true,
+      "formal_valid": true,
+      "observed_verdict": "supported",
+      "formal_verdict": "supported"
+    },
+    {
+      "case_id": "cb68b8b4b",
+      "condition": "news_tracing",
+      "execution_status": "completed",
+      "audit_passed": true,
+      "pipeline_valid": true,
+      "formal_valid": true,
+      "observed_verdict": "supported",
+      "formal_verdict": "supported"
+    },
+    {
+      "case_id": "c2f8fcd5d",
+      "condition": "news_tracing",
+      "execution_status": "completed",
+      "audit_passed": true,
+      "pipeline_valid": true,
+      "formal_valid": true,
+      "observed_verdict": "supported",
+      "formal_verdict": "supported"
+    },
+    {
+      "case_id": "c2f8fcd5d",
+      "condition": "direct",
+      "execution_status": "completed",
+      "audit_passed": true,
+      "pipeline_valid": true,
+      "formal_valid": true,
+      "observed_verdict": "supported",
+      "formal_verdict": "supported"
+    }
+  ]
+}

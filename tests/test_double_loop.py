@@ -120,6 +120,38 @@ class DoubleLoopTests(unittest.TestCase):
         verification = next(o for o in round2 if o["action"] == "verification_started")
         self.assertLess(decomposition["sequence"], verification["sequence"])
 
+    def test_decomposition_preserves_every_source_without_resending_current_full_text(self):
+        report, transport = self.run_script()
+        self.assertEqual([], report["errors"])
+        originals = {m["version_id"]: m for m in (D1, D2)}
+        for request in transport.inputs:
+            if request["stage"] != "decompose":
+                continue
+            packet = request["packet"]
+            current = packet["material"]
+            self.assertEqual(originals[current["version_id"]], current)
+            others = packet["context"]["materials"]
+            self.assertNotIn(current["version_id"], [m["version_id"] for m in others])
+            for item in others:
+                self.assertEqual(originals[item["version_id"]], item)
+        revisit = transport.inputs[4]["packet"]
+        self.assertEqual([D2], revisit["context"]["materials"])
+        self.assertIn("record", revisit["context"]["analyses"])
+        final = transport.inputs[-1]["packet"]
+        self.assertEqual([D1, D2], final["context"]["materials"])
+
+    def test_single_same_url_version_is_inspected_without_a_selection_model_call(self):
+        data = payload()
+        data["materials"][1]["url"] = data["materials"][0]["url"]
+        steps = script()
+        del steps[2]
+        report, transport = self.run_script(steps, data)
+        self.assertEqual([], report["errors"])
+        self.assertEqual("supported", report["fact_status"])
+        self.assertNotIn("select", [c["stage"] for c in transport.calls])
+        self.assertEqual("same_source_version", report["execution"]["provider_requests"][1]["reason"])
+        self.assertEqual(["notice", "record"], report["eligible_version_ids"])
+
     def test_missing_primary_stays_unresolved_without_inventing_retrieval(self):
         data = payload(); data["materials"] = [deepcopy(D1)]
         steps = script()[:2] + [("verify", verdict())]

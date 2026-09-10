@@ -1,0 +1,8 @@
+{
+  "status": "candidate_only",
+  "candidates": [
+    {"title":"Retraction notice: nanohole-array cytokine assay","publication_year":2023,"later_notice_year":2025,"url":"https://www.sciencedirect.com/science/article/pii/S2590137025000251","independence":"publisher retraction notice","needs":"retrieve original 2023 article and verify exact misconduct finding"},
+    {"title":"Retraction notice: amyloid-beta oligomer cognitive-deficit study","publication_year":2023,"later_notice_year":2025,"url":"https://u-toyama.elsevierpure.com/en/publications/retraction-notice-to-injection-of-exogenous-amyloid-%C3%9F-oligomers-a/","independence":"university investigation plus publisher record","needs":"verify original article date and exact fabrication determination"}
+  ],
+  "admission": "none; candidates are not yet in the benchmark"
+}

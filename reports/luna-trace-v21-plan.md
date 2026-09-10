@@ -1,0 +1,3 @@
+# Luna trace v21 strategy
+
+Separate evidence extraction from judgment. A deterministic extractor will produce only unique, source-backed candidate spans from each eligible material. The model receives those candidates and decides the verdict; it may not invent quotes or identifiers. Any verdict that cites a span outside the extractor ledger is invalid before scoring. Expected improvement: remove quote-generation and provenance-state failures while preserving the historical cutoff and source-blind invariant. Failure criterion: any of the 8 cases lacks a valid extractor-backed final response, or harness remains below the v8 baseline of 4/8.

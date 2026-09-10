@@ -1,0 +1,9 @@
+{
+  "schema_version": 2,
+  "experiment_id": "mixed-pilot-0735",
+  "phase": "mixed_holdout",
+  "case_ids": ["cb68b8b4b", "c2f8fcd5d"],
+  "conditions": ["direct", "news_tracing"],
+  "arm_order": "alternating",
+  "research_mode": "claim"
+}

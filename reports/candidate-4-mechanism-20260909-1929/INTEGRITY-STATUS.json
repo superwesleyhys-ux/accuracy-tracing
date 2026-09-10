@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "status": "passed_registered_mechanical_integrity_with_explicit_logging_limits",
+  "recorded_requests": 190,
+  "successful_requests": 182,
+  "failed_requests": 8,
+  "pre_dispatch_blocks": 0,
+  "unexecuted_rows": 0,
+  "interrupted_unknown_attempts": 0,
+  "valid_pipeline_rows": 38,
+  "ordinary_failed_rows": 4,
+  "new_model_calls": 0,
+  "new_network_calls": 0,
+  "new_tests": 0,
+  "failure_categories": {
+    "local_call_timeout": 5,
+    "local_turn_failure_or_incomplete_event": 3
+  },
+  "usage": {
+    "attempts": 190,
+    "successful_calls": 182,
+    "known_usage_calls": 185,
+    "usage_complete": false,
+    "known_input_tokens": 2030687,
+    "input_tokens": null,
+    "known_output_tokens": 41677,
+    "output_tokens": null,
+    "known_total_tokens": 2072364,
+    "total_tokens": null,
+    "known_cached_input_tokens": 310912,
+    "known_cached_input_tokens_calls": 185,
+    "cached_input_tokens": null,
+    "known_reasoning_output_tokens": 1658,
+    "known_reasoning_output_tokens_calls": 185,
+    "reasoning_output_tokens": null,
+    "interrupted_unknown_attempts": 0
+  },
+  "planned_rows": 42,
+  "actual_result_files_verified": 864,
+  "guidance_applications": 64,
+  "both_loops_executed_rows": 0,
+  "utc_runtime_discrepancy_rows": 4,
+  "gold_or_hidden_mapping_opened": false,
+  "semantic_accuracy_assessed": false,
+  "stage_counts": {
+    "direct": 14,
+    "deconstruct": 28,
+    "search_plan": 28,
+    "synthesis": 28,
+    "decompose": 28,
+    "verify": 36,
+    "source_trace": 17,
+    "source_verify": 11
+  },
+  "local_snapshot_searches": 17,
+  "live_source_requests": 0,
+  "per_condition_counts": {
+    "direct": {
+      "rows": 14,
+      "recorded_requests": 14,
+      "successful": 14,
+      "failed": 0,
+      "valid_pipelines": 14,
+      "guidance_applications": 0
+    },
+    "candidate3": {
+      "rows": 14,
+      "recorded_requests": 87,
+      "successful": 82,
+      "failed": 5,
+      "valid_pipelines": 12,
+      "guidance_applications": 32
+    },
+    "candidate4": {
+      "rows": 14,
+      "recorded_requests": 89,
+      "successful": 86,
+      "failed": 3,
+      "valid_pipelines": 12,
+      "guidance_applications": 32
+    }
+  },
+  "actual_formal_config": {
+    "max_rounds": 7,
+    "max_documents": 6,
+    "max_decomposition_calls": 12
+  },
+  "formal_call_cap": 10,
+  "outer_call_cap": 24,
+  "limitations": [
+    "Five timeout usage receipts remain unknown; total usage cannot be reported as complete.",
+    "Three failed/incomplete local-turn events have CLIexit0; raw event/HTTP diagnostics are not retained, so provider-versus-CLI root cause is unknown.",
+    "Four rows have unexplained UTC/runtime differences; timing limits are described with their actual clock basis.",
+    "Passing request/citation/schema integrity is separate from entailment, model accuracy or superiority."
+  ],
+  "final_review_sha256": "494bf5a1200849e24bbb070cfcd9f093300d63ece04c100766fd6edcb95aa2fb",
+  "snapshot_sha256": "cc8ea5e5b0e053124dd0fa9abc3df6c511f0c32dc795eb777dc760acc5894701"
+}

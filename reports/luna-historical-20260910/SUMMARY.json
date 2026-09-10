@@ -1,0 +1,11 @@
+{
+  "path": "experiments/luna-historical-20260910/luna-results-1",
+  "planned_rows": 16,
+  "completed_rows": 16,
+  "target_model_calls": 16,
+  "harness_failures_observed": true,
+  "scored": false,
+  "gold_parsed": false,
+  "registration_hash_failure": true,
+  "reason": "Copied registration retained Astra-era scorer hash; scorer halted before gold parse. Do not claim accuracy or rerun same snapshot."
+}

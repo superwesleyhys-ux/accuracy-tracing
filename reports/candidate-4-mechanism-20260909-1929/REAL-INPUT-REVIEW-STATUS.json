@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "status": "completed_and_frozen",
+  "case_ids": [
+    "n799648b1",
+    "nf251b4e2"
+  ],
+  "cases_assessed": 2,
+  "material_versions": 5,
+  "cutoff_verdict_counts": {
+    "supported": 2,
+    "contradicted": 0,
+    "unresolved": 0,
+    "conflicting": 0
+  },
+  "exact_spans_verified": 18,
+  "ambiguity_categories": [
+    "measurement_definition_and_precision",
+    "documented_assurance_limits",
+    "contrary_material_period_scope",
+    "language_authority",
+    "constitutive_scope",
+    "historical_binary_capture_unavailable",
+    "calendar_day_timezone_precision",
+    "exact_historical_webpage_version_uncertain",
+    "current_download_version_parameter_uncertain"
+  ],
+  "substantive_target_ambiguities_changing_verdict": 0,
+  "date_version_admission_assessed_separately": true,
+  "admission_granted": false,
+  "no_source_identity_or_prose_in_this_status": true,
+  "later_information_or_prior_case_labels_read": false,
+  "general_harness_context_disclosed_in_private_review": true,
+  "network_calls": 0,
+  "model_calls": 0,
+  "source_reviewer_must_not_tune_prompts_for_these_families": true,
+  "corpus_sha256": "2ca623138cdfecd424f26d63bb779592f32684ef72c3b3053b2c08592409d585",
+  "review_sha256": "55a9dbf1e530953212d15cb998cb0671645cdc73947067378997560e093177c3"
+}

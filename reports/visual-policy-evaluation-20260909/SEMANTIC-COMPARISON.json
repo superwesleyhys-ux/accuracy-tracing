@@ -1,0 +1,66 @@
+{
+  "actual_request_audit_sha256": "36ed95fb9c03d3fb55c7eb9ca757ba2ffbfbaad7119856908029b3fe8886f7d6",
+  "conditions": {
+    "direct": {
+      "assessable": 2,
+      "available": true,
+      "denominator": 2,
+      "later_outcome": {
+        "abstentions": 1,
+        "affirmed_true_denominator": 1,
+        "cutoff_warranted_false_acceptances": 0,
+        "cutoff_warranted_true_acceptances": 1,
+        "false_acceptances": 0,
+        "false_accusations": 0,
+        "false_target_denominator": 1,
+        "grounded_false_calls": 0,
+        "grounded_false_calls_agreeing_with_frozen_cutoff": 0,
+        "true_acceptances": 1
+      },
+      "material_errors": 1,
+      "reviewer_frozen_cutoff_disagreements": 1,
+      "semantic_cutoff_credits": 1,
+      "semantic_cutoff_rate": 0.5,
+      "unsupported_certainty": {
+        "count": 0,
+        "operational_definition": "audited_decisive_final_with_independent_material_semantic_error"
+      }
+    },
+    "news_tracing": {
+      "assessable": 2,
+      "available": true,
+      "denominator": 2,
+      "later_outcome": {
+        "abstentions": 0,
+        "affirmed_true_denominator": 1,
+        "cutoff_warranted_false_acceptances": 0,
+        "cutoff_warranted_true_acceptances": 1,
+        "false_acceptances": 0,
+        "false_accusations": 0,
+        "false_target_denominator": 1,
+        "grounded_false_calls": 0,
+        "grounded_false_calls_agreeing_with_frozen_cutoff": 0,
+        "true_acceptances": 1
+      },
+      "material_errors": 1,
+      "reviewer_frozen_cutoff_disagreements": 1,
+      "semantic_cutoff_credits": 1,
+      "semantic_cutoff_rate": 0.5,
+      "unsupported_certainty": {
+        "count": 0,
+        "operational_definition": "audited_decisive_final_with_independent_material_semantic_error"
+      }
+    }
+  },
+  "independent_review_sha256": "ec912802683ae6d7f5cc56af3d0d1ff36297e04598bdca0750dba366d25e6bac",
+  "joined_review_sha256": "a66b5188fc36e01aab813fb2fdc45f453f98cf777951410a2e2ad2b6e9861338",
+  "planned_rows": 4,
+  "private_scores_sha256": "dee1f9b9bbc3edf2251d4f2e65462c2f7bc394d4dc4cad2a86f67b905d65f974",
+  "schema_version": 1,
+  "scope": {
+    "failures_do_not_imply_semantic_defects": true,
+    "frozen_gold_unchanged_after_review": true,
+    "independent_review_declarations_are_not_rejudged": true,
+    "superiority_established": false
+  }
+}

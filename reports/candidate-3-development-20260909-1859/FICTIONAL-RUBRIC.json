@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "purpose": "Independently review semantic contrast expectations before the prospective development diagnostic. These fictional examples are not admitted historical news and are not claimed as completed model tests.",
+  "source_policy": "The supplied fictional records stipulate their described provenance; no outside facts, later outcomes or real entities are needed.",
+  "cases": [
+    {
+      "id": "s01",
+      "material": "Desk note: Mira alleged that the amber lamp had three bulbs. The desk has not inspected the lamp and has no other evidence of its bulb count.",
+      "target": "The desk note records Mira alleging that the amber lamp had three bulbs.",
+      "expected": "supported",
+      "reason": "This exact attribution is directly recorded. The underlying bulb count need not be established to support this target."
+    },
+    {
+      "id": "s02",
+      "material": "Desk note: Mira alleged that the amber lamp had three bulbs. The desk has not inspected the lamp and has no other evidence of its bulb count.",
+      "target": "The amber lamp had three bulbs.",
+      "expected": "unresolved",
+      "reason": "The same record establishes only an expressly unverified allegation. Missing inspection does not establish the opposite bulb count."
+    },
+    {
+      "id": "s03",
+      "material": "Contemporaneous public meeting record, stipulated authentic and complete for this fictional example: the clerk directly witnessed chair Neri open the meeting at the recorded time. No second observer account is supplied.",
+      "target": "Chair Neri opened the meeting at the time recorded by the clerk.",
+      "expected": "supported",
+      "reason": "The stipulated adequate first-hand record directly supports this narrow occurrence. A second account is optional, not a missing necessary premise."
+    },
+    {
+      "id": "s04",
+      "material": "On day 1, a planning note estimated that the blue booth would sell nine tickets on day 2. At the day-3 evidence cutoff, no completed sales record is supplied.",
+      "target": "The day-1 planning note estimated nine ticket sales for the blue booth on day 2.",
+      "expected": "supported",
+      "reason": "The target preserves the source's estimate modality."
+    },
+    {
+      "id": "s05",
+      "material": "On day 1, a planning note estimated that the blue booth would sell nine tickets on day 2. At the day-3 evidence cutoff, no completed sales record is supplied.",
+      "target": "The blue booth actually sold nine tickets on day 2.",
+      "expected": "unresolved",
+      "reason": "The earlier forecast does not establish the realized count. The occurrence is unresolved rather than contradicted."
+    },
+    {
+      "id": "s06",
+      "material": "The supplied authenticated register exhaustively records all ballots in this fictional count: two amber ballots and three violet ballots; these are disjoint categories and there are no other ballots.",
+      "target": "There were six ballots in the fictional count.",
+      "expected": "contradicted",
+      "reason": "The explicit exhaustive, disjoint counts give two plus three equals five. This excludes six without assuming hidden categories."
+    },
+    {
+      "id": "s07",
+      "material": "Bulletin A repeats Mira's unverified allegation that the amber lamp had three bulbs. Bulletin B explicitly quotes A and has conducted no separate inspection. A and B provide no additional evidence about the lamp itself.",
+      "target": "The amber lamp had three bulbs.",
+      "expected": "unresolved",
+      "reason": "The dependent retellings do not supply the missing underlying evidence. The result is not unresolved merely because the sources share an origin."
+    },
+    {
+      "id": "s08",
+      "material": "The fictional inventory has been directly checked and is stipulated complete: tray A contains two cards, tray B contains four different cards, and these are the only cards. A note states that the combined inventory has six cards.",
+      "target": "The combined fictional inventory has six cards.",
+      "expected": "supported",
+      "reason": "The explicit complete disjoint inventory independently permits the stated sum; the answer need not stop at the note's assertion."
+    }
+  ],
+  "revision_basis": "Only s07 names the same lamp explicitly, isolating dependence without an extra identity gap. All other fixtures and expected labels remain unchanged."
+}

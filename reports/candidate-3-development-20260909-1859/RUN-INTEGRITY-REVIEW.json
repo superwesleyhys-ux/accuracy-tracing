@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-09-09T19:20:02.275725+00:00",
+  "status": "passed",
+  "scope": "Source-blind request, code, schema, evidence-exposure and receipt integrity; no independent semantic verdict or accuracy claim.",
+  "gold_parsed": false,
+  "real_private_gold_and_gold_review_file_reads_blocked": true,
+  "model_or_network_calls": 0,
+  "batch_status": "completed",
+  "planned_rows": 4,
+  "audited_requests": 15,
+  "terminal_receipts": 15,
+  "successful_calls": 15,
+  "failed_calls": 0,
+  "interrupted_unknown_calls": 0,
+  "known_usage_calls": 15,
+  "combined_guidance_sha256": "289929acb91aef52beec1e4cdf386ecc59a89a1c61469dc93a89b5d971ea2338",
+  "suffix_sha256": "ec58f678f267dc81718f360b75cc407df70498be9c1735d148a26d6467e4271c",
+  "exact_guidance_applications": 4,
+  "guidance_only_harness_decompose_verify": true,
+  "canonical_exposure_audits_passed": 15,
+  "research_versions_supplied_in_full": true,
+  "unchanged_direct_input_and_new_receipts": true,
+  "native_schema_and_raw_response_bindings_passed": true,
+  "code_inventory_files": 25,
+  "all_current_and_archived_code_hashes_match": true,
+  "local_astra_medium_and_skill_isolation_receipts_verified": true,
+  "no_api_fallback_declared_and_frozen_route_verified": true,
+  "recorded_request_and_formal_caps_passed": true,
+  "row_checks": [
+    {
+      "planned_row": 1,
+      "condition": "direct",
+      "actual_calls": 1,
+      "formal_calls": 0,
+      "all_successful": true,
+      "row_times_within_current_batch": true,
+      "direct_input_byte_identical_to_prior_baseline": true,
+      "distinct_new_direct_receipt": true
+    },
+    {
+      "planned_row": 2,
+      "condition": "news_tracing",
+      "actual_calls": 5,
+      "formal_calls": 2,
+      "all_successful": true,
+      "row_times_within_current_batch": true
+    },
+    {
+      "planned_row": 3,
+      "condition": "news_tracing",
+      "actual_calls": 8,
+      "formal_calls": 2,
+      "all_successful": true,
+      "row_times_within_current_batch": true
+    },
+    {
+      "planned_row": 4,
+      "condition": "direct",
+      "actual_calls": 1,
+      "formal_calls": 0,
+      "all_successful": true,
+      "row_times_within_current_batch": true,
+      "direct_input_byte_identical_to_prior_baseline": true,
+      "distinct_new_direct_receipt": true
+    }
+  ],
+  "fresh_direct_scope": "Both direct rows are recorded in the new batch with distinct receipts, current batch timestamps and byte-identical baseline inputs; this checks retained execution artifacts, not an independent remote-provider log.",
+  "accounting": {
+    "all_recorded_tokens": 288951,
+    "by_condition": {
+      "direct": {
+        "calls": 2,
+        "input_tokens": 36659,
+        "output_tokens": 502,
+        "total_tokens": 37161
+      },
+      "news_tracing": {
+        "calls": 13,
+        "input_tokens": 247650,
+        "output_tokens": 4140,
+        "total_tokens": 251790
+      }
+    },
+    "unknown_usage": false,
+    "excludes_codex_orchestration_and_audit_usage": true
+  },
+  "initial_wrapper_count_correction": {
+    "initial_record_sha256": "84d10379b36f74db0f09de8c6cb57da23c30a5d43f66b0fe88443f17dc3ea71f",
+    "corrected_record_sha256": "1f061ac083148488376290859475c6ed13f1da8a9c485da164f0d5cd14677d8a",
+    "initial_derived_successful_calls": 0,
+    "incorrect_status_equals_success_count_reproduced": 0,
+    "actual_completed_with_success_true": 15,
+    "corrected_derived_successful_calls": 15,
+    "only_timestamp_count_and_correction_metadata_changed": true,
+    "original_preserved": true,
+    "not_a_model_or_transport_failure": true
+  },
+  "immutable_manifests": [
+    {
+      "directory": "candidate-3-runner-1859",
+      "manifest_sha256": "b6235a39b2606183e2baeef7abde67461236a38bb663636a54320a036c51757e",
+      "entries": 148,
+      "all_unchanged": true
+    },
+    {
+      "directory": "mixed-runner-0735",
+      "manifest_sha256": "89e06cf81751de959a2ac63bad58f4483add83647fe2fac6bfb0541140df43a2",
+      "entries": 145,
+      "all_unchanged": true
+    }
+  ],
+  "artifact_sha256": {
+    "registration": "af1f16abe020619bc4c30a917d5e7aa1b149a67affdc1e7480dc8848ffae2de2",
+    "manifest": "f2a31665cb48978371048f39caef008ac6396a937091fc26d18ca5825292c1e6",
+    "code_manifest": "a70b2dd8be1ef7966a1eab6cdaa29258814b14a444a76af1594278c51cda30c2",
+    "summary": "131b088485d3c875ef6c295ea7ea9c303f56c4a1ed1eda9a95eeee5b466c594b",
+    "sanitized_receipts": "bc9c0760f400a1811fbf411e83d2ab7f02a7b938b7a830209ea382b2b4d29b06",
+    "scorer": "164cccd3777bdb4ab0075f0b4d342afd9d4070cdeaa58eabed4ce5b036d214e4",
+    "audit_helper": "277bbcbef5e95f3a3aa8258fc93ff7ebcfa1644a7dbd2f667adf9de52f73fe27"
+  },
+  "issues": [],
+  "review_execution_note": "First pass blocked an optional hash read of a retained fictional gold placeholder. The completed pass permits hashing those known offline fixtures but continues to block real private label/review files. No gold was parsed and no outputs were written by the first pass.",
+  "semantic_review_required_separately": true
+}

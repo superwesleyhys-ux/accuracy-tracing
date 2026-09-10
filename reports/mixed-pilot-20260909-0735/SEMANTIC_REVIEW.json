@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-09-09T18:54:07.528429+00:00",
+  "status": "independent_semantic_review_complete; no_accuracy_gain_observed",
+  "scope": "All four completed planned outcomes; no partial-result extrapolation.",
+  "counts": {
+    "planned_outcomes": 4,
+    "completed_outcomes": 4,
+    "successful_logged_calls": 15,
+    "request_schema_and_transport_valid_outcomes": 4,
+    "final_canonical_quote_valid_outcomes": 4,
+    "final_basis_quote_objects": 10,
+    "all_response_quote_objects_verified": 23,
+    "real_world_semantically_supported_outcomes": 2,
+    "scope_drift_overclaims": 2,
+    "abstentions": 0,
+    "conflicts": 0,
+    "failed_or_unexecuted_outcomes": 0,
+    "audit_network_calls": 0,
+    "audit_model_calls": 0
+  },
+  "by_arm": {
+    "direct": {
+      "cutoff_correct": 1,
+      "cutoff_denominator": 2,
+      "future_correct": 1,
+      "future_denominator": 2,
+      "later_false_detected": 0,
+      "later_false_denominator": 1,
+      "false_acceptances": 1,
+      "true_control_correct": 1,
+      "true_control_denominator": 1,
+      "true_control_false_accusations": 0,
+      "semantically_supported_final_outcomes": 1
+    },
+    "news_tracing": {
+      "cutoff_correct": 1,
+      "cutoff_denominator": 2,
+      "future_correct": 1,
+      "future_denominator": 2,
+      "later_false_detected": 0,
+      "later_false_denominator": 1,
+      "false_acceptances": 1,
+      "true_control_correct": 1,
+      "true_control_denominator": 1,
+      "true_control_false_accusations": 0,
+      "semantically_supported_final_outcomes": 1
+    }
+  },
+  "generic_failure_categories": [
+    "Both arms settle accurate source attribution while assigning a settled verdict to the registered underlying real-world fact. The rationale acknowledges that the required underlying support is absent.",
+    "Exact canonical quotations and valid request bindings establish evidence identity, not real-world entailment. These are semantic cutoff mismatches, not transport or quotation failures."
+  ],
+  "observed_checks": {
+    "formal_decompositions": 2,
+    "formal_verifications": 2,
+    "formal_rounds_per_harness_case": [
+      1,
+      1
+    ],
+    "formal_revisits": 0,
+    "new_external_sources_obtained": 0,
+    "claimed_successful_arithmetic_checks": 0,
+    "unsupplied_visual_or_private_record_inspection_claims": 0,
+    "control_scope_preserved": true,
+    "optional_skips": "An empty proposal list caused one source-verification skip; claim-mode causal/timeline/perspective and related optional phases were intentionally omitted in both cases.",
+    "effective_config_note": "Inner trace ceilings are derived from the document cap in frozen code; intake round/decomposition fields do not control that trace. Actual one-round execution stayed below all relevant recorded outer caps."
+  },
+  "interpretation": "The independent semantic assessment confirms the frozen scorer tie. No accuracy or later-false detection improvement occurred. The two-case, two-family pilot supports no population superiority claim.",
+  "commitments": {
+    "registration_sha256": "10617d9fd97f5ddd305c5734e1b4082303f7f1e8a0bddcbdc53751caac7733b7",
+    "actual_request_audit_sha256": "0670a10ead15ddd3db2821b41edc8d506e9f6a3bae6795a1c2b3f04b0790dad0",
+    "results_manifest_sha256": "7d4de418b0ec0df7f9443071e90cfa8c64d5bee0295fcf455df14c27b13491ad",
+    "scorer_summary_sha256": "cb30e274c59d7255cf1f13fd295381fb6cad04f74f87e128fa4d5f343b59aa01",
+    "sanitized_receipts_sha256": "5bf2c2922ec0cd319e08516a131d6b14083f68be72326c50b8586d5fc0537552",
+    "completed_evidence_check_sha256": "4a5a7cb898c1f16aaaa679c0cb78fb76ebc853c71ebb56737a95e45f94ab306f",
+    "private_semantic_review_sha256": "9dd031012c7ce71f4d87b6efdefb0ee62021e3ca0c0a752aca024b6c86eb3a63"
+  },
+  "frozen_artifacts_modified": false,
+  "source_specific_prompt_tuning_proposed": false
+}

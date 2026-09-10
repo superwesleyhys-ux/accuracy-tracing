@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-09-09T06:28:52.400846+00:00",
+  "status": "independently_reviewed_offline_component_only",
+  "framework": "stdlib unittest",
+  "implementation_tests": 30,
+  "independent_regression_tests": 8,
+  "total_tests": 38,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "test_process_exit_code": 0,
+  "fixture_scope": "fictional values only; no real sources or private gold",
+  "reviewed_files_sha256": {
+    "scoring.py": "924eef501a34831a74a9ff1aa72a2b6d99f1e6bffcab7b03c421f37d32e74ca4",
+    "test_scoring.py": "36304fde522844dd8915de5854ae05301a35df4b4d46b1f5acef96d3683b8e2b",
+    "README.md": "ff2301c90771f9844cc4165008d96f6062f82d5b06f41e46cfd69cd500e03cc8",
+    "VALIDATION.json": "532c39d7f665d4e3a944885b3edecc9700665666bb7570590dc80e136c315605",
+    "independent_checks.py": "ddc2aaa9457f01a3c27b6e3c2b8b3b67d70168e4c2576d50635308a8f484a203"
+  },
+  "test_output_sha256": "db5fb470bc283f1c4ed3e9c20015e5a77f93e745b05dc03c13d7ce477eb0ba0f",
+  "production_and_frozen_inference_files_unchanged": 8,
+  "reviewed_boundaries": [
+    "actual future truth controls detection and false accusation strata",
+    "attribution kept separate from real-world truth",
+    "cutoff agreement separate from later-outcome match",
+    "failed pipelines receive no primary credit",
+    "fatal batches keep planned rows but primary metrics are unavailable",
+    "strict field types/order and no selective removal",
+    "settled cutoff mismatches visible as diagnostics",
+    "token accounting excluded rather than guessed"
+  ],
+  "static_module_imports": [
+    "__future__",
+    "re"
+  ],
+  "source_file_or_network_io_implemented": false,
+  "remaining_limitations": [
+    "audit/adjudication flags are caller declarations, not proof",
+    "new runner/admission commitment binding and isolation remain unimplemented",
+    "two cases cannot establish general superiority",
+    "token accounting must stay in independently audited receipt integration"
+  ],
+  "real_benchmark_model_calls": 0,
+  "real_news_accuracy_measured": false,
+  "runner_integrated": false,
+  "benchmark_registered": false,
+  "accuracy_goal_met": false
+}

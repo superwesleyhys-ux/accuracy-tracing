@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-10T07:18:57.985141+00:00",
+  "phase": "policy_preparation_and_historical_admission",
+  "policy_id": "fresh-source-compatibility-v1",
+  "status": "prepared_unrun_one_version_gap",
+  "substantive_decision_change": true,
+  "change": "Fresh source observations followed by independent full-pool compatibility assessment; neither extension receives preliminary verdict/recommendations.",
+  "same_policy_model_rerun": false,
+  "target_model_calls": 0,
+  "model_registration_created": false,
+  "policy_one_shot_spent": false,
+  "cutoff": "2023-12-31T23:59:59Z",
+  "formal_and_public_falsity_years": [
+    2025,
+    2026
+  ],
+  "offline_initial_tests_passed": 102,
+  "offline_jpeg_focused_tests_passed": 9,
+  "final_isolated_stub_rows": 4,
+  "final_isolated_stub_calls": 20,
+  "initial_cutoff_counts": {
+    "supported": 0,
+    "contradicted": 0,
+    "conflicting": 1,
+    "unresolved": 1
+  },
+  "additive_enlarged_pool_cutoff_counts": {
+    "supported": 1,
+    "contradicted": 0,
+    "conflicting": 0,
+    "unresolved": 1
+  },
+  "original_labels_preserved": true,
+  "eligible_affirmative_controls": 1,
+  "historical_version_conditional_cases": 1,
+  "ready_mixed_pairs": 0,
+  "closed_explicit_source_operations": 25,
+  "source_operation_components": {
+    "initial_requests": 16,
+    "documentary_followup_requests": 8,
+    "browser_navigation": 1
+  },
+  "browser_counting_limit": "Automatic subresources, redirects and background requests not individually counted or fully observed.",
+  "browser_result": "security verification page; no challenge interaction or retry; no historical original or version relationship recovered",
+  "browser_seconds_through_retained_return": 191.392067,
+  "source_pending_operations": 0,
+  "independent_closure_review": {
+    "review_sha256": "d4616c2d7b77d398d61630b4f341d44b47963d99bbb00189e6be6b0ddf2492d9",
+    "safe_sha256": "bb71fda1ff8676a741c7c7552706bdfb88058d4669be94d2ab4b660961261609",
+    "manifest_sha256": "082ceb8a3cda5dfaecb8c786d0300085c68862e9adac96650c7ed5ca3ca4d651",
+    "scope": "offline metadata and file hashes, not independent browser/network observation"
+  },
+  "new_accuracy_estimate": null,
+  "real_news_superiority_established": false,
+  "goal_met": false,
+  "goal_status": "active",
+  "token_optimization_active": false,
+  "production_installed": false,
+  "github_push_performed": false,
+  "source_blind_root": true,
+  "next_action": "New bounded intake for a substitute later-false family with complete historical originals, retaining independently admitted control; no repeat of closed blocked route."
+}

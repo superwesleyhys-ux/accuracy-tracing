@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "validated_at": "2026-09-09T05:33:21.224300+00:00",
+  "source_status_sha256": "8c08f83af1fbbc9a9ca4c4278d98b95a6b0043a0a7780df3d6cacc420828fc1d",
+  "independent_status_sha256": "4a2367ddb502c2c711fa3801525c326a1e64d06a2b1ffa1847e0038100d947cc",
+  "counts_reconcile": true,
+  "independent_no_admission_review_complete": true,
+  "linked_page_replay_recovered": 1,
+  "complete_original_advertisements_recovered": 0,
+  "new_admitted_cases": 0,
+  "new_benchmark_model_calls": 0,
+  "prior_public_report_files_verified": 28,
+  "per_prior_round_frozen_inference_files_verified": 24,
+  "active_prior_benchmark_processes": 0,
+  "old_continuation_instructions_preserved_at_reviewed_hash": true,
+  "markdown_links_resolve": true,
+  "local_machine_paths_found": false,
+  "accuracy_goal_met": false,
+  "token_optimization_active": false,
+  "record_completeness_limit": "Counts verified against retained log; full search returns and some operation timestamps were not retained."
+}

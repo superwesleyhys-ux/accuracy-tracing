@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-09-10T05:16:24.115000+00:00",
+  "scope": "Source-free continuation report, not a new model benchmark result",
+  "files": {
+    "EVIDENCE.json": "e2a24ac43494f473aef61d93f71718ed72fa8d09ae162ca5b0a03379c5d5f101",
+    "README.md": "bcd3eb908c5a2e7f0bbf72bf396a6a937dd75c42c8eea9d2719baacb3d711c89",
+    "SUMMARY.json": "505122024f585df1049bdffcec8bd5e0706a77e03ecb000d438b5a9dbf3b08f2",
+    "VISUAL-INDEPENDENT-REVIEW.json": "284cb40811d0ece0abe5947aadff1af27b7ae662255ce869b091746f1447cc35",
+    "VISUAL-PROBE.json": "0c355966d63fc62925fee0e27af14ad96d89a5637882b3b3efe20a3189ec12fe"
+  }
+}

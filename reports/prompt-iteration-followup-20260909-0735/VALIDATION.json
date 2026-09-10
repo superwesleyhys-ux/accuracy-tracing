@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-09T09:34:29.681304+00:00",
+  "new_cases_independently_admitted": 1,
+  "new_families_screened": 2,
+  "external_operations": 20,
+  "subprompts": 20,
+  "actual_model_calls": 0,
+  "paired_model_accuracy_comparison_available": false,
+  "source_manifest_entries_verified": 107,
+  "prior_source_files_verified": 340,
+  "prior_source_manifests_verified": 9,
+  "prior_public_report_files_verified": 62,
+  "preservation_mismatches": 0,
+  "source_manifest_sha256": "efced5ee09bcc8ac15e2fb53205dd79b0389ce91e349851486cb385dc235a9a1",
+  "independent_review_manifest_sha256": "23a7aa1f1e3419d1259d3bef56c674dbf7c3fbe84209f5fab341a107360f8a7c",
+  "source_only_admission_sha256": "c8dd73452be88baeb04828cdc82ac93f8857dca4034c3408f808b276f2ad75df",
+  "combined_packet_reviewed_at_this_report": false,
+  "scope": "Source-only admission of a narrow factual correction, not fabrication/intent or measured model superiority. Process observation is local and partial by evidence type, not global authenticated interception."
+}

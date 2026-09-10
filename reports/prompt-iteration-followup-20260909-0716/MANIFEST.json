@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-09T07:31:43.024880+00:00",
+  "accuracy_goal_met": false,
+  "token_optimization_active": false,
+  "files": {
+    "ACCEPTANCE.md": "65dd7a63ec51327ece90561abc2e9ab79a4c7bfd82d9fe3556a37b99797d6d12",
+    "INDEPENDENT_REVIEW_STATUS.json": "dff44cee7a352820c52991546efa91d56090b226e6b2dfb41750e44cc86410c8",
+    "NEXT_SOURCE_DRAFT.md": "e07737391863e512769946e02dd0f0d293aa59b39b106ab573563163f1cc68fa",
+    "README.md": "a42f3b02a45070704a8d6982d38483e2a73435de662b9455dbbf8d63f5662c6a",
+    "RECOVERY_FEEDBACK.md": "dcda9e01099d92505e19d58aaa34eeb27eb9780dc68e6c19f2133a75abc831b3",
+    "SOURCE_PROMPT_RULE.md": "c2259e44bdb20feb04d81b92df11505a2ac1b7473ce1af6f4ae4dd848c6c1170",
+    "SOURCE_STATUS.json": "76d845912158317643a1eb7d6d9fd8e4e9aafea0b88656879d53c9fa61175d67",
+    "VALIDATION.json": "56fcefcef56a6f6b7af507cf52c40e39aa72ea9b674f7b1af3f9890ae52d7271"
+  },
+  "revised_at": "2026-09-09T07:34:48.673375+00:00"
+}

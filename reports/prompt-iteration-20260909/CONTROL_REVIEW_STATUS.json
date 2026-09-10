@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "reviewed_cases": 1,
+  "ready_narrow_true_event_controls": 1,
+  "pending_cases": 0,
+  "exact_unique_citation_spans_verified": 3,
+  "retained_historical_version_verified": true,
+  "input_gold_separation_verified": true,
+  "frozen_intake_unchanged": true,
+  "mixed_holdout_ready": false,
+  "model_calls": 0,
+  "network_calls": 0,
+  "independent_private_review_sha256": "a65bccba5bfcad357f35f4ad84fd5aee068e71162af64660b59465c4b505d430",
+  "corpus_sha256": "5ed4f7b8dc7d657ab805c811fa4c0c6653946b72a6dca7808d018c9e8013fd0c",
+  "gold_sha256": "0b861d55577c64be0c8f2454a33e705b8d5ae001eb812ce0383acb59ea3dbc62",
+  "future_worker_requires_private_gold_filesystem_denial_test": true,
+  "identity_and_outcome_details_withheld_from_tuning": true
+}

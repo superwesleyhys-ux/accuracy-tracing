@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-09-09T18:44:11.323870+00:00",
+  "status": "combined_v2_input_gold_and_source_admission_passed; preregistration_and_inference_not_performed",
+  "case_ids": [
+    "cb68b8b4b",
+    "c2f8fcd5d"
+  ],
+  "counts": {
+    "cases": 2,
+    "materials_per_case": [
+      1,
+      1
+    ],
+    "independent_event_families": 2,
+    "source_cases_admitted": 2,
+    "new_source_case_admissions": 1,
+    "preserved_control_cases": 1,
+    "prior_source_files_verified": 447,
+    "prior_source_manifests_verified": 10,
+    "projection_mismatches": 0,
+    "audit_network_calls": 0,
+    "audit_model_calls": 0
+  },
+  "readiness": {
+    "input_review_passed": true,
+    "gold_review_passed": true,
+    "exact_source_text_preserved": true,
+    "metadata_precision_resolved": true,
+    "initial_and_variant_identifiers_mapped": true,
+    "identical_explicit_execution_config": true,
+    "actual_driver_input_validation_passed": true,
+    "actual_scorer_label_validation_passed": true,
+    "actual_admission_contract_validation_passed": true,
+    "cutoff_context_and_source_version_reviewed": true,
+    "exact_fact_correspondence_reviewed": true,
+    "both_later_date_gates_reviewed": true,
+    "affirmative_true_control_reviewed": true,
+    "future_gold_separated": true,
+    "local_transport_ready": true,
+    "registered_by_this_review": false,
+    "inference_run_by_this_review": false
+  },
+  "prompt_tuning_exposure": "unseen_for_candidate_2_tuning",
+  "exposure_basis": "Frozen earlier guidance matches exactly and documented source-blind roles kept source identities, texts and outcome labels outside tuning. This is operational blinding, not global absence or pretraining isolation.",
+  "scope_limits": [
+    "Two independent families do not establish a population accuracy result or matched difficulty.",
+    "The narrow corrected-fact case does not imply intentional fabrication or every statement being false.",
+    "The affirmative occurrence control does not authenticate every underlying record or establish uniform procedures.",
+    "Complete supplied text means the reviewed historical text projection; unsupplied images and attachments are not asserted inspected.",
+    "One packet revision resolved strict representation requirements, preserving the initial failed preflight and all old sources.",
+    "Local transport readiness is based on the retained executable/login/sandbox preflight and source-free tests; it is not a guarantee of server availability or a completed model invocation.",
+    "True-control later false-finding date gates are reviewed as inapplicable, not invented; the later-fact case passes both separate date requirements."
+  ],
+  "paths": {
+    "corpus": "private/mixed-packet-0735/v2/inputs/corpus.json",
+    "gold": "private/mixed-packet-0735/v2/private/gold.json",
+    "input_review": "private/mixed-packet-0735-independent-review/input_review.json",
+    "gold_review": "private/mixed-packet-0735-independent-review/gold_review.json",
+    "admission": "private/mixed-packet-0735-independent-review/admission.json"
+  },
+  "commitments": {
+    "corpus_sha256": "794fd2c7b13eccc78d6dab25009b27e1a23c8e9daa307b4e69cc32a68ad84bb9",
+    "gold_sha256": "35ffedc7373693eccb4fb1c42a62d209101b05c8a58f1d5b773ab0286b726c30",
+    "source_admission_sha256": "c8dd73452be88baeb04828cdc82ac93f8857dca4034c3408f808b276f2ad75df",
+    "source_review_manifest_sha256": "23a7aa1f1e3419d1259d3bef56c674dbf7c3fbe84209f5fab341a107360f8a7c",
+    "v1_projection_manifest_sha256": "986179410d79fb7c9487ba89c2f19ad6827fa43b7619ec45bb17a1601c186c7d",
+    "v2_projection_manifest_sha256": "ba1dc5a9d59bbc5d38da7c0f6a27b0dcd7c5c84f392d8dedb5dfc17cf6321f20",
+    "derivation_sha256": "dbe83d992e7856eff282d52c0a7792c81a9c67650e14e1b3d80824bc914fea8e",
+    "representation_fix_sha256": "d9c088f8d5a20bf38f9b4f01aff3eb383bf69d6acf4f9566633a1425741fc3de",
+    "order_commitment_sha256": "28fce1c03df3b6c182c1da7fdaede0b25393db8a9e6baa78d52117e980ced065",
+    "plan_sha256": "98e75615a37d375e1bcd384020636425cc292065e3554d04cc6f91b1e8091b76",
+    "contracts_sha256": "384e51e2bf7bb861b110bc50c723881b47afdbde1d21eb094904a1fac0e8ec10",
+    "driver_sha256": "83c115fb85d665c77d2e97f97baca41222e7a4aa5b72e64996698a99b2878a43",
+    "scoring_component_sha256": "924eef501a34831a74a9ff1aa72a2b6d99f1e6bffcab7b03c421f37d32e74ca4",
+    "runner_validation_sha256": "2d10b706adc7615e7b308d23eaaf6953fd44f5ba0fdd99cdc5757106d396bb5d",
+    "transport_readiness_sha256": "a4de2590be114c8d507c9951c1618424e225dc58494899a5062cb49bb1695741",
+    "candidate_2_registration_sha256": "1e30595e42ba75625347f3790e0af9236fd642fd37a7585b9fa50c0024a0461a",
+    "candidate_2_guidance_sha256": "4c6936fe1e18426a00125a800fa98808bc583ccf7ef9b50d8af54773b866ef79",
+    "candidate_2_proposal_sha256": "84d68df7d942433a6d8579723a859772a2ab65becf8061fae4cc7eb1f5e81847",
+    "input_review_sha256": "005e3e3c36c36801b6058b0f79aad137c79452a6234bb3fdec036e82f4089179",
+    "gold_review_sha256": "bc530029075e8f45565be0a11e1e44f4f8282fce53370a91c37ef6d38d83fb8e",
+    "admission_sha256": "78d883ad9d17cfb05fb5cf541574027abdd2e1e95b12c816bd4a0d146f162e6a",
+    "projection_verification_sha256": "e5053224c6e80d32a5fc6d8a833ee2b0386bd38f8015c8ebc8e090b9fea4666a"
+  }
+}

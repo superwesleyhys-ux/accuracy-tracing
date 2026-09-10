@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "kind": "metadata_only_holdout_screening_totals",
+  "recorded_at": "2026-09-09T02:40:40.968342+00:00",
+  "screening_closed": true,
+  "earlier_families_screened": 8,
+  "additional_families_screened": 11,
+  "cross_pass_family_overlap": 0,
+  "deduplicated_families_screened": 19,
+  "ready_new_holdout_families": 0,
+  "ready_new_holdout_cases": 0,
+  "pending_followup_families": 0,
+  "pending_definition": "Active queued screening follow-ups. Earlier unresolved leads remain not approved; zero pending does not mean every scientific or timing uncertainty was resolved.",
+  "additional_eleven_exclusion_counts": {
+    "public_original_unavailable": 3,
+    "earlier_public_disclosure": 4,
+    "fabrication_not_established": 3,
+    "original_after_cutoff": 1
+  },
+  "deduplication_method": "Manual event-family and affected-publication comparison; shared institutions or coauthors alone do not imply the same event family.",
+  "eligibility_constraints": {
+    "original_claim_and_public_evidence_before": "2024-01-01",
+    "required_first_relevant_public_finding_years": [
+      2025,
+      2026
+    ],
+    "unchanged_historical_evidence_required": true,
+    "retraction_alone_does_not_establish_falsehood": true
+  },
+  "holdout_created": false,
+  "candidate_identities_released_to_tuning": false,
+  "later_outcomes_released_to_tuning": false,
+  "new_model_calls": 0,
+  "private_artifact_bindings": [
+    {
+      "role": "earlier_screening_notes",
+      "sha256": "8c5e4f055484b711fab9993fc9cc371d99e3759ed87e6af089249bc9e641e269"
+    },
+    {
+      "role": "additional_screening_notes",
+      "sha256": "b40252aa368f7b60e3901bb1d84c1139ee3f35fe6119c69f2a9b187e52894554"
+    },
+    {
+      "role": "additional_source_capture_manifest",
+      "sha256": "debe28854b5e5e2b239dd4a4b3e9f9885d89a8823f427eb570f1368404bb7481"
+    },
+    {
+      "role": "additional_closure_notes",
+      "sha256": "b5028b6f6d0abf354f05beebb8f1bb5f1da3181baeb3273364e628355b9c6575"
+    }
+  ],
+  "scope": "Bounded screening of additional event families, not a held-out model evaluation or proof that no eligible families exist. Private candidate identities, source prose, URLs and outcome labels are not bundled."
+}

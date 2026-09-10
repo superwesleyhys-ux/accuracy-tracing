@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-09T21:05:22.075263+00:00",
+  "status": "passed",
+  "phase": "synthetic_mechanism",
+  "test_stub": false,
+  "batch_status": "completed",
+  "worker_exit_code": 0,
+  "planned_rows": 42,
+  "audited_rows": 42,
+  "pipeline_valid_rows": 38,
+  "model_calls": 190,
+  "successful_calls": 182,
+  "failed_calls": 8,
+  "pre_dispatch_blocks": 0,
+  "exposure_audits": 190,
+  "gold_opened_by_this_audit": false,
+  "summary_existed_before_audit": false,
+  "registration_sha256": "c66bb4ab0f7f12a8e1f3ed5e3f10d323fe5f73ba9e08d767ff9132dedd90c829",
+  "manifest_sha256": "52443278f259eca42d81bceed569c4a1fc6aec6513282c67cdb34debdfd27eb1",
+  "scorer_sha256": "8617e7a135f2bb6d541d0a8535d5c0c4a97a7ce60164e410d86c49b1fd631d3c",
+  "failure_categories": {
+    "timeout": 5,
+    "provider_or_transport": 3
+  },
+  "failures": [
+    {
+      "case_id": "s13",
+      "condition": "candidate3",
+      "ordinal": 5,
+      "stage": "verify",
+      "category": "timeout",
+      "error_sha256": "48c282002d2db3dc4f8e8761145257b71603a2f30e443010330ac78f8e7bbec1"
+    },
+    {
+      "case_id": "s13",
+      "condition": "candidate4",
+      "ordinal": 1,
+      "stage": "deconstruct",
+      "category": "provider_or_transport",
+      "error_sha256": "b56c10b7269181396d34eb659348e9a49ec6b351f96a1e29e5f8b981cee8c854"
+    },
+    {
+      "case_id": "s13",
+      "condition": "candidate4",
+      "ordinal": 4,
+      "stage": "decompose",
+      "category": "timeout",
+      "error_sha256": "48c282002d2db3dc4f8e8761145257b71603a2f30e443010330ac78f8e7bbec1"
+    },
+    {
+      "case_id": "s14",
+      "condition": "candidate3",
+      "ordinal": 1,
+      "stage": "deconstruct",
+      "category": "timeout",
+      "error_sha256": "48c282002d2db3dc4f8e8761145257b71603a2f30e443010330ac78f8e7bbec1"
+    },
+    {
+      "case_id": "s14",
+      "condition": "candidate3",
+      "ordinal": 2,
+      "stage": "search_plan",
+      "category": "timeout",
+      "error_sha256": "48c282002d2db3dc4f8e8761145257b71603a2f30e443010330ac78f8e7bbec1"
+    },
+    {
+      "case_id": "s14",
+      "condition": "candidate3",
+      "ordinal": 3,
+      "stage": "synthesis",
+      "category": "timeout",
+      "error_sha256": "48c282002d2db3dc4f8e8761145257b71603a2f30e443010330ac78f8e7bbec1"
+    },
+    {
+      "case_id": "s14",
+      "condition": "candidate3",
+      "ordinal": 4,
+      "stage": "decompose",
+      "category": "provider_or_transport",
+      "error_sha256": "b56c10b7269181396d34eb659348e9a49ec6b351f96a1e29e5f8b981cee8c854"
+    },
+    {
+      "case_id": "s14",
+      "condition": "candidate4",
+      "ordinal": 7,
+      "stage": "verify",
+      "category": "provider_or_transport",
+      "error_sha256": "b56c10b7269181396d34eb659348e9a49ec6b351f96a1e29e5f8b981cee8c854"
+    }
+  ],
+  "outcome_execution_only": [
+    {
+      "case_id": "s01",
+      "condition": "direct",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s01",
+      "condition": "candidate3",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s01",
+      "condition": "candidate4",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s02",
+      "condition": "candidate3",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s02",
+      "condition": "candidate4",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s02",
+      "condition": "direct",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s03",
+      "condition": "candidate4",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s03",
+      "condition": "direct",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s03",
+      "condition": "candidate3",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s04",
+      "condition": "direct",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s04",
+      "condition": "candidate3",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s04",
+      "condition": "candidate4",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s05",
+      "condition": "candidate3",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s05",
+      "condition": "candidate4",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s05",
+      "condition": "direct",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s06",
+      "condition": "candidate4",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s06",
+      "condition": "direct",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s06",
+      "condition": "candidate3",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s07",
+      "condition": "direct",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s07",
+      "condition": "candidate3",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s07",
+      "condition": "candidate4",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s08",
+      "condition": "candidate3",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s08",
+      "condition": "candidate4",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s08",
+      "condition": "direct",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s09",
+      "condition": "candidate4",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s09",
+      "condition": "direct",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s09",
+      "condition": "candidate3",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s10",
+      "condition": "direct",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s10",
+      "condition": "candidate3",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s10",
+      "condition": "candidate4",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s11",
+      "condition": "candidate3",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s11",
+      "condition": "candidate4",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s11",
+      "condition": "direct",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s12",
+      "condition": "candidate4",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s12",
+      "condition": "direct",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s12",
+      "condition": "candidate3",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s13",
+      "condition": "direct",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    },
+    {
+      "case_id": "s13",
+      "condition": "candidate3",
+      "execution_status": "failed",
+      "pipeline_valid": false
+    },
+    {
+      "case_id": "s13",
+      "condition": "candidate4",
+      "execution_status": "failed",
+      "pipeline_valid": false
+    },
+    {
+      "case_id": "s14",
+      "condition": "candidate3",
+      "execution_status": "failed",
+      "pipeline_valid": false
+    },
+    {
+      "case_id": "s14",
+      "condition": "candidate4",
+      "execution_status": "failed",
+      "pipeline_valid": false
+    },
+    {
+      "case_id": "s14",
+      "condition": "direct",
+      "execution_status": "completed",
+      "pipeline_valid": true
+    }
+  ]
+}

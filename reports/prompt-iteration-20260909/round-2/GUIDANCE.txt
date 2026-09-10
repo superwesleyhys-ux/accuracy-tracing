@@ -1,0 +1,55 @@
+Before treating missing external records as the decisive limitation, check the
+eligible material already supplied for a counterexample to the exact target.
+Perform at most three distinct, target-relevant checks; do not create work merely
+to reach that number. Preserve all existing evidence and temporal boundaries.
+
+1. Scope: identify the target's quantifier, population, time, conditions and
+attribution level. For “all”, look for one evidenced exception within that same
+scope; examples alone do not establish complete coverage. Keep “the source reports
+X”, “X is internally consistent” and “X actually happened” distinct. A document's
+accurate attribution may be settled without authenticating the underlying event.
+
+2. Falsification and consistency: inspect relevant qualifications, exceptions,
+negations and conflicting passages throughout the supplied eligible text. Where
+the text supplies the necessary operands and definitions, check a relevant count,
+sum, difference, rate, unit conversion or bound. First establish matching units,
+denominators, time periods and categories; do not assume percentages partition a
+whole or that samples are comparable. State the operands and compact calculation
+for a numerical finding. Never invent missing values, inspect unsupplied figures,
+or claim a calculation was executed when its inputs are absent.
+
+3. Interpretation: test the strongest apparent contradiction against a relevant
+benign explanation grounded in the material, such as rounding, different scope,
+different versions or an explicitly derived quantity. Consider transcription or
+extraction uncertainty when the text itself supports that concern; do not invent
+an error merely to dismiss decisive evidence. Explain which exact proposition an
+anomaly excludes. An arithmetic error can falsify an arithmetic claim without
+proving fabricated data, and a source's contradiction is not automatically proof
+that the underlying event never occurred.
+
+Record brief observable check results in the existing fields: a fragment's
+qualifiers/notes during decomposition, or the rationale during verification.
+Identify the checked scope and the decisive quotation or calculation; distinguish
+“counterexample found”, “no counterexample found in inspected evidence”, and
+“not executable because a specified input is missing”. Report conclusions, not a
+long reasoning transcript. Do not add JSON fields or change stage responsibilities.
+
+Only exact canonical evidence may support a fragment, relation, resolution or
+verdict. Check summaries and research advice are not additional evidence. A
+consistency check passing does not authenticate the observations; a missing input
+does not establish falsehood. Request only the missing material that could change
+the exact judgment. Preserve unresolved when the evidence does not settle it;
+settle attribution when its wording is established. Do not force either outcome.
+Bind each claimed discrepancy or benign explanation to the exact compared
+passages and quantities. Identify the relevant quoted evidence and each value's
+unit, denominator or population, category, and time or stage when applicable.
+State only dimensions established by the supplied material. Do not generalize an
+explanation for one pair to all numbers, percentages or passages in a document.
+If the comparison's necessary dimensions are missing, identify that specific
+limitation instead of asserting equivalence, conflict or a benign explanation.
+Do not invent an apparent conflict merely to display a check. When the target's
+attribution is established and no specific competing passage has been identified,
+omit unnecessary comparisons and broad descriptions of the rest of the document.
+Keep the result brief in existing fields. This refines explanation grounding;
+it does not add checks, change verdict thresholds or turn missing inputs into
+falsehood. Preserve all preceding constraints.

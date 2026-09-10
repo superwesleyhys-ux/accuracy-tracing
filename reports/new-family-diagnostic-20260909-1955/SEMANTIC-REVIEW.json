@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "status": "condition_masked_cutoff_review_frozen",
+  "frozen_at": "2026-09-10T02:24:46.415723+00:00",
+  "responses": 4,
+  "cases": 2,
+  "assessable_finals": 4,
+  "cutoff_label_matches": 4,
+  "target_correct": 4,
+  "decisive_evidence_warranted": 4,
+  "quotation_identity_valid": 4,
+  "model_quote_occurrences_exact_unique": 10,
+  "semantic_valid": 4,
+  "completed_valid": 4,
+  "primary_credit": 4,
+  "material_error_rows": 0,
+  "material_error_types": {},
+  "reviewer_span_occurrences": 17,
+  "ambiguity_categories_considered": [
+    "accounting_measure_scope_and_display_precision",
+    "documented_assurance_vs_optional_reconstruction",
+    "contrary_material_period_scope",
+    "constitutive_act_vs_later_implementation",
+    "implicit_scope_from_exact_citation_context"
+  ],
+  "condition_mapping_read": false,
+  "case_level_later_outcomes_read": false,
+  "aggregate_study_class_counts_previously_known": true,
+  "original_live_output_directories_read": false,
+  "new_model_calls": 0,
+  "new_source_calls": 0,
+  "new_prompt_tuning": false,
+  "review_scope": "Final cutoff entailment only; no later-truth judgment, condition comparison or superiority claim.",
+  "input_hashes": {
+    "PACKET.json": "58723264e88a642f834339050776b4e094f972758a39f5f8687dbd230625c870",
+    "CUTOFF-REVIEW.json": "55a9dbf1e530953212d15cb998cb0671645cdc73947067378997560e093177c3",
+    "JUDGMENT-SCHEMA.json": "f584ed8d8ef3e39e5bbb6b086827b1bdbbcc7f6e6bb4d41ad910de557aa915a7",
+    "CHECKLIST.md": "dd7bc45d292042aabbc10bc97564aa1c5526c6ba206e2683a9ee20adb8665cc5",
+    "MANIFEST.json": "d7fbc3fea216b71c18713b48565cf29acdbe24315326548586d68624ee815b83"
+  }
+}

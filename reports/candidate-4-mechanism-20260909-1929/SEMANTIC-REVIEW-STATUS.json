@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "fixture_kind": "synthetic",
+  "status": "arm_masked_judgments_immutable",
+  "completed_at": "2026-09-09T21:49:23.618318+00:00",
+  "review_sha256": "ead9066ceaed69ce7e9833dff086ffe3f8b3bd97e078e9f46b2f359daff2f2e9",
+  "input_sha256": {
+    "masked_packet": "83e8e73b7e4b9e0688dac3586443af785bd93eda268b32f091a7aaafa402b2b1",
+    "packet_manifest": "33716a66dafe5b8f62275572811e71b2a06e283e14c2de4dbb7b85f7c63d2cc1",
+    "rubric": "59e7b0e073491b4584ef5ed09859631950884d3c9b69e2480abda8b1054fb8ab",
+    "gold": "8726057aea64e7ef1b9d62d8d2be7b50cbb8e916fcb9302661370637eec72720",
+    "schema": "012a2d768b3d5b6cde71cac3da752c332916e4511add87e482a716c549af5438",
+    "checklist": "2ddc40bba9224a76f973e7f488bb463054c0240fc3cf96f23ea7ce23cbdf4ac0"
+  },
+  "reviewer_disclosure": {
+    "authored_candidate4": false,
+    "authored_fixture_or_gold": false,
+    "authored_generic_pure_scoring_component": true,
+    "reviewed_generic_protocol_runner_and_scoring_integration": true,
+    "source_or_gold_blind_before_this_review": true,
+    "condition_mapping_unseen_at_freeze": true,
+    "raw_trial_results_logs_summaries_and_per_arm_metrics_unseen_at_freeze": true,
+    "independence_limit": "The reviewer knows the generic benchmark purpose and reviewed implementation and scoring design; this is not independence from all project work. The original checklist preparer authored Candidate 4, but this reviewer did not. The reviewer read only the permitted packet, rubric, final gold, manifest and review procedure for this task.",
+    "blinding_limit": "Response prose can indirectly suggest a condition; no condition guesses or arm assignments were made."
+  },
+  "totals": {
+    "planned_rows": 42,
+    "canonical_cases": 14,
+    "responses_per_case": 3,
+    "assessable_finals": 38,
+    "missing_or_unassessable_finals": 4,
+    "label_matches": 38,
+    "semantic_valid": 38,
+    "semantic_invalid": 0,
+    "semantic_unassessable": 4,
+    "audited_completed_valid": 38,
+    "audited_failed": 4,
+    "primary_credit": 38,
+    "primary_denominator": 42,
+    "primary_rate": 0.9047619047619048,
+    "semantic_valid_among_assessable_rate": 1.0,
+    "material_semantic_error_count": 0,
+    "model_quotation_spans_checked_exact_and_unique": 74,
+    "reviewer_raw_spans_checked": 81
+  },
+  "validation": {
+    "input_hashes_match": true,
+    "duplicate_json_keys_rejected": true,
+    "packet_manifest_verified": true,
+    "all_14_target_and_material_hashes_match_rubric": true,
+    "exact_42_response_id_set": true,
+    "three_rows_each_case": true,
+    "frozen_json_schema_pass": true,
+    "cross_field_consistency_pass": true,
+    "model_quote_identity_exact_unique": true,
+    "reviewer_spans_raw_exact_unique_in_own_case": true,
+    "failure_denominator_preserved": true,
+    "all_allowed_inputs_unchanged_at_freeze": true
+  },
+  "interpretation_limits": [
+    "Content semantics were assessed from the actual verdict, evidence and rationale, separately from label agreement and citation identity.",
+    "Four missing finals are not assigned invented semantic defects, wrong labels or abstention credit. Failure causes were not inferred from the masked packet.",
+    "Incidental no-counterexample wording was not penalized when the actual decisive warrant was positive supplied evidence or an explicit necessary gap; no observed answer used absence alone as decisive support.",
+    "This is a synthetic mechanism test, not real historical-news detection accuracy. No condition-level comparison is issued before judgment freeze.",
+    "The provided arm-free execution validity is accepted from the preceding independent request audit; this review did not reopen hidden receipts or raw offsets."
+  ],
+  "new_model_calls": 0,
+  "new_external_requests": 0
+}

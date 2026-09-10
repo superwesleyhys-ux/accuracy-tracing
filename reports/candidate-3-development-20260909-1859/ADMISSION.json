@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "case_ids": [
+    "cb68b8b4b",
+    "c2f8fcd5d"
+  ],
+  "corpus_sha256": "794fd2c7b13eccc78d6dab25009b27e1a23c8e9daa307b4e69cc32a68ad84bb9",
+  "gold_sha256": "35ffedc7373693eccb4fb1c42a62d209101b05c8a58f1d5b773ab0286b726c30",
+  "input_review_sha256": "005e3e3c36c36801b6058b0f79aad137c79452a6234bb3fdec036e82f4089179",
+  "gold_review_sha256": "bc530029075e8f45565be0a11e1e44f4f8282fce53370a91c37ef6d38d83fb8e",
+  "evidence_cutoff": "2023-12-31T23:59:59Z",
+  "independent_event_families": 2,
+  "prompt_tuning_exposure": "previously_exposed",
+  "version_scope_reviewed": true,
+  "exact_falsity_reviewed": true,
+  "both_cases_admitted": true,
+  "future_gold_separated": true,
+  "passed": true,
+  "claim_dates_reviewed": true,
+  "cutoff_evidence_reviewed": true,
+  "local_transport_ready": true,
+  "first_establishment_date_reviewed": true,
+  "affirmative_true_control_reviewed": true,
+  "formal_finding_date_reviewed": true
+}

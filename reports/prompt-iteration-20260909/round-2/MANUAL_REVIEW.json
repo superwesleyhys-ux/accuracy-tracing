@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "completed_at": "2026-09-09T04:48:16.897335+00:00",
+  "review_type": "preregistered independent manual Candidate 2 comparison-grounding review",
+  "scope": {
+    "case_ids": [
+      "h05",
+      "h06"
+    ],
+    "event_families": 1,
+    "exposed_development_only": true,
+    "actual_responses_reviewed": 18,
+    "research_responses": 9,
+    "harness_formal_responses": 7,
+    "direct_responses": 2,
+    "new_model_calls": 0,
+    "network_calls": 0,
+    "heldout_control_materials_or_gold_used": false,
+    "production_or_frozen_results_edited": false
+  },
+  "artifact_sha256": {
+    "experiments/prompt-iteration-20260909/round-2/results/SUMMARY.json": "98eaf9df6c04c792d885506cc14e010e892a64b766a76bcc98bc09e880a58e09",
+    "experiments/prompt-iteration-20260909/round-2/results/manifest.json": "b46dad6e8f4ca24e86f3d0e6284c760779108d5f2d5be9f602e8cfa7c7fd6f79",
+    "experiments/prompt-iteration-20260909/round-2/results/registration.json": "1e30595e42ba75625347f3790e0af9236fd642fd37a7585b9fa50c0024a0461a",
+    "experiments/prompt-iteration-20260909/round-2/results/worker-corpus.json": "425b08099402de9492e31760a8c4dce27d78cabc366b12d07ab1ab3a3f3f68e0",
+    "experiments/prompt-iteration-20260909/round-2/results/protocol.md": "6c3ab9bcc457fc43e7071f51cc22733a9599c14c9a0737ef610168c06a705dcd",
+    "experiments/prompt-iteration-20260909/round-2/results/plan.json": "a8b87375e595014d40cdd5830b1e64bd8baa4783ad071ced9e72b0e326f97527",
+    "experiments/prompt-iteration-20260909/round-1/results/SUMMARY.json": "f68ee5fbc82852837235d64c521be8e03e065ecf367275b9a534c5310aa44bb5",
+    "experiments/prompt-iteration-20260909/round-1/results/manifest.json": "a589f4a3de10cfc9fca112862445717cd0778da0c7764cb6d7082560a5e5602e",
+    "experiments/prompt-iteration-20260909/round-1/results/registration.json": "8484b4ba25dc41accf2246a9c00dcde60e3124b4960766601f01cb1db16a0d0b",
+    "experiments/prompt-iteration-20260909/round-1/results/worker-corpus.json": "425b08099402de9492e31760a8c4dce27d78cabc366b12d07ab1ab3a3f3f68e0",
+    "experiments/prompt-iteration-20260909/round-1/results/protocol.md": "a71b5bb15b7976973136a100091e656f1cdeff51cfe2a4e55b258641f3db1fc6",
+    "experiments/prompt-iteration-20260909/round-1/results/plan.json": "c79212fc41aae7667f82df0f544d562e2de536a15111779380d6735160873d43"
+  },
+  "exact_candidate_guidance_requests": 7,
+  "primary_outcomes": {
+    "candidate_2": [
+      {
+        "id": "h05",
+        "condition": "direct",
+        "observed": "unresolved",
+        "valid": true,
+        "error_count": 0
+      },
+      {
+        "id": "h05",
+        "condition": "news_tracing",
+        "observed": "unresolved",
+        "valid": true,
+        "error_count": 0
+      },
+      {
+        "id": "h06",
+        "condition": "news_tracing",
+        "observed": "supported",
+        "valid": true,
+        "error_count": 0
+      },
+      {
+        "id": "h06",
+        "condition": "direct",
+        "observed": "supported",
+        "valid": true,
+        "error_count": 0
+      }
+    ],
+    "candidate_1": [
+      {
+        "id": "h05",
+        "condition": "direct",
+        "observed": "unresolved",
+        "valid": true,
+        "error_count": 0
+      },
+      {
+        "id": "h05",
+        "condition": "news_tracing",
+        "observed": "unresolved",
+        "valid": true,
+        "error_count": 0
+      },
+      {
+        "id": "h06",
+        "condition": "news_tracing",
+        "observed": "supported",
+        "valid": true,
+        "error_count": 0
+      },
+      {
+        "id": "h06",
+        "condition": "direct",
+        "observed": "supported",
+        "valid": true,
+        "error_count": 0
+      }
+    ],
+    "all_verdicts_and_validity_unchanged": true,
+    "cutoff_matches_each_arm": "2/2",
+    "advance_called_false_each_arm": 0,
+    "all_four_outcomes_retained": true
+  },
+  "comparison_to_candidate_1": {
+    "specific_bad_explanation": "The prior attribution rationale broadly assigned the body’s differing percentages to one ratio class without identifying the comparison.",
+    "new_observation": "The new final rationale restricts itself to the quoted abstract attribution and contains no such classification.",
+    "bad_explanation_observed_again": false,
+    "correction_mechanism_observed": "omission_of_unneeded_unsupported_explanation",
+    "new_valid_cross_passage_comparison_executed": false,
+    "numerical_calculation_executed": false,
+    "important_execution_difference": "The new attribution formal trace stops after v1 decomposition and verification; it does not admit v2 into formal context. Research still receives both complete versions. Absence of the old body-based explanation must not be represented as a new demonstration about the body.",
+    "single_run_causal_attribution_established": false
+  },
+  "checks_observed": {
+    "formal_outputs_preserving_exact_target_scope": 7,
+    "formal_outputs_reporting_no_scope_matched_counterexample": 7,
+    "h05_outputs_explicitly_marking_numerical_recalculation_unexecutable": 2,
+    "outputs_with_correct_cross_metal_denominator_distinction": 2,
+    "numerical_calculations_with_sourced_operands_and_evaluated_result": 0,
+    "new_paired_numeric_comparisons_executed": 0,
+    "unsupported_benign_explanations_identified": 0,
+    "fabricated_numeric_operands_or_results_identified": 0,
+    "unit_conversions_executed": 0,
+    "rounding_explanations_tested": 0,
+    "secondary_manual_observations_not_accuracy_metrics": true
+  },
+  "termination_interpretation": {
+    "h06_natural_complete_not_call_cap_or_timeout": true,
+    "h06_abstract_only_formal_scope_disclosed": true,
+    "h06_original_record_identification_applies_only_to_attribution_endpoint": true,
+    "h05_stops_with_open_record_gaps_after_available_documents_inspected": true,
+    "h05_origin_identification_does_not_close_authenticity_verification_gap": true,
+    "no_forced_fulltext_revisit_added": true
+  },
+  "costs_from_frozen_scorer": {
+    "candidate_2_direct": {
+      "calls": 2,
+      "total_tokens": 41669
+    },
+    "candidate_2_harness": {
+      "calls": 16,
+      "total_tokens": 324018
+    },
+    "candidate_1_direct": {
+      "calls": 2,
+      "total_tokens": 41624
+    },
+    "candidate_1_harness": {
+      "calls": 19,
+      "total_tokens": 395775
+    },
+    "all_usage_known": true,
+    "costs_not_accuracy_evidence": true
+  },
+  "recommendation": {
+    "another_equivalent_prompt_round_justified_by_a_concrete_observed_defect": false,
+    "candidate_1_specific_explanation_defect_recurs": false,
+    "new_substantive_prompt_defect_identified": false,
+    "next_prompt_hypothesis": null,
+    "reason": "The targeted overgeneralization disappears through omission, correct attribution and missing-input safeguards remain, and no new grounded contradiction or executable calculation emerges. This record does not support inventing another prompt defect merely to repeat the same saturated comparison.",
+    "general_next_requirement": "A meaningful accuracy opportunity needs independently admitted decision-relevant evidence and labels; more wording cannot replace missing original records or create headroom against an already perfect fixed cutoff baseline."
+  },
+  "limits": [
+    "Seven guided outputs are fewer opportunities than the prior ten; do not compare raw check counts as if execution paths were identical.",
+    "The attribution formal stage did not inspect the full manuscript this time, so no full-manuscript comparison may be credited to its final verifier.",
+    "The complete research pool and direct pool are unchanged; adaptive formal exposure is a registered part of the harness.",
+    "No exhaustive proof that all possible contradictions were checked, and no proof that latent training memory is absent.",
+    "Unresolved authenticity remains unresolved under the original gold; no advance detection or general superiority is established.",
+    "No heldout-control identity, text or outcome was used in this review or recommendation.",
+    "No old result, primary score, protocol, source version or control intake was changed."
+  ],
+  "private_manual_sha256": "816534bcdbd2931ac7e0526ae8b36a26b6209f21ac55ba1373d72d40d9d180f2"
+}

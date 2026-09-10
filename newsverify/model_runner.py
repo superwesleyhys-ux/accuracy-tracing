@@ -80,9 +80,20 @@ def exact_span(version_id, quote, materials):
         raise ValueError("Model quote refers to an unavailable material version")
     content = material["content"]
     start = content.find(quote) if quote else -1
-    if start < 0 or content.find(quote, start + 1) >= 0:
+    if start >= 0 and content.find(quote, start + 1) < 0:
+        return Span(version_id, start, start + len(quote), quote)
+    # Models often preserve words but normalize line breaks or runs of spaces.
+    # Recover only a unique whitespace-normalized match, while retaining the
+    # original packet text in the span so evidence remains auditable.
+    import re
+    if not quote:
         raise ValueError("Model quote must match exactly one original passage")
-    return Span(version_id, start, start + len(quote), quote)
+    pattern = re.escape(quote.strip()).replace(r"\ ", r"\s+")
+    matches = list(re.finditer(pattern, content, flags=re.DOTALL))
+    if len(matches) != 1:
+        raise ValueError("Model quote must match exactly one original passage")
+    m = matches[0]
+    return Span(version_id, m.start(), m.end(), content[m.start():m.end()])
 
 
 class ModelDecomposer:

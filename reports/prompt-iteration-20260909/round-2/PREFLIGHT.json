@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-09-09T04:39:52.365913+00:00",
+  "status": "passed",
+  "review_scope": "Independent read-only Candidate 2 preflight; synthetic artifacts only; no live model or network calls; no gold content read",
+  "blockers": [],
+  "hashes": {
+    "run_test.py": "ae66aef95a8dcee96fb99067cbf852d9025d3f88a6fedd12c3616c6a32107b80",
+    "summarize_test.py": "6507589e2a0915ac82af311faf361f062c28ed32ccd4ad13a984e466363a8e91",
+    "test_diagnostic.py": "81962b72fe606aef22da68778415db5b7fdb3aeee8e43f56a42cf734241acb99",
+    "PLAN.json": "a8b87375e595014d40cdd5830b1e64bd8baa4783ad071ced9e72b0e326f97527",
+    "PROTOCOL.md": "6c3ab9bcc457fc43e7071f51cc22733a9599c14c9a0737ef610168c06a705dcd",
+    "CODE_MANIFEST.json": "4eb08761ad154f3a96a3c195e0d8d5274c44dda67ea352a5b10f73a2940b304e"
+  },
+  "proposal_sha256": "84d68df7d942433a6d8579723a859772a2ab65becf8061fae4cc7eb1f5e81847",
+  "combined_guidance_sha256": "4c6936fe1e18426a00125a800fa98808bc583ccf7ef9b50d8af54773b866ef79",
+  "canonical_corpus_sha256": "b5ad5c900145a7a5b208fe8752c1051119d2be18bfa45ececd4d025f6dcf2826",
+  "synthetic_manifest_sha256": "bfbbf01adeed702ec1ec2457ec38da97bb04c58e311adfcbe9fbcd6de60598ed",
+  "synthetic_predictions_sha256": "6396d57846c22ee8f201fb615da6489c97afb0bbb239535c3a636fbbcedea21f",
+  "code_inventory_files": 24,
+  "checks": {
+    "literal_matches_both_proposals_exactly": true,
+    "primary_metric_functions_unchanged": [
+      "assess_run",
+      "label_score",
+      "aggregate",
+      "token_stats",
+      "normalize_usage",
+      "research_completion_valid",
+      "audit_exposure",
+      "audit_instructions"
+    ],
+    "production_and_shared_helpers_match_round_1_frozen_hashes": true,
+    "function_ast_comparison": {
+      "run_test.py": {
+        "function_count": 15,
+        "changed_functions": [
+          "validate_plan",
+          "launch",
+          "self_test"
+        ]
+      },
+      "summarize_test.py": {
+        "function_count": 19,
+        "changed_functions": [
+          "verify_batch"
+        ]
+      }
+    },
+    "all_24_frozen_files_current_and_archived_match": true,
+    "full_evidence_availability_and_version_identity_binding": true,
+    "all_synthetic_request_packets_identical_to_round_1_except_intended_instructions": true,
+    "all_schemas_unchanged_and_research_responses_native_valid": true,
+    "actual_raw_responses_and_receipts_bound": true,
+    "exact_guidance_only_harness_decompose_verify": true,
+    "both_direct_requests_exactly_unchanged": true,
+    "research_and_select_instructions_unchanged": true,
+    "seven_instruction_mutations_rejected": true,
+    "failed_research_call_invalidates_whole_pipeline": true,
+    "unknown_failed_usage_keeps_total_null": true,
+    "synthetic_filesystem_denial_and_source_network_isolation_passed": true,
+    "live_registration_not_yet_created_or_reviewed": true,
+    "paired_h05_h06_plan_and_canonical_source_versions_preserved": true
+  },
+  "synthetic_coverage": {
+    "packets": 24,
+    "direct": 2,
+    "direct_unchanged": 2,
+    "deconstruct": 2,
+    "other_harness_unchanged": 12,
+    "search_plan": 2,
+    "source_trace": 2,
+    "source_verify": 2,
+    "synthesis": 2,
+    "decompose": 6,
+    "guidance_applied": 10,
+    "verify": 4,
+    "select": 2
+  },
+  "protocol_review": {
+    "live_protocol_separately_read": true,
+    "stub_protocol_is_explicit_synthetic_fixture_and_self_consistently_hashed": true,
+    "diagnostic_denominator": 2,
+    "independent_source_families": 1,
+    "exposed_development": true,
+    "baseline_cutoff_ceiling": "2/2; no grounded-score headroom on this fixed set",
+    "attribution_control_does_not_establish_experimental_authenticity": true,
+    "secondary_explanation_quality_is_not_fake_detection": true,
+    "model": "gpt-6-astra",
+    "effort": "medium",
+    "tunnel": "local",
+    "direct_call_cap": 1,
+    "harness_call_cap": 24,
+    "formal_call_cap": 10,
+    "timeout_seconds": 90,
+    "maximum_batch_calls": 50
+  },
+  "limitations": [
+    "Synthetic evidence and stub responses test execution and auditing contracts, not factual performance.",
+    "Synthetic protocol text intentionally differs from the separately reviewed live protocol; each commitment is internally consistent.",
+    "Live registration, authentication, real request receipts and outcomes require a later live audit.",
+    "The exposed one-family dataset has no grounded accuracy headroom over the existing direct baseline; quantity-binding quality is a secondary diagnostic."
+  ],
+  "private_audit_sha256": "f5d89bc3cf929b90aa2b785e67a55e5d646286254873c549d9e6cd37bbe4ce29"
+}

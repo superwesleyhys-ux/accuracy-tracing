@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "actual_request_audit_sha256": "36ed95fb9c03d3fb55c7eb9ca757ba2ffbfbaad7119856908029b3fe8886f7d6",
+  "calls": [
+    {
+      "case_id": "v21a9",
+      "condition": "direct",
+      "ordinal": 1,
+      "stage": "direct",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 58672,
+        "output_tokens": 187,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 58859
+      }
+    },
+    {
+      "case_id": "v21a9",
+      "condition": "news_tracing",
+      "ordinal": 1,
+      "stage": "deconstruct",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 7552,
+        "input_tokens": 26833,
+        "output_tokens": 157,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 26990
+      }
+    },
+    {
+      "case_id": "v21a9",
+      "condition": "news_tracing",
+      "ordinal": 2,
+      "stage": "search_plan",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 26879,
+        "output_tokens": 162,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 27041
+      }
+    },
+    {
+      "case_id": "v21a9",
+      "condition": "news_tracing",
+      "ordinal": 3,
+      "stage": "source_trace",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 26915,
+        "output_tokens": 314,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 27229
+      }
+    },
+    {
+      "case_id": "v21a9",
+      "condition": "news_tracing",
+      "ordinal": 4,
+      "stage": "source_trace",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 26944,
+        "output_tokens": 332,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 27276
+      }
+    },
+    {
+      "case_id": "v21a9",
+      "condition": "news_tracing",
+      "ordinal": 5,
+      "stage": "source_verify",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 27550,
+        "output_tokens": 152,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 27702
+      }
+    },
+    {
+      "case_id": "v21a9",
+      "condition": "news_tracing",
+      "ordinal": 6,
+      "stage": "synthesis",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 28071,
+        "output_tokens": 306,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 28377
+      }
+    },
+    {
+      "case_id": "v21a9",
+      "condition": "news_tracing",
+      "ordinal": 7,
+      "stage": "decompose",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 28751,
+        "output_tokens": 829,
+        "reasoning_output_tokens": 71,
+        "total_tokens": 29580
+      }
+    },
+    {
+      "case_id": "v21a9",
+      "condition": "news_tracing",
+      "ordinal": 8,
+      "stage": "verify",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 7680,
+        "input_tokens": 29018,
+        "output_tokens": 344,
+        "reasoning_output_tokens": 46,
+        "total_tokens": 29362
+      }
+    },
+    {
+      "case_id": "v21a9",
+      "condition": "news_tracing",
+      "ordinal": 9,
+      "stage": "verify",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 7680,
+        "input_tokens": 29409,
+        "output_tokens": 312,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 29721
+      }
+    },
+    {
+      "case_id": "v21a9",
+      "condition": "news_tracing",
+      "ordinal": 10,
+      "stage": "policy_challenge",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 59455,
+        "output_tokens": 1509,
+        "reasoning_output_tokens": 321,
+        "total_tokens": 60964
+      }
+    },
+    {
+      "case_id": "v21a9",
+      "condition": "news_tracing",
+      "ordinal": 11,
+      "stage": "policy_adjudicate",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 62705,
+        "output_tokens": 1172,
+        "reasoning_output_tokens": 154,
+        "total_tokens": 63877
+      }
+    },
+    {
+      "case_id": "v83c2",
+      "condition": "news_tracing",
+      "ordinal": 1,
+      "stage": "deconstruct",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 11731,
+        "output_tokens": 143,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 11874
+      }
+    },
+    {
+      "case_id": "v83c2",
+      "condition": "news_tracing",
+      "ordinal": 2,
+      "stage": "search_plan",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 11800,
+        "output_tokens": 86,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 11886
+      }
+    },
+    {
+      "case_id": "v83c2",
+      "condition": "news_tracing",
+      "ordinal": 3,
+      "stage": "source_trace",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 11860,
+        "output_tokens": 307,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 12167
+      }
+    },
+    {
+      "case_id": "v83c2",
+      "condition": "news_tracing",
+      "ordinal": 4,
+      "stage": "source_verify",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 12142,
+        "output_tokens": 169,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 12311
+      }
+    },
+    {
+      "case_id": "v83c2",
+      "condition": "news_tracing",
+      "ordinal": 5,
+      "stage": "synthesis",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 12624,
+        "output_tokens": 265,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 12889
+      }
+    },
+    {
+      "case_id": "v83c2",
+      "condition": "news_tracing",
+      "ordinal": 6,
+      "stage": "decompose",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 13545,
+        "output_tokens": 762,
+        "reasoning_output_tokens": 45,
+        "total_tokens": 14307
+      }
+    },
+    {
+      "case_id": "v83c2",
+      "condition": "news_tracing",
+      "ordinal": 7,
+      "stage": "verify",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 13771,
+        "output_tokens": 193,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 13964
+      }
+    },
+    {
+      "case_id": "v83c2",
+      "condition": "news_tracing",
+      "ordinal": 8,
+      "stage": "policy_challenge",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 11616,
+        "output_tokens": 93,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 11709
+      }
+    },
+    {
+      "case_id": "v83c2",
+      "condition": "news_tracing",
+      "ordinal": 9,
+      "stage": "policy_adjudicate",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 11800,
+        "output_tokens": 166,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 11966
+      }
+    },
+    {
+      "case_id": "v83c2",
+      "condition": "direct",
+      "ordinal": 1,
+      "stage": "direct",
+      "success": true,
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 11046,
+        "output_tokens": 192,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 11238
+      }
+    }
+  ],
+  "scope": "Audited target-model receipts only; excludes curation, orchestration and independent review tokens."
+}

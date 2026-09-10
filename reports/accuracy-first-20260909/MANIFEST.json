@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-09T03:53:01.704064+00:00",
+  "accuracy_goal_met": false,
+  "token_optimization_active": false,
+  "files": {
+    "AUDIT.json": "806c3b580080e6dfa4f496878722f04082cb5902130fe3bde0c5b80e9ff39e71",
+    "FOLLOWUP_STATUS.json": "65cf3bc047e685fc9232466a5da8fa36cbdc47190e8248479fb8d6846d1ffe50",
+    "PROTOCOL.md": "0894f542f963c79988c3ac5046b4d5244a4bf733326365de0b52f91bad3cab9d",
+    "README.md": "cde70654bcccf7bc1cfe21915968566cb3e2e6dec2452e507e57cdf7440a1c19",
+    "SANITIZED_RECEIPTS.json": "1cb54c4cf1d6789eea3b1e7d4c4d0be1033b74bde16cd9003065dcb53541a6bc",
+    "SCREENING_STATUS.json": "9ae49ae4ea3acd62745c4986c64dfd1e654fae26e503540916208f75e278e277",
+    "SUMMARY.json": "712f1774d25439a29e4a7244070cb4e7f248186a1da7dba6c5f4743fa6f42a42",
+    "VALIDATION.json": "e8e35e7fdaf5d6cb0c6a21d4b1631f994de7492286c3ce00428257fd748c3f2e"
+  }
+}

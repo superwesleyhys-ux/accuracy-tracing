@@ -1,0 +1,856 @@
+{
+  "actual_request_audit_sha256": "36ed95fb9c03d3fb55c7eb9ca757ba2ffbfbaad7119856908029b3fe8886f7d6",
+  "batch_status": "completed",
+  "case_count": 2,
+  "conditions": {
+    "direct": {
+      "controls": {
+        "attribution_control": {
+          "cutoff_label_matches": 0,
+          "denominator": 0
+        },
+        "derivation_control": {
+          "cutoff_label_matches": 0,
+          "denominator": 0
+        },
+        "real_world": {
+          "cutoff_label_matches": 1,
+          "denominator": 1
+        },
+        "true_control": {
+          "cutoff_label_matches": 1,
+          "denominator": 1
+        }
+      },
+      "cutoff": {
+        "available": true,
+        "denominator": 2,
+        "label_agreement_rate": 1.0,
+        "label_matches": 2
+      },
+      "execution_counts": {
+        "completed": 2,
+        "failed": 0,
+        "unexecuted": 0
+      },
+      "later_outcome": {
+        "affirmed_true_denominator": 1,
+        "available": true,
+        "called_false": 0,
+        "denominator": 2,
+        "false_acceptances": 0,
+        "false_accusations": 0,
+        "false_target_abstentions": 1,
+        "false_target_conflicts": 0,
+        "false_target_denominator": 1,
+        "label_agreement_rate": 0.5,
+        "label_matches": 1,
+        "true_acceptances": 1,
+        "unknown_labels": 0
+      },
+      "mechanically_valid_diagnostic": 2,
+      "planned_rows": 2,
+      "raw_cutoff_label_matches_diagnostic": 2,
+      "valid_completed": 2,
+      "valid_verdict_counts": {
+        "conflicting": 0,
+        "contradicted": 0,
+        "supported": 1,
+        "unresolved": 1
+      }
+    },
+    "news_tracing": {
+      "controls": {
+        "attribution_control": {
+          "cutoff_label_matches": 0,
+          "denominator": 0
+        },
+        "derivation_control": {
+          "cutoff_label_matches": 0,
+          "denominator": 0
+        },
+        "real_world": {
+          "cutoff_label_matches": 0,
+          "denominator": 1
+        },
+        "true_control": {
+          "cutoff_label_matches": 1,
+          "denominator": 1
+        }
+      },
+      "cutoff": {
+        "available": true,
+        "denominator": 2,
+        "label_agreement_rate": 0.5,
+        "label_matches": 1
+      },
+      "execution_counts": {
+        "completed": 2,
+        "failed": 0,
+        "unexecuted": 0
+      },
+      "later_outcome": {
+        "affirmed_true_denominator": 1,
+        "available": true,
+        "called_false": 0,
+        "denominator": 2,
+        "false_acceptances": 0,
+        "false_accusations": 0,
+        "false_target_abstentions": 0,
+        "false_target_conflicts": 1,
+        "false_target_denominator": 1,
+        "label_agreement_rate": 0.5,
+        "label_matches": 1,
+        "true_acceptances": 1,
+        "unknown_labels": 0
+      },
+      "mechanically_valid_diagnostic": 2,
+      "planned_rows": 2,
+      "raw_cutoff_label_matches_diagnostic": 1,
+      "valid_completed": 2,
+      "valid_verdict_counts": {
+        "conflicting": 1,
+        "contradicted": 0,
+        "supported": 1,
+        "unresolved": 0
+      }
+    }
+  },
+  "gold_sha256": "f6c680515cc196bdd82954899d86b4b51c2ac646bff7659c630100d9a8cc2d89",
+  "native_cli_sha256": "0cf2d42e90ddd50fa5b7eedd5d72f109b68d33e5a6ce7c3fc2c87e4180edcd59",
+  "native_visual_dispatch_accounting": {
+    "known_dispatches": 3,
+    "observed_requests": 3,
+    "scope": "visual_calls_only_not_all_pipeline_calls_or_server_processing",
+    "unknown_dispatch_count_requests": 0
+  },
+  "paired": {
+    "cutoff": {
+      "available": true,
+      "both_match": 1,
+      "denominator": 2,
+      "direct_only": 1,
+      "neither_matches": 0,
+      "news_tracing_minus_direct": -1,
+      "news_tracing_only": 0,
+      "pairs_with_failure_or_invalid": 0
+    },
+    "later_outcome": {
+      "available": true,
+      "both_match": 1,
+      "denominator": 2,
+      "direct_only": 0,
+      "neither_matches": 1,
+      "news_tracing_minus_direct": 0,
+      "news_tracing_only": 0,
+      "pairs_with_failure_or_invalid": 0
+    }
+  },
+  "planned_rows": 4,
+  "private_scores_sha256": "dee1f9b9bbc3edf2251d4f2e65462c2f7bc394d4dc4cad2a86f67b905d65f974",
+  "schema_version": 1,
+  "scope": {
+    "abstention_is_not_false_detection": true,
+    "later_label_match_is_not_cutoff_grounded_detection": true,
+    "mechanical_validity_is_not_semantic_accuracy": true,
+    "superiority_established": false
+  },
+  "semantic_review": {
+    "semantic_validity_established": false,
+    "supplied": false
+  },
+  "test_stub": false,
+  "usage": {
+    "cached_input_tokens": 22912,
+    "costs_not_estimated": true,
+    "failed_or_unknown_receipts": 0,
+    "fatal_unobserved_attempts_possible": false,
+    "input_tokens": 553137,
+    "known_token_subtotals": {
+      "cached_input_tokens": 22912,
+      "input_tokens": 553137,
+      "output_tokens": 8152,
+      "reasoning_output_tokens": 637,
+      "total_tokens": 561289
+    },
+    "output_tokens": 8152,
+    "reasoning_output_tokens": 637,
+    "recorded_requests": 22,
+    "recorded_requests_are_not_proof_of_native_dispatch": true,
+    "successful_receipts": 22,
+    "total_tokens": 561289,
+    "unknown_terminal_requests": 0,
+    "unknown_token_fields": {
+      "cached_input_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 0
+    },
+    "usage_complete": true
+  },
+  "usage_by_condition": {
+    "direct": {
+      "cached_input_tokens": 0,
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 69718,
+      "known_token_subtotals": {
+        "cached_input_tokens": 0,
+        "input_tokens": 69718,
+        "output_tokens": 379,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 70097
+      },
+      "output_tokens": 379,
+      "reasoning_output_tokens": 0,
+      "recorded_requests": 2,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "successful_receipts": 2,
+      "total_tokens": 70097,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    "news_tracing": {
+      "cached_input_tokens": 22912,
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 483419,
+      "known_token_subtotals": {
+        "cached_input_tokens": 22912,
+        "input_tokens": 483419,
+        "output_tokens": 7773,
+        "reasoning_output_tokens": 637,
+        "total_tokens": 491192
+      },
+      "output_tokens": 7773,
+      "reasoning_output_tokens": 637,
+      "recorded_requests": 20,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "successful_receipts": 20,
+      "total_tokens": 491192,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    }
+  },
+  "usage_by_condition_and_stage": [
+    {
+      "cached_input_tokens": 0,
+      "condition": "direct",
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 69718,
+      "known_token_subtotals": {
+        "cached_input_tokens": 0,
+        "input_tokens": 69718,
+        "output_tokens": 379,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 70097
+      },
+      "output_tokens": 379,
+      "reasoning_output_tokens": 0,
+      "recorded_requests": 2,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "stage": "direct",
+      "successful_receipts": 2,
+      "total_tokens": 70097,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    {
+      "cached_input_tokens": 0,
+      "condition": "news_tracing",
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 42296,
+      "known_token_subtotals": {
+        "cached_input_tokens": 0,
+        "input_tokens": 42296,
+        "output_tokens": 1591,
+        "reasoning_output_tokens": 116,
+        "total_tokens": 43887
+      },
+      "output_tokens": 1591,
+      "reasoning_output_tokens": 116,
+      "recorded_requests": 2,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "stage": "decompose",
+      "successful_receipts": 2,
+      "total_tokens": 43887,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    {
+      "cached_input_tokens": 7552,
+      "condition": "news_tracing",
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 38564,
+      "known_token_subtotals": {
+        "cached_input_tokens": 7552,
+        "input_tokens": 38564,
+        "output_tokens": 300,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 38864
+      },
+      "output_tokens": 300,
+      "reasoning_output_tokens": 0,
+      "recorded_requests": 2,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "stage": "deconstruct",
+      "successful_receipts": 2,
+      "total_tokens": 38864,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    {
+      "cached_input_tokens": 0,
+      "condition": "news_tracing",
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 74505,
+      "known_token_subtotals": {
+        "cached_input_tokens": 0,
+        "input_tokens": 74505,
+        "output_tokens": 1338,
+        "reasoning_output_tokens": 154,
+        "total_tokens": 75843
+      },
+      "output_tokens": 1338,
+      "reasoning_output_tokens": 154,
+      "recorded_requests": 2,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "stage": "policy_adjudicate",
+      "successful_receipts": 2,
+      "total_tokens": 75843,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    {
+      "cached_input_tokens": 0,
+      "condition": "news_tracing",
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 71071,
+      "known_token_subtotals": {
+        "cached_input_tokens": 0,
+        "input_tokens": 71071,
+        "output_tokens": 1602,
+        "reasoning_output_tokens": 321,
+        "total_tokens": 72673
+      },
+      "output_tokens": 1602,
+      "reasoning_output_tokens": 321,
+      "recorded_requests": 2,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "stage": "policy_challenge",
+      "successful_receipts": 2,
+      "total_tokens": 72673,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    {
+      "cached_input_tokens": 0,
+      "condition": "news_tracing",
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 38679,
+      "known_token_subtotals": {
+        "cached_input_tokens": 0,
+        "input_tokens": 38679,
+        "output_tokens": 248,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 38927
+      },
+      "output_tokens": 248,
+      "reasoning_output_tokens": 0,
+      "recorded_requests": 2,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "stage": "search_plan",
+      "successful_receipts": 2,
+      "total_tokens": 38927,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    {
+      "cached_input_tokens": 0,
+      "condition": "news_tracing",
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 65719,
+      "known_token_subtotals": {
+        "cached_input_tokens": 0,
+        "input_tokens": 65719,
+        "output_tokens": 953,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 66672
+      },
+      "output_tokens": 953,
+      "reasoning_output_tokens": 0,
+      "recorded_requests": 3,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "stage": "source_trace",
+      "successful_receipts": 3,
+      "total_tokens": 66672,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    {
+      "cached_input_tokens": 0,
+      "condition": "news_tracing",
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 39692,
+      "known_token_subtotals": {
+        "cached_input_tokens": 0,
+        "input_tokens": 39692,
+        "output_tokens": 321,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 40013
+      },
+      "output_tokens": 321,
+      "reasoning_output_tokens": 0,
+      "recorded_requests": 2,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "stage": "source_verify",
+      "successful_receipts": 2,
+      "total_tokens": 40013,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    {
+      "cached_input_tokens": 0,
+      "condition": "news_tracing",
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 40695,
+      "known_token_subtotals": {
+        "cached_input_tokens": 0,
+        "input_tokens": 40695,
+        "output_tokens": 571,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 41266
+      },
+      "output_tokens": 571,
+      "reasoning_output_tokens": 0,
+      "recorded_requests": 2,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "stage": "synthesis",
+      "successful_receipts": 2,
+      "total_tokens": 41266,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    {
+      "cached_input_tokens": 15360,
+      "condition": "news_tracing",
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 72198,
+      "known_token_subtotals": {
+        "cached_input_tokens": 15360,
+        "input_tokens": 72198,
+        "output_tokens": 849,
+        "reasoning_output_tokens": 46,
+        "total_tokens": 73047
+      },
+      "output_tokens": 849,
+      "reasoning_output_tokens": 46,
+      "recorded_requests": 3,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "stage": "verify",
+      "successful_receipts": 3,
+      "total_tokens": 73047,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    }
+  ],
+  "usage_by_stage": {
+    "decompose": {
+      "cached_input_tokens": 0,
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 42296,
+      "known_token_subtotals": {
+        "cached_input_tokens": 0,
+        "input_tokens": 42296,
+        "output_tokens": 1591,
+        "reasoning_output_tokens": 116,
+        "total_tokens": 43887
+      },
+      "output_tokens": 1591,
+      "reasoning_output_tokens": 116,
+      "recorded_requests": 2,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "successful_receipts": 2,
+      "total_tokens": 43887,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    "deconstruct": {
+      "cached_input_tokens": 7552,
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 38564,
+      "known_token_subtotals": {
+        "cached_input_tokens": 7552,
+        "input_tokens": 38564,
+        "output_tokens": 300,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 38864
+      },
+      "output_tokens": 300,
+      "reasoning_output_tokens": 0,
+      "recorded_requests": 2,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "successful_receipts": 2,
+      "total_tokens": 38864,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    "direct": {
+      "cached_input_tokens": 0,
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 69718,
+      "known_token_subtotals": {
+        "cached_input_tokens": 0,
+        "input_tokens": 69718,
+        "output_tokens": 379,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 70097
+      },
+      "output_tokens": 379,
+      "reasoning_output_tokens": 0,
+      "recorded_requests": 2,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "successful_receipts": 2,
+      "total_tokens": 70097,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    "policy_adjudicate": {
+      "cached_input_tokens": 0,
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 74505,
+      "known_token_subtotals": {
+        "cached_input_tokens": 0,
+        "input_tokens": 74505,
+        "output_tokens": 1338,
+        "reasoning_output_tokens": 154,
+        "total_tokens": 75843
+      },
+      "output_tokens": 1338,
+      "reasoning_output_tokens": 154,
+      "recorded_requests": 2,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "successful_receipts": 2,
+      "total_tokens": 75843,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    "policy_challenge": {
+      "cached_input_tokens": 0,
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 71071,
+      "known_token_subtotals": {
+        "cached_input_tokens": 0,
+        "input_tokens": 71071,
+        "output_tokens": 1602,
+        "reasoning_output_tokens": 321,
+        "total_tokens": 72673
+      },
+      "output_tokens": 1602,
+      "reasoning_output_tokens": 321,
+      "recorded_requests": 2,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "successful_receipts": 2,
+      "total_tokens": 72673,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    "search_plan": {
+      "cached_input_tokens": 0,
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 38679,
+      "known_token_subtotals": {
+        "cached_input_tokens": 0,
+        "input_tokens": 38679,
+        "output_tokens": 248,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 38927
+      },
+      "output_tokens": 248,
+      "reasoning_output_tokens": 0,
+      "recorded_requests": 2,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "successful_receipts": 2,
+      "total_tokens": 38927,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    "source_trace": {
+      "cached_input_tokens": 0,
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 65719,
+      "known_token_subtotals": {
+        "cached_input_tokens": 0,
+        "input_tokens": 65719,
+        "output_tokens": 953,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 66672
+      },
+      "output_tokens": 953,
+      "reasoning_output_tokens": 0,
+      "recorded_requests": 3,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "successful_receipts": 3,
+      "total_tokens": 66672,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    "source_verify": {
+      "cached_input_tokens": 0,
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 39692,
+      "known_token_subtotals": {
+        "cached_input_tokens": 0,
+        "input_tokens": 39692,
+        "output_tokens": 321,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 40013
+      },
+      "output_tokens": 321,
+      "reasoning_output_tokens": 0,
+      "recorded_requests": 2,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "successful_receipts": 2,
+      "total_tokens": 40013,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    "synthesis": {
+      "cached_input_tokens": 0,
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 40695,
+      "known_token_subtotals": {
+        "cached_input_tokens": 0,
+        "input_tokens": 40695,
+        "output_tokens": 571,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 41266
+      },
+      "output_tokens": 571,
+      "reasoning_output_tokens": 0,
+      "recorded_requests": 2,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "successful_receipts": 2,
+      "total_tokens": 41266,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    },
+    "verify": {
+      "cached_input_tokens": 15360,
+      "costs_not_estimated": true,
+      "failed_or_unknown_receipts": 0,
+      "fatal_unobserved_attempts_possible": false,
+      "input_tokens": 72198,
+      "known_token_subtotals": {
+        "cached_input_tokens": 15360,
+        "input_tokens": 72198,
+        "output_tokens": 849,
+        "reasoning_output_tokens": 46,
+        "total_tokens": 73047
+      },
+      "output_tokens": 849,
+      "reasoning_output_tokens": 46,
+      "recorded_requests": 3,
+      "recorded_requests_are_not_proof_of_native_dispatch": true,
+      "successful_receipts": 3,
+      "total_tokens": 73047,
+      "unknown_terminal_requests": 0,
+      "unknown_token_fields": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 0
+      },
+      "usage_complete": true
+    }
+  }
+}

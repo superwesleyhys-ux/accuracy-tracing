@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "logical_calls": 1,
+  "observed_cli_dispatches": 1,
+  "orchestration_retries": 0,
+  "both_synthetic_fields_match": true,
+  "tool_events": 0,
+  "skills_disabled": 66,
+  "image_count": 1,
+  "input_tokens": 9103,
+  "output_tokens": 55,
+  "total_tokens": 9158,
+  "call_wall_seconds": 5.344187957933173,
+  "unknown_usage_calls": 0,
+  "manifest_entries_verified": 36,
+  "preservation_mismatches": 0,
+  "new_model_calls": 0,
+  "new_source_calls": 0,
+  "c6_news_benchmark_calls": 0,
+  "material_public_report_overclaims": 0,
+  "review_sha256": "ee4a8c5ec9d4412aeaf35900fa60706accf5a392c33721162d6fe0e2246b3fb5",
+  "summary_sha256": "82bd1a97de765c982d29b9f895ad175d5be03e6cc74c574d0485a65d95f156b8",
+  "request_audit_sha256": "9239914eb9c4808177ffd3f6ea503d49ba80b862cb8143f6b57272142f26d4e1",
+  "limitations": [
+    "Audit precedes expected-answer parsing/scoring; opaque hash reads occur earlier.",
+    "Server pixel delivery, CLI preprocessing and provider internal retries are not independently captured.",
+    "One synthetic visual match is not scientific-image or news accuracy.",
+    "Four owner probe infrastructure tests remain separate from C6 47+16 offline checks."
+  ]
+}

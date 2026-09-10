@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "remote_model_calls": 0,
+  "focused_tests": 7,
+  "focused_tests_passed": 7,
+  "final_stub_outcomes": 4,
+  "final_stub_call_receipts": 24,
+  "filesystem_and_registration_denial_verified": true,
+  "call_and_deadline_guards_verified": true,
+  "independent_all_request_audit_passed": 24,
+  "independent_mutations_rejected": 5,
+  "source_hashes": {
+    "run_test.py": "cfa327d9f73cbacb2b88286a5d15580c77fb37d01d18ab391a5b6d1613007225",
+    "summarize_test.py": "486941e74585457a633b9628014417751843d90a4b9a04f7c1f9b3e1b81da80c",
+    "PROTOCOL.md": "0894f542f963c79988c3ac5046b4d5244a4bf733326365de0b52f91bad3cab9d",
+    "PLAN.json": "1440a86493237b38b9ad360c1c980e8d1a4dc1b766edb36dfb7c889d9a2c5c4d",
+    "CODE_MANIFEST.json": "8e5eae417e3ff05f24199b787f7a5e9b6a8e7198faa19f78849fabe9f15cbf67",
+    "test_diagnostic.py": "c377c820d0db9891d3a297739b5bc8a8ff460ebdc9d80697060cee717fe9b863"
+  },
+  "production_edits": false,
+  "old_artifacts_modified": false
+}

@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "review_type": "post_freeze_mapping_join_validation",
+  "completed_at": "2026-09-10T00:25:07.593796+00:00",
+  "status": "pass",
+  "inputs_sha256": {
+    "review": "ead9066ceaed69ce7e9833dff086ffe3f8b3bd97e078e9f46b2f359daff2f2e9",
+    "safe_status": "580ba0f069201877e5dd9e93a098a161d226863f82548854c8f9a56ce27fd9b4",
+    "original_manifest": "262d2ca7da57cb757548eaaa5d769668203f7e0897e959856340c52736d7d757",
+    "mapping": "bf54a92661dcb7f314f628f60bdd2f65bc67b42787f13a8a8198f2d8e6308439",
+    "comparison": "d13d369856bd35734a61d1f227bfccf39012932703679a100e7d0ca737f34048",
+    "summary": "14d824b3940bbb2fdb26e906a365930299400ce301e8d272870b20f8c23278f4",
+    "packet": "83e8e73b7e4b9e0688dac3586443af785bd93eda268b32f091a7aaafa402b2b1",
+    "gold": "8726057aea64e7ef1b9d62d8d2be7b50cbb8e916fcb9302661370637eec72720"
+  },
+  "validated": {
+    "all_42_opaque_ids_exactly_joined": true,
+    "exact_14_by_3_case_condition_membership": true,
+    "summary_registered_case_major_rotating_order": true,
+    "all_42_projected_final_hashes": true,
+    "case_target_verdict_execution_fields_bound": true,
+    "comparison_all_42_rows_exactly_recomputed": true,
+    "all_condition_aggregates_recomputed": true,
+    "role_control_denominators_and_false_accusations_recomputed": true,
+    "all_three_arm_pair_primary_contrasts_recomputed": true,
+    "judgments_and_original_manifest_preserved": true,
+    "frozen_review_precedes_recorded_root_join": true,
+    "failure_vs_unassessable_semantics_preserved": true
+  },
+  "conditions": {
+    "direct": {
+      "planned_rows": 14,
+      "assessable_finals": 14,
+      "missing_finals": 0,
+      "label_matches": 14,
+      "semantically_valid_finals": 14,
+      "primary_credit": 14,
+      "confirmed_semantic_errors": 0,
+      "material_error_types": {},
+      "supported_controls_primary": 6,
+      "supported_controls_denominator": 6,
+      "grounded_contradictions_primary": 2,
+      "grounded_contradictions_denominator": 2,
+      "unresolved_primary": 6,
+      "unresolved_denominator": 6
+    },
+    "candidate3": {
+      "planned_rows": 14,
+      "assessable_finals": 12,
+      "missing_finals": 2,
+      "label_matches": 12,
+      "semantically_valid_finals": 12,
+      "primary_credit": 12,
+      "confirmed_semantic_errors": 0,
+      "material_error_types": {},
+      "supported_controls_primary": 6,
+      "supported_controls_denominator": 6,
+      "grounded_contradictions_primary": 1,
+      "grounded_contradictions_denominator": 2,
+      "unresolved_primary": 5,
+      "unresolved_denominator": 6
+    },
+    "candidate4": {
+      "planned_rows": 14,
+      "assessable_finals": 12,
+      "missing_finals": 2,
+      "label_matches": 12,
+      "semantically_valid_finals": 12,
+      "primary_credit": 12,
+      "confirmed_semantic_errors": 0,
+      "material_error_types": {},
+      "supported_controls_primary": 6,
+      "supported_controls_denominator": 6,
+      "grounded_contradictions_primary": 1,
+      "grounded_contradictions_denominator": 2,
+      "unresolved_primary": 5,
+      "unresolved_denominator": 6
+    }
+  },
+  "role_controls": {
+    "direct": {
+      "real_world": {
+        "denominator": 7,
+        "primary_credit": 7,
+        "missing": 0,
+        "semantic_errors": 0,
+        "false_accusations": 0
+      },
+      "true_control": {
+        "denominator": 3,
+        "primary_credit": 3,
+        "missing": 0,
+        "semantic_errors": 0,
+        "false_accusations": 0
+      },
+      "attribution_control": {
+        "denominator": 1,
+        "primary_credit": 1,
+        "missing": 0,
+        "semantic_errors": 0,
+        "false_accusations": 0
+      },
+      "derivation_control": {
+        "denominator": 3,
+        "primary_credit": 3,
+        "missing": 0,
+        "semantic_errors": 0,
+        "false_accusations": 0
+      }
+    },
+    "candidate3": {
+      "real_world": {
+        "denominator": 7,
+        "primary_credit": 5,
+        "missing": 2,
+        "semantic_errors": 0,
+        "false_accusations": 0
+      },
+      "true_control": {
+        "denominator": 3,
+        "primary_credit": 3,
+        "missing": 0,
+        "semantic_errors": 0,
+        "false_accusations": 0
+      },
+      "attribution_control": {
+        "denominator": 1,
+        "primary_credit": 1,
+        "missing": 0,
+        "semantic_errors": 0,
+        "false_accusations": 0
+      },
+      "derivation_control": {
+        "denominator": 3,
+        "primary_credit": 3,
+        "missing": 0,
+        "semantic_errors": 0,
+        "false_accusations": 0
+      }
+    },
+    "candidate4": {
+      "real_world": {
+        "denominator": 7,
+        "primary_credit": 5,
+        "missing": 2,
+        "semantic_errors": 0,
+        "false_accusations": 0
+      },
+      "true_control": {
+        "denominator": 3,
+        "primary_credit": 3,
+        "missing": 0,
+        "semantic_errors": 0,
+        "false_accusations": 0
+      },
+      "attribution_control": {
+        "denominator": 1,
+        "primary_credit": 1,
+        "missing": 0,
+        "semantic_errors": 0,
+        "false_accusations": 0
+      },
+      "derivation_control": {
+        "denominator": 3,
+        "primary_credit": 3,
+        "missing": 0,
+        "semantic_errors": 0,
+        "false_accusations": 0
+      }
+    }
+  },
+  "shared_assessable_comparison": {
+    "case_count": 12,
+    "case_ids": [
+      "s01",
+      "s02",
+      "s03",
+      "s04",
+      "s05",
+      "s06",
+      "s07",
+      "s08",
+      "s09",
+      "s10",
+      "s11",
+      "s12"
+    ],
+    "semantic_errors_each_arm": {
+      "direct": 0,
+      "candidate3": 0,
+      "candidate4": 0
+    },
+    "candidate4_role_error_reduction_observed": false
+  },
+  "last_contrast": {
+    "case_ids": [
+      "s13",
+      "s14"
+    ],
+    "direct_assessable": 2,
+    "candidate3_assessable": 0,
+    "candidate4_assessable": 0,
+    "semantic_contrast_complete": false
+  },
+  "interpretation": [
+    "Direct earns 14/14 primary credit; each harness earns 12/14. Each harness has two missing finals, not two demonstrated semantic errors.",
+    "The four summary-level unresolved diagnostic statuses are failed_or_invalid with no formal verdict and no label credit; they are not emitted, assessable abstentions.",
+    "Candidate 4 shows no observed semantic or role-error reduction on the twelve shared assessable cases. The final two-case scope contrast remains unassessed for both harnesses because of execution failures.",
+    "This does not establish a complete fourteen-case harness ceiling, equivalence on the missing cases, or real-news superiority.",
+    "All six supported controls per arm receive credit: one attribution, three true controls and two supported derivation controls. The third derivation control is contradicted and also correctly handled by all arms. No false accusation is observed on the supported controls."
+  ],
+  "limits": [
+    "This additive check joins the frozen judgments to the supplied mapping and audited summary. It verifies mapped projected-final hashes against the blinded packet but does not reopen raw result files or repeat the transport audit.",
+    "No new model calls or external source requests were made; the original semantic judgments were not changed."
+  ]
+}

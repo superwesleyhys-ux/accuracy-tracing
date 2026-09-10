@@ -1,0 +1,205 @@
+{
+  "scope": "One current-web integration run; not a historical-cutoff, fake-news accuracy, or Astra-versus-harness comparison.",
+  "input": {
+    "news": [
+      {
+        "id": "bullseye-galaxy-rings",
+        "text": "Hubble identified eight visible rings in galaxy LEDA 1313424, and Keck observations confirmed a ninth ring.",
+        "url": "https://www.sciencedaily.com/releases/2025/02/250204132023.htm",
+        "claims": [
+          "Hubble identified eight visible rings in galaxy LEDA 1313424, and Keck observations confirmed a ninth ring."
+        ]
+      }
+    ],
+    "config": {
+      "depth": 0,
+      "max_queries": 1,
+      "max_searches": 0,
+      "max_documents": 5,
+      "max_origin_depth": 1,
+      "max_origin_calls": 12
+    }
+  },
+  "summary": {
+    "news_items": 1,
+    "completed": 0,
+    "partial": 1,
+    "failed": 0,
+    "claims": 1,
+    "located_origins": 0
+  },
+  "transport": {
+    "tunnel": "local",
+    "model": "gpt-6-astra",
+    "reasoning_effort": "medium",
+    "model_calls": 16,
+    "successful_calls": 16,
+    "known_usage_calls": 16,
+    "usage": {
+      "input_tokens": 346096,
+      "output_tokens": 8856,
+      "cached_input_tokens": 30848,
+      "total_tokens": 354952
+    },
+    "wall_seconds": 330.7605763330357
+  },
+  "claim": {
+    "text": "Hubble identified eight visible rings in galaxy LEDA 1313424, and Keck observations confirmed a ninth ring.",
+    "fact_status": "unresolved",
+    "provenance_status": "partial",
+    "stop_reason": "empty_results"
+  },
+  "sources": [
+    {
+      "url": "https://www.sciencedaily.com/releases/2025/02/250204132023.htm",
+      "version_id": "news-697d0ebf42b7ab9f",
+      "retrieved_at": "2026-09-08T23:19:18.119616Z"
+    },
+    {
+      "url": "https://science.nasa.gov/missions/hubble/hubble-investigates-galaxy-with-nine-rings/",
+      "version_id": "news-f88b8f53a5644115",
+      "retrieved_at": "2026-09-08T23:19:25.645672Z"
+    }
+  ],
+  "upstream_candidates": [
+    {
+      "depth": 1,
+      "url": "https://science.nasa.gov/missions/hubble/hubble-investigates-galaxy-with-nine-rings/",
+      "fetched": true,
+      "rationale": "ScienceDaily explicitly links the NASA article as its supplied story materials and cites the DOI as the journal reference for the HST and Keck study of the nine-ringed galaxy. Both are target-relevant upstream references worth fetching; their contents and the claim remain unverified here."
+    },
+    {
+      "depth": 1,
+      "url": "http://dx.doi.org/10.3847/2041-8213/ad9f5c",
+      "fetched": false,
+      "rationale": "ScienceDaily explicitly links the NASA article as its supplied story materials and cites the DOI as the journal reference for the HST and Keck study of the nine-ringed galaxy. Both are target-relevant upstream references worth fetching; their contents and the claim remain unverified here."
+    }
+  ],
+  "errors": [
+    {
+      "stage": "timeline_build",
+      "type": "InvalidField",
+      "message": "causal_links must be a string"
+    },
+    {
+      "stage": "source_collection",
+      "operation": "fetch",
+      "code": "extracted_text_too_large",
+      "url": "http://dx.doi.org/10.3847/2041-8213/ad9f5c"
+    }
+  ],
+  "stage_usage": {
+    "origin_links": {
+      "calls": 1,
+      "input_tokens": 20053,
+      "output_tokens": 120,
+      "cached_input_tokens": 0
+    },
+    "deconstruct": {
+      "calls": 1,
+      "input_tokens": 18462,
+      "output_tokens": 148,
+      "cached_input_tokens": 0
+    },
+    "search_plan": {
+      "calls": 1,
+      "input_tokens": 18599,
+      "output_tokens": 96,
+      "cached_input_tokens": 0
+    },
+    "source_trace": {
+      "calls": 1,
+      "input_tokens": 18559,
+      "output_tokens": 560,
+      "cached_input_tokens": 0
+    },
+    "source_verify": {
+      "calls": 1,
+      "input_tokens": 19095,
+      "output_tokens": 319,
+      "cached_input_tokens": 0
+    },
+    "timeline_build": {
+      "calls": 1,
+      "input_tokens": 19235,
+      "output_tokens": 1037,
+      "cached_input_tokens": 0
+    },
+    "perspective": {
+      "calls": 1,
+      "input_tokens": 19193,
+      "output_tokens": 173,
+      "cached_input_tokens": 0
+    },
+    "direct_response": {
+      "calls": 1,
+      "input_tokens": 20234,
+      "output_tokens": 253,
+      "cached_input_tokens": 0
+    },
+    "synthesis": {
+      "calls": 1,
+      "input_tokens": 20955,
+      "output_tokens": 1245,
+      "cached_input_tokens": 0
+    },
+    "decompose": {
+      "calls": 3,
+      "input_tokens": 83362,
+      "output_tokens": 3975,
+      "cached_input_tokens": 7936
+    },
+    "verify": {
+      "calls": 3,
+      "input_tokens": 78743,
+      "output_tokens": 868,
+      "cached_input_tokens": 15360
+    },
+    "select": {
+      "calls": 1,
+      "input_tokens": 9606,
+      "output_tokens": 62,
+      "cached_input_tokens": 7552
+    }
+  },
+  "collector_only_preflights": {
+    "scope": "Collector-only preflight checks; no model verdicts were requested for these pages.",
+    "checks": [
+      {
+        "input_url": "https://www.sciencedaily.com/releases/2024/10/241014145904.htm",
+        "input_fetch": "succeeded",
+        "observed_primary_url": "https://www.jpl.nasa.gov/news/liftoff-nasas-europa-clipper-sails-toward-ocean-moon-of-jupiter/",
+        "primary_fetch": "failed",
+        "error_code": "http_error",
+        "http_status": null
+      },
+      {
+        "input_url": "https://www.sciencedaily.com/releases/2022/09/220927095429.htm",
+        "input_fetch": "succeeded",
+        "observed_primary_url": "https://www.nasa.gov/press-release/nasa-s-dart-mission-hits-asteroid-in-first-ever-planetary-defense-test/",
+        "primary_fetch": "failed",
+        "error_code": "http_error",
+        "http_status": 429,
+        "redirect_status": 301,
+        "redirect_url": "https://www.nasa.gov/news-release/nasas-dart-mission-hits-asteroid-in-first-ever-planetary-defense-test"
+      }
+    ]
+  },
+  "separate_connection_smoke": {
+    "calls": 1,
+    "successful_calls": 1,
+    "input_tokens": 8763,
+    "output_tokens": 15,
+    "total_tokens": 8778
+  },
+  "validation": {
+    "unit_tests": 213,
+    "passed": 213,
+    "original_archive_files_verified": 10,
+    "wheel_build": "passed",
+    "dependency_free_import_and_cli_smoke": "passed",
+    "post_run_changes": "Late-link catalog and exhausted-document-budget regressions, exact URL punctuation, legacy timeline causal-link compatibility, and visible upstream candidates were finalized after the full live run. Deterministic tests validate these changes; the real run was not replaced."
+  },
+  "raw_result_sha256": "8f9f10b732253e3f41cdc715ce672573ffd3fc32ba4943b30b3caf1fc8a5dbe8",
+  "original_archive_sha256": "7549a4f4cad9ebdab52949084ab2b979eb5b03dc3a822cba849f80e20f7465c7"
+}

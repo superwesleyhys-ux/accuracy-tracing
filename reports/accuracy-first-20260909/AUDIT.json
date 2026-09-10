@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "audit_kind": "independent_live_diagnostic_audit",
+  "audited_at": "2026-09-09T03:47:15.008055+00:00",
+  "passed": true,
+  "blockers": [],
+  "scope": {
+    "case_ids": [
+      "h05",
+      "h06"
+    ],
+    "conditions": [
+      "direct",
+      "news_tracing"
+    ],
+    "case_count": 2,
+    "run_count": 4,
+    "event_families": 1,
+    "exposed_development_only": true,
+    "model_calls_by_this_audit": 0,
+    "source_method_analysis_performed": false,
+    "attribution_control_is_not_a_genuine_measurement_control": true,
+    "live_table_extraction_fix_exercised": false,
+    "internal_cli_retries_not_independently_counted": true,
+    "private_gold_file_read": false,
+    "registered_outcome_labels_read_from_summary": true
+  },
+  "artifact_hashes": {
+    "SUMMARY.json": "712f1774d25439a29e4a7244070cb4e7f248186a1da7dba6c5f4743fa6f42a42",
+    "SANITIZED_RECEIPTS.json": "1cb54c4cf1d6789eea3b1e7d4c4d0be1033b74bde16cd9003065dcb53541a6bc",
+    "manifest.json": "c63985664c849e5c453fe42aa60f23d577681af7be580874446109a4e1fcfc32",
+    "registration.json": "dfb1cf454227245773771cf49924b5da8cf004985f508d22f475e7dceaae5923",
+    "plan.json": "1440a86493237b38b9ad360c1c980e8d1a4dc1b766edb36dfb7c889d9a2c5c4d",
+    "protocol.md": "0894f542f963c79988c3ac5046b4d5244a4bf733326365de0b52f91bad3cab9d",
+    "code-manifest.json": "8e5eae417e3ff05f24199b787f7a5e9b6a8e7198faa19f78849fabe9f15cbf67",
+    "worker-corpus.json": "425b08099402de9492e31760a8c4dce27d78cabc366b12d07ab1ab3a3f3f68e0"
+  },
+  "checks": {
+    "frozen_commitments_and_current_code_match": true,
+    "registration_precedes_inference": true,
+    "all_request_response_and_usage_bindings_match": true,
+    "exact_complete_canonical_research_text_and_availability": true,
+    "all_temporal_targets_preserved": true,
+    "local_medium_astra_skill_isolation_66_disabled_each_call": true,
+    "worker_filesystem_and_source_network_isolation_receipt_passed": true,
+    "all_final_quote_spans_exact_and_unique": true,
+    "full_four_run_failure_denominator_retained": true,
+    "no_errors_failed_calls_or_unknown_usage": true,
+    "declared_claim_mode_skips_not_counted_as_failures": true
+  },
+  "coverage": {
+    "logical_calls": 21,
+    "successful_calls": 21,
+    "known_usage_calls": 21,
+    "research_packets": 9,
+    "research_text_characters_per_packet": 44120,
+    "final_quote_spans": 6,
+    "frozen_code_files": 24
+  },
+  "usage_by_condition": {
+    "direct": {
+      "input_tokens": 41320,
+      "output_tokens": 339,
+      "cached_input_tokens": 15104,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 41659,
+      "calls": 2
+    },
+    "news_tracing": {
+      "input_tokens": 381565,
+      "output_tokens": 7893,
+      "cached_input_tokens": 54656,
+      "reasoning_output_tokens": 395,
+      "total_tokens": 389458,
+      "calls": 19
+    }
+  },
+  "total_tokens": 431117,
+  "harness_to_direct_token_ratio": 9.348712163037998,
+  "stage_call_counts": [
+    {
+      "condition": "direct",
+      "stage": "direct",
+      "calls": 2
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "decompose",
+      "calls": 6
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "deconstruct",
+      "calls": 2
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "search_plan",
+      "calls": 2
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "source_trace",
+      "calls": 2
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "source_verify",
+      "calls": 1
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "synthesis",
+      "calls": 2
+    },
+    {
+      "condition": "news_tracing",
+      "stage": "verify",
+      "calls": 4
+    }
+  ],
+  "outcomes": {
+    "direct": {
+      "cutoff_matches": 2,
+      "denominator": 2,
+      "later_false_claims_called_false": 0,
+      "later_false_claim_denominator": 1,
+      "authenticity_abstentions": 1,
+      "attribution_supported": 1
+    },
+    "news_tracing": {
+      "cutoff_matches": 2,
+      "denominator": 2,
+      "later_false_claims_called_false": 0,
+      "later_false_claim_denominator": 1,
+      "authenticity_abstentions": 1,
+      "attribution_supported": 1
+    }
+  },
+  "semantic_review": {
+    "disagreements": [],
+    "h05": "Both arms distinguish author-reported procedures from proof that every reported measurement came from them; abstention is defensible from the supplied text and does not detect fabrication.",
+    "h06": "Both arms correctly report the four percentages stated in the abstract; this checks attribution, not measurement authenticity.",
+    "scope_notes": [
+      "One previously exposed event family and two dependent claim roles do not establish balanced accuracy or superiority.",
+      "The same archived article supplies both versions; source independence is not increased.",
+      "H06 displayed source-origin status remains conservative despite a successful inner provenance trace; it does not alter the attribution verdict."
+    ]
+  },
+  "manual_diagnostic_review": {
+    "passed": true,
+    "changes_primary_or_future_scores": false,
+    "cases": [
+      {
+        "case_id": "h05",
+        "information_gap_count": 3,
+        "archive_availability_retained": true,
+        "redundant_request_for_supplied_archive": false,
+        "interpretation": "Remaining gaps concern unsupplied measurement records and figure/table values, not missing archive existence."
+      },
+      {
+        "case_id": "h06",
+        "information_gap_count": 0,
+        "archive_availability_retained": true,
+        "redundant_request_for_supplied_archive": false,
+        "interpretation": "No research information gap; the result concerns abstract attribution only."
+      }
+    ]
+  },
+  "call_audit": [
+    {
+      "receipt_id": "h05:direct:01",
+      "stage": "direct",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:01",
+      "stage": "deconstruct",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:02",
+      "stage": "search_plan",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:03",
+      "stage": "source_trace",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:04",
+      "stage": "source_trace",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:05",
+      "stage": "source_verify",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:06",
+      "stage": "synthesis",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:07",
+      "stage": "decompose",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:08",
+      "stage": "verify",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:09",
+      "stage": "decompose",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:10",
+      "stage": "decompose",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h05:news_tracing:11",
+      "stage": "verify",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h06:news_tracing:01",
+      "stage": "deconstruct",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h06:news_tracing:02",
+      "stage": "search_plan",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h06:news_tracing:03",
+      "stage": "synthesis",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h06:news_tracing:04",
+      "stage": "decompose",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h06:news_tracing:05",
+      "stage": "verify",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h06:news_tracing:06",
+      "stage": "decompose",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h06:news_tracing:07",
+      "stage": "decompose",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h06:news_tracing:08",
+      "stage": "verify",
+      "binding_passed": true
+    },
+    {
+      "receipt_id": "h06:direct:01",
+      "stage": "direct",
+      "binding_passed": true
+    }
+  ],
+  "final_spans": [
+    {
+      "case_id": "h05",
+      "condition": "direct",
+      "version_id": "v2",
+      "start": 10414,
+      "end": 10668,
+      "quote_sha256": "82a355db940c7095bb2517046e5ef8c335e46bf24713e1a916f94591b75e9b06",
+      "exact_unique_match": true
+    },
+    {
+      "case_id": "h05",
+      "condition": "direct",
+      "version_id": "v2",
+      "start": 12895,
+      "end": 13048,
+      "quote_sha256": "099c280ae2e678bfd8fd03065e24aee956cf5377f17164d8b77d4a14d8fcf271",
+      "exact_unique_match": true
+    },
+    {
+      "case_id": "h05",
+      "condition": "news_tracing",
+      "version_id": "v2",
+      "start": 10414,
+      "end": 10668,
+      "quote_sha256": "82a355db940c7095bb2517046e5ef8c335e46bf24713e1a916f94591b75e9b06",
+      "exact_unique_match": true
+    },
+    {
+      "case_id": "h05",
+      "condition": "news_tracing",
+      "version_id": "v2",
+      "start": 12895,
+      "end": 13048,
+      "quote_sha256": "099c280ae2e678bfd8fd03065e24aee956cf5377f17164d8b77d4a14d8fcf271",
+      "exact_unique_match": true
+    },
+    {
+      "case_id": "h06",
+      "condition": "news_tracing",
+      "version_id": "v2",
+      "start": 1937,
+      "end": 2068,
+      "quote_sha256": "469d4b2c3bdb282ffe59952a9d36a43f4fd5fd06489db2af0a7b78c039d4b830",
+      "exact_unique_match": true
+    },
+    {
+      "case_id": "h06",
+      "condition": "direct",
+      "version_id": "v1",
+      "start": 873,
+      "end": 1004,
+      "quote_sha256": "469d4b2c3bdb282ffe59952a9d36a43f4fd5fd06489db2af0a7b78c039d4b830",
+      "exact_unique_match": true
+    }
+  ]
+}

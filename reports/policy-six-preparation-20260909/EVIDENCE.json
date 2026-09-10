@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "scope": "Frozen C6 preparation, closed and reviewed source passes, single synthetic visual infrastructure probe and independent review",
+  "manifests": [
+    {
+      "manifest": "policy-six-preparation-2045/FROZEN-FILES.json",
+      "sha256": "4568a37f3101c836d503efd35b6c10bbd4a53a0085439757c328656343c01db4",
+      "entries": 55,
+      "all_match": true
+    },
+    {
+      "manifest": "policy-six-design-review-2045/MANIFEST.json",
+      "sha256": "aa6acff5e33a8311db28a12e42663e64fc7678b0333db6cce9e5d5bdaa50e8b7",
+      "entries": 3,
+      "all_match": true
+    },
+    {
+      "manifest": "policy-six-evaluation-design-2045/MANIFEST.json",
+      "sha256": "2c01c6dbf6ee4ceb836e0c582126b06dc1b0c29830b7e570ac64b3e02b39e08c",
+      "entries": 3,
+      "all_match": true
+    },
+    {
+      "manifest": "policy-six-implementation-review-2045/MANIFEST.json",
+      "sha256": "a3fae9f78e440c6a02714fafb100c5cdce77a65bd8358f7d56b7fc97ad9e2a99",
+      "entries": 7,
+      "all_match": true
+    },
+    {
+      "manifest": "policy-six-implementation-review-2045/replay-addendum/MANIFEST.json",
+      "sha256": "0fc539360b7769718eeca068ef9686eec2525eec2cdefd4e44e2466d2802fdf5",
+      "entries": 4,
+      "all_match": true
+    },
+    {
+      "manifest": "policy-six-freeze-review-2135/MANIFEST.json",
+      "sha256": "482cd2d7d1387982f61839235588cdb272ebb19b5b51f67176de0206f6fdbb3a",
+      "entries": 1,
+      "all_match": true
+    },
+    {
+      "manifest": "private/policy-six-news-intake-2045/MANIFEST.json",
+      "sha256": "5f058dd5eb46e6f4ebe4bdfc5a1af14a9baf3db0c77589072be164eb280439d3",
+      "entries": 87,
+      "all_match": true
+    },
+    {
+      "manifest": "private/policy-six-admission-review-2045/MANIFEST.json",
+      "sha256": "cc0c6a3b8a20ae953dfb77c022ef983c299aa6b5e8f32dc076b5ee2dad1254ad",
+      "entries": 7,
+      "all_match": true
+    },
+    {
+      "manifest": "private/policy-six-source-feasibility-2045/MANIFEST.json",
+      "sha256": "7ea9cf817d4075b03ed30f6c76265d885efd9da705a556dc1e84403fbdcfd8f1",
+      "entries": 2,
+      "all_match": true
+    },
+    {
+      "manifest": "private/policy-six-multisource-intake-2115/MANIFEST.json",
+      "sha256": "6176339c48eb3219412b9fe9621d05b9082509023809886a2034f559f0881090",
+      "entries": 53,
+      "all_match": true
+    },
+    {
+      "manifest": "private/policy-six-multisource-admission-review-2115/MANIFEST.json",
+      "sha256": "657a20db3f72d905c7205216858f89cc4372df1dde66baa578d39b497f70dcec",
+      "entries": 3,
+      "all_match": true
+    },
+    {
+      "manifest": "private/policy-six-visual-recovery-2125/MANIFEST.json",
+      "sha256": "9a47cd5277530899862027fa317f1b7fc1e14e2ec2a26245a8bd59e40a2a937f",
+      "entries": 36,
+      "all_match": true
+    },
+    {
+      "manifest": "private/policy-six-visual-admission-review-2125/MANIFEST.json",
+      "sha256": "017f67af1f39c01f57601c09cf59bdcf34b09233fe33deabeba3e9c4c9edc2b2",
+      "entries": 3,
+      "all_match": true
+    },
+    {
+      "manifest": "policy-six-visual-capability-review-2125/MANIFEST.json",
+      "sha256": "749f92409b846a88986db2ddbc4013efc788505e6a2380742e92c937943809de",
+      "entries": 10,
+      "all_match": true
+    },
+    {
+      "manifest": "visual-transport-probe-2135/MANIFEST.json",
+      "sha256": "d54081b90be5752e2e170702315c269fe1dbf7422a241d242ab0af66c3f2ffd5",
+      "entries": 36,
+      "verification": "independent review verified all entries"
+    },
+    {
+      "manifest": "visual-transport-probe-review-2135/MANIFEST.json",
+      "sha256": "6fa40249dfebf1985bfda51f51edaabc9e5b8227f6891575751bd9c0822d3988",
+      "verification": "root bound to reviewer supplied digest"
+    }
+  ],
+  "preservation_sha256": "fc6bdc99fc82f5c212101019657714dfbc70adedb9cb256bba454bf3280d1aa4",
+  "previous_preservation_sha256": "1d5dfa80024958b690cbaa4544a485ac2c4bf2e10fe9f7aee8581eda80800e5a",
+  "source_identities_and_real_labels_included": false
+}

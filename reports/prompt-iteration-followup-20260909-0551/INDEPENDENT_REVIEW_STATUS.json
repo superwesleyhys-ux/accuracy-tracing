@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "counts": {
+    "registered_operation_cap": 20,
+    "recorded_operations": 20,
+    "search_queries": 5,
+    "provider_search_calls": 3,
+    "direct_http_requests": 13,
+    "direct_http_successes": 6,
+    "direct_http_failures": 7,
+    "http_403_failures": 4,
+    "http_404_failures": 3,
+    "provider_document_text_opens": 1,
+    "provider_document_text_open_successes": 1,
+    "provider_document_render_attempts": 1,
+    "provider_document_render_failures": 1,
+    "technical_failure_operations": 8,
+    "empty_archive_lookup_results": 2,
+    "empty_search_results": 1,
+    "retained_http_bodies_including_errors": 13,
+    "retained_provider_return_records": 7,
+    "distinct_provider_return_values": 5,
+    "all_operation_records_hash_checked": 20,
+    "operation_timestamp_pairs_checked": 20,
+    "successful_derived_results_reproduced": 6,
+    "provider_reported_document_pages": 8,
+    "provider_document_text_lines_retained": 164,
+    "recovered_institutional_reasons": 1,
+    "reasons_extracted_characters": 68198,
+    "linked_annexure_image_elements": 28,
+    "recovered_complete_agreed_facts_annexures": 0,
+    "recovered_annexure_binary_images": 0,
+    "recovered_later_illustrative_images": 1,
+    "later_image_width": 398,
+    "later_image_height": 391,
+    "recovered_exact_pre_cutoff_original_ads": 0,
+    "new_admitted_cases": 0,
+    "new_model_calls": 0,
+    "audit_network_operations": 0,
+    "existing_reviewed_true_control_preserved": 1,
+    "prior_manifests_verified": 6,
+    "prior_unique_files_verified": 175,
+    "prior_file_mismatches": 0,
+    "prior_manifest_commitment_mismatches": 0,
+    "new_manifest_entries_verified": 68,
+    "new_manifest_entry_mismatches": 0,
+    "new_unmanifested_source_files": 0,
+    "minor_empty_fragment_link_normalization_differences": 10,
+    "substantive_discrepancies": 0,
+    "elapsed_seconds": 500.287,
+    "last_recorded_network_completion_seconds_after_registration": 358.825
+  },
+  "readiness": {
+    "audit_complete": true,
+    "no_admission_appropriate": true,
+    "recovered_reasons_substantive_findings_supported": true,
+    "literal_printed_amount_falsity_established": false,
+    "false_conveyed_total_price_proposition_supported_at_adjudicated_scope": true,
+    "exact_original_advertisement_ready": false,
+    "complete_visual_and_annexure_context_ready": false,
+    "exact_target_to_finding_binding_ready": false,
+    "exact_target_first_public_establishment_ready": false,
+    "ready_varied_news_pair": false,
+    "dates_labels_or_gates_changed": false,
+    "inputs_gold_or_benchmark_calls_created": false,
+    "frozen_files_changed_by_audit": false
+  },
+  "nonidentifying_limitations": [
+    "All 20 indexed operations have preserved request information, start/end timestamps and matching receipt/provider-return hashes. Thirteen HTTP body files include successful responses and all seven HTTP error bodies. Provider-internal requests remain unobservable; local consistency does not independently prove that no tool activity was omitted.",
+    "Two pairs of query records retain a common complete batch return while counting each explicit query separately. Seven provider records therefore correspond to five distinct provider returns. Search results and provider PDF text are not full raw source documents.",
+    "All six successful derived results reproduce, including exact HTML text and image dimensions. Ten navigation-link values differ only in whether an empty trailing fragment marker is retained by the current URL-joining runtime. Text, image references and substantive links agree; the frozen metadata was not edited.",
+    "The institutional archive record, requested/final replay URL, body archive timestamp and retained bytes agree. The downloaded HTML includes archive modifications and external resource references; it is later outcome evidence, never a pre-cutoff inference source.",
+    "The reasons establish factual impossibility for a conveyed total-price proposition. They do not establish numerical falsity of every printed base amount or a separately stated saving. Exact source wording, qualifications and display context must still justify the target.",
+    "The reasons link 28 annexure image elements, with none of their binary assets recovered. Sampled archive asset requests failed, sampled live asset requests failed, and one exact asset archive lookup was empty; this does not prove all possible copies are unavailable.",
+    "The earlier filing has 164 consecutive provider text lines covering the provider-reported eight pages, but the example pages contribute headings rather than recovered images. No raw PDF or successful screenshot is available, so full annexure inspection is not claimed.",
+    "The illustrative image is bound to the largest listed srcset asset of a retained later article and has been visually inspected. Its visible asterisk does not resolve the qualifications; no original date, permalink or full surrounding platform context is visible. It is a different example from the prior lead and cannot be substituted or backdated.",
+    "The later article publication label, asset upload path and current response metadata do not establish historical image bytes or a pre-cutoff original. Absence of visible fee information within this crop does not establish its absence from the complete original.",
+    "The institutional bytes support separate formal-order and reasons-publication dates. Earlier public pleadings and descriptions require evidence-level classification against the exact target; they neither automatically defeat nor satisfy the first-establishment gate. Earlier regulator contact is not shown to be public establishment.",
+    "No-admission follows from missing original identity/version/visual context, exact claim-to-finding binding and material chronology. It does not require an impossible proof of universal absence or a presumption that every conveyed statement is incapable of factual falsity."
+  ],
+  "route_retirement_and_reactivation": {
+    "current_attempted_routes": "Retire identical failed or empty mirror, archive-asset, live-asset, raw-document, screenshot and exact-wording routes; repeating them without new evidence is not substantive progress.",
+    "recoverable_new_information": "Reactivate only for a concrete accessible institutional annexure copy or identified dated original post/capture that can bind the exact advertisement and qualifications. A normal institutional browser is a conditional route only after the previously unavailable environment becomes usable.",
+    "scope_of_retirement": "Operational retirement of the current attempted routes, not proof that every source is exhausted or the family can never qualify. Do not substitute another illustrative example."
+  },
+  "hashes": {
+    "source_manifest_sha256": "9dcfca23cd09d10a4ff3b30e8ac5ce2b7a610cbf03ec35a28d450b3f8d89e1bf",
+    "source_status_sha256": "1a7ae4fab5b2016083e2107af24bd33a0c2bb596b8e2eb7accb0509758afa1c6",
+    "preregistration_sha256": "dfd80fdefc7f9dce923e89d215f0addb2dd4cee7637f73511c66b74fdeb7318d",
+    "operation_index_sha256": "777debd400255b465f81a74b645bd4c36d5923af96ee363d85fefec17e12bbda",
+    "return_hashes_sha256": "748d959e9fccfae3213685e7818bafd298ed32d880113e6a61a789c0188448c3",
+    "source_evidence_review_sha256": "68eeacf70000569962866feaf984b4403dc466b3ecdf93efb3aa0d4c42b0f1b4",
+    "source_preservation_sha256": "0a3e9490737df5766b2bb418a4fd784647bc0823e5d7ebc93177a376b9edc0ba",
+    "admission_interpretation_sha256": "bbc54a921e8967621f3ca9e3c8ef3f3941ce24a532db8abae4d47d93bd5acf15",
+    "recovery_feedback_sha256": "88613f1d39fb649ec0c9cd1c50d7d17c35dce2921031e2ec92a64e023e588945",
+    "institutional_reasons_body_sha256": "51856abedffd2c98058cfc85a0c4d9765abc33980f05bc44c896fda280f411ab",
+    "institutional_reasons_text_sha256": "edd99a6adbfcda4aeb767d8c6952b9f706c7ce4d8e7dd26b7e67eff0aac678df",
+    "illustrative_image_sha256": "7b41561adc05cc629d6cccba90fb8ea289be4c9be1c77b6af964c154dca0b19c",
+    "image_provenance_article_sha256": "309d5bf84637cbf6cc3a4338c595c2d11f32a6a84836249536d2d30ff115eaba",
+    "earlier_filing_provider_record_sha256": "45889735127fa746abef7b4b4c417e8b8a4fb9ca1642f27c9de3523deb61866d",
+    "reviewed_control_input_sha256": "5ed4f7b8dc7d657ab805c811fa4c0c6653946b72a6dca7808d018c9e8013fd0c",
+    "reviewed_control_gold_sha256": "0b861d55577c64be0c8f2454a33e705b8d5ae001eb812ce0383acb59ea3dbc62",
+    "independent_review_sha256": "c709629457f39fa67b58ca4d030b1fecee938e8ac9bfd288e870e7044df30f43"
+  },
+  "prior_manifest_checks": [
+    {
+      "manifest_sha256": "5adfa46888ae08c9e3cb3ce14e8f6aa6126c347ab45cf7e02ae5dfa4831cc0c7",
+      "files_checked": 50,
+      "mismatches": 0
+    },
+    {
+      "manifest_sha256": "b189b213d386370cb3ad5e9a304e93f452a954ef8a15d5c23a30e35d1e9777b0",
+      "files_checked": 18,
+      "mismatches": 0
+    },
+    {
+      "manifest_sha256": "ac047f55ea25e3fbd4b9f60be1610bf6baaafa55b75a3468d67b180ee071c52d",
+      "files_checked": 25,
+      "mismatches": 0
+    },
+    {
+      "manifest_sha256": "12bf6da8591db4014708a3b1ae6198e813025d5003e3a163020ede4598ef305c",
+      "files_checked": 18,
+      "mismatches": 0
+    },
+    {
+      "manifest_sha256": "402d3a089282c101a146203d57171de578922f985904207ce4d176d07f323240",
+      "files_checked": 61,
+      "mismatches": 0
+    },
+    {
+      "manifest_sha256": "f926da674e7949e8db60f3f04af8cff375a15028c02d5fd813f31be50f2f1310",
+      "files_checked": 3,
+      "mismatches": 0
+    }
+  ]
+}

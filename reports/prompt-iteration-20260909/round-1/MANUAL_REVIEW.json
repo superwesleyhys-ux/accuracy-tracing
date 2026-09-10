@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-09T04:33:19.835835+00:00",
+  "review_type": "prespecified independent manual candidate-1 output and check-quality review",
+  "scope": {
+    "case_ids": [
+      "h05",
+      "h06"
+    ],
+    "event_families": 1,
+    "exposed_development_only": true,
+    "actual_outputs_reviewed": 21,
+    "research_outputs_reviewed": 9,
+    "harness_formal_outputs_reviewed": 10,
+    "direct_outputs_reviewed": 2,
+    "new_model_calls": 0,
+    "network_calls": 0,
+    "biological_sources_inspected": false,
+    "frozen_files_or_scores_changed": false
+  },
+  "artifact_sha256": {
+    "experiments/prompt-iteration-20260909/round-1/results/SUMMARY.json": "f68ee5fbc82852837235d64c521be8e03e065ecf367275b9a534c5310aa44bb5",
+    "experiments/prompt-iteration-20260909/round-1/results/SANITIZED_RECEIPTS.json": "60bda530826239cc80ec2c9bfab6af7e11dc97efc04315dbaf7ec5d3ca2d7c51",
+    "experiments/prompt-iteration-20260909/round-1/results/manifest.json": "a589f4a3de10cfc9fca112862445717cd0778da0c7764cb6d7082560a5e5602e",
+    "experiments/prompt-iteration-20260909/round-1/results/registration.json": "8484b4ba25dc41accf2246a9c00dcde60e3124b4960766601f01cb1db16a0d0b",
+    "experiments/prompt-iteration-20260909/round-1/results/worker-corpus.json": "425b08099402de9492e31760a8c4dce27d78cabc366b12d07ab1ab3a3f3f68e0",
+    "experiments/prompt-iteration-20260909/round-1/results/protocol.md": "a71b5bb15b7976973136a100091e656f1cdeff51cfe2a4e55b258641f3db1fc6",
+    "experiments/prompt-iteration-20260909/round-1/results/plan.json": "c79212fc41aae7667f82df0f544d562e2de536a15111779380d6735160873d43",
+    "experiments/accuracy-first-20260909/diagnostic/results/SUMMARY.json": "712f1774d25439a29e4a7244070cb4e7f248186a1da7dba6c5f4743fa6f42a42",
+    "experiments/accuracy-first-20260909/diagnostic/results/manifest.json": "c63985664c849e5c453fe42aa60f23d577681af7be580874446109a4e1fcfc32",
+    "experiments/accuracy-first-20260909/diagnostic/results/worker-corpus.json": "425b08099402de9492e31760a8c4dce27d78cabc366b12d07ab1ab3a3f3f68e0"
+  },
+  "guidance_request_counts": {
+    "applied": 10,
+    "unchanged": 11
+  },
+  "primary_outcomes": {
+    "candidate": [
+      {
+        "id": "h05",
+        "condition": "direct",
+        "observed": "unresolved",
+        "valid": true,
+        "error_count": 0,
+        "logical_calls": 1
+      },
+      {
+        "id": "h05",
+        "condition": "news_tracing",
+        "observed": "unresolved",
+        "valid": true,
+        "error_count": 0,
+        "logical_calls": 11
+      },
+      {
+        "id": "h06",
+        "condition": "news_tracing",
+        "observed": "supported",
+        "valid": true,
+        "error_count": 0,
+        "logical_calls": 8
+      },
+      {
+        "id": "h06",
+        "condition": "direct",
+        "observed": "supported",
+        "valid": true,
+        "error_count": 0,
+        "logical_calls": 1
+      }
+    ],
+    "previous_full_evidence_diagnostic": [
+      {
+        "id": "h05",
+        "condition": "direct",
+        "observed": "unresolved",
+        "valid": true,
+        "error_count": 0,
+        "logical_calls": 1
+      },
+      {
+        "id": "h05",
+        "condition": "news_tracing",
+        "observed": "unresolved",
+        "valid": true,
+        "error_count": 0,
+        "logical_calls": 11
+      },
+      {
+        "id": "h06",
+        "condition": "news_tracing",
+        "observed": "supported",
+        "valid": true,
+        "error_count": 0,
+        "logical_calls": 8
+      },
+      {
+        "id": "h06",
+        "condition": "direct",
+        "observed": "supported",
+        "valid": true,
+        "error_count": 0,
+        "logical_calls": 1
+      }
+    ],
+    "all_verdicts_and_validity_unchanged": true,
+    "called_later_false_claim_false_each_arm": 0,
+    "grounded_cutoff_matches_each_arm": "2/2"
+  },
+  "observed_check_counts": {
+    "guided_formal_outputs": 10,
+    "outputs_preserving_target_scope": 10,
+    "formal_outputs_recording_no_counterexample_found": 10,
+    "numerical_calculations_with_sourced_operands_and_evaluated_result": 0,
+    "h05_outputs_explicitly_marking_reconstruction_unexecutable": 5,
+    "h06_outputs_explicitly_rejecting_cross_metal_sum_to_100_requirement": 4,
+    "final_rationales_with_a_confirmed_overbroad_unbound_explanation": 1,
+    "these_are_manual_process_counts_not_accuracy_metrics": true
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "category": "observable_process_change",
+      "case_id": "h05",
+      "finding": "Compared with the previous run, guided outputs explicitly report the inspected target scope, no observed counterexample, compatibility of derived quantities with the stated analysis, and missing numerical inputs. The final answer quotes a symbolic definition in addition to a procedure statement.",
+      "limit": "No supplied-operand calculation is executed and no exact measurement-provenance exception is demonstrated. The prior run already retained the correct unresolved verdict and mentioned calculated quantities."
+    },
+    {
+      "id": "F2",
+      "category": "correct_dimension_distinction",
+      "case_id": "h06",
+      "finding": "Four formal outputs explicitly avoid treating the four metal-specific percentages as a partition requiring a 100% sum. The denominator populations differ by metal. Attribution remains supported without authenticating measurements.",
+      "limit": "This is a qualitative dimension check, not an executed numerical calculation, and the previous run already supported the attribution."
+    },
+    {
+      "id": "F3",
+      "category": "unsupported_explanatory_generalization",
+      "case_id": "h06",
+      "response": "08-verify.response.json",
+      "finding": "The final rationale broadly characterizes the body’s different percentages as calculated metal-to-organic-carbon ratios without naming or quoting the purported comparison. The admitted body also contains removal-rate and particle-size-distribution percentages.",
+      "affected_endpoint": "Secondary rationale/check quality only; the exact final abstract citation and supported attribution verdict remain valid under unchanged scoring.",
+      "recommendation": "Require every claimed discrepancy or benign explanation to identify the exact compared passages and quantities, their units, denominator/category and time/stage. If no specific competing passage is identified, omit a broad explanatory classification."
+    },
+    {
+      "id": "F4",
+      "category": "evidence_limit",
+      "case_id": "h05",
+      "finding": "No executable, scoped contradiction to the universal actual-provenance claim was demonstrated in the admitted text. The absent sample-linked records and table/figure operands remain unavailable.",
+      "limit": "The quoted symbolic definition can be read as notation requiring clarification; it is not authentication of the observations or a demonstrated fabrication. More wording cannot supply absent primary records or create grounded cutoff-score headroom."
+    }
+  ],
+  "arithmetic_review": {
+    "executed_model_calculations": [],
+    "fabricated_numerical_operands_or_calculation_results_observed": false,
+    "unit_conversion_executed": false,
+    "rounding_explanation_tested_with_operands": false,
+    "same_metal_denominator_partition_assumed": false,
+    "symbolic_definition_quoted_but_not_independently_established_as_authentic_measurements": true,
+    "negative_scope_statement": "This review does not prove that every possible internal consistency check was exhausted."
+  },
+  "next_hypothesis": {
+    "supported_by_actual_failure": "F3 only",
+    "scope": "Bound explanations to exact compared evidence and dimensions, preserving all Candidate 1 limits.",
+    "expected_endpoint": "Less unsupported explanatory generalization, not a fabricated-data detection gain.",
+    "accuracy_ceiling": "The fixed gold already gives both arms 2/2 cutoff agreement. Changing unresolved to contradicted without independently established cutoff evidence is not a win."
+  },
+  "limits": [
+    "Single exposed event family, two cases and fresh stochastic realizations cannot establish general accuracy or superiority.",
+    "Both actual arms and the previous diagnostic retain all four successful outcomes and unchanged labels.",
+    "The current source packet does not supply an executable contradiction proving the authenticity target false; further phrasing cannot replace missing evidence.",
+    "No original score or gold was revised after observing responses.",
+    "Exact quotes do not automatically validate every sentence in a rationale.",
+    "No explicit later fabrication finding was observed in the reviewed responses; latent training memory cannot be ruled out.",
+    "Manual process observations are separate from the frozen scorer and were not judged by another model."
+  ],
+  "private_manual_sha256": "6c7f9d7e5e24a8c3968a0f1bc4256300488c40e57a25c3f366bc455c2900e127"
+}

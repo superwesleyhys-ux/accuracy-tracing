@@ -1,0 +1,19 @@
+{
+  "registered_at": "2026-09-08T23:51:07.230270+00:00",
+  "files": {
+    "PREFLIGHT.json": "fc9255761f4488186801bab2cdba6310ea53bcaf1a542586878ac3d4a1f2da27",
+    "PROTOCOL.md": "4a5516f45192fc37c73b8b62e970f7908ee77a098f55348098de014956fdd021",
+    "REGISTRATION.json": "a97be7da95f33160d9b4d3593a9ba4693c73bbc14fdceda8b70970f9a4ecc4a2",
+    "TRANSPORT_PREFLIGHT.json": "f3a87c931b5197d6d109a8de90873521135332007f9a7b7285944f3b882e4d58",
+    "corpus.json": "b5ad5c900145a7a5b208fe8752c1051119d2be18bfa45ececd4d025f6dcf2826",
+    "driver.py": "e20a8ff17ec1d33fbaec4f44635f50c99b67c223f6884e0d3df4a6d9e9795f09",
+    "gold.json": "b2b10af8b6c3018088ead31a5b0ab91f91f6c6e000903f0cf67c5679b30d328a",
+    "gold_review.json": "5761361f1cbfcd69e3a67b7b4444bb93af2643ebe20bbfc568d8d80a4c71273c",
+    "helper.py": "f5524ee1a92bb5be07d8148477e416d6a11db2ab82cf41ef4ffbf116649e771f",
+    "input_review.json": "042e22e24598aaed460095cbe89eeeb7e5721a93976ae82f31cbed8e00f02f8d",
+    "scorer.py": "b6ea4a6183d1502825de4e2cbe7bfd4a097ab2dc7949f9ccfce77e1e8ca3600e"
+  },
+  "unit_tests_passed": 222,
+  "transport_probe_outside_benchmark": true,
+  "historical_model_calls_before_registration": 0
+}

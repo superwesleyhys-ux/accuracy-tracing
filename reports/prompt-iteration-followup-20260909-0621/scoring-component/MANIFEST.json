@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-09T06:29:49.080722+00:00",
+  "status": "independently_reviewed_offline_component_only",
+  "files_sha256": {
+    "INDEPENDENT-REVIEW.md": "f3aa67bbff84c5f3faa4f4865b6562aa80df84d172186f05243fcf67005a44da",
+    "INDEPENDENT-TEST-OUTPUT.txt": "db5fb470bc283f1c4ed3e9c20015e5a77f93e745b05dc03c13d7ce477eb0ba0f",
+    "INDEPENDENT-VALIDATION.json": "ad7adefaeb3b0cf31f1fc237bd857a7e07ffd966326eccb778040617fc12c931",
+    "README.md": "ff2301c90771f9844cc4165008d96f6062f82d5b06f41e46cfd69cd500e03cc8",
+    "VALIDATION.json": "532c39d7f665d4e3a944885b3edecc9700665666bb7570590dc80e136c315605",
+    "independent_checks.py": "ddc2aaa9457f01a3c27b6e3c2b8b3b67d70168e4c2576d50635308a8f484a203",
+    "scoring.py": "924eef501a34831a74a9ff1aa72a2b6d99f1e6bffcab7b03c421f37d32e74ca4",
+    "test_scoring.py": "36304fde522844dd8915de5854ae05301a35df4b4d46b1f5acef96d3683b8e2b"
+  },
+  "real_benchmark_model_calls": 0,
+  "runner_integrated": false,
+  "accuracy_goal_met": false
+}

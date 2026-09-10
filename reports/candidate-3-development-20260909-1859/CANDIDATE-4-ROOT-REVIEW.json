@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-09-09T19:23:02.543546+00:00",
+  "status": "source_blind_proposal_reviewed_for_offline_design_only",
+  "proposal_sha256": "14c6ecdcd4030efa280dc178c8978711e0d7bde1832705d6a6c6349892835aba",
+  "suffix_chars": 2010,
+  "suffix_sha256": "c80c6ea61f0a811093324f3b8a11588956d52e327e6e7ca5f0aa7a1918f69c78",
+  "generic_failure_source": "private/candidate-3-dev-1859-independent-review/SAFE-STATUS.json",
+  "generic_failure_source_sha256": "b0c948e6cfc88ed273cd88ac6fa090e829a353b3cdcc3c6a735f5e3fdbb49ff4",
+  "root_read_private_source_or_gold_or_model_prose": false,
+  "implemented": false,
+  "registered": false,
+  "model_tested": false,
+  "production_installed": false,
+  "constraints": [
+    "One evidence-role warrant hypothesis, no case-specific rule or source identity.",
+    "Independently freeze synthetic semantic contrasts and rubric before inference; a new design is required for arbitrary fixture counts and three arms.",
+    "Use a fresh direct arm and unchanged Candidate3 comparator when assessing Candidate4, with fixed balanced ordering and full failure denominators.",
+    "Require an actual reduction of audited role/target errors without control regressions. If both candidates already pass all contrasts, a ceiling result does not establish benefit or justify another unchanged exposed-pair rerun.",
+    "Do not conflate exact citations with the adequacy of an observation or a claimed authentication.",
+    "Retain adequate single first-hand, constitutive, attribution and derivation controls; no missing evidence to false or universal corroboration requirement.",
+    "No broader accuracy claim from synthetic or reused real cases. Additional unused event families and independent confirmation are still required.",
+    "If there is no distinguishing historical evidence, prompt changes cannot establish unavailable later falsity."
+  ]
+}

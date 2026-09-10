@@ -1,0 +1,13 @@
+{
+  "policy_id": "candidate-5-independent-full-pool-challenge",
+  "previous_behavior": "C3 research/provenance and preliminary verification were retained as the preliminary result.",
+  "new_behavior": "A prior-verdict-blind full-canonical-pool challenger records evidence-grounded objections; a separate adjudicator explicitly resolves them against the full pool and preliminary answer.",
+  "complete_pool_existed_upstream_previously": true,
+  "automatic_falsehood_or_forced_objection": false,
+  "baseline_changed": false,
+  "unchanged_policy_repeat_allowed": false,
+  "one_shot_guard_spent": true,
+  "next_policy_selected": false,
+  "policy_change_required_before_next_model_round": true,
+  "same_pipeline_diagnostic_not_independent_comparison": true
+}

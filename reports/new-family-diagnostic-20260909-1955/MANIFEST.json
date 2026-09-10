@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-09-10T02:29:37.377647+00:00",
+  "scope": "source-free local report; raw sources, model prose, later per-case labels and diagnostic streams remain private",
+  "files": {
+    "INTEGRITY-REVIEW.json": "0e632d7c248c57e0e87ad8214654dc769c9d95a9ff9e21484c71ff2bef4e0c04",
+    "JOIN-SAFE-STATUS.json": "de1fbe465780abf8babfbbb174f256a9ceea9de5c9115e4d32556643b8ca0ab9",
+    "README.md": "d7815056e6c5181c587e27e29ce5acc93d04af19a4cc30093df65fccf8d1b54d",
+    "RECEIPTS.json": "b35b17555a4801fa2b6eb4bc16b01045d1bdcfe7398c2a533fee5fcfc71a5cbe",
+    "SEMANTIC-REVIEW.json": "1627e88be68ffc87a7244a19b08bdd776d2888a7f0ea48b09bdd21d62428cf4d",
+    "SUMMARY.json": "c8ed74b7f013848d54bd8c103c58bdc476b9474d8c9fe82ac04459a63d13eb6b"
+  },
+  "original_summary_sha256": "cf47a01a5dc6908221f2acc31187fde1adaf0f2f937054d58d92f85b7b17606d",
+  "actual_request_audit_sha256": "6b7e200eee0f1a8fa14761d325a665e9562656ad8423b41eb27c1a3a3180318b",
+  "registration_sha256": "2d6a674b124e8e86715c9d277abe8b5a49984f37e340c78b804c0ebcdd2d9812"
+}
