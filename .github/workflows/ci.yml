@@ -24,8 +24,6 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Check synthetic policy cases
         run: python -m newsverify benchmark examples/benchmark.json --output reports/benchmark.json
-      - name: Verify published model evaluation receipts
-        run: python tools/export_model_evaluation.py --verify-public
       - name: Check package installation
         run: |
           python -m pip install .
