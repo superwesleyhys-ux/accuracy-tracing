@@ -1,0 +1,161 @@
+{
+  "benchmark": "same-task-historical-holdout-v1",
+  "cutoff": "2024-12-31T23:59:59Z",
+  "audit_date": "2026-09-11",
+  "packet_rule": "Only public_packet is sent to the model. Source receipts are audit metadata.",
+  "cases": [
+    {
+      "id": "h01",
+      "public_packet": {
+        "case_id": "h01",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2021, "field": "epithelial repair biology", "evidence_types": ["cell assays", "mouse disease model", "microscopy"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2021-11-12T00:00:00Z", "kind": "study_summary", "text": "The paper reports that a short physiological peptide promotes epithelial-cell migration and barrier repair and reduces disease severity in a mouse inflammation model."},
+          {"id": "p002", "available_at": "2021-11-12T00:00:00Z", "kind": "methods", "text": "The experiments combine cultured epithelial cells, imaging and staining assays, and chemically induced colitis in mice; representative tissue and cell images support several reported effects."},
+          {"id": "p003", "available_at": "2021-11-12T00:00:00Z", "kind": "data_availability", "text": "The publication states that the data needed to evaluate its conclusions are in the article or supplementary materials; the supplied record contains no independently archived raw image set or laboratory log."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "cutoff_history", "text": "The supplied pre-cutoff record contains no correction, expression of concern, documented image anomaly, institutional investigation, or independent authentication of the underlying image provenance."}
+        ]
+      },
+      "source_receipts": [
+        {"role": "original", "title": "Discovery of anti-inflammatory physiological peptides that promote tissue repair by reinforcing epithelial barrier formation", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8597994/"},
+        {"role": "later_official_outcome", "title": "Kyoto University life-sciences investigation summary", "url": "https://www.kyoto-u.ac.jp/sites/default/files/inline-files/03-seimei-8b5fc14704183d426abe58a80662c547.pdf"}
+      ]
+    },
+    {
+      "id": "h02",
+      "public_packet": {
+        "case_id": "h02",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2005, "field": "structural drug design", "evidence_types": ["X-ray crystallography", "structure refinement"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2005-12-01T00:00:00Z", "kind": "study_summary", "text": "The paper reports an atomic-resolution structure of a drug-resistant viral enzyme in an unusually open conformation and discusses the structure as a drug-design target."},
+          {"id": "p002", "available_at": "2005-12-01T00:00:00Z", "kind": "methods", "text": "The paper gives crystallographic collection and refinement statistics, including resolution, reflection counts, completeness, symmetry agreement, and model quality."},
+          {"id": "p003", "available_at": "2005-12-01T00:00:00Z", "kind": "data_availability", "text": "The atomic coordinates were deposited in the Protein Data Bank under a stable accession, allowing independent inspection of the reported structure."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "cutoff_history", "text": "The supplied pre-cutoff record contains no correction, retraction, documented image or data anomaly, or institutional integrity finding concerning this paper."}
+        ]
+      },
+      "source_receipts": [
+        {"role": "original", "title": "Wide-open 1.3 A structure of a multidrug-resistant HIV-1 protease as a drug target", "url": "https://pubmed.ncbi.nlm.nih.gov/16338417/"},
+        {"role": "data_record", "title": "Protein Data Bank accession 1TW7", "url": "https://www.rcsb.org/structure/1TW7"}
+      ]
+    },
+    {
+      "id": "h03",
+      "public_packet": {
+        "case_id": "h03",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2018, "field": "extracellular-vesicle cell biology", "evidence_types": ["confocal microscopy", "cell uptake assays", "protein analysis"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2018-09-27T00:00:00Z", "kind": "study_summary", "text": "The paper reports that vesicles released after liposome exposure differ in protein expression and enter donor and other cancer-cell lines through different uptake pathways."},
+          {"id": "p002", "available_at": "2018-09-27T00:00:00Z", "kind": "methods", "text": "The evidence includes confocal cell images, inhibitor experiments and protein assays; the relevant imaging panels are described as representative of triplicate experiments."},
+          {"id": "p003", "available_at": "2024-10-25T00:00:00Z", "kind": "author_correction", "text": "A 2024 author correction reports partial overlap between images labeled as different experimental conditions in one main figure and two supplementary figure pairs. It says images from one condition were selected for another condition during figure assembly and supplies replacements."},
+          {"id": "p004", "available_at": "2024-10-25T00:00:00Z", "kind": "auditability", "text": "The correction attributes the problem to figure preparation and states that multiple images existed per condition, but the supplied packet contains no independently archived raw image series linking each replacement to its experimental condition."}
+        ]
+      },
+      "source_receipts": [
+        {"role": "original", "title": "Liposome co-incubation with cancer cells secreted exosomes with different protein expressions and uptake pathways", "url": "https://www.nature.com/articles/s41598-018-32861-w"},
+        {"role": "pre_cutoff_correction", "title": "Author Correction", "url": "https://www.nature.com/articles/s41598-024-76777-0"},
+        {"role": "later_official_outcome", "title": "Tokushima University research-activity investigation summary", "url": "https://www.tokushima-u.ac.jp/fs/4/9/7/3/9/9/_/Reserch_activity_survey_report_summary.pdf"}
+      ]
+    },
+    {
+      "id": "h04",
+      "public_packet": {
+        "case_id": "h04",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2022, "field": "epithelial repair biology", "evidence_types": ["mouse model", "zebrafish model", "transcriptomics", "microscopy"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2022-05-05T00:00:00Z", "kind": "study_summary", "text": "The paper reports that a membrane-channel protein coordinates epithelial repair after tissue injury across mammalian cell, mouse and zebrafish experiments."},
+          {"id": "p002", "available_at": "2022-05-05T00:00:00Z", "kind": "methods", "text": "The study combines genetic perturbation, wound models, live or fixed imaging, barrier measurements and cross-species experiments to test the proposed repair mechanism."},
+          {"id": "p003", "available_at": "2022-05-05T00:00:00Z", "kind": "data_availability", "text": "Sequencing data are deposited in a public expression archive under a stable accession; the paper and supplement provide the other reported data and method details."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "cutoff_history", "text": "The supplied pre-cutoff record contains no correction, expression of concern, documented image anomaly, or institutional integrity finding concerning this paper."}
+        ]
+      },
+      "source_receipts": [
+        {"role": "original", "title": "Pannexin 1 drives efficient epithelial repair after tissue injury", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7612772/"},
+        {"role": "data_record", "title": "Gene Expression Omnibus accession GSE181101", "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE181101"}
+      ]
+    },
+    {
+      "id": "h05",
+      "public_packet": {
+        "case_id": "h05",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2009, "field": "plant photosynthesis", "evidence_types": ["mutant analysis", "immunoblotting", "mass spectrometry", "fluorescence"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2009-11-10T00:00:00Z", "kind": "study_summary", "text": "The paper uses plant mutants and protein-complex analysis to argue that two minor antenna proteins are required for formation and efficient operation of a photosynthetic supercomplex."},
+          {"id": "p002", "available_at": "2009-11-10T00:00:00Z", "kind": "methods", "text": "The results rely on multiple gel and immunoblot panels, mass-spectrometry identification, chlorophyll fluorescence measurements and mutant growth phenotypes."},
+          {"id": "p003", "available_at": "2022-12-15T00:00:00Z", "kind": "public_postpublication_concern", "text": "A public post-publication review comment dated December 2022 raised a specific concern that several published figure panels showed signs consistent with image alteration or reuse."},
+          {"id": "p004", "available_at": "2023-04-30T00:00:00Z", "kind": "author_response_history", "text": "The corresponding author reported the public concern to the institution in 2023. The supplied cutoff packet contains neither a completed independent investigation nor a public raw-data reconciliation."}
+        ]
+      },
+      "source_receipts": [
+        {"role": "original", "title": "Efficient Operation of NAD(P)H Dehydrogenase Requires Supercomplex Formation with Photosystem I via Minor LHCI in Arabidopsis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2798312/"},
+        {"role": "dated_concern_attestation", "title": "Kyoto University science investigation summary, lines 8-12 describe the 2022 public post", "url": "https://www.kyoto-u.ac.jp/sites/default/files/inline-files/02-rigaku-49e061939676292fe9a5667e53a592f1.pdf"},
+        {"role": "later_official_outcome", "title": "Kyoto University science investigation summary", "url": "https://www.kyoto-u.ac.jp/sites/default/files/inline-files/02-rigaku-49e061939676292fe9a5667e53a592f1.pdf"}
+      ]
+    },
+    {
+      "id": "h06",
+      "public_packet": {
+        "case_id": "h06",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2018, "field": "extracellular-vesicle cell biology", "evidence_types": ["confocal microscopy", "flow cytometry", "protein analysis", "tube-formation assay"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2018-08-08T00:00:00Z", "kind": "study_summary", "text": "The paper reports that extracellular vesicles from pancreatic cancer cells are internalized by endothelial cells and increase migration and tube-formation activity."},
+          {"id": "p002", "available_at": "2018-08-08T00:00:00Z", "kind": "methods", "text": "The study combines confocal imaging, flow cytometry, protein blots, pharmacologic inhibition and three-replicate tube-formation measurements."},
+          {"id": "p003", "available_at": "2018-08-08T00:00:00Z", "kind": "data_availability", "text": "The supplementary material includes full-length blot images and additional experimental panels that permit inspection beyond the cropped main figures."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "cutoff_history", "text": "The supplied pre-cutoff record contains no correction, expression of concern, documented image anomaly, or institutional integrity finding concerning this paper."}
+        ]
+      },
+      "source_receipts": [
+        {"role": "original", "title": "Exosomes released from pancreatic cancer cells enhance angiogenic activities via dynamin-dependent endocytosis in endothelial cells in vitro", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6086824/"}
+      ]
+    },
+    {
+      "id": "h07",
+      "public_packet": {
+        "case_id": "h07",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2005, "field": "structural drug design", "evidence_types": ["computational structure analysis", "binding-affinity assay"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2005-12-01T00:00:00Z", "kind": "study_summary", "text": "The paper argues that poorly protected structural packing features can serve as selectivity filters and reports redesign of a kinase inhibitor to improve affinity and selectivity."},
+          {"id": "p002", "available_at": "2006-03-14T00:00:00Z", "kind": "closely_related_retraction", "text": "A closely related paper from the same lead author was retracted in 2006. The notice states that all of its figures and text were also present in this target paper and that the target paper had not been cited in the related submission."},
+          {"id": "p003", "available_at": "2006-09-01T00:00:00Z", "kind": "record_history", "text": "The target paper later added supporting information, but the supplied cutoff packet contains no independent laboratory record authenticating the provenance of the reported affinity measurements."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "cutoff_history", "text": "No completed institutional misconduct finding concerning the target paper is included before the cutoff; the documented related-paper retraction remains the main pre-cutoff integrity signal."}
+        ]
+      },
+      "source_receipts": [
+        {"role": "original", "title": "Incomplete Protein Packing as a Selectivity Filter in Drug Design", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1963458/"},
+        {"role": "pre_cutoff_retraction", "title": "Retraction for Packing defects as selectivity switches for drug-based protein inhibitors", "url": "https://pubmed.ncbi.nlm.nih.gov/16505348/"},
+        {"role": "later_official_outcome", "title": "ORI Case Summary: Fernandez, Ariel", "url": "https://ori.hhs.gov/content/case-summary-fernandez-ariel"}
+      ]
+    },
+    {
+      "id": "h08",
+      "public_packet": {
+        "case_id": "h08",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2009, "field": "plant photosynthesis", "evidence_types": ["plant mutants", "electron microscopy", "spectroscopy", "membrane analysis"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2009-12-01T00:00:00Z", "kind": "study_summary", "text": "The paper reports that phosphorylation of photosynthetic complexes changes the large-scale folding of plant thylakoid membranes and affects functional adaptation to light."},
+          {"id": "p002", "available_at": "2009-12-01T00:00:00Z", "kind": "methods", "text": "The study uses kinase mutants, electron microscopy, spectroscopy and biochemical membrane measurements to compare structural and functional states."},
+          {"id": "p003", "available_at": "2009-12-01T00:00:00Z", "kind": "auditability", "text": "The record describes sample preparation, blinded structural measurements and multiple complementary assays; figures and supplementary material provide the reported comparisons."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "cutoff_history", "text": "The supplied pre-cutoff record contains no correction, expression of concern, documented image anomaly, or institutional integrity finding concerning this paper."}
+        ]
+      },
+      "source_receipts": [
+        {"role": "original", "title": "Phosphorylation of Photosystem II Controls Functional Macroscopic Folding of Photosynthetic Membranes in Arabidopsis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2814517/"}
+      ]
+    }
+  ]
+}

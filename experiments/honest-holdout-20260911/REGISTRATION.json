@@ -1,0 +1,99 @@
+{
+  "benchmark": "same-task-historical-holdout-v1",
+  "registered_at": "2026-09-11T20:47:52.202582+00:00",
+  "cutoff": "2024-12-31T23:59:59Z",
+  "model": "gpt-5.4-mini",
+  "reasoning_effort": "low",
+  "tunnel": "local",
+  "retries": 0,
+  "case_order": [
+    "h01",
+    "h02",
+    "h03",
+    "h04",
+    "h05",
+    "h06",
+    "h07",
+    "h08"
+  ],
+  "schedule": [
+    {
+      "case_id": "h01",
+      "arm": "direct"
+    },
+    {
+      "case_id": "h01",
+      "arm": "harness"
+    },
+    {
+      "case_id": "h02",
+      "arm": "harness"
+    },
+    {
+      "case_id": "h02",
+      "arm": "direct"
+    },
+    {
+      "case_id": "h03",
+      "arm": "direct"
+    },
+    {
+      "case_id": "h03",
+      "arm": "harness"
+    },
+    {
+      "case_id": "h04",
+      "arm": "harness"
+    },
+    {
+      "case_id": "h04",
+      "arm": "direct"
+    },
+    {
+      "case_id": "h05",
+      "arm": "direct"
+    },
+    {
+      "case_id": "h05",
+      "arm": "harness"
+    },
+    {
+      "case_id": "h06",
+      "arm": "harness"
+    },
+    {
+      "case_id": "h06",
+      "arm": "direct"
+    },
+    {
+      "case_id": "h07",
+      "arm": "direct"
+    },
+    {
+      "case_id": "h07",
+      "arm": "harness"
+    },
+    {
+      "case_id": "h08",
+      "arm": "harness"
+    },
+    {
+      "case_id": "h08",
+      "arm": "direct"
+    }
+  ],
+  "primary_metric": "balanced_accuracy",
+  "success_criteria": {
+    "harness_strictly_exceeds_direct_balanced_accuracy": true,
+    "all_16_calls_completed_with_valid_outputs": true,
+    "harness_tokens_no_more_than_2x_direct": true
+  },
+  "sealed_gold_sha256": "c54b5ab52e8226642729f01f6bfbdce314fa2b0678b7af6d7ff9e11ffb4ace4e",
+  "frozen_sha256": {
+    "corpus.json": "8d0e3ce2ba06a9653d9697085ce12a9968f9f38a0dad26e9cc5c0c73137ff7fd",
+    "policies.py": "e248f664b40c45f8d4dcbfbc121f28fc6c892a58417a394e7bdcee82f7365415",
+    "run_test.py": "15288da9482b527fb0b41dcaa6361805d30cb7662e5b02459c54c4524a113388",
+    "summarize_test.py": "28c49457add432b8cf8abdef50c4990ae9146d3a64a9200989074f3f7caad52c",
+    "PROTOCOL.md": "5f155acb9f9bd8d97230c0e3d3cc6736919598ea9c0d21a3a85d388864e74c20"
+  }
+}
