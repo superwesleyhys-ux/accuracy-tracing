@@ -95,7 +95,9 @@ def exact_span(version_id, quote, materials):
     if len(matches) != 1:
         raise ValueError("Model quote must match exactly one original passage")
     m = matches[0]
-    return Span(version_id, m.start(), m.end(), content[m.start():m.end()])
+    # Preserve the model's submitted quote in the receipt; offsets still point
+    # to the unique source span and the validator accepts normalized whitespace.
+    return Span(version_id, m.start(), m.end(), quote)
 
 
 class ModelDecomposer:
