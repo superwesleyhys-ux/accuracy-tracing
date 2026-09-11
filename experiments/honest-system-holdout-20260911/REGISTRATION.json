@@ -1,0 +1,106 @@
+{
+  "benchmark": "source-tracing-system-holdout-v2",
+  "registered_at": "2026-09-11T21:50:43.668865+00:00",
+  "cutoff": "2024-12-31T23:59:59Z",
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "low",
+  "tunnel": "local",
+  "retries": 0,
+  "comparison_type": "system_original_record_vs_same_record_plus_factcircuit_source_trace",
+  "case_order": [
+    "v201",
+    "v202",
+    "v203",
+    "v204",
+    "v205",
+    "v206",
+    "v207",
+    "v208"
+  ],
+  "schedule": [
+    {
+      "case_id": "v201",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v201",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v202",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v202",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v203",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v203",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v204",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v204",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v205",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v205",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v206",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v206",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v207",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v207",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v208",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v208",
+      "arm": "direct"
+    }
+  ],
+  "primary_metric": "balanced_accuracy",
+  "success_criteria": {
+    "harness_strictly_exceeds_direct_balanced_accuracy": true,
+    "all_16_calls_completed_with_valid_outputs": true,
+    "harness_tokens_no_more_than_2x_direct": true
+  },
+  "sealed_gold_sha256": "0d8c33d2feeea03146d55259fc62c647609544ce165387d38992ad9ced5db68c",
+  "frozen_sha256": {
+    "corpus.json": "89ab4103c788027b6e6f94e638f8c2f9addc1e06492d0e7bd45a4b9fdb5dacee",
+    "policies.py": "d75dec8eed79df3cb26e622232fec5dd9d0bb77ca0ba51cad6a836df2717558e",
+    "run_test.py": "ca196eff439c360c9c874ddf5d23bc19559c5b40fe472a55f1be7454001af975",
+    "summarize_test.py": "0975e16d3e88337841fcb933c5fd47d627310206eedd8152993d8cb5ae735f40",
+    "PROTOCOL.md": "ac59376762bfe09f3253c9a16efdd46865c21cfb2d0506bf87c3f028caca68aa"
+  },
+  "development_basis": {
+    "prior_holdout": "reports/honest-holdout-20260911/scored-v2",
+    "prior_result": "direct 87.5%; harness 75.0%",
+    "policy_change": "Treat a specific cutoff-eligible public cross-condition image trace as sufficient for elevated follow-up, while distinguishing metadata corrections and scientific disagreement.",
+    "new_cases_overlap_prior_holdout": false
+  }
+}

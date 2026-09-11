@@ -1,0 +1,279 @@
+{
+  "benchmark": "source-tracing-system-holdout-v2",
+  "cutoff": "2024-12-31T23:59:59Z",
+  "audit_date": "2026-09-11",
+  "packet_rule": "The direct arm receives direct_packet. The harness arm receives harness_packet, which adds only cutoff-eligible trace findings. Source receipts are never sent to either model.",
+  "cases": [
+    {
+      "id": "v201",
+      "direct_packet": {
+        "case_id": "v201",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2020, "field": "bladder-cancer molecular pathology", "evidence_types": ["tumor sequencing", "copy-number assay", "immunoblotting", "tissue imaging"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2020-11-01T00:00:00Z", "kind": "study_summary", "text": "The paper reports that arsenic exposure is associated with a distinct mutation, copy-number, and expression profile of a lipid-kinase pathway in primary bladder tumors."},
+          {"id": "p002", "available_at": "2020-11-01T00:00:00Z", "kind": "methods", "text": "The study compares arsenic-high and arsenic-low patient groups using exon sequencing, locus amplification assays, RNA and protein expression, pathway-marker imaging, and survival analysis."},
+          {"id": "p003", "available_at": "2020-11-01T00:00:00Z", "kind": "reported_result", "text": "Several image panels are used to represent different molecular targets or experimental groups alongside quantitative summaries."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The original-record packet does not contain a durable archive of uncropped source images or a completed integrity investigation."}
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v201",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2020, "field": "bladder-cancer molecular pathology", "evidence_types": ["tumor sequencing", "copy-number assay", "immunoblotting", "tissue imaging"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2020-11-01T00:00:00Z", "kind": "study_summary", "text": "The paper reports that arsenic exposure is associated with a distinct mutation, copy-number, and expression profile of a lipid-kinase pathway in primary bladder tumors."},
+          {"id": "p002", "available_at": "2020-11-01T00:00:00Z", "kind": "methods", "text": "The study compares arsenic-high and arsenic-low patient groups using exon sequencing, locus amplification assays, RNA and protein expression, pathway-marker imaging, and survival analysis."},
+          {"id": "p003", "available_at": "2020-11-01T00:00:00Z", "kind": "reported_result", "text": "Several image panels are used to represent different molecular targets or experimental groups alongside quantitative summaries."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The original-record packet does not contain a durable archive of uncropped source images or a completed integrity investigation."},
+          {"id": "p005", "available_at": "2023-10-28T14:55:25Z", "kind": "dated_public_trace", "text": "A public post-publication review mapped one plate to two plates in a different 2023 paper, then mapped a second plate to another plate in that paper; the materials were presented under different experimental descriptions."},
+          {"id": "p006", "available_at": "2024-07-06T00:00:00Z", "kind": "dated_publisher_trace", "text": "Additional public reviews mapped other panels to different molecular targets after rotation, stretching, compression, or color changes. The journal issued an expression of concern about images in two figures before the cutoff; no source-image reconciliation was supplied in the traced record."}
+        ]
+      },
+      "source_receipts": [
+        {"role": "original", "title": "Divergent molecular profile of PIK3CA gene in arsenic-associated bladder carcinoma", "url": "https://pubmed.ncbi.nlm.nih.gov/33400797/"},
+        {"role": "pre_cutoff_trace", "title": "PubPeer record 6CFBA3CD0EC4D09745D4872C6AB850", "url": "https://pubpeer.com/publications/6CFBA3CD0EC4D09745D4872C6AB850"},
+        {"role": "later_outcome", "title": "Retraction to: Divergent molecular profile of PIK3CA gene in arsenic-associated bladder carcinoma", "url": "https://academic.oup.com/mutage/article/40/4/575/8236455"}
+      ]
+    },
+    {
+      "id": "v202",
+      "direct_packet": {
+        "case_id": "v202",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2020, "field": "bladder-cancer molecular pathology", "evidence_types": ["whole-exome sequencing", "transcriptomics", "methylation", "proteomics"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2020-09-25T00:00:00Z", "kind": "study_summary", "text": "The paper integrates genomic, transcriptomic, epigenetic, proteomic, and clinical data from 300 bladder tumors to study response to platinum chemotherapy."},
+          {"id": "p002", "available_at": "2020-09-25T00:00:00Z", "kind": "methods", "text": "The study reports associations between genomic instability, expression subtype, immune markers, and response across neoadjuvant and first-line treatment settings."},
+          {"id": "p003", "available_at": "2020-09-25T00:00:00Z", "kind": "data_availability", "text": "Raw sequencing, array, and methylation data were deposited under four controlled-access study accessions; normalized counts, supplementary tables, reporting summaries, and source-data files were published with the article."},
+          {"id": "p004", "available_at": "2022-04-04T00:00:00Z", "kind": "record_update", "text": "An author correction added an omitted patient-survival field to source-data tables and updated those files."}
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v202",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2020, "field": "bladder-cancer molecular pathology", "evidence_types": ["whole-exome sequencing", "transcriptomics", "methylation", "proteomics"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2020-09-25T00:00:00Z", "kind": "study_summary", "text": "The paper integrates genomic, transcriptomic, epigenetic, proteomic, and clinical data from 300 bladder tumors to study response to platinum chemotherapy."},
+          {"id": "p002", "available_at": "2020-09-25T00:00:00Z", "kind": "methods", "text": "The study reports associations between genomic instability, expression subtype, immune markers, and response across neoadjuvant and first-line treatment settings."},
+          {"id": "p003", "available_at": "2020-09-25T00:00:00Z", "kind": "data_availability", "text": "Raw sequencing, array, and methylation data were deposited under four controlled-access study accessions; normalized counts, supplementary tables, reporting summaries, and source-data files were published with the article."},
+          {"id": "p004", "available_at": "2022-04-04T00:00:00Z", "kind": "record_update", "text": "An author correction added an omitted patient-survival field to source-data tables and updated those files."},
+          {"id": "p005", "available_at": "2021-08-10T00:00:00Z", "kind": "dated_scholarly_trace", "text": "A published methodological critique disputed how two response associations aligned with prior studies and clinical trials; it described the work as an important reference and did not allege image, data, or provenance manipulation."},
+          {"id": "p006", "available_at": "2022-04-04T00:00:00Z", "kind": "trace_resolution", "text": "The correction concerned omitted survival metadata, not altered experimental observations. The updated source-data files and repository accessions remained available for audit."}
+        ]
+      },
+      "source_receipts": [
+        {"role": "original", "title": "Molecular correlates of cisplatin-based chemotherapy response in muscle invasive bladder cancer by integrated multi-omics analysis", "url": "https://www.nature.com/articles/s41467-020-18640-0"},
+        {"role": "pre_cutoff_critique", "title": "Reconciling differences in impact of molecular subtyping on response to cisplatin-based chemotherapy", "url": "https://www.nature.com/articles/s41467-021-24837-8"},
+        {"role": "pre_cutoff_correction", "title": "Author Correction", "url": "https://doi.org/10.1038/s41467-022-29627-4"}
+      ]
+    },
+    {
+      "id": "v203",
+      "direct_packet": {
+        "case_id": "v203",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2017, "field": "osteosarcoma RNA biology", "evidence_types": ["cell assays", "xenografts", "luciferase assay", "microscopy", "immunoblotting"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2017-10-04T00:00:00Z", "kind": "study_summary", "text": "The paper reports that a long noncoding RNA promotes osteosarcoma progression by binding a microRNA and increasing expression of a matrix-remodeling protein."},
+          {"id": "p002", "available_at": "2017-10-04T00:00:00Z", "kind": "methods", "text": "The experiments include knockdown and overexpression, proliferation, migration and invasion assays, reporter assays, protein analysis, patient-tissue measurements, and mouse tumor models."},
+          {"id": "p003", "available_at": "2017-10-04T00:00:00Z", "kind": "reported_result", "text": "Multiple microscopy, colony, invasion, tumor, and protein panels represent separate conditions across the proposed regulatory pathway."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The original-record packet contains no independently archived full image series or completed integrity investigation."}
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v203",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2017, "field": "osteosarcoma RNA biology", "evidence_types": ["cell assays", "xenografts", "luciferase assay", "microscopy", "immunoblotting"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2017-10-04T00:00:00Z", "kind": "study_summary", "text": "The paper reports that a long noncoding RNA promotes osteosarcoma progression by binding a microRNA and increasing expression of a matrix-remodeling protein."},
+          {"id": "p002", "available_at": "2017-10-04T00:00:00Z", "kind": "methods", "text": "The experiments include knockdown and overexpression, proliferation, migration and invasion assays, reporter assays, protein analysis, patient-tissue measurements, and mouse tumor models."},
+          {"id": "p003", "available_at": "2017-10-04T00:00:00Z", "kind": "reported_result", "text": "Multiple microscopy, colony, invasion, tumor, and protein panels represent separate conditions across the proposed regulatory pathway."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The original-record packet contains no independently archived full image series or completed integrity investigation."},
+          {"id": "p005", "available_at": "2021-02-11T00:28:59Z", "kind": "dated_public_trace", "text": "A public post-publication review identified overlapping images within one panel and between two other panels that represented different parts of the study; one overlap involved changed dimensions."},
+          {"id": "p006", "available_at": "2021-02-11T00:39:26Z", "kind": "dated_public_trace", "text": "The same review thread identified another pair of overlapping images after a color change and invited an author explanation. No response or raw-image reconciliation appeared in the cutoff-eligible trace."}
+        ]
+      },
+      "source_receipts": [
+        {"role": "original", "title": "LncRNA ODRUL Contributes to Osteosarcoma Progression through the miR-3182/MMP2 Axis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5628795/"},
+        {"role": "pre_cutoff_trace", "title": "PubPeer record D9519B92998E6AD186E49846F789C4", "url": "https://pubpeer.com/publications/D9519B92998E6AD186E49846F789C4"},
+        {"role": "later_outcome", "title": "Retraction Notice", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12461646/"}
+      ]
+    },
+    {
+      "id": "v204",
+      "direct_packet": {
+        "case_id": "v204",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2019, "field": "osteosarcoma RNA biology", "evidence_types": ["public microarray reanalysis", "survival modeling", "independent validation cohort"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2018-12-14T00:00:00Z", "kind": "study_summary", "text": "The paper develops a nine-long-noncoding-RNA model for osteosarcoma prognosis and evaluates whether its score adds information beyond clinical factors."},
+          {"id": "p002", "available_at": "2018-12-14T00:00:00Z", "kind": "methods", "text": "The analysis uses proportional-hazards modeling, survival curves, receiver-operating-characteristic analysis, and functional enrichment."},
+          {"id": "p003", "available_at": "2018-12-14T00:00:00Z", "kind": "data_availability", "text": "The training data are a public 53-sample expression cohort and the validation data are a separate public 37-sample cohort, each named by a stable repository accession."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The supplied record contains no image-based experimental claims, correction, or specific integrity anomaly."}
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v204",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2019, "field": "osteosarcoma RNA biology", "evidence_types": ["public microarray reanalysis", "survival modeling", "independent validation cohort"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2018-12-14T00:00:00Z", "kind": "study_summary", "text": "The paper develops a nine-long-noncoding-RNA model for osteosarcoma prognosis and evaluates whether its score adds information beyond clinical factors."},
+          {"id": "p002", "available_at": "2018-12-14T00:00:00Z", "kind": "methods", "text": "The analysis uses proportional-hazards modeling, survival curves, receiver-operating-characteristic analysis, and functional enrichment."},
+          {"id": "p003", "available_at": "2018-12-14T00:00:00Z", "kind": "data_availability", "text": "The training data are a public 53-sample expression cohort and the validation data are a separate public 37-sample cohort, each named by a stable repository accession."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The supplied record contains no image-based experimental claims, correction, or specific integrity anomaly."},
+          {"id": "p005", "available_at": "2024-12-31T23:59:59Z", "kind": "trace_result", "text": "The source trace resolved the two expression cohorts to durable repository records and found no cutoff-eligible figure-duplication, relabeling, or provenance allegation tied to the paper."},
+          {"id": "p006", "available_at": "2024-12-31T23:59:59Z", "kind": "independent_check", "text": "The analysis design uses one public cohort for fitting and a different public cohort for validation, so the principal inputs can be independently reanalyzed."}
+        ]
+      },
+      "source_receipts": [
+        {"role": "original", "title": "A risk assessment model for the prognosis of osteosarcoma utilizing differentially expressed lncRNAs", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6323200/"},
+        {"role": "data_record", "title": "GEO accession GSE21257", "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE21257"},
+        {"role": "data_record", "title": "GEO accession GSE39055", "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE39055"}
+      ]
+    },
+    {
+      "id": "v205",
+      "direct_packet": {
+        "case_id": "v205",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2020, "field": "gastric-cancer circular-RNA biology", "evidence_types": ["cell assays", "xenografts", "reporter assay", "microscopy", "immunoblotting"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2020-03-10T00:00:00Z", "kind": "study_summary", "text": "The paper reports that a circular RNA promotes gastric-cancer growth through a microRNA, a keratin target, and a growth-signaling pathway."},
+          {"id": "p002", "available_at": "2020-03-10T00:00:00Z", "kind": "methods", "text": "The experiments include quantitative PCR, colony formation, migration and invasion assays, reporter and immunoprecipitation assays, protein blots, and mouse tumor growth."},
+          {"id": "p003", "available_at": "2020-03-10T00:00:00Z", "kind": "reported_result", "text": "Microscopy and protein panels are used to represent different perturbations and experimental conditions across several figures."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The original-record packet contains no independently archived full image series or completed integrity investigation."}
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v205",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2020, "field": "gastric-cancer circular-RNA biology", "evidence_types": ["cell assays", "xenografts", "reporter assay", "microscopy", "immunoblotting"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2020-03-10T00:00:00Z", "kind": "study_summary", "text": "The paper reports that a circular RNA promotes gastric-cancer growth through a microRNA, a keratin target, and a growth-signaling pathway."},
+          {"id": "p002", "available_at": "2020-03-10T00:00:00Z", "kind": "methods", "text": "The experiments include quantitative PCR, colony formation, migration and invasion assays, reporter and immunoprecipitation assays, protein blots, and mouse tumor growth."},
+          {"id": "p003", "available_at": "2020-03-10T00:00:00Z", "kind": "reported_result", "text": "Microscopy and protein panels are used to represent different perturbations and experimental conditions across several figures."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The original-record packet contains no independently archived full image series or completed integrity investigation."},
+          {"id": "p005", "available_at": "2023-02-11T00:50:56Z", "kind": "dated_public_trace", "text": "A public post-publication review mapped one image to an image in a paper by different authors where it was described differently."},
+          {"id": "p006", "available_at": "2023-02-11T01:04:59Z", "kind": "dated_public_trace", "text": "The same dated thread mapped two within-paper image sets across different figures and described another overlap after a 90-degree rotation. No author response or raw-image reconciliation appeared in the cutoff-eligible record."}
+        ]
+      },
+      "source_receipts": [
+        {"role": "original", "title": "CircPIP5K1A activates KRT80 and PI3K/AKT pathway to promote gastric cancer development through sponging miR-671-5p", "url": "https://pubmed.ncbi.nlm.nih.gov/32169757/"},
+        {"role": "pre_cutoff_trace", "title": "PubPeer record 39AFC3135EA91078125712ACCCA336", "url": "https://pubpeer.com/publications/39AFC3135EA91078125712ACCCA336"},
+        {"role": "later_outcome", "title": "Retraction notice", "url": "https://www.sciencedirect.com/science/article/pii/S0753332225005761"}
+      ]
+    },
+    {
+      "id": "v206",
+      "direct_packet": {
+        "case_id": "v206",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2017, "field": "gastric-cancer circular-RNA biology", "evidence_types": ["circRNA microarray", "quantitative PCR", "clinical samples", "stability assays"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2017-05-15T00:00:00Z", "kind": "study_summary", "text": "The paper profiles circular-RNA expression in gastric tumors and evaluates a downregulated candidate in tissue and gastric-fluid samples as a possible biomarker."},
+          {"id": "p002", "available_at": "2017-05-15T00:00:00Z", "kind": "methods", "text": "The study uses paired tumor and adjacent tissue, a microarray screen, quantitative PCR validation, and freeze-thaw and incubation tests of RNA stability."},
+          {"id": "p003", "available_at": "2017-05-15T00:00:00Z", "kind": "data_availability", "text": "The complete expression profile is deposited in a public repository under a stable accession; clinical associations and validation measurements are reported in the article and supplement."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The supplied record contains no correction, specific image anomaly, or completed integrity investigation."}
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v206",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2017, "field": "gastric-cancer circular-RNA biology", "evidence_types": ["circRNA microarray", "quantitative PCR", "clinical samples", "stability assays"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2017-05-15T00:00:00Z", "kind": "study_summary", "text": "The paper profiles circular-RNA expression in gastric tumors and evaluates a downregulated candidate in tissue and gastric-fluid samples as a possible biomarker."},
+          {"id": "p002", "available_at": "2017-05-15T00:00:00Z", "kind": "methods", "text": "The study uses paired tumor and adjacent tissue, a microarray screen, quantitative PCR validation, and freeze-thaw and incubation tests of RNA stability."},
+          {"id": "p003", "available_at": "2017-05-15T00:00:00Z", "kind": "data_availability", "text": "The complete expression profile is deposited in a public repository under a stable accession; clinical associations and validation measurements are reported in the article and supplement."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The supplied record contains no correction, specific image anomaly, or completed integrity investigation."},
+          {"id": "p005", "available_at": "2024-12-31T23:59:59Z", "kind": "trace_result", "text": "The source trace resolved the microarray to a public record containing the study samples and expression measurements and found no cutoff-eligible allegation of duplicated, rotated, relabeled, or overlapping experimental material."},
+          {"id": "p006", "available_at": "2024-12-31T23:59:59Z", "kind": "independent_check", "text": "The deposited expression matrix permits reanalysis of the discovery comparison independently of the article's plotted summary."}
+        ]
+      },
+      "source_receipts": [
+        {"role": "original", "title": "Global circular RNA expression profile of human gastric cancer and its clinical significance", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5463069/"},
+        {"role": "data_record", "title": "GEO accession GSE89143", "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE89143"}
+      ]
+    },
+    {
+      "id": "v207",
+      "direct_packet": {
+        "case_id": "v207",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2019, "field": "breast-cancer DNA-repair biology", "evidence_types": ["promoter methylation", "cell assays", "immunoblotting", "clinical outcomes"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2018-11-27T00:00:00Z", "kind": "study_summary", "text": "The paper reports that reduced methylation of two mismatch-repair genes is associated with chemotherapy tolerance and prognosis in breast carcinoma."},
+          {"id": "p002", "available_at": "2018-11-27T00:00:00Z", "kind": "methods", "text": "The study combines promoter-methylation measurements, expression and protein assays, chemotherapy-treated breast-cancer cells, and patient survival analysis."},
+          {"id": "p003", "available_at": "2018-11-27T00:00:00Z", "kind": "reported_result", "text": "Protein-band panels represent distinct targets and treatment conditions in several figures."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The original-record packet contains no independently archived uncropped blot set or completed integrity investigation."}
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v207",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2019, "field": "breast-cancer DNA-repair biology", "evidence_types": ["promoter methylation", "cell assays", "immunoblotting", "clinical outcomes"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2018-11-27T00:00:00Z", "kind": "study_summary", "text": "The paper reports that reduced methylation of two mismatch-repair genes is associated with chemotherapy tolerance and prognosis in breast carcinoma."},
+          {"id": "p002", "available_at": "2018-11-27T00:00:00Z", "kind": "methods", "text": "The study combines promoter-methylation measurements, expression and protein assays, chemotherapy-treated breast-cancer cells, and patient survival analysis."},
+          {"id": "p003", "available_at": "2018-11-27T00:00:00Z", "kind": "reported_result", "text": "Protein-band panels represent distinct targets and treatment conditions in several figures."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The original-record packet contains no independently archived uncropped blot set or completed integrity investigation."},
+          {"id": "p005", "available_at": "2024-06-08T22:16:02Z", "kind": "dated_public_trace", "text": "A public post-publication review mapped duplicated bands between two panels representing different experimental conditions; the mapped bands were flipped vertically and joined to different surrounding gel regions."},
+          {"id": "p006", "available_at": "2024-06-08T22:16:10Z", "kind": "dated_public_trace", "text": "The same thread mapped a loading-control band panel to panels in a different 2019 paper. No cutoff-eligible author response or original-data reconciliation was present."}
+        ]
+      },
+      "source_receipts": [
+        {"role": "original", "title": "Hypomethylation of mismatch repair genes MLH1 and MSH2 is associated with chemotolerance of breast carcinoma: Clinical significance", "url": "https://pubmed.ncbi.nlm.nih.gov/30481381/"},
+        {"role": "pre_cutoff_trace", "title": "PubPeer record 5B2D1FA4B9252CA195CC296EB128B5", "url": "https://pubpeer.com/publications/5B2D1FA4B9252CA195CC296EB128B5"},
+        {"role": "later_outcome", "title": "Retraction notice", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13353136/"}
+      ]
+    },
+    {
+      "id": "v208",
+      "direct_packet": {
+        "case_id": "v208",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2019, "field": "breast-cancer cell-state biology", "evidence_types": ["single-cell RNA sequencing", "bulk-expression validation", "computational lineage analysis"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2019-08-16T00:00:00Z", "kind": "study_summary", "text": "The paper analyzes mammary epithelial single cells to identify a rare bipotent-like cell state and examines its relationship with breast-cancer risk and outcome."},
+          {"id": "p002", "available_at": "2019-08-16T00:00:00Z", "kind": "methods", "text": "The study applies marker-independent signaling-entropy and diffusion-map analyses and validates the inferred state across independent bulk and single-cell expression cohorts."},
+          {"id": "p003", "available_at": "2019-08-16T00:00:00Z", "kind": "data_availability", "text": "The analyzed data are identified by three public expression-repository accessions and one controlled-access archive accession; supplementary data and reporting materials accompany the article."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The supplied record contains no correction, specific image anomaly, or completed integrity investigation."}
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v208",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {"published_year": 2019, "field": "breast-cancer cell-state biology", "evidence_types": ["single-cell RNA sequencing", "bulk-expression validation", "computational lineage analysis"]},
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2019-08-16T00:00:00Z", "kind": "study_summary", "text": "The paper analyzes mammary epithelial single cells to identify a rare bipotent-like cell state and examines its relationship with breast-cancer risk and outcome."},
+          {"id": "p002", "available_at": "2019-08-16T00:00:00Z", "kind": "methods", "text": "The study applies marker-independent signaling-entropy and diffusion-map analyses and validates the inferred state across independent bulk and single-cell expression cohorts."},
+          {"id": "p003", "available_at": "2019-08-16T00:00:00Z", "kind": "data_availability", "text": "The analyzed data are identified by three public expression-repository accessions and one controlled-access archive accession; supplementary data and reporting materials accompany the article."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The supplied record contains no correction, specific image anomaly, or completed integrity investigation."},
+          {"id": "p005", "available_at": "2024-12-31T23:59:59Z", "kind": "trace_result", "text": "The source trace resolved the named expression and controlled-access records and found no cutoff-eligible allegation of duplicated, rotated, relabeled, or overlapping experimental material."},
+          {"id": "p006", "available_at": "2024-12-31T23:59:59Z", "kind": "independent_check", "text": "The reported cell state was checked across multiple cohorts and two assay types rather than resting on one representative image set."}
+        ]
+      },
+      "source_receipts": [
+        {"role": "original", "title": "Single-cell landscape in mammary epithelium reveals bipotent-like cells associated with breast cancer risk and outcome", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6689007/"},
+        {"role": "data_record", "title": "GEO accession GSE113197", "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE113197"},
+        {"role": "data_record", "title": "EGA accession EGAS00000000083", "url": "https://ega-archive.org/studies/EGAS00000000083"}
+      ]
+    }
+  ]
+}
