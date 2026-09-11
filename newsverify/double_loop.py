@@ -121,6 +121,8 @@ claim (X happened or measurements are authentic). An exact report can settle
 attribution without authenticating its experiment. Missing independent records
 does not itself contradict a claim. Conversely, do not ignore an explicit
 eligible correction, falsifying measurement, negation or material qualification.
+When the target is explicitly about what a paper's caption states, mark it
+supported from that caption alone; reserve unresolved for the underlying event.
 Use one or two short basis quotes (each exactly one complete sentence; never
 append adjacent panel labels or extra sentences) when sufficient and a brief rationale focused
 on the decisive evidence or missing record, rather than a summary of the paper.
