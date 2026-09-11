@@ -1,0 +1,19 @@
+{
+  "target": {
+    "id": "model-example",
+    "text": "The Vellum Workshop box held exactly 12 blue cubes at noon on 12 June 2026.",
+    "as_of": "2026-06-12T18:00:00Z",
+    "source_version_id": "vellum-ledger:v1"
+  },
+  "rounds": [[{
+    "version_id": "vellum-ledger:v1",
+    "url": "https://vellum.example/count-ledger",
+    "content": "Original Vellum Workshop count ledger: at noon on 12 June 2026, the keeper directly inspected the box and counted exactly 12 blue cubes. This is a fictional record for a harness integration example.",
+    "retrieved_at": "2026-06-13T09:00:00Z",
+    "published_at": "2026-06-12T12:05:00Z",
+    "available_at": "2026-06-12T12:05:00Z",
+    "availability_basis": "Synthetic fixture stipulates this exact version was available at the stated time.",
+    "issuer": "synthetic-keeper"
+  }]],
+  "config": {"max_rounds": 1, "max_documents": 1, "max_decomposition_calls": 1}
+}

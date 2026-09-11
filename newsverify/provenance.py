@@ -522,6 +522,7 @@ def run_provenance(target: Target | dict, provider: TraceProvider,
     fingerprints = {}
     current_analyses = {}
     analysis_epochs = {}
+    analysis_resolution_epochs = {}
     history = []
     verifications = []
     operations = []
@@ -535,6 +536,7 @@ def run_provenance(target: Target | dict, provider: TraceProvider,
     gaps = {initial.id: initial}
     resolved = {}
     verification_gaps = {}
+    verification_gap_epochs = {}
     verification_resolved = {}
     runtime_gaps = {}
     fragments = {}
@@ -598,7 +600,7 @@ def run_provenance(target: Target | dict, provider: TraceProvider,
                 analysis_gap_events.setdefault(item.id, []).append((epoch, item))
             for item in analysis.resolutions:
                 analysis_resolution_events.setdefault(item.gap_id, []).append(
-                    (epoch, item))
+                    (analysis_resolution_epochs[version_id].get(item.gap_id, epoch), item))
         # A gap and its resolution are ordered state transitions. Current
         # analysis snapshots retain only each owner's latest revision, then
         # the latest explicit open/close event wins across owners. This lets a
@@ -814,11 +816,27 @@ def run_provenance(target: Target | dict, provider: TraceProvider,
             candidate_eligible[material.version_id] = material
             candidate_verification_gaps = dict(verification_gaps)
             candidate_verification_resolved = dict(verification_resolved)
-            # The current transaction is newer than prior verifier output.
-            # Its explicit resolutions close old tasks; its explicit gaps can
-            # reopen an older verifier resolution.
+            previous = current_analyses.get(material.version_id)
+            previous_resolutions = {
+                item.gap_id: item for item in previous.resolutions
+            } if previous else {}
+            previous_resolution_epochs = analysis_resolution_epochs.get(
+                material.version_id, {})
+            accepted_epoch = len(history) + len(verifications) + 1
+            candidate_resolution_epochs = {
+                item.gap_id: previous_resolution_epochs[item.gap_id]
+                if item.gap_id in previous_resolutions
+                and set(item.basis) == set(previous_resolutions[item.gap_id].basis)
+                else accepted_epoch
+                for item in analysis.resolutions
+            }
+            # A repeated or cosmetically reworded old resolution cannot close
+            # a newer verifier request. Only evidence accepted after that
+            # request supersedes it.
             for item in analysis.resolutions:
-                candidate_verification_gaps.pop(item.gap_id, None)
+                if candidate_resolution_epochs[item.gap_id] > verification_gap_epochs.get(
+                        item.gap_id, 0):
+                    candidate_verification_gaps.pop(item.gap_id, None)
             for item in analysis.gaps:
                 candidate_verification_resolved.pop(item.id, None)
             candidate_registry, candidate_owners = validate_live_projection(
@@ -839,6 +857,7 @@ def run_provenance(target: Target | dict, provider: TraceProvider,
         current_analyses.clear()
         current_analyses.update(candidate_analyses)
         analysis_epochs[material.version_id] = revision["revision"]
+        analysis_resolution_epochs[material.version_id] = candidate_resolution_epochs
         verification_gaps.clear()
         verification_gaps.update(candidate_verification_gaps)
         verification_resolved.clear()
@@ -1087,17 +1106,21 @@ def run_provenance(target: Target | dict, provider: TraceProvider,
                     _gap(item, target, eligible)
                     if item.stage != "verification":
                         raise ValueError("verifier search gaps must use stage=verification")
+                    known = gap_registry.get(item.id)
+                    if known is not None and known.stage == "provenance":
+                        raise ValueError(f"verifier may not replace provenance gap: {item.id}")
                 for item in check.resolutions:
                     _resolution(item, eligible)
                 candidate_registry, candidate_owners = _register_gaps(
                     gap_registry, gap_owners, check.gaps, "verifier", target)
                 _validate_resolution_references(check.resolutions, candidate_registry, "verification")
-                if {item.id for item in check.gaps} & {item.gap_id for item in check.resolutions}:
-                    raise ValueError("one verification result cannot reopen and resolve the same gap")
                 candidate_verification_gaps = dict(verification_gaps)
+                candidate_verification_gap_epochs = dict(verification_gap_epochs)
                 candidate_verification_resolved = dict(verification_resolved)
+                verification_epoch = len(history) + len(verifications) + 1
                 for item in check.gaps:
                     candidate_verification_gaps[item.id] = item
+                    candidate_verification_gap_epochs[item.id] = verification_epoch
                     candidate_verification_resolved.pop(item.id, None)
                 for item in check.resolutions:
                     candidate_verification_gaps.pop(item.gap_id, None)
@@ -1131,6 +1154,8 @@ def run_provenance(target: Target | dict, provider: TraceProvider,
             verifications.append({"round": round_number, **asdict(check)})
             verification_gaps.clear()
             verification_gaps.update(candidate_verification_gaps)
+            verification_gap_epochs.clear()
+            verification_gap_epochs.update(candidate_verification_gap_epochs)
             verification_resolved.clear()
             verification_resolved.update(candidate_verification_resolved)
             rebuild()

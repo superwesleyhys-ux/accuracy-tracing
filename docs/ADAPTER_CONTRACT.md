@@ -3,13 +3,11 @@
 The core is synchronous and provider-independent:
 
 ```python
-from factcircuit import DEFAULT_CONFIG, EvidenceProvider, run_verification
+from newsverify import DEFAULT_CONFIG, EvidenceProvider, run_verification
 
 run_verification(claim, provider, config=None)
 provider.search(claim, round_number, intent, limit)
 ```
-
-The former `newsverify` import path remains available as a compatibility alias.
 
 Claims, evidence, configuration, and returned reports are JSON-compatible dictionaries. `EvidenceProvider` is a typing protocol; a provider only needs to implement the documented method.
 

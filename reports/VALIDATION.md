@@ -1,10 +1,5 @@
 # Validation record
 
-> Historical record for the initial offline starter. For the current release,
-> see [VALIDATION_V0.3.md](VALIDATION_V0.3.md). Statements below about CI and
-> publication describe the state on September 5, 2026 and are intentionally
-> preserved as an archival snapshot.
-
 Prepared September 5, 2026 on Python 3.12.13.
 
 - `python3 -m unittest discover -s tests -v`: 25 tests passed. The suite includes all 22 synthetic benchmark scenarios as subtests.

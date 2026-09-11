@@ -1,0 +1,21 @@
+{
+  "news": [
+    {
+      "id": "bullseye-galaxy-rings",
+      "text": "Hubble identified eight visible rings in galaxy LEDA 1313424, and Keck observations confirmed a ninth ring.",
+      "url": "https://www.sciencedaily.com/releases/2025/02/250204132023.htm",
+      "claims": [
+        "Hubble identified eight visible rings in galaxy LEDA 1313424, and Keck observations confirmed a ninth ring."
+      ]
+    }
+  ],
+  "config": {
+    "research_mode": "claim",
+    "depth": 0,
+    "max_queries": 1,
+    "max_searches": 0,
+    "max_documents": 5,
+    "max_origin_depth": 1,
+    "max_origin_calls": 12
+  }
+}

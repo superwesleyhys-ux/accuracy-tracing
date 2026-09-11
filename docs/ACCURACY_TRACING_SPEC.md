@@ -1,11 +1,5 @@
 # Accuracy Tracing：溯源双回环定稿与全指标验收规范
 
-> 品牌迁移说明（v0.3.1）：项目现名为 **FactCircuit**，新的 Python
-> distribution、import package 与 CLI 均为 `factcircuit`；原有
-> `newsverify` 入口继续兼容。本文保留 v0.2 原始名称与设计语境，作为历史规范。
-
-> v0.3 update: [REPAIR_V0.3.md](REPAIR_V0.3.md) supersedes conflicting implementation and adapter notes below.
-
 版本：0.2.0 · 日期：2026-09-05 · 状态：架构定稿、离线参考实现已开始执行。
 
 ## 1. 定论及其边界

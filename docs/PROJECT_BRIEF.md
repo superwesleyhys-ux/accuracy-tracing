@@ -1,78 +1,38 @@
-# FactCircuit: project brief
+# NewsVerify Harness: project brief
 
 ## Purpose
 
-FactCircuit is an open-source verification harness for systems that need
-more than a final label. Given a fixed claim and evidence cutoff, it records
-which source versions were eligible, which exact spans supported or
-contradicted the target, how sources relate, what remained unresolved, which
-retrieval tasks were issued, and why the process stopped.
+News trackers often retrieve, rank, and summarize stories. NewsVerify Harness adds a repeatable check between retrieval and downstream use: does a specific claim have eligible evidence, what conflicts with it, what is missing, and why did the system stop searching?
 
-The core research question is whether bounded, task-directed re-retrieval and
-staged semantic validation improve claim verification over a monolithic pass
-without hiding the additional cost or failure modes. Version 0.3.0 supplied the
-runtime, evaluation contracts, frozen historical corpus, and an initial
-two-case comparison. Version 0.3.1 adds the FactCircuit package and compatibility
-entry points without changing those results. The project does not yet answer
-the research question at population scale.
+The research question is whether targeted re-retrieval improves claim verification compared with a single pass under the same evidence budget. The starter provides an inspectable policy engine and fixtures for developing that experiment. It does not yet answer the research question.
 
-## What is public in 0.3.1
+## Relationship to the earlier project
 
-| Component | Included now | Next evidence needed |
+The author previously described a news-tracking system associated with AGIPOT. Its source repository and revision were not available when this starter was created. No historical implementation, private data, API integrations, or model weights are included or claimed to have been recovered.
+
+The intended integration is narrow: the existing tracker produces candidate claims and retrieves documents; an adapter converts those outputs to the harness contract. The harness returns a policy decision and audit record that the tracker can display, queue for review, or revisit when evidence changes. Integration is pending access to and inspection of the actual tracker.
+
+## Public project boundary
+
+| Component | Current starter | Planned extension |
 | --- | --- | --- |
-| Claims | Fixed atomic targets with explicit cutoffs and deterministic target plans | Independently sampled, blinded claim set |
-| Retrieval | Typed providers, supplied-snapshot search, exact task attribution, bounded rounds | One production live provider with archived replay |
-| Provenance | Immutable versions, exact spans, lineage candidates, revision history, content hashes | Independent remote-artifact authentication |
-| Semantics | Monolithic compatibility adapter plus seven-stage validation loop and critics | Broader multilingual and adversarial evaluation |
-| Decisions | Separate evidence/world assessments and deterministic final mapping | Calibrated confidence backed by held-out data |
-| Evaluation | Fixed gold schemas, paired comparisons, bootstrap support, resource accounting | Event- and time-separated benchmark at useful scale |
-| Historical testing | Eight frozen 2023 propositions; two completed live comparison cases | Preregistered full set and equal-compute ablations |
+| Claims | One supplied claim with a time cutoff | Claim extraction and entity/event normalization |
+| Retrieval | Deterministic fixture provider | Live feed/search adapters and archived replay |
+| Evidence checks | Citation-field, quote-presence, timestamp, and duplication checks | Publisher lineage, source corrections, semantic entailment review |
+| Loop | Bounded search rounds with a requested search intent | Measured query selection and provider execution |
+| Decision | Supported, contradicted, conflicting, or unresolved | Calibrated models only if justified by labeled data |
+| Evaluation | Synthetic policy regression cases | Blind, event-separated and time-separated news evaluation |
 
-## Why the loop is different
+An existing tracker's credentials, user accounts, subscriptions, proprietary ranking, and deployment remain outside this reusable package. A future public adapter should expose a configuration contract without bundling secrets or private datasets.
 
-Each retrieved material version is saved and admitted against the evidence
-cutoff before it can affect the graph. Eligible material is decomposed into
-atomic observations and lineage claims. Evidence entailment and world-state
-assessment then run through separate stage/critic pairs. Python rejects
-malformed, duplicated, ungrounded, or cross-event outputs and atomically
-assembles the accepted state.
+## Evidence flow
 
-Unresolved probes are converted to exact fetch, search, or reanalysis tasks.
-New material re-enters the same path, and earlier analyses affected by a
-revision are reopened without erasing history. Every run has explicit round,
-material, call, output, and wall-time bounds.
+The input is an atomic claim and `as_of` time. A provider returns evidence. Mechanical checks admit or reject each record, then provenance groups prevent related documents from inflating independent source counts. The next search intent follows the remaining gaps or disagreement. The loop ends with a logged reason when its policy or resource limits require it.
 
-## Relationship to a news tracker
+The loop changes which evidence is requested. It does not repeatedly train a model, update weights, or treat repeated agreement from the same model as fresh evidence. Stance labels and provenance metadata remain explicit external judgments in this version.
 
-The integration boundary is narrow. A news tracker can produce candidate
-claims and retrieved documents; an adapter converts those outputs to the
-harness contract. FactCircuit returns a policy decision and audit record
-that the tracker can display, queue for review, or revisit when evidence
-changes.
+## Definition of a useful public release
 
-Credentials, subscriptions, private feeds, proprietary ranking, user accounts,
-and deployment infrastructure remain outside this repository. The public
-package does not claim to reconstruct or include any earlier private tracker.
+A contributor should be able to run the demonstration offline, understand every decision from its audit output, reproduce policy cases, and implement a provider without receiving the author's private tracker. The README and release notes should say exactly which checks are mechanical and which annotations are trusted.
 
-## Evidence to date
-
-The offline core and staged contracts are covered by 254 passing tests, with CI
-on Python 3.11–3.13. In the frozen two-case historical pilot, the original
-monolithic adapter scored 1/2 and the staged adapter scored 2/2. The staged arm
-used substantially more calls and tokens, the cases were selected post-hoc,
-and a separate full-evidence staged diagnostic failed. The result is therefore
-an early engineering signal, not proof of a general accuracy gain.
-
-## Definition of success
-
-The project succeeds when an independent contributor can:
-
-1. reproduce an offline trace and understand every transition;
-2. plug in a permitted evidence provider without changing decision policy;
-3. run a fixed, leakage-audited comparison with gold unavailable to inference;
-4. inspect all failures, exclusions, resource use, and termination reasons; and
-5. challenge a reported improvement using the same public artifacts.
-
-Claims about general accuracy, adoption, or ecosystem impact require larger
-preregistered measurements and public evidence. The harness is designed to make
-that standard practical rather than to bypass it.
+The first release should establish those capabilities. Claims about accuracy improvements, adoption, or ecosystem impact require later measurements and public evidence.

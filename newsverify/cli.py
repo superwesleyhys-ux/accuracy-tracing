@@ -9,6 +9,7 @@ from .core import run_verification
 from .providers import ReplayProvider
 from .evaluation import evaluate
 from .comparison import compare
+from .local import run_local
 
 STATUSES = {"supported", "contradicted", "conflicting", "unresolved"}
 
@@ -65,14 +66,30 @@ def main(argv=None, *, prog="newsverify"):
     from . import __version__
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     sub = parser.add_subparsers(dest="command", required=True)
-    quickstart_parser = sub.add_parser("quickstart", help="run the offline annotated example and save a readable walkthrough")
-    quickstart_parser.add_argument("--output", type=Path, required=True, help="new directory for inputs, config, trace and summary")
-    quickstart_parser.add_argument("--config", type=Path, help="optional JSON resource budgets; no credentials")
-    for command in ("demo", "trace-demo", "verify", "benchmark"):
+    quickstart_parser = sub.add_parser(
+        "quickstart",
+        help="run the offline annotated example and save a readable walkthrough",
+    )
+    quickstart_parser.add_argument(
+        "--output", type=Path, required=True,
+        help="new directory for inputs, config, trace and summary",
+    )
+    quickstart_parser.add_argument(
+        "--config", type=Path,
+        help="optional JSON resource budgets; no credentials",
+    )
+    for command in ("demo", "trace-demo", "trace", "trace-model", "verify", "benchmark"):
         child = sub.add_parser(command)
         if command not in ("demo", "trace-demo"):
             child.add_argument("input", type=Path)
         child.add_argument("--output", type=Path)
+        if command == "trace-model":
+            child.add_argument("--tunnel", choices=("local", "api"), default="local",
+                               help="model execution path (default: local Codex CLI)")
+            child.add_argument("--model", help="model ID (default: configured Codex model)")
+            child.add_argument("--reasoning-effort", help="reasoning effort (default: Codex setting or medium)")
+            child.add_argument("--timeout", type=float, default=180,
+                               help="timeout in seconds for each model call (default: 180)")
     score_parser = sub.add_parser("score")
     score_parser.add_argument("gold", type=Path)
     score_parser.add_argument("predictions", type=Path)
@@ -84,11 +101,21 @@ def main(argv=None, *, prog="newsverify"):
     compare_parser.add_argument("--bootstrap-samples", type=int, default=500)
     compare_parser.add_argument("--seed", type=int, default=0)
     compare_parser.add_argument("--output", type=Path)
+    news_parser = sub.add_parser("trace-news", help="trace each news claim to source records and verify it")
+    news_parser.add_argument("input", type=Path, help="JSON file containing a news list")
+    news_parser.add_argument("--output", type=Path)
+    news_parser.add_argument("--tunnel", choices=("local", "api"), default="local")
+    news_parser.add_argument("--model")
+    news_parser.add_argument("--reasoning-effort")
+    news_parser.add_argument("--timeout", type=float, default=90)
+    news_parser.add_argument("--max-model-calls", type=int, default=40,
+                             help="shared research and claim-tracing call cap for the whole news batch")
     args = parser.parse_args(argv)
     try:
         if args.command == "quickstart":
             from .quickstart import run_quickstart
-            config = json.loads(args.config.read_text(encoding="utf-8")) if args.config else None
+            config = (json.loads(args.config.read_text(encoding="utf-8"))
+                      if args.config else None)
             if args.config and config is None:
                 raise ValueError("quickstart config must be a JSON object")
             result = run_quickstart(args.output, config)
@@ -96,6 +123,13 @@ def main(argv=None, *, prog="newsverify"):
                   f"{result['usage']['rounds']} rounds; 0 model calls.")
             print(f"Read {args.output / 'SUMMARY.md'}")
             return 0 if result["assessment_valid"] else 1
+        elif args.command == "trace-news":
+            if args.output and args.output.resolve() == args.input.resolve():
+                raise ValueError("output must differ from input")
+            from .news_tracing_runner import run_news_tracing
+            result = run_news_tracing(json.loads(args.input.read_text(encoding="utf-8")),
+                tunnel=args.tunnel, model=args.model, reasoning_effort=args.reasoning_effort,
+                timeout=args.timeout, max_model_calls=args.max_model_calls)
         elif args.command == "trace-demo":
             from .trace_demo import run_demo
             result = run_demo()
@@ -116,9 +150,18 @@ def main(argv=None, *, prog="newsverify"):
             if args.output and args.output.resolve() == args.input.resolve():
                 raise ValueError("output must differ from input")
             raw = args.input.read_text(encoding="utf-8")
-        if args.command not in ("score", "trace-demo", "compare"):
+        if args.command not in ("score", "trace-demo", "compare", "trace-news"):
             payload = json.loads(raw)
-            result = benchmark(payload) if args.command == "benchmark" else run_fixture(payload)
+            if args.command == "trace":
+                result = run_local(payload)
+            elif args.command == "trace-model":
+                from .model_runner import run_model_trace
+                result = run_model_trace(payload, tunnel=args.tunnel, model=args.model,
+                                         reasoning_effort=args.reasoning_effort, timeout=args.timeout)
+            elif args.command == "benchmark":
+                result = benchmark(payload)
+            else:
+                result = run_fixture(payload)
         rendered = json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False) + "\n"
         if args.output:
             args.output.parent.mkdir(parents=True, exist_ok=True)
@@ -126,6 +169,10 @@ def main(argv=None, *, prog="newsverify"):
             print(f"Wrote {args.output}")
         else:
             print(rendered, end="")
+        if args.command == "trace-model" and result["errors"]:
+            return 1
+        if args.command == "trace-news":
+            return 1 if result["summary"]["failed"] or result["summary"]["partial"] else 0
         return 1 if args.command == "benchmark" and not result["all_policy_expectations_matched"] else 0
     except (OSError, ValueError, TypeError, KeyError) as exc:
         print(f"{prog}: {exc}", file=sys.stderr)
