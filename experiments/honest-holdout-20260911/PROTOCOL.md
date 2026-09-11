@@ -20,6 +20,11 @@ and later outcomes are also excluded from the packet. Source receipts remain in
 the corpus for human audit, but the runner sends only `public_packet` to the
 isolated model process.
 
+Eligibility is based on public availability, not the date on which an event
+privately occurred. A fact first disclosed by a 2025–2026 investigation is
+excluded even if it describes an action before the cutoff. A pre-cutoff public
+comment may be included, with later sources used only to audit its date.
+
 ## Fixed design
 
 - Eight independent paper families: four later-positive and four controls.

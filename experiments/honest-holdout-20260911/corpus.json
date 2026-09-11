@@ -91,8 +91,8 @@
         "evidence_passages": [
           {"id": "p001", "available_at": "2009-11-10T00:00:00Z", "kind": "study_summary", "text": "The paper uses plant mutants and protein-complex analysis to argue that two minor antenna proteins are required for formation and efficient operation of a photosynthetic supercomplex."},
           {"id": "p002", "available_at": "2009-11-10T00:00:00Z", "kind": "methods", "text": "The results rely on multiple gel and immunoblot panels, mass-spectrometry identification, chlorophyll fluorescence measurements and mutant growth phenotypes."},
-          {"id": "p003", "available_at": "2022-12-15T00:00:00Z", "kind": "public_postpublication_concern", "text": "A public post-publication review comment dated December 2022 raised a specific concern that several published figure panels showed signs consistent with image alteration or reuse."},
-          {"id": "p004", "available_at": "2023-04-30T00:00:00Z", "kind": "author_response_history", "text": "The corresponding author reported the public concern to the institution in 2023. The supplied cutoff packet contains neither a completed independent investigation nor a public raw-data reconciliation."}
+          {"id": "p003", "available_at": "2022-12-15T00:00:00Z", "kind": "public_postpublication_concern", "text": "A public post-publication review comment dated around December 2022 raised a concern about suspected image manipulation in the paper."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "cutoff_history", "text": "The public comment is an allegation. The supplied public record contains no author response, correction, completed institutional outcome, or raw-data reconciliation by the cutoff."}
         ]
       },
       "source_receipts": [

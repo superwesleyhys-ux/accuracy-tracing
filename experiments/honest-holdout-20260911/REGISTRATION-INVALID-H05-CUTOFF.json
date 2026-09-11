@@ -1,6 +1,6 @@
 {
   "benchmark": "same-task-historical-holdout-v1",
-  "registered_at": "2026-09-11T20:51:52.747910+00:00",
+  "registered_at": "2026-09-11T20:49:30.324755+00:00",
   "cutoff": "2024-12-31T23:59:59Z",
   "model": "gpt-5.6-luna",
   "reasoning_effort": "low",
@@ -90,18 +90,17 @@
   },
   "sealed_gold_sha256": "c54b5ab52e8226642729f01f6bfbdce314fa2b0678b7af6d7ff9e11ffb4ace4e",
   "frozen_sha256": {
-    "corpus.json": "e1d54bb2263793d615fe182bcb7cf76877cbb3e0f205137e921368596627efd9",
+    "corpus.json": "8d0e3ce2ba06a9653d9697085ce12a9968f9f38a0dad26e9cc5c0c73137ff7fd",
     "policies.py": "e248f664b40c45f8d4dcbfbc121f28fc6c892a58417a394e7bdcee82f7365415",
     "run_test.py": "15288da9482b527fb0b41dcaa6361805d30cb7662e5b02459c54c4524a113388",
     "summarize_test.py": "28c49457add432b8cf8abdef50c4990ae9146d3a64a9200989074f3f7caad52c",
-    "PROTOCOL.md": "95d29c2a213080b95c2a7ba639dbe3ba33a154286198d3ada63efddaf99d9140"
+    "PROTOCOL.md": "5f155acb9f9bd8d97230c0e3d3cc6736919598ea9c0d21a3a85d388864e74c20"
   },
   "supersedes": {
-    "git_commit": "e117b93",
-    "reason": "Post-run audit found one h05 sentence was first disclosed after the cutoff even though it described a 2023 private report.",
-    "invalid_run": "reports/honest-holdout-20260911/run-002",
-    "invalid_score": "direct 87.5%; harness 75.0%",
-    "correction": "Removed the privately reported event and narrowed the public 2022 concern to the contemporaneously eligible statement.",
-    "policies_labels_scorer_thresholds_changed": false
+    "git_commit": "0e9fae2",
+    "reason": "The registered gpt-5.4-mini model is unsupported with the local ChatGPT login.",
+    "failed_run": "reports/honest-holdout-20260911/run-001",
+    "benchmark_outputs_produced": 0,
+    "prompts_packets_labels_scorer_thresholds_changed": false
   }
 }
