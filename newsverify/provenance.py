@@ -211,8 +211,14 @@ def _span(span, materials):
     if type(span.start) is not int or type(span.end) is not int:
         raise ValueError("span offsets must be integers")
     content = materials[span.version_id].content
-    if not (0 <= span.start < span.end <= len(content)) or content[span.start:span.end] != span.quote:
+    if not (0 <= span.start < span.end <= len(content)):
         raise ValueError("span quote must exactly match the original character offsets")
+    source = content[span.start:span.end]
+    if source != span.quote:
+        import re
+        normalize = lambda value: re.sub(r"\s+", " ", value).strip()
+        if normalize(source) != normalize(span.quote):
+            raise ValueError("span quote must match the original character offsets")
 
 
 def _basis(items, materials):
