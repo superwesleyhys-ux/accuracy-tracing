@@ -1,0 +1,622 @@
+{
+  "gold_loaded": false,
+  "completed_steps": 16,
+  "expected_steps": 16,
+  "results": [
+    {
+      "case_id": "h01",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The packet provides no specific pre-cutoff integrity concern. Unarchived raw images and lack of independent authentication alone do not warrant elevated follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_holdout_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 4.1358166669961065,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6562,
+            "cached_input_tokens": 0,
+            "output_tokens": 68,
+            "reasoning_output_tokens": 0
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "h01",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p003",
+          "p004"
+        ],
+        "signals": [
+          "No independently archived raw images or laboratory log are supplied.",
+          "No pre-cutoff correction, image anomaly, investigation, or independent authentication is documented.",
+          "The record provides publication and supplementary materials as the audit trail."
+        ],
+        "rationale": "The packet lacks a strong integrity signal and does not provide two distinct moderate signals. Missing raw data alone, publication age, or absence of independent authentication is insufficient for elevated follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_holdout_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 6.313198167015798,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6735,
+            "cached_input_tokens": 0,
+            "output_tokens": 153,
+            "reasoning_output_tokens": 36
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "h02",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [
+          "Auditable crystallographic methods and refinement statistics",
+          "Stable Protein Data Bank coordinate deposit",
+          "No documented pre-cutoff anomaly, correction, retraction, or integrity finding"
+        ],
+        "rationale": "The packet provides traceable methods and a durable coordinate deposit, with no documented integrity signal or relevant correction through 2024-12-31. Missing evidence of replication or raw data is not, by itself, evidence of fabrication."
+      },
+      "calls": [
+        {
+          "stage": "honest_holdout_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 5.99973591696471,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6715,
+            "cached_input_tokens": 0,
+            "output_tokens": 175,
+            "reasoning_output_tokens": 53
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "h02",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The supplied record describes standard crystallographic reporting, public coordinate deposition, and no documented correction, retraction, anomaly, or integrity finding before the cutoff."
+      },
+      "calls": [
+        {
+          "stage": "honest_holdout_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 4.1837087500607595,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6548,
+            "cached_input_tokens": 0,
+            "output_tokens": 93,
+            "reasoning_output_tokens": 19
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "h03",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "elevated",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p003",
+          "p004"
+        ],
+        "signals": [
+          "Partial image overlap across differently labeled experimental conditions",
+          "Author correction identifying image selection during figure assembly",
+          "No independently archived raw image series linking replacements to conditions"
+        ],
+        "rationale": "The pre-cutoff author correction documents cross-condition image overlap in multiple figures and incorrect image selection during assembly, creating a specific integrity concern that merits follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_holdout_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 4.481110749999061,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6581,
+            "cached_input_tokens": 0,
+            "output_tokens": 101,
+            "reasoning_output_tokens": 0
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "h03",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "elevated",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [
+          "Documented partial image overlap across distinct experimental conditions",
+          "2024 correction involving experimental figures and supplied replacements",
+          "No independently archived raw image series linking replacements to conditions"
+        ],
+        "rationale": "The packet documents condition-mismatched image reuse and a figure correction without an independently traceable underlying image record. These are strong pre-cutoff integrity signals; routine correction, missing raw data alone, publication age, and non-replication are not being used as evidence."
+      },
+      "calls": [
+        {
+          "stage": "honest_holdout_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 6.525789500097744,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6750,
+            "cached_input_tokens": 0,
+            "output_tokens": 174,
+            "reasoning_output_tokens": 43
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "h04",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [
+          "Traceable methods and public sequencing deposit",
+          "No documented duplication, manipulation, condition mismatch, or inconsistency in the supplied record",
+          "No pre-cutoff experimental-image, condition, provenance, or integrity concern",
+          "No independent replication or authentication is documented in the packet; this is not treated as evidence of fabrication",
+          "No alternative-explanation or base-rate factor supplied constitutes evidence of fabrication"
+        ],
+        "rationale": "The packet provides auditable methods and a stable public sequencing accession, while reporting no pre-cutoff integrity concerns. It contains neither a strong integrity signal nor two distinct moderate signals, so the classification is ordinary."
+      },
+      "calls": [
+        {
+          "stage": "honest_holdout_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 7.090056375018321,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6733,
+            "cached_input_tokens": 0,
+            "output_tokens": 216,
+            "reasoning_output_tokens": 57
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "h04",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p001",
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The packet describes a multi-method, cross-species study with public sequencing data and no documented pre-cutoff correction, image anomaly, expression of concern, or institutional integrity finding."
+      },
+      "calls": [
+        {
+          "stage": "honest_holdout_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 4.2036394159076735,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6560,
+            "cached_input_tokens": 0,
+            "output_tokens": 80,
+            "reasoning_output_tokens": 0
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "h05",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "elevated",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p003",
+          "p004"
+        ],
+        "signals": [
+          "Specific public concern about possible image alteration or reuse in published figure panels",
+          "Institutional reporting occurred, with no completed independent investigation or public raw-data reconciliation in the packet"
+        ],
+        "rationale": "The specific post-publication image-integrity concern and unresolved institutional follow-up provide a concrete reason for elevated research-integrity review."
+      },
+      "calls": [
+        {
+          "stage": "honest_holdout_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 5.942601124988869,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6576,
+            "cached_input_tokens": 0,
+            "output_tokens": 136,
+            "reasoning_output_tokens": 35
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "h05",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [
+          "The study depends on gel/immunoblot, mass-spectrometry, fluorescence, and mutant-phenotype records.",
+          "A public comment raised a specific concern about possible image alteration or reuse.",
+          "No completed independent investigation or public raw-data reconciliation is supplied."
+        ],
+        "rationale": "The packet contains one moderate integrity signal—a specific but unconfirmed image alteration/reuse concern. Missing reconciliation alone is not evidence of fabrication, and no documented manipulation, correction, retraction, independent authentication, or second distinct moderate signal is supplied; therefore the rule yields ordinary."
+      },
+      "calls": [
+        {
+          "stage": "honest_holdout_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 7.534951666020788,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6747,
+            "cached_input_tokens": 0,
+            "output_tokens": 245,
+            "reasoning_output_tokens": 97
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "h06",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [
+          "Traceable methods and replicate measurements are reported.",
+          "Full-length blot images and supplementary panels support auditability.",
+          "No pre-cutoff correction, image anomaly, concern, or institutional finding is supplied.",
+          "No independent replication or authentication is documented in the packet; this is not treated as fabrication evidence."
+        ],
+        "rationale": "The packet provides auditable experimental methods and underlying image material, while documenting no integrity concerns through the cutoff. It contains no strong signal or two distinct moderate signals required for elevated classification."
+      },
+      "calls": [
+        {
+          "stage": "honest_holdout_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 6.619531374890357,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6727,
+            "cached_input_tokens": 4864,
+            "output_tokens": 170,
+            "reasoning_output_tokens": 34
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "h06",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [
+          "No documented integrity concern",
+          "Full-length blot images and supplementary panels available for inspection"
+        ],
+        "rationale": "The packet provides routine methods and supplementary inspection materials, and records no correction, expression of concern, image anomaly, or institutional integrity finding by the cutoff."
+      },
+      "calls": [
+        {
+          "stage": "honest_holdout_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 5.6196111250901595,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6560,
+            "cached_input_tokens": 0,
+            "output_tokens": 129,
+            "reasoning_output_tokens": 39
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "h07",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "elevated",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p002"
+        ],
+        "signals": [
+          "Closely related paper retracted for reproducing all figures and text from the target paper without citation"
+        ],
+        "rationale": "The documented related-paper retraction creates a specific, unusual integrity concern warranting follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_holdout_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 4.863884249934927,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6580,
+            "cached_input_tokens": 0,
+            "output_tokens": 116,
+            "reasoning_output_tokens": 38
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "h07",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "elevated",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [
+          "Closely related paper retracted for substantial uncited figure and text overlap with the target paper (p002).",
+          "No independent laboratory record authenticating reported affinity measurements (p003), treated as a traceability limitation rather than standalone fabrication evidence.",
+          "No institutional misconduct finding is reported before the cutoff (p004)."
+        ],
+        "rationale": "Elevated follow-up is warranted because p002 documents a closely related retraction with substantial uncited overlap, a strong pre-cutoff integrity signal. The record lacks independent authentication of the affinity measurements, while no separate misconduct finding is required for this screening classification."
+      },
+      "calls": [
+        {
+          "stage": "honest_holdout_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 6.400839791982435,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6751,
+            "cached_input_tokens": 0,
+            "output_tokens": 207,
+            "reasoning_output_tokens": 48
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "h08",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p003",
+          "p004"
+        ],
+        "signals": [
+          "Documented auditability through sample preparation, blinded measurements, complementary assays, figures, and supplementary material",
+          "No pre-cutoff correction, image anomaly, expression of concern, or institutional integrity finding"
+        ],
+        "rationale": "The packet provides records supporting auditability and contains no strong or two moderate pre-cutoff integrity signals. Missing evidence of independent replication is not treated as fabrication evidence."
+      },
+      "calls": [
+        {
+          "stage": "honest_holdout_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 6.379962874925695,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6712,
+            "cached_input_tokens": 0,
+            "output_tokens": 154,
+            "reasoning_output_tokens": 43
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "h08",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The supplied record describes auditable methods and complementary assays, with no documented correction, image anomaly, expression of concern, or institutional integrity finding before the cutoff."
+      },
+      "calls": [
+        {
+          "stage": "honest_holdout_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 6.158722917083651,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6543,
+            "cached_input_tokens": 0,
+            "output_tokens": 91,
+            "reasoning_output_tokens": 19
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    }
+  ]
+}

@@ -45,8 +45,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 15546,
-      "sha256": "85102486f0153c34cae673e7d9f550c8ff29e22795d50966c5af55dd9ed7f244"
+      "bytes": 17252,
+      "sha256": "ff7a828e6d7674807ed1b8d3a91e1b8ccc5e67fbccfefbd810751d5b8477f7ec"
     },
     {
       "path": "SECURITY.md",
@@ -412,6 +412,46 @@
       "path": "experiments/historical_compare.py",
       "bytes": 75921,
       "sha256": "dce62c38f00bc684dfea0e4de63654b47f6c0ade796260df3e5f8b91a2ca335c"
+    },
+    {
+      "path": "experiments/honest-holdout-20260911/PROTOCOL.md",
+      "bytes": 2988,
+      "sha256": "95d29c2a213080b95c2a7ba639dbe3ba33a154286198d3ada63efddaf99d9140"
+    },
+    {
+      "path": "experiments/honest-holdout-20260911/REGISTRATION-FAILED-GPT54MINI.json",
+      "bytes": 2115,
+      "sha256": "f1b15f17f8b1989001b2166f3def4dff2f31ce38e0ca090fcc126ea366d3e189"
+    },
+    {
+      "path": "experiments/honest-holdout-20260911/REGISTRATION-INVALID-H05-CUTOFF.json",
+      "bytes": 2423,
+      "sha256": "61a6729c8fd9c87e35a560ea05d3ceeda280957a272ce553aae7d4dd0bef6d4e"
+    },
+    {
+      "path": "experiments/honest-holdout-20260911/REGISTRATION.json",
+      "bytes": 2616,
+      "sha256": "6cbf9338c1ea5da2190197cc1573108e694f8b234d11cc8d57d0247c059a045a"
+    },
+    {
+      "path": "experiments/honest-holdout-20260911/corpus.json",
+      "bytes": 16801,
+      "sha256": "e1d54bb2263793d615fe182bcb7cf76877cbb3e0f205137e921368596627efd9"
+    },
+    {
+      "path": "experiments/honest-holdout-20260911/policies.py",
+      "bytes": 3052,
+      "sha256": "e248f664b40c45f8d4dcbfbc121f28fc6c892a58417a394e7bdcee82f7365415"
+    },
+    {
+      "path": "experiments/honest-holdout-20260911/run_test.py",
+      "bytes": 6591,
+      "sha256": "15288da9482b527fb0b41dcaa6361805d30cb7662e5b02459c54c4524a113388"
+    },
+    {
+      "path": "experiments/honest-holdout-20260911/summarize_test.py",
+      "bytes": 11375,
+      "sha256": "28c49457add432b8cf8abdef50c4990ae9146d3a64a9200989074f3f7caad52c"
     },
     {
       "path": "experiments/inputs-v03.json",
@@ -1607,6 +1647,66 @@
       "path": "reports/historical-2023-pilot2-v3-live-001/status.json",
       "bytes": 100,
       "sha256": "3b009e7fdd8e9c126cb296e08cc9c6aefbcef2367ddef7c6a6c38cf000052652"
+    },
+    {
+      "path": "reports/honest-holdout-20260911/README.md",
+      "bytes": 2835,
+      "sha256": "c3a35ea825469be075675762183d36deea5763149c0d7c988b50b80e02fda19a"
+    },
+    {
+      "path": "reports/honest-holdout-20260911/run-001/manifest.json",
+      "bytes": 617,
+      "sha256": "3bd6b507c80f807abc70217eeb050a8d718560f3716300e7facee6f5798588ad"
+    },
+    {
+      "path": "reports/honest-holdout-20260911/run-001/predictions.json",
+      "bytes": 10828,
+      "sha256": "3d1269ee67f22e9698287643d23d8ab2c2049e0eb3e057c878af3a32d405ec34"
+    },
+    {
+      "path": "reports/honest-holdout-20260911/run-002/manifest.json",
+      "bytes": 618,
+      "sha256": "91b2578d3dfa2c21b5a6fb27556d1dfe09e35561f96d8c1505efba1bd15b31b2"
+    },
+    {
+      "path": "reports/honest-holdout-20260911/run-002/predictions.json",
+      "bytes": 21293,
+      "sha256": "7330101beaf2361424b70d027e82c3c3ca4d46f7e8e3313f266a47b6c530da94"
+    },
+    {
+      "path": "reports/honest-holdout-20260911/run-003/manifest.json",
+      "bytes": 618,
+      "sha256": "86c4aa515f09486bbe8e5f21dbd07302d1efcb1f4f4a90c3c345509ece6528ac"
+    },
+    {
+      "path": "reports/honest-holdout-20260911/run-003/predictions.json",
+      "bytes": 21184,
+      "sha256": "17118327f2ad1c1d8432635de6d8761937bebe6f76f376b961680f069753e991"
+    },
+    {
+      "path": "reports/honest-holdout-20260911/scored-v1/README.md",
+      "bytes": 2982,
+      "sha256": "eac0a8127dd114e6d541f626a0cae1cb0b48d1fdfaa3ab7ddd735ebd01055715"
+    },
+    {
+      "path": "reports/honest-holdout-20260911/scored-v1/SUMMARY.json",
+      "bytes": 5343,
+      "sha256": "26b5f34bc6b4b93215f288da6cfa85ab8e27490f783ec61f1d5e181a388b2569"
+    },
+    {
+      "path": "reports/honest-holdout-20260911/scored-v2/README.md",
+      "bytes": 3328,
+      "sha256": "c0f92ac0cbfe1778cdf06f82438478c6024fe4d2d8c70372559a0f05695f6595"
+    },
+    {
+      "path": "reports/honest-holdout-20260911/scored-v2/REVEALED_GOLD.json",
+      "bytes": 2355,
+      "sha256": "c54b5ab52e8226642729f01f6bfbdce314fa2b0678b7af6d7ff9e11ffb4ace4e"
+    },
+    {
+      "path": "reports/honest-holdout-20260911/scored-v2/SUMMARY.json",
+      "bytes": 5174,
+      "sha256": "3430e7253b5c1da413ea096054a2bf8b890a1bb2c1791fbc8455e61b362edec7"
     },
     {
       "path": "reports/live-v03-attempt-01/bridge-evidence-loop-calls.json",

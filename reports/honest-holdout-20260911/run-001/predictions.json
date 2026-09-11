@@ -1,0 +1,375 @@
+{
+  "gold_loaded": false,
+  "completed_steps": 16,
+  "expected_steps": 16,
+  "results": [
+    {
+      "case_id": "h01",
+      "arm": "direct",
+      "status": "failed",
+      "result": null,
+      "calls": [
+        {
+          "stage": "honest_holdout_direct",
+          "tunnel": "local",
+          "model": "gpt-5.4-mini",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 1.6111686669755727,
+          "success": false,
+          "status": "failed",
+          "usage": null,
+          "local_skills_disabled": 66,
+          "exit_code": 1,
+          "error": "The Codex CLI did not complete successfully."
+        }
+      ],
+      "error": "TunnelError: The Codex CLI did not complete successfully."
+    },
+    {
+      "case_id": "h01",
+      "arm": "harness",
+      "status": "failed",
+      "result": null,
+      "calls": [
+        {
+          "stage": "honest_holdout_harness",
+          "tunnel": "local",
+          "model": "gpt-5.4-mini",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 2.0993818750139326,
+          "success": false,
+          "status": "failed",
+          "usage": null,
+          "local_skills_disabled": 66,
+          "exit_code": 1,
+          "error": "The Codex CLI did not complete successfully."
+        }
+      ],
+      "error": "TunnelError: The Codex CLI did not complete successfully."
+    },
+    {
+      "case_id": "h02",
+      "arm": "harness",
+      "status": "failed",
+      "result": null,
+      "calls": [
+        {
+          "stage": "honest_holdout_harness",
+          "tunnel": "local",
+          "model": "gpt-5.4-mini",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 2.3044334169244394,
+          "success": false,
+          "status": "failed",
+          "usage": null,
+          "local_skills_disabled": 66,
+          "exit_code": 1,
+          "error": "The Codex CLI did not complete successfully."
+        }
+      ],
+      "error": "TunnelError: The Codex CLI did not complete successfully."
+    },
+    {
+      "case_id": "h02",
+      "arm": "direct",
+      "status": "failed",
+      "result": null,
+      "calls": [
+        {
+          "stage": "honest_holdout_direct",
+          "tunnel": "local",
+          "model": "gpt-5.4-mini",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 1.766154707991518,
+          "success": false,
+          "status": "failed",
+          "usage": null,
+          "local_skills_disabled": 66,
+          "exit_code": 1,
+          "error": "The Codex CLI did not complete successfully."
+        }
+      ],
+      "error": "TunnelError: The Codex CLI did not complete successfully."
+    },
+    {
+      "case_id": "h03",
+      "arm": "direct",
+      "status": "failed",
+      "result": null,
+      "calls": [
+        {
+          "stage": "honest_holdout_direct",
+          "tunnel": "local",
+          "model": "gpt-5.4-mini",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 1.7073838750366122,
+          "success": false,
+          "status": "failed",
+          "usage": null,
+          "local_skills_disabled": 66,
+          "exit_code": 1,
+          "error": "The Codex CLI did not complete successfully."
+        }
+      ],
+      "error": "TunnelError: The Codex CLI did not complete successfully."
+    },
+    {
+      "case_id": "h03",
+      "arm": "harness",
+      "status": "failed",
+      "result": null,
+      "calls": [
+        {
+          "stage": "honest_holdout_harness",
+          "tunnel": "local",
+          "model": "gpt-5.4-mini",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 1.7274203329579905,
+          "success": false,
+          "status": "failed",
+          "usage": null,
+          "local_skills_disabled": 66,
+          "exit_code": 1,
+          "error": "The Codex CLI did not complete successfully."
+        }
+      ],
+      "error": "TunnelError: The Codex CLI did not complete successfully."
+    },
+    {
+      "case_id": "h04",
+      "arm": "harness",
+      "status": "failed",
+      "result": null,
+      "calls": [
+        {
+          "stage": "honest_holdout_harness",
+          "tunnel": "local",
+          "model": "gpt-5.4-mini",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 3.1767764579271898,
+          "success": false,
+          "status": "failed",
+          "usage": null,
+          "local_skills_disabled": 66,
+          "exit_code": 1,
+          "error": "The Codex CLI did not complete successfully."
+        }
+      ],
+      "error": "TunnelError: The Codex CLI did not complete successfully."
+    },
+    {
+      "case_id": "h04",
+      "arm": "direct",
+      "status": "failed",
+      "result": null,
+      "calls": [
+        {
+          "stage": "honest_holdout_direct",
+          "tunnel": "local",
+          "model": "gpt-5.4-mini",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 2.7596738329157233,
+          "success": false,
+          "status": "failed",
+          "usage": null,
+          "local_skills_disabled": 66,
+          "exit_code": 1,
+          "error": "The Codex CLI did not complete successfully."
+        }
+      ],
+      "error": "TunnelError: The Codex CLI did not complete successfully."
+    },
+    {
+      "case_id": "h05",
+      "arm": "direct",
+      "status": "failed",
+      "result": null,
+      "calls": [
+        {
+          "stage": "honest_holdout_direct",
+          "tunnel": "local",
+          "model": "gpt-5.4-mini",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 1.9745607080403715,
+          "success": false,
+          "status": "failed",
+          "usage": null,
+          "local_skills_disabled": 66,
+          "exit_code": 1,
+          "error": "The Codex CLI did not complete successfully."
+        }
+      ],
+      "error": "TunnelError: The Codex CLI did not complete successfully."
+    },
+    {
+      "case_id": "h05",
+      "arm": "harness",
+      "status": "failed",
+      "result": null,
+      "calls": [
+        {
+          "stage": "honest_holdout_harness",
+          "tunnel": "local",
+          "model": "gpt-5.4-mini",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 2.9329120829934254,
+          "success": false,
+          "status": "failed",
+          "usage": null,
+          "local_skills_disabled": 66,
+          "exit_code": 1,
+          "error": "The Codex CLI did not complete successfully."
+        }
+      ],
+      "error": "TunnelError: The Codex CLI did not complete successfully."
+    },
+    {
+      "case_id": "h06",
+      "arm": "harness",
+      "status": "failed",
+      "result": null,
+      "calls": [
+        {
+          "stage": "honest_holdout_harness",
+          "tunnel": "local",
+          "model": "gpt-5.4-mini",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 1.981292082928121,
+          "success": false,
+          "status": "failed",
+          "usage": null,
+          "local_skills_disabled": 66,
+          "exit_code": 1,
+          "error": "The Codex CLI did not complete successfully."
+        }
+      ],
+      "error": "TunnelError: The Codex CLI did not complete successfully."
+    },
+    {
+      "case_id": "h06",
+      "arm": "direct",
+      "status": "failed",
+      "result": null,
+      "calls": [
+        {
+          "stage": "honest_holdout_direct",
+          "tunnel": "local",
+          "model": "gpt-5.4-mini",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 2.9219583340454847,
+          "success": false,
+          "status": "failed",
+          "usage": null,
+          "local_skills_disabled": 66,
+          "exit_code": 1,
+          "error": "The Codex CLI did not complete successfully."
+        }
+      ],
+      "error": "TunnelError: The Codex CLI did not complete successfully."
+    },
+    {
+      "case_id": "h07",
+      "arm": "direct",
+      "status": "failed",
+      "result": null,
+      "calls": [
+        {
+          "stage": "honest_holdout_direct",
+          "tunnel": "local",
+          "model": "gpt-5.4-mini",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 2.7777139169629663,
+          "success": false,
+          "status": "failed",
+          "usage": null,
+          "local_skills_disabled": 66,
+          "exit_code": 1,
+          "error": "The Codex CLI did not complete successfully."
+        }
+      ],
+      "error": "TunnelError: The Codex CLI did not complete successfully."
+    },
+    {
+      "case_id": "h07",
+      "arm": "harness",
+      "status": "failed",
+      "result": null,
+      "calls": [
+        {
+          "stage": "honest_holdout_harness",
+          "tunnel": "local",
+          "model": "gpt-5.4-mini",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 1.787783124949783,
+          "success": false,
+          "status": "failed",
+          "usage": null,
+          "local_skills_disabled": 66,
+          "exit_code": 1,
+          "error": "The Codex CLI did not complete successfully."
+        }
+      ],
+      "error": "TunnelError: The Codex CLI did not complete successfully."
+    },
+    {
+      "case_id": "h08",
+      "arm": "harness",
+      "status": "failed",
+      "result": null,
+      "calls": [
+        {
+          "stage": "honest_holdout_harness",
+          "tunnel": "local",
+          "model": "gpt-5.4-mini",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 1.7018544999882579,
+          "success": false,
+          "status": "failed",
+          "usage": null,
+          "local_skills_disabled": 66,
+          "exit_code": 1,
+          "error": "The Codex CLI did not complete successfully."
+        }
+      ],
+      "error": "TunnelError: The Codex CLI did not complete successfully."
+    },
+    {
+      "case_id": "h08",
+      "arm": "direct",
+      "status": "failed",
+      "result": null,
+      "calls": [
+        {
+          "stage": "honest_holdout_direct",
+          "tunnel": "local",
+          "model": "gpt-5.4-mini",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 1.6454643330071121,
+          "success": false,
+          "status": "failed",
+          "usage": null,
+          "local_skills_disabled": 66,
+          "exit_code": 1,
+          "error": "The Codex CLI did not complete successfully."
+        }
+      ],
+      "error": "TunnelError: The Codex CLI did not complete successfully."
+    }
+  ]
+}

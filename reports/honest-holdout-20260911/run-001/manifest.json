@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-09-11T20:48:08.114121+00:00",
+  "registration_sha256": "f1b15f17f8b1989001b2166f3def4dff2f31ce38e0ca090fcc126ea366d3e189",
+  "gold_sha256_committed_before_inference": "c54b5ab52e8226642729f01f6bfbdce314fa2b0678b7af6d7ff9e11ffb4ace4e",
+  "model": "gpt-5.4-mini",
+  "reasoning_effort": "low",
+  "tunnel": "local",
+  "api_credentials_removed": true,
+  "web_tools_plugins_skills_disabled": true,
+  "fallback": false,
+  "retries": 0,
+  "calls_expected": 16,
+  "finished_at": "2026-09-11T20:48:43.005130+00:00",
+  "wall_seconds": 34.89062020799611,
+  "steps_completed": 0,
+  "calls_attempted": 16
+}

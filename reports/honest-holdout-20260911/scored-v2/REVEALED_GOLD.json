@@ -1,0 +1,14 @@
+{
+  "benchmark": "same-task-historical-holdout-v1",
+  "sealed_before_inference": true,
+  "cases": [
+    {"id": "h01", "expected_risk": "elevated", "identity": "Kyoto epithelial-repair paper (2021)", "later_outcome": "Kyoto University found falsification in Figure 2A and 2B experimental-condition reporting.", "outcome_url": "https://www.kyoto-u.ac.jp/sites/default/files/inline-files/03-seimei-8b5fc14704183d426abe58a80662c547.pdf"},
+    {"id": "h02", "expected_risk": "ordinary", "identity": "Open viral-protease structure paper (2005)", "later_outcome": "No public official fabrication or falsification finding located through 2026-09-11.", "outcome_url": null},
+    {"id": "h03", "expected_risk": "elevated", "identity": "Tokushima extracellular-vesicle paper (2018)", "later_outcome": "Tokushima University classified the overlapping and replacement cell images as fabrication.", "outcome_url": "https://www.tokushima-u.ac.jp/fs/4/9/7/3/9/9/_/Reserch_activity_survey_report_summary.pdf"},
+    {"id": "h04", "expected_risk": "ordinary", "identity": "Cross-species epithelial-repair paper (2022)", "later_outcome": "No public official fabrication or falsification finding located through 2026-09-11.", "outcome_url": null},
+    {"id": "h05", "expected_risk": "elevated", "identity": "Plant photosynthetic-supercomplex paper (2009)", "later_outcome": "Kyoto University found fabrication or falsification in multiple main and supplementary figures.", "outcome_url": "https://www.kyoto-u.ac.jp/sites/default/files/inline-files/02-rigaku-49e061939676292fe9a5667e53a592f1.pdf"},
+    {"id": "h06", "expected_risk": "ordinary", "identity": "Pancreatic-cancer extracellular-vesicle paper (2018)", "later_outcome": "No public official fabrication or falsification finding located through 2026-09-11.", "outcome_url": null},
+    {"id": "h07", "expected_risk": "elevated", "identity": "Protein-packing drug-selectivity paper (2005)", "later_outcome": "The U.S. Office of Research Integrity found fabrication or falsification involving this paper.", "outcome_url": "https://ori.hhs.gov/content/case-summary-fernandez-ariel"},
+    {"id": "h08", "expected_risk": "ordinary", "identity": "Photosynthetic-membrane folding paper (2009)", "later_outcome": "No public official fabrication or falsification finding located through 2026-09-11.", "outcome_url": null}
+  ]
+}
