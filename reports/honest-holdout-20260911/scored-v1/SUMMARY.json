@@ -1,0 +1,196 @@
+{
+  "scored_at": "2026-09-11T20:51:13.970249+00:00",
+  "validation_status": "invalid_post_cutoff_disclosure",
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "low",
+  "metrics": {
+    "direct": {
+      "cases": 8,
+      "correct": 7,
+      "accuracy": 0.875,
+      "true_positives": 3,
+      "true_negatives": 4,
+      "sensitivity": 0.75,
+      "specificity": 1.0,
+      "balanced_accuracy": 0.875,
+      "valid_outputs": 8,
+      "calls": 8,
+      "successful_calls": 8,
+      "known_usage_calls": 8,
+      "usage_complete": true,
+      "input_tokens": 52510,
+      "output_tokens": 814,
+      "total_tokens": 53324
+    },
+    "harness": {
+      "cases": 8,
+      "correct": 6,
+      "accuracy": 0.75,
+      "true_positives": 2,
+      "true_negatives": 4,
+      "sensitivity": 0.5,
+      "specificity": 1.0,
+      "balanced_accuracy": 0.75,
+      "valid_outputs": 8,
+      "calls": 8,
+      "successful_calls": 8,
+      "known_usage_calls": 8,
+      "usage_complete": true,
+      "input_tokens": 53870,
+      "output_tokens": 1494,
+      "total_tokens": 55364
+    }
+  },
+  "harness_to_direct_token_ratio": 1.0382566949216112,
+  "winner_by_registered_primary_metric": "direct",
+  "registered_success_criteria": {
+    "harness_strictly_exceeds_direct_balanced_accuracy": false,
+    "all_16_calls_completed_with_valid_outputs": true,
+    "harness_tokens_no_more_than_2x_direct": true
+  },
+  "all_registered_success_criteria_met": false,
+  "per_case": {
+    "direct": [
+      {
+        "case_id": "h01",
+        "expected": "elevated",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": false
+      },
+      {
+        "case_id": "h02",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h03",
+        "expected": "elevated",
+        "predicted": "elevated",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h04",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h05",
+        "expected": "elevated",
+        "predicted": "elevated",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h06",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h07",
+        "expected": "elevated",
+        "predicted": "elevated",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h08",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      }
+    ],
+    "harness": [
+      {
+        "case_id": "h01",
+        "expected": "elevated",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": false
+      },
+      {
+        "case_id": "h02",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h03",
+        "expected": "elevated",
+        "predicted": "elevated",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h04",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h05",
+        "expected": "elevated",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": false
+      },
+      {
+        "case_id": "h06",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h07",
+        "expected": "elevated",
+        "predicted": "elevated",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h08",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      }
+    ]
+  },
+  "gold_sha256": "c54b5ab52e8226642729f01f6bfbdce314fa2b0678b7af6d7ff9e11ffb4ace4e",
+  "registration_sha256": "61a6729c8fd9c87e35a560ea05d3ceeda280957a272ce553aae7d4dd0bef6d4e",
+  "limitations": [
+    "Eight cases are too few for a statistically stable performance estimate.",
+    "Control labels are right-censored absence of a located public finding, not proof of authenticity.",
+    "Identity masking cannot remove post-cutoff facts embedded in model parameters.",
+    "One positive case had no specific pre-cutoff warning signal in the supplied record."
+  ],
+  "invalid_reason": "One h05 sentence described a private 2023 action first disclosed after the cutoff.",
+  "superseded_by": "reports/honest-holdout-20260911/scored-v2"
+}

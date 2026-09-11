@@ -1,0 +1,194 @@
+{
+  "scored_at": "2026-09-11T21:09:06.762756+00:00",
+  "validation_status": "valid_small_exploratory_holdout",
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "low",
+  "metrics": {
+    "direct": {
+      "cases": 8,
+      "correct": 7,
+      "accuracy": 0.875,
+      "true_positives": 3,
+      "true_negatives": 4,
+      "sensitivity": 0.75,
+      "specificity": 1.0,
+      "balanced_accuracy": 0.875,
+      "valid_outputs": 8,
+      "calls": 8,
+      "successful_calls": 8,
+      "known_usage_calls": 8,
+      "usage_complete": true,
+      "input_tokens": 52506,
+      "output_tokens": 796,
+      "total_tokens": 53302
+    },
+    "harness": {
+      "cases": 8,
+      "correct": 6,
+      "accuracy": 0.75,
+      "true_positives": 2,
+      "true_negatives": 4,
+      "sensitivity": 0.5,
+      "specificity": 1.0,
+      "balanced_accuracy": 0.75,
+      "valid_outputs": 8,
+      "calls": 8,
+      "successful_calls": 8,
+      "known_usage_calls": 8,
+      "usage_complete": true,
+      "input_tokens": 53866,
+      "output_tokens": 1512,
+      "total_tokens": 55378
+    }
+  },
+  "harness_to_direct_token_ratio": 1.0389478818806048,
+  "winner_by_registered_primary_metric": "direct",
+  "registered_success_criteria": {
+    "harness_strictly_exceeds_direct_balanced_accuracy": false,
+    "all_16_calls_completed_with_valid_outputs": true,
+    "harness_tokens_no_more_than_2x_direct": true
+  },
+  "all_registered_success_criteria_met": false,
+  "per_case": {
+    "direct": [
+      {
+        "case_id": "h01",
+        "expected": "elevated",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": false
+      },
+      {
+        "case_id": "h02",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h03",
+        "expected": "elevated",
+        "predicted": "elevated",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h04",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h05",
+        "expected": "elevated",
+        "predicted": "elevated",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h06",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h07",
+        "expected": "elevated",
+        "predicted": "elevated",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h08",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      }
+    ],
+    "harness": [
+      {
+        "case_id": "h01",
+        "expected": "elevated",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": false
+      },
+      {
+        "case_id": "h02",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h03",
+        "expected": "elevated",
+        "predicted": "elevated",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h04",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h05",
+        "expected": "elevated",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": false
+      },
+      {
+        "case_id": "h06",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h07",
+        "expected": "elevated",
+        "predicted": "elevated",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "h08",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      }
+    ]
+  },
+  "gold_sha256": "c54b5ab52e8226642729f01f6bfbdce314fa2b0678b7af6d7ff9e11ffb4ace4e",
+  "registration_sha256": "6cbf9338c1ea5da2190197cc1573108e694f8b234d11cc8d57d0247c059a045a",
+  "limitations": [
+    "Eight cases are too few for a statistically stable performance estimate.",
+    "Control labels are right-censored absence of a located public finding, not proof of authenticity.",
+    "Identity masking cannot remove post-cutoff facts embedded in model parameters.",
+    "One positive case had no specific pre-cutoff warning signal in the supplied record."
+  ]
+}
