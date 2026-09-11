@@ -352,10 +352,6 @@ class DoubleLoopVerifier:
         canonical_basis = _basis(response["basis"], materials)
         response["basis"] = [{"version_id": span.version_id, "quote": span.quote}
                               for span in canonical_basis]
-        # The call audit is the scorer's final-model receipt. Keep it aligned
-        # with the canonicalized response returned to the provenance runner.
-        if getattr(self.transport, "model_io", None):
-            self.transport.model_io[-1]["response"] = json.loads(json.dumps(response))
         return VerificationResult(
             response["verdict"], canonical_basis, response["rationale"],
             tuple(Gap(**item) for item in response["gaps"]),
