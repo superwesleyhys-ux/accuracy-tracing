@@ -1,0 +1,157 @@
+{
+  "comparison": {
+    "direct_baseline": {
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "strict_fact_correct": 2,
+      "cases": 8,
+      "tokens": 164490,
+      "source_summary_sha256": "c7f37a0ae13bf07d3cd2e13dbb3896a518ddd0b35f1e88c3c9cd7dcf37d93cf7"
+    },
+    "single_pass_harness": {
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "strict_fact_correct": 8,
+      "cases": 8,
+      "strict_fact_accuracy": 1.0,
+      "later_false_detected": 4,
+      "later_false_cases": 4,
+      "control_high_risk": 0,
+      "control_cases": 4,
+      "attempts": 8,
+      "successful_calls": 8,
+      "known_usage_calls": 8,
+      "usage_complete": true,
+      "input_tokens": 63093,
+      "output_tokens": 1351,
+      "total_tokens": 64444
+    },
+    "harness_to_direct_token_ratio": 0.39178065535898837
+  },
+  "goals": {
+    "strict_fact_accuracy_at_least_75_percent": true,
+    "later_false_detection_4_of_4": true,
+    "tokens_no_more_than_2x_direct": true
+  },
+  "all_goals_met": true,
+  "rows": [
+    {
+      "id": "h01",
+      "role": "authenticity",
+      "variant": "original",
+      "cutoff_expected": "unresolved",
+      "fact_verdict": "unresolved",
+      "claim_scope": "real_world_provenance",
+      "fraud_risk": "high",
+      "pipeline_valid": true,
+      "strict_fact_correct": true,
+      "later_false": true,
+      "later_false_detected": true,
+      "control_high_risk": false
+    },
+    {
+      "id": "h02",
+      "role": "attribution_control",
+      "variant": "original",
+      "cutoff_expected": "supported",
+      "fact_verdict": "supported",
+      "claim_scope": "source_attribution",
+      "fraud_risk": "low",
+      "pipeline_valid": true,
+      "strict_fact_correct": true,
+      "later_false": false,
+      "later_false_detected": false,
+      "control_high_risk": false
+    },
+    {
+      "id": "h04",
+      "role": "attribution_control",
+      "variant": "blinded",
+      "cutoff_expected": "supported",
+      "fact_verdict": "supported",
+      "claim_scope": "source_attribution",
+      "fraud_risk": "low",
+      "pipeline_valid": true,
+      "strict_fact_correct": true,
+      "later_false": false,
+      "later_false_detected": false,
+      "control_high_risk": false
+    },
+    {
+      "id": "h03",
+      "role": "authenticity",
+      "variant": "blinded",
+      "cutoff_expected": "unresolved",
+      "fact_verdict": "unresolved",
+      "claim_scope": "real_world_provenance",
+      "fraud_risk": "high",
+      "pipeline_valid": true,
+      "strict_fact_correct": true,
+      "later_false": true,
+      "later_false_detected": true,
+      "control_high_risk": false
+    },
+    {
+      "id": "h05",
+      "role": "authenticity",
+      "variant": "original",
+      "cutoff_expected": "unresolved",
+      "fact_verdict": "unresolved",
+      "claim_scope": "real_world_provenance",
+      "fraud_risk": "high",
+      "pipeline_valid": true,
+      "strict_fact_correct": true,
+      "later_false": true,
+      "later_false_detected": true,
+      "control_high_risk": false
+    },
+    {
+      "id": "h06",
+      "role": "attribution_control",
+      "variant": "original",
+      "cutoff_expected": "supported",
+      "fact_verdict": "supported",
+      "claim_scope": "source_attribution",
+      "fraud_risk": "low",
+      "pipeline_valid": true,
+      "strict_fact_correct": true,
+      "later_false": false,
+      "later_false_detected": false,
+      "control_high_risk": false
+    },
+    {
+      "id": "h08",
+      "role": "attribution_control",
+      "variant": "blinded",
+      "cutoff_expected": "supported",
+      "fact_verdict": "supported",
+      "claim_scope": "source_attribution",
+      "fraud_risk": "low",
+      "pipeline_valid": true,
+      "strict_fact_correct": true,
+      "later_false": false,
+      "later_false_detected": false,
+      "control_high_risk": false
+    },
+    {
+      "id": "h07",
+      "role": "authenticity",
+      "variant": "blinded",
+      "cutoff_expected": "unresolved",
+      "fact_verdict": "unresolved",
+      "claim_scope": "real_world_provenance",
+      "fraud_risk": "high",
+      "pipeline_valid": true,
+      "strict_fact_correct": true,
+      "later_false": true,
+      "later_false_detected": true,
+      "control_high_risk": false
+    }
+  ],
+  "limitations": [
+    "All eight cases were previously observed development cases.",
+    "The cases represent two event families; masked variants are correlated.",
+    "The four controls are attribution claims, not clean nonfraud provenance controls.",
+    "High fraud risk means missing independent authentication, not proof of fabrication."
+  ]
+}

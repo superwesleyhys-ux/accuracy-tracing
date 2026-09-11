@@ -1,0 +1,372 @@
+{
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "low",
+  "tunnel": "local",
+  "api_credentials_removed": true,
+  "fallback": false,
+  "corpus_sha256": "b5ad5c900145a7a5b208fe8752c1051119d2be18bfa45ececd4d025f6dcf2826",
+  "code_sha256": {
+    "early_risk.py": "0981cef54918f9a603752681617da9c2d22fe41fa684989cebe77b961ea83f08",
+    "tunnels.py": "5ca2843d7086ffbff77b1ea20598f819860126d7b19ff8a92695b39a0431f1a4",
+    "run_test.py": "5aa97df3aac5f1027d19b23c28875da07769057220d45982924ee00f3b8b3aab",
+    "protocol.md": "69b26e1496d71d371e09212d3f9af84ff56c6007d1a4c40422b147a4297db9b6"
+  },
+  "completed_cases": 8,
+  "attempted_calls": 8,
+  "wall_seconds": 50.004022166947834,
+  "raw_predictions_sha256": "3aedf79cc69241daf12abd514225b9d45b40ef29dc2c05c46ba2b3e65eb3586e",
+  "results": [
+    {
+      "id": "h01",
+      "status": "completed",
+      "claim_scope": "real_world_provenance",
+      "fact_verdict": "unresolved",
+      "fraud_risk": "high",
+      "evidence": [
+        {
+          "passage_id": "p008",
+          "version_id": "v1",
+          "start": 533,
+          "end": 653
+        },
+        {
+          "passage_id": "p009",
+          "version_id": "v1",
+          "start": 654,
+          "end": 949
+        },
+        {
+          "passage_id": "p012",
+          "version_id": "v1",
+          "start": 1245,
+          "end": 1312
+        },
+        {
+          "passage_id": "p015",
+          "version_id": "v1",
+          "start": 1546,
+          "end": 1765
+        },
+        {
+          "passage_id": "p017",
+          "version_id": "v1",
+          "start": 1825,
+          "end": 1893
+        }
+      ],
+      "calls": [
+        {
+          "stage": "early_risk",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 7.009942292002961,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 8268,
+            "cached_input_tokens": 0,
+            "output_tokens": 176,
+            "reasoning_output_tokens": 0
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "id": "h02",
+      "status": "completed",
+      "claim_scope": "source_attribution",
+      "fact_verdict": "supported",
+      "fraud_risk": "low",
+      "evidence": [
+        {
+          "passage_id": "p012",
+          "version_id": "v1",
+          "start": 1245,
+          "end": 1312
+        }
+      ],
+      "calls": [
+        {
+          "stage": "early_risk",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 4.703828291036189,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 8257,
+            "cached_input_tokens": 0,
+            "output_tokens": 125,
+            "reasoning_output_tokens": 47
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "id": "h04",
+      "status": "completed",
+      "claim_scope": "source_attribution",
+      "fact_verdict": "supported",
+      "fraud_risk": "low",
+      "evidence": [
+        {
+          "passage_id": "p012",
+          "version_id": "v1",
+          "start": 1254,
+          "end": 1321
+        }
+      ],
+      "calls": [
+        {
+          "stage": "early_risk",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 5.594169124960899,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 8310,
+            "cached_input_tokens": 0,
+            "output_tokens": 133,
+            "reasoning_output_tokens": 55
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "id": "h03",
+      "status": "completed",
+      "claim_scope": "real_world_provenance",
+      "fact_verdict": "unresolved",
+      "fraud_risk": "high",
+      "evidence": [
+        {
+          "passage_id": "p008",
+          "version_id": "v1",
+          "start": 542,
+          "end": 662
+        },
+        {
+          "passage_id": "p009",
+          "version_id": "v1",
+          "start": 663,
+          "end": 958
+        },
+        {
+          "passage_id": "p010",
+          "version_id": "v1",
+          "start": 959,
+          "end": 1127
+        },
+        {
+          "passage_id": "p012",
+          "version_id": "v1",
+          "start": 1254,
+          "end": 1321
+        },
+        {
+          "passage_id": "p014",
+          "version_id": "v1",
+          "start": 1500,
+          "end": 1554
+        },
+        {
+          "passage_id": "p015",
+          "version_id": "v1",
+          "start": 1555,
+          "end": 1774
+        },
+        {
+          "passage_id": "p017",
+          "version_id": "v1",
+          "start": 1834,
+          "end": 1902
+        }
+      ],
+      "calls": [
+        {
+          "stage": "early_risk",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 8.03974120807834,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 8321,
+            "cached_input_tokens": 4864,
+            "output_tokens": 206,
+            "reasoning_output_tokens": 0
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "id": "h05",
+      "status": "completed",
+      "claim_scope": "real_world_provenance",
+      "fact_verdict": "unresolved",
+      "fraud_risk": "high",
+      "evidence": [
+        {
+          "passage_id": "p005",
+          "version_id": "v1",
+          "start": 382,
+          "end": 563
+        },
+        {
+          "passage_id": "p006",
+          "version_id": "v1",
+          "start": 564,
+          "end": 651
+        }
+      ],
+      "calls": [
+        {
+          "stage": "early_risk",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 6.363093042047694,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 7490,
+            "cached_input_tokens": 0,
+            "output_tokens": 195,
+            "reasoning_output_tokens": 69
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "id": "h06",
+      "status": "completed",
+      "claim_scope": "source_attribution",
+      "fact_verdict": "supported",
+      "fraud_risk": "low",
+      "evidence": [
+        {
+          "passage_id": "p008",
+          "version_id": "v1",
+          "start": 873,
+          "end": 1004
+        }
+      ],
+      "calls": [
+        {
+          "stage": "early_risk",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 5.645684625022113,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 7489,
+            "cached_input_tokens": 4864,
+            "output_tokens": 146,
+            "reasoning_output_tokens": 60
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "id": "h08",
+      "status": "completed",
+      "claim_scope": "source_attribution",
+      "fact_verdict": "supported",
+      "fraud_risk": "low",
+      "evidence": [
+        {
+          "passage_id": "p008",
+          "version_id": "v1",
+          "start": 847,
+          "end": 978
+        }
+      ],
+      "calls": [
+        {
+          "stage": "early_risk",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 5.236619999981485,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 7487,
+            "cached_input_tokens": 0,
+            "output_tokens": 149,
+            "reasoning_output_tokens": 42
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "id": "h07",
+      "status": "completed",
+      "claim_scope": "real_world_provenance",
+      "fact_verdict": "unresolved",
+      "fraud_risk": "high",
+      "evidence": [
+        {
+          "passage_id": "p005",
+          "version_id": "v1",
+          "start": 356,
+          "end": 537
+        },
+        {
+          "passage_id": "p006",
+          "version_id": "v1",
+          "start": 538,
+          "end": 625
+        }
+      ],
+      "calls": [
+        {
+          "stage": "early_risk",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 7.400248707970604,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 7471,
+            "cached_input_tokens": 0,
+            "output_tokens": 221,
+            "reasoning_output_tokens": 54
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    }
+  ]
+}
