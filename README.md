@@ -1,381 +1,202 @@
-# FactCircuit
+# FactCircuit development archive
 
-> **Trace every claim. Close the evidence loop.**
+> This public repository preserves the early Accuracy Tracing / NewsVerify
+> Harness development milestone. The project is now **FactCircuit**; use the
+> [canonical repository](https://github.com/superwesleyhys-ux/factcircuit) for
+> the current package, documentation, releases, and contributions. Historical
+> names below are intentionally retained as part of the archived record.
 
-[![Policy tests](https://github.com/superwesleyhys-ux/factcircuit/actions/workflows/ci.yml/badge.svg)](https://github.com/superwesleyhys-ux/factcircuit/actions/workflows/ci.yml)
-[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](pyproject.toml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-2ea44f.svg)](LICENSE)
-[![Research preview](https://img.shields.io/badge/status-research_preview-orange.svg)](#project-status)
+Version 0.2.0: a bounded, auditable news provenance loop with **decomposition on every retrieval return**, a separate verification feedback stage, and a fixed-target evaluation toolkit.
 
-**FactCircuit turns claim verification from a one-shot label into a replayable
-evidence circuit.** Most verification systems return an answer. FactCircuit
-preserves the path: immutable source versions, exact evidence
-spans, staged semantic checks, unresolved gaps, bounded retrieval tasks, stop
-reasons, hashes, and resource usage.
+**Status: local harness with offline replay, opt-in live news tracing, and two model execution paths.** Semantic judgments in the demo are hand-authored annotations. The default decomposer preserves original text and leaves source questions unresolved. Model-backed tracing supports local Codex execution and an optional OpenAI API tunnel. The live adapter follows fetched source links and checks each claim separately; a measured real-world accuracy improvement has not been established.
 
-It is an MIT-licensed, adapter-driven Python harness for building and evaluating
-auditable verification loops over changing news evidence. The standard-library
-core runs offline; the optional model adapter adds a seven-stage validation loop
-with deterministic Python assembly and fail-closed contracts.
+Repository Discussions are enabled, and the repository includes a prepared **Accuracy decline** reporting form for reproducible metric regressions or weaker trace outcomes. Reports should identify the affected metric or behavior, include the run configuration, and avoid treating synthetic fixtures as real-world performance evidence.
 
-## Why FactCircuit?
+## Run
 
-News verification fails in ways that a final `true` or `false` label cannot
-show. URLs are revised. Syndicated stories look independent. A nearby number,
-date, negation, or actor can silently attach to the wrong event. A retrieval
-loop can also forget why it searched, reuse stale feedback, or leak material
-published after the evaluation cutoff.
-
-FactCircuit makes those failure surfaces explicit:
-
-- **Evidence is versioned, not overwritten.** Same-URL revisions retain
-  separate identities, exact source spans, timestamps, and content hashes.
-- **Every material return is decomposed.** A document cannot influence the
-  evidence graph merely because a retriever found it.
-- **Evidence and reality are judged separately.** “Does this snapshot support
-  the claim?” is isolated from “Did the event happen in the world?”
-- **One giant prompt does not control the pipeline.** Seven single-purpose
-  stages handle atoms, lineage, critics, evidence, and world assessment; Python
-  validates and assembles the final judgement.
-- **Uncertainty becomes work.** Missing information is emitted as an exact
-  fetch, search, or reanalysis task and re-enters the same bounded loop.
-- **Bad state fails closed.** Invalid schemas, ungrounded spans, duplicate
-  probes, stale task receipts, cross-event bindings, and exhausted budgets are
-  recorded instead of being partially committed.
-- **Evaluation is a first-class feature.** Fixed targets, cutoff checks, gold
-  isolation, paired comparisons, bootstrap intervals, and machine-readable
-  traces are part of the harness rather than an afterthought.
-
-## The loop
-
-```text
-Frozen claim + evidence cutoff
-             │
-             ▼
-    Deterministic TargetPlan
-             │
-             ▼
-retrieval → immutable snapshot → cutoff admission
-   ▲                                  │
-   │                                  ▼
-   │                    atoms → lineage → decomposition critic
-   │                                  │
-   │                                  ▼
-   │                       atomic Python assembly
-   │                                  │
-   │                    ┌─────────────┴─────────────┐
-   │                    ▼                           ▼
-   │                 evidence                    world
-   │                    ▼                           ▼
-   │             evidence critic              world critic
-   │                    └─────────────┬─────────────┘
-   │                                  ▼
-   └──── exact unresolved tasks ← decision + audit trace
-                   bounded by rounds, calls, output, and time
-```
-
-The graph keeps source lineage distinct from semantic support or contradiction.
-Finding ten copies of one wire story therefore does not become ten independent
-sources, and finding a contradiction does not magically identify the original
-publisher.
-
-## Early evidence: original vs PR1
-
-The repository includes a frozen historical comparison using propositions made
-in 2023 and official outcome evidence available by the end of 2024. On the
-completed two-case post-hoc pilot, the PR1 staged loop resolved both
-propositions correctly while the original monolithic loop resolved one:
-
-| Frozen pilot | Original monolithic | PR1 staged |
-| --- | ---: | ---: |
-| Accuracy | 1/2 (50%) | **2/2 (100%)** |
-| True-claim recall | 0/1 | **1/1** |
-| False-claim recall | 1/1 | **1/1** |
-| Abstention | 1/2 | **0/2** |
-| Model calls | 6 | 33 |
-| Total tokens | 15,693 | 49,804 |
-
-This is a promising engineering signal, not a population-level accuracy claim.
-The pair contains only two retrospectively selected cases. PR1 used 5.5× as
-many model calls and 3.17× as many total tokens, so the result does not isolate
-prompt structure from compute. A separate Lucid full-evidence diagnostic also
-exposed a staged-path error and left the overall run status as `has_errors`;
-that control is excluded from the two scored main cases but is retained in the
-public artifacts.
-
-Read the [human summary](reports/historical-2023-pilot2-v3-live-001/SUMMARY.md)
-or inspect the [machine-readable scores](reports/historical-2023-pilot2-v3-live-001/scores.json),
-raw calls, retrieval records, traces, frozen inputs, and checksums.
-
-## Quick start
-
-Start with the pinned **v0.3.2** release. You need Git and Python 3.11 or newer.
-Installation downloads build tools; the first example then runs entirely
-offline with no API key, model download or runtime dependencies.
-
-### macOS / Linux
+Python 3.11+; standard library only. From this project directory:
 
 ```bash
-git clone --branch v0.3.2 --depth 1 https://github.com/superwesleyhys-ux/factcircuit.git
-cd factcircuit
-python3 -m venv .venv
-.venv/bin/python -m pip install .
-.venv/bin/python -m factcircuit --version
-.venv/bin/python -m factcircuit quickstart --output runs/first-run
+python -m newsverify trace examples/local_trace.json --output reports/local-trace.json
+python -m newsverify trace-demo --output reports/trace-demo-v0.2.json
+python -m newsverify score examples/evaluation_gold.json examples/evaluation_predictions.json --output reports/all-metrics-v0.2.json
+python -m newsverify compare examples/evaluation_gold.json examples/comparison_baseline.json examples/comparison_candidate.json --bootstrap-samples 100 --seed 0 --output reports/comparison-v0.2.json
+python -m unittest discover -s tests -v
 ```
 
-### Windows PowerShell
+The trace demo follows four material versions over three retrieval rounds, reopens affected old analyses, and routes a verification-requested correction through decomposition. It preserves the original target and separates lineage from semantic contradiction.
 
-```powershell
-git clone --branch v0.3.2 --depth 1 https://github.com/superwesleyhys-ux/factcircuit.git
-cd factcircuit
-py -3 -m venv .venv
-.venv\Scripts\python.exe -m pip install .
-.venv\Scripts\python.exe -m factcircuit --version
-.venv\Scripts\python.exe -m factcircuit quickstart --output runs/first-run
+The metric example is a deliberately imperfect set of four **handwritten predictions**, used to verify arithmetic against independent expected values. The comparison example uses identical handwritten runs to check paired differences. Neither example is a model performance result.
+
+## Local harness execution
+
+`trace <input.json>` runs directly in the local Python process. It reads a JSON
+object with `target`, `rounds` (lists of material-version objects), and optional
+`config`; see [local_trace.json](examples/local_trace.json). Source URLs are audit
+metadata only and are never fetched. No API key, HTTP service, model SDK, or
+remote inference is needed. Reports are written locally with `--output`.
+
+This command preserves supplied text using `ConservativeDecomposer` and leaves
+fact status as `not_checked` and original-source judgments unresolved. It does not turn a
+snapshot into an automatic fact check. For semantic work, the hosting local
+harness can pass its own Python `Decomposer` and `Verifier` objects directly to
+`run_provenance`; a remote API is not part of the required integration.
+
+The [public model comparison](reports/model-evaluation-20260908/README.md)
+records Astra alone versus Astra inside the full harness. The local CLI uses a
+hosted model through the existing Codex login; this is not offline inference,
+an equal-compute experiment, or a held-out real-news accuracy result.
+
+## Two model execution tunnels
+
+For news articles, `trace-news` integrates the uploaded news-tracing project with
+the double-loop harness. It fetches the article, follows its upstream links,
+then reports source origin and factual support separately for every assessed
+claim. Local Codex execution is the default; the API route remains explicit.
+
+```sh
+python -m newsverify trace-news examples/news_tracing.json --model gpt-6-astra --output reports/news-trace.json
 ```
 
-Expected terminal output:
+This command uses live public pages and model calls. See
+[news tracing](docs/NEWS_TRACING.md) for snapshots, budgets, limitations, and the
+exact imported-code manifest. Original sources may contain false claims;
+finding one does not by itself establish truth.
+The [real integration test](reports/news-tracing-integration-20260908/README.md)
+records a partial source chain, its missing research paper, and measured usage.
 
-```text
-factcircuit 0.3.2
-Offline annotated example: contradicted; 3 rounds; 0 model calls.
-Read runs/first-run/SUMMARY.md
-```
-
-Open `runs/first-run/SUMMARY.md`. The same directory contains `inputs.json`,
-`config.json` and `trace.json`. Four fictional evidence versions pass through
-three retrieval rounds, including source tracing and a publisher correction.
-The semantic annotations are hand-authored; this checks the working evidence
-loop, not model accuracy. Existing output directories are never overwritten.
-
-See the [first-run guide](docs/QUICKSTART.md) for configuration, expected fields,
-troubleshooting, and running your own claims with a local model. Local GGUF
-inference uses separately installed weights; the provided setup selects Qwen,
-not Astra. The original `trace-demo`, `score`, and `compare` commands remain
-available. Use the Python executable from your virtual environment below.
-
-### Score and compare fixed predictions
+Both tunnels run the same decomposition and verification adapters in the local
+harness. **Local is the default** for `trace-model`. Select API explicitly:
 
 ```bash
-python3 -m factcircuit score \
-  examples/evaluation_gold.json \
-  examples/evaluation_predictions.json \
-  --output reports/all-metrics-local.json
+# Tunnel 1: local Codex CLI, using the existing Codex login
+python -m newsverify trace-model examples/model_trace.json --output reports/model-local.json
 
-python3 -m factcircuit compare \
-  examples/evaluation_gold.json \
-  examples/comparison_baseline.json \
-  examples/comparison_candidate.json \
-  --bootstrap-samples 100 \
-  --seed 0 \
-  --output reports/comparison-local.json
+# Tunnel 2: OpenAI Responses API, using OPENAI_API_KEY from the environment
+python -m newsverify trace-model examples/model_trace.json --tunnel api --output reports/model-api.json
 ```
 
-These bundled predictions are deliberately imperfect handwritten fixtures for
-checking arithmetic. They are not model-performance results.
+`--model` and `--reasoning-effort` override the configured Codex model/settings;
+if no model is configured, supply `--model`. `--timeout` sets the per-call timeout
+in seconds (default 180). The API tunnel uses the standard library and requires
+`OPENAI_API_KEY`; the local tunnel does not use an API key. Local Codex execution
+can still use a hosted model, so it is distinct from offline inference.
 
-### Audit the historical cutoff contract
+Reports contain `execution.tunnel`, model settings and measured model-call usage.
+Both paths use the same output schemas, exact-quote checks and historical
+eligibility rules. Ineligible materials receive local preservation and do not
+reach either model. Failed calls remain errors in the selected path; there is
+no automatic fallback. Exit status is 1 for an audited execution failure and 2
+for invalid input or unavailable configuration.
 
-This step is offline and does not call a model or open the web:
+`trace-model` extracts claims and verifies facts over supplied snapshots. These
+adapters do not yet infer a source graph or perform active follow-up retrieval;
+a fact verdict does not mean provenance is complete. `trace` remains the fully
+offline snapshot command described above. See [the tunnel contract](docs/MODEL_TUNNELS.md)
+for configuration, reporting and validation details.
+
+## Opt-in double-loop model runner
+
+`newsverify.double_loop` adds model-generated source relations, evidence gaps,
+gap resolutions and requests to reopen earlier analyses. Its provider selects
+additional eligible documents from a fixed local snapshot pool in response to
+the actual open questions. Verification follow-up enters that same retrieval
+and decomposition path. It does not search the open web.
 
 ```bash
-python3 experiments/historical_compare.py audit \
-  --inputs experiments/historical-2023-pilot2-v3/inputs.json \
-  --sources experiments/historical-2023-pilot2-v3/sources.json \
-  --freeze experiments/historical-2023-pilot2-v3/freeze.json \
-  --gold experiments/historical-2023-pilot2-v3/gold.json \
-  --output reports/historical-2023-audit-local.json
+python -m newsverify.double_loop CASE.json --output REPORT.json --max-model-calls 10
 ```
 
-### Run fresh verification on your own CPU
+The input contains `target`, `materials`, one `initial_version_ids` entry, and
+optional round/document/decomposition `config` limits. Local is the default;
+`--tunnel api` selects the separate API route. Reports preserve all model-stage
+inputs and outputs, call usage, source-selection requests and analysis revisions.
+The call cap includes selection, decomposition and verification. There is no
+enforced total-token ceiling.
 
-The local model path loads GGUF weights with llama.cpp in a local Python worker.
-It generates new responses and executes the same staged or monolithic verifier.
-It requires no OpenAI SDK, API key, or hosted inference service. The worker
-disables networking and stops on errors or timeouts without cloud fallback.
+[Experiment code and reproducibility limits](experiments/README.md) describe
+the public receipts and locally retained evidence archive. The 176 automated
+tests use controlled fixtures; real model outcomes and actual loop execution
+are reported separately. Verification questions reopened by newer evidence
+cannot be silently closed by an older resolution, and provenance gap identities
+remain protected after retirement. Local model subprocesses exclude installed
+skill catalogs while retaining normal Codex instructions.
 
-```bash
-python3 scripts/configure_local.py
-.venv-local/bin/python experiments/local_inference.py \
-  --config .local/model.json \
-  --output reports/my-local-inference
-```
+The [completed local Astra comparison](reports/model-evaluation-20260908/README.md)
+records six constructed cases across three research topics. Original registered
+label matches were 6/6 for Astra alone and 5/6 with the harness. The difference
+exposed a corpus defect: the harness correctly flagged a news-date qualifier
+missing from the supplied text. Both matched the five undisputed cases and a
+separately reported corrected follow-up. The harness used 5.72 times the tokens
+in the original batch. All 49 original and follow-up model calls succeeded.
+Neither the flawed original tally nor the selected repair establishes general
+accuracy superiority. Full source captures remain local; public numeric
+receipts can be independently checked without redistributing publisher text.
 
-On Windows, run `python scripts/configure_local.py` and use
-`.venv-local\Scripts\python.exe` for the inference Python executable.
-Use Python 3.11 or later with an available llama.cpp CPU wheel; the initial
-installation and fresh inference were tested on Linux x86_64 with Python 3.12.
-Setup downloads the pinned 2.50 GB Qwen3-4B-Instruct-2507 Q4_K_M model and checks
-its SHA-256 before writing `.local/model.json`. The weights and machine-specific
-configuration are excluded from git. Only installation requires downloads;
-subsequent inference reads local files. CPU mode is the default, with up to
-eight threads and a 16,384-token context. The config permits a GPU layer count
-when a compatible llama.cpp build and hardware are supplied.
+The separate [historical-cutoff comparison](reports/historical-evaluation-20260908/README.md)
+tests two pre-2024 research papers with public fabrication findings in 2025.
+Only historical paper text available by December 31, 2023 enters the model;
+later findings are held separately for scoring. Named cases and identity-masked
+variants are reported separately, with true attribution controls. This is a
+small retrospective test of supplied evidence, not a way to remove later
+knowledge from the model's training. Abstaining on authenticity does not count
+as detecting fabrication.
 
-The local command defaults to the staged loop. `--semantic-mode monolithic`
-selects the earlier adapter; `--case ID` selects one case. Controls are included
-only with `--include-controls`. Use a new output directory for every run.
-Generation runs sequentially against one loaded model, with per-case budgets
-and a worker deadline. If the worker times out it is stopped; no remote retry
-is possible. Raw local requests and outputs, usage, traces and errors are saved.
-The local decoder restricts source references to each layer's supplied material
-IDs. Missing scoped evidence cannot produce a conclusive dimension verdict.
-String and array length limits remain in the original prompts and Python gates;
-the sampling grammar omits them to avoid llama.cpp grammar expansion limits.
+Both paths left both named authenticity claims unresolved and correctly answered
+both attribution controls. The harness used 363,147 tokens versus 92,818 for
+Astra alone (3.91 times as many). The masked cases retained one timeout in
+each arm; its missing usage prevents an exact whole-batch token total. A separate
+[Inspect AI replay](reports/historical-inspect-audit-20260908/README.md)
+checks the saved outcomes without new model calls. These results show no advance
+fabrication-detection benefit on this two-event sample.
 
-Local tokens consume compute and memory but are not billed by a model API.
-Local latency and verification quality must be measured independently from the
-archived Astra results. No model download or successful installation alone
-establishes news accuracy. The snapshot provider still searches supplied
-materials rather than the open web.
+## Trace engine
 
-### Re-execute archived comparisons locally
+`run_provenance(target, provider, decomposer=None, verifier=None, config=None)` uses typed plug-ins documented in [TRACE_ADAPTER.md](docs/TRACE_ADAPTER.md).
 
-This source-checkout command runs the current verification code against saved
-model responses. It requires no API key, SDK, network connection, or local model.
-It is deterministic response replay and does not generate new model answers.
+- Immutable material versions, exact source spans and observation records.
+- Every valid return is saved and decomposed before graph or verifier admission.
+- Same-URL revisions keep distinct identities; an ID/content collision fails unresolved.
+- Candidate relations distinguish direct, declared, inferred, unresolved and excluded evidence.
+- Original-source completion requires an explicit finding and a direct lineage path from the target's source version. Support/contradiction edges do not substitute for that path.
+- `revisit_versions` triggers affected earlier analyses; current results are rebuilt while history remains available.
+- Verification gaps follow the same retrieval/decomposition route.
+- Round, material and decomposition budgets, plus explicit no-progress and error results.
+- Historical admission requires an exact version availability declaration and basis. There is no arbitrary age cutoff for old original records.
 
-```bash
-python3 experiments/local_replay.py \
-  --archive reports/historical-2023-pilot2-v3-live-001 \
-  --inputs experiments/historical-2023-pilot2-v3/inputs.json \
-  --sources experiments/historical-2023-pilot2-v3/sources.json \
-  --freeze experiments/historical-2023-pilot2-v3/freeze.json \
-  --gold experiments/historical-2023-pilot2-v3/gold.json \
-  --output reports/local-replay-my-run
-```
+Historical graph admission is not proof against all future-information leakage: a stateful adapter might retain excluded content, and a pretrained model may already know later events. Strict historical inference isolation, live timeouts and model token accounting remain adapter work.
 
-API status is `not_used` with zero requests. `execution_status` reports whether
-the archived calls could be replayed; `verification_status` separately retains
-semantic failures. This pilot replays all six case/arm/control combinations,
-including the known staged Lucid full-evidence error. Exit code 1 means replay
-or verification errors were retained; exit code 2 means setup or archive
-validation failed. Use a fresh output directory for each run.
+## Evaluation
 
-Call hashes and exact requests are checked before accepting saved responses.
-Optional gold labels are opened after replay, and scores are explicitly marked
-`archived_response_replay`. They do not constitute a new accuracy measurement.
-An invalid API key cannot block this local path. Fresh model inference still
-requires a separately configured model runtime.
+Gold labels and predictions are separate files. Cases are fixed before inference. Missing/extra/duplicate target IDs, mismatched cutoffs, unjudged evidence IDs and invalid probabilities fail validation.
 
-### Run a model-backed comparison
-
-The experimental runtime is source-checkout-only. Install the pinned optional
-dependencies and provide `OPENAI_API_KEY` through the process environment—never
-through a tracked file:
-
-```bash
-python3 -m pip install -e '.[model]'
-
-python3 experiments/loop_compare.py run \
-  --inputs experiments/inputs-v03.json \
-  --output reports/my-run \
-  --model MODEL_NAME \
-  --semantic-mode staged \
-  --max-repairs 1 \
-  --max-rounds 5
-```
-
-Use `--semantic-mode monolithic --max-repairs 0` for the earlier adapter. The
-two modes have separate caches and different internal repair budgets; compare
-their resource use as well as their scores.
-
-## Integration surface
-
-The core entry point is:
-
-```python
-from factcircuit.provenance import run_provenance
-
-run_provenance(target, provider, decomposer=None, verifier=None, config=None)
-```
-
-Typed provider, decomposer, and verifier contracts are documented in
-[`docs/TRACE_ADAPTER.md`](docs/TRACE_ADAPTER.md). A tracker supplies claims and
-retrieved snapshots; the harness returns a decision, provenance graph,
-reanalysis history, unresolved gaps, resource accounting, and termination
-reason. It does not require a particular search engine, model, or publisher
-ranking policy.
-
-## Evaluation toolkit
-
-Gold labels and predictions live in separate files. Missing, extra, or
-duplicate target IDs; cutoff mismatches; unjudged evidence; and malformed
-probability vectors fail validation.
-
-| Metric | What it measures |
-| --- | --- |
-| VP | Precision of claims admitted to a trusted feed |
-| FR | Fraction of false claims withheld |
+| Metric | Measures |
+|---|---|
+| VP | Precision of claims admitted to the trusted feed |
+| FR | Fraction of false claims withheld from the feed |
 | TR | Fraction of true claims admitted |
-| SR | Correct original-root sets with valid provenance paths |
-| EN | Precision of evidence asserted to support a target |
-| CA | Probability quality using a normalized four-class Brier score |
+| SR | Correct original-root sets with valid provenance paths on traceable targets |
+| EN | Precision of evidence asserted to support its target |
+| CA | One minus half the four-class Brier score; probability quality, not pure calibration |
 | HFAR | High-risk false claims incorrectly admitted |
 
-The scorer also reports source precision, evidence recall, edge
-precision/recall, duplicate-pair F1, confusion matrices, coverage, ECE, and an
-experimental `NVScore`. Scores measure agreement with supplied gold; they do
-not establish truth by themselves.
+Also reports source precision, false promotion of unknown origins, edge precision/recall, evidence recall, duplicate-pair F1, confusion matrix, coverage and ECE. A zero denominator is `null`. Missing probability vectors make CA and the aggregate unavailable. Scores never establish truth by themselves.
 
-## Project status
+The experimental `NVScore` preserves the weights discussed in the design. It is not Terminal-Bench or an official benchmark, and its weights are not empirically validated. `compare` checks **declared** equal model/corpus/budget settings and supplied usage, then produces paired event-cluster bootstrap intervals. It cannot attest that external model usage logs are authentic.
 
-Version 0.3.2 provides a reproducible first-run release of this **research preview**.
-The semantic model adapter remains experimental. GitHub Actions exercises
-the regression suite on Python 3.11, 3.12, and 3.13 and the installed first-run
-command on Linux, macOS, and Windows. The core CLI, offline trace engine,
-evaluation toolkit, staged model adapter, frozen historical corpus, and raw
-pilot artifacts are included.
+The trace engine and scorer have separate schemas. A production exporter and independently reviewed data are still required; no implicit conversion turns plug-in judgments into gold labels.
 
-### Name and compatibility
+## Documents
 
-Version 0.3.1 renames the project and Python distribution from Accuracy
-Tracing / NewsVerify Harness to **FactCircuit**. New integrations should use
-the `factcircuit` import package and command. The existing `newsverify` imports
-and command remain supported as compatibility entry points, and the original
-v0.2/v0.3 reports retain their historical names and contents.
-
-Current boundaries are deliberate and visible:
-
-- The bundled provider searches supplied snapshots; it does not browse the open
-  web or authenticate remote pages independently.
-- Present-day model weights cannot be rolled back to an earlier knowledge
-  cutoff. The historical harness isolates supplied evidence, not model memory.
-- Internal hashes prove repository consistency, not third-party authenticity of
-  a remote source or API response.
-- The staged adapter remains experimental and has a known full-evidence control
-  failure documented in the pilot report.
-- The current real-source result is far too small and too post-hoc for a general
-  accuracy claim. A blind, event-separated benchmark and equal-compute ablation
-  remain roadmap work.
-
-## Documentation
-
-- [FactCircuit specification index](docs/FACTCIRCUIT_SPEC.md)
-- [Installation, configuration and complete first run](docs/QUICKSTART.md)
-- [v0.3.2 release notes](docs/releases/v0.3.2.md)
-- [Original design specification and metric definitions](docs/ACCURACY_TRACING_SPEC.md)
-- [Staged validation loop](docs/STAGED_VALIDATION_LOOP.md)
+- [Chinese design conclusion and all metric definitions](docs/ACCURACY_TRACING_SPEC.md)
+- [Codex execution plan and remaining implementation sequence](docs/CODEX_EXECUTION_PLAN.md)
 - [Trace adapter API](docs/TRACE_ADAPTER.md)
-- [Historical 2023 benchmark contract](docs/HISTORICAL_2023_BENCHMARK.md)
-- [v0.3.2 validation record](reports/VALIDATION_V0.3.2.md)
-- [v0.3 repair and migration contract](docs/REPAIR_V0.3.md)
-- [Roadmap](docs/ROADMAP.md)
-- [Changelog](CHANGELOG.md)
+- [Evaluation schema](docs/EVALUATION_SCHEMA.md)
+- [Observed validation report](reports/VALIDATION_V0.2.md)
 
-## Community
+## Legacy compatibility
 
-Small, reproducible contributions are welcome. Start with
-[`CONTRIBUTING.md`](CONTRIBUTING.md), open an issue for a defect or proposal, or
-use the dedicated [Accuracy decline discussion category](https://github.com/superwesleyhys-ux/factcircuit/discussions/categories/accuracy-decline)
-to report a measurable regression with its corpus, configuration, budgets, and
-trace artifacts.
+`python -m newsverify demo`, `verify`, and `benchmark` retain the v0.1 annotated-evidence policy runner in `core.py`. Its publisher/origin grouping and 72-hour default window are legacy policy choices, not the v0.2 provenance algorithm. Its 22 synthetic scenarios remain regression tests, not real-news accuracy estimates. The earlier [adapter contract](docs/ADAPTER_CONTRACT.md) applies to that runner only.
 
-Security-sensitive findings should follow [`SECURITY.md`](SECURITY.md) rather
-than being posted with credentials or private data.
-
-## License
-
-Released under the [MIT License](LICENSE). Use it, inspect it, challenge it, and
-help make evidence-driven AI systems easier to audit.
+Released under the [MIT License](LICENSE). Current project:
+[superwesleyhys-ux/factcircuit](https://github.com/superwesleyhys-ux/factcircuit).

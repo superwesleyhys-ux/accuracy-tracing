@@ -1,85 +1,55 @@
 # Roadmap
 
-Milestones are ordered by evidence dependency, not promised dates. Version
-0.3.0 establishes the public, reproducible research base; the next milestones
-focus on independent data and fairer comparisons.
+Milestones are ordered by dependency, not promised dates. The current deliverable is an offline starter prepared for public release.
 
-## 1. Reproducible open-source core — complete for 0.3.0
+## 1. Publish a reproducible starter
 
-- MIT-licensed Python package with a standard-library core.
-- Deterministic trace demo, evaluation CLI, typed adapters, and audit schemas.
-- Immutable evidence versions, provenance paths, reanalysis, bounded feedback,
-  and explicit termination reasons.
-- Seven-stage optional semantic adapter with fail-closed Python assembly.
-- CI across Python 3.11–3.13 and a release manifest covering tracked artifacts.
+- Review the package, MIT license, deterministic demo, tests, and adapter contract.
+- Publish a public repository and tagged release with exact reproduction commands.
+- Record known limitations prominently: trusted stance labels, supplied lineage, no live retrieval, and synthetic evaluation only.
 
-The release is complete as an inspectable research harness, not as a production
-fact-checking service.
+Done when a new contributor can reproduce the demo and inspect why each fixture received its outcome.
 
-## 2. Connect one live provider
+## 2. Connect local harness materials
 
-- Add an adapter with explicit query intent handling, timeouts, retry and spend
-  limits, safe logging, and stable source identities.
-- Support reproducible replay of permitted snapshots and distinguish snippets
-  from full-page text.
-- Test corrections, redirects, missing timestamps, URL revisions, syndication,
-  rate limits, and partial outages.
-- Keep provider credentials, private feeds, and licensed corpora outside public
-  artifacts.
+- Inspect the actual earlier tracker before writing its integration.
+- Add a local adapter with explicit query intent handling, bounded work, and safe logging. Use snapshot files or the hosting harness’s material store; no API client or credentials are required.
+- Capture retrieval timestamps, original publication times, publisher identifiers, origin identifiers, and retrieval failures.
+- Support reproducible replay of permitted snapshots. Document how snippets differ from full-page text.
+- Test corrections, redirects, missing timestamps, updates to an existing URL, and syndicated reports.
 
-Done when an archived input reproduces the same core decision and live failures
-produce a visible incomplete result rather than silent success.
+Done when the same archived input reproduces the same core decision and missing local materials produce a visible incomplete result.
 
-## 3. Build a blind historical benchmark
+## 3. Build a blind news benchmark
 
-Version 0.3.0 includes eight frozen 2023 propositions and a cutoff/gold-isolated
-harness, but only two post-hoc cases have completed the published model
-comparison. The next benchmark must:
+- Define atomic claims, event identifiers, claim cutoffs, inclusion criteria, and an annotation guide before collecting results.
+- Separate development and test cases by event and time. Keep duplicate, syndicated, and follow-up coverage together to prevent leakage.
+- Ask independent reviewers with relevant expertise to label claim status and evidence stance as of each cutoff, with adjudication for disagreements.
+- Retain source lineage, corrections, retractions, inaccessible documents, and unresolved claims. Version labels when later facts change; preserve the original cutoff-based evaluation.
+- Use distributable material and publish provenance and retrieval metadata sufficient to reproduce the experiment.
 
-- define claims, event groups, cutoffs, source rules, and annotation guidance
-  before inference;
-- separate development and test data by event and time;
-- use independent reviewers and adjudication for disputed labels;
-- retain corrections, inaccessible evidence, unresolved outcomes, and source
-  lineage; and
-- publish distributable evidence with enough provenance to reproduce the run.
+Done when a held-out set and its evaluation procedure are fixed before thresholds or retrieval strategies are tuned on it.
 
-Done when the held-out set and evaluation procedure are frozen before prompt,
-threshold, or retrieval tuning.
+## 4. Test whether the loop helps
 
-## 4. Isolate where the loop helps
+Compare a single-pass baseline with the bounded loop using the same provider, claim set, time cutoff, document budget, and scoring rules. For model-backed adapters, also match or explicitly report token and monetary budgets. Share configurations and all exclusions.
 
-Compare monolithic and staged verification under multiple resource regimes:
+Measure more than overall agreement:
 
-- equal outer caps, matching the current harness;
-- equal calls and equal total tokens;
-- decomposition-only and critic-only ablations;
-- single-pass versus continued retrieval using a shared first-round prefix; and
-- source-complete controls that distinguish reasoning failures from missing
-  evidence.
+| Metric | Question it answers |
+| --- | --- |
+| Precision of supported/contradicted decisions | How often are committed decisions right against the held-out labels? |
+| Decision coverage and unresolved rate | How often does the system decide or abstain? |
+| Contradiction and conflict recall | How often does it find known contrary evidence? |
+| Citation and entailment validity | Do references exist, and do reviewed passages justify the assigned stance? |
+| Lineage and duplicate errors | Does shared reporting falsely count as independent evidence? |
+| Time-cutoff leakage | Was any evidence unavailable at the evaluated time? |
+| Retrieval, latency, and cost | What does each incremental decision cost? |
 
-Report per-class counts, confidence intervals, abstention, failures, exclusions,
-latency, and cost. A higher decision rate without adequate precision is not an
-improvement.
+Report per-class sample counts, confidence intervals, and representative failures. A higher decision rate without adequate precision is not an improvement. Confidence scores should not be introduced until they can be calibrated and evaluated separately from policy labels.
 
-Done when a preregistered held-out comparison identifies benefit, cost, and
-failure cases without pooling exploratory pilots as confirmatory evidence.
+Done when an equal-budget ablation reports the loop's measured benefit or lack of benefit without hiding difficult or unresolved cases.
 
-## 5. Harden the experimental adapter
+## 5. Support real users
 
-- Resolve the known full-evidence staged diagnostic failure.
-- Expand multilingual, passive-voice, nominalization, numeric, temporal,
-  negation, and multi-event red-team coverage.
-- Add production concurrency, cancellation, network-failure, and long-run cost
-  tests.
-- Define stable installed entry points for the optional experimental runtime.
-
-Done when failures are typed, reproducible, and recoverable across supported
-providers and model transports.
-
-## 6. Support real users
-
-Use evidence from independent integrations to improve the contract and docs.
-Track releases, issues, external contributions, and downstream use with public
-links. Accuracy and ecosystem claims will be made only when backed by measured,
-reviewable data.
+Use feedback from independent integrators to improve the contract and failure handling. Track actual releases, issues resolved, external contributions, and downstream uses with public links. Apply for maintainer support using that evidence; the project should remain useful regardless of an application's outcome.

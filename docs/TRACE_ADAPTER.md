@@ -1,193 +1,245 @@
-# FactCircuit v0.3 adapter contract
+# Accuracy Tracing: provenance and verification adapter contract
 
-`factcircuit.provenance.run_provenance` orchestrates immutable snapshots, exact source spans, bounded retrieval, decomposition, source lineage and layered verification. It has no built-in truth oracle or network dependency. Plug-ins supply semantic findings; the runner validates structure, ordering, scope and evidence references.
+This is the v0.2 orchestration contract. The existing `newsverify.core` API remains
+separate. The import package remains `newsverify` for compatibility.
 
-The legacy policy API remains separate. The earlier `newsverify` import path is retained as a compatibility alias. Historical v0.2/v0.3 reports keep their original names and contents; this document describes the current contract.
+## What runs today
 
-## Public entry point
+`newsverify.provenance.run_provenance` enforces immutable versions, exact citation
+spans, historical availability, mandatory decomposition of each returned material,
+analysis revision history, distinct relation types, bounded retrieval and a
+verification-to-provenance feedback path. It has no network or model dependency.
+
+The default `ConservativeDecomposer` preserves a complete original-text fragment
+and leaves the source question open. It does not perform semantic extraction.
+`trace_demo` uses manually supplied synthetic annotations and deterministic replay
+verdicts. Neither passing its tests nor its final verdict measures real-news accuracy.
+
+## Public entry points
 
 ```python
-from factcircuit.provenance import (
-    MaterialVersion, RetrievalHit, Target, TraceConfig, run_provenance,
+from newsverify.provenance import (
+    Target, MaterialVersion, ReplayTraceProvider, TraceConfig, run_provenance,
 )
 
-report = run_provenance(
-    target=Target(
-        id="claim-1",
-        text="The bridge reopened before Friday.",
-        as_of="2026-09-04T20:00:00Z",
-        source_version_id="article:v1",
-        assessment_mode="evidence",
-        evidence_scope=("notice:v1",),
-    ),
-    provider=provider,
-    decomposer=decomposer,
-    verifier=verifier,
-    config=TraceConfig(
-        max_rounds=5,
-        max_documents=30,
-        max_decomposition_calls=30,
-    ),
+target = Target(
+    id="claim-1",
+    text="A fixed original claim, including its qualifiers.",
+    as_of="2026-09-04T20:00:00Z",
+    source_version_id="article:v1",
 )
+version = MaterialVersion(
+    version_id="article:v1",
+    url="https://example.org/article",
+    content="A fixed original claim, including its qualifiers.",
+    retrieved_at="2026-09-05T01:00:00Z",
+    published_at="2026-09-04T12:00:00Z",
+    available_at="2026-09-04T12:01:00Z",
+    availability_basis="Exact-version archive record identifier or stored capture reference",
+)
+report = run_provenance(
+    target, ReplayTraceProvider(((version,),)),
+    config=TraceConfig(max_rounds=5, max_documents=30, max_decomposition_calls=30),
+)
+# This conservative run is partial, not a claim that the original was found.
 ```
 
-`target` and `config` may also be dictionaries with the exact dataclass fields. A JSON-array `evidence_scope` is normalized to a tuple. Adapters return the frozen dataclasses documented below, not unvalidated model JSON.
+`target` and `config` can also be dictionaries with the exact dataclass field
+names. The adapters must return the documented dataclass objects, not unvalidated
+JSON. Adapters are responsible for converting and validating model outputs.
 
-`assessment_mode` is `evidence` or `world`. Evidence mode asks what the frozen evidence-scope versions entail; world mode asks whether the actual event is established. Originality, document entailment and real-world truth are separate questions.
+`newsverify.trace_demo.build_demo()` returns keyword arguments accepted by
+`run_provenance`. `newsverify.trace_demo.run_demo()` returns a JSON-serializable
+report with `evaluation_mode="synthetic_annotated_replay"`.
 
-## Immutable material versions
-
-`MaterialVersion` contains:
-
-| Field | Contract |
-| --- | --- |
-| `version_id` | Nonempty immutable-version identity, independent of URL |
-| `url` | Locator only; it establishes no provenance by itself |
-| `content` | Exact preserved extracted text |
-| `retrieved_at` | Time this observation was retrieved, with timezone |
-| `published_at` | Publisher-reported publication time or `None` |
-| `available_at` | Evidenced time this exact version existed or `None` |
-| `availability_basis` | Evidence reference for exact-version availability or `None` |
-| `issuer` | Publisher/issuer label; defaults to `unknown` |
-
-The immutable fingerprint excludes only `retrieved_at`, because a later retrieval of the same unchanged publisher version is a new observation. Reusing a `version_id` with changed content or publisher/availability metadata is an integrity error. Corrections need new version IDs even when the URL is unchanged.
-
-For a historical cutoff, `published_at` alone is insufficient. A version without supported `available_at`, or one available after `Target.as_of`, is saved and audited but excluded from the current graph and verifier. Late retrieval of a demonstrably old version is allowed; no arbitrary age cutoff applies. The runner checks that `availability_basis` is present, but cannot authenticate it.
-
-## Provider and exact task attribution
-
-The legacy provider interface remains valid:
+## Provider
 
 ```python
 class Provider:
     def search(self, target, tasks, round_number, limit):
-        yield material  # MaterialVersion, at most limit values
+        # target: frozen Target
+        # tasks: tuple[Gap, ...], including verification questions when needed
+        # Yield at most limit MaterialVersion objects.
+        yield version
 ```
 
-A task-aware provider should implement the preferred interface:
+The runner consumes the iterable one item at a time, never beyond its remaining
+document/decomposition budget. Adapters must independently bound network requests,
+timeouts, model tokens and other costs; the runner cannot preempt a blocking
+adapter call or prevent a provider from eagerly doing work before yielding.
 
-```python
-class Provider:
-    def search_hits(self, target, tasks, round_number, limit):
-        yield RetrievalHit(material, (tasks[0].id,))
-```
+`MaterialVersion` fields:
 
-The runner prefers `search_hits` when present. A `RetrievalHit.task_ids` tuple freezes which current-round tasks selected that exact return. IDs must be nonempty, unique and members of the round's issued task set. Lazy providers must use the envelope; the legacy `last_attribution` sidecar is copied before iteration and cannot be mutated after yielding.
+| Field | Contract |
+| --- | --- |
+| `version_id` | Nonempty immutable-version identity, independent of URL |
+| `url` | Locator string; a locator alone establishes no provenance |
+| `content` | Exact preserved extracted text |
+| `retrieved_at` | Time this observation was retrieved, with timezone |
+| `published_at` | Publisher's reported publication time, or explicitly `None` |
+| `available_at` | Evidenced time this exact version existed, or `None` |
+| `availability_basis` | Reference to evidence of exact-version availability, or `None` |
+| `issuer` | Publisher/issuer label; defaults to `unknown` |
 
-The staged decomposer advertises `requires_task_attribution=True`. For it, every external return from round 2 onward must have task attribution; first-round seeds and internal `revisit_versions` calls are exempt. Bare `MaterialVersion` returns remain compatible with non-strict adapters.
+The same URL may have many version IDs. Reusing an ID with changed content,
+publisher metadata or availability evidence produces `integrity_error` and an
+unresolved result. A different `retrieved_at` for an otherwise identical version
+is a new observation, not a new publisher version. Preserve its observation time.
 
-After a round, a task-aware provider sets `last_feedback` to one exact record per issued task:
+For a historical cutoff, an early `published_at` alone is insufficient. Versions
+without a supported `available_at`, or with availability/publication after the
+cutoff, are audited but excluded from the graph and verifier. All timestamps must
+include a timezone. Late retrieval of a demonstrably old version is valid; no
+72-hour freshness filter is applied. A missing publication timestamp is preserved
+explicitly and does not replace the availability requirement.
 
-```python
-{
-    "gap_id": "verification:record",
-    "action": "fetch",                 # fetch | search | reanalyse
-    "locator": "https://example.org/record",
-    "status": "returned",             # returned | unavailable | budget_exhausted
-    "reason": "matching snapshot returned",
-    "version_ids": ["record:v1"],
-}
-```
+The runner checks the presence of `availability_basis`; it cannot independently
+authenticate an archive reference. A production adapter and the independent gold
+review must inspect that evidence. Do not fill this field with an invented claim.
 
-All six fields are required. IDs are unique and must preserve the issued action and locator. In strict staged rounds, feedback must cover the full issued set. `returned` must list exactly the versions attributed to that gap; the other statuses require an empty list and cannot hide an attributed return. Invalid or contradictory feedback produces `provider_error`.
-
-`SnapshotSearchProvider` is an offline reference implementation. It schedules the most constrained exact fetch/reanalyse tasks first, lets one version cover every matching exact obligation, then gives each broad search one candidate before filling remaining capacity. Duplicate snapshot and seed IDs are rejected. It records actual consumed—not merely planned—hits and distinguishes `unavailable` from a task deferred by round capacity. It does not browse the live web.
-
-## Mandatory decomposition
+## Mandatory psi decomposition
 
 ```python
 class Decomposer:
     def decompose(self, target, material, context):
         return Analysis(
-            fragments=(...),
-            relations=(...),
-            gaps=(...),
-            resolutions=(...),
-            origins=(...),
-            notes="Observable result, not private reasoning",
+            fragments=(...), relations=(...), gaps=(...),
+            resolutions=(...), origins=(...),
+            notes="Observable analysis result, not private reasoning",
             revisit_versions=(...),
         )
 ```
 
-Every consumed type-valid return is saved before decomposition. Eligible material is passed to the configured decomposer. Historically ineligible material uses an isolated `ConservativeDecomposer`; it is retained in observation/history output but never shown to a stateful semantic adapter, current graph or verifier. This prevents direct run-time leakage, not knowledge already present in model weights.
+Every type-valid material return is saved in the run's in-memory snapshot store
+before this call, including duplicates and historically excluded versions. The
+runner validates the analysis, aligns cited character spans, and only then updates
+the current graph. Invalid schemas/dates and conflicting immutable IDs fail before
+semantic processing and leave an explicit error.
 
-The detached `context` contains the frozen target, eligible materials, current analyses, canonical graph findings, active `gaps`, historical `gap_registry`, verification history, usage, `current_round_returns`, canonical `retrieval_feedback`, and current assessments. The current decomposition call additionally receives:
+The `context` is a detached JSON-like snapshot of the target, eligible materials,
+current analyses, fragments, relations, origins, gaps, verification history and
+usage. It excludes historically rejected content. For the current call it also
+contains `current_material_eligible` and `current_material_exclusion_reasons`.
+Analysis of an ineligible current material is retained in audit history but never
+merged into current state or sent to the verifier.
 
-- `current_return`: exact version/task receipt for this return;
-- `current_material_eligible`;
-- `current_material_exclusion_reasons`.
+This graph exclusion does not isolate a stateful semantic plugin from the rejected
+text it saw during psi, and it cannot remove future knowledge from model
+pretraining. Strict historical experiments require isolated semantic adapters
+that admit only eligible materials to stateful model execution. Isolation of the
+psi path for ineligible returns is pending; this release does not claim complete
+historical leakage prevention.
 
-An accepted `Analysis` is a complete replacement for that material owner, not a delta. The runner validates the entire candidate projection before committing eligible state. A failure leaves no partial eligible material, analysis or graph mutation.
+### Analysis objects
 
-### Analysis records
+All collection fields must be tuples; dataclasses are frozen.
 
-| Type | Key fields and rules |
+| Type | Fields and semantics |
 | --- | --- |
-| `Span` | `version_id`, `start`, `end`, `quote`; end-exclusive exact Unicode substring |
-| `Fragment` | `id`, `text`, `span`, `parent_id`, `qualifiers`, `qualifier_spans`; parent chain must reach the target and be acyclic |
-| `Relation` | `id`, downstream `from_version`, optional upstream `to_version`, `kind`, `status`, `basis`, `rationale`, optional `upstream_locator` |
-| `Gap` | `id`, `question`, `stage`, `dimension`, `blocking`, `target_id`, `basis`, `decision_impact`, `action`, `locator`, optional persistent `probe_id` |
-| `Resolution` | registered `gap_id`, nonempty exact `basis`, nonempty `rationale` |
-| `OriginFinding` | target/version, exact basis, explicit original-material kind and rationale |
+| `Span` | `version_id`, `start`, `end`, `quote`; Unicode character offsets, end exclusive, exact original substring required |
+| `Fragment` | `id`, `text`, `span`, `parent_id`, `qualifiers=()`; text can be a semantic restatement but the original span remains intact |
+| `Relation` | `id`, `from_version`, `to_version`, `kind`, `status`, `basis`, `rationale`, `upstream_locator=None` |
+| `Gap` | `id`, `question`, `stage="provenance"`; stage is provenance or verification |
+| `Resolution` | `gap_id`, nonempty tuple `basis`, `rationale` |
+| `OriginFinding` | `target_id`, `version_id`, nonempty tuple `basis`, `material_kind`, `rationale` |
 
-Relation kinds are `quotes`, `cites`, `reprints`, `translates`, `derives`, `supports`, and `contradicts`. Statuses are `direct`, `declared`, `inferred`, `unresolved`, and `excluded`. A direct propagation edge needs an available upstream version and source-side basis. `supports`/`contradicts` are semantic relations and never substitute for a propagation path.
+Relations point from the downstream material to the candidate upstream material.
+`kind` is one of `quotes`, `cites`, `reprints`, `translates`, `derives`, `supports`,
+`contradicts`. `status` is one of `direct`, `declared`, `inferred`, `unresolved`,
+`excluded`. Every relation needs an exact source-side evidence span. An unavailable
+upstream uses `to_version=None` and a nonempty `upstream_locator`; it cannot be
+marked `direct`.
 
-`original_material_located` requires an eligible `OriginFinding`, an eligible `target.source_version_id`, a direct propagation path from that version to the claimed original, and no blocking provenance gap. This is completion of the plug-in's evidenced trace, not proof that no inaccessible earlier source exists.
+`supports` and `contradicts` are semantic relationships and are never traversed as
+propagation lineage, even if a plugin labels them `direct`. An explicit publisher
+source statement can be recorded as `declared` while the underlying record remains
+unavailable. Content similarity and early publication do not imply a direct edge.
+Plugins must ground each semantic choice; structural validation cannot prove that
+an annotation is substantively correct.
 
-### Gap lifecycle and revisions
+An `OriginFinding` must identify an eligible original record, original interview,
+original dataset or original observation, with evidence in that version. Being
+the earliest accessible article or having no outgoing links is not a root rule.
 
-Gap IDs are operational identities. Stage, effective dimension, target, action, locator and probe cannot change under one ID. Blocking severity is monotonic for the entire registered lifetime of an ID, including after resolution; a genuinely weaker later task needs a new ID. Different live owners of one ID must emit exactly the same gap definition. The staged verifier persists `probe_id`, so unavailable feedback and resolutions cannot leak from one target probe to another.
+`original_material_located` requires all of:
 
-Gap and resolution events from current material revisions are ordered by committed analysis revision: the latest explicit open/close event wins. Independent closures after the latest reopen merge their exact basis and rationales. Verifier tasks are preserved until explicitly resolved; a newer decomposition may close or reopen them transactionally. Historical IDs remain in `gap_registry` so a later valid closure can be checked even when the gap is not currently open.
+1. An explicit eligible `OriginFinding` and an evidenced resolution of the initial
+   `origin:<target.id>` question.
+2. A supplied, eligible `target.source_version_id` with a path of `direct`
+   citation/quotation/reprint/translation/derivation edges to the original. The
+   original target version may itself be the original record.
+3. No remaining provenance gaps.
 
-`revisit_versions` requests complete reanalysis of affected eligible versions under the same decomposition budget. A new upstream matching an old declared locator also schedules the downstream material automatically. Self/cycle requests are audited and deduplicated. Only unfinished reanalysis caused by the decomposition cap creates a runtime revisit gap.
+This is completion of the plugin's evidenced trace within the target scope. It is
+not a verified truth label or proof that no earlier inaccessible source exists.
+When the initial article version is unknown, source findings can be retained but
+lineage remains partial.
 
-## Optional verifier and validation loop
+### Revisions and reanalysis
+
+Keep the original target text and all raw version contents unchanged. A new
+analysis replaces that version's current analysis; all prior analyses remain in
+`analysis_history`. The current graph is rebuilt from current revisions so deleted
+findings do not linger. Stable fragment/relation IDs permit explicit revisions;
+the latest analysis wins for a reused ID. Use globally unique IDs for distinct
+facts and only reuse an ID when intentionally revising the same finding.
+
+`revisit_versions` names eligible old materials affected by a new finding. Each is
+passed back to psi with updated context under the decomposition-call budget.
+Adapters own identification of affected dependencies; the runner does not infer
+the entire semantic dependency closure. Repeated reanalysis dependencies are
+audited and leave an explicit gap. This prevents an adapter from silently cycling
+forever. Budget exhaustion while reanalysis is pending also leaves a gap.
+
+## Optional verifier and its return loop
 
 ```python
 class Verifier:
     def verify(self, target, context):
         return VerificationResult(
-            verdict="unresolved",       # legacy evidence verdict
-            basis=(),
-            rationale="Need the named record",
-            gaps=(...),
+            verdict="unresolved", basis=(), rationale="Need a direct record",
+            gaps=(Gap("verification:record", "Find the correction", "verification"),),
             resolutions=(),
-            evidence_verdict="unresolved",
-            world_verdict="unresolved",
-            world_basis=(),
-            world_rationale="No independent authentication yet",
         )
 ```
 
-Conclusive verdicts require exact basis and nonempty rationale. Evidence conclusions may cite only the complete frozen evidence scope; world conclusions require their own basis. Only blocking gaps gate the matching assessment dimension. `fact_status` is the gated world decision, while `decision_status` follows `Target.assessment_mode`.
+Verdicts are `supported`, `contradicted`, `conflicting`, `unresolved`. A resolved
+verdict needs nonempty exact evidence spans and a rationale. Verification gaps
+remain open until explicitly resolved and force the visible fact status to
+`unresolved`. A verifier may resolve verification gaps; it cannot close a known
+provenance gap. The verifier cannot inject raw material directly. It requests a
+retrieval task; provider results pass through snapshot preservation, psi and graph
+updates before the next verification call.
 
-A generic verifier may resolve only registered verification gaps. The supplied staged verifier additionally requires an exact current-round task receipt and basis from a version attributed to that task. It derives a fixed target-only `TargetPlan`, requires every probe and required dimension exactly once in both layers, applies conservative source-grounding checks, and uses isolated evidence/world critics. See [STAGED_VALIDATION_LOOP.md](STAGED_VALIDATION_LOOP.md).
+`provenance_status` and `fact_status` remain independent. A sourced false claim is
+possible. The demo produces `original_material_located` and `contradicted` after
+three retrieval rounds, four material versions, six decomposition calls and three
+verifications. The third round retrieves a correction requested by verification.
 
-Verifier-created tasks never inject material directly. Returns are saved, eligibility-checked and decomposed before a later verifier call. A new task emitted after an empty result round is queued for the next round. A `budget_exhausted` task is retried while outer capacity remains; a complete `unavailable` receipt can terminate that fixed provider scope.
+## Budgets, errors and output
 
-The outer verifier is skipped only when its complete canonical input is unchanged. That input includes material fingerprints, full verifier-visible analyses and graph objects (including fragment text/qualifiers and relation rationales), active gaps, current attributed receipts and, for verifiers declaring `uses_retrieval_feedback=True`, canonical task feedback. Structural loop progress separately ignores cosmetic prose, so a meaningful verifier recheck does not grant unbounded extra rounds.
+`max_rounds` bounds provider calls. `max_documents` counts all consumed returns,
+including duplicates and exclusions. `max_decomposition_calls` counts all psi
+calls, including requested reanalysis. All are positive integers. Empty results,
+a budget, completion, or a round with neither new eligible material nor a novel
+structural state stops the run. The state includes fragments, relations, origin
+findings and open gaps; revision counters, notes and rationale wording do not count
+as progress. A repeated material that reveals a new gap can trigger the next
+search. Previously seen structural states stop duplicate-only cycles. Duplicate
+returns always receive decomposition and comparison before this decision.
 
-## Budgets, termination and errors
+Provider, material, decomposer, verifier and integrity failures are recorded in
+`errors` and `operations`, terminate processing, and force current provenance to
+`unresolved`; enabled fact verification is also reset to `unresolved`. Prior
+successful annotations remain visible only as history, not a current success.
 
-`TraceConfig` independently caps provider rounds, consumed documents and decomposition calls (including revisits). The runner consumes iterables lazily and closes them when its budget ends, so providers can commit only actually consumed hits.
+The JSON report includes raw `materials`, retrieval `observations`, current
+`analyses`, append-only `analysis_history`, `fragments`, `relations`, `origins`,
+open `gaps`, `resolutions`, `verification_history`, ordered `operations`, `usage`,
+statuses and `stop_reason`. `snapshot_saved` means stored in this run before psi;
+the caller must durably persist the report/snapshots for production use.
 
-Normal stop reasons include `complete`, `provider_exhausted`, `empty_results`, `retrieval_budget`, `no_new_eligible_materials`, `repeated_state`, `round_budget`, `document_budget`, and `decomposition_budget`. Provider, material, decomposer, verifier and integrity failures use the matching `*_error` reason.
-
-The optional model transport has separate call, total-output-token, per-call-output-token and wall-time caps. Staged transactions preflight their worst-case repair path before the first call, and each serialized stage input is capped at 250,000 characters. Input tokens are measured but not token-capped. SDK retries are disabled.
-
-Any failure sets `assessment_valid=false` and current completion statuses fail closed. Previously accepted analyses, graph findings and raw verification history remain visible for diagnosis; they are not presented as a valid final success.
-
-## Report and independent evaluation
-
-The JSON report includes:
-
-- frozen target/config and `schema_version="0.3"`;
-- raw stored materials, eligible version IDs and retrieval observations;
-- raw `retrieval_feedback` history;
-- current analyses and append-only `analysis_history` with each `retrieval_receipt`;
-- fragments, relations, origins, active gaps and combined resolutions;
-- `verification_history`, `assessments`, `decision_status`, `fact_status`, `assessment_valid`;
-- ordered operations, usage, provenance status, stop reason and errors.
-
-For independent evaluation, freeze targets, cutoffs, raw versions, evidence scopes, gold origins, gold lineage and verdict labels before inference. Preserve every failed attempt. The bundled demos and regression fixtures are synthetic/hand-authored contract tests; they do not establish real-news accuracy or prove that splitting prompts improves it.
+For independent evaluation, freeze the original target set, cutoff, raw versions,
+gold origins, gold lineage relations and verdicts. Do not let adaptive fragments
+change the evaluation denominator, and do not use these hand-annotated demo cases
+as evidence of real-world accuracy improvement.

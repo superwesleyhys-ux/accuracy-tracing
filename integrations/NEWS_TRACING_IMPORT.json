@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "imported_at": "2026-09-08T23:08:44.248107+00:00",
+  "source_archive_filename": "news-tracing-master (1).zip",
+  "source_archive_sha256": "7549a4f4cad9ebdab52949084ab2b979eb5b03dc3a822cba849f80e20f7465c7",
+  "archive_code_executed": false,
+  "preservation_directory": "integrations/news-tracing-master",
+  "files": [
+    {
+      "path": ".env.example",
+      "bytes": 132,
+      "sha256": "f47449dd77f622820480529bf82130d28a1d4078269a2092311dd8908b7707ec"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 31,
+      "sha256": "811b1846428a21fa35faf4076ee75b7d26b0cb1815784127c5bdc624ef94518d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2534,
+      "sha256": "6bc31445572f91705a7d6c9b8e5c4ff0231895a7451cb61fb48612a972e18bd3"
+    },
+    {
+      "path": "agent/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "agent/core.py",
+      "bytes": 22014,
+      "sha256": "6b1c71915036e44f7ad00c1388f26f3a95c352e7aaaaaadca7d36cc2d391c922"
+    },
+    {
+      "path": "agent/llm_client.py",
+      "bytes": 3536,
+      "sha256": "1536b8cdcf101f083ae79133a1e6ea1c3c633438730172c15abaaa7b0061b524"
+    },
+    {
+      "path": "agent/models.py",
+      "bytes": 2655,
+      "sha256": "c9784d789e01244bb6c291c1a18fe5d4d0e1437e9f34d5a06c3e488da0745c9e"
+    },
+    {
+      "path": "agent/prompts.py",
+      "bytes": 11325,
+      "sha256": "dd36bd2dfb482e4d3c7ff6dbe66ae13b7379cdd47956e0eb4cfa9422cdf12c13"
+    },
+    {
+      "path": "main.py",
+      "bytes": 8555,
+      "sha256": "a99fcf03c0c00d441fe114df7551cf049a857e4ba325ed3959dc46f49a448057"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 49,
+      "sha256": "d600fe1a485d031d4d6ceeebb01f7e793fdb367e7dc811ccc9ac56670bf7e5ff"
+    }
+  ],
+  "active_adaptation_directory": "newsverify/news_tracing",
+  "scope": "Exact user-provided files preserved as reference. The active adaptation uses the existing harness transports and formal evidence verification; generated source/causal suggestions are not trusted origin findings.",
+  "license_notice": "No LICENSE file was present in the user-provided archive; no third-party license is asserted by this manifest."
+}
