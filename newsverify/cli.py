@@ -78,12 +78,12 @@ def main(argv=None, *, prog="newsverify"):
         "--config", type=Path,
         help="optional JSON resource budgets; no credentials",
     )
-    for command in ("demo", "trace-demo", "trace", "trace-model", "verify", "benchmark"):
+    for command in ("demo", "trace-demo", "trace", "trace-model", "early-risk", "verify", "benchmark"):
         child = sub.add_parser(command)
         if command not in ("demo", "trace-demo"):
             child.add_argument("input", type=Path)
         child.add_argument("--output", type=Path)
-        if command == "trace-model":
+        if command in {"trace-model", "early-risk"}:
             child.add_argument("--tunnel", choices=("local", "api"), default="local",
                                help="model execution path (default: local Codex CLI)")
             child.add_argument("--model", help="model ID (default: configured Codex model)")
@@ -158,6 +158,11 @@ def main(argv=None, *, prog="newsverify"):
                 from .model_runner import run_model_trace
                 result = run_model_trace(payload, tunnel=args.tunnel, model=args.model,
                                          reasoning_effort=args.reasoning_effort, timeout=args.timeout)
+            elif args.command == "early-risk":
+                from .early_risk import run_early_risk
+                result = run_early_risk(payload, tunnel=args.tunnel, model=args.model,
+                                        reasoning_effort=args.reasoning_effort or "low",
+                                        timeout=args.timeout)
             elif args.command == "benchmark":
                 result = benchmark(payload)
             else:

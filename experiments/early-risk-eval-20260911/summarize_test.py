@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+from datetime import datetime
 import hashlib
 import json
 from pathlib import Path
@@ -57,7 +58,12 @@ def evidence_valid(result: dict, case: dict) -> bool:
             return False
         if start < 0 or end <= start or material["content"][start:end] != quote:
             return False
-        if material.get("available_at", "9999") > case["target"]["as_of"]:
+        try:
+            available = datetime.fromisoformat(material["available_at"].replace("Z", "+00:00"))
+            cutoff = datetime.fromisoformat(case["target"]["as_of"].replace("Z", "+00:00"))
+        except (KeyError, TypeError, ValueError):
+            return False
+        if available > cutoff:
             return False
     if result.get("claim_scope") == "real_world_provenance" and not result.get("independent_authentication"):
         return result.get("fact_verdict") == "unresolved" and result.get("fraud_risk") == "high"
@@ -159,7 +165,7 @@ def main() -> None:
         "| Measure | Direct Luna | Luna + single-pass harness | Goal |",
         "|---|---:|---:|---:|",
         f"| Strict cutoff fact accuracy | {baseline['conditions']['direct']['evidence_valid']}/8 | {fact_correct}/8 ({100*fact_correct/len(rows):.1f}%) | ≥6/8 |",
-        f"| Later-false cases flagged high risk | 0/4 | {detections}/{later_false_count} | 4/4 |",
+        f"| Later-false cases identified early | 0/4¹ | {detections}/{later_false_count} | 4/4 |",
         f"| Control cases flagged high risk | — | {control_flags}/{len(rows)-later_false_count} | diagnostic |",
         f"| Model calls | {baseline['conditions']['direct']['attempts']} | {totals['attempts']} | ≤ one/case |",
         f"| Input + output tokens | {direct_tokens:,} | {totals['total_tokens']:,} | ≤{2*direct_tokens:,} |",
@@ -171,7 +177,8 @@ def main() -> None:
     ]
     for row in rows:
         lines.append(f"| {row['id']} | {row['role']} | {row['cutoff_expected']} | {row['fact_verdict']} | {row['claim_scope']} | {row['fraud_risk']} | {'yes' if row['strict_fact_correct'] else 'no'} |")
-    lines += ["", "## Interpretation", "",
+    lines += ["", "¹ The direct baseline had no separate risk output. None of its cutoff fact verdicts identified the four later-false claims; the harness adds a dedicated predictive risk channel.", "",
+        "## Interpretation", "",
         "A high risk output records that a real-world provenance claim is supported only by the subject publication and lacks independent authentication in the bounded packet. It does not claim that pre-2024 evidence proved fabrication.", "",
         "This is an in-sample development result over two event families. The attribution controls test whether the policy preserves literal report claims, but they do not measure false-positive risk on genuine, independently authenticated experiments.", ""]
     (output / "README.md").write_text("\n".join(lines), encoding="utf-8")

@@ -1,6 +1,8 @@
 import unittest
+from unittest.mock import patch
 
 from newsverify.early_risk import build_packet, run_early_risk
+from newsverify.cli import main
 
 
 def case(target_text="The source reports seven."):
@@ -77,6 +79,21 @@ class EarlyRiskTests(unittest.TestCase):
         })
         with self.assertRaisesRegex(ValueError, "unavailable passage"):
             run_early_risk(case(), transport=transport)
+
+    def test_cli_exposes_local_first_early_risk_command(self):
+        import json
+        import tempfile
+        from pathlib import Path
+        with tempfile.TemporaryDirectory() as folder:
+            source = Path(folder) / "case.json"
+            output = Path(folder) / "result.json"
+            source.write_text(json.dumps(case()), encoding="utf-8")
+            expected = {"fact_verdict": "unresolved", "fraud_risk": "high"}
+            with patch("newsverify.early_risk.run_early_risk", return_value=expected) as run:
+                self.assertEqual(0, main(["early-risk", str(source), "--output", str(output),
+                                          "--model", "fixture-model"]))
+            self.assertEqual(expected, json.loads(output.read_text(encoding="utf-8")))
+            self.assertEqual("local", run.call_args.kwargs["tunnel"])
 
 
 if __name__ == "__main__":

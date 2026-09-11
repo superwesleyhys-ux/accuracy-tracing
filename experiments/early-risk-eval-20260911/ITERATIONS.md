@@ -28,3 +28,14 @@ path rather than a `Path` object to its own hash helper. The empty attempt is
 retained under `run-iteration-1`; it contains no prediction and consumed zero
 model tokens. This is an infrastructure correction, so the registered semantic
 policy remains unchanged for `run-iteration-1b`.
+
+### Result
+
+- Strict cutoff fact accuracy: 8/8 (100%).
+- Later-false provenance claims flagged high risk: 4/4.
+- Attribution controls flagged high risk: 0/4.
+- Model calls: 8/8 successful, exactly one per case.
+- Fully accounted tokens: 64,444, or 0.39× the 164,490-token direct
+  baseline.
+- All three registered pass conditions were met. No prompt revision or
+  selective rerun was needed after inference began.
