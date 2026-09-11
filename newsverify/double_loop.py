@@ -121,7 +121,8 @@ claim (X happened or measurements are authentic). An exact report can settle
 attribution without authenticating its experiment. Missing independent records
 does not itself contradict a claim. Conversely, do not ignore an explicit
 eligible correction, falsifying measurement, negation or material qualification.
-Use one or two short basis quotes when sufficient and a brief rationale focused
+Use one or two short basis quotes (each exactly one complete sentence; never
+append adjacent panel labels or extra sentences) when sufficient and a brief rationale focused
 on the decisive evidence or missing record, rather than a summary of the paper.
 
 Identify specific missing evidence that could change the factual assessment and
