@@ -349,8 +349,11 @@ class DoubleLoopVerifier:
                        for item in check.get("gaps", ()) if item["stage"] == "verification")
         allowed.update(item["id"] for item in response["gaps"])
         allowed.difference_update(provenance_ids)
+        canonical_basis = _basis(response["basis"], materials)
+        response["basis"] = [{"version_id": span.version_id, "quote": span.quote}
+                              for span in canonical_basis]
         return VerificationResult(
-            response["verdict"], _basis(response["basis"], materials), response["rationale"],
+            response["verdict"], canonical_basis, response["rationale"],
             tuple(Gap(**item) for item in response["gaps"]),
             _resolutions(response["resolutions"], materials, allowed),
         )
