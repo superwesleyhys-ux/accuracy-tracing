@@ -29,11 +29,11 @@
     "harness_to_direct_token_ratio": 0.39178065535898837
   },
   "goals": {
-    "strict_fact_accuracy_at_least_75_percent": true,
-    "later_false_detection_4_of_4": true,
+    "strict_fact_accuracy_at_least_75_percent": false,
+    "later_false_detection_4_of_4": false,
     "tokens_no_more_than_2x_direct": true
   },
-  "all_goals_met": true,
+  "all_goals_met": false,
   "rows": [
     {
       "id": "h01",
@@ -153,5 +153,18 @@
     "The cases represent two event families; masked variants are correlated.",
     "The four controls are attribution claims, not clean nonfraud provenance controls.",
     "High fraud risk means missing independent authentication, not proof of fabrication."
-  ]
+  ],
+  "validation_status": "invalid_target_leakage",
+  "benchmark_valid": false,
+  "invalid_reasons": [
+    "The policy directly maps unauthenticated real-world provenance claims to high risk.",
+    "All four later-false cases are real-world provenance claims, while all four controls are source-attribution claims.",
+    "No nonfabricated real-world provenance controls are present.",
+    "The cases were previously observed development cases from only two event families."
+  ],
+  "observed_thresholds": {
+    "strict_fact_accuracy_at_least_75_percent": true,
+    "later_false_detection_4_of_4": true,
+    "tokens_no_more_than_2x_direct": true
+  }
 }

@@ -12,7 +12,7 @@ Version 0.2.0: a bounded, auditable news provenance loop with **decomposition on
 
 Repository Discussions are enabled, and the repository includes a prepared **Accuracy decline** reporting form for reproducible metric regressions or weaker trace outcomes. Reports should identify the affected metric or behavior, include the run configuration, and avoid treating synthetic fixtures as real-world performance evidence.
 
-## Latest local historical comparison
+## Invalidated local historical diagnostic
 
 The September 11 development run compared `gpt-5.6-luna` directly with the
 same model inside the new single-pass provenance-risk harness. Both used the
@@ -29,19 +29,20 @@ kept outside inference and loaded only during scoring.
 | Input + output tokens | 164,490 | **64,444** | ≤328,980 |
 | Harness / direct token ratio | 1.00× | **0.39×** | ≤2.00× |
 
-**All three registered goals were met.** The harness separates the historical
-fact verdict from a predictive provenance-risk signal. A high-risk output means
-that a real-world data-provenance claim has only self-attestation in the bounded
-packet; it does not mean the pre-2024 evidence proved fabrication.
+**This result is invalid as evidence of advance fabrication detection.** The
+policy directly mapped unauthenticated real-world provenance claims to high
+risk, while every negative control asked only what a paper reported. The label
+could therefore be recovered from the claim type, without detecting a signal
+that distinguished fabricated from genuine provenance claims.
 
 ¹ The direct baseline had no separate risk output, and none of its cutoff fact
 verdicts identified the four claims later shown to involve fabrication.
 
-Read the [complete comparison, per-case table, limitations and reproducibility
-record](reports/early-risk-total-20260911/README.md). These eight previously
-observed development cases cover two event families. The attribution controls
-do not measure false-positive risk on independently authenticated experiments,
-so this result does not establish general accuracy on unseen news.
+The [invalidated run, per-case table and reproducibility record](reports/early-risk-total-20260911/README.md)
+remain published so the failed test cannot be silently discarded. A replacement
+test requires unseen event families and same-task provenance controls, frozen
+before inference. Until that test exists, FactCircuit has not demonstrated an
+advance fabrication-detection improvement.
 
 Run the single-pass path through the local tunnel with:
 
