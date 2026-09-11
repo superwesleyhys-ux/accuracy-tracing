@@ -90,14 +90,28 @@ def exact_span(version_id, quote, materials):
         raise ValueError("Model quote must match exactly one original passage")
     # Treat all Unicode/line-break whitespace as equivalent while preserving
     # the original material span used in the receipt.
+    original_quote = quote
     pattern = r"\s+".join(re.escape(part) for part in re.split(r"\s+", quote.strip()))
     matches = list(re.finditer(pattern, content, flags=re.DOTALL))
+    # The model sometimes appends a neighboring figure-panel label or sentence
+    # after an otherwise exact citation. Retry progressively shorter sentence
+    # prefixes, retaining only a unique substantial source span.
+    if not matches:
+        parts = re.split(r"(?<=[.!?])\s+", quote.strip())
+        for end in range(len(parts) - 1, 0, -1):
+            candidate = " ".join(parts[:end]).strip()
+            if len(candidate) < 40:
+                break
+            pattern = r"\s+".join(re.escape(part) for part in re.split(r"\s+", candidate))
+            matches = list(re.finditer(pattern, content, flags=re.DOTALL))
+            if len(matches) == 1:
+                break
     if len(matches) != 1:
         raise ValueError("Model quote must match exactly one original passage")
     m = matches[0]
     # Preserve the model's submitted quote in the receipt; offsets still point
     # to the unique source span and the validator accepts normalized whitespace.
-    return Span(version_id, m.start(), m.end(), quote)
+    return Span(version_id, m.start(), m.end(), original_quote)
 
 
 class ModelDecomposer:
