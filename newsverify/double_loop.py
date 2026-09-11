@@ -356,9 +356,6 @@ class DoubleLoopVerifier:
         # with the canonicalized response returned to the provenance runner.
         if getattr(self.transport, "model_io", None):
             self.transport.model_io[-1]["response"] = json.loads(json.dumps(response))
-        underlying = getattr(self.transport, "transport", None)
-        if getattr(underlying, "calls", None):
-            underlying.calls[-1]["response"] = json.loads(json.dumps(response))
         return VerificationResult(
             response["verdict"], canonical_basis, response["rationale"],
             tuple(Gap(**item) for item in response["gaps"]),
