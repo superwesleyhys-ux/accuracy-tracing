@@ -20,3 +20,11 @@
   self-attestation authenticate that real data came from stated procedures.
 - Pass conditions: ≥6/8 strict facts, 4/4 later-false risk flags, ≤2.00× direct
   baseline tokens.
+
+### Pre-inference launch failure
+
+The first launch stopped before any model call because the runner passed a text
+path rather than a `Path` object to its own hash helper. The empty attempt is
+retained under `run-iteration-1`; it contains no prediction and consumed zero
+model tokens. This is an infrastructure correction, so the registered semantic
+policy remains unchanged for `run-iteration-1b`.

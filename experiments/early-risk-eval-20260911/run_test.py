@@ -61,7 +61,7 @@ def main() -> None:
         "code_sha256": {
             "early_risk.py": sha(ROOT / "newsverify/early_risk.py"),
             "tunnels.py": sha(ROOT / "newsverify/tunnels.py"),
-            "run_test.py": sha(__file__),
+            "run_test.py": sha(Path(__file__)),
             "protocol.md": sha(HERE / "PROTOCOL.md"),
         },
     }
