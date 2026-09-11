@@ -45,8 +45,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 17252,
-      "sha256": "ff7a828e6d7674807ed1b8d3a91e1b8ccc5e67fbccfefbd810751d5b8477f7ec"
+      "bytes": 19045,
+      "sha256": "5e5acb70a14265ce27c4b5df33834ddeb6710e4a5a2fd98e2abccaa820b6620b"
     },
     {
       "path": "SECURITY.md",
@@ -452,6 +452,36 @@
       "path": "experiments/honest-holdout-20260911/summarize_test.py",
       "bytes": 11375,
       "sha256": "28c49457add432b8cf8abdef50c4990ae9146d3a64a9200989074f3f7caad52c"
+    },
+    {
+      "path": "experiments/honest-system-holdout-20260911/PROTOCOL.md",
+      "bytes": 3190,
+      "sha256": "ac59376762bfe09f3253c9a16efdd46865c21cfb2d0506bf87c3f028caca68aa"
+    },
+    {
+      "path": "experiments/honest-system-holdout-20260911/REGISTRATION.json",
+      "bytes": 2625,
+      "sha256": "8da439c7a071fa63906150b4deda6e30440b381eeccb859c47dc83dda4e3365a"
+    },
+    {
+      "path": "experiments/honest-system-holdout-20260911/corpus.json",
+      "bytes": 33552,
+      "sha256": "89ab4103c788027b6e6f94e638f8c2f9addc1e06492d0e7bd45a4b9fdb5dacee"
+    },
+    {
+      "path": "experiments/honest-system-holdout-20260911/policies.py",
+      "bytes": 3315,
+      "sha256": "d75dec8eed79df3cb26e622232fec5dd9d0bb77ca0ba51cad6a836df2717558e"
+    },
+    {
+      "path": "experiments/honest-system-holdout-20260911/run_test.py",
+      "bytes": 6966,
+      "sha256": "ca196eff439c360c9c874ddf5d23bc19559c5b40fe472a55f1be7454001af975"
+    },
+    {
+      "path": "experiments/honest-system-holdout-20260911/summarize_test.py",
+      "bytes": 11570,
+      "sha256": "0975e16d3e88337841fcb933c5fd47d627310206eedd8152993d8cb5ae735f40"
     },
     {
       "path": "experiments/inputs-v03.json",
@@ -1707,6 +1737,36 @@
       "path": "reports/honest-holdout-20260911/scored-v2/SUMMARY.json",
       "bytes": 5174,
       "sha256": "3430e7253b5c1da413ea096054a2bf8b890a1bb2c1791fbc8455e61b362edec7"
+    },
+    {
+      "path": "reports/honest-system-holdout-20260911/run-001/manifest.json",
+      "bytes": 619,
+      "sha256": "2ce1ca7f3469a143995cf3e853e3595a423e3ee64006155728c17891d06e0253"
+    },
+    {
+      "path": "reports/honest-system-holdout-20260911/run-001/predictions.json",
+      "bytes": 20196,
+      "sha256": "78218f81617dab998107b50f675112332add628060c71b39944e86c4c461555c"
+    },
+    {
+      "path": "reports/honest-system-holdout-20260911/scored-v1/AUDIT.json",
+      "bytes": 854,
+      "sha256": "ff9df813c9bef22b344271388df1d4256137313f5406e688f9898d10e6ea9992"
+    },
+    {
+      "path": "reports/honest-system-holdout-20260911/scored-v1/README.md",
+      "bytes": 2715,
+      "sha256": "5bd4208273936ad608d6c692542100690ef9e802f70a11aff1c09b040b0e6a2a"
+    },
+    {
+      "path": "reports/honest-system-holdout-20260911/scored-v1/REVEALED_GOLD.json",
+      "bytes": 3374,
+      "sha256": "0d8c33d2feeea03146d55259fc62c647609544ce165387d38992ad9ced5db68c"
+    },
+    {
+      "path": "reports/honest-system-holdout-20260911/scored-v1/SUMMARY.json",
+      "bytes": 5222,
+      "sha256": "9007bfefc0262cfb340596e6d6daae61e0f36de06c1029796fb77eb66e6ae08f"
     },
     {
       "path": "reports/live-v03-attempt-01/bridge-evidence-loop-calls.json",

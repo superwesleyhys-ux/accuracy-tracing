@@ -1,0 +1,20 @@
+{
+  "audit_status": "passed",
+  "performed_after_scoring": true,
+  "checks": {
+    "registration_frozen_hashes_match": true,
+    "gold_hash_matches_registration": true,
+    "schedule_matches": true,
+    "all_passages_within_cutoff": true,
+    "harness_preserves_direct": true,
+    "no_gold_loaded_during_inference": true,
+    "all_calls_completed_once": true,
+    "all_registered_success_criteria_met": true
+  },
+  "frozen_setup_commit": "efce85a",
+  "run_started_at": "2026-09-11T21:52:41.934024+00:00",
+  "limitations": [
+    "This audit verifies committed hashes, timestamps declared in packets, schedule, isolation receipts, and scoring consistency; it does not independently prove every publisher page remained unchanged.",
+    "The experiment intentionally compares different evidence sets to measure the source-tracing system contribution."
+  ]
+}
