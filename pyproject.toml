@@ -3,20 +3,29 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "newsverify-harness"
-version = "0.2.0"
-description = "A bounded, auditable verification loop for news evidence adapters"
+name = "factcircuit"
+version = "0.3.2"
+description = "An auditable claim-and-evidence verification loop with immutable provenance"
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
-authors = [{name = "NewsVerify Harness contributors"}]
+authors = [{name = "FactCircuit contributors"}]
 dependencies = []
 
+[project.optional-dependencies]
+model = ["openai==3.8.0", "socksio==1.0.0"]
+
 [project.scripts]
+factcircuit = "factcircuit.cli:main"
 newsverify = "newsverify.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["newsverify*"]
+include = ["factcircuit*", "newsverify*"]
 
 [tool.setuptools.package-data]
 newsverify = ["data/*.json"]
+
+[project.urls]
+Homepage = "https://github.com/superwesleyhys-ux/factcircuit"
+Repository = "https://github.com/superwesleyhys-ux/factcircuit"
+Issues = "https://github.com/superwesleyhys-ux/factcircuit/issues"

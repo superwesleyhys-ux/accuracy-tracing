@@ -92,7 +92,10 @@ def exact_span(version_id, quote, materials):
     # the original material span used in the receipt.
     original_quote = quote
     pattern = r"\s+".join(re.escape(part) for part in re.split(r"\s+", quote.strip()))
-    matches = list(re.finditer(pattern, content, flags=re.DOTALL))
+    # Lookahead keeps overlapping occurrences visible (for example ``aa`` in
+    # ``aaa``).  A normal ``finditer`` silently skips the second occurrence
+    # and would accept an ambiguous model quotation as unique evidence.
+    matches = list(re.finditer(f"(?=({pattern}))", content, flags=re.DOTALL))
     # The model sometimes appends a neighboring figure-panel label or sentence
     # after an otherwise exact citation. Retry progressively shorter sentence
     # prefixes, retaining only a unique substantial source span.
@@ -103,7 +106,7 @@ def exact_span(version_id, quote, materials):
             if len(candidate) < 40:
                 break
             pattern = r"\s+".join(re.escape(part) for part in re.split(r"\s+", candidate))
-            matches = list(re.finditer(pattern, content, flags=re.DOTALL))
+            matches = list(re.finditer(f"(?=({pattern}))", content, flags=re.DOTALL))
             if len(matches) == 1:
                 break
     if len(matches) != 1:
@@ -111,7 +114,15 @@ def exact_span(version_id, quote, materials):
     m = matches[0]
     # Preserve the model's submitted quote in the receipt; offsets still point
     # to the unique source span and the validator accepts normalized whitespace.
-    return Span(version_id, m.start(), m.end(), original_quote)
+    return Span(version_id, m.start(1), m.end(1), original_quote)
+
+
+def semantic_context(context):
+    """Remove retrieval audit records that semantic models must not inspect."""
+    result = dict(context)
+    result.pop("current_round_returns", None)
+    result.pop("retrieval_feedback", None)
+    return result
 
 
 class ModelDecomposer:
@@ -124,7 +135,8 @@ class ModelDecomposer:
         if not context["current_material_eligible"]:
             return ConservativeDecomposer().decompose(target, material, context)
         response = self.transport.generate("decompose", DECOMPOSE,
-            {"target": asdict(target), "material": asdict(material), "context": context},
+            {"target": asdict(target), "material": asdict(material),
+             "context": semantic_context(context)},
             ANALYSIS_SCHEMA)
         validate_output(response, ANALYSIS_SCHEMA)
         if not response["fragments"]:
@@ -144,7 +156,8 @@ class ModelVerifier:
 
     def verify(self, target, context):
         response = self.transport.generate("verify", VERIFY,
-            {"target": asdict(target), "context": context}, VERDICT_SCHEMA)
+            {"target": asdict(target), "context": semantic_context(context)},
+            VERDICT_SCHEMA)
         validate_output(response, VERDICT_SCHEMA)
         materials = {item["version_id"]: item for item in context["materials"]}
         basis = tuple(exact_span(item["version_id"], item["quote"], materials)

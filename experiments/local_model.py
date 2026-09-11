@@ -100,13 +100,13 @@ def _worker(pipe, config):
 
 
 def load_config(path):
-    path = Path(path).expanduser().resolve()
+    path = Path(path).expanduser().absolute()
     config = json.loads(path.read_text())
     if config.get("backend") != "llama_cpp_local_process":
         raise ValueError("Local inference requires backend=llama_cpp_local_process")
     if config.get("cloud_fallback") is not False:
         raise ValueError("Local inference requires cloud_fallback=false")
-    model = (path.parent / config["model_path"]).resolve()
+    model = (path.parent / config["model_path"]).absolute()
     if not model.is_file():
         raise FileNotFoundError("Local GGUF model is missing; run setup_local_model.py")
     with model.open("rb") as stream:

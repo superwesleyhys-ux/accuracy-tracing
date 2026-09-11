@@ -1,5 +1,7 @@
 """Run the provenance harness on local JSON snapshots without network services."""
 
+from copy import deepcopy
+
 from .provenance import MaterialVersion, ReplayTraceProvider, run_provenance
 
 
@@ -27,5 +29,8 @@ def run_local(payload):
     """Replay local rounds; URLs are source identifiers and are never fetched."""
     target, provider, config = prepare_snapshot(payload)
     report = run_provenance(target, provider, config=config)
+    # Keep the public replay report byte-for-byte faithful to the caller's
+    # target object instead of exposing internal dataclass defaults.
+    report["target"] = deepcopy(target)
     report["execution_mode"] = "local_snapshot_replay"
     return report
