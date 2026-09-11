@@ -8,9 +8,42 @@
 
 Version 0.2.0: a bounded, auditable news provenance loop with **decomposition on every retrieval return**, a separate verification feedback stage, and a fixed-target evaluation toolkit.
 
-**Status: local harness with offline replay, opt-in live news tracing, and two model execution paths.** Semantic judgments in the demo are hand-authored annotations. The default decomposer preserves original text and leaves source questions unresolved. Model-backed tracing supports local Codex execution and an optional OpenAI API tunnel. The live adapter follows fetched source links and checks each claim separately; a measured real-world accuracy improvement has not been established.
+**Status: local harness with offline replay, opt-in live news tracing, and two model execution paths.** Semantic judgments in the demo are hand-authored annotations. The default decomposer preserves original text and leaves source questions unresolved. Model-backed tracing supports local Codex execution and an optional OpenAI API tunnel. A preregistered eight-paper exploratory system holdout found an accuracy improvement from adding cutoff-safe source tracing; the earlier same-evidence prompt-only holdout did not.
 
 Repository Discussions are enabled, and the repository includes a prepared **Accuracy decline** reporting form for reproducible metric regressions or weaker trace outcomes. Reports should identify the affected metric or behavior, include the run configuration, and avoid treating synthetic fixtures as real-world performance evidence.
+
+## Source-tracing system holdout: harness won
+
+On September 11, a preregistered comparison used eight previously unused,
+anonymized papers published before 2024. Four had specific public integrity
+signals by December 31, 2024 and were retracted in 2025–2026; four were
+domain-matched controls with no located retraction through the audit date.
+
+Both arms used `gpt-5.6-luna` at low reasoning through the local Codex-login
+route, with one call per paper and no retries. The direct arm received the
+original-paper record. The FactCircuit arm received the same record plus the
+source traces that the harness had located before the cutoff. Later outcomes
+were sealed until all calls finished.
+
+| Registered measure | Direct model | FactCircuit source tracing |
+|---|---:|---:|
+| Balanced accuracy | 50.0% | **100.0%** |
+| Overall accuracy | 4/8 | **8/8** |
+| Later-positive recall | 0/4 | **4/4** |
+| Control specificity | 4/4 | 4/4 |
+| Input + output tokens | **53,330** | 56,558 |
+| Harness / direct tokens | 1.00x | 1.06x |
+
+**FactCircuit met every preregistered success condition and exceeded the direct
+model by 50 percentage points in balanced accuracy.** The gain came from the
+retrieval stage surfacing dated, checkable pre-cutoff image-provenance signals;
+this is a system-level result, not evidence that a prompt alone improved the
+model. The sample is exploratory and too small for a stable population estimate.
+
+The [complete report, per-case decisions, sealed labels, and token receipts](reports/honest-system-holdout-20260911/scored-v1/README.md)
+and the [call-before-result preregistration](experiments/honest-system-holdout-20260911/PROTOCOL.md)
+are included for audit. The frozen setup was pushed in commit `efce85a` before
+the first model call.
 
 ## Same-task historical holdout: harness did not win
 

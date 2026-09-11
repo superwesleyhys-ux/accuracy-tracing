@@ -1,0 +1,63 @@
+{
+  "benchmark": "source-tracing-system-holdout-v2",
+  "sealed_before_inference": true,
+  "sealed_at": "2026-09-11T21:49:00Z",
+  "cases": [
+    {
+      "id": "v201",
+      "expected_risk": "elevated",
+      "identity": "Divergent molecular profile of PIK3CA gene in arsenic-associated bladder carcinoma (2020)",
+      "later_outcome": "The journal retracted the paper in 2025 after finding inappropriate repetition of image sections in Figures 4 and 5 and finding the authors' explanation unsatisfactory.",
+      "outcome_url": "https://academic.oup.com/mutage/article/40/4/575/8236455"
+    },
+    {
+      "id": "v202",
+      "expected_risk": "ordinary",
+      "identity": "Molecular correlates of cisplatin-based chemotherapy response in muscle invasive bladder cancer by integrated multi-omics analysis (2020)",
+      "later_outcome": "No retraction concerning this paper was located through 2026-09-11; a 2022 correction added omitted survival metadata to the source-data files.",
+      "outcome_url": null
+    },
+    {
+      "id": "v203",
+      "expected_risk": "elevated",
+      "identity": "LncRNA ODRUL Contributes to Osteosarcoma Progression through the miR-3182/MMP2 Axis (2017)",
+      "later_outcome": "The editor retracted the paper in 2025 after image analysis found duplication within several figures and unattributed recycling from another article.",
+      "outcome_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12461646/"
+    },
+    {
+      "id": "v204",
+      "expected_risk": "ordinary",
+      "identity": "A risk assessment model for the prognosis of osteosarcoma utilizing differentially expressed lncRNAs (2019)",
+      "later_outcome": "No retraction concerning this paper was located through 2026-09-11.",
+      "outcome_url": null
+    },
+    {
+      "id": "v205",
+      "expected_risk": "elevated",
+      "identity": "CircPIP5K1A activates KRT80 and PI3K/AKT pathway to promote gastric cancer development through sponging miR-671-5p (2020)",
+      "later_outcome": "The editor retracted the paper in 2025 after concerns about similarities among within-paper panels and with a different-authors paper went unanswered.",
+      "outcome_url": "https://www.sciencedirect.com/science/article/pii/S0753332225005761"
+    },
+    {
+      "id": "v206",
+      "expected_risk": "ordinary",
+      "identity": "Global circular RNA expression profile of human gastric cancer and its clinical significance (2017)",
+      "later_outcome": "No retraction concerning this paper was located through 2026-09-11.",
+      "outcome_url": null
+    },
+    {
+      "id": "v207",
+      "expected_risk": "elevated",
+      "identity": "Hypomethylation of mismatch repair genes MLH1 and MSH2 is associated with chemotolerance of breast carcinoma: Clinical significance (2019)",
+      "later_outcome": "The journal retracted the paper in 2026 after duplicated images and cross-paper bands could not be resolved and requested original data were unavailable.",
+      "outcome_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13353136/"
+    },
+    {
+      "id": "v208",
+      "expected_risk": "ordinary",
+      "identity": "Single-cell landscape in mammary epithelium reveals bipotent-like cells associated with breast cancer risk and outcome (2019)",
+      "later_outcome": "No retraction concerning this paper was located through 2026-09-11.",
+      "outcome_url": null
+    }
+  ]
+}
