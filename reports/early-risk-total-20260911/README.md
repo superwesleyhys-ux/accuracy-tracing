@@ -1,4 +1,11 @@
-# Total local comparison: direct model and single-pass harness
+# INVALIDATED: local single-pass provenance-risk diagnostic
+
+**Do not use this run as evidence that the harness detected fabrication in
+advance.** A post-run audit found target leakage in the evaluation design: the
+harness policy directly maps unauthenticated real-world provenance claims to
+high risk, all four positive cases use that claim type, and all four controls
+instead ask what a source reports. The test can be solved by distinguishing the
+two claim types. It contains no nonfabricated real-world provenance controls.
 
 The candidate separates cutoff fact verification from an early provenance-risk forecast.
 
@@ -11,7 +18,8 @@ The candidate separates cutoff fact verification from an early provenance-risk f
 | Input + output tokens | 164,490 | 64,444 | ≤328,980 |
 | Harness / direct token ratio | 1.00× | 0.39× | ≤2.00× |
 
-**All registered goals met: yes.**
+**The numerical thresholds were reached, but the benchmark is invalid and the
+registered detection goal is not established.**
 
 ¹ The direct baseline had no separate risk output. None of its cutoff fact verdicts identified the four later-false claims; the harness adds a dedicated predictive risk channel.
 
@@ -32,7 +40,11 @@ The candidate separates cutoff fact verification from an early provenance-risk f
 
 A high risk output records that a real-world provenance claim is supported only by the subject publication and lacks independent authentication in the bounded packet. It does not claim that pre-2024 evidence proved fabrication.
 
-This is an in-sample development result over two event families. The attribution controls test whether the policy preserves literal report claims, but they do not measure false-positive risk on genuine, independently authenticated experiments.
+This is an in-sample diagnostic over two event families. The attribution
+controls test whether the policy preserves literal report claims, but they do
+not measure false-positive risk on genuine provenance claims. A valid
+replacement must use unseen event families and same-task controls frozen before
+inference.
 
 ## Reproducibility
 

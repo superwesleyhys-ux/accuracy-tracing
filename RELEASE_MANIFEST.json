@@ -45,8 +45,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 15467,
-      "sha256": "c5b0e8d919dc53095372a6cb816c2d992ac22d9018a17185fac310d185e54ec5"
+      "bytes": 15546,
+      "sha256": "85102486f0153c34cae673e7d9f550c8ff29e22795d50966c5af55dd9ed7f244"
     },
     {
       "path": "SECURITY.md",
@@ -205,8 +205,8 @@
     },
     {
       "path": "experiments/early-risk-eval-20260911/ITERATIONS.md",
-      "bytes": 1927,
-      "sha256": "e20d5978b052c1bab0e7e2211e425f7273b1443492588fa05cb77b5ab95f8cbf"
+      "bytes": 2720,
+      "sha256": "e14972183559a51c050ccd2a4a971742ffab317952c9032769d899cca422511e"
     },
     {
       "path": "experiments/early-risk-eval-20260911/PROTOCOL.md",
@@ -800,18 +800,18 @@
     },
     {
       "path": "reports/early-risk-total-20260911/README.md",
-      "bytes": 2530,
-      "sha256": "ad38a8ffab31dfb9ecacc6b6da03dd463e5d88d983ebb1112f7712d863e6a0e1"
+      "bytes": 3154,
+      "sha256": "faed92d4f24784f28d9117cb0c0477f9776acbc5ffc9e966b4e7d2922670f5fb"
     },
     {
       "path": "reports/early-risk-total-20260911/SANITIZED_RECEIPTS.json",
-      "bytes": 9479,
-      "sha256": "de3d040ca48631aa6023d46a3a6bc6a459c9606cafadd2fc0cf98aa707a4d386"
+      "bytes": 9590,
+      "sha256": "d132e1c9b46214e4a35ec63fd07db693e11b0a56e59b58285395506309236e1b"
     },
     {
       "path": "reports/early-risk-total-20260911/SUMMARY.json",
-      "bytes": 4613,
-      "sha256": "747c0caa8c652d85af5dbfb936bc10769326b765a38f17675068a943d53e5abe"
+      "bytes": 5262,
+      "sha256": "5989e9c1233e24c4310451d704739f9ee14520da29e83213b5ed68b4b7f98436"
     },
     {
       "path": "reports/first-run-v0.3.2.json",

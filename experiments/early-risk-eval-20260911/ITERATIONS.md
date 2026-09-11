@@ -39,3 +39,16 @@ policy remains unchanged for `run-iteration-1b`.
   baseline.
 - All three registered pass conditions were met. No prompt revision or
   selective rerun was needed after inference began.
+
+### Post-run validity audit — result invalidated
+
+The apparent 4/4 detection result is not a valid fabrication test. The candidate
+policy deterministically assigns high risk to unauthenticated real-world
+provenance claims, while all four controls are source-attribution questions.
+Claim type therefore leaks the class. There are no nonfabricated real-world
+provenance controls, the cases were already observed during development, and
+the four variants cover only two families. The raw receipts remain preserved,
+but this iteration is classified as a failed evaluation design and cannot prove
+the detection or accuracy goals. The next iteration must make a large change:
+new event families, same-task controls, frozen inputs, and no policy update after
+outcomes from that batch are visible.
