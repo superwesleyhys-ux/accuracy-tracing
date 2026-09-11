@@ -88,7 +88,9 @@ def exact_span(version_id, quote, materials):
     import re
     if not quote:
         raise ValueError("Model quote must match exactly one original passage")
-    pattern = re.escape(quote.strip()).replace(r"\ ", r"\s+")
+    # Treat all Unicode/line-break whitespace as equivalent while preserving
+    # the original material span used in the receipt.
+    pattern = r"\s+".join(re.escape(part) for part in re.split(r"\s+", quote.strip()))
     matches = list(re.finditer(pattern, content, flags=re.DOTALL))
     if len(matches) != 1:
         raise ValueError("Model quote must match exactly one original passage")
