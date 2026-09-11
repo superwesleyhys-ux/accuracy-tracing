@@ -31,3 +31,15 @@ experiments/historical-cutoff-20260908/*
 !experiments/historical-cutoff-20260908/summarize_test.py
 !experiments/historical-cutoff-20260908/inspect_replay.py
 !experiments/historical-cutoff-20260908/PROTOCOL.md
+!experiments/historical-news-tracing-20260908/
+experiments/historical-news-tracing-20260908/*
+!experiments/historical-news-tracing-20260908/PROTOCOL.md
+!experiments/historical-news-tracing-20260908/run_test.py
+!experiments/historical-news-tracing-20260908/summarize_test.py
+!experiments/historical-news-tracing-20260908/publish_report.py
+!experiments/harness-optimization-20260909/
+experiments/harness-optimization-20260909/*
+!experiments/harness-optimization-20260909/PROTOCOL.md
+!experiments/harness-optimization-20260909/run_round.py
+!experiments/harness-optimization-20260909/summarize_round.py
+!experiments/harness-optimization-20260909/publish_rounds.py

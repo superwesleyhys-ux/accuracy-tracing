@@ -20,8 +20,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 1124,
-      "sha256": "d37cce213ff9af454ca0af93467871439414ce1e89b68edf168352969e0f6428"
+      "bytes": 1784,
+      "sha256": "035c97726b9dc053545c59de639b545d854e676c22e1ee0dd0cac2bf56161323"
     },
     {
       "path": "CHANGELOG.md",
@@ -189,6 +189,21 @@
       "sha256": "4747d8705f629f1c34cf522030f8f9c0684b6107ae8a379d02b7beb09ad953e3"
     },
     {
+      "path": "experiments/double-loop-pilot/requirements.lock.txt",
+      "bytes": 85,
+      "sha256": "8e5f20451e7857b041c67fb488c37c9b1f403f350de72e7fea1ebceef55e3173"
+    },
+    {
+      "path": "experiments/double-loop-pilot/run_test.py",
+      "bytes": 9265,
+      "sha256": "2faab32eca8902bdd0709a19c7308c3470b057dec0421431c3ad350c3bd4096d"
+    },
+    {
+      "path": "experiments/double-loop-pilot/summarize_test.py",
+      "bytes": 15670,
+      "sha256": "397313a090abda661a12f870771f557b9d1a51d23e1a0cc3f2beb8a1be1a1f9f"
+    },
+    {
       "path": "experiments/frozen-v03.json",
       "bytes": 475,
       "sha256": "6d5587974dd9fab36ac1c4ef0a496a5e737cf7d7a949ffbc3bea6feea62ffb10"
@@ -197,6 +212,46 @@
       "path": "experiments/gold-v03.json",
       "bytes": 807,
       "sha256": "a09220f0465dc0afa1f7504cad7370a805c8408b02631ba5dd983f84e023c850"
+    },
+    {
+      "path": "experiments/gstack-harness-eval-20260908/run_test.py",
+      "bytes": 6117,
+      "sha256": "0ce0f56c7afdcb768296181627e854076b952bdb2fb2dd6c0b5ec17daa918421"
+    },
+    {
+      "path": "experiments/gstack-harness-eval-20260908/summarize_test.py",
+      "bytes": 23953,
+      "sha256": "f5524ee1a92bb5be07d8148477e416d6a11db2ab82cf41ef4ffbf116649e771f"
+    },
+    {
+      "path": "experiments/gstack-harness-eval-20260908/verify_data.py",
+      "bytes": 3604,
+      "sha256": "52ea099658609ac95bf5aee964fdd0cadc309d743a12c2292ed05fa1c228eaa7"
+    },
+    {
+      "path": "experiments/gstack-harness-eval-20260908/verify_local_isolation.py",
+      "bytes": 6454,
+      "sha256": "8c62176b6508fb960c222b83f3224e35fec79563f7509b11b286d4b213e86a96"
+    },
+    {
+      "path": "experiments/harness-optimization-20260909/PROTOCOL.md",
+      "bytes": 5321,
+      "sha256": "528cdf71a8f91fb603d3f9dfc42573b7c7958af9ec7ec97f75081a4e558fbc2a"
+    },
+    {
+      "path": "experiments/harness-optimization-20260909/publish_rounds.py",
+      "bytes": 29989,
+      "sha256": "f68e963126b01051e2ab237df4b8d9a875f068318580a8bc8b887ecbda982aee"
+    },
+    {
+      "path": "experiments/harness-optimization-20260909/run_round.py",
+      "bytes": 40082,
+      "sha256": "1b3b642ac9e7329b2102d7d1c775a48e88e23a029bcdcfac1f5149c07fa347c8"
+    },
+    {
+      "path": "experiments/harness-optimization-20260909/summarize_round.py",
+      "bytes": 44026,
+      "sha256": "41c9231559c68fc359be0985ca551a4f4a194f94ea29bc9e66ef5384fb742e47"
     },
     {
       "path": "experiments/historical-2023-pilot2-v2/README.md",
@@ -292,6 +347,46 @@
       "path": "experiments/historical-2023/sources.json",
       "bytes": 18750,
       "sha256": "5f6520cc36b8f8d10c14109a2d3eef3aca81e4b77bbf1715a70605d25e853455"
+    },
+    {
+      "path": "experiments/historical-cutoff-20260908/PROTOCOL.md",
+      "bytes": 13026,
+      "sha256": "78a55e19db3e0490dda3e3f9ab54fa6176002a3c894c0a3487271cd35709116a"
+    },
+    {
+      "path": "experiments/historical-cutoff-20260908/inspect_replay.py",
+      "bytes": 25223,
+      "sha256": "1218f5cf7b669bc370e7e2798cb7741da68d62e393af6b57d3f24495841cde97"
+    },
+    {
+      "path": "experiments/historical-cutoff-20260908/run_test.py",
+      "bytes": 23993,
+      "sha256": "5b15b53d0ec6b9575adbdbade814b0a924fccc1eea76829216a547067edf2790"
+    },
+    {
+      "path": "experiments/historical-cutoff-20260908/summarize_test.py",
+      "bytes": 14240,
+      "sha256": "36cd56caee64d5d19e794f406252c2aa23ea27166a99bfc284e72a4581079410"
+    },
+    {
+      "path": "experiments/historical-news-tracing-20260908/PROTOCOL.md",
+      "bytes": 6042,
+      "sha256": "4a5516f45192fc37c73b8b62e970f7908ee77a098f55348098de014956fdd021"
+    },
+    {
+      "path": "experiments/historical-news-tracing-20260908/publish_report.py",
+      "bytes": 37396,
+      "sha256": "1b4029d4fa325b2c578965bbb11c18fcd77f6c87b383b2625ba4e5e0587972ab"
+    },
+    {
+      "path": "experiments/historical-news-tracing-20260908/run_test.py",
+      "bytes": 30304,
+      "sha256": "e20a8ff17ec1d33fbaec4f44635f50c99b67c223f6884e0d3df4a6d9e9795f09"
+    },
+    {
+      "path": "experiments/historical-news-tracing-20260908/summarize_test.py",
+      "bytes": 33134,
+      "sha256": "b6ea4a6183d1502825de4e2cbe7bfd4a097ab2dc7949f9ccfce77e1e8ca3600e"
     },
     {
       "path": "experiments/historical_compare.py",
