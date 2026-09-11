@@ -1,8 +1,8 @@
 {
   "benchmark": "same-task-historical-holdout-v1",
-  "registered_at": "2026-09-11T20:49:30.324755+00:00",
+  "registered_at": "2026-09-11T20:47:52.202582+00:00",
   "cutoff": "2024-12-31T23:59:59Z",
-  "model": "gpt-5.6-luna",
+  "model": "gpt-5.4-mini",
   "reasoning_effort": "low",
   "tunnel": "local",
   "retries": 0,
@@ -95,12 +95,5 @@
     "run_test.py": "15288da9482b527fb0b41dcaa6361805d30cb7662e5b02459c54c4524a113388",
     "summarize_test.py": "28c49457add432b8cf8abdef50c4990ae9146d3a64a9200989074f3f7caad52c",
     "PROTOCOL.md": "5f155acb9f9bd8d97230c0e3d3cc6736919598ea9c0d21a3a85d388864e74c20"
-  },
-  "supersedes": {
-    "git_commit": "0e9fae2",
-    "reason": "The registered gpt-5.4-mini model is unsupported with the local ChatGPT login.",
-    "failed_run": "reports/honest-holdout-20260911/run-001",
-    "benchmark_outputs_produced": 0,
-    "prompts_packets_labels_scorer_thresholds_changed": false
   }
 }
