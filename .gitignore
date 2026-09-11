@@ -43,3 +43,9 @@ experiments/harness-optimization-20260909/*
 !experiments/harness-optimization-20260909/run_round.py
 !experiments/harness-optimization-20260909/summarize_round.py
 !experiments/harness-optimization-20260909/publish_rounds.py
+!experiments/early-risk-eval-20260911/
+experiments/early-risk-eval-20260911/*
+!experiments/early-risk-eval-20260911/PROTOCOL.md
+!experiments/early-risk-eval-20260911/ITERATIONS.md
+!experiments/early-risk-eval-20260911/run_test.py
+!experiments/early-risk-eval-20260911/summarize_test.py
