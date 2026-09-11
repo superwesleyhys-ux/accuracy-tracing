@@ -625,8 +625,8 @@
     },
     {
       "path": "newsverify/news_tracing/__init__.py",
-      "bytes": 81,
-      "sha256": "e520a144e5222bed9bf335b86b0964ab55fb98da7ee608e3a2e84e59a5834b90"
+      "bytes": 80,
+      "sha256": "a9a9ab21de682f40da13b88bdbdb90bc755c5de99c62f20dc0583106b1febd36"
     },
     {
       "path": "newsverify/news_tracing/core.py",
