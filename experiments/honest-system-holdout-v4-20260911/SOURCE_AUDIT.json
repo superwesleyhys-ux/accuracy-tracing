@@ -1,0 +1,143 @@
+{
+  "benchmark": "source-tracing-system-holdout-v4",
+  "cutoff": "2024-12-31T23:59:59Z",
+  "contains_post_cutoff_outcomes": false,
+  "cases": [
+    {
+      "id": "v401",
+      "sources": [
+        {
+          "role": "original",
+          "available_at": "2021-12-01T00:00:00Z",
+          "title": "Nuclear respiratory factor-1 negatively regulates TGF-β1 and attenuates pulmonary fibrosis",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8683592/"
+        },
+        {
+          "role": "pre_cutoff_trace",
+          "available_at": "2023-06-09T02:49:35Z",
+          "title": "PubPeer record 10CCF5573EC485487C633B246F4F31",
+          "url": "https://pubpeer.com/publications/10CCF5573EC485487C633B246F4F31"
+        }
+      ]
+    },
+    {
+      "id": "v402",
+      "sources": [
+        {
+          "role": "original",
+          "available_at": "2020-06-08T00:00:00Z",
+          "title": "AP-1 imprints a reversible transcriptional programme of senescent cells",
+          "url": "https://www.nature.com/articles/s41556-020-0529-5"
+        },
+        {
+          "role": "pre_cutoff_resolution",
+          "available_at": "2020-09-16T00:00:00Z",
+          "title": "Author Correction: AP-1 imprints a reversible transcriptional programme of senescent cells",
+          "url": "https://www.nature.com/articles/s41556-020-00589-3"
+        }
+      ]
+    },
+    {
+      "id": "v403",
+      "sources": [
+        {
+          "role": "original",
+          "available_at": "2014-08-18T00:00:00Z",
+          "title": "Rhubarb Tannins Extract Inhibits the Expression of Aquaporins 2 and 3 in Magnesium Sulphate-Induced Diarrhoea Model",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25215286/"
+        },
+        {
+          "role": "pre_cutoff_trace",
+          "available_at": "2020-04-11T04:02:24Z",
+          "title": "PubPeer record 93476E7A88E2A9DD3EDE52DB4AD893",
+          "url": "https://pubpeer.com/publications/93476E7A88E2A9DD3EDE52DB4AD893"
+        }
+      ]
+    },
+    {
+      "id": "v404",
+      "sources": [
+        {
+          "role": "original",
+          "available_at": "2020-11-18T00:00:00Z",
+          "title": "Assembly of synaptic active zones requires phase separation of scaffold molecules",
+          "url": "https://www.nature.com/articles/s41586-020-2942-0"
+        },
+        {
+          "role": "pre_cutoff_resolution",
+          "available_at": "2021-06-18T00:00:00Z",
+          "title": "Author Correction: Assembly of synaptic active zones requires phase separation of scaffold molecules",
+          "url": "https://www.nature.com/articles/s41586-021-03340-6"
+        }
+      ]
+    },
+    {
+      "id": "v405",
+      "sources": [
+        {
+          "role": "original",
+          "available_at": "2020-07-02T00:00:00Z",
+          "title": "Mir-3150B-3P Inhibits the Proliferation and Invasion of Cervical Cancer Cells by Targeting Tnfrsf11A",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7418629/"
+        },
+        {
+          "role": "pre_cutoff_trace",
+          "available_at": "2024-02-09T17:55:15Z",
+          "title": "PubPeer record 86E9F0963DB6775971977A3B6C06A9",
+          "url": "https://pubpeer.com/publications/86E9F0963DB6775971977A3B6C06A9"
+        }
+      ]
+    },
+    {
+      "id": "v406",
+      "sources": [
+        {
+          "role": "original",
+          "available_at": "2019-04-11T00:00:00Z",
+          "title": "Multi-region sequencing unveils novel actionable targets and spatial heterogeneity in esophageal squamous cell carcinoma",
+          "url": "https://www.nature.com/articles/s41467-019-09255-1"
+        },
+        {
+          "role": "pre_cutoff_resolution",
+          "available_at": "2020-11-12T00:00:00Z",
+          "title": "Author Correction: Multi-region sequencing unveils novel actionable targets and spatial heterogeneity in esophageal squamous cell carcinoma",
+          "url": "https://www.nature.com/articles/s41467-020-19641-9"
+        }
+      ]
+    },
+    {
+      "id": "v407",
+      "sources": [
+        {
+          "role": "original",
+          "available_at": "2019-03-03T00:00:00Z",
+          "title": "The Increased PTK7 Expression Is a Malignant Factor in Cervical Cancer",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30944666/"
+        },
+        {
+          "role": "pre_cutoff_trace",
+          "available_at": "2023-04-06T01:55:51Z",
+          "title": "PubPeer record CCB162A11B29CCE91F815B29EBB88F",
+          "url": "https://pubpeer.com/publications/CCB162A11B29CCE91F815B29EBB88F"
+        }
+      ]
+    },
+    {
+      "id": "v408",
+      "sources": [
+        {
+          "role": "original",
+          "available_at": "2015-05-12T00:00:00Z",
+          "title": "A distinct p53 target gene set predicts for response to the selective p53-HDM2 inhibitor NVP-CGM097",
+          "url": "https://elifesciences.org/articles/06498"
+        },
+        {
+          "role": "pre_cutoff_resolution",
+          "available_at": "2016-11-17T00:00:00Z",
+          "title": "Correction: A distinct p53 target gene set predicts for response to the selective p53-HDM2 inhibitor NVP-CGM097",
+          "url": "https://elifesciences.org/articles/19317"
+        }
+      ]
+    }
+  ]
+}

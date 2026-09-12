@@ -1,0 +1,109 @@
+{
+  "benchmark": "source-tracing-system-holdout-v4",
+  "registered_at": "2026-09-12T04:56:27.001819+00:00",
+  "cutoff": "2024-12-31T23:59:59Z",
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "low",
+  "tunnel": "local",
+  "retries": 0,
+  "comparison_type": "system_original_record_vs_same_record_plus_factcircuit_source_trace",
+  "case_order": [
+    "v401",
+    "v402",
+    "v403",
+    "v404",
+    "v405",
+    "v406",
+    "v407",
+    "v408"
+  ],
+  "schedule": [
+    {
+      "case_id": "v401",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v401",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v402",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v402",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v403",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v403",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v404",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v404",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v405",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v405",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v406",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v406",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v407",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v407",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v408",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v408",
+      "arm": "direct"
+    }
+  ],
+  "primary_metric": "balanced_accuracy",
+  "success_criteria": {
+    "harness_strictly_exceeds_direct_balanced_accuracy": true,
+    "all_16_calls_completed_with_valid_outputs": true,
+    "harness_tokens_no_more_than_2x_direct": true
+  },
+  "sealed_gold_sha256": "8b9162c579c802de284fef0b69d1f9180c485d9e976a31de5c7be713d2becdc5",
+  "frozen_sha256": {
+    "corpus.json": "3876f059f379b70e77b65b1bb942c95a638fa51440ce485776314280582a4507",
+    "policies.py": "1dde6dc81a548cfb48bfb952df84116c0dd9ec34f04d00b8163185614ba0829b",
+    "run_test.py": "fb4513554f6758b7710c72eb0ba96e4e2f64b6bd04ae9a148fbf363a214de638",
+    "summarize_test.py": "50570d5153e44af6aa99b6a6f4b39c2e5b9abbbc2727df94ec02c200be6e2a70",
+    "PROTOCOL.md": "f753e2eb29c82a7e21f6b6e5e197c2e31e7248d4e161d9477a6cc7bce6309f9b",
+    "SOURCE_AUDIT.json": "2c8ffa59c51f7d66caa24375fb3de8cc5c43053f33f0e818b19fff858db1b588"
+  },
+  "development_basis": {
+    "prior_holdout_v2": "reports/honest-system-holdout-20260911/scored-v1",
+    "prior_holdout_v3": "reports/honest-system-holdout-v3-20260911/scored-v1",
+    "v3_status": "infrastructure-invalid because one six-citation output was rejected by a five-citation runtime check despite the frozen schema allowing six",
+    "policy_change": "Use an admissibility/conflict-class/resolution ledger, with exact decision rules for unresolved incompatible reuse, repeated structural-count inconsistencies, and resolved corrected errors.",
+    "fresh_case_overlap_with_prior_holdouts": false,
+    "post_cutoff_outcomes_in_model_packets": false
+  }
+}
