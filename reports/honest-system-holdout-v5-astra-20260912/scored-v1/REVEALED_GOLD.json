@@ -1,0 +1,78 @@
+{
+  "benchmark": "source-tracing-system-holdout-v5-astra",
+  "sealed_before_inference": true,
+  "cases": [
+    {
+      "id": "v501",
+      "expected_risk": "elevated",
+      "outcome": "publisher_retraction",
+      "outcome_date": "2026-04-20",
+      "title": "Hypomethylation of mismatch repair genes MLH1 and MSH2 is associated with chemotolerance of breast carcinoma: Clinical significance",
+      "outcome_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13353136/",
+      "basis": "The publisher retracted the article after an investigation confirmed duplicated images and cross-paper band reuse; the requested original data were unavailable and the explanation did not resolve the concerns."
+    },
+    {
+      "id": "v502",
+      "expected_risk": "ordinary",
+      "outcome": "right_censored_corrected_control",
+      "outcome_date": null,
+      "title": "Human macrophages differentially produce specific resolvin or leukotriene signals that depend on bacterial pathogenicity",
+      "outcome_url": "https://www.nature.com/articles/s41467-023-41667-y",
+      "basis": "The 2023 correction replaced misleading re-plotted chromatograms with direct captures and added complete replicate source data; no later retraction was located through 2026-09-12."
+    },
+    {
+      "id": "v503",
+      "expected_risk": "elevated",
+      "outcome": "publisher_retraction",
+      "outcome_date": "2025-06-18",
+      "title": "HOXA5-miR-574-5p axis promotes adipogenesis and alleviates insulin resistance",
+      "outcome_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12212137/",
+      "basis": "The editor retracted the article after confirming altered image reuse across several figures and finding further reuse between different groups in original files."
+    },
+    {
+      "id": "v504",
+      "expected_risk": "ordinary",
+      "outcome": "right_censored_corrected_control",
+      "outcome_date": null,
+      "title": "Localized nuclear reaction breaks boron drug capsules loaded with immune adjuvants for cancer immunotherapy",
+      "outcome_url": "https://www.nature.com/articles/s41467-023-40690-3",
+      "basis": "The 2023 correction replaced mislabeled figure axes and inaccurate source-data files and stated the conclusions were unchanged; no later retraction was located through 2026-09-12."
+    },
+    {
+      "id": "v505",
+      "expected_risk": "elevated",
+      "outcome": "publisher_retraction",
+      "outcome_date": "2025-12-16",
+      "title": "microRNA-7 upregulates death receptor 5 and primes resistant brain tumors to caspase-mediated apoptosis",
+      "outcome_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13070494/",
+      "basis": "After a 2024 expression of concern, the journal investigation found irregularities in the cited figures; supplied replacements did not overcome reliability concerns, and the editor retracted the article."
+    },
+    {
+      "id": "v506",
+      "expected_risk": "ordinary",
+      "outcome": "right_censored_corrected_control",
+      "outcome_date": null,
+      "title": "Distinct neurexin-cerebellin complexes control AMPA- and NMDA-receptor responses in a circuit-dependent manner",
+      "outcome_url": "https://elifesciences.org/articles/94305",
+      "basis": "The 2023 correction disclosed copy-paste and calculation errors, published corrected values after reanalysis, and updated the source data; no later retraction was located through 2026-09-12."
+    },
+    {
+      "id": "v507",
+      "expected_risk": "elevated",
+      "outcome": "publisher_retraction",
+      "outcome_date": "2026-06-23",
+      "title": "Dietary Supplementation of the Antioxidant Curcumin Halts Systemic LPS-Induced Neuroinflammation-Associated Neurodegeneration and Memory/Synaptic Impairment via the JNK/NF-kB/Akt Signaling Pathway in Adult Rats",
+      "outcome_url": "https://onlinelibrary.wiley.com/doi/10.1155/omcl/9837507",
+      "basis": "The publisher confirmed image concerns and unattributed reuse, found the authors' raw-data response insufficient, and retracted the article because the data and conclusions were considered unreliable."
+    },
+    {
+      "id": "v508",
+      "expected_risk": "ordinary",
+      "outcome": "right_censored_corrected_control",
+      "outcome_date": null,
+      "title": "An anti-influenza A virus microbial metabolite acts by degrading viral endonuclease PA",
+      "outcome_url": "https://www.nature.com/articles/s41467-023-39437-x",
+      "basis": "The 2023 correction updated the animal timeline, units, cohort descriptions, methods, table, and source data and stated the main conclusions were unaffected; no later retraction was located through 2026-09-12."
+    }
+  ]
+}

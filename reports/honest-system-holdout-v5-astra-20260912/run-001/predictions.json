@@ -1,0 +1,618 @@
+{
+  "gold_loaded": false,
+  "completed_steps": 16,
+  "expected_steps": 16,
+  "results": [
+    {
+      "case_id": "v501",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The supplied record describes methods and reported results without a specific inconsistency or other checkable integrity concern. The absence of archived uncropped blots or a completed integrity review alone does not justify elevated follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v5_astra_direct",
+          "tunnel": "local",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 10.071825832943432,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 9321,
+            "cached_input_tokens": 0,
+            "output_tokens": 83,
+            "reasoning_output_tokens": 0
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v501",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "elevated",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "Flipped band duplication across different experimental conditions",
+          "Loading-control reuse mapped across papers",
+          "No supplied correction or source-data reconciliation"
+        ],
+        "rationale": "The pre-cutoff review maps duplicated, upside-down band regions to adjacent panels claiming different conditions, and another loading-control group to two figures in another paper. The first mapping assigns incompatible experimental identities to the same artifact. Neither mapping has a supplied correction or source-data reconciliation, warranting follow-up rather than a misconduct finding."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v5_astra_harness",
+          "tunnel": "local",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 12.712628125096671,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 9672,
+            "cached_input_tokens": 0,
+            "output_tokens": 218,
+            "reasoning_output_tokens": 87
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v502",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p003",
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "Formal correction identifies omitted chromatographic peaks.",
+          "Corrected instrument captures, matching standards, and replicate source data supplied.",
+          "No incompatible artifact identities remain in the supplied record."
+        ],
+        "rationale": "The artifact matrix links the two displayed chromatograms to the two reported resolvin products. The 2023 correction identifies misleading peak omission, replaces the panel with direct instrument captures and standards, and supplies all biological replicates. This makes the affected representation reconstructable; the packet supplies no unresolved incompatible mapping."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v5_astra_harness",
+          "tunnel": "local",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 9.829636916983873,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 9682,
+            "cached_input_tokens": 0,
+            "output_tokens": 160,
+            "reasoning_output_tokens": 24
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v502",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The supplied record describes analytical methods, product-identification criteria, and biological replicates without a specific inconsistency or other checkable integrity concern. Data availability upon request alone does not justify elevated follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v5_astra_direct",
+          "tunnel": "local",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 7.163320916006342,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 9322,
+            "cached_input_tokens": 0,
+            "output_tokens": 82,
+            "reasoning_output_tokens": 0
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v503",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [
+          "No specific, checkable integrity anomaly in the supplied record."
+        ],
+        "rationale": "The packet describes methods and reported outcomes without identifying inconsistencies or figure anomalies. The absence of an independently completed integrity review does not itself justify elevated follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v5_astra_direct",
+          "tunnel": "local",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 8.145914750057273,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 9312,
+            "cached_input_tokens": 0,
+            "output_tokens": 85,
+            "reasoning_output_tokens": 0
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v503",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "elevated",
+        "confidence": "medium",
+        "evidence_passage_ids": [
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "Modified blot reuse across different experimental conditions",
+          "Second modified duplication under different conditions",
+          "No supplied correction or source-data reconciliation"
+        ],
+        "rationale": "The dated review links one blot artifact to different conditions across two figures and a second modified duplication to different conditions in another figure. These reported mappings fail the consistency check, with neither resolved by the cutoff. Missing panel identifiers and condition labels limit confidence; this warrants follow-up, not a misconduct finding."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v5_astra_harness",
+          "tunnel": "local",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 9.509149292018265,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 9660,
+            "cached_input_tokens": 0,
+            "output_tokens": 180,
+            "reasoning_output_tokens": 55
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v504",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "Two central-efficacy Y-axis labels were corrected.",
+          "Source-data inaccuracies affected seven main-figure panels and two supplementary panels; corrected data replaced the original file.",
+          "No supplied incompatible experimental-identity mapping remains unresolved."
+        ],
+        "rationale": "The artifact-to-claim mapping identifies axis-label errors and inaccurate panel-linked quantitative data, without evidence of an artifact representing incompatible experiments. The dated 2023 correction identified the errors and replaced both the affected figure and source data before the cutoff, satisfying the supplied resolution criteria."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v5_astra_harness",
+          "tunnel": "local",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 9.331321208039299,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 9643,
+            "cached_input_tokens": 0,
+            "output_tokens": 164,
+            "reasoning_output_tokens": 27
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v504",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The supplied record describes experiments, quantitative results, and figure-linked source data, but identifies no specific inconsistency or other checkable reason for unusual integrity follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v5_astra_direct",
+          "tunnel": "local",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 7.627111374982633,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 9300,
+            "cached_input_tokens": 7552,
+            "output_tokens": 74,
+            "reasoning_output_tokens": 0
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v505",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p003",
+          "p004"
+        ],
+        "signals": [
+          "No specific image or result inconsistency identified",
+          "Incomplete panel-to-source archive alone is insufficient"
+        ],
+        "rationale": "The packet describes protein bands and tissue panels but identifies no duplication, manipulation, or contradictory results. The missing reconciled source-image archive alone does not establish a specific reason for unusual integrity follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v5_astra_direct",
+          "tunnel": "local",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 14.70793124998454,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 9338,
+            "cached_input_tokens": 0,
+            "output_tokens": 96,
+            "reasoning_output_tokens": 0
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v505",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "elevated",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "Rotated tissue-panel reuse across different treatment combinations",
+          "Cross-paper mappings of caspase band groups and image regions to different experimental identities",
+          "Unresolved expression of concern"
+        ],
+        "rationale": "The admitted pre-cutoff traces map a tissue panel to a rotated panel claiming a different treatment combination, and four-lane caspase groups and image regions to different cell or treatment identities in another paper. These supplied mappings are incompatible with a single experimental identity. No corrected representation or source-data reconciliation resolved them by the cutoff."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v5_astra_harness",
+          "tunnel": "local",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 10.814870792091824,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 9696,
+            "cached_input_tokens": 0,
+            "output_tokens": 184,
+            "reasoning_output_tokens": 43
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v506",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p003",
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "Formal correction public before cutoff",
+          "Affected numerical values and source-data files replaced",
+          "No supplied incompatible mapping remains unresolved"
+        ],
+        "rationale": "The artifact matrix covers four figure source-data files: values assigned from another analysis or neighboring cell, mislabeled conditions, and a coefficient-of-variation calculation error. These compromise the original numerical identities, but the dated correction identifies the errors, reanalyzes all affected conditions, and supplies corrected values and source data. The packet leaves no incompatible mapping unresolved."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v5_astra_harness",
+          "tunnel": "local",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 9.946084875031374,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 9678,
+            "cached_input_tokens": 0,
+            "output_tokens": 163,
+            "reasoning_output_tokens": 26
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v506",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The supplied record describes methods, reported measurements, and numerical source-data files but identifies no specific inconsistency or other checkable reason for unusual integrity follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v5_astra_direct",
+          "tunnel": "local",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 7.157778542023152,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 9310,
+            "cached_input_tokens": 0,
+            "output_tokens": 73,
+            "reasoning_output_tokens": 0
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v507",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [
+          "No specific integrity anomaly documented",
+          "Image-source mapping unavailable in supplied packet"
+        ],
+        "rationale": "The packet describes standard assays and treatment comparisons without identifying a specific inconsistency or image anomaly. The absence of a reconciled image-source mapping alone does not justify elevated follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v5_astra_direct",
+          "tunnel": "local",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 17.354100290918723,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 9324,
+            "cached_input_tokens": 0,
+            "output_tokens": 91,
+            "reasoning_output_tokens": 0
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v507",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "elevated",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "Matching nuclear image fields assigned to control and combined-treatment conditions",
+          "Image reuse mapped across inflammatory and mitochondrial marker panels",
+          "Cross-paper reuse under different treatment and antibody identities, with apparent channel alteration",
+          "No correction or source-data reconciliation by cutoff"
+        ],
+        "rationale": "The admitted July 2024 traces map image fields to incompatible treatment conditions, panels to different markers, and panel regions to other papers with different treatment and antibody identities. These mappings exceed unmapped visual similarity, and no supplied correction resolves them. Elevated follow-up is warranted, without implying misconduct."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v5_astra_harness",
+          "tunnel": "local",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 11.479535417049192,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 9695,
+            "cached_input_tokens": 0,
+            "output_tokens": 185,
+            "reasoning_output_tokens": 38
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v508",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p003",
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "Dated formal correction identifies animal-experiment and source-data errors.",
+          "Corrected figures and data make affected experimental mappings reconstructable.",
+          "No supplied incompatible artifact identity remains unresolved."
+        ],
+        "rationale": "The artifact matrix links the animal figure to corrected endpoints, viral-titer units and cohorts, and supplementary source data to corrected values. The paper-linked June 2023 correction identifies the errors and supplies replacement representations and data before the cutoff. The packet supplies no unresolved incompatible mapping or transformed reuse."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v5_astra_harness",
+          "tunnel": "local",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 9.636046000057831,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 9686,
+            "cached_input_tokens": 0,
+            "output_tokens": 170,
+            "reasoning_output_tokens": 35
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v508",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The supplied record describes multiple assays, animal outcomes, and quantitative source-data files, but identifies no specific inconsistency or other checkable reason for unusual integrity follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v5_astra_direct",
+          "tunnel": "local",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 7.783415541984141,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 9312,
+            "cached_input_tokens": 0,
+            "output_tokens": 75,
+            "reasoning_output_tokens": 0
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    }
+  ]
+}

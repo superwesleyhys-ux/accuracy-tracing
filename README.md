@@ -12,7 +12,44 @@ Version 0.2.0: a bounded, auditable news provenance loop with **decomposition on
 
 Repository Discussions are enabled, and the repository includes a prepared **Accuracy decline** reporting form for reproducible metric regressions or weaker trace outcomes. Reports should identify the affected metric or behavior, include the run configuration, and avoid treating synthetic fixtures as real-world performance evidence.
 
-## Latest honest source-tracing holdout: harness won
+## Astra source-tracing holdout: harness won
+
+On September 12, holdout v5 tested eight new anonymized papers with
+`gpt-6-astra`. Four papers had precise integrity traces public by December 31,
+2024 and were formally retracted in 2025 or 2026. Four controls had real
+pre-cutoff publisher corrections with replacement figures or source data and
+no located retraction through the audit date. The later outcomes stayed in a
+sealed file until all model calls finished.
+
+Both arms used Astra at low reasoning through the local Codex-login route,
+with one call per paper and no retries or API fallback. The direct arm received
+four passages from the original-paper record. FactCircuit received those same
+passages plus two dated, cutoff-eligible source-trace passages.
+
+| Registered measure | Direct Astra | Astra + FactCircuit |
+|---|---:|---:|
+| Balanced accuracy | 50.0% | **100.0%** |
+| Overall accuracy | 4/8 | **8/8** |
+| Later-positive recall | 0/4 | **4/4** |
+| Control specificity | 4/4 | 4/4 |
+| Valid outputs | 8/8 | 8/8 |
+| Input + output tokens | **75,198** | 78,836 |
+| Harness / direct tokens | 1.00x | 1.05x |
+
+**FactCircuit met all three preregistered success conditions and exceeded
+direct Astra by 50 percentage points in balanced accuracy.** All 16 calls and
+all integrity checks passed. The gain measures the source-tracing system: the
+harness arm received additional dated evidence found by that system. It does
+not show that prompt wording alone improves Astra.
+
+The [complete Astra report, per-case decisions, revealed labels, and token receipts](reports/honest-system-holdout-v5-astra-20260912/scored-v1/README.md)
+and [pre-inference registration](experiments/honest-system-holdout-v5-astra-20260912/PROTOCOL.md)
+are included for audit. The frozen setup and sealed-gold hash were pushed in
+commit `83d86338` before the first model call. This eight-case result is
+exploratory and too small for a stable population estimate; right-censored
+controls are not proof that a paper is authentic.
+
+## Previous Luna source-tracing holdout v4: harness won
 
 On September 11, holdout v4 used eight more previously unused, anonymized
 papers. Four had precise public integrity traces by December 31, 2024 and were

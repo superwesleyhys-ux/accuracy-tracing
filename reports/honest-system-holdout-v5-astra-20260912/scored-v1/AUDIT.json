@@ -1,0 +1,15 @@
+{
+  "registration_hash_matches_run_manifest": true,
+  "frozen_file_hashes_match_registration": true,
+  "sealed_gold_hash_matches_registration": true,
+  "run_schedule_matches_registration": true,
+  "all_packet_passages_within_cutoff": true,
+  "all_source_audit_records_within_cutoff": true,
+  "source_audit_contains_no_post_cutoff_outcomes": true,
+  "model_corpus_contains_no_outcome_fields": true,
+  "harness_preserves_direct_base_passages": true,
+  "runner_did_not_load_gold": true,
+  "all_calls_completed_once_without_retry": true,
+  "all_integrity_checks_passed": true,
+  "all_registered_success_criteria_met": true
+}

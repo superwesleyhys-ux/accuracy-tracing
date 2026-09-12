@@ -45,8 +45,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 21284,
-      "sha256": "58357a5f56dcd11e8d53c53a7e3b5d86be2126484dea9499cad18aaaa6689486"
+      "bytes": 23294,
+      "sha256": "c09b0b26dbd7cb946464cb74ba21d345838d67c9443b4da0974368f1bfcbea7b"
     },
     {
       "path": "SECURITY.md",
@@ -552,6 +552,41 @@
       "path": "experiments/honest-system-holdout-v4-20260911/summarize_test.py",
       "bytes": 14480,
       "sha256": "50570d5153e44af6aa99b6a6f4b39c2e5b9abbbc2727df94ec02c200be6e2a70"
+    },
+    {
+      "path": "experiments/honest-system-holdout-v5-astra-20260912/PROTOCOL.md",
+      "bytes": 2638,
+      "sha256": "c2e5fd8fbe5c67af8710af15cccabb9ab8d66a4b544c4e61dcb8a91ae5116740"
+    },
+    {
+      "path": "experiments/honest-system-holdout-v5-astra-20260912/REGISTRATION.json",
+      "bytes": 2772,
+      "sha256": "b23e2e6fa3ec0fef1806f1d1e0fb762fcaa30e8ff1d4cfeb1d5234dd57621315"
+    },
+    {
+      "path": "experiments/honest-system-holdout-v5-astra-20260912/SOURCE_AUDIT.json",
+      "bytes": 4709,
+      "sha256": "85ac171afcda09861cea6d711846f265b62c4b23ea64de79d6550666ae79765a"
+    },
+    {
+      "path": "experiments/honest-system-holdout-v5-astra-20260912/corpus.json",
+      "bytes": 29785,
+      "sha256": "4dfb03f1a7dc630ca2950370a0c4a2bd1808f6096b0e6fd4b67b80a0c90f5e27"
+    },
+    {
+      "path": "experiments/honest-system-holdout-v5-astra-20260912/policies.py",
+      "bytes": 3340,
+      "sha256": "3422a4b909b80c178314b4089912033ad02d0485a2f517615f7a607ee90e309a"
+    },
+    {
+      "path": "experiments/honest-system-holdout-v5-astra-20260912/run_test.py",
+      "bytes": 7098,
+      "sha256": "a17a40449f3e9d0995ded93f4a940e16d5e74b8bf856b5e98231dd9c3152a55e"
+    },
+    {
+      "path": "experiments/honest-system-holdout-v5-astra-20260912/summarize_test.py",
+      "bytes": 14842,
+      "sha256": "559477600ea0a99494239e89948016d99b1501eacdfeb57f5f2043c00be22848"
     },
     {
       "path": "experiments/inputs-v03.json",
@@ -1902,6 +1937,36 @@
       "path": "reports/honest-system-holdout-v4-20260911/scored-v1/SUMMARY.json",
       "bytes": 5223,
       "sha256": "1d999b8d712aebebd4b6593ca1ec8b59403810b8f0f5b3b9f0072a73c74ac2d8"
+    },
+    {
+      "path": "reports/honest-system-holdout-v5-astra-20260912/run-001/manifest.json",
+      "bytes": 711,
+      "sha256": "dc17ef3a0b08b32bfcecd0401156b219f9646c5b1b61d1e83ed3ce4b629f680a"
+    },
+    {
+      "path": "reports/honest-system-holdout-v5-astra-20260912/run-001/predictions.json",
+      "bytes": 21757,
+      "sha256": "8eec62e9ad7a22d31380607ab9589b975ef433f95e3f9285b0037f74df349301"
+    },
+    {
+      "path": "reports/honest-system-holdout-v5-astra-20260912/scored-v1/AUDIT.json",
+      "bytes": 621,
+      "sha256": "8cb334c7e352cdd5c43439569dd2e871f4d8f31eb58cb8ff9e5600c72c195132"
+    },
+    {
+      "path": "reports/honest-system-holdout-v5-astra-20260912/scored-v1/README.md",
+      "bytes": 2724,
+      "sha256": "7cbfea1d88690db2b781ed2bd2f4442e70f448c63834cf3d63a9c000f542482d"
+    },
+    {
+      "path": "reports/honest-system-holdout-v5-astra-20260912/scored-v1/REVEALED_GOLD.json",
+      "bytes": 4655,
+      "sha256": "29d48d2e14260ca9746f314146b0d0caa8c1ade7fecc6172b9df021166e42517"
+    },
+    {
+      "path": "reports/honest-system-holdout-v5-astra-20260912/scored-v1/SUMMARY.json",
+      "bytes": 5223,
+      "sha256": "b69c44e30978d06a46e8894246a85aae8bcc94259b77e792675ff21d7f7c7a91"
     },
     {
       "path": "reports/live-v03-attempt-01/bridge-evidence-loop-calls.json",

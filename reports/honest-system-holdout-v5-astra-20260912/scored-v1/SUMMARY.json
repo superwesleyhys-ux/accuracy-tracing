@@ -1,0 +1,194 @@
+{
+  "scored_at": "2026-09-12T18:42:06.089102+00:00",
+  "validation_status": "valid_small_exploratory_holdout",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "metrics": {
+    "direct": {
+      "cases": 8,
+      "correct": 4,
+      "accuracy": 0.5,
+      "true_positives": 0,
+      "true_negatives": 4,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "balanced_accuracy": 0.5,
+      "valid_outputs": 8,
+      "calls": 8,
+      "successful_calls": 8,
+      "known_usage_calls": 8,
+      "usage_complete": true,
+      "input_tokens": 74539,
+      "output_tokens": 659,
+      "total_tokens": 75198
+    },
+    "harness": {
+      "cases": 8,
+      "correct": 8,
+      "accuracy": 1.0,
+      "true_positives": 4,
+      "true_negatives": 4,
+      "sensitivity": 1.0,
+      "specificity": 1.0,
+      "balanced_accuracy": 1.0,
+      "valid_outputs": 8,
+      "calls": 8,
+      "successful_calls": 8,
+      "known_usage_calls": 8,
+      "usage_complete": true,
+      "input_tokens": 77412,
+      "output_tokens": 1424,
+      "total_tokens": 78836
+    }
+  },
+  "harness_to_direct_token_ratio": 1.0483789462485704,
+  "winner_by_registered_primary_metric": "harness",
+  "registered_success_criteria": {
+    "harness_strictly_exceeds_direct_balanced_accuracy": true,
+    "all_16_calls_completed_with_valid_outputs": true,
+    "harness_tokens_no_more_than_2x_direct": true
+  },
+  "all_registered_success_criteria_met": true,
+  "per_case": {
+    "direct": [
+      {
+        "case_id": "v501",
+        "expected": "elevated",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": false
+      },
+      {
+        "case_id": "v502",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "v503",
+        "expected": "elevated",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": false
+      },
+      {
+        "case_id": "v504",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "v505",
+        "expected": "elevated",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": false
+      },
+      {
+        "case_id": "v506",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "v507",
+        "expected": "elevated",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": false
+      },
+      {
+        "case_id": "v508",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      }
+    ],
+    "harness": [
+      {
+        "case_id": "v501",
+        "expected": "elevated",
+        "predicted": "elevated",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "v502",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "v503",
+        "expected": "elevated",
+        "predicted": "elevated",
+        "confidence": "medium",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "v504",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "v505",
+        "expected": "elevated",
+        "predicted": "elevated",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "v506",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "v507",
+        "expected": "elevated",
+        "predicted": "elevated",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      },
+      {
+        "case_id": "v508",
+        "expected": "ordinary",
+        "predicted": "ordinary",
+        "confidence": "high",
+        "evidence_valid": true,
+        "correct": true
+      }
+    ]
+  },
+  "gold_sha256": "29d48d2e14260ca9746f314146b0d0caa8c1ade7fecc6172b9df021166e42517",
+  "registration_sha256": "b23e2e6fa3ec0fef1806f1d1e0fb762fcaa30e8ff1d4cfeb1d5234dd57621315",
+  "limitations": [
+    "Eight cases are too few for a statistically stable performance estimate.",
+    "Control labels are right-censored absence of a located public finding, not proof of authenticity.",
+    "Identity masking cannot remove post-cutoff facts embedded in model parameters.",
+    "The arms intentionally receive different evidence because this evaluates the retrieval system, not a prompt-only ablation."
+  ]
+}
