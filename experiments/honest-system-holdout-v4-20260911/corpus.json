@@ -1,0 +1,791 @@
+{
+  "benchmark": "source-tracing-system-holdout-v4",
+  "cutoff": "2024-12-31T23:59:59Z",
+  "model_packet_excludes": [
+    "titles",
+    "authors",
+    "doi",
+    "institutions",
+    "journals",
+    "urls",
+    "post_cutoff_outcomes"
+  ],
+  "cases": [
+    {
+      "id": "v401",
+      "direct_packet": {
+        "case_id": "v401",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2021,
+          "field": "pulmonary fibrosis and transcriptional signaling",
+          "evidence_types": [
+            "mouse model",
+            "cell culture",
+            "immunoblotting",
+            "histology"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2021-12-01T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper tests whether a mitochondrial transcription factor suppresses a profibrotic signaling pathway in lung fibrosis models."
+          },
+          {
+            "id": "p002",
+            "available_at": "2021-12-01T00:00:00Z",
+            "kind": "methods",
+            "text": "Mouse lung injury and cultured pulmonary cells are studied with histology, gene-expression assays, protein-band assays, and pathway perturbations."
+          },
+          {
+            "id": "p003",
+            "available_at": "2021-12-01T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Several protein-band figures compare five experimental conditions with reported replicate structure and quantify signaling and inflammatory proteins."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original-record packet contains no independently archived uncropped blot series or completed integrity review."
+          }
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v401",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2021,
+          "field": "pulmonary fibrosis and transcriptional signaling",
+          "evidence_types": [
+            "mouse model",
+            "cell culture",
+            "immunoblotting",
+            "histology"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2021-12-01T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper tests whether a mitochondrial transcription factor suppresses a profibrotic signaling pathway in lung fibrosis models."
+          },
+          {
+            "id": "p002",
+            "available_at": "2021-12-01T00:00:00Z",
+            "kind": "methods",
+            "text": "Mouse lung injury and cultured pulmonary cells are studied with histology, gene-expression assays, protein-band assays, and pathway perturbations."
+          },
+          {
+            "id": "p003",
+            "available_at": "2021-12-01T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Several protein-band figures compare five experimental conditions with reported replicate structure and quantify signaling and inflammatory proteins."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original-record packet contains no independently archived uncropped blot series or completed integrity review."
+          },
+          {
+            "id": "p005",
+            "available_at": "2023-06-09T02:49:35Z",
+            "kind": "dated_public_trace",
+            "text": "A public figure review counted 15 lanes for three proteins in Figure 3E, matching five conditions with three replicates, but only 10 lanes for each of four other proteins presented for the same experiment."
+          },
+          {
+            "id": "p006",
+            "available_at": "2023-06-09T02:54:42Z",
+            "kind": "dated_public_trace",
+            "text": "The same review separately found that most blots in Figure 8A had the expected 15 lanes while one inflammatory-protein blot had 16. The supplied cutoff record contains no correction or source-data reconciliation for either count mismatch."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v402",
+      "direct_packet": {
+        "case_id": "v402",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2020,
+          "field": "cellular senescence transcription",
+          "evidence_types": [
+            "time-course transcriptomics",
+            "chromatin profiling",
+            "qPCR",
+            "computational analysis"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2020-06-08T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper studies how a transcription-factor network establishes and reverses the gene-expression programme of senescent cells."
+          },
+          {
+            "id": "p002",
+            "available_at": "2020-06-08T00:00:00Z",
+            "kind": "methods",
+            "text": "Time-course chromatin and expression measurements are combined with perturbation, qPCR, heatmaps, and computational analyses."
+          },
+          {
+            "id": "p003",
+            "available_at": "2020-06-08T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Figures report fold changes, heatmaps, and statistical source data across genes, time points, and senescence states."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original article links processed material and analysis workflows but does not itself enumerate later corrections."
+          }
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v402",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2020,
+          "field": "cellular senescence transcription",
+          "evidence_types": [
+            "time-course transcriptomics",
+            "chromatin profiling",
+            "qPCR",
+            "computational analysis"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2020-06-08T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper studies how a transcription-factor network establishes and reverses the gene-expression programme of senescent cells."
+          },
+          {
+            "id": "p002",
+            "available_at": "2020-06-08T00:00:00Z",
+            "kind": "methods",
+            "text": "Time-course chromatin and expression measurements are combined with perturbation, qPCR, heatmaps, and computational analyses."
+          },
+          {
+            "id": "p003",
+            "available_at": "2020-06-08T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Figures report fold changes, heatmaps, and statistical source data across genes, time points, and senescence states."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original article links processed material and analysis workflows but does not itself enumerate later corrections."
+          },
+          {
+            "id": "p005",
+            "available_at": "2020-09-16T00:00:00Z",
+            "kind": "dated_publisher_correction",
+            "text": "A publisher correction identified copied mean and standard-error values, identical raw values and invalid integers in statistical source data, one omitted heatmap gene, and two swapped rows."
+          },
+          {
+            "id": "p006",
+            "available_at": "2020-09-16T00:00:00Z",
+            "kind": "trace_resolution",
+            "text": "The publisher replaced the affected source data and figures, reported only minor fold-change and heatmap changes, and added qPCR methods. The article also provides analysis workflows and processed material needed to reproduce its figures."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v403",
+      "direct_packet": {
+        "case_id": "v403",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2014,
+          "field": "experimental diarrhea pharmacology",
+          "evidence_types": [
+            "mouse model",
+            "human cell line",
+            "immunofluorescence",
+            "immunoblotting"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2014-08-18T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper tests whether a plant-tannin extract changes two water-channel proteins in a chemically induced diarrhea model and cultured cells."
+          },
+          {
+            "id": "p002",
+            "available_at": "2014-08-18T00:00:00Z",
+            "kind": "methods",
+            "text": "Mice and cells receive concentration or time-series treatments; water content, defecation, transcripts, microscopy, and protein-band measurements are reported."
+          },
+          {
+            "id": "p003",
+            "available_at": "2014-08-18T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Loading-control panels accompany multiple protein assays across distinct concentration series and time series."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original-record packet contains no underlying full image archive or completed integrity review."
+          }
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v403",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2014,
+          "field": "experimental diarrhea pharmacology",
+          "evidence_types": [
+            "mouse model",
+            "human cell line",
+            "immunofluorescence",
+            "immunoblotting"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2014-08-18T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper tests whether a plant-tannin extract changes two water-channel proteins in a chemically induced diarrhea model and cultured cells."
+          },
+          {
+            "id": "p002",
+            "available_at": "2014-08-18T00:00:00Z",
+            "kind": "methods",
+            "text": "Mice and cells receive concentration or time-series treatments; water content, defecation, transcripts, microscopy, and protein-band measurements are reported."
+          },
+          {
+            "id": "p003",
+            "available_at": "2014-08-18T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Loading-control panels accompany multiple protein assays across distinct concentration series and time series."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original-record packet contains no underlying full image archive or completed integrity review."
+          },
+          {
+            "id": "p005",
+            "available_at": "2020-04-11T04:02:24Z",
+            "kind": "dated_public_trace",
+            "text": "A public comparison mapped the same-looking loading-control lanes between Figures 4A and 6D despite different concentration series, and mapped another full control panel between a concentration series in Figure 4B and a time series in Figure 6B."
+          },
+          {
+            "id": "p006",
+            "available_at": "2020-04-11T04:13:52Z",
+            "kind": "dated_public_trace",
+            "text": "Further cutoff-eligible comparisons mapped the Figure 6A control panel to Figure 7B despite different time and concentration series, and mapped related controls to a separate paper. No correction or source-data reconciliation appears in the supplied cutoff record."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v404",
+      "direct_packet": {
+        "case_id": "v404",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2020,
+          "field": "presynaptic scaffold assembly",
+          "evidence_types": [
+            "genome editing",
+            "fluorescence microscopy",
+            "electron microscopy",
+            "protein biophysics"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2020-11-18T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper investigates whether presynaptic scaffold proteins form condensates that organize synaptic active zones."
+          },
+          {
+            "id": "p002",
+            "available_at": "2020-11-18T00:00:00Z",
+            "kind": "methods",
+            "text": "Genetic perturbations, microscopy, ultrastructure, biochemical assays, sequence predictors, and source-data tables support the analysis."
+          },
+          {
+            "id": "p003",
+            "available_at": "2020-11-18T00:00:00Z",
+            "kind": "reported_result",
+            "text": "An extended-data graph shows sequence-based predictor scores for a scaffold protein; quantitative source data accompany the study."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original article provides source data but does not itself describe a later graph correction."
+          }
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v404",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2020,
+          "field": "presynaptic scaffold assembly",
+          "evidence_types": [
+            "genome editing",
+            "fluorescence microscopy",
+            "electron microscopy",
+            "protein biophysics"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2020-11-18T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper investigates whether presynaptic scaffold proteins form condensates that organize synaptic active zones."
+          },
+          {
+            "id": "p002",
+            "available_at": "2020-11-18T00:00:00Z",
+            "kind": "methods",
+            "text": "Genetic perturbations, microscopy, ultrastructure, biochemical assays, sequence predictors, and source-data tables support the analysis."
+          },
+          {
+            "id": "p003",
+            "available_at": "2020-11-18T00:00:00Z",
+            "kind": "reported_result",
+            "text": "An extended-data graph shows sequence-based predictor scores for a scaffold protein; quantitative source data accompany the study."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original article provides source data but does not itself describe a later graph correction."
+          },
+          {
+            "id": "p005",
+            "available_at": "2021-06-18T00:00:00Z",
+            "kind": "dated_publisher_correction",
+            "text": "A publisher correction states that the sequence-predictor graph for one scaffold protein in Extended Data Figure 1b was incorrect and displays the original and corrected graph together."
+          },
+          {
+            "id": "p006",
+            "available_at": "2021-06-18T00:00:00Z",
+            "kind": "trace_resolution",
+            "text": "The correction states that the accompanying source data were correct and that the online article was corrected. The supplied trace contains no unresolved mismatch between experimental material and incompatible sample labels."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v405",
+      "direct_packet": {
+        "case_id": "v405",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2020,
+          "field": "cervical cancer microRNA signaling",
+          "evidence_types": [
+            "cell culture",
+            "migration assay",
+            "invasion assay",
+            "immunoblotting"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2020-07-02T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper reports that a microRNA suppresses cervical-cancer-cell proliferation and invasion through a receptor target."
+          },
+          {
+            "id": "p002",
+            "available_at": "2020-07-02T00:00:00Z",
+            "kind": "methods",
+            "text": "Cultured cells receive mimic and target-expression perturbations; viability, migration, invasion, protein expression, and reporter assays are presented."
+          },
+          {
+            "id": "p003",
+            "available_at": "2020-07-02T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Image panels represent different treatments, assay conditions, and time points, alongside protein-band results."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original-record packet contains no durable raw-image archive or completed integrity review."
+          }
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v405",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2020,
+          "field": "cervical cancer microRNA signaling",
+          "evidence_types": [
+            "cell culture",
+            "migration assay",
+            "invasion assay",
+            "immunoblotting"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2020-07-02T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper reports that a microRNA suppresses cervical-cancer-cell proliferation and invasion through a receptor target."
+          },
+          {
+            "id": "p002",
+            "available_at": "2020-07-02T00:00:00Z",
+            "kind": "methods",
+            "text": "Cultured cells receive mimic and target-expression perturbations; viability, migration, invasion, protein expression, and reporter assays are presented."
+          },
+          {
+            "id": "p003",
+            "available_at": "2020-07-02T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Image panels represent different treatments, assay conditions, and time points, alongside protein-band results."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original-record packet contains no durable raw-image archive or completed integrity review."
+          },
+          {
+            "id": "p005",
+            "available_at": "2024-02-09T17:55:15Z",
+            "kind": "dated_public_trace",
+            "text": "A public image-comparison map placed the paper in a set of ten contemporaneous microRNA papers sharing multiple images across papers, including rotated versions assigned to different experiments."
+          },
+          {
+            "id": "p006",
+            "available_at": "2024-06-18T22:20:18Z",
+            "kind": "dated_public_trace",
+            "text": "A later cutoff-eligible post mapped two Figure 5B panels, labeled as different time points and treatments, as identical; additional mapped overlaps connected the paper to a larger cross-paper image set. The supplied cutoff record has no source-data reconciliation."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v406",
+      "direct_packet": {
+        "case_id": "v406",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2019,
+          "field": "esophageal cancer genomics",
+          "evidence_types": [
+            "multi-region sequencing",
+            "immunoblotting",
+            "colony formation",
+            "independent cohort validation"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2019-04-11T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper uses multi-region tumor sequencing to study actionable alterations and spatial heterogeneity in esophageal cancer."
+          },
+          {
+            "id": "p002",
+            "available_at": "2019-04-11T00:00:00Z",
+            "kind": "methods",
+            "text": "Tumor regions undergo genomic analysis, selected alterations are tested in cells, and results are compared with an independent cohort."
+          },
+          {
+            "id": "p003",
+            "available_at": "2019-04-11T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Figures include parallel protein gels, histograms, and a colony-formation image for a mutant and wild-type comparison."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original publication states an independent cohort analysis but initially omitted some supporting source data."
+          }
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v406",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2019,
+          "field": "esophageal cancer genomics",
+          "evidence_types": [
+            "multi-region sequencing",
+            "immunoblotting",
+            "colony formation",
+            "independent cohort validation"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2019-04-11T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper uses multi-region tumor sequencing to study actionable alterations and spatial heterogeneity in esophageal cancer."
+          },
+          {
+            "id": "p002",
+            "available_at": "2019-04-11T00:00:00Z",
+            "kind": "methods",
+            "text": "Tumor regions undergo genomic analysis, selected alterations are tested in cells, and results are compared with an independent cohort."
+          },
+          {
+            "id": "p003",
+            "available_at": "2019-04-11T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Figures include parallel protein gels, histograms, and a colony-formation image for a mutant and wild-type comparison."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original publication states an independent cohort analysis but initially omitted some supporting source data."
+          },
+          {
+            "id": "p005",
+            "available_at": "2020-11-12T00:00:00Z",
+            "kind": "dated_publisher_correction",
+            "text": "A publisher correction disclosed that gels in Figure 1 and Supplementary Figure 4d were inappropriately spliced, and that one mutant colony image had been duplicated from the wild-type image."
+          },
+          {
+            "id": "p006",
+            "available_at": "2020-11-12T00:00:00Z",
+            "kind": "trace_resolution",
+            "text": "The correction updated legends to explain parallel blot processing, replaced the duplicated colony image, and added all source data supporting the study. It says the experiment was repeated three times, while an image survived from one run."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v407",
+      "direct_packet": {
+        "case_id": "v407",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2019,
+          "field": "cervical cancer receptor signaling",
+          "evidence_types": [
+            "patient tissue",
+            "cell culture",
+            "immunoblotting",
+            "xenograft tumors"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2019-03-03T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper examines whether increased expression of a receptor-like protein promotes malignant behavior in cervical cancer."
+          },
+          {
+            "id": "p002",
+            "available_at": "2019-03-03T00:00:00Z",
+            "kind": "methods",
+            "text": "Patient samples, cancer-cell perturbations, proliferation and invasion assays, protein bands, tumor growth, and tissue staining are reported."
+          },
+          {
+            "id": "p003",
+            "available_at": "2019-03-03T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Figures assign tumors, cell images, immunohistochemistry, and protein bands to distinct proteins, tissues, or experimental groups."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original-record packet contains no underlying full image archive or completed integrity review."
+          }
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v407",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2019,
+          "field": "cervical cancer receptor signaling",
+          "evidence_types": [
+            "patient tissue",
+            "cell culture",
+            "immunoblotting",
+            "xenograft tumors"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2019-03-03T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper examines whether increased expression of a receptor-like protein promotes malignant behavior in cervical cancer."
+          },
+          {
+            "id": "p002",
+            "available_at": "2019-03-03T00:00:00Z",
+            "kind": "methods",
+            "text": "Patient samples, cancer-cell perturbations, proliferation and invasion assays, protein bands, tumor growth, and tissue staining are reported."
+          },
+          {
+            "id": "p003",
+            "available_at": "2019-03-03T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Figures assign tumors, cell images, immunohistochemistry, and protein bands to distinct proteins, tissues, or experimental groups."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original-record packet contains no underlying full image archive or completed integrity review."
+          },
+          {
+            "id": "p005",
+            "available_at": "2023-04-06T01:55:51Z",
+            "kind": "dated_public_trace",
+            "text": "Public comparisons mapped the same tumor photographs to another paper after a horizontal flip and mapped one tissue-staining panel across several papers where it represented different tissue types."
+          },
+          {
+            "id": "p006",
+            "available_at": "2023-04-06T11:26:40Z",
+            "kind": "dated_public_trace",
+            "text": "Another cutoff-eligible comparison mapped substantive protein bands across three papers with rearrangement and mapped loading controls after a horizontal flip. Additional posts mapped reused cell images and tumors; no cutoff resolution is supplied."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v408",
+      "direct_packet": {
+        "case_id": "v408",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2015,
+          "field": "cancer drug-response biomarkers",
+          "evidence_types": [
+            "cell-line screen",
+            "gene expression",
+            "xenograft models",
+            "predictive modeling"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2015-05-12T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper develops a gene-expression signature to predict response to a selective inhibitor of a p53 regulatory protein."
+          },
+          {
+            "id": "p002",
+            "available_at": "2015-05-12T00:00:00Z",
+            "kind": "methods",
+            "text": "Hundreds of cancer cell lines and patient-derived xenografts are profiled, mutation calls are combined with drug sensitivity, and predictive models are compared."
+          },
+          {
+            "id": "p003",
+            "available_at": "2015-05-12T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Figures and tables report mutation annotations, response associations, model performance, and source data for cell lines and xenografts."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original record includes downloadable figure source data but predates a later mutation-call reannotation."
+          }
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v408",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2015,
+          "field": "cancer drug-response biomarkers",
+          "evidence_types": [
+            "cell-line screen",
+            "gene expression",
+            "xenograft models",
+            "predictive modeling"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2015-05-12T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper develops a gene-expression signature to predict response to a selective inhibitor of a p53 regulatory protein."
+          },
+          {
+            "id": "p002",
+            "available_at": "2015-05-12T00:00:00Z",
+            "kind": "methods",
+            "text": "Hundreds of cancer cell lines and patient-derived xenografts are profiled, mutation calls are combined with drug sensitivity, and predictive models are compared."
+          },
+          {
+            "id": "p003",
+            "available_at": "2015-05-12T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Figures and tables report mutation annotations, response associations, model performance, and source data for cell lines and xenografts."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original record includes downloadable figure source data but predates a later mutation-call reannotation."
+          },
+          {
+            "id": "p005",
+            "available_at": "2016-11-17T00:00:00Z",
+            "kind": "dated_publisher_correction",
+            "text": "A journal correction revised p53 mutation calls across 356 cell lines and 55 xenograft models, changing several counts, percentages, p-values, figures, and tables."
+          },
+          {
+            "id": "p006",
+            "available_at": "2016-11-17T00:00:00Z",
+            "kind": "trace_resolution",
+            "text": "Updated source-data files, figures, tables, and text were published. The corrected analysis still found the expression signature more predictive than mutation status alone and states that quantitative values changed but conclusions did not."
+          }
+        ]
+      }
+    }
+  ]
+}
