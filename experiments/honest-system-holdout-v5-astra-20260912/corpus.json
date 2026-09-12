@@ -1,0 +1,311 @@
+{
+  "benchmark": "source-tracing-system-holdout-v5-astra",
+  "cutoff": "2024-12-31T23:59:59Z",
+  "model_packet_excludes": [
+    "titles",
+    "authors",
+    "doi",
+    "institutions",
+    "journals",
+    "urls",
+    "post_cutoff_outcomes"
+  ],
+  "cases": [
+    {
+      "id": "v501",
+      "direct_packet": {
+        "case_id": "v501",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2018,
+          "field": "breast-cancer epigenetics and chemotherapy response",
+          "evidence_types": ["patient samples", "cell lines", "methylation assays", "immunoblotting"]
+        },
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2018-11-27T00:00:00Z", "kind": "study_summary", "text": "The study tests whether alterations in two mismatch-repair genes are associated with chemotherapy response and prognosis in breast carcinoma."},
+          {"id": "p002", "available_at": "2018-11-27T00:00:00Z", "kind": "methods", "text": "It analyzes deletion, promoter methylation, RNA expression, and protein expression in treated and untreated patient samples and in two drug-treated breast-cancer cell lines."},
+          {"id": "p003", "available_at": "2018-11-27T00:00:00Z", "kind": "reported_result", "text": "The article reports molecular alterations and drug-associated changes using quantified methylation, expression measurements, and protein-band figures."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The supplied original-record packet contains no independently archived uncropped blot series or completed integrity review."}
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v501",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2018,
+          "field": "breast-cancer epigenetics and chemotherapy response",
+          "evidence_types": ["patient samples", "cell lines", "methylation assays", "immunoblotting"]
+        },
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2018-11-27T00:00:00Z", "kind": "study_summary", "text": "The study tests whether alterations in two mismatch-repair genes are associated with chemotherapy response and prognosis in breast carcinoma."},
+          {"id": "p002", "available_at": "2018-11-27T00:00:00Z", "kind": "methods", "text": "It analyzes deletion, promoter methylation, RNA expression, and protein expression in treated and untreated patient samples and in two drug-treated breast-cancer cell lines."},
+          {"id": "p003", "available_at": "2018-11-27T00:00:00Z", "kind": "reported_result", "text": "The article reports molecular alterations and drug-associated changes using quantified methylation, expression measurements, and protein-band figures."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The supplied original-record packet contains no independently archived uncropped blot series or completed integrity review."},
+          {"id": "p005", "available_at": "2024-06-08T22:16:02Z", "kind": "dated_public_trace", "text": "A public figure review reported that band regions in two adjacent panels were duplicated and flipped upside down while being presented as different experimental conditions."},
+          {"id": "p006", "available_at": "2024-06-08T22:16:10Z", "kind": "dated_public_trace", "text": "The same review mapped a loading-control band group in another figure to two figures in a different paper. The supplied cutoff record contains no correction or source-data reconciliation for either mapping."}
+        ]
+      }
+    },
+    {
+      "id": "v502",
+      "direct_packet": {
+        "case_id": "v502",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2018,
+          "field": "macrophage lipid-mediator responses to bacteria",
+          "evidence_types": ["human macrophages", "mass spectrometry", "chromatograms", "immunoblotting"]
+        },
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2018-01-04T00:00:00Z", "kind": "study_summary", "text": "The paper compares lipid-mediator signatures produced by two human macrophage phenotypes after exposure to pathogenic and non-pathogenic bacteria."},
+          {"id": "p002", "available_at": "2018-01-04T00:00:00Z", "kind": "methods", "text": "Macrophage incubations are analyzed by targeted liquid chromatography and tandem mass spectrometry, with chromatograms, fragmentation spectra, and supporting protein assays."},
+          {"id": "p003", "available_at": "2018-01-04T00:00:00Z", "kind": "reported_result", "text": "One figure identifies two resolvin products using chromatographic retention and diagnostic fragment ions and reports biological replicates from healthy donors."},
+          {"id": "p004", "available_at": "2018-01-04T00:00:00Z", "kind": "base_record_boundary", "text": "The original article states that supporting data are available from the corresponding authors upon request."}
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v502",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2018,
+          "field": "macrophage lipid-mediator responses to bacteria",
+          "evidence_types": ["human macrophages", "mass spectrometry", "chromatograms", "immunoblotting"]
+        },
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2018-01-04T00:00:00Z", "kind": "study_summary", "text": "The paper compares lipid-mediator signatures produced by two human macrophage phenotypes after exposure to pathogenic and non-pathogenic bacteria."},
+          {"id": "p002", "available_at": "2018-01-04T00:00:00Z", "kind": "methods", "text": "Macrophage incubations are analyzed by targeted liquid chromatography and tandem mass spectrometry, with chromatograms, fragmentation spectra, and supporting protein assays."},
+          {"id": "p003", "available_at": "2018-01-04T00:00:00Z", "kind": "reported_result", "text": "One figure identifies two resolvin products using chromatographic retention and diagnostic fragment ions and reports biological replicates from healthy donors."},
+          {"id": "p004", "available_at": "2018-01-04T00:00:00Z", "kind": "base_record_boundary", "text": "The original article states that supporting data are available from the corresponding authors upon request."},
+          {"id": "p005", "available_at": "2023-09-28T00:00:00Z", "kind": "dated_publisher_correction", "text": "A publisher correction said two displayed chromatograms had been re-plotted with less-relevant peaks omitted, which could mislead readers because the full original chromatograms were not shown."},
+          {"id": "p006", "available_at": "2023-09-28T00:00:00Z", "kind": "trace_resolution", "text": "The publisher replaced the panel with direct instrument screen captures and matching standards, displayed both old and corrected versions, and added source data containing all biological replicates plus a supporting western blot."}
+        ]
+      }
+    },
+    {
+      "id": "v503",
+      "direct_packet": {
+        "case_id": "v503",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2021,
+          "field": "adipogenesis and insulin resistance",
+          "evidence_types": ["cell differentiation", "mouse model", "human tissue", "immunoblotting"]
+        },
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2021-09-07T00:00:00Z", "kind": "study_summary", "text": "The study proposes a transcription-factor and microRNA pathway that promotes adipocyte differentiation and reduces diet-associated insulin resistance."},
+          {"id": "p002", "available_at": "2021-09-07T00:00:00Z", "kind": "methods", "text": "It combines cultured preadipocytes, reporter assays, high-fat-diet mice, human adipose samples, RNA measurements, histology, and protein-band assays."},
+          {"id": "p003", "available_at": "2021-09-07T00:00:00Z", "kind": "reported_result", "text": "Multiple figures report pathway perturbations, protein expression, adipocyte differentiation, and metabolic outcomes across experimental conditions."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The supplied original-record packet contains no independently completed integrity review of the figure set."}
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v503",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2021,
+          "field": "adipogenesis and insulin resistance",
+          "evidence_types": ["cell differentiation", "mouse model", "human tissue", "immunoblotting"]
+        },
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2021-09-07T00:00:00Z", "kind": "study_summary", "text": "The study proposes a transcription-factor and microRNA pathway that promotes adipocyte differentiation and reduces diet-associated insulin resistance."},
+          {"id": "p002", "available_at": "2021-09-07T00:00:00Z", "kind": "methods", "text": "It combines cultured preadipocytes, reporter assays, high-fat-diet mice, human adipose samples, RNA measurements, histology, and protein-band assays."},
+          {"id": "p003", "available_at": "2021-09-07T00:00:00Z", "kind": "reported_result", "text": "Multiple figures report pathway perturbations, protein expression, adipocyte differentiation, and metabolic outcomes across experimental conditions."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The supplied original-record packet contains no independently completed integrity review of the figure set."},
+          {"id": "p005", "available_at": "2023-10-10T21:14:57Z", "kind": "dated_public_trace", "text": "A public figure review reported that a western-blot artifact was duplicated, modified, and presented as different experimental conditions across two figures."},
+          {"id": "p006", "available_at": "2023-10-10T21:14:57Z", "kind": "dated_public_trace", "text": "The same review reported a second modified duplication under different conditions in another figure. The supplied cutoff record contains no correction or source-data reconciliation for either mapping."}
+        ]
+      }
+    },
+    {
+      "id": "v504",
+      "direct_packet": {
+        "case_id": "v504",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2023,
+          "field": "boron drug delivery and cancer immunotherapy",
+          "evidence_types": ["nanomaterials", "cell assays", "mouse tumors", "quantitative figures"]
+        },
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2023-04-05T00:00:00Z", "kind": "study_summary", "text": "The paper studies boron-containing drug capsules designed to release immune adjuvants through a localized nuclear reaction for cancer treatment."},
+          {"id": "p002", "available_at": "2023-04-05T00:00:00Z", "kind": "methods", "text": "Material characterization, release measurements, cell experiments, and tumor-model studies are reported with figures and supplementary source data."},
+          {"id": "p003", "available_at": "2023-04-05T00:00:00Z", "kind": "reported_result", "text": "The article reports treatment effects across several quantitative panels in its central efficacy figure and related supplementary experiments."},
+          {"id": "p004", "available_at": "2023-04-05T00:00:00Z", "kind": "base_record_boundary", "text": "The article supplies figure-linked data files for quantitative results."}
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v504",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2023,
+          "field": "boron drug delivery and cancer immunotherapy",
+          "evidence_types": ["nanomaterials", "cell assays", "mouse tumors", "quantitative figures"]
+        },
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2023-04-05T00:00:00Z", "kind": "study_summary", "text": "The paper studies boron-containing drug capsules designed to release immune adjuvants through a localized nuclear reaction for cancer treatment."},
+          {"id": "p002", "available_at": "2023-04-05T00:00:00Z", "kind": "methods", "text": "Material characterization, release measurements, cell experiments, and tumor-model studies are reported with figures and supplementary source data."},
+          {"id": "p003", "available_at": "2023-04-05T00:00:00Z", "kind": "reported_result", "text": "The article reports treatment effects across several quantitative panels in its central efficacy figure and related supplementary experiments."},
+          {"id": "p004", "available_at": "2023-04-05T00:00:00Z", "kind": "base_record_boundary", "text": "The article supplies figure-linked data files for quantitative results."},
+          {"id": "p005", "available_at": "2023-09-04T00:00:00Z", "kind": "dated_publisher_correction", "text": "A publisher correction identified two mislabeled Y-axes in the central efficacy figure and inaccuracies in source-data entries for seven main-figure panels and two supplementary panels."},
+          {"id": "p006", "available_at": "2023-09-04T00:00:00Z", "kind": "trace_resolution", "text": "The publisher replaced the affected figure and the original source-data file with corrected versions and stated that the scientific conclusions were unchanged."}
+        ]
+      }
+    },
+    {
+      "id": "v505",
+      "direct_packet": {
+        "case_id": "v505",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2017,
+          "field": "glioblastoma apoptosis and gene therapy",
+          "evidence_types": ["cell lines", "patient-derived cells", "mouse xenografts", "immunoblotting", "histology"]
+        },
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2017-07-25T00:00:00Z", "kind": "study_summary", "text": "The study tests whether a microRNA can make resistant brain-tumor cells responsive to a death-receptor ligand and improve combination treatment in vivo."},
+          {"id": "p002", "available_at": "2017-07-25T00:00:00Z", "kind": "methods", "text": "It uses engineered expression vectors, pathway inhibition, loss-of-function tests, established and patient-derived tumor cells, stem-cell delivery, imaging, and mouse xenografts."},
+          {"id": "p003", "available_at": "2017-07-25T00:00:00Z", "kind": "reported_result", "text": "Figures include caspase protein bands and tissue-image panels comparing viral, microRNA, and stem-cell treatment conditions."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The supplied original-record packet does not include a reconciled archive connecting every displayed panel to its source image."}
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v505",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2017,
+          "field": "glioblastoma apoptosis and gene therapy",
+          "evidence_types": ["cell lines", "patient-derived cells", "mouse xenografts", "immunoblotting", "histology"]
+        },
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2017-07-25T00:00:00Z", "kind": "study_summary", "text": "The study tests whether a microRNA can make resistant brain-tumor cells responsive to a death-receptor ligand and improve combination treatment in vivo."},
+          {"id": "p002", "available_at": "2017-07-25T00:00:00Z", "kind": "methods", "text": "It uses engineered expression vectors, pathway inhibition, loss-of-function tests, established and patient-derived tumor cells, stem-cell delivery, imaging, and mouse xenografts."},
+          {"id": "p003", "available_at": "2017-07-25T00:00:00Z", "kind": "reported_result", "text": "Figures include caspase protein bands and tissue-image panels comparing viral, microRNA, and stem-cell treatment conditions."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The supplied original-record packet does not include a reconciled archive connecting every displayed panel to its source image."},
+          {"id": "p005", "available_at": "2024-01-31T02:25:36Z", "kind": "dated_public_trace", "text": "A public review mapped one tissue-image panel to a rotated panel in a different figure even though the two panels represented different treatment combinations."},
+          {"id": "p006", "available_at": "2024-02-09T00:00:00Z", "kind": "dated_editorial_trace", "text": "After additional public mappings linked four-lane caspase groups and image regions to different cell or treatment identities in another paper, the journal issued an expression of concern covering the affected figures; no resolution was supplied by the cutoff."}
+        ]
+      }
+    },
+    {
+      "id": "v506",
+      "direct_packet": {
+        "case_id": "v506",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2022,
+          "field": "synaptic receptor regulation",
+          "evidence_types": ["mouse genetics", "electrophysiology", "synaptic circuits", "source-data spreadsheets"]
+        },
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2022-10-07T00:00:00Z", "kind": "study_summary", "text": "The paper studies how distinct neurexin and cerebellin complexes regulate AMPA- and NMDA-receptor responses in different neural circuits."},
+          {"id": "p002", "available_at": "2022-10-07T00:00:00Z", "kind": "methods", "text": "Mouse genetic manipulations and electrophysiological recordings are used to compare receptor-mediated synaptic responses, paired-pulse ratios, and coefficients of variation."},
+          {"id": "p003", "available_at": "2022-10-07T00:00:00Z", "kind": "reported_result", "text": "Figures report cell-level current amplitudes and derived measures with downloadable source-data spreadsheets."},
+          {"id": "p004", "available_at": "2022-10-07T00:00:00Z", "kind": "base_record_boundary", "text": "The original article provides figure-level source-data files for the numerical plots."}
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v506",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2022,
+          "field": "synaptic receptor regulation",
+          "evidence_types": ["mouse genetics", "electrophysiology", "synaptic circuits", "source-data spreadsheets"]
+        },
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2022-10-07T00:00:00Z", "kind": "study_summary", "text": "The paper studies how distinct neurexin and cerebellin complexes regulate AMPA- and NMDA-receptor responses in different neural circuits."},
+          {"id": "p002", "available_at": "2022-10-07T00:00:00Z", "kind": "methods", "text": "Mouse genetic manipulations and electrophysiological recordings are used to compare receptor-mediated synaptic responses, paired-pulse ratios, and coefficients of variation."},
+          {"id": "p003", "available_at": "2022-10-07T00:00:00Z", "kind": "reported_result", "text": "Figures report cell-level current amplitudes and derived measures with downloadable source-data spreadsheets."},
+          {"id": "p004", "available_at": "2022-10-07T00:00:00Z", "kind": "base_record_boundary", "text": "The original article provides figure-level source-data files for the numerical plots."},
+          {"id": "p005", "available_at": "2023-11-09T00:00:00Z", "kind": "dated_publisher_correction", "text": "A correction identified isolated copy-paste errors in four figure source-data files, including values taken from another analysis, one value copied from a neighboring cell, and mislabeled conditions, plus an error in a coefficient-of-variation calculation."},
+          {"id": "p006", "available_at": "2023-11-09T00:00:00Z", "kind": "trace_resolution", "text": "The authors systematically reanalyzed all affected conditions, published corrected numerical values and updated source-data files, and stated that none of the corrections changed the figures' conclusions."}
+        ]
+      }
+    },
+    {
+      "id": "v507",
+      "direct_packet": {
+        "case_id": "v507",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2019,
+          "field": "neuroinflammation and dietary antioxidant treatment",
+          "evidence_types": ["rat model", "immunofluorescence", "immunoblotting", "behavioral assays"]
+        },
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2019-11-07T00:00:00Z", "kind": "study_summary", "text": "The study tests whether dietary antioxidant supplementation reduces inflammation-associated neurodegeneration and memory impairment after systemic inflammatory challenge in adult rats."},
+          {"id": "p002", "available_at": "2019-11-07T00:00:00Z", "kind": "methods", "text": "The work combines animal treatment groups, behavioral testing, brain-tissue imaging, immunofluorescence, and protein-band assays across inflammatory and signaling pathways."},
+          {"id": "p003", "available_at": "2019-11-07T00:00:00Z", "kind": "reported_result", "text": "Figures compare control, inflammatory challenge, supplementation, and combined-treatment conditions using marker images and pathway measurements."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The supplied original-record packet contains no independently reconciled mapping between every displayed image and its source acquisition."}
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v507",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2019,
+          "field": "neuroinflammation and dietary antioxidant treatment",
+          "evidence_types": ["rat model", "immunofluorescence", "immunoblotting", "behavioral assays"]
+        },
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2019-11-07T00:00:00Z", "kind": "study_summary", "text": "The study tests whether dietary antioxidant supplementation reduces inflammation-associated neurodegeneration and memory impairment after systemic inflammatory challenge in adult rats."},
+          {"id": "p002", "available_at": "2019-11-07T00:00:00Z", "kind": "methods", "text": "The work combines animal treatment groups, behavioral testing, brain-tissue imaging, immunofluorescence, and protein-band assays across inflammatory and signaling pathways."},
+          {"id": "p003", "available_at": "2019-11-07T00:00:00Z", "kind": "reported_result", "text": "Figures compare control, inflammatory challenge, supplementation, and combined-treatment conditions using marker images and pathway measurements."},
+          {"id": "p004", "available_at": "2024-12-31T23:59:59Z", "kind": "base_record_boundary", "text": "The supplied original-record packet contains no independently reconciled mapping between every displayed image and its source acquisition."},
+          {"id": "p005", "available_at": "2024-07-26T19:09:46Z", "kind": "dated_public_trace", "text": "A public review reported that control and combined-treatment image panels had matching nuclear signals while the green signal appeared at different exposure levels, and separately mapped one inflammatory-marker panel to a mitochondrial-marker panel in another figure."},
+          {"id": "p006", "available_at": "2024-07-26T21:04:45Z", "kind": "dated_public_trace", "text": "The review also mapped parts of two panels to images in two other papers despite different treatment and antibody identities, including a merged channel with signal apparently added or removed. No correction or source-data reconciliation was supplied by the cutoff."}
+        ]
+      }
+    },
+    {
+      "id": "v508",
+      "direct_packet": {
+        "case_id": "v508",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2022,
+          "field": "microbial antiviral metabolites and influenza",
+          "evidence_types": ["cell assays", "mouse infection", "viral titers", "histopathology"]
+        },
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2022-04-19T00:00:00Z", "kind": "study_summary", "text": "The paper reports a microbial metabolite with activity against influenza A virus and studies a mechanism involving degradation of a viral endonuclease subunit."},
+          {"id": "p002", "available_at": "2022-04-19T00:00:00Z", "kind": "methods", "text": "Cell-based antiviral assays, protein analyses, infected-mouse survival and weight tracking, lung viral titers, and histopathology are used."},
+          {"id": "p003", "available_at": "2022-04-19T00:00:00Z", "kind": "reported_result", "text": "A central animal figure reports survival, weight, lung viral titers, and pathology for several treatment doses and comparator groups."},
+          {"id": "p004", "available_at": "2022-04-19T00:00:00Z", "kind": "base_record_boundary", "text": "The original article provides source-data files for its quantitative figures."}
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v508",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2022,
+          "field": "microbial antiviral metabolites and influenza",
+          "evidence_types": ["cell assays", "mouse infection", "viral titers", "histopathology"]
+        },
+        "evidence_passages": [
+          {"id": "p001", "available_at": "2022-04-19T00:00:00Z", "kind": "study_summary", "text": "The paper reports a microbial metabolite with activity against influenza A virus and studies a mechanism involving degradation of a viral endonuclease subunit."},
+          {"id": "p002", "available_at": "2022-04-19T00:00:00Z", "kind": "methods", "text": "Cell-based antiviral assays, protein analyses, infected-mouse survival and weight tracking, lung viral titers, and histopathology are used."},
+          {"id": "p003", "available_at": "2022-04-19T00:00:00Z", "kind": "reported_result", "text": "A central animal figure reports survival, weight, lung viral titers, and pathology for several treatment doses and comparator groups."},
+          {"id": "p004", "available_at": "2022-04-19T00:00:00Z", "kind": "base_record_boundary", "text": "The original article provides source-data files for its quantitative figures."},
+          {"id": "p005", "available_at": "2023-06-23T00:00:00Z", "kind": "dated_publisher_correction", "text": "A publisher correction changed an animal experiment's endpoint from day 13 to day 14, corrected the viral-titer Y-axis and cohort descriptions, and identified copy-paste errors in supplementary source data."},
+          {"id": "p006", "available_at": "2023-06-23T00:00:00Z", "kind": "trace_resolution", "text": "The corrected figure, legend, results, methods, supplementary table, and source data specify the animal counts, sampling days, assay units, and corrected values; the publisher stated that the main conclusions were unaffected."}
+        ]
+      }
+    }
+  ]
+}

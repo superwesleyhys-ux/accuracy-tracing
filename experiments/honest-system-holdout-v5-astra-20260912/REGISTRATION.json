@@ -1,0 +1,108 @@
+{
+  "benchmark": "source-tracing-system-holdout-v5-astra",
+  "registered_at": "2026-09-12T18:38:20.855819+00:00",
+  "cutoff": "2024-12-31T23:59:59Z",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "tunnel": "local",
+  "retries": 0,
+  "comparison_type": "system_original_record_vs_same_record_plus_factcircuit_source_trace",
+  "case_order": [
+    "v501",
+    "v502",
+    "v503",
+    "v504",
+    "v505",
+    "v506",
+    "v507",
+    "v508"
+  ],
+  "schedule": [
+    {
+      "case_id": "v501",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v501",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v502",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v502",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v503",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v503",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v504",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v504",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v505",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v505",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v506",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v506",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v507",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v507",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v508",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v508",
+      "arm": "direct"
+    }
+  ],
+  "primary_metric": "balanced_accuracy",
+  "success_criteria": {
+    "harness_strictly_exceeds_direct_balanced_accuracy": true,
+    "all_16_calls_completed_with_valid_outputs": true,
+    "harness_tokens_no_more_than_2x_direct": true
+  },
+  "sealed_gold_sha256": "29d48d2e14260ca9746f314146b0d0caa8c1ade7fecc6172b9df021166e42517",
+  "frozen_sha256": {
+    "corpus.json": "4dfb03f1a7dc630ca2950370a0c4a2bd1808f6096b0e6fd4b67b80a0c90f5e27",
+    "policies.py": "3422a4b909b80c178314b4089912033ad02d0485a2f517615f7a607ee90e309a",
+    "run_test.py": "a17a40449f3e9d0995ded93f4a940e16d5e74b8bf856b5e98231dd9c3152a55e",
+    "summarize_test.py": "559477600ea0a99494239e89948016d99b1501eacdfeb57f5f2043c00be22848",
+    "PROTOCOL.md": "c2e5fd8fbe5c67af8710af15cccabb9ab8d66a4b544c4e61dcb8a91ae5116740",
+    "SOURCE_AUDIT.json": "85ac171afcda09861cea6d711846f265b62c4b23ea64de79d6550666ae79765a"
+  },
+  "development_basis": {
+    "prior_valid_holdout_v4": "reports/honest-system-holdout-v4-20260911/scored-v1",
+    "prior_v4_model": "gpt-5.6-luna",
+    "policy_change": "Build a claim-to-artifact matrix, apply a counterfactual identity-consistency check, and require reconstructable corrected mappings for ordinary classification.",
+    "fresh_case_overlap_with_prior_holdouts": false,
+    "post_cutoff_outcomes_in_model_packets": false
+  }
+}
