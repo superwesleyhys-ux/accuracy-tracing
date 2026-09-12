@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-09-12T18:39:12.280508+00:00",
+  "registration_sha256": "b23e2e6fa3ec0fef1806f1d1e0fb762fcaa30e8ff1d4cfeb1d5234dd57621315",
+  "gold_sha256_committed_before_inference": "29d48d2e14260ca9746f314146b0d0caa8c1ade7fecc6172b9df021166e42517",
+  "source_audit_sha256": "85ac171afcda09861cea6d711846f265b62c4b23ea64de79d6550666ae79765a",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "tunnel": "local",
+  "api_credentials_removed": true,
+  "web_tools_plugins_skills_disabled": true,
+  "fallback": false,
+  "retries": 0,
+  "calls_expected": 16,
+  "finished_at": "2026-09-12T18:41:55.566789+00:00",
+  "wall_seconds": 163.28551695798524,
+  "steps_completed": 16,
+  "calls_attempted": 16
+}
