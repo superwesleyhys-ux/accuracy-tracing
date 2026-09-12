@@ -1,0 +1,40 @@
+{
+  "benchmark": "source-tracing-system-holdout-v5-astra",
+  "cutoff": "2024-12-31T23:59:59Z",
+  "contains_post_cutoff_outcomes": false,
+  "cases": [
+    {"id": "v501", "sources": [
+      {"role": "original", "available_at": "2018-11-27T00:00:00Z", "title": "Hypomethylation of mismatch repair genes MLH1 and MSH2 is associated with chemotolerance of breast carcinoma: Clinical significance", "url": "https://pubmed.ncbi.nlm.nih.gov/30481381/"},
+      {"role": "pre_cutoff_trace", "available_at": "2024-06-08T22:16:02Z", "title": "PubPeer record 5B2D1FA4B9252CA195CC296EB128B5", "url": "https://pubpeer.com/publications/5B2D1FA4B9252CA195CC296EB128B5"}
+    ]},
+    {"id": "v502", "sources": [
+      {"role": "original", "available_at": "2018-01-04T00:00:00Z", "title": "Human macrophages differentially produce specific resolvin or leukotriene signals that depend on bacterial pathogenicity", "url": "https://www.nature.com/articles/s41467-017-02538-5"},
+      {"role": "pre_cutoff_resolution", "available_at": "2023-09-28T00:00:00Z", "title": "Author Correction: Human macrophages differentially produce specific resolvin or leukotriene signals that depend on bacterial pathogenicity", "url": "https://www.nature.com/articles/s41467-023-41667-y"}
+    ]},
+    {"id": "v503", "sources": [
+      {"role": "original", "available_at": "2021-09-07T00:00:00Z", "title": "HOXA5-miR-574-5p axis promotes adipogenesis and alleviates insulin resistance", "url": "https://pubmed.ncbi.nlm.nih.gov/34976438/"},
+      {"role": "pre_cutoff_trace", "available_at": "2023-10-10T21:14:57Z", "title": "PubPeer record 9D14A70A88B4165FB2E6840368791E", "url": "https://pubpeer.com/publications/9D14A70A88B4165FB2E6840368791E"}
+    ]},
+    {"id": "v504", "sources": [
+      {"role": "original", "available_at": "2023-04-05T00:00:00Z", "title": "Localized nuclear reaction breaks boron drug capsules loaded with immune adjuvants for cancer immunotherapy", "url": "https://www.nature.com/articles/s41467-023-37253-x"},
+      {"role": "pre_cutoff_resolution", "available_at": "2023-09-04T00:00:00Z", "title": "Author Correction: Localized nuclear reaction breaks boron drug capsules loaded with immune adjuvants for cancer immunotherapy", "url": "https://www.nature.com/articles/s41467-023-40690-3"}
+    ]},
+    {"id": "v505", "sources": [
+      {"role": "original", "available_at": "2017-07-25T00:00:00Z", "title": "microRNA-7 upregulates death receptor 5 and primes resistant brain tumors to caspase-mediated apoptosis", "url": "https://pubmed.ncbi.nlm.nih.gov/29016934/"},
+      {"role": "pre_cutoff_trace", "available_at": "2024-01-31T02:25:36Z", "title": "PubPeer record 6BBCFAD25CC72C576803DF69522DB1", "url": "https://pubpeer.com/publications/6BBCFAD25CC72C576803DF69522DB1"},
+      {"role": "pre_cutoff_editorial_trace", "available_at": "2024-02-09T00:00:00Z", "title": "Expression of Concern: microRNA-7 upregulates death receptor 5 and primes resistant brain tumors to caspase-mediated apoptosis", "url": "https://doi.org/10.1093/neuonc/noae026"}
+    ]},
+    {"id": "v506", "sources": [
+      {"role": "original", "available_at": "2022-10-07T00:00:00Z", "title": "Distinct neurexin-cerebellin complexes control AMPA- and NMDA-receptor responses in a circuit-dependent manner", "url": "https://elifesciences.org/articles/78649"},
+      {"role": "pre_cutoff_resolution", "available_at": "2023-11-09T00:00:00Z", "title": "Correction: Distinct neurexin-cerebellin complexes control AMPA- and NMDA-receptor responses in a circuit-dependent manner", "url": "https://elifesciences.org/articles/94305"}
+    ]},
+    {"id": "v507", "sources": [
+      {"role": "original", "available_at": "2019-11-07T00:00:00Z", "title": "Dietary Supplementation of the Antioxidant Curcumin Halts Systemic LPS-Induced Neuroinflammation-Associated Neurodegeneration and Memory/Synaptic Impairment via the JNK/NF-kB/Akt Signaling Pathway in Adult Rats", "url": "https://pubmed.ncbi.nlm.nih.gov/31827700/"},
+      {"role": "pre_cutoff_trace", "available_at": "2024-07-26T19:09:46Z", "title": "PubPeer record 28C2CCFDAFA5A8E867EC24AE41D328", "url": "https://pubpeer.com/publications/28C2CCFDAFA5A8E867EC24AE41D328"}
+    ]},
+    {"id": "v508", "sources": [
+      {"role": "original", "available_at": "2022-04-19T00:00:00Z", "title": "An anti-influenza A virus microbial metabolite acts by degrading viral endonuclease PA", "url": "https://www.nature.com/articles/s41467-022-29690-x"},
+      {"role": "pre_cutoff_resolution", "available_at": "2023-06-23T00:00:00Z", "title": "Author Correction: An anti-influenza A virus microbial metabolite acts by degrading viral endonuclease PA", "url": "https://www.nature.com/articles/s41467-023-39437-x"}
+    ]}
+  ]
+}
