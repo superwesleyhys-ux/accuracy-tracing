@@ -1,0 +1,108 @@
+{
+  "benchmark": "source-tracing-system-holdout-v3",
+  "registered_at": "2026-09-12T04:42:14.191316+00:00",
+  "cutoff": "2024-12-31T23:59:59Z",
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "low",
+  "tunnel": "local",
+  "retries": 0,
+  "comparison_type": "system_original_record_vs_same_record_plus_factcircuit_source_trace",
+  "case_order": [
+    "v301",
+    "v302",
+    "v303",
+    "v304",
+    "v305",
+    "v306",
+    "v307",
+    "v308"
+  ],
+  "schedule": [
+    {
+      "case_id": "v301",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v301",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v302",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v302",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v303",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v303",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v304",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v304",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v305",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v305",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v306",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v306",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v307",
+      "arm": "direct"
+    },
+    {
+      "case_id": "v307",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v308",
+      "arm": "harness"
+    },
+    {
+      "case_id": "v308",
+      "arm": "direct"
+    }
+  ],
+  "primary_metric": "balanced_accuracy",
+  "success_criteria": {
+    "harness_strictly_exceeds_direct_balanced_accuracy": true,
+    "all_16_calls_completed_with_valid_outputs": true,
+    "harness_tokens_no_more_than_2x_direct": true
+  },
+  "sealed_gold_sha256": "ff3ecebdd6439b8fef1ac2ed7a9d653c877615c3ade119f97b99acb9bf6fa228",
+  "frozen_sha256": {
+    "corpus.json": "0a089265e7791ec040b097dae05ce2aef29b8ce73d09a13089541804f5a3b3ae",
+    "policies.py": "1be9d3a0c39614b6ecb347638f7497d38cd2d529dd17a57cf39b0292b6087079",
+    "run_test.py": "fa9b5ef2b4df12f39cef0e0e1ff35cdbf95213fcbb43e28697d6a554c3b4a885",
+    "summarize_test.py": "c228bd9876b66c39019a7bfa24d704c6c36dc3165afedb6391c3f9b82d7fbc5b",
+    "PROTOCOL.md": "5cd9de466f8f9c93e7cde04c68c99455a3cede4ed7f9989c020b8400b753e9c2",
+    "SOURCE_AUDIT.json": "b7a729d555060a59e57706f87535fed34a3deec2e7c641f474c8a0b2fc7ba057"
+  },
+  "development_basis": {
+    "prior_system_holdout": "reports/honest-system-holdout-20260911/scored-v1",
+    "prior_result": "direct 50.0%; harness 100.0%",
+    "policy_change": "Rebuild every trace through identity linkage, time eligibility, representation conflict, independent resolution, and severity calibration; distinguish unresolved incompatible mappings from corrected errors backed by traceable data.",
+    "fresh_case_overlap_with_prior_holdouts": false,
+    "post_cutoff_outcomes_in_model_packets": false
+  }
+}

@@ -484,6 +484,41 @@
       "sha256": "0975e16d3e88337841fcb933c5fd47d627310206eedd8152993d8cb5ae735f40"
     },
     {
+      "path": "experiments/honest-system-holdout-v3-20260911/PROTOCOL.md",
+      "bytes": 2511,
+      "sha256": "5cd9de466f8f9c93e7cde04c68c99455a3cede4ed7f9989c020b8400b753e9c2"
+    },
+    {
+      "path": "experiments/honest-system-holdout-v3-20260911/REGISTRATION.json",
+      "bytes": 2847,
+      "sha256": "5c3c58df2e80469f5228d34d6777e3f0d8cff3378ead8dfc7a9759a0878bfe22"
+    },
+    {
+      "path": "experiments/honest-system-holdout-v3-20260911/SOURCE_AUDIT.json",
+      "bytes": 5510,
+      "sha256": "b7a729d555060a59e57706f87535fed34a3deec2e7c641f474c8a0b2fc7ba057"
+    },
+    {
+      "path": "experiments/honest-system-holdout-v3-20260911/corpus.json",
+      "bytes": 34847,
+      "sha256": "0a089265e7791ec040b097dae05ce2aef29b8ce73d09a13089541804f5a3b3ae"
+    },
+    {
+      "path": "experiments/honest-system-holdout-v3-20260911/policies.py",
+      "bytes": 3501,
+      "sha256": "1be9d3a0c39614b6ecb347638f7497d38cd2d529dd17a57cf39b0292b6087079"
+    },
+    {
+      "path": "experiments/honest-system-holdout-v3-20260911/run_test.py",
+      "bytes": 7093,
+      "sha256": "fa9b5ef2b4df12f39cef0e0e1ff35cdbf95213fcbb43e28697d6a554c3b4a885"
+    },
+    {
+      "path": "experiments/honest-system-holdout-v3-20260911/summarize_test.py",
+      "bytes": 14331,
+      "sha256": "c228bd9876b66c39019a7bfa24d704c6c36dc3165afedb6391c3f9b82d7fbc5b"
+    },
+    {
       "path": "experiments/inputs-v03.json",
       "bytes": 7816,
       "sha256": "4efef214c4c2d220407ee05c775945fad7377dc31328c07ccdad3842deb75cfc"
