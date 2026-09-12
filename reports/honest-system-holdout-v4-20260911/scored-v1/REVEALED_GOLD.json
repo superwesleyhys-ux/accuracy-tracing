@@ -1,0 +1,62 @@
+{
+  "benchmark": "source-tracing-system-holdout-v4",
+  "sealed_before_inference": true,
+  "cases": [
+    {
+      "id": "v401",
+      "expected_risk": "elevated",
+      "later_outcome_at": "2025-05-10T00:00:00Z",
+      "later_outcome": "Publisher retraction after the lane-count concerns were followed by additional splicing and image-overlap findings that were not satisfactorily resolved to original data.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12140066/"
+    },
+    {
+      "id": "v402",
+      "expected_risk": "ordinary",
+      "censored_at": "2026-09-11T23:59:59Z",
+      "later_outcome": "No retraction located in the publisher or PubMed record through the censoring date.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32514071/"
+    },
+    {
+      "id": "v403",
+      "expected_risk": "elevated",
+      "later_outcome_at": "2025-07-31T00:00:00Z",
+      "later_outcome": "Publisher retraction after repeated control-band duplication concerns and an author explanation that did not satisfy the investigation.",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/bmri/9768597"
+    },
+    {
+      "id": "v404",
+      "expected_risk": "ordinary",
+      "censored_at": "2026-09-11T23:59:59Z",
+      "later_outcome": "No retraction located in the publisher record through the censoring date.",
+      "url": "https://www.nature.com/articles/s41586-020-2942-0"
+    },
+    {
+      "id": "v405",
+      "expected_risk": "elevated",
+      "later_outcome_at": "2025-04-14T00:00:00Z",
+      "later_outcome": "Publisher retraction after cross-paper image reuse remained unresolved and authors and institution did not supply the requested underlying data.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12482996/"
+    },
+    {
+      "id": "v406",
+      "expected_risk": "ordinary",
+      "censored_at": "2026-09-11T23:59:59Z",
+      "later_outcome": "No retraction located in the publisher record through the censoring date.",
+      "url": "https://www.nature.com/articles/s41467-019-09255-1"
+    },
+    {
+      "id": "v407",
+      "expected_risk": "elevated",
+      "later_outcome_at": "2025-05-07T00:00:00Z",
+      "later_outcome": "Publisher retraction after investigation found multiple figures duplicated across papers under incompatible protein, cell, and tissue labels, making the data and conclusions unreliable.",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/dim/9817180"
+    },
+    {
+      "id": "v408",
+      "expected_risk": "ordinary",
+      "censored_at": "2026-09-11T23:59:59Z",
+      "later_outcome": "No retraction located in the journal record through the censoring date.",
+      "url": "https://elifesciences.org/articles/06498"
+    }
+  ]
+}

@@ -12,6 +12,48 @@ Version 0.2.0: a bounded, auditable news provenance loop with **decomposition on
 
 Repository Discussions are enabled, and the repository includes a prepared **Accuracy decline** reporting form for reproducible metric regressions or weaker trace outcomes. Reports should identify the affected metric or behavior, include the run configuration, and avoid treating synthetic fixtures as real-world performance evidence.
 
+## Latest honest source-tracing holdout: harness won
+
+On September 11, holdout v4 used eight more previously unused, anonymized
+papers. Four had precise public integrity traces by December 31, 2024 and were
+retracted in 2025. Four controls had real publisher corrections with corrected
+figures or source data and no located retraction through the audit date. The
+outcomes were sealed outside the repository; their hash, both prompts, the
+corpus, call order, model, scorer, and pass conditions were committed and
+pushed before inference.
+
+Both arms used `gpt-5.6-luna` at low reasoning through the local Codex-login
+route. Each paper received one call per arm, with no retries or API fallback.
+The direct arm saw the original-paper record. The FactCircuit arm saw the same
+record plus cutoff-eligible source traces.
+
+| Registered measure | Direct model | FactCircuit source tracing |
+|---|---:|---:|
+| Balanced accuracy | 50.0% | **100.0%** |
+| Overall accuracy | 4/8 | **8/8** |
+| Later-positive recall | 0/4 | **4/4** |
+| Control specificity | 4/4 | 4/4 |
+| Valid outputs | 8/8 | 8/8 |
+| Input + output tokens | **53,421** | 56,196 |
+| Harness / direct tokens | 1.00x | 1.05x |
+
+**FactCircuit met all three preregistered success conditions and exceeded the
+direct model by 50 percentage points in balanced accuracy.** All 16 local model
+calls and all audit checks passed. This is a small exploratory system test; it
+does not establish a stable population estimate, and a right-censored control
+does not prove a paper authentic.
+
+The [complete v4 report, per-case decisions, sealed labels, and token receipts](reports/honest-system-holdout-v4-20260911/scored-v1/README.md)
+and the [call-before-result preregistration](experiments/honest-system-holdout-v4-20260911/PROTOCOL.md)
+are included for audit. The frozen setup was pushed in commit `bf34d6b` before
+the first model call.
+
+An intervening [v3 run](reports/honest-system-holdout-v3-20260911/POSTMORTEM.md)
+is retained as infrastructure-invalid: its schema allowed six evidence
+citations while the runtime validator allowed only five, so one successful
+model response was discarded. Its favorable 87.5% versus 50% score is not
+counted as a valid win and the failed case was not rerun.
+
 ## Source-tracing system holdout: harness won
 
 On September 11, a preregistered comparison used eight previously unused,
