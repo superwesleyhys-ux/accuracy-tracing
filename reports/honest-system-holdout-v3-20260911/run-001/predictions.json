@@ -1,0 +1,604 @@
+{
+  "gold_loaded": false,
+  "completed_steps": 16,
+  "expected_steps": 16,
+  "results": [
+    {
+      "case_id": "v301",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p001",
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The supplied record describes standard multi-condition kinase and immunoblot experiments but gives no specific, checkable integrity concern. The absence of archived uncropped blots or a completed review alone does not warrant elevated follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v3_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 10.008071291958913,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6559,
+            "cached_input_tokens": 0,
+            "output_tokens": 152,
+            "reasoning_output_tokens": 62
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v301",
+      "arm": "harness",
+      "status": "failed",
+      "result": null,
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v3_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 9.024648374994285,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6939,
+            "cached_input_tokens": 0,
+            "output_tokens": 302,
+            "reasoning_output_tokens": 149
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ],
+      "error": "ValueError: response must cite one to five evidence passages"
+    },
+    {
+      "case_id": "v302",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "Publisher correction identified a duplicated microscopy image and plotting/gel-presentation errors.",
+          "Affected microscopy data were reanalyzed, raw data deposited publicly, and the corrected record stated that principal analyses and conclusions were unchanged."
+        ],
+        "rationale": "The cutoff-eligible record describes a corrected presentation error with traceable underlying data and an explicit reconciliation; no unresolved representation conflict remains."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v3_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 6.328311874996871,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6928,
+            "cached_input_tokens": 0,
+            "output_tokens": 157,
+            "reasoning_output_tokens": 49
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v302",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The supplied original record states no unresolved integrity investigation or other specific, checkable reason for unusual follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v3_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 8.22488033294212,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6546,
+            "cached_input_tokens": 0,
+            "output_tokens": 83,
+            "reasoning_output_tokens": 24
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v303",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p001",
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The supplied record describes a conventional animal pharmacology study and explicitly notes only the absence of a durable archive or completed review; it provides no specific, checkable integrity concern."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v3_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 5.603904415969737,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6558,
+            "cached_input_tokens": 0,
+            "output_tokens": 132,
+            "reasoning_output_tokens": 51
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v303",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "elevated",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p004",
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "Corrigendum documents reuse of the same blot for different protein targets and reuse of another blot for a loading control and signaling protein, including a 180-degree rotation.",
+          "A later trace maps artery images from the first figure to multiple other papers under different study descriptions.",
+          "The cutoff record lacks a durable archive of underlying image series or a completed integrity review reconciling the mappings."
+        ],
+        "rationale": "The cutoff-eligible correction precisely identifies incompatible protein-label assignments, and the later cross-paper image mappings add a separate representation conflict. The supplied record does not reconcile these conflicts to traceable underlying data, so elevated follow-up is warranted; this is not a misconduct finding."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v3_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 8.112960499944165,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6957,
+            "cached_input_tokens": 0,
+            "output_tokens": 273,
+            "reasoning_output_tokens": 100
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v304",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p004",
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "Cutoff-eligible publisher correction",
+          "Numerical source-data file replaced with corrected version",
+          "Underlying figure source data and sequencing accessions retained",
+          "No incompatible experimental-image representation described"
+        ],
+        "rationale": "The supplied trace identifies a corrected source-file error, with underlying records retained and no unresolved conflict assigning the same experimental material to incompatible labels or conditions."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v3_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 6.52800470800139,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6909,
+            "cached_input_tokens": 4864,
+            "output_tokens": 135,
+            "reasoning_output_tokens": 28
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v304",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p004",
+          "p003"
+        ],
+        "signals": [],
+        "rationale": "The supplied record states no unresolved integrity investigation and documents source-data and sequencing accessions; it provides no specific, checkable reason for elevated follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v3_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 5.434478083974682,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6541,
+            "cached_input_tokens": 4864,
+            "output_tokens": 96,
+            "reasoning_output_tokens": 25
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v305",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p001",
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [
+          "No specific, checkable integrity concern is reported in the original record.",
+          "The packet notes absent archived image series and review, which alone does not establish unusual risk."
+        ],
+        "rationale": "The supplied record describes a conventional animal pharmacology study and fluorescence figure, but gives no concrete, checkable allegation or finding warranting elevated integrity follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v3_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 6.625118624884635,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6558,
+            "cached_input_tokens": 0,
+            "output_tokens": 176,
+            "reasoning_output_tokens": 66
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v305",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "elevated",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p003",
+          "p004",
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "Control and peptide-treated cortex panels reportedly share the same underlying tissue landmarks.",
+          "The treated panel shows stronger colored signal despite the matching structural features.",
+          "No source-image archive, author response, or independent reconciliation was available by the cutoff."
+        ],
+        "rationale": "The cutoff-eligible trace precisely maps matching cortex-panel material to incompatible control and peptide-treated labels, and the supplied record does not reconcile the conflict to traceable underlying data. This supports elevated follow-up, not a misconduct finding."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v3_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 6.841684416984208,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6938,
+            "cached_input_tokens": 0,
+            "output_tokens": 182,
+            "reasoning_output_tokens": 44
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v306",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p001",
+          "p002",
+          "p003",
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "A treatment-condition example trace was duplicated between pre- and post-treatment sets.",
+          "The publisher replaced the examples using underlying cell records and publicly linked raw data.",
+          "The correction stated that quantitative results and conclusions were unchanged."
+        ],
+        "rationale": "The passages precisely concern this paper and are cutoff-eligible. Although p005 identifies a representation error across treatment conditions, p006 provides traceable underlying records, public raw data, and a reconciliation with unchanged results; therefore this is a corrected presentation error, not an unresolved integrity conflict."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v3_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 6.999615874956362,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6924,
+            "cached_input_tokens": 0,
+            "output_tokens": 210,
+            "reasoning_output_tokens": 63
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v306",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The supplied original record does not state an unresolved integrity investigation or other specific, checkable reason for unusual follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v3_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 4.866041957982816,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6547,
+            "cached_input_tokens": 0,
+            "output_tokens": 93,
+            "reasoning_output_tokens": 32
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v307",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p001",
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The supplied record describes standard experimental methods and reported protein-band comparisons, but provides no specific, checkable integrity concern. The absence of archived uncropped blots or a completed review alone does not warrant elevated follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v3_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 5.395812375005335,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6560,
+            "cached_input_tokens": 0,
+            "output_tokens": 116,
+            "reasoning_output_tokens": 26
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v307",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "elevated",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p004",
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "Precise band mapping within the same figure panel",
+          "Vertical and horizontal mirroring across different experimental lane positions",
+          "No archived uncropped blots or independent reconciliation by the cutoff"
+        ],
+        "rationale": "The 2016 trace is cutoff-eligible and maps bands 6–7 to bands 1–2 in the same treatment panel, with both vertical and horizontal mirroring despite different experimental positions. The cutoff record supplies no raw-blot reconciliation or integrity review, leaving an unresolved representation conflict."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v3_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 8.399750584037974,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6945,
+            "cached_input_tokens": 0,
+            "output_tokens": 229,
+            "reasoning_output_tokens": 90
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v308",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p005",
+          "p006",
+          "p004"
+        ],
+        "signals": [
+          "Two graphs were inadvertently duplicated within one figure.",
+          "The graphs were replotted and source data supplied after review.",
+          "Authors stated results and conclusions were unaffected; no unresolved investigation appears in the cutoff record."
+        ],
+        "rationale": "The cutoff-eligible issue is a corrected plotting/presentation error with traceable underlying data and a stated reconciliation, not an unresolved conflict over experimental material."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v3_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 6.495007000048645,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6911,
+            "cached_input_tokens": 4864,
+            "output_tokens": 155,
+            "reasoning_output_tokens": 43
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v308",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The supplied original record states no unresolved integrity investigation and gives no specific, checkable reason for unusual follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v3_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 240.0,
+          "wall_seconds": 7.131118708057329,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6550,
+            "cached_input_tokens": 0,
+            "output_tokens": 88,
+            "reasoning_output_tokens": 28
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    }
+  ]
+}
