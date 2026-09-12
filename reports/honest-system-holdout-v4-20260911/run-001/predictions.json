@@ -1,0 +1,614 @@
+{
+  "gold_loaded": false,
+  "completed_steps": 16,
+  "expected_steps": 16,
+  "results": [
+    {
+      "case_id": "v401",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p001",
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The packet describes standard fibrosis-model experiments and reported replicate structure but provides no specific, checkable integrity concern. The absence of archived uncropped blots or a completed review alone does not justify elevated follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v4_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 7.8343131670262665,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6548,
+            "cached_input_tokens": 4864,
+            "output_tokens": 131,
+            "reasoning_output_tokens": 43
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v401",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "elevated",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p005",
+          "p006",
+          "p004"
+        ],
+        "signals": [
+          "Repeated structural-count mismatches across figures",
+          "No correction or source-data reconciliation in the cutoff record"
+        ],
+        "rationale": "Public traces document inconsistent lane counts within matched experiments in Figures 3E and 8A. The supplied record has no correction or archived source data resolving these representations by 2024-12-31, meeting the elevated follow-up screen."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v4_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 6.137075874954462,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6891,
+            "cached_input_tokens": 4864,
+            "output_tokens": 149,
+            "reasoning_output_tokens": 36
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v402",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "corrected presentation/data error"
+        ],
+        "rationale": "A dated publisher correction identified copied and invalid statistical source-data values, an omitted heatmap gene, and swapped rows. The affected source data and figures were replaced, with workflows and processed material available for reconstruction; no incompatible mapping remains unresolved."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v4_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 6.106285457964987,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6876,
+            "cached_input_tokens": 0,
+            "output_tokens": 144,
+            "reasoning_output_tokens": 50
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v402",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p001",
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The supplied record describes standard senescence transcription experiments and analyses, with no specific, checkable integrity concern or documented correction warranting elevated follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v4_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 5.261231958051212,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6544,
+            "cached_input_tokens": 4864,
+            "output_tokens": 74,
+            "reasoning_output_tokens": 0
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v403",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p001",
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The supplied record describes standard experiments and protein assays but identifies no specific, checkable integrity anomaly. The absence of an image archive or completed review alone does not justify elevated follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v4_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 6.891235999995843,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6545,
+            "cached_input_tokens": 0,
+            "output_tokens": 141,
+            "reasoning_output_tokens": 58
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v403",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "elevated",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p005",
+          "p006",
+          "p004"
+        ],
+        "signals": [
+          "Cross-condition reuse under incompatible concentration/time-series labels",
+          "Cross-paper reuse of related control material",
+          "Repeated precise mappings with no source-data reconciliation"
+        ],
+        "rationale": "The cutoff record documents multiple precise cross-condition and cross-paper control-panel mappings under incompatible labels. No correction or underlying source-data reconciliation is supplied, so the affected representations remain unreconciled."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v4_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 6.405375125003047,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6900,
+            "cached_input_tokens": 4864,
+            "output_tokens": 143,
+            "reasoning_output_tokens": 33
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v404",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "corrected presentation/data error",
+          "traceable source data and corrected graph",
+          "no unresolved incompatible sample-label mapping"
+        ],
+        "rationale": "A dated publisher correction identifies the incorrect predictor graph, publishes the corrected representation, and confirms the accompanying source data were correct. The supplied trace reports no unresolved incompatible mapping."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v4_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 13.23888379195705,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6866,
+            "cached_input_tokens": 4864,
+            "output_tokens": 133,
+            "reasoning_output_tokens": 38
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v404",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The supplied record describes standard supporting methods and quantitative source data, and explicitly reports no later graph correction. It provides no specific, checkable indication of unusual research-integrity risk."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v4_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 7.376467082998715,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6540,
+            "cached_input_tokens": 0,
+            "output_tokens": 111,
+            "reasoning_output_tokens": 32
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v405",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p001",
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The supplied record describes standard cell-based assays and image panels but provides no specific, checkable integrity concern. The absence of a raw-image archive or completed review alone does not justify elevated follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v4_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 5.52190391602926,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6541,
+            "cached_input_tokens": 0,
+            "output_tokens": 113,
+            "reasoning_output_tokens": 27
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v405",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "elevated",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "cross-paper reuse",
+          "cross-condition reuse",
+          "incompatible experimental labels",
+          "no source-data reconciliation"
+        ],
+        "rationale": "Cutoff-eligible traces report identical or rotated images reused across papers and identical Figure 5B panels labeled as different treatments and time points. No supplied source-data reconciliation resolves the mappings."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v4_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 6.406407709000632,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6882,
+            "cached_input_tokens": 4864,
+            "output_tokens": 139,
+            "reasoning_output_tokens": 41
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v406",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "cross-condition reuse",
+          "corrected presentation/data error",
+          "formal correction with source-data addition"
+        ],
+        "rationale": "The correction identifies the spliced gels and duplicated wild-type colony image, replaces or explains the affected representations, and adds supporting source data. The supplied record leaves no incompatible mapping unresolved."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v4_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 6.2263758750632405,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6885,
+            "cached_input_tokens": 4864,
+            "output_tokens": 152,
+            "reasoning_output_tokens": 58
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v406",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p001",
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [
+          "No specific, checkable integrity anomaly is described.",
+          "Some supporting source data were initially omitted, which alone does not establish unusual risk."
+        ],
+        "rationale": "The packet describes standard genomic, cellular, and independent-cohort analyses and notes only an omission of some supporting source data; it provides no concrete evidence of fabrication, falsification, plagiarism, or image/data manipulation."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v4_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 6.98038904205896,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6546,
+            "cached_input_tokens": 4864,
+            "output_tokens": 189,
+            "reasoning_output_tokens": 74
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v407",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p001",
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The packet describes a conventional study and reports assignments of samples, images, bands, and groups, but provides no specific, checkable integrity concern. The absence of an image archive or completed review alone does not justify elevated follow-up."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v4_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 7.344811458024196,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6549,
+            "cached_input_tokens": 4864,
+            "output_tokens": 156,
+            "reasoning_output_tokens": 63
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v407",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "elevated",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "cross-paper reuse under incompatible labels",
+          "repeated experimental-material reuse with no supplied source-data reconciliation"
+        ],
+        "rationale": "Cutoff-eligible traces map the same tumor photographs, tissue-staining panels, protein bands, loading controls, cell images, and tumors across papers or conditions under differing labels. No dated correction or traceable source-data reconciliation is supplied."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v4_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 5.882795250043273,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6870,
+            "cached_input_tokens": 0,
+            "output_tokens": 144,
+            "reasoning_output_tokens": 35
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v408",
+      "arm": "harness",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p005",
+          "p006"
+        ],
+        "signals": [
+          "corrected presentation/data error"
+        ],
+        "rationale": "A dated publisher correction revised mutation calls and affected counts, percentages, statistics, figures, and tables, with updated source-data files and corrected representations. The supplied record states the quantitative changes did not alter conclusions, with no unresolved incompatible mapping."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v4_harness",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 5.634271041955799,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6885,
+            "cached_input_tokens": 0,
+            "output_tokens": 137,
+            "reasoning_output_tokens": 43
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "case_id": "v408",
+      "arm": "direct",
+      "status": "completed",
+      "result": {
+        "risk": "ordinary",
+        "confidence": "high",
+        "evidence_passage_ids": [
+          "p001",
+          "p002",
+          "p003",
+          "p004"
+        ],
+        "signals": [],
+        "rationale": "The supplied record describes a conventional profiling and predictive-modeling study with reported source data. It notes only that the original record predates a later mutation-call reannotation, without identifying a specific error, discrepancy, or integrity concern."
+      },
+      "calls": [
+        {
+          "stage": "honest_system_holdout_v4_direct",
+          "tunnel": "local",
+          "model": "gpt-5.6-luna",
+          "reasoning_effort": "low",
+          "timeout_seconds": 180.0,
+          "wall_seconds": 6.814668167033233,
+          "success": true,
+          "status": "completed",
+          "usage": {
+            "input_tokens": 6553,
+            "cached_input_tokens": 4864,
+            "output_tokens": 140,
+            "reasoning_output_tokens": 48
+          },
+          "local_skills_disabled": 66,
+          "exit_code": 0
+        }
+      ]
+    }
+  ]
+}
