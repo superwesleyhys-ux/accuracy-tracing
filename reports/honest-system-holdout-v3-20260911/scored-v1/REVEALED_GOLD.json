@@ -1,0 +1,62 @@
+{
+  "benchmark": "source-tracing-system-holdout-v3",
+  "sealed_before_inference": true,
+  "cases": [
+    {
+      "id": "v301",
+      "expected_risk": "elevated",
+      "later_outcome_at": "2025-04-01T00:00:00Z",
+      "later_outcome": "Publisher retraction after multiple Western-blot similarities could not be reconciled to primary data.",
+      "url": "https://portlandpress.com/biochemj/article/482/07/363/235916/Retraction-Insulin-induced-Drosophila-S6-kinase"
+    },
+    {
+      "id": "v302",
+      "expected_risk": "ordinary",
+      "censored_at": "2026-09-11T23:59:59Z",
+      "later_outcome": "No retraction located in the publisher and PubMed record through the censoring date.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32424350/"
+    },
+    {
+      "id": "v303",
+      "expected_risk": "elevated",
+      "later_outcome_at": "2026-04-16T00:00:00Z",
+      "later_outcome": "Publisher retraction after cross-paper image duplication concerns and unavailable original data.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13085739/"
+    },
+    {
+      "id": "v304",
+      "expected_risk": "ordinary",
+      "censored_at": "2026-09-11T23:59:59Z",
+      "later_outcome": "No retraction located in the publisher and PubMed record through the censoring date.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31043707/"
+    },
+    {
+      "id": "v305",
+      "expected_risk": "elevated",
+      "later_outcome_at": "2026-06-19T00:00:00Z",
+      "later_outcome": "Publisher retraction after confirmation that control and treated panels appeared to show the same sample.",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/omcl/9789810"
+    },
+    {
+      "id": "v306",
+      "expected_risk": "ordinary",
+      "censored_at": "2026-09-11T23:59:59Z",
+      "later_outcome": "No retraction located in the publisher and PubMed record through the censoring date.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31911591/"
+    },
+    {
+      "id": "v307",
+      "expected_risk": "elevated",
+      "later_outcome_at": "2026-06-01T00:00:00Z",
+      "later_outcome": "Publisher retraction after duplicated and spliced protein bands could not be reconciled to original data.",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/jcmm.71228"
+    },
+    {
+      "id": "v308",
+      "expected_risk": "ordinary",
+      "censored_at": "2026-09-11T23:59:59Z",
+      "later_outcome": "No retraction located in the publisher and PubMed record through the censoring date.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31551592/"
+    }
+  ]
+}

@@ -1804,6 +1804,41 @@
       "sha256": "9007bfefc0262cfb340596e6d6daae61e0f36de06c1029796fb77eb66e6ae08f"
     },
     {
+      "path": "reports/honest-system-holdout-v3-20260911/POSTMORTEM.md",
+      "bytes": 994,
+      "sha256": "24a6929af49b0a14e6565f8bf3d66113ba99e3c7b135b844dbd0da6283d2b9a9"
+    },
+    {
+      "path": "reports/honest-system-holdout-v3-20260911/run-001/manifest.json",
+      "bytes": 712,
+      "sha256": "4738679944311574545677a9e1685f398d1ee0035961cf0b0166b7de91055699"
+    },
+    {
+      "path": "reports/honest-system-holdout-v3-20260911/run-001/predictions.json",
+      "bytes": 20204,
+      "sha256": "f557e6dddef83484403198d57b7c17c846c8911dfc97721d9d6fb1145ada1abf"
+    },
+    {
+      "path": "reports/honest-system-holdout-v3-20260911/scored-v1/AUDIT.json",
+      "bytes": 614,
+      "sha256": "c2a42f32663f6fe041b7ad0fed4064a7b0b138a2c45b943821afbcb6b68a979e"
+    },
+    {
+      "path": "reports/honest-system-holdout-v3-20260911/scored-v1/README.md",
+      "bytes": 2710,
+      "sha256": "c8333e1779d469160e28394d140c24cad0e2aed3bf32c3844309b657abc17253"
+    },
+    {
+      "path": "reports/honest-system-holdout-v3-20260911/scored-v1/REVEALED_GOLD.json",
+      "bytes": 2550,
+      "sha256": "ff3ecebdd6439b8fef1ac2ed7a9d653c877615c3ade119f97b99acb9bf6fa228"
+    },
+    {
+      "path": "reports/honest-system-holdout-v3-20260911/scored-v1/SUMMARY.json",
+      "bytes": 5223,
+      "sha256": "83febe635e85765ea5f454130ca15d6a444a8ad447af952e20f5cba0ab23d680"
+    },
+    {
       "path": "reports/live-v03-attempt-01/bridge-evidence-loop-calls.json",
       "bytes": 31602,
       "sha256": "8b39fec85407baf1d445fae3d187d75fa36941dcfb5aafd60d4a217ea17f2225"
