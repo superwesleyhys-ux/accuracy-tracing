@@ -1,0 +1,149 @@
+{
+  "benchmark": "source-tracing-system-holdout-v3",
+  "cutoff": "2024-12-31T23:59:59Z",
+  "contains_post_cutoff_outcomes": false,
+  "cases": [
+    {
+      "id": "v301",
+      "sources": [
+        {
+          "role": "original",
+          "available_at": "2003-09-01T00:00:00Z",
+          "title": "Insulin-induced Drosophila S6 kinase activation requires phosphoinositide 3-kinase and protein kinase B",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/12841848/"
+        },
+        {
+          "role": "pre_cutoff_trace",
+          "available_at": "2024-10-26T22:09:33Z",
+          "title": "PubPeer record 2700B87FAFB7A2601BBB1F32DF2F1E",
+          "url": "https://pubpeer.com/publications/2700B87FAFB7A2601BBB1F32DF2F1E"
+        }
+      ]
+    },
+    {
+      "id": "v302",
+      "sources": [
+        {
+          "role": "original",
+          "available_at": "2020-05-18T00:00:00Z",
+          "title": "Cas9 activates the p53 pathway and selects for p53-inactivating mutations",
+          "url": "https://www.nature.com/articles/s41588-020-0623-4"
+        },
+        {
+          "role": "pre_cutoff_resolution",
+          "available_at": "2020-06-25T00:00:00Z",
+          "title": "Author Correction: Cas9 activates the p53 pathway and selects for p53-inactivating mutations",
+          "url": "https://www.nature.com/articles/s41588-020-0663-9"
+        }
+      ]
+    },
+    {
+      "id": "v303",
+      "sources": [
+        {
+          "role": "original",
+          "available_at": "2014-04-02T00:00:00Z",
+          "title": "Magnesium Lithospermate B, an Active Extract of Salvia miltiorrhiza, Mediates sGC/cGMP/PKG Translocation in Experimental Vasospasm",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3996929/"
+        },
+        {
+          "role": "pre_cutoff_correction",
+          "available_at": "2016-05-10T00:00:00Z",
+          "title": "Corrigendum to Magnesium Lithospermate B in Experimental Vasospasm",
+          "url": "https://doi.org/10.1155/2016/6240750"
+        },
+        {
+          "role": "pre_cutoff_trace",
+          "available_at": "2023-08-02T14:26:48Z",
+          "title": "PubPeer record 2888F917DA7924BDC8894A6ED664FC",
+          "url": "https://pubpeer.com/publications/2888F917DA7924BDC8894A6ED664FC"
+        }
+      ]
+    },
+    {
+      "id": "v304",
+      "sources": [
+        {
+          "role": "original",
+          "available_at": "2019-05-13T00:00:00Z",
+          "title": "Molecular basis for heat desensitization of TRPV1 ion channels",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6513986/"
+        },
+        {
+          "role": "pre_cutoff_resolution",
+          "available_at": "2020-04-09T00:00:00Z",
+          "title": "Author Correction: Molecular basis for heat desensitization of TRPV1 ion channels",
+          "url": "https://www.nature.com/articles/s41467-020-15691-1"
+        }
+      ]
+    },
+    {
+      "id": "v305",
+      "sources": [
+        {
+          "role": "original",
+          "available_at": "2020-11-21T00:00:00Z",
+          "title": "Quinovic Acid Impedes Cholesterol Dyshomeostasis, Oxidative Stress, and Neurodegeneration in an Amyloid-beta-Induced Mouse Model",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33274012/"
+        },
+        {
+          "role": "pre_cutoff_trace",
+          "available_at": "2024-07-28T03:27:08Z",
+          "title": "PubPeer record 6074B292615104B619CED314786C51",
+          "url": "https://pubpeer.com/publications/6074B292615104B619CED314786C51"
+        }
+      ]
+    },
+    {
+      "id": "v306",
+      "sources": [
+        {
+          "role": "original",
+          "available_at": "2020-01-07T00:00:00Z",
+          "title": "Ketamine disinhibits dendrites and enhances calcium signals in prefrontal dendritic spines",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31911591/"
+        },
+        {
+          "role": "pre_cutoff_resolution",
+          "available_at": "2021-01-08T00:00:00Z",
+          "title": "Author Correction: Ketamine disinhibits dendrites and enhances calcium signals in prefrontal dendritic spines",
+          "url": "https://www.nature.com/articles/s41467-020-20634-x"
+        }
+      ]
+    },
+    {
+      "id": "v307",
+      "sources": [
+        {
+          "role": "original",
+          "available_at": "2008-01-19T00:00:00Z",
+          "title": "Spliceosomal protein E regulates neoplastic cell growth by modulating expression of cyclin E/CDK2 and G2/M checkpoint proteins",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18208561/"
+        },
+        {
+          "role": "pre_cutoff_trace",
+          "available_at": "2016-05-07T20:11:38Z",
+          "title": "PubPeer record 216D30610A95CE3D109B97FC1CA64D",
+          "url": "https://pubpeer.com/publications/216D30610A95CE3D109B97FC1CA64D"
+        }
+      ]
+    },
+    {
+      "id": "v308",
+      "sources": [
+        {
+          "role": "original",
+          "available_at": "2019-09-23T00:00:00Z",
+          "title": "Fragmented mitochondria released from microglia trigger A1 astrocytic response and propagate inflammatory neurodegeneration",
+          "url": "https://www.nature.com/articles/s41593-019-0486-0"
+        },
+        {
+          "role": "pre_cutoff_resolution",
+          "available_at": "2021-02-01T00:00:00Z",
+          "title": "Author Correction: Fragmented mitochondria released from microglia trigger A1 astrocytic response and propagate inflammatory neurodegeneration",
+          "url": "https://doi.org/10.1038/s41593-020-00774-5"
+        }
+      ]
+    }
+  ]
+}

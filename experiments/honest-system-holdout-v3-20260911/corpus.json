@@ -1,0 +1,791 @@
+{
+  "benchmark": "source-tracing-system-holdout-v3",
+  "cutoff": "2024-12-31T23:59:59Z",
+  "model_packet_excludes": [
+    "titles",
+    "authors",
+    "doi",
+    "institutions",
+    "journals",
+    "urls",
+    "post_cutoff_outcomes"
+  ],
+  "cases": [
+    {
+      "id": "v301",
+      "direct_packet": {
+        "case_id": "v301",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2003,
+          "field": "insect insulin-signaling biochemistry",
+          "evidence_types": [
+            "cell culture",
+            "RNA interference",
+            "kinase assay",
+            "immunoblotting"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2003-09-01T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper studies whether insulin activation of an insect ribosomal S6 kinase requires a lipid kinase, a downstream protein kinase, and a nutrient-sensing kinase."
+          },
+          {
+            "id": "p002",
+            "available_at": "2003-09-01T00:00:00Z",
+            "kind": "methods",
+            "text": "Two insect cell lines are treated with inhibitors or double-stranded RNA; kinase activity and phosphorylation are assessed with immunoprecipitation and protein-band assays."
+          },
+          {
+            "id": "p003",
+            "available_at": "2003-09-01T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Protein-band panels across several figures represent different kinases, phosphorylation states, perturbations, and stimulation conditions."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original-record packet contains no independently archived uncropped blot series or completed integrity review."
+          }
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v301",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2003,
+          "field": "insect insulin-signaling biochemistry",
+          "evidence_types": [
+            "cell culture",
+            "RNA interference",
+            "kinase assay",
+            "immunoblotting"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2003-09-01T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper studies whether insulin activation of an insect ribosomal S6 kinase requires a lipid kinase, a downstream protein kinase, and a nutrient-sensing kinase."
+          },
+          {
+            "id": "p002",
+            "available_at": "2003-09-01T00:00:00Z",
+            "kind": "methods",
+            "text": "Two insect cell lines are treated with inhibitors or double-stranded RNA; kinase activity and phosphorylation are assessed with immunoprecipitation and protein-band assays."
+          },
+          {
+            "id": "p003",
+            "available_at": "2003-09-01T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Protein-band panels across several figures represent different kinases, phosphorylation states, perturbations, and stimulation conditions."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original-record packet contains no independently archived uncropped blot series or completed integrity review."
+          },
+          {
+            "id": "p005",
+            "available_at": "2024-10-26T22:09:33Z",
+            "kind": "dated_public_trace",
+            "text": "A public image-comparison review reported that bands presented for different proteins were substantially more similar than expected; another mapped pair became similar after a horizontal flip."
+          },
+          {
+            "id": "p006",
+            "available_at": "2024-11-07T23:38:34Z",
+            "kind": "dated_trace_response",
+            "text": "Additional posts mapped similarities in several figures. A research-integrity group publicly confirmed before the cutoff that it was examining the points, but the cutoff record supplied no source-data reconciliation."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v302",
+      "direct_packet": {
+        "case_id": "v302",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2020,
+          "field": "cancer cell-line genome editing",
+          "evidence_types": [
+            "CRISPR-Cas9",
+            "microscopy",
+            "immunoblotting",
+            "DNA sequencing"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2020-05-18T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper examines whether introducing a genome-editing nuclease activates a tumor-suppressor pathway and selects for inactivating mutations in human cancer cell lines."
+          },
+          {
+            "id": "p002",
+            "available_at": "2020-05-18T00:00:00Z",
+            "kind": "methods",
+            "text": "The study combines engineered cell lines, microscopy, protein assays, gene-expression profiling, and longitudinal DNA sequencing."
+          },
+          {
+            "id": "p003",
+            "available_at": "2020-05-18T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Representative cell images and protein bands accompany quantitative analyses across wild-type and mutant cell-line groups."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original article record alone does not state an unresolved integrity investigation."
+          }
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v302",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2020,
+          "field": "cancer cell-line genome editing",
+          "evidence_types": [
+            "CRISPR-Cas9",
+            "microscopy",
+            "immunoblotting",
+            "DNA sequencing"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2020-05-18T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper examines whether introducing a genome-editing nuclease activates a tumor-suppressor pathway and selects for inactivating mutations in human cancer cell lines."
+          },
+          {
+            "id": "p002",
+            "available_at": "2020-05-18T00:00:00Z",
+            "kind": "methods",
+            "text": "The study combines engineered cell lines, microscopy, protein assays, gene-expression profiling, and longitudinal DNA sequencing."
+          },
+          {
+            "id": "p003",
+            "available_at": "2020-05-18T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Representative cell images and protein bands accompany quantitative analyses across wild-type and mutant cell-line groups."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original article record alone does not state an unresolved integrity investigation."
+          },
+          {
+            "id": "p005",
+            "available_at": "2020-06-25T00:00:00Z",
+            "kind": "dated_publisher_correction",
+            "text": "A publisher correction identified one cell image mistakenly duplicated into the adjacent genome-edited condition and revised other plotting and gel-presentation details."
+          },
+          {
+            "id": "p006",
+            "available_at": "2020-06-25T00:00:00Z",
+            "kind": "trace_resolution",
+            "text": "The affected microscopy data were reanalyzed, raw microscopy was deposited publicly, sequencing and expression accessions remained available, and the corrected record stated that the principal statistical analyses and conclusions were unchanged."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v303",
+      "direct_packet": {
+        "case_id": "v303",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2014,
+          "field": "experimental cerebral vasospasm pharmacology",
+          "evidence_types": [
+            "animal model",
+            "artery histology",
+            "protein assay",
+            "immunoblotting"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2014-04-02T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper tests a plant-derived compound in a rodent hemorrhage model and reports effects on arterial narrowing and a nitric-oxide signaling pathway."
+          },
+          {
+            "id": "p002",
+            "available_at": "2014-04-02T00:00:00Z",
+            "kind": "methods",
+            "text": "Animals are assigned to sham, injury, vehicle, treatment, pretreatment, and inhibitor groups; artery morphology, physiological measures, transcripts, proteins, and pathway localization are assessed."
+          },
+          {
+            "id": "p003",
+            "available_at": "2014-04-02T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Histology and protein-band figures represent distinct treatments, pathway components, and cellular fractions."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original-record packet contains no durable archive of all underlying image series or completed integrity review."
+          }
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v303",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2014,
+          "field": "experimental cerebral vasospasm pharmacology",
+          "evidence_types": [
+            "animal model",
+            "artery histology",
+            "protein assay",
+            "immunoblotting"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2014-04-02T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper tests a plant-derived compound in a rodent hemorrhage model and reports effects on arterial narrowing and a nitric-oxide signaling pathway."
+          },
+          {
+            "id": "p002",
+            "available_at": "2014-04-02T00:00:00Z",
+            "kind": "methods",
+            "text": "Animals are assigned to sham, injury, vehicle, treatment, pretreatment, and inhibitor groups; artery morphology, physiological measures, transcripts, proteins, and pathway localization are assessed."
+          },
+          {
+            "id": "p003",
+            "available_at": "2014-04-02T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Histology and protein-band figures represent distinct treatments, pathway components, and cellular fractions."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original-record packet contains no durable archive of all underlying image series or completed integrity review."
+          },
+          {
+            "id": "p005",
+            "available_at": "2016-05-10T00:00:00Z",
+            "kind": "dated_publisher_correction",
+            "text": "A corrigendum replaced panels after the same protein blot had been used for two different targets and another blot had been reused for a loading control and a signaling protein; one mapped reuse involved a 180-degree rotation."
+          },
+          {
+            "id": "p006",
+            "available_at": "2023-08-02T14:26:48Z",
+            "kind": "dated_public_trace",
+            "text": "A later systematic-review trace mapped the first figure’s artery images to figures in several other papers under different study descriptions. The cutoff record did not reconcile those cross-paper image mappings to original files."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v304",
+      "direct_packet": {
+        "case_id": "v304",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2019,
+          "field": "heat-sensing ion-channel physiology",
+          "evidence_types": [
+            "electrophysiology",
+            "calcium imaging",
+            "animal behavior",
+            "sequencing"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2019-05-13T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper studies molecular and structural mechanisms by which a heat-sensitive ion channel desensitizes during prolonged noxious heat."
+          },
+          {
+            "id": "p002",
+            "available_at": "2019-05-13T00:00:00Z",
+            "kind": "methods",
+            "text": "The work combines channel mutagenesis, electrophysiology, calcium imaging, knock-in animals, tissue assays, and behavioral measurements."
+          },
+          {
+            "id": "p003",
+            "available_at": "2019-05-13T00:00:00Z",
+            "kind": "data_availability",
+            "text": "Source data accompany the figures, and sequencing records are deposited under stable public accessions."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original article record alone does not state an unresolved integrity investigation."
+          }
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v304",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2019,
+          "field": "heat-sensing ion-channel physiology",
+          "evidence_types": [
+            "electrophysiology",
+            "calcium imaging",
+            "animal behavior",
+            "sequencing"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2019-05-13T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper studies molecular and structural mechanisms by which a heat-sensitive ion channel desensitizes during prolonged noxious heat."
+          },
+          {
+            "id": "p002",
+            "available_at": "2019-05-13T00:00:00Z",
+            "kind": "methods",
+            "text": "The work combines channel mutagenesis, electrophysiology, calcium imaging, knock-in animals, tissue assays, and behavioral measurements."
+          },
+          {
+            "id": "p003",
+            "available_at": "2019-05-13T00:00:00Z",
+            "kind": "data_availability",
+            "text": "Source data accompany the figures, and sequencing records are deposited under stable public accessions."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original article record alone does not state an unresolved integrity investigation."
+          },
+          {
+            "id": "p005",
+            "available_at": "2020-04-09T00:00:00Z",
+            "kind": "dated_publisher_correction",
+            "text": "A publisher correction reported errors in the numerical source-data file underlying two figure panels and replaced that file with a corrected version."
+          },
+          {
+            "id": "p006",
+            "available_at": "2020-04-09T00:00:00Z",
+            "kind": "trace_resolution",
+            "text": "The corrected record retains source data for the main and supplementary figures plus two public sequencing accessions; the trace describes a source-file correction rather than incompatible experimental images."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v305",
+      "direct_packet": {
+        "case_id": "v305",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2020,
+          "field": "experimental neurodegeneration pharmacology",
+          "evidence_types": [
+            "mouse model",
+            "behavior testing",
+            "fluorescence imaging",
+            "immunoblotting"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2020-11-21T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper tests whether a plant-derived acid reduces cholesterol imbalance, oxidative stress, inflammation, and cognitive deficits in an amyloid-peptide mouse model."
+          },
+          {
+            "id": "p002",
+            "available_at": "2020-11-21T00:00:00Z",
+            "kind": "methods",
+            "text": "Mice receive intracerebral peptide and systemic compound treatments; cortex and hippocampus are assessed with behavioral tests, fluorescence microscopy, biochemical assays, and protein bands."
+          },
+          {
+            "id": "p003",
+            "available_at": "2020-11-21T00:00:00Z",
+            "kind": "reported_result",
+            "text": "A fluorescence figure uses separate control and peptide-treated panels to support changes in amyloid-related signal in cortex tissue."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original-record packet contains no independently archived complete image series or completed integrity review."
+          }
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v305",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2020,
+          "field": "experimental neurodegeneration pharmacology",
+          "evidence_types": [
+            "mouse model",
+            "behavior testing",
+            "fluorescence imaging",
+            "immunoblotting"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2020-11-21T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper tests whether a plant-derived acid reduces cholesterol imbalance, oxidative stress, inflammation, and cognitive deficits in an amyloid-peptide mouse model."
+          },
+          {
+            "id": "p002",
+            "available_at": "2020-11-21T00:00:00Z",
+            "kind": "methods",
+            "text": "Mice receive intracerebral peptide and systemic compound treatments; cortex and hippocampus are assessed with behavioral tests, fluorescence microscopy, biochemical assays, and protein bands."
+          },
+          {
+            "id": "p003",
+            "available_at": "2020-11-21T00:00:00Z",
+            "kind": "reported_result",
+            "text": "A fluorescence figure uses separate control and peptide-treated panels to support changes in amyloid-related signal in cortex tissue."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original-record packet contains no independently archived complete image series or completed integrity review."
+          },
+          {
+            "id": "p005",
+            "available_at": "2024-07-28T03:27:08Z",
+            "kind": "dated_public_trace",
+            "text": "A public image review identified the control and peptide-treated cortex panels in one figure as appearing to show the same underlying tissue sample."
+          },
+          {
+            "id": "p006",
+            "available_at": "2024-07-28T03:27:08Z",
+            "kind": "dated_public_trace_detail",
+            "text": "The merged and zoomed versions retained matching structural landmarks while the treated version showed stronger colored signal. The reviewer requested an author check; the cutoff record contained no response or source-image reconciliation."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v306",
+      "direct_packet": {
+        "case_id": "v306",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2020,
+          "field": "prefrontal-cortex ketamine neuroscience",
+          "evidence_types": [
+            "awake-animal imaging",
+            "calcium traces",
+            "viral perturbation",
+            "behavior testing"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2020-01-07T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper examines how a subanesthetic anesthetic affects dendrite-targeting inhibitory neurons and calcium signals in prefrontal pyramidal-cell spines."
+          },
+          {
+            "id": "p002",
+            "available_at": "2020-01-07T00:00:00Z",
+            "kind": "methods",
+            "text": "The work uses awake-mouse imaging, interneuron and dendritic calcium measurements, receptor-subunit knockdown, circuit tracing, and behavior."
+          },
+          {
+            "id": "p003",
+            "available_at": "2020-01-07T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Example activity traces illustrate cells before and after treatment alongside population-level measurements."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original article record alone does not state an unresolved integrity investigation."
+          }
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v306",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2020,
+          "field": "prefrontal-cortex ketamine neuroscience",
+          "evidence_types": [
+            "awake-animal imaging",
+            "calcium traces",
+            "viral perturbation",
+            "behavior testing"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2020-01-07T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper examines how a subanesthetic anesthetic affects dendrite-targeting inhibitory neurons and calcium signals in prefrontal pyramidal-cell spines."
+          },
+          {
+            "id": "p002",
+            "available_at": "2020-01-07T00:00:00Z",
+            "kind": "methods",
+            "text": "The work uses awake-mouse imaging, interneuron and dendritic calcium measurements, receptor-subunit knockdown, circuit tracing, and behavior."
+          },
+          {
+            "id": "p003",
+            "available_at": "2020-01-07T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Example activity traces illustrate cells before and after treatment alongside population-level measurements."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original article record alone does not state an unresolved integrity investigation."
+          },
+          {
+            "id": "p005",
+            "available_at": "2021-01-08T00:00:00Z",
+            "kind": "dated_publisher_correction",
+            "text": "A correction identified one example activity trace inadvertently duplicated between the pre- and post-treatment sets and replaced the examples."
+          },
+          {
+            "id": "p006",
+            "available_at": "2021-01-08T00:00:00Z",
+            "kind": "trace_resolution",
+            "text": "The corrected examples were selected from the underlying cell records; raw data for the figure and the full study were publicly linked, and the corrected record did not change the quantitative result or conclusions."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v307",
+      "direct_packet": {
+        "case_id": "v307",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2008,
+          "field": "cancer-cell spliceosomal biology",
+          "evidence_types": [
+            "adenoviral expression",
+            "RNA interference",
+            "cell-cycle assay",
+            "immunoblotting"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2008-01-19T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper studies whether increasing or reducing a spliceosomal protein changes cancer-cell growth and cell-cycle progression independently of a tumor suppressor."
+          },
+          {
+            "id": "p002",
+            "available_at": "2008-01-19T00:00:00Z",
+            "kind": "methods",
+            "text": "Adenoviral expression, short-hairpin RNA, DNA-synthesis labeling, cell-cycle staining, transcript measurements, and protein bands are used in cancer and non-tumorigenic cells."
+          },
+          {
+            "id": "p003",
+            "available_at": "2008-01-19T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Protein-band panels compare control and altered spliceosomal-protein conditions across cell-cycle regulators."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original-record packet contains no independently archived uncropped blot series or completed integrity review."
+          }
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v307",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2008,
+          "field": "cancer-cell spliceosomal biology",
+          "evidence_types": [
+            "adenoviral expression",
+            "RNA interference",
+            "cell-cycle assay",
+            "immunoblotting"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2008-01-19T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper studies whether increasing or reducing a spliceosomal protein changes cancer-cell growth and cell-cycle progression independently of a tumor suppressor."
+          },
+          {
+            "id": "p002",
+            "available_at": "2008-01-19T00:00:00Z",
+            "kind": "methods",
+            "text": "Adenoviral expression, short-hairpin RNA, DNA-synthesis labeling, cell-cycle staining, transcript measurements, and protein bands are used in cancer and non-tumorigenic cells."
+          },
+          {
+            "id": "p003",
+            "available_at": "2008-01-19T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Protein-band panels compare control and altered spliceosomal-protein conditions across cell-cycle regulators."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original-record packet contains no independently archived uncropped blot series or completed integrity review."
+          },
+          {
+            "id": "p005",
+            "available_at": "2016-05-07T20:11:38Z",
+            "kind": "dated_public_trace",
+            "text": "A public post-publication review mapped bands 6 and 7 in one treatment panel to bands 1 and 2 in that same figure panel."
+          },
+          {
+            "id": "p006",
+            "available_at": "2016-05-07T20:11:38Z",
+            "kind": "dated_public_trace_detail",
+            "text": "The mapping required both vertical and horizontal mirroring even though the lanes represented different positions in the experiment. No cutoff-eligible response or raw-blot reconciliation was present in the traced record."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v308",
+      "direct_packet": {
+        "case_id": "v308",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2019,
+          "field": "microglia-mediated neurodegeneration",
+          "evidence_types": [
+            "cell culture",
+            "mouse disease models",
+            "electron microscopy",
+            "biochemical assays"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2019-09-23T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper investigates whether damaged mitochondria released from activated brain immune cells trigger a neurotoxic astrocyte response and propagate neuronal injury."
+          },
+          {
+            "id": "p002",
+            "available_at": "2019-09-23T00:00:00Z",
+            "kind": "methods",
+            "text": "Primary cells, conditioned-media transfer, disease-model mice, electron microscopy, metabolic assays, cytokine measurements, and a mitochondrial-fission inhibitor are used."
+          },
+          {
+            "id": "p003",
+            "available_at": "2019-09-23T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Graphs and microscopy summarize mitochondrial, metabolic, inflammatory, and neuronal outcomes across treatment groups."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original article record alone does not state an unresolved integrity investigation."
+          }
+        ]
+      },
+      "harness_packet": {
+        "case_id": "v308",
+        "question": "Using only evidence public by 2024-12-31, classify whether this paper merits elevated or ordinary research-integrity follow-up.",
+        "cutoff": "2024-12-31T23:59:59Z",
+        "paper_profile": {
+          "published_year": 2019,
+          "field": "microglia-mediated neurodegeneration",
+          "evidence_types": [
+            "cell culture",
+            "mouse disease models",
+            "electron microscopy",
+            "biochemical assays"
+          ]
+        },
+        "evidence_passages": [
+          {
+            "id": "p001",
+            "available_at": "2019-09-23T00:00:00Z",
+            "kind": "study_summary",
+            "text": "The paper investigates whether damaged mitochondria released from activated brain immune cells trigger a neurotoxic astrocyte response and propagate neuronal injury."
+          },
+          {
+            "id": "p002",
+            "available_at": "2019-09-23T00:00:00Z",
+            "kind": "methods",
+            "text": "Primary cells, conditioned-media transfer, disease-model mice, electron microscopy, metabolic assays, cytokine measurements, and a mitochondrial-fission inhibitor are used."
+          },
+          {
+            "id": "p003",
+            "available_at": "2019-09-23T00:00:00Z",
+            "kind": "reported_result",
+            "text": "Graphs and microscopy summarize mitochondrial, metabolic, inflammatory, and neuronal outcomes across treatment groups."
+          },
+          {
+            "id": "p004",
+            "available_at": "2024-12-31T23:59:59Z",
+            "kind": "base_record_boundary",
+            "text": "The original article record alone does not state an unresolved integrity investigation."
+          },
+          {
+            "id": "p005",
+            "available_at": "2021-02-01T00:00:00Z",
+            "kind": "dated_publisher_correction",
+            "text": "A correction identified two graphs that had been inadvertently duplicated into separate locations in one figure."
+          },
+          {
+            "id": "p006",
+            "available_at": "2021-02-01T00:00:00Z",
+            "kind": "trace_resolution",
+            "text": "The authors replotted both graphs after reviewing the underlying data, supplied source data for the revised panels, and stated that the results and conclusions were unaffected."
+          }
+        ]
+      }
+    }
+  ]
+}
